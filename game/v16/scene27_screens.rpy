@@ -2,7 +2,7 @@ init python:
     class BabyDuty(Enum):
         ALONE = "Baby Duty alone"
         WITH_PARTNER = "Baby Duty with Partner"
-        PARTNER_ALONE = "Parter has Baby Duty alone"
+        PARTNER_ALONE = "Partner has Baby Duty alone"
         NULL = ""
 
 
@@ -15,7 +15,7 @@ screen v16s27_baby_schedule():
         ["Date with Aubrey\n(optional)", "Polly's San Vallejo Acoustic Concert", "Ms. Rose opera\n(optional)"],
         [
             "I can definitely go to the date regardless of who has the baby, but if I want anything to happen afterwards, I better not be on baby duty for the night.",
-            "I can go to the concert regardless of who has the baby, but I may have to go home early and miss whatever happens afterwards if i'm on baby duty.",
+            "I can go to the concert regardless of who has the baby, but I may have to go home early and miss whatever happens afterwards if I'm on baby duty.",
             "I can definitely go to the opera regardless of who has the baby, but if I want anything to happen afterwards, I better not be on baby duty for the night."
         ]
     ]

@@ -3,10 +3,7 @@
 # Characters: MC (Outfit: 5)
 # Time: Friday evening
 
-
 label v16s81: # 81) MC undresses/changes into normal clothes
-    
-
     if not joinwolves:
         scene v16s81_1 # TPP Show MC entering his room in his fancy homecoming suit [APES DORM ROOM]
         with dissolve

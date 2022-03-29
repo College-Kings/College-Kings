@@ -522,7 +522,7 @@ label v16s59:
                     scene v16s59_4y # FPP. Show Lindsey (nervous expression, mouth open, looking at Polly) just from the shoulders up (check with mozzart for clothing), Polly (concerned expression, mouth closed, looking at Lindsey)
                     with dissolve
 
-                    li "It's a a bit last minute so I know you can't dedicate a song to me or anything, but..."
+                    li "It's a bit last minute so I know you can't dedicate a song to me or anything, but..."
 
                     scene v16s59_4q
                     with dissolve

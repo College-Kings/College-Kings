@@ -86,7 +86,7 @@ label v16s65:
         scene v16s65_4a
         with dissolve
 
-        u "Ha, yeah. What an honor, actually! Congrats, Chlo."
+        u "Ha, yeah. What an honor, actually! Congrats, Chloe."
 
         scene v16s65_4
         with dissolve
@@ -273,7 +273,7 @@ label v16s65:
     scene v16s65_4a
     with dissolve
 
-    u "Haha, see you later ego- I mean Chlo."
+    u "Haha, see you later ego- I mean Chloe."
 
     scene v16s65_4
     with dissolve

@@ -438,13 +438,13 @@ label v16s52:
 
             pause 0.75
 
-            $ aubrey.messenger.addReply("Hey, Aubrey. I'm with Autumn right now at the dog shelter for the re-opening, and we kind of need your help.", func = None, new_message = True)
+            $ aubrey.messenger.addReply("Hey, Aubrey. I'm with Autumn right now at the dog shelter for the re-opening, and we kind of need your help.")
             $ aubrey.messenger.newMessage("I'm not able to come, but can I help from here?")
             $ aubrey.messenger.addReply("Yeah, we don't need much at all. The thing is, we need more donations. Well, more people with donations...")
             $ aubrey.messenger.newMessage("Hmm... Where do I come in? Lmao")
             $ aubrey.messenger.addReply("What about using your modeling powers, aka your large fanbase, and encouraging people to show up??? I'll make it up to you... ;)")
             
-            if relationship.aubrey == Relationship.FRIEND or relationship.aubrey == Relationship.TAMED: ###???
+            if aubrey.relationship == Relationship.FRIEND or aubrey.relationship == Relationship.TAMED: ###???
                 $ aubrey.messenger.newMessage("Oh, yea. No prob, I'll be happy to help :) I've got the perfect pic for it too!")
                 $ aubrey.messenger.addReply("Thank you! You're the best!")
                 $ aubrey.messenger.newMessage("You owe me, haha :P")
@@ -1012,7 +1012,7 @@ label v16s52:
 
     aut "Of course! You're welcome here anytime."
 
-    if autumn.relationship >= relationship.KISS:
+    if autumn.relationship >= Relationship.KISS:
         scene v16s52_41a
         with dissolve
 

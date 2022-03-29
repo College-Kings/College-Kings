@@ -596,10 +596,10 @@ label v16s71: ### ERROR: 71) Penelope dog sits for the dean
     #! v16s71_kiwii_post1 Description=Penelope selfie with mc and oscar | (PENELOPE KIWII POST? Autumn can comment)-
 
     $ v16s71_kiwii_post1 = KiwiiPost(penelope, "v16/v16s71_kiwii_post1.webp", "Having a fun morning with two stinky boys, hehe!", mentions=MC, numberLikes=213)
-    $ kiwii_post.new_comment(autumn, "OMG! Oscar! He looks so happy <3", numberLikes=45, force_send=True)
-    $ kiwii_post.new_comment(aubrey, "Where do I know that dog from???", numberLikes=24, force_send=True)
-    $ kiwii_post.add_reply("From our visit to the lake! Remember that stoner guy?", numberLikes=56)
-    $ kiwii_post.add_reply("What do you mean two?!", numberLikes=54)
+    $ v16s71_kiwii_post1.new_comment(autumn, "OMG! Oscar! He looks so happy <3", numberLikes=45, force_send=True)
+    $ v16s71_kiwii_post1.new_comment(aubrey, "Where do I know that dog from???", numberLikes=24, force_send=True)
+    $ v16s71_kiwii_post1.add_reply("From our visit to the lake! Remember that stoner guy?", numberLikes=56)
+    $ v16s71_kiwii_post1.add_reply("What do you mean two?!", numberLikes=54)
 
     # -MC and Oscar are sitting on the couch. Penelope goes to the basket, looks in it-
     scene v16s71_3f
@@ -805,10 +805,11 @@ label v16s71: ### ERROR: 71) Penelope dog sits for the dean
     play sound "sounds/vibrate.mp3"
     pause 0.75
 
-    $ ryan.messnger.newMessage("HOLY SHIT!", force_send =True)
+    $ ryan.messenger.newMessage("HOLY SHIT!", force_send =True)
     $ ryan.messenger.newMessage("DUDE, HAVE YOU SEEN WHAT ELIJAH PUT IN THE FIRST EDITION OF THE SVC TIMES???", force_send=True)
 
-    call screen messenger(ryan.messenger)
+    ### call screen messenger(ryan.messenger)
+    call screen phone
 
     scene v16s71_14e # TPP MC(concerned, mouth closed) sitting on the couch next to Oscar (off camera or his butt and tail in camera) looking at his phone in his hand. 
     with fade

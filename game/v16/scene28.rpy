@@ -73,7 +73,7 @@ label v16s28:
 
         v16s28_lindsey_elijah = lindsey_board.add_subtask("Newspaper",
             "Have Elijah interview Lindsey",
-            opinion="\"Elijah is the nead of the newspaper so it makes sense to ask him for an interview. Although... He's such a fucking prick. I wouldn't put it past him to agree to this idea simply because he'll want to twist my words into some gossipy blog. We have to be prepared when we meet with him.\"",
+            opinion="\"Elijah is the head of the newspaper so it makes sense to ask him for an interview. Although... He's such a fucking prick. I wouldn't put it past him to agree to this idea simply because he'll want to twist my words into some gossipy blog. We have to be prepared when we meet with him.\"",
             people=[elijah])
 
         lindsey_board.add_subtask("Newspaper",

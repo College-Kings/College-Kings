@@ -664,7 +664,7 @@ label v16s63: # 63) Chloe's Spa Day
         scene v16s63_26 # FPP Show Lindsey, Nora, and Jenny walking out of the room
         with dissolve
 
-        u "(Fuck,I should've picked up the expensive ones. I guess you get what you pay for...)"
+        u "(Fuck, I should've picked up the expensive ones. I guess you get what you pay for...)"
 
         scene v16s63_6g # FPP Same angle as 6, Aubrey (facemask on, eyes closed, mouth closed) leaning back, relaxing
         with dissolve

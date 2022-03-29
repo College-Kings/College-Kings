@@ -317,7 +317,7 @@ label v16s1_win:
     scene v16s1_win_3a # FPP. Same as v16s1_win_3, Riley slightly worried, mouth open
     with dissolve
 
-    ri "No, no, it's not that...It's just-"
+    ri "No, no, it's not that... It's just-"
 
     scene v16s1_win_3b # FPP. Same as v16s1_win_3, Riley slight smile, mouth open
     with dissolve

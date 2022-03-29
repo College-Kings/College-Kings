@@ -3,11 +3,8 @@
 # Characters: DEAN (Outfit: 1), PENELOPE (Outfit: 1), MC (Outfit: 5)
 # Time: Friday Morning
 
-
 label v16s71b: ### ERROR: 71b) The Dean returns
-
     if "v16_penelope" not in sceneList: # -if MC and Penelope did not have sex-
-
         # -Continuing from Scene 71, MC and Penelope are sat on the couch looking at Oscar sleeping-
 
         # -The Dean enters, looking straight over to Oscar-

@@ -243,7 +243,7 @@ label v16s48a_feet: # -if Feet
             scene v16s48a_6h
             with dissolve
 
-            cl "Your tongue is so smooth, and wet... Oh, shhit."
+            cl "Your tongue is so smooth, and wet... Oh, shit."
 
             scene v16s48a_6j
             with dissolve
@@ -346,7 +346,7 @@ label v16s48a_continue:
     scene v16s48a_8 # TPP Chloe (aroused, aggressive, smile, mouth open) standing in front of the couch pushing MC (smile, mouth closed), to sit on the couch. 
     with dissolve
 
-    cl "Move.I want to deepthroat you, now."
+    cl "Move. I want to deepthroat you, now."
         
     # -Chloe sinks to her knees-
     scene v16s48a_8a # FPP [MC sitting in the middle of the couch] Chloe (aroused, sexy eyes, sexy smile), to his left, on the couch, on hands and knees looking at him reaching for his hard dick.

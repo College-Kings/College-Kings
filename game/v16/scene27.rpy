@@ -328,7 +328,7 @@ label v16s27:
         scene v16s27_11c
         with dissolve
 
-        sexed "It's all pretty straight forward. Once you've spent some time with your baby, you will start to understand it's needs."
+        sexed "It's all pretty straight forward. Once you've spent some time with your baby, you will start to understand its needs."
 
         sexed "Just like in real life, the babies will cry when you're trying to sleep."
 
@@ -344,7 +344,8 @@ label v16s27:
 
         sexed "You and your partner will be caring for the baby for three nights in total and return your baby on Saturday where I will evaluate your performance."
 
-        sexed "As partners, each of you will spend one night alone with the baby as well as one night together. So, all that's left for you and your partner is to agree on a schedule."
+        sexed "As partners, each of you will spend one night alone with the baby as well as one night together."
+        sexed "So all that's left for you and your partner is to agree on a schedule."
 
         scene v16s27_11b
         with dissolve
@@ -517,7 +518,7 @@ label v16s27:
 
         sexed "Congratulations, and welcome to parenthood! Your babies will be available for collection this evening so please stop by later to pick them up."
 
-        sexed "And I'll see you all in three days at the Nurse's office for your reviews. Have a good day, parents!"
+        sexed "I'll see you all in three days at the Nurse's office for your reviews. Have a good day, parents!"
 
         if v16s27_parent_chloe: # -if MC is parenting with Chloe
             scene v16s27_8e

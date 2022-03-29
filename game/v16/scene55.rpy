@@ -565,7 +565,7 @@ label v16s55: # 55) Prepare Lindsey for the interview
     pause 0.75
 
     # -if LindseyRS
-    if relationship.lindsey >= Relationship.FWB: 
+    if lindsey.relationship >= Relationship.FWB: 
         scene v16s55_7 # FPP Lindsey (sexy smile, mouth open), now standing, looking at MC
         with dissolve
 

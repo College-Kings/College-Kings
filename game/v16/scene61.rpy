@@ -145,7 +145,7 @@ label v16s61:
             scene v16s61_8 # TPP. In wolves room. MC (slight smile, mouth open) standing up from his chair and holding his phone to his ear.
             with dissolve
 
-            u "Hello, my Chlo. *Chuckles* How are you?"
+            u "Hello, my Chloe. *Chuckles* How are you?"
 
             # -You can show a couple of images, 2-3 max, of Chloe during this convo. I suggest that she's preparing the house and party supplies during the call (These images are not a priority and can be cut if needed, otherwise mc is just shown pacing his room during the call.)
             # -if ChloeGf 
@@ -543,7 +543,7 @@ label v16s61:
             scene v16s61_21 # TPP. In apes room. MC (slight smile, mouth open) standing up from his chair and holding his phone to his ear.
             with dissolve
 
-            u "Hello, my Chlo. *Chuckles* How are you?"
+            u "Hello, my Chloe. *Chuckles* How are you?"
 
             # -You can show a couple of images, 2-3 max, of Chloe during this convo. I suggest that she's preparing the house and party supplies during the call (These images are not a priority and can be cut if needed, otherwise mc is just shown pacing his room during the call.)
             # -if ChloeGf 
