@@ -115,7 +115,7 @@ label v16s38:
 
     au "Can we just hurry inside?"
 
-    if v16s32_aubrey_cab_and_flowers >= 1: ### ERROR: IF MC ordered Aubrey a cab
+    if v16_aubrey_date_cab >= 1:
         scene v16s38_3b
         with dissolve
 
@@ -153,7 +153,6 @@ label v16s38:
 
         menu:
             "Tip ten dollars" if mc.money >= 10:
-                
                 $ v16s38_tippped_driver = True
                 $ mc.money -= 10
                 $ v16s26_lindsey_donation_money -= 10
@@ -278,7 +277,7 @@ label v16s38:
 
     pause 0.75
 
-    if v16s32_aubrey_cab_and_flowers == 3 : ### ERROR: IF MC ordered flowers with the cab
+    if v16_aubrey_date_cab == 2: # IF MC ordered flowers with the cab
         scene v16s38_11 # FPP. Show just Aubrey from the shoulders up, looking over at MC from the side, slight smile, mouth is open
         with dissolve
 

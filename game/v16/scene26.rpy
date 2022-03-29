@@ -145,7 +145,7 @@ label v16s26:
 
     li "I really wanted to attend the re-opening, but I won't have the time that day... Can you take the donation for me and make sure it gets into the right hands?"
 
-    $ mc.money += 50
+    $ v16_lindsey_donation = 50
 
     scene v16s26_3a
     with dissolve

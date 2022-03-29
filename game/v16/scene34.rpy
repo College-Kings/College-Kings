@@ -5,7 +5,7 @@
 
 label v16s34: # 34) Talk to Elijah about the cover with Chloe
     scene v16s34_1 # TPP Show MC walking along the school hallway
-    with dissolve
+    with fade
     
     pause 0.75
 

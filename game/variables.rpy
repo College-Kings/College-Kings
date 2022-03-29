@@ -458,7 +458,7 @@ default v16_amber_mention_bills = False
 default v16_amber_mention_laptop = False
 default v16s23_support_amber = False
 default v16_aubrey_date = False
-default v16s26_lindsey_donation_money = 50 # Track if MC spends any of the money lindsey gives him (can be spend in s32 and s38)
+default v16_lindsey_donation = 50 # Track if MC spends any of the money lindsey gives him (can be spend in s32 and s38)
 default v16s27_parent_chloe = False  # True = Chloe, False = Nora
 # default v16s27_mc_baby_duty_night = 0 # 0 = Unselected, 1 = Wednesday_alone, 2 = Thrusday_alone, 4 = Friday_alone, 0x10 = Wednesday_shared, 0x20 = Thursday_shared, 0x40 = Friday_shared
 default v16s27_mc_baby_schedule = {
@@ -466,9 +466,8 @@ default v16s27_mc_baby_schedule = {
     "thursday": BabyDuty.PARTNER_ALONE,
     "friday": BabyDuty.PARTNER_ALONE
 }
-default v16s32_birthday_reservation = 0 # 0 = neither, 1 = standard_reserveration, 2 = birthday_reservation  
-default v16s32_aubrey_cab_and_flowers = 0 #  0 = neither, 1 = cab only, 2 = cab and flowers
-default v16s32_cost_cab_and_flowers = 0 # Tracks the cost of Aubrey's cab ride to MC date
+default v16_aubrey_date_birthday = False
+default v16_aubrey_date_cab = 0 #  0 = neither, 1 = cab only, 2 = cab and flowers
 default v16s34_joke_about_elijah = False # used and checked in v16s34 
 default v16s34_knock_on_svc_door = False # False = walk in 
 default v16s34_get_aggressive_with_elijah = False # False = Laugh
