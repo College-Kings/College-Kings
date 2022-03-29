@@ -267,7 +267,7 @@ screen fight_player_turn(fight, player, opponent):
                         vbox:
                             align (0.5, 0.5)
 
-                            text "END STANCE" size 14 xalign 0.5
+                            text "IDEAL STANCE" size 14 xalign 0.5
                             text i.name xalign 0.5
  
                     elif selected_move is not None and i == selected_move.end_stance:
@@ -278,7 +278,7 @@ screen fight_player_turn(fight, player, opponent):
                         vbox:
                             align (0.5, 0.5)
 
-                            text "IDEAL STANCE" size 14 xalign 0.5
+                            text "END STANCE" size 14 xalign 0.5
                             text i.name xalign 0.5
 
                     else:
