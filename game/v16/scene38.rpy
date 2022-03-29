@@ -348,37 +348,37 @@ label v16s38:
 
         au "Haha, yeah. Let's do it."
 
-    else: ### ERROR: IF MC did not order flowers
+    elif v16_aubrey_date_cab == 1: # IF MC ordered cab but did not order flowers
         scene v16s38_11
         with dissolve
 
         au "All paid?"
 
-    if v16s38_tippped_driver: # IF tipped the driver
-        scene v16s38_11a
-        with dissolve
+        if v16s38_tippped_driver: # IF tipped the driver
+            scene v16s38_11a
+            with dissolve
 
-        u "Paid, tipped, ready to go."
+            u "Paid, tipped, ready to go."
 
-        scene v16s38_11b # FPP. Aubrey smiles proudly at mc, full smile, mouth is open, looking at MC
-        with dissolve
+            scene v16s38_11b # FPP. Aubrey smiles proudly at mc, full smile, mouth is open, looking at MC
+            with dissolve
 
-        au "*Giggles* Perfect."
+            au "*Giggles* Perfect."
 
-    else: ### ERROR: IF did not tip the driver
-        scene v16s38_11a
-        with dissolve
+        else: # IF did not tip the driver
+            scene v16s38_11a
+            with dissolve
 
-        u "Yup, ready to go."
+            u "Yup, ready to go."
 
-        scene v16s38_11
-        with dissolve
+            scene v16s38_11
+            with dissolve
 
-        au "Good."
+            au "Good."
 
-        scene v16s38_10a # TPP. Show Mc and Aubrey walking arm in arm into the Restaurant, slight smiles, mouths are closed
-        with dissolve
+    scene v16s38_10a # TPP. Show Mc and Aubrey walking arm in arm into the Restaurant, slight smiles, mouths are closed
+    with dissolve
 
-        pause 0.75
+    pause 0.75
 
     jump v16s39 # -Transition to Scene 39-
