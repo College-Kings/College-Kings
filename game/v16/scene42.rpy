@@ -29,7 +29,7 @@ label v16s42: # 42) MC changes into normal clothes ###check force send
             scene v16s42_1a # TPP Show MC entering his room in fancy clothes (DATE NIGHT CLOTHES s41) [WOLF ROOM]
             with dissolve
 
-        pause 0.75 
+        pause 0.75
         
     else:
         if not joinwolves:

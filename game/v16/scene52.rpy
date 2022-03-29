@@ -21,7 +21,7 @@ label v16s52:
     scene v16s52_3 # TPP. MC (neutral face, mouth closed) in the lobby, looking to his right he sees two people that seem to be talking (both slight smile, mouth open.)
     with dissolve 
 
-    pause 0.75 
+    pause 0.75
 
     scene v16s52_4 # TPP. MC (neutral face, mouth closed) walks a little further through the lobby and finds a wall that has a pic of dogs and their new owners (We need a picture with Blue/dog_name from v15s4 and their new owner and a picture of the jogger and Rubius from v16s44.)
     with dissolve 
@@ -121,7 +121,7 @@ label v16s52:
     scene v16s52_12 # TPP. Close up of Lauren (slight smile, mouth closed) digging through her pockets for money.
     with dissolve
 
-    pause 0.75 
+    pause 0.75
 
     scene v16s52_9b
     with dissolve
@@ -580,12 +580,12 @@ label v16s52:
             scene v16s52_17 # TPP. Show MC (Slight smile, mouth closed) looking at a poster in the dog shelter
             with fade
 
-            pause 0.75 
+            pause 0.75
 
             scene v16s52_17a # TPP. Show MC (slight smile, mouth closed) looking at a poster in the dog shelter while Autumn (slight smile, mouth closed) taps on his shoulder from behind.
             with dissolve 
 
-            pause 0.75 
+            pause 0.75
 
             play sound "sounds/dooropen.mp3"
 
@@ -625,7 +625,7 @@ label v16s52:
             scene v16s52_20 # TPP. Show MC (slight smile, mouth closed) outside by the entrance of the Dog shelter holding a big arrow sign "Love dogs? Come say hello!" with a dog picture if possible.
             with fade
 
-            pause 0.75 
+            pause 0.75
 
             scene v16s52_20a # TPP. Show MC (slight smile, mouth closed) outside by the entrance of the Dog Shelter trying to spin the sign.
             with dissolve 
@@ -956,7 +956,7 @@ label v16s52:
     scene v16s52_36 # FPP. MC looking at Autumn and the Dean walk away to do paperwork.
     with dissolve
 
-    pause 0.75 
+    pause 0.75
 
     scene v16s52_37 # TPP. A shot of MC(slight smile, mouth open) sitting on the floor with Oscar sitting next to him. Oscar and MC looking at each other.
     with dissolve
@@ -966,7 +966,7 @@ label v16s52:
     scene v16s52_37a # TPP. Show MC(slight smile, mouth closed) playing with Oscar.
     with dissolve
 
-    pause 0.75 
+    pause 0.75
 
     scene v16s52_38 # FPP. MC looking at the Dean (slight smile, mouth closed) who has Oscar on a leash and Autumn(slight smile, mouth open). Autumn looking at the Dean and the Dean looking back at her.
     with dissolve 

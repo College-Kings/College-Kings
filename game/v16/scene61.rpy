@@ -46,7 +46,7 @@ label v16s61:
                 scene v16s61_2a # TPP. In wolves room. Show MC (slight smile, mouth closed) sitting on his bed pulling out his phone from his pocket
                 with dissolve 
 
-                pause 0.75 
+                pause 0.75
                 
                 scene v16s61_2b # TPP In wolves room. Show MC (slight smile, mouth closed) sitting on his bed looking at his phone.
                 with dissolve 
@@ -304,7 +304,7 @@ label v16s61:
             scene v16s61_8
             with dissolve
 
-            pause 0.75 
+            pause 0.75
 
             play sound "sounds/dooropen.mp3"
 
@@ -333,12 +333,12 @@ label v16s61:
             scene v16s61_11 # TPP. Show MC(confused,mouth closed) standing in a black void nightmare and looking around.
             with fade 
 
-            pause 0.75 
+            pause 0.75
 
             scene v16s61_11a # TPP. Show MC(Jaw dropped) looking behind him we don't see whats behind him yet.
             with dissolve 
             
-            pause 0.75 
+            pause 0.75
 
             scene v16s61_12 # TPP. Shot from a bit behind MC of him looking up at a gigantic baby(Angry, mouth closed.) that is towering over him. The Babys eyes locked onto MC
             with dissolve
@@ -447,7 +447,7 @@ label v16s61:
                     scene v16s61_15a # TPP. In apes room. Show MC (slight smile, mouth closed) sitting on his bed pulling out his phone from his pocket
                     with dissolve 
 
-                    pause 0.75 
+                    pause 0.75
                     
                     scene v16s61_15b # TPP In apes room. Show MC (slight smile, mouth closed) sitting on his bed looking at his phone.
                     with dissolve 
@@ -702,7 +702,7 @@ label v16s61:
             scene v16s61_21
             with dissolve
 
-            pause 0.75 
+            pause 0.75
 
             play sound "sounds/dooropen.mp3"
 
@@ -719,7 +719,7 @@ label v16s61:
             scene v16s61_19a # TPP. Show MC fallen asleep his head hitting the book on his desk.
             with vpunch 
 
-            pause 0.75 
+            pause 0.75
 
             scene black
             with dissolve
@@ -731,12 +731,12 @@ label v16s61:
             scene v16s61_11 # TPP. Show MC(confused,mouth closed) standing in a black void nightmare and looking around.
             with fade
 
-            pause 0.75 
+            pause 0.75
 
             scene v16s61_11a # TPP. Show MC(Jaw dropped) looking behind him we don't see whats behind him yet.
             with dissolve 
             
-            pause 0.75 
+            pause 0.75
 
             scene v16s61_12 # TPP. Shot from a bit behind MC of him looking up at a gigantic baby(Angry, mouth closed.) that is towering over him. The Babys eyes locked onto MC
             with dissolve

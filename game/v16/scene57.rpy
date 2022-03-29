@@ -335,7 +335,7 @@ label v16s57:
         scene v16s57_2g # TPP. MC (slight smile, mouth is closed, facing the doorway) walking out of the living room, Samantha (playful guilty expression, mouth is closed, looking at Cameron), she has taken her feet off of the table, Cameron (annoyed expression, mouth is closed, looking at Samantha) hands up turned up in front of him like "what are you doing" towards Samantha, Grayson is no longer in the render
         with dissolve
 
-        pause 0.75 
+        pause 0.75
 
         scene v16s57_8 # FPP. Show just a close up side view of MC's face (nervous expression, mouth is closed)
         with dissolve

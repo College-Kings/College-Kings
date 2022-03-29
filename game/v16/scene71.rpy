@@ -15,7 +15,7 @@ label v16s71: ### ERROR: 71) Penelope dog sits for the dean
     scene v16s71_1a # FPP Dean (smile, mouth closed) standing in front of her desk looking at the other side of the room (not at MC or Penelope).
     with dissolve
 
-    pause 0.75 
+    pause 0.75
 
     scene v16s71_1b # FPP Oscar (the dog) on the other side of the room, sitting on his dog bed/blanket. Next to him is a bowl of water and an empty food bowl.
     with dissolve
@@ -268,12 +268,12 @@ label v16s71: ### ERROR: 71) Penelope dog sits for the dean
                 scene v16s71_8a # TPP Oscar, in front of his bed area, walking from the right to the left of hte screen.
                 with dissolve
 
-                pause 0.75 
+                pause 0.75
 
                 scene v16s71_8
                 with dissolve
 
-                pause 0.75 
+                pause 0.75
 
                 scene v16s71_8a
                 with dissolve

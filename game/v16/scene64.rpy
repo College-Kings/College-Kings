@@ -341,7 +341,7 @@ label v16s64:
                 scene v16s64_4n # FPP. Show just Aubrey (slight smile, mouth closed, looking at MC)
                 with dissolve
 
-        pause 0.75 
+        pause 0.75
 
         scene v16s64_8b # FPP. Show just Jenny (full smile, mouth closed, looking at Chloe)
         with dissolve
