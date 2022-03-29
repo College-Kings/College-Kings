@@ -10,12 +10,11 @@ screen message_reply(contact=None):
             button:
                 background "reply_background_idle"
                 action [Hide("message_reply"), Function(contact.selected_reply, reply)]
-                ysize 100
                 padding (15, 15)
                 size_group "reply_buttons"
 
                 if isinstance(reply, Reply):
-                    text reply.message style "reply_text" yalign 0.5
+                    text reply.message style "reply_text" align (0.5, 0.5)
 
                 elif isinstance(reply, ImgReply):
                     add Transform(reply.image, zoom=0.15)
