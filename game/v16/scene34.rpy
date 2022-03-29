@@ -3,6 +3,8 @@
 # Characters: CHLOE (Outfit: 3), MC (Outfit: 9), ELIJAH (Outfit: x)
 # Time: Wednesday
 
+# can only get here from scene 32, if v16_chloe_newspaper
+
 label v16s34: # 34) Talk to Elijah about the cover with Chloe
     scene v16s34_1 # TPP Show MC walking along the school hallway
     with fade
@@ -46,8 +48,6 @@ label v16s34: # 34) Talk to Elijah about the cover with Chloe
 
     menu:
         "Knock":
-            $ v16s34_knock_on_svc_door = True
-
             play sound "sounds/knock.mp3"
 
             scene v16s34_5 # FPP Show MC's hand knocking on the door
@@ -70,6 +70,40 @@ label v16s34: # 34) Talk to Elijah about the cover with Chloe
 
             u "*Chuckles*"
 
+            scene v16s34_6 # TPP Show door into the office opening, MC holding the door, Chloe entering first with MC right behind her
+            with dissolve
+
+            pause 0.75
+
+            # -Elijah is sitting at a desk at a computer (no, don't waste time showing me the computer screen), SVC Times sign is hanging somewhere in the room, 
+            # there should be a small nook for Riley in there so it's not a tiny room, its like the newspaper headquarters but he has the largest area. 
+            # Think like Michael Scott Paper Company, but a bit bigger. It's obvious that Elijah has taken the time to stock the room business-appropriately-
+
+            scene v16s34_7 # FPP Show Elijah (neutral expression, mouth closed) turning his chair to look at MC and Chloe
+            with dissolve
+
+            pause 0.75
+
+            scene v16s34_7a # FPP Same angle as 7, Elijah (slight smile, mouth open) looking at MC
+            with dissolve
+
+            el "Thanks for respecting the editor and knocking first. You wouldn't believe the number of idiots that just barge in here."
+
+            scene v16s34_7b # FPP Same angle as 7, Elijah (slight smile, mouth closed) looking at MC
+            with dissolve
+
+            u "Civilized people know how to knock before entering a room."
+
+            scene v16s34_7a
+            with dissolve
+
+            el "My sentiments exactly!"
+
+            scene v16s34_8 # FPP Show Chloe (rolling her eyes, mouth closed) not looking at MC or Elijah
+            with dissolve
+
+            pause 0.75
+
         "Just walk in":
             $ add_point(KCT.TROUBLEMAKER)
 
@@ -83,96 +117,74 @@ label v16s34: # 34) Talk to Elijah about the cover with Chloe
 
             cl "Exactly. Acting like he's the Dean..."
 
-    scene v16s34_6 # TPP Show door into the office opening, MC holding the door, Chloe entering first with MC right behind her
-    with dissolve
+            scene v16s34_6 # TPP Show door into the office opening, MC holding the door, Chloe entering first with MC right behind her
+            with dissolve
 
-    pause 0.75
+            pause 0.75
 
-    # -Elijah is sitting at a desk at a computer (no, don't waste time showing me the computer screen), SVC Times sign is hanging somewhere in the room, 
-    # there should be a small nook for Riley in there so it's not a tiny room, its like the newspaper headquarters but he has the largest area. 
-    # Think like Michael Scott Paper Company, but a bit bigger. It's obvious that Elijah has taken the time to stock the room business-appropriately-
+            # -Elijah is sitting at a desk at a computer (no, don't waste time showing me the computer screen), SVC Times sign is hanging somewhere in the room, 
+            # there should be a small nook for Riley in there so it's not a tiny room, its like the newspaper headquarters but he has the largest area. 
+            # Think like Michael Scott Paper Company, but a bit bigger. It's obvious that Elijah has taken the time to stock the room business-appropriately-
 
-    scene v16s34_7 # FPP Show Elijah (neutral expression, mouth closed) turning his chair to look at MC and Chloe
-    with dissolve
+            scene v16s34_7 # FPP Show Elijah (neutral expression, mouth closed) turning his chair to look at MC and Chloe
+            with dissolve
 
-    pause 0.75
+            pause 0.75
 
-    if v16s34_knock_on_svc_door: # IF Knock
-        scene v16s34_7a # FPP Same angle as 7, Elijah (slight smile, mouth open) looking at MC
-        with dissolve
+            scene v16s34_7c # FPP Same angle as 7, Elijah (angry expression, mouth open) looking at MC
+            with dissolve
 
-        el "Thanks for respecting the editor and knocking first. You wouldn't believe the number of idiots that just barge in here."
+            el "You- Seriously?!"
 
-        scene v16s34_7b # FPP Same angle as 7, Elijah (slight smile, mouth closed) looking at MC
-        with dissolve
+            scene v16s34_7d # FPP Same angle as 7, Elijah (angry expression, mouth open) looking at MC, but holding his hound out toward the door
+            with dissolve
 
-        u "Civilized people know how to knock before entering a room."
+            el "What's the point of putting a sign up if everyone's just going to ignore it?"
 
-        scene v16s34_7a
-        with dissolve
+            scene v16s34_7e # FPP Same angle as 7, Elijah (angry expression, mouth closed) looking at MC
+            with dissolve
 
-        el "My sentiments exactly!"
+            u "What's the matter? Worried we'd catch you jerking off? *Laughs*"
 
-        scene v16s34_8 # FPP Show Chloe (rolling her eyes, mouth closed) not looking at MC or Elijah
-        with dissolve
+            scene v16s34_7c
+            with dissolve
 
-        pause 0.75
+            el "That's not the point, [name]! I've created a protocol here and want it to be followed."
 
-    else: # IF Just walk in
-        scene v16s34_7c # FPP Same angle as 7, Elijah (angry expression, mouth open) looking at MC
-        with dissolve
+            scene v16s34_7e
+            with dissolve
 
-        el "You- Seriously?!"
+            u "So, you do jerk off in here?"
 
-        scene v16s34_7d # FPP Same angle as 7, Elijah (angry expression, mouth open) looking at MC, but holding his hound out toward the door
-        with dissolve
+            scene v16s34_7c
+            with dissolve
 
-        el "What's the point of putting a sign up if everyone's just going to ignore it?"
+            el "No!"
 
-        scene v16s34_7e # FPP Same angle as 7, Elijah (angry expression, mouth closed) looking at MC
-        with dissolve
+            scene v16s34_8a # FPP Same angle as 7, Chloe (slight smile, mouth open) looking at Elijah
+            with dissolve
 
-        u "What's the matter? Worried we'd catch you jerking off? *Laughs*"
+            cl "Sorry, Elijah. We'll make sure it doesn't happen again."
 
-        scene v16s34_7c
-        with dissolve
+            scene v16s34_7c
+            with dissolve
 
-        el "That's not the point, [name]! I've created a protocol here and want it to be followed."
+            el "*Sighs* Yes, please do."
 
-        scene v16s34_7e
-        with dissolve
+            scene v16s34_7f # FPP Same angle as 7, Elijah (neutral expression, mouth open) looking at Chloe
+            with dissolve
 
-        u "So, you do jerk off in here?"
+            el "Sorry for raising my voice, Chloe."
 
-        scene v16s34_7c
-        with dissolve
+            scene v16s34_8a
+            with dissolve
 
-        el "No!"
+            cl "Oh, it's okay. Don't worry about it."
 
-        scene v16s34_8a # FPP Same angle as 7, Chloe (slight smile, mouth open) looking at Elijah
-        with dissolve
+            scene v16s34_7
+            with dissolve
 
-        cl "Sorry, Elijah. We'll make sure it doesn't happen again."
-
-        scene v16s34_7c
-        with dissolve
-
-        el "*Sighs* Yes, please do."
-
-        scene v16s34_7f # FPP Same angle as 7, Elijah (neutral expression, mouth open) looking at Chloe
-        with dissolve
-
-        el "Sorry for raising my voice, Chloe."
-
-        scene v16s34_8a
-        with dissolve
-
-        cl "Oh, it's okay. Don't worry about it."
-
-        scene v16s34_7
-        with dissolve
-
-        u "(I bet he jerks off in here.)"
+            u "(I bet he jerks off in here.)"
 
     scene v16s34_7f
     with dissolve

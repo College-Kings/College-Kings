@@ -469,7 +469,6 @@ default v16s27_mc_baby_schedule = {
 default v16_aubrey_date_birthday = False
 default v16_aubrey_date_cab = 0 #  0 = neither, 1 = cab only, 2 = cab and flowers
 default v16s34_joke_about_elijah = False # used and checked in v16s34 
-default v16s34_knock_on_svc_door = False # False = walk in 
 default v16s34_get_aggressive_with_elijah = False # False = Laugh
 default v16s34_chloe_kiss_elijah_for_frontpage = False # False = Tell Elijah to fuck off 
 default v16s35_mc_spa_shopping = set() # possible values are "tingle_mint_oil", "citrus_oil", "expensive_mask", "cheap_mask"  - Tracks what MC purchased during spa shopping for chloe
