@@ -5,7 +5,7 @@
 
 label v16s33: # 33) MC showers
     scene v16s33_1 # TPP Show MC washing himself in the shower, lips pursed, whistling
-    with dissolve
+    with fade
 
     u "*Whistling badly*"
 
@@ -67,8 +67,7 @@ label v16s33: # 33) MC showers
     
     
     else: # -if MC not going on Aubrey date
-        
-        if lauren.relationship >= Relationship.FWB: # -if LaurenGF/RS ###fwb?
+        if lauren.relationship >= Relationship.FWB: # -if LaurenGF/RS
             $ lauren.messenger.addReply("Better be worth it... ;)")
             $ lauren.messenger.newMessage("A kiss is worth a thousand words...?")
             $ lauren.messenger.addReply("Sold! I'm in.")

@@ -26,7 +26,7 @@ label v16s38:
 
     scene v16s38_4a # TPP. Show MC and Aubrey exchanging a quick kiss.
     with dissolve
-
+    play sound "sounds/kiss.mp3"
     pause 0.75
 
     scene v16s38_3a # FPP. Show just Aubrey from the waist up, no expression, mouth is open, looking at MC
@@ -115,7 +115,7 @@ label v16s38:
 
     au "Can we just hurry inside?"
 
-    if v16s32_aubrey_cab_and_flowers >= 1: ### ERROR: IF MC ordered Aubrey a cab
+    if v16_aubrey_date_cab >= 1:
         scene v16s38_3b
         with dissolve
 
@@ -134,7 +134,7 @@ label v16s38:
         scene v16s38_6 # FPP. Show just the driver from the waist up, slight smile, mouth is closed, accepting money that MC is handing him
         with dissolve
 
-        u "Here you go, sir."
+        u "Here you go."
 
         scene v16s38_6a # FPP. Show just the driver from the waist up, slight smile, mouth is open, the driver has put away the money
         with dissolve
@@ -144,19 +144,23 @@ label v16s38:
         scene v16s38_6b # FPP. Show just the driver from the waist up, slight smile, mouth is closed, the driver has put away the money
         with dissolve
 
-        u "(Ten bucks left for Lindsey's donation... Ha.)"
+        if v16_aubrey_date_cab == 2:
+            u "(Ten bucks left for Lindsey's donation... Ha.)"
 
-        u "(Should I just give him the rest as a tip?)"
+            u "(Should I just give him the rest as a tip?)"
+
+        else:
+            u "(This was supposed to be Lindsey's donation... Ha.)"
+
+            u "(Should I give this guy a tip?)"
 
         scene v16s38_6b
         with dissolve
 
         menu:
-            "Tip ten dollars" if mc.money >= 10:
-                
+            "Tip ten dollars":
                 $ v16s38_tippped_driver = True
-                $ mc.money -= 10
-                $ v16s26_lindsey_donation_money -= 10
+                $ v16_lindsey_donation -= 10
                 $ add_point(KCT.BRO)
 
                 scene v16s38_6b
@@ -267,7 +271,7 @@ label v16s38:
 
                 u "(Then again... Maybe I am a dick.)"
             
-    else: ### ERROR: IF did not order Aubrey a cab
+    else: # IF did not order Aubrey a cab
         scene v16s38_3b
         with dissolve
 
@@ -278,7 +282,7 @@ label v16s38:
 
     pause 0.75
 
-    if v16s32_aubrey_cab_and_flowers == 3 : ### ERROR: IF MC ordered flowers with the cab
+    if v16_aubrey_date_cab == 2: # IF MC ordered flowers with the cab
         scene v16s38_11 # FPP. Show just Aubrey from the shoulders up, looking over at MC from the side, slight smile, mouth is open
         with dissolve
 
@@ -344,37 +348,37 @@ label v16s38:
 
         au "Haha, yeah. Let's do it."
 
-    else: ### ERROR: IF MC did not order flowers
+    elif v16_aubrey_date_cab == 1: # IF MC ordered cab but did not order flowers
         scene v16s38_11
         with dissolve
 
         au "All paid?"
 
-    if v16s38_tippped_driver: ### ERROR: IF tipped the driver
-        scene v16s38_11a
-        with dissolve
+        if v16s38_tippped_driver: # IF tipped the driver
+            scene v16s38_11a
+            with dissolve
 
-        u "Paid, tipped, ready to go."
+            u "Paid, tipped, ready to go."
 
-        scene v16s38_11b # FPP. Aubrey smiles proudly at mc, full smile, mouth is open, looking at MC
-        with dissolve
+            scene v16s38_11b # FPP. Aubrey smiles proudly at mc, full smile, mouth is open, looking at MC
+            with dissolve
 
-        au "*Giggles* Perfect."
+            au "*Giggles* Perfect."
 
-    else: ### ERROR: IF did not tip the driver
-        scene v16s38_11a
-        with dissolve
+        else: # IF did not tip the driver
+            scene v16s38_11a
+            with dissolve
 
-        u "Yup, ready to go."
+            u "Yup, ready to go."
 
-        scene v16s38_11
-        with dissolve
+            scene v16s38_11
+            with dissolve
 
-        au "Good."
+            au "Good."
 
-        scene v16s38_10a # TPP. Show Mc and Aubrey walking arm in arm into the Restaurant, slight smiles, mouths are closed
-        with dissolve
+    scene v16s38_10a # TPP. Show Mc and Aubrey walking arm in arm into the Restaurant, slight smiles, mouths are closed
+    with dissolve
 
-        pause 0.75
+    pause 0.75
 
     jump v16s39 # -Transition to Scene 39-

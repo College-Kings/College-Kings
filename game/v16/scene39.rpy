@@ -1313,7 +1313,7 @@ label v16s39:
 
         au "*Laughs* Maybe he's just a very happy man."
 
-        if v16s32_birthday_reservation == 2 1: # -if MC made a Birthday reservation
+        if v16_aubrey_date_birthday: # -if MC made a Birthday reservation
             scene v16s39_4m # FPP. The waiter is the same distance from the table as in render v16s39_4d, facing the camera, looking at MC, carrying a tray with 2 desserts on it, and one of them has a lit candle on it, slightly creepy smile, mouth is closed
             with dissolve
 
@@ -1529,7 +1529,7 @@ label v16s39:
 
                     u "Ha... (Shit.)"
             
-        elif v16s32_birthday_reservation == 1: # -if MC made a Standard reservation (ONE POINT)
+        else: # -if MC made a Standard reservation (ONE POINT)
             $ v16s39_fr_aubrey_date_points += 1
 
             scene v16s39_4t # FPP. The waiter is the same distance from the table as in render v16s39_4d, facing the camera, looking at MC, carrying a tray with 2 desserts on it, slightly creepy smile, mouth is closed

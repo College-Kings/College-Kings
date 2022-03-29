@@ -86,19 +86,11 @@ label v16s35:
 
     scene v16s35_9 # TPP. MC walking down the street with a shopping bag in his hand, MC slight smile, mouth closed.
     with dissolve
-
-    pause 0.75
     
     if joinwolves:
-        scene v16s35_9
-        with dissolve
-
         u "(And hopefully there's no Chris and Imre drama waiting for me this time...)"
 
     else:
-        scene v16s35_9
-        with dissolve
-        
         u "(And hopefully there's no Grayson and Sam drama waiting for me this time...)"
 
     jump v16s33

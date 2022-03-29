@@ -68,15 +68,13 @@ label v16s32:
 
         menu:
             "Standard reservation":
-                $ v16s32_birthday_reservation = 1 # TODO: Variable 
-
                 scene v16s32_3
                 with dissolve
 
                 u "(Standard it is. I've done some sneaky things, but lying about a birthday at a high-class restaurant? That's just evil...)"
 
             "Birthday reservation":
-                $ v16s32_birthday_reservation = 2 # TODO: Variable
+                $ v16_aubrey_date_birthday = True
 
                 scene v16s32_3
                 with dissolve
@@ -101,12 +99,12 @@ label v16s32:
                 scene v16s32_3a
                 with dissolve
 
-                u "Okay so the cab is going to cost twenty dollars..."
+                u "(Okay so the cab is going to cost twenty dollars...)"
 
                 scene v16s32_3b # TPP. Show just Mc slightly holding his finger away from his phone, slight smile, mouth is closed, same position and background as v16s32_3
                 with dissolve
 
-                u "Oh, the cab driver will bring your date a bouquet of flowers for an additional twenty."
+                u "(Oh, the cab driver will bring your date a bouquet of flowers for an additional twenty.)"
 
                 scene v16s32_3
                 with dissolve
@@ -118,16 +116,15 @@ label v16s32:
 
                 menu:
                     "Just the cab":
-                        $ v16s32_aubrey_cab_and_flowers = 1 # TODO: Variable
-                        $ v16s32_cost_cab_and_flowers = 30 # TODO: Variable
+                        $ v16_aubrey_date_cab = 1
+
                         scene v16s32_3a
                         with dissolve
 
                         u "(Yeah, I don't think the flowers are necessary. Let's save the money.)"
 
                     "Cab/Flower Combo":
-                        $ v16s32_aubrey_cab_and_flowers = 2 #TODO: Variable
-                        $ v16s32_cost_cab_and_flowers = 40 # TODO: Variable
+                        $ v16_aubrey_date_cab = 2
 
                         scene v16s32_3a
                         with dissolve
@@ -155,18 +152,19 @@ label v16s32:
                     with dissolve
 
                     menu:
-                        "Use the money" if mc.money >= v16s32_cost_cab_and_flowers:
-                            $ mc.money -= v16s32_cost_cab_and_flowers
-                            $ v16s26_lindsey_donation_money -= v16s32_cost_cab_and_flowers
-
+                        "Use the money":
+                            if v16_aubrey_date_cab == 1:
+                                $ v16_lindsey_donation -= 20
+                            else:
+                                $ v16_lindsey_donation -= 40
+                        
                             scene v16s32_3a
                             with dissolve
 
                             u "(What Lindsey doesn't know won't hurt her, right? Surely...)"
 
-                        "Cancel the booking":
-                            
-                            $ v16s32_aubrey_cab_and_flowers = 0
+                        "Cancel the booking":                            
+                            $ v16_aubrey_date_cab = 0
 
                             scene v16s32_3a
                             with dissolve
@@ -177,7 +175,7 @@ label v16s32:
                 scene v16s32_3
                 with dissolve
 
-                u "(She can find her own way there. She's a tough girl.)"
+                u "(She can book her own cab if she needs one. She's a tough girl.)"
 
                 scene v16s32_3a
                 with dissolve
@@ -217,7 +215,7 @@ label v16s32:
 
         pause 0.75
 
-        $ chloe.messenger.newMessage("Elijah is available rn, let's go meet with him?.")
+        $ chloe.messenger.newMessage("Elijah is available rn, let's go meet with him?", force_send=True)
         $ chloe.messenger.addReply("Okay. OMW")
         $ chloe.messenger.newMessage("Hurry up :)")
         $ chloe.messenger.addReply("Running all the way, boss :P")
@@ -248,6 +246,6 @@ label v16s32:
         scene v16s32_6 # TPP. Show a close-up shot of Mc's face, slight smile, mouth is closed, same position and background as v16s32_3
         with dissolve
 
-        u "Spa shit, here I come!"
+        u "(Spa stuff, here I come!)"
 
         jump v16s35 # -Transition to Scene 35-
