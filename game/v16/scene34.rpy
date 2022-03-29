@@ -204,7 +204,7 @@ label v16s34: # 34) Talk to Elijah about the cover with Chloe
     scene v16s34_8a
     with dissolve
 
-    cl "Right... I certainly am committed. I just need some help proving to SVC that I'm the most loyal and responsible candidate."
+    cl "Right... I certainly am committed. I just need some help proving to SVC that I'm the most dedicated and responsible candidate."
 
     scene v16s34_7f
     with dissolve
