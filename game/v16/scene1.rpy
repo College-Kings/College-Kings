@@ -64,7 +64,7 @@ label v16s1:
             "blocked_image": "images/v16/Scene 1/fight/tom-basic-attacks/v16-tom-kick-block.webp"
         }))
 
-        fight = Fight(mc, tom, "v1_start")
+        fight = Fight(mc, tom, "v16s1_fight_end")
 
     call screen fight_overview(fight, "First Fight")
 

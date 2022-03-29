@@ -63,7 +63,8 @@ screen fight_overview_info(competitor, profile_picture, is_player=False):
                         button:
                             idle_background image_path + "attack-idle.webp"
                             hover_background image_path + "attack-idle.webp"
-                            tooltip attack.description
+                            if is_player:
+                                tooltip attack.description
                             action NullAction()
                             xysize (206, 58)
                             padding (5, 5)
@@ -83,13 +84,14 @@ screen fight_overview_info(competitor, profile_picture, is_player=False):
                         button:
                             idle_background image_path + "attack-idle2.webp"
                             selected_background image_path + "attack-hover.webp"
-                            selected (competitor.special_attack is not None and competitor.special_attack.name == attack.name)
-                            tooltip attack.description
+                            selected (competitor.special_attack is not None and competitor.special_attack.name == attack.name)                               
                             xysize (206, 58)
                             padding (5, 5)
                             if is_player:
+                                tooltip attack.description
                                 hover_background image_path + "attack-hover.webp"
-                                action SetField(competitor, "special_attack", attack)
+                                # action SetField(competitor, "special_attack", attack) # Disabled for v3.0
+                                action NullAction()
                             else:
                                 hover_background image_path + "attack-idle2.webp"
                                 action NullAction()
@@ -110,12 +112,13 @@ screen fight_overview_info(competitor, profile_picture, is_player=False):
                             idle_background image_path + "attack-idle2.webp"
                             selected_background image_path + "attack-hover.webp"
                             selected (competitor.quirk is not None and competitor.quirk.name == quirk.name)
-                            # tooltip attack.description
                             xysize (206, 58)
                             padding (5, 5)
                             if is_player:
+                                # tooltip attack.description
                                 hover_background image_path + "attack-hover.webp"
-                                action SetField(competitor, "quirk", quirk)
+                                # action SetField(competitor, "quirk", quirk)
+                                action NullAction() # Disabled for v3.0
                             else:
                                 hover_background image_path + "attack-idle2.webp"
                                 action NullAction()
