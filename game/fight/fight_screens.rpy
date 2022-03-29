@@ -126,10 +126,12 @@ screen fight_overview_info(competitor, profile_picture, is_player=False):
 
         fixed:
             align (0.5, 1.0)
-            ysize 125
+            xysize (700, 125)
 
             if tooltip and is_player:
                 text "[tooltip]" align (0.5, 0.5)
+            else:
+                text "Special Attacks and Quirks are {b}disabled{/b} to keep the fight simple and get accurate feedback on player experience" align (0.5, 0.5)
 
 
 screen fight_overview(fight, title):
