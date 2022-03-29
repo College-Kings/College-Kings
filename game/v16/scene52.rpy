@@ -190,13 +190,7 @@ label v16s52:
 
             aut "Thanks, [name]. That's really kind of her!"
 
-            if mc.money >= 10:
-                $ mc.money -= 10 
-
-        elif v16_lindsey_donation == 50:
-            if mc.money >= 50:
-                $ mc.money -= 50
-
+        elif v16_lindsey_donation == 50: ### only accounts for =10 and =50
             scene v16s52_9c 
             with dissolve
 
