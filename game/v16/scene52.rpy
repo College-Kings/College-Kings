@@ -604,9 +604,9 @@ label v16s52:
             aut "Guess we'll find out."
 
         "Spin sign":
-            $ add_Point(KCT.BRO)            
+            $ add_Point(KCT.BRO)
             scene v16s52_9
-            with dissolve            
+            with dissolve
 
             u "I'll take the sign out for a spin, I guess."
 
