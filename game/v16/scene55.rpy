@@ -321,28 +321,28 @@ label v16s55: # 55) Prepare Lindsey for the interview
         li "Oh! I donated money to the dog shelter!"
 
         # -if mc didn't go on a date with aubrey and gave a full donation to lindsey
-        if not v16_aubrey_date and v16s26_lindsey_donation_money == 50: # TODO: Variables 
+        if not v16_aubrey_date and v16_lindsey_donation == 50: # TODO: Variables 
             scene v16s55_3e
             with dissolve
 
             u "Which was really helpful, by the way. Autumn says thank you."
 
         # -if MC spent some of Lindsey's money
-        elif v16s26_lindsey_donation_money > 0 and v16s26_lindsey_donation_money < 50: # TODO: Variable
+        elif v16_lindsey_donation > 0 and v16_lindsey_donation < 50: # TODO: Variable
             scene v16s55_3e
             with dissolve
 
             u "(Well, you donated a little less than you think...)"
 
         # -if MC spent all Lindsey's money and mc DID NOT post on Kiwii about the dog shelter
-        elif v16s26_lindsey_donation_money == 0 and not v16s52_mc_dogshelter_kiwii_post: # TODO: PLACEHOLDER VARIABLE
+        elif v16_lindsey_donation == 0 and not v16s52_mc_dogshelter_kiwii_post: # TODO: PLACEHOLDER VARIABLE
             scene v16s55_3e
             with dissolve
 
             u "(Well, at least you think you did.)"
 
         # -if MC spent all Lindsey's money and MC DID post on Kiwii about the dog shelter
-        elif v16s26_lindsey_donation_money == 0 and v16s52_mc_dogshelter_kiwii_post: # TODO: PLACEHOLDER VARIABLES
+        elif v16_lindsey_donation == 0 and v16s52_mc_dogshelter_kiwii_post: # TODO: PLACEHOLDER VARIABLES
             scene v16s55_3c
             with dissolve 
 

@@ -173,7 +173,7 @@ label v16s52:
 
     aut "Haha, okay. Thank you."
         
-    if v16s26_lindsey_donation_money >= 10: # TODO: Variable
+    if v16_lindsey_donation >= 10: # TODO: Variable
         scene v16s52_9d # FPP. MC looking at Autumn slight smile, mouth closed.) Autumn looking at MC and standing next to Lauren.
         with dissolve
 
@@ -184,7 +184,7 @@ label v16s52:
 
         pause 0.75
 
-        if v16s26_lindsey_donation_money == 10:
+        if v16_lindsey_donation == 10:
             scene v16s52_9c # FPP. MC looking at Autumn (slight smile, mouth open.). Autumn looking at MC and standing next to Lauren(slight smile, mouth closed.). Lauren looking at Autumn. 
             with dissolve
 
@@ -193,7 +193,7 @@ label v16s52:
             if mc.money >= 10:
                 $ mc.money -= 10 
 
-        elif v16s26_lindsey_donation_money == 50:
+        elif v16_lindsey_donation == 50:
             if mc.money >= 50:
                 $ mc.money -= 50
 
@@ -217,7 +217,7 @@ label v16s52:
 
             aut "Yeah, please do."
 
-    elif v16s26_lindsey_donation_money == 0:
+    elif v16_lindsey_donation == 0:
         scene v16s52_10
         with dissolve
 
@@ -543,10 +543,10 @@ label v16s52:
                     scene v16s52_post2
                     with dissolve
                 
-                if v16s26_lindsey_donation_money >= 10:
+                if v16_lindsey_donation >= 10:
                     $ v16s52_kiwiiPost2.new_comment(autumn, "Yes, received! Thank you so so much :D", mentions=lindsey, numberLikes=146, force_send=True)
                 
-                elif v16s26_lindsey_donation_money == 0:
+                elif v16_lindsey_donation == 0:
                     $ v16s52_kiwiiPost2.new_comment(autumn, "Must have missed it... Where did you send it?", mentions=lindsey, numberLikes=119, force_send=True)
                 
                 $ v16s52_kiwiiPost2.new_comment(aubrey, "Good luck u guys :)", numberLikes=91, force_send=True)
