@@ -11,7 +11,7 @@
 # Example if the scene that jumps to s50a happens on Wednesday evening
 # then the v16s50a_dotw variable MUST be set to Thursday.
 
-label v16s50a: ### ERROR: 50a) MC wakes up
+label v16s50a: # 50a) MC wakes up
     # -Night to morning transition-
     scene sleep_transition_fast # Ignore animation 
     with fade
@@ -23,8 +23,8 @@ label v16s50a: ### ERROR: 50a) MC wakes up
         
     pause 1
 
-    # if v16s27_parent_chloe and not 1 & v16s27_mc_baby_duty_night == 1 and not 0x10 & v16s27_mc_baby_duty_night == 0x10: # -if Chloe was alone Wed night with the baby and is MC partner 
-    if v16s27_parent_chloe and v16s27_mc_baby_schedule["wednesday"] == BabyDuty.PARTNER_ALONE:
+    # -if Chloe was alone Wed night with the baby and is MC partner 
+    if v16_parent_chloe and ( (v16s27_mc_baby_schedule["wednesday"] == BabyDuty.PARTNER_ALONE and v16s50a_dotw == 5) or (v16s27_mc_baby_schedule["thursday"] == BabyDuty.PARTNER_ALONE and v16s50a_dotw == 6) or (v16s27_mc_baby_schedule["friday"] == BabyDuty.PARTNER_ALONE and v16s50a_dotw == 7)):
         #! v16s50akw_1 "Chloe and MC's baby doll inside of a washing machine or dryer"
         
         $ v16s50a_kiwii_post = KiwiiPost(aubrey, "v16/v16s50a_aubpost1.webp", "Umm, good morning from the Chicks?", numberLikes=817)
@@ -95,9 +95,9 @@ label v16s50a: ### ERROR: 50a) MC wakes up
             # -Transition to Scene 51-
             jump v16s51
 
-        ### ERROR: [End of Checkpoint 1.1]
+        # [End of Checkpoint 1.1]
 
-        if v16s50a_dotw == 6: # -if Friday morning [Checkpoint 1.2] Outfit 5 
+        elif v16s50a_dotw == 6: # -if Friday morning [Checkpoint 1.2] Outfit 5 
             # -MC's phone vibrates. He looks at his phone to see a text from Penelope-
             scene v16s50a_2
             with dissolve
@@ -144,9 +144,9 @@ label v16s50a: ### ERROR: 50a) MC wakes up
             # -Transition to Scene 70-
             jump v16s70
 
-        ### ERROR: [End of Checkpoint 1.2]
+        # [End of Checkpoint 1.2]
 
-        if v16s50a_dotw == 7: # -if Saturday morning [Checkpoint 1.3] Outfit 1
+        else: # -if Saturday morning [Checkpoint 1.3] Outfit 1
             # -MC looks at his phone, checking the date-
             scene v16s50a_3
             with dissolve
