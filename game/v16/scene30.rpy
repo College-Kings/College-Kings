@@ -3,8 +3,6 @@
 # Characters: MC (Outfit: 9), CHRIS (Outfit: 2), SEBASTIAN (Outfit: 1), IMRE (Outfit: 2)
 # Time: Afternoon
 
-### needs punching sounds
-
 label v16s30:
     scene v16s30_1 # TPP. MC walking into the Wolves house, slight smile, mouth closed
     with fade
@@ -34,7 +32,7 @@ label v16s30:
     scene v16s30_5 # TPP. Show MC taking a seat next to Imre, both slight smiles, Imre mouth closed, MC mouth open
     with dissolve
 
-    u "Oh, yeah. Aubrey mentioned something about power outages lately. How long's it been out for?"
+    u "Oh yeah. Aubrey mentioned something about power outages lately. How long's it been out for?"
 
     scene v16s30_6 # FPP. Same positioning as v16s30_5, MC looking at Imre, Imre looking at MC, Imre slight smile, mouth open
     with dissolve
@@ -56,13 +54,14 @@ label v16s30:
 
     ch "*Sighs* It's been about... an hour?"
 
-    scene v16s30_8 # FPP. MC looking at Sebastian, Sebastian looking at MC, Sebastian neutral expression, mouth open
-    with dissolve
+    if False: ### don't like the angle transition
+        scene v16s30_8 # FPP. MC looking at Sebastian, Sebastian looking at MC, Sebastian neutral expression, mouth open
+        with dissolve
 
-    se "Yeah, something like that."
+        se "Yeah, something like that."
 
-    scene v16s30_7a
-    with dissolve
+        scene v16s30_7a
+        with dissolve
 
     ch "But who cares? It's good to have some time like this."
 
@@ -119,7 +118,7 @@ label v16s30:
     scene v16s30_8c # FPP. Same as v16s30_8b, Sebastian slight smile, mouth open
     with dissolve
 
-    se "Ha! Spit it out, man. That's impossible."
+    se "That's impossible. Spit it out, man..."
 
     scene v16s30_6a
     with dissolve
@@ -168,10 +167,11 @@ label v16s30:
 
     ch "Imre, chill. It's not like that, bro."
 
-    scene v16s30_8d # FPP. Same as v16s30_8c, Sebastian shocked, mouth open from shock (not talking)
-    with dissolve
+    if False: ### angle transition
+        scene v16s30_8d # FPP. Same as v16s30_8c, Sebastian shocked, mouth open from shock (not talking)
+        with dissolve
 
-    pause 0.75
+        pause 0.75
 
     scene v16s30_6c
     with dissolve
@@ -201,7 +201,7 @@ label v16s30:
     scene v16s30_6c
     with dissolve
 
-    imre "Ha. That's where you're wrong. This changes everything."
+    imre "That's where you're wrong. This changes everything."
 
     scene v16s30_7d
     with dissolve
@@ -218,15 +218,12 @@ label v16s30:
 
     imre "What happened to loyalty?! Because right now, all I can think about is how lucky she is to have left you already, you fucking prick!"
 
-    scene v16s30_9a # TPP. Same as v16s30_9, both mouths closed, both very angry
-    with dissolve
-
     u "(I don't think I've ever seen Imre this angry before.)"
 
     scene v16s30_9b # TPP. Same as v16s30_9, both standing up now, Chris very angry, mouth open, Imre very angry, mouth closed
     with dissolve
 
-    ch "Don't fucking talk to me like that, Imre. I'm still your president, and until that changes you need to show me some respect!"
+    ch "Don't fucking talk to me like that, Imre. I'm still your President, and until that changes you need to show me some respect!"
 
     scene v16s30_9c # TPP. Same as v16s30_9b, both very angry, Chris mouth closed, Imre mouth open
     with dissolve
@@ -249,13 +246,7 @@ label v16s30:
     imre "We all stood by and listened to you cry and complain about Nora. You even suggested that she might have been seeing someone else."
 
     if v13_imre_disloyal: # MC kissed Nora and Imre caught them in v13s37 
-        scene v16s30_9d # TPP. Same as v16s30_9c, both mouths closed, both very angry
-        with dissolve
-
         u "(Please Imre, don't...)"
-
-    scene v16s30_9c
-    with dissolve
 
     imre "I guess it takes a cheater to recognize one, huh?"
 
@@ -284,13 +275,15 @@ label v16s30:
 
     pause 0.75
 
+    play sound "sounds/facepunch1.mp3"
     scene v16s30_12 # TPP. Show Chris connecting the punch to Imre's face, both very angry, mouths closed
-    with dissolve
+    with hpunch
 
-    pause 0.75
+    pause 1.25
 
+    play sound "sounds/thud.mp3"
     scene v16s30_13 # TPP. Show Imre falling to the ground, Chris has his fists up, both very angry, mouths closed
-    with dissolve
+    with vpunch
 
     pause 0.75
 
@@ -310,7 +303,7 @@ label v16s30:
     menu:
         "Push Chris":
             scene v16s30_15 # TPP. Show MC pushing Chris back, Chris lowering his fists, slightly less angry, Sebastian checking on Imre on the floor, Imre angry, Sebastian concerned, MC angry, all mouths closed, only MC mouth open
-            with dissolve
+            with hpunch
 
             u "*Grunts* What the hell is wrong with you?!"
 
@@ -450,7 +443,7 @@ label v16s30:
     scene v16s30_27a # TPP. Same as v16s30_27, MC mouth open, confused, walking towards the door
     with dissolve
 
-    u "I guess I'll leave too, ha."
+    u "I guess I'll leave too..."
 
     scene v16s30_28 # TPP. Show MC going up to his room, confused, mouth closed
     with dissolve
