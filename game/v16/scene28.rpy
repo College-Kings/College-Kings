@@ -235,20 +235,18 @@ label v16s28:
         scene v16s28_5 # TPP. Lindsey pulling MC by his shirt, Lindsey sexy smile, MC slightly surprised, both mouths closed
         with dissolve
 
-        pause 0.75
-
-        play sound "sounds/kiss.mp3"
+        pause 1.5
 
         scene v16s28_5a # TPP. Lindsey kissing MC
         with dissolve
-
-        pause 0.75
+        play sound "sounds/kiss.mp3"
+        pause 1.5
 
     else:
         scene v16s28_6 # TPP. Lindsey giving MC a hug
         with dissolve
 
-        pause 0.75
+        pause 1.25
     
     scene v16s28_3e
     with dissolve

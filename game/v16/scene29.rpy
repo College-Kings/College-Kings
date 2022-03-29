@@ -7,12 +7,12 @@ label v16s29:
     scene v16s29_1 # TPP. Show MC walking on the street, slight smile, mouth closed
     with fade
 
-    pause 0.75
+    pause 1
 
     scene v16s29_2 # TPP. Show MC walking down the street (different place), have some hot girl running past him, winking at MC and giving a sexy smile
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     if joinwolves:
         jump v16s30
