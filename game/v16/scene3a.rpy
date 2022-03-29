@@ -85,6 +85,8 @@ label v16s3a:
     image v16rileybjf = Movie(play="images/v16/scene_3a/v16rileybjf.webm", loop=True, image="images/v16/scene_3a/v16rileybjStart.webp", start_image="images/v16/scene_3a/v16rileybjStart.webp")
     image v16rileybj2f = Movie(play="images/v16/scene_3a/v16rileybj2f.webm", loop=True, image="images/v16/scene_3a/v16rileybj2Start.webp", start_image="images/v16/scene_3a/v16rileybj2Start.webp")
 
+    $ sceneList.add("v16_riley_bj")
+
     scene v16rileybj # Ignore as anim
     with dissolve
 

@@ -1,7 +1,7 @@
 # SCENE 64: Chicks Garden Bonfire
 # Locations: Chicks backyard of Sorority House
-# Characters: CHLOE (Outfit: 1), LINDSEY (Outfit: 3), MC (Outfit: 2), AUBREY (Outfit: 1), NORA (Outfit: 2), JENNY (Outfit: 1)
-# Time: Evening
+# Characters: CHLOE (Outfit: towels from s63), LINDSEY (Outfit: towels from s63), MC (Outfit: 2), AUBREY (Outfit: towels from s63), NORA (Outfit: 2), JENNY (Outfit: towels from s63)
+# Time: Thursday Evening
 
 label v16s64:
     scene v16s64_1 # TPP. In the backyard, Chloe (slight smile, mouth open, looking at Jenny), and Jenny (slight smile, mouth closed, looking at Chloe) are sitting next to each other, Nora (slight smile, mouth open, looking at Aubrey) is sitting between Jenny and Aubrey, and Aubrey (slight smile, mouth closed, looking at Nora) is sitting next to Nora, everyone is sat around a small campfire with a neat stone circle around it, two open spots around the campfire are for MC (slight smile, mouth closed, looking at Lindsey) who will sit next to Chloe and Lindsey (slight smile, mouth open, looking at MC) who will sit next to Aubreywalking towards the campfire circle MC is holding the suggestion box from v16s63b
@@ -88,7 +88,7 @@ label v16s64:
 
             au "Not in the mood for marshmallows by the campfire? Are you insane?"
 
-            scene v16s64_4d # FPP. Show just Aubrey (inquisitive expression, mouth open, looking at MC) the stick with the marshmallow on it is still in her hand, but she is no longer holding it out towards MC
+            scene v16s64_4d # FPP. Show just Aubrey (inquisitive expression, mouth closed, looking at MC) the stick with the marshmallow on it is still in her hand, but she is no longer holding it out towards MC
             with dissolve
 
             u "No, just a little full, but thanks for your concern. *Chuckles*"
@@ -116,20 +116,11 @@ label v16s64:
             scene v16s64_6 # TPP. Show MC and Lindsey (both laughing looking at Aubrey), Aubrey (laughing, mouth open, looking at MC) still has puffed out cheeks, and the marshmallow can be slightly seen in her mouth
             with dissolve
 
-            pause 0.75
-
-    if v16s63breast_reduction and v16s63bbreath_mint: ###!!!PLACEHOLDER VARIABLE!!!### # -if MC chose insults in both 16.63 and 16.63b
-        $ v16s64insulted_chloe = True ###!!!VARIABLE MUST BE ADDED FOR POSSIBLE CHLOE BREAK-UP!!!###
+    if "v16s63_breast_reduciton" in v16s63x_chloe_suggestion_set or "v16s63b_breath_mint" in v16s63x_chloe_suggestion_set:
+        
+        $ v16s64insulted_chloe = True
 
         scene v16s64_2d # FPP. Show just Chloe (angry expression, mouth open, looking at MC)
-        with dissolve
-
-        cl "I don't have bad breath or saggy tits, you fucking asshole!"
-
-    elif v16s63breast_reduction and v16s63bcompliment or v16s63bbreath_mint and v16s63compliment: ###!!!PLACEHOLDER VARIABLES!!!### # -if MC chose Suggest a breast reduction in 16.63 and/or Suggest a breath mint in 16.63b (if MC chose one of these, but also picked a compliment, the positive note is not acknowledged because a bad one was written. This means that if MC chose at least one insult, any positive messages are ignored.)
-        $ v16s64insulted_chloe = True ###!!!VARIABLE MUST BE ADDED FOR POSSIBLE CHLOE BREAK-UP!!!###
-
-        scene v16s64_2d
         with dissolve
 
         cl "What the fuck is this?"
@@ -141,22 +132,29 @@ label v16s64:
 
         u "Huh?"
 
-    elif v16s63bbreath_mint: ###!!!PLACEHOLDER VARIABLE!!!### # -if MC chose Suggest a breath mint in 16.63b
-        $ v16s64insulted_chloe = True ###!!!VARIABLE MUST BE ADDED FOR POSSIBLE CHLOE BREAK-UP!!!###
+        # -if MC chose Suggest a breast reduction in 16.63 and/or Suggest a breath mint in 16.63b (if MC chose one of these, but also picked a compliment, the positive note is not acknowledged because a bad one was written. This means that if MC chose at least one insult, any positive messages are ignored.)
+        if "v16s63_breast_reduciton" in v16s63x_chloe_suggestion_set or "v16s63b_breath_mint" in v16s63x_chloe_suggestion_set:
 
-        scene v16s64_2f # FPP. Show just Chloe (slightly angry expression, mouth open, looking at MC)
-        with dissolve
+            scene v16s64_2d 
+            with dissolve
 
-        cl "You suggest I use a breath mint?"
+            cl "I don't have bad breath or saggy tits, you fucking asshole!"
+        
+        # -if MC chose Suggest a breath mint in 16.63b
+        elif "v16s63b_breath_mint" in v16s63x_chloe_suggestion_set: 
+            
+            scene v16s64_2f # FPP. Show just Chloe (slightly angry expression, mouth open, looking at MC)
+            with dissolve
 
+            cl "You suggest I use a breath mint?"
 
-    elif v16s63breast_reduction: ###!!!PLACEHOLDER VARIABLE!!!### # -if MC chose Suggest a breast reduction in 16.63
-        $ v16s64insulted_chloe = True ###!!!VARIABLE MUST BE ADDED FOR POSSIBLE CHLOE BREAK-UP!!!###
+        # -if MC chose Suggest a breast reduction in 16.63
+        elif "v16s63_breast_reduciton" in v16s63x_chloe_suggestion_set:
+            
+            scene v16s64_2d
+            with dissolve
 
-        scene v16s64_2d
-        with dissolve
-
-        cl "A breast reduction? That's your fucking suggestion?"
+            cl "A breast reduction? That's your fucking suggestion?"
 
     # -regardless
 
@@ -188,8 +186,10 @@ label v16s64:
 
         menu:
             "Tell the truth":
-                $ v16s64confessed_insult = True # -try to keep this variable as it will possibly avoid a breakup i assume, thank you
+
+                $ v16s64_confessed_insult = True # -try to keep this variable as it will possibly avoid a breakup i assume, thank you
                 $ add_point(KCT.BRO)
+                
                 if chloe.relationship >= Relationship.GIRLFRIEND:
                     $ add_point(KCT.BOYFRIEND)
 
@@ -209,10 +209,8 @@ label v16s64:
                 u "Honestly, I just thought it'd get a few laughs and lighten the mood, I guess? I really am sorry-"
 
             "Deny it":
-                $ v16s64denied_insult = True # -try to keep this variable as it will impact a breakup i assume, thank you
+                
                 $ add_point(KCT.TROUBLEMAKER)
-                if chloe.relationship >= Relationship.GIRLFRIEND:
-                    $ add_point(KCT.TROUBLEMAKER)
 
                 scene v16s64_2e
                 with dissolve
@@ -267,6 +265,7 @@ label v16s64:
         cl "*Sighs* I don't know about you sometimes, [name]. You have a strange sense of humor."
 
         if chloe.relationship >= Relationship.GIRLFRIEND: # -if also ChloeGF
+
             scene v16s64_2j # FPP. Show just Chloe (slighty sad expression, mouth open, looking at MC)
             with dissolve
 
@@ -317,7 +316,8 @@ label v16s64:
 
         au "Listen, babe. Everyone here knows that your body is impeccable."
 
-        if chloe.relationship >= Relationship.GIRLFRIEND: # -if chloe GF (extra dialogue)
+        if chloe.relationship == Relationship.GIRLFRIEND: # -if chloeGF (extra dialogue)
+
             scene v16s64_4k # FPP. Show just Aubrey (slightly angry, mouth open, looking at MC) 
             with dissolve
 
@@ -328,7 +328,7 @@ label v16s64:
 
             u "I do. *Chuckles*"
 
-            if AubreyTamed: ###!!!Check for proper AubreyTamed Variable!!!###
+            if chloe.relationship == Relationship.GIRLFRIEND.value and aubrey.relationship == Relationship.TAMED: 
             
                 scene v16s64_4m # FPP. Show just Aubrey (sad smile, mouth closed, trying not to look at MC) 
                 with dissolve
@@ -336,10 +336,11 @@ label v16s64:
                 pause 0.75
 
             else:
-                scene v16s64_4n # FPP. Show just Aubrey (slight smile, mouth closed, looking at MC) 
+
+                scene v16s64_4n # FPP. Show just Aubrey (slight smile, mouth closed, looking at MC)
                 with dissolve
-                
-            pause 0.75
+
+        pause 0.75 
 
         scene v16s64_8b # FPP. Show just Jenny (full smile, mouth closed, looking at Chloe)
         with dissolve
@@ -370,8 +371,9 @@ label v16s64:
         with dissolve
 
         u "Message received. (Not making any promises though, hehee...)"
-
-    if v16s63compliment or v16s63bcompliment and not v16s63breast_reduction and not v16s63bbreath_mint: # if MC chose to compliment chloe in 16.36 and/or 16.63b (both times or just once with NO insults)
+    # if MC chose to compliment chloe in 16.36 and/or 16.63b (both times or just once with NO insults)
+    if "v16s63_compliment" in v16s63x_chloe_suggestion_set and "v16s63b_compliment" in v16s63x_chloe_suggestion_set:
+        
         scene v16s64_2b
         with dissolve
 
@@ -387,7 +389,7 @@ label v16s64:
 
         cl "Umm, don't take this the wrong way, but... Your handwriting looks like chicken scratches. *Giggles*"
 
-        scene v16s64_4o # FPP. Show just Aubrey (slight smile, mouth open, looking at Chloe)
+        scene v16s64_4 # FPP. Show just Aubrey (slight smile, mouth open, looking at Chloe)
         with dissolve
 
         au "Haha, hey! It could be mine."
@@ -402,7 +404,8 @@ label v16s64:
 
         u "(Dammit...)"
 
-    elif not v16s63compliment or v16s63bcompliment or v16s63breast_reduction or v16s63bbreath_mint: # -if MC chose to not write anything at all
+    elif len(v16s63x_chloe_suggestion_set) == 0:
+
         scene v16s64_2
         with dissolve
 
@@ -413,7 +416,7 @@ label v16s64:
 
         cl "*Laughs* Communal vibrators? Thanks for a laugh, Aubrey!"
 
-        scene v16s64_4o
+        scene v16s64_4
         with dissolve
 
         au "Wha- It's a serious suggestion!"
@@ -435,7 +438,8 @@ label v16s64:
 
     li "Finally! No boys, no boys, no boys!"
 
-    if lindsey.relationship >= Relationship.FWB: # -if lindseyrs she winks at him-
+    if lindsey.relationship == Relationship.FWB: # -if lindseyrs she winks at him-
+
         scene v16s64_3b # FPP. Show just Lindsey (slight smile, mouth closed, winking at MC)
         with dissolve
 
@@ -446,7 +450,7 @@ label v16s64:
 
     u "Damn... Are you guys sure you don't need a big, strong, handsome man to stay here with you all night?"
 
-    scene v16s64_7e # FPP. Show just Nora (slight smile, mouth closed, rolling her eyes)
+    scene v16s64_7e # FPP. Show just Nora (slight smile, mouth open, rolling her eyes)
     with dissolve
 
     no "Oh, for the love of God..."
@@ -461,7 +465,7 @@ label v16s64:
 
     jen "Things are about to get WILD!"
 
-    scene v16s64_4o
+    scene v16s64_4
     with dissolve
 
     au "Yessssss!"

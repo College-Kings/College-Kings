@@ -479,6 +479,7 @@ label v16s52:
                 $ v16s52_kiwiiPost1.new_comment(imre, "Aw man! I want a puppy!", numberLikes=545, force_send=True)
                 $ v16s52_kiwiiPost1.new_comment(sebastian, "Hmm... A puppy, eh?", numberLikes=961, force_send=True)
                 $ v16s52_kiwiiPost1.new_comment(lauren, "This is so cool of you, Aubrey <3", numberLikes=1070, force_send=True)
+                $ v16s52_aubrey_kiwii_post_for_donations = True
 
                 if False: # For Lint
                     scene v16s52_aubpost1
@@ -603,9 +604,9 @@ label v16s52:
             aut "Guess we'll find out."
 
         "Spin sign":
-            $ add_Point(KCT.BRO)
+            $ add_Point(KCT.BRO)            
             scene v16s52_9
-            with dissolve
+            with dissolve            
 
             u "I'll take the sign out for a spin, I guess."
 

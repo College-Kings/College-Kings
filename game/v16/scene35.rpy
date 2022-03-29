@@ -24,23 +24,24 @@ label v16s35:
     u "(I'm going to need some massage oil and face masks.)"
 
     # - TODO: SPA FREEROAM - A UI pops up showing MC his choices. He can purchase one type of massage oil: Tingling Mint or Calming Citrus. And one type of face mask: Expensive brand or Cheap brand-
-    # TODO: Use $ v16s35_mc_spa_shopping.add() to add items MC purchases in the freeroam 
+    # TODO: Use $ v16s35_mc_spa_shopping.add() to add items MC purchases in the freeroam
+    # possible values are "tingle_mint_oil", "citrus_oil", "expensive_mask", "cheap_mask"
 
     # -Exit UI when choices have been made-
 
-    if "Tingling mint massage oil" in v16s35_mc_spa_shopping: # TODO: Variable #Placeholder
+    if "tingle_mint_oil" in v16s35_mc_spa_shopping: # TODO: Variable #Placeholder
         scene v16s35_4 # FPP. MC focused on the massaging oils.
         with dissolve
 
         u "(Tingling mint. That sounds refreshing, right?)"
 
-    else:
+    else:        
         scene v16s35_4
         with dissolve
 
         u "(Calming citrus. Can't go wrong with a name like that, haha.)"
 
-    if "Expensive face mask" in v16s35_mc_spa_shopping: # TODO: Variable #Placeholder
+    if "expensive_mask" in v16s35_mc_spa_shopping: # TODO: Variable #Placeholder
         scene v16s35_5 # FPP. MC focused on the face mask.
         with dissolve
 
