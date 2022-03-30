@@ -178,7 +178,7 @@ label v16s3:
         scene v16s3_5d
         with dissolve
 
-        ri "You proved how much you really care about me."
+        ri "It just shows how much you really care about me."
 
         scene v16s3_5e
         with dissolve

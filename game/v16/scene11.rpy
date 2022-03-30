@@ -266,7 +266,7 @@ label v16s11:
             scene v16s11_6d
             #with dissolve
 
-            u "Ha, I agree. You should do it. Could be fun."
+            u "Yeah, I agree. You should do it. Could be fun."
 
             scene v16s11_6f
             with dissolve

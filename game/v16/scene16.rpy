@@ -5,7 +5,6 @@
 
 label v16s16:
     scene v16s16_1 # TPP. Show Penelope and MC walking together then Imre and Karen walking together besides them infront of the SHOOTING RANGE/GALLERY, Imre awkward smile, mouth closed, Penelope, MC, and Karen slight smile, mouth closed.
-    with dissolve
 
     pause 0.75
 
@@ -492,6 +491,18 @@ label v16s16:
     with dissolve
 
     pause 0.75
+
+    play sound "sounds/gun.mp3"
+
+    pause 1
+
+    play sound "sounds/gun.mp3"
+
+    pause 1
+
+    play sound "sounds/gun.mp3"
+
+    pause 1
 
     if v16_win_range: ### TODO: mini game in general
         scene v16s16_9e

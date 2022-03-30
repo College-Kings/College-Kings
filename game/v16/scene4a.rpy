@@ -83,14 +83,4 @@ label v16s4a:
 
     pause 0.75
 
-    play sound "sounds/doorclose.mp3"
-
-    if joinwolves:
-        scene v16s4a_6a # TPP. In wolves room, Shot of just the room door closed.
-    else:
-        scene v16s4a_12a # TPP. In apes room, Shot of just the room door closed.
-    with dissolve
-
-    pause 0.75
-
 jump v16s6

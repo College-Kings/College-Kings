@@ -505,11 +505,6 @@ label v16s7:
 
                 u "I'm sure [dog_name] will be able to charm them."
 
-                scene v16s7_6e
-                with dissolve
-
-                pause 0.75
-
                 scene v16s7_6d
                 with dissolve
 

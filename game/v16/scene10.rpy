@@ -194,20 +194,20 @@ label v16s10: # Econ class
     with dissolve
 
     menu (fail_label="v16s10_dontknow"):
-        "Forty-two?":
+        "42?":
             $ grant_achievement("the_answer_to_everything")
 
-            u "Uh, the answer is forty-two?"
+            u "Uh, 42?"
 
             scene v16s10_4c # FPP Same angle as 4, Ms. Rose looking at MC, neutral expression, mouth open
             with dissolve
 
-            ro "Nice try. You were close. It's actually forty-seven."
+            ro "Really? The right answer is Milton Friedman."
 
             scene v16s10_4d # FPP Same angle as 4, Ms. Rose looking at MC, neutral expression, mouth closed
             with dissolve
 
-            u "(How the fuck did I even get close?)"
+            u "(God dammit.)"
 
             u "Right, yeah... Sorry."
 
