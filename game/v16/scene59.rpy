@@ -198,7 +198,7 @@ label v16s59:
 
         li "We're here to deliver your meal!"
 
-        if v13_concert_backstage: # TODO: No clue what this means or how its different from meeting polly backstage so reusing it # -if mc has already met Polly ### (what about Aubrey backstage)
+        if v13_concert_backstage: # -if mc has already met Polly
             scene v16s59_4h
             with dissolve
 
