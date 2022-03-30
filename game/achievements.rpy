@@ -220,3 +220,4 @@ init python:
         Achievement("just_curious_about_you", "Tell Amber you looked through all her stuff") #s22
         Achievement("perfect_first_date", "") #s40
         Achievement("threes_a_crowd", "") #s41
+        Achievement("caught_red_handed", "") #s55

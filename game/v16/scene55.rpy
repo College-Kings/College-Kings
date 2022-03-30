@@ -351,6 +351,8 @@ label v16s55: # 55) Prepare Lindsey for the interview
             scene v16s55_3b
             with dissolve
 
+            $ grant_achievement("caught_red_handed")
+
             u "(Shit...)"
 
             u "Uh, yeah. It actually reminded me. I gave it to her once I saw your comment."
