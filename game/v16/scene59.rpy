@@ -471,9 +471,6 @@ label v16s59:
                 polly "A favor?"
 
                 if v13_concert_backstage: # -if mc met polly in Amsterdam
-                    scene v16s59_4f
-                    with dissolve
-
                     polly "Do I owe you something?"
 
                     scene v16s59_4e
@@ -481,8 +478,9 @@ label v16s59:
 
                     u "Ha, no. Nothing like that."
 
-                scene v16s59_4e
-                with dissolve
+                else:
+                    scene v16s59_4e
+                    with dissolve
 
                 u "Lindsey's currently campaigning to be president of her sorority, the Chicks."
 
@@ -590,9 +588,6 @@ label v16s59:
                 u "Really?"
 
                 if v13_concert_backstage: # -if mc met polly in amsterdam
-                    scene v16s59_4zb
-                    with dissolve
-
                     u "It's like that, is it?"
 
                     scene v16s59_4zd # FPP. Show Lindsey (nervous expression, mouth closed, looking at Polly) just from the shoulders up (check with mozzart for clothing), Polly (slight smile, mouth open, looking at MC), Polly's Bodyguard (PBG) (slightly angry expression, mouth closed, looking at MC) now standing closer to Lindsey, with one hand cupping a fist made with his other hand
