@@ -272,6 +272,9 @@ label v16s26:
 
     li "How the hell did you make friends with her?"
 
+    if v13_after_party:
+        $ v13_concert_backstage = True # just making sure
+
     if v13_penelope_concert: # if Concert with Penelope
         scene v16s26_3a
         with dissolve
@@ -284,7 +287,7 @@ label v16s26:
 
             pe "Yeah, backstage passes and all!"
 
-        elif v13_penelope_backstage:
+        elif v13_concert_backstage:
             scene v16s26_5b
             with dissolve
 

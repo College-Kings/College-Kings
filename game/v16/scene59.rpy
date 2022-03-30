@@ -133,7 +133,7 @@ label v16s59:
 
     polly "Um... Hi."
 
-    if v13_penelope_backstage: # -if MC went backstage at Polly concert
+    if v13_concert_backstage: # -if MC went backstage at Polly concert
         scene v16s59_4g # FPP. Show Lindsey (full smile, mouth closed, looking at Polly) just from the shoulders up (check with mozzart for clothing), Polly (staring/thinking expression, mouth open, looking at MC) tilts her head and stares at MC, with a hand on her chin
         with dissolve
 
@@ -198,7 +198,7 @@ label v16s59:
 
         li "We're here to deliver your meal!"
 
-        if v13_penelope_backstage: # TODO: No clue what this means or how its different from meeting polly backstage so reusing it # -if mc has already met Polly ### (what about Aubrey backstage)
+        if v13_concert_backstage: # TODO: No clue what this means or how its different from meeting polly backstage so reusing it # -if mc has already met Polly ### (what about Aubrey backstage)
             scene v16s59_4h
             with dissolve
 
@@ -470,7 +470,7 @@ label v16s59:
 
                 polly "A favor?"
 
-                if v13_penelope_backstage: # -if mc met polly in Amsterdam
+                if v13_concert_backstage: # -if mc met polly in Amsterdam
                     scene v16s59_4f
                     with dissolve
 
@@ -591,7 +591,7 @@ label v16s59:
 
                 u "Really?"
 
-                if v13_penelope_backstage: # -if mc met polly in amsterdam
+                if v13_concert_backstage: # -if mc met polly in amsterdam
                     scene v16s59_4zb
                     with dissolve
 
