@@ -13,10 +13,10 @@ screen save_now(next_version):
         spacing 25
 
         text "WARNING" color "#FF0000" xalign 0.5 size 105
-        null height 100
+        null height 250
         text "END OF CURRENT VERSION" xalign 0.5
         text "SAVE HERE TO KEEP PROGRESS" xalign 0.5
-        null height 50
+        null height 250
         text "DO NOT CLICK CONTINUE UNTIL YOU HAVE SAVED!" xalign 0.5 size 50
             
         imagebutton:
@@ -144,62 +144,105 @@ screen team_credits():
 
     add image_path + "team_credits_background.webp"
 
-    hbox:
-        align (0.5, 0.5)
-        yoffset -20
-        spacing 100
+    fixed:
+        ysize 890
+        ypos 125
 
-        vbox:
-            align (0.5, 0.5)
+        viewport:
+            mousewheel True
+            ysize 850
+            yalign 0.5
 
-            text "{b}UndergradSteve{/b} - Chief Executive Officer"
-            text "{b}KingLui{/b} - Project Manager"
-            text "{b}OscarSix{/b} - Technical Officer"
-            null height 20
-            text "{b}Cheexmarie{/b} - Lead Editor"
-            text "{b}Condy{/b} - Senior Production Engineer"
-            text "{b}Mozzart{/b} - Lead Artist & Coordinator"
-            text "{b}Peace{/b} - Head Transcriber"
-            null height 20
-            text "{b}Jany{/b} - Community Manager"
-            text "{b}Oskin{/b} - Product Enforcer"
+            vbox:
+                xfill True
 
-            text "{b}MrSkeletor{/b} - Writer"
+                text "{b}UndergradSteve{/b} - Chief Executive Officer"
+                text "{b}DomG{/b} - Producer"
+                text "{b}KingLui{/b} - Project Manager"
+                text "{b}OscarSix{/b} - Chief Technical Officer"
 
-            text "{b}Jeffly{/b} - Transcriber"
-            text "{b}MegaManX{/b} - Transcriber"
-            text "{b}messy{/b} - Transcriber"
-            text "{b}SystemFailed{/b} - Transcriber"
+                null height 50
 
-            text "{b}kaim{/b} - Animator"
-            text "{b}xidcat{/b} - Animator"
+                text "{b}Condy{/b} - Senior Production Engineer"
+                text "{b}Messy17{/b} - Head Transcriber, Renderer"
+                text "{b}Mozzart{/b} - Lead Artist & Coordinator"
 
-        vbox:
-            align (0.5, 0.5)
+                null height 50
 
-            text "{b}3D4FUN{/b} - Renderer"
-            text "{b}Bwonerart{/b} - Renderer"
-            text "{b}François Gibon{/b} - Renderer"
-            text "{b}ITtechnology{/b} - Renderer"
-            text "{b}Oduvan{/b} - Renderer"
-            text "{b}sznuk{/b} - Renderer"
-            text "{b}Meg{/b} - Renderer"
-            
-            text "{b}Stefan{/b} - Photoshopper"
+                text "{b}Vain{/b} - Marketing Director"
 
-            text "{b}ClearanceClarence{/b} - Gameplay Engineer"
+                null height 25
 
-            text "{b}Ana Paula Cunha{/b} - UI/UX Designer"
-            text "{b}Danielrothier{/b} - UI/UX Designer"
-            text "{b}Natalimartins{/b} - UI/UX Designer"
+                text "{b}Nicki5617{/b} - Editor"
 
-            text "{b}Ema9000{/b} - Human Resources Manager"
+                null height 25
 
-            text "{b}Sawsbucky{/b} - Gameplay Designer"
+                text "{b}Jeffly{/b} - Transcriber"
+                text "{b}MegaManX{/b} - Transcriber"
 
-            text "{b}MimeFlayer{/b} - Assistant Editor"
-            text "{b}slgeorge864{/b} - Assistant Editor"
+                null height 25
 
+                text "{b}Shark Hug{/b} - Animator, Renderer"
+                text "{b}TheFatLebowski{/b} - Animator"
+
+                null height 25
+
+                text "{b}Bwonerart{/b} - Renderer"
+                text "{b}François Gibon{/b} - Renderer"
+                text "{b}Oduvan{/b} - Renderer"
+                text "{b}RogueRoach{/b} - Renderer"
+                text "{b}sznuk{/b} - Renderer"
+                text "{b}Tr4sh P4nda{/b} - Renderer"
+
+                null height 25
+
+                text "{b}Stefan{/b} - Photoshopper"
+
+                null height 25
+
+                text "{b}ClearanceClarence{/b} - Gameplay Engineer"
+
+                null height 25
+
+                text "{b}spacestorm{/b} - General Assistant"
+
+                null height 25
+
+                text "{b}Jany{/b} - Community Liaison"
+
+                null height 25
+
+                text "{b}Rev{/b} - Quality Assurance Specialist"
+                text "{b}RyanMK666{/b} - Quality Assurance Specialist"
+                text "{b}Skepticalz{/b} - Quality Assurance Specialist"
+
+                null height 25
+
+                text "{b}Ana Paula Cunha{/b} - UI/UX Designer"
+                text "{b}Daisa Biancalana{/b} - UI/UX Designer"
+                text "{b}danielrothier{/b} - UI/UX Designer"
+                text "{b}Luiza Nis{/b} - UI/UX Designer"
+                text "{b}natalimartins{/b} - UI/UX Designer"
+
+                null height 25
+
+                text "{b}Ema9000{/b} - Human Resources Manager"
+
+                null height 25
+
+                text "{b}Mobi{/b} - Amendments Lead"
+
+                null height 25
+
+                text "{b}Sawsbucky{/b} - Assistant Game Designer"
+
+                null height 25
+
+                text "{b}MimeFlayer{/b} - Assistant Editor"
+
+                null height 100
+
+                text "Special thanks to all the community members and players who have made this possible"
 
     hbox:
         align (0.5, 1.0)
@@ -227,3 +270,4 @@ style end_screen_text is montserrat_extra_bold_64
 style team_credits_text is text:
     font "fonts/Montserrat-Regular.ttf"
     size 36
+    xalign 0.5
