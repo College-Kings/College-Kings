@@ -109,12 +109,9 @@ label v16s17: # 17) MC catches up to Imre
     u "(For fuck's sake...)"
 
     menu:
-<<<<<<< HEAD
         "She wasn't even that hot":
             $ add_point(KCT.TROUBLEMAKER)
-=======
-        "You didn't even like her":
->>>>>>> 2ca14484de96d29a9f133f75ecca4a5bc6ee32ae
+
             scene v16s17_4f # FPP Same angle as 4, Imre looking out over the side of the bridge, leaning over the stone rail (if possible), neutral expression, mouth closed
             with dissolve
 
@@ -168,7 +165,6 @@ label v16s17: # 17) MC catches up to Imre
             u "*Sighs* (Let's go home.)"
 
         "There's tons of girls":
-
             $ add_point(KCT.BRO)
             scene v16s17_4f
             with dissolve
