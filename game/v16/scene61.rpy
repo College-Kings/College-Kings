@@ -224,7 +224,7 @@ label v16s61:
             menu:
                 "Be the masseuse":
                     $ v16s61_chloe_pb_override_mc_gives_massages = True
-                    $ add_Point(KCT.TROUBLEMAKER)
+                    $ add_point(KCT.TROUBLEMAKER)
 
                     scene v16s61_9a
                     with dissolve
@@ -257,7 +257,7 @@ label v16s61:
                     cl "*Laughs* Terrific."
 
                 "Be a helper":
-                    $ add_Point(KCT.BRO)
+                    $ add_point(KCT.BRO)
 
                     scene v16s61_9a
                     with dissolve
@@ -622,7 +622,7 @@ label v16s61:
             menu:
                 "Be the masseuse":
                     $ v16s61_chloe_pb_override_mc_gives_massages = True
-                    $ add_Point(KCT.TROUBLEMAKER)
+                    $ add_point(KCT.TROUBLEMAKER)
 
                     scene v16s61_9a
                     with dissolve
@@ -655,7 +655,7 @@ label v16s61:
                     cl "*Laughs* Terrific."
 
                 "Be a helper":
-                    $ add_Point(KCT.BRO)
+                    $ add_point(KCT.BRO)
 
                     scene v16s61_9a
                     with dissolve

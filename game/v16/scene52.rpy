@@ -386,7 +386,7 @@ label v16s52:
 
     menu:
         "Kiwii post":
-            $ add_Point(KCT.BOYFRIEND)
+            $ add_point(KCT.BOYFRIEND)
             scene v16s52_9
             with dissolve
 
@@ -598,7 +598,7 @@ label v16s52:
             aut "Guess we'll find out."
 
         "Spin sign":
-            $ add_Point(KCT.BRO)
+            $ add_point(KCT.BRO)
             scene v16s52_9
             with dissolve
 
@@ -659,7 +659,7 @@ label v16s52:
                     mped "*Scoffs* Say it louder, loser."
 
                 "Fuck off":
-                    $ add_Point(KCT.TROUBLEMAKER)
+                    $ add_point(KCT.TROUBLEMAKER)
                     scene v16s52_23
                     with dissolve 
 

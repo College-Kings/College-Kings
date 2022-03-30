@@ -21,7 +21,7 @@ label v16s60:
 
     menu:
         "Knock on door":
-            $ add_Point(KCT.BRO)
+            $ add_point(KCT.BRO)
 
             play sound "sounds/knock.mp3"
 
@@ -33,7 +33,7 @@ label v16s60:
             li "You can come in!"
 
         "Shout through door":
-            $ add_Point(KCT.TROUBLEMAKER)
+            $ add_point(KCT.TROUBLEMAKER)
 
             scene v16s60_2b # TPP. Show MC(slight smile, mouth open) yelling through the closed door.
             with dissolve
