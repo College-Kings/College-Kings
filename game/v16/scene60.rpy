@@ -129,7 +129,7 @@ label v16s60:
         u "(Damn, he's trying to unsettle her already)"
 
         # -if MC did not ask 'Can you say three positive things about your opponent?' or did ask the question and chose Sounds great in Scene 55 (LOSE 1 POPULARITY)
-        if "three_positives" not in v16s55_lindsey_question_set or ("three_positives" in v16s55_lindsey_question_set and "sounds_great" in v16s55_lindsey_followup_question_set):
+        if "three_positives" not in v16s55_questions or ("three_positives" in v16s55_questions and "sounds_great" in v16s55_questions):
             $ set_presidency_percent(v14_lindsey_popularity - 1)
 
             scene v16s60_6a # FPP. MC sitting to the side observing the interview. Lindsey (slight smile, mouth open) looking at Elijah(Neutral face, mouth open). Elijah looking down at his notepad and writing (we don't see what he writes)
@@ -157,7 +157,7 @@ label v16s60:
             el "Okay... Interesting."
 
         # -if MC asked 'Can you say three positive things about your opponent?' and chose Make a suggestion in Scene 55 (GAIN 1 POPULARITY)
-        elif "three_positives" in v16s55_lindsey_question_set and "make_suggestion" in v16s55_lindsey_followup_question_set:
+        elif "three_positives" in v16s55_questions and "make_suggestion" in v16s55_questions:
             $ set_presidency_percent(v14_lindsey_popularity + 1)
         
             scene v16s60_6d
@@ -198,7 +198,7 @@ label v16s60:
             el "I know people are going to want to hear your thoughts on this. Is there a specific quality that you feel every successful president should have?"
 
         # -if MC did not ask 'What is the most important quality of a good president?' or did ask the question and chose That'll do in Scene 55 (LOSE 1 POPULARITY)
-        if "important_quality" not in v16s55_lindsey_question_set or ("important_quality" in v16s55_lindsey_question_set and "thatll_do" in v16s55_lindsey_followup_question_set ): 
+        if "important_quality" not in v16s55_questions or ("important_quality" in v16s55_questions and "thatll_do" in v16s55_questions ): 
             $ set_presidency_percent(v14_lindsey_popularity - 1)
 
             scene v16s60_6a
@@ -269,7 +269,7 @@ label v16s60:
             el "Interesting..."
             
         # -if MC asked 'What is the most important quality of a good president?' and chose Expand on that in Scene 55 (GAIN 1 POPULARITY)         
-        elif "important_quality" in v16s55_lindsey_question_set and "expand" in v16s55_lindsey_followup_question_set: 
+        elif "important_quality" in v16s55_questions and "expand" in v16s55_questions: 
             $ set_presidency_percent(v14_lindsey_popularity + 1)
 
             scene v16s60_6a
@@ -307,7 +307,7 @@ label v16s60:
         el "I think it's important that people know you're a good person. So tell me, have you done anything recently to help someone other than yourself?"
 
         # -if MC did not ask 'What was your last random act of kindness?' or did ask the question and chose That's good enough in Scene 55 (LOSE 1 POPULARITY)        
-        if "random_kindness" not in v16s55_lindsey_question_set or ("random_kindness" inv16s55_lindsey_question_set and "thats_good" in v16s55_lindsey_followup_question_set):
+        if "random_kindness" not in v16s55_questions or ("random_kindness" in v16s55_questions and "thats_good" in v16s55_questions):
             $ set_presidency_percent(v14_lindsey_popularity - 1)
 
             scene v16s60_6a
@@ -336,7 +336,7 @@ label v16s60:
             li "Of course not. That's horrible."
 
             # -if MC also chose Let's finish up in Scene 55 (LOSE 1 POPULARITY)
-            if "finish_up" in v16s55_lindsey_followup_question_set:
+            if "finish_up" in v16s55_questions:
                 $ set_presidency_percent(v14_lindsey_popularity - 1 )
             
                 scene v16s60_6a
@@ -370,7 +370,7 @@ label v16s60:
             li "I'm sorry, but I'm not lying to you. I donate to charity out of the kindness of my heart."
 
         # -if MC asked 'What was your last random act of kindness?' and chose Ask her why in Scene 55 (GAIN 1 POPULARITY)
-        elif "random_kindness" in v16s55_lindsey_question_set and "ask_why" in v16s55_lindsey_followup_question_set:
+        elif "random_kindness" in v16s55_questions and "ask_why" in v16s55_questions:
             $ set_presidency_percent(v14_lindsey_popularity + 1)
         
             scene v16s60_6a
@@ -431,7 +431,7 @@ label v16s60:
         pause 0.75
         
         # -if MC chose More advice in Scene 55 (GAIN 1 POPULARITY)
-        if "more_advice" in v16s55_lindsey_followup_question_set: 
+        if "more_advice" in v16s55_questions: 
             $ set_presidency_percent(v14_lindsey_popularity + 1)
     
             # -Lindsey gives Elijah a nice hug. Coming out of the hug, she squeezes his arm muscle-
@@ -548,7 +548,7 @@ label v16s60:
         u "(Keep it friendly, Linds.)"
 
         # -if MC did not ask 'Can you say three positive things about your opponent?' or did ask the question and chose Sounds great in Scene 55 (LOSE 1 POPULARITY) 
-        if "three_positives" not in v16s55_lindsey_question_set or ("three_positives" in v16s55_lindsey_question_set and "sounds_great" in v16s55_lindsey_followup_question_set):
+        if "three_positives" not in v16s55_questions or ("three_positives" in v16s55_questions and "sounds_great" in v16s55_questions):
             $ set_presidency_percent(v14_lindsey_popularity - 1)
 
             scene v16s60_11b # FPP. MC sitting to the side observing the interview. Lindsey (slight smile, mouth open) looking at Riley(slight smile, mouth closed). Riley looking at her notepad and writing.
@@ -589,7 +589,7 @@ label v16s60:
             u "(Damn, maybe I should've trained her better. But hindsight's 20/20!)"
 
         # -Riley takes a further moment writing-
-        elif "three_positives" in v16s55_lindsey_question_set and "make_suggestion" in v16s55_lindsey_followup_question_set:
+        elif "three_positives" in v16s55_questions and "make_suggestion" in v16s55_questions:
             # -if MC asked 'Can you say three positive things about your opponent?' and chose Make a suggestion in Scene 55 (GAIN 1 POPULARITY)
             $ set_presidency_percent(v14_lindsey_popularity + 1)
 
@@ -627,7 +627,7 @@ label v16s60:
         ri "I'm interested to know, is there a specific quality that you feel every successful president should have?"
 
     # -if MC did not ask 'What is the most important quality of a good president?' or did ask the question and chose That'll do in Scene 55 (LOSE 1 POPULARITY)
-        if "important_quality" not in v16s55_lindsey_question_set or ("important_quality" in v16s55_lindsey_question_set and "thatll_do" in v16s55_lindsey_followup_question_set ): 
+        if "important_quality" not in v16s55_questions or ("important_quality" in v16s55_questions and "thatll_do" in v16s55_questions ): 
             $ set_presidency_percent(v14_lindsey_popularity - 1)
 
             scene v16s60_11b
@@ -666,7 +666,7 @@ label v16s60:
 
             # -Riley takes a further moment writing-
 
-        elif "important_quality" in v16s55_lindsey_question_set and "expand" in v16s55_lindsey_followup_question_set:
+        elif "important_quality" in v16s55_questions and "expand" in v16s55_questions:
             # -if MC asked 'What is the most important quality of a good president?' and chose Expand on that in Scene 55 (GAIN 1 POPULARITY)
             $ set_presidency_percent(v14_lindsey_popularity + 1)
 
@@ -709,7 +709,7 @@ label v16s60:
         ri "This is quite a nice one, to show people your kind side. Have you done anything recently to help someone other than yourself?"
 
     # -if MC did not ask 'What was your last random act of kindness?' or did ask the question and chose That's good enough in Scene 55 (LOSE 1 POPULARITY)
-        if "random_kindness" not in v16s55_lindsey_question_set or ("random_kindness" inv16s55_lindsey_question_set and "thats_good" in v16s55_lindsey_followup_question_set):
+        if "random_kindness" not in v16s55_questions or ("random_kindness" in v16s55_questions and "thats_good" in v16s55_questions):
             $ set_presidency_percent(v14_lindsey_popularity - 1)
 
             scene v16s60_11b
@@ -745,7 +745,7 @@ label v16s60:
             ri "I disagree. They're independent for sure, that's what I like about them."
 
         # -if MC also chose Let's finish up in Scene 55 (LOSE 1 POPULARITY)
-            if "finish_up" in v16s55_lindsey_followup_question_set:
+            if "finish_up" in v16s55_questions:
                 $ set_presidency_percent(v14_lindsey_popularity - 1)
 
                 scene v16s60_11b
@@ -779,7 +779,7 @@ label v16s60:
             # -Riley takes a further moment writing-
 
             # -if MC asked 'What was your last random act of kindness?' and chose Ask her why in Scene 55 (GAIN 1 POPULARITY)
-        elif "random_kindness" in v16s55_lindsey_question_set and "ask_why" in v16s55_lindsey_followup_question_set:
+        elif "random_kindness" in v16s55_questions and "ask_why" in v16s55_questions:
             $ set_presidency_percent(v14_lindsey_popularity + 1)
 
             scene v16s60_11b
@@ -827,7 +827,7 @@ label v16s60:
         pause 0.75
 
     # -if MC chose More advice in Scene 55 (GAIN 1 POPULARITY)
-        if "more_advice" in v16s55_lindsey_followup_question_set: 
+        if "more_advice" in v16s55_questions: 
             $ set_presidency_percent(v14_lindsey_popularity + 1)
 
             # -Lindsey holds out her hand for Riley to shake it-
