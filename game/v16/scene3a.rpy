@@ -57,8 +57,6 @@ label v16s3a:
 
     menu:
         "Let her continue":
-            scene v16s3a_2b
-            with dissolve
 
             u "(Oh, Riley... What did I do to deserve you?)"
 

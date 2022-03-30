@@ -157,7 +157,7 @@ label v16s22:
 
     am "Aww! You're so sweet sometimes."
 
-    scene v16s22_5
+    scene v16s22_5b
     with dissolve
 
     ab "Nice to meet you, kid. I'm glad you're here actually."

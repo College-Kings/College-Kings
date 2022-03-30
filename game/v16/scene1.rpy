@@ -103,7 +103,7 @@ label v16s1_lose:
     scene v16s1_lose_2b
     with dissolve
 
-    ri "I'm sure you are, but sadly, you're not going home."
+    ri "I'm sure you are, but you're not going home."
 
     scene v16s1_lose_2c
     with dissolve
@@ -118,12 +118,12 @@ label v16s1_lose:
     scene v16s1_lose_2a
     with dissolve
 
-    u "I'm just going to sleep, ha. Are you going to watch me sleep?"
+    u "I'm just going to sleep. You're not planning on watching me sleep, are you?"
 
     scene v16s1_lose_2
     with dissolve
 
-    ri "Yes. Look for signs of concussion, make sure you wake up in the morning, things like that."
+    ri "I need to look for signs of a concussion, make sure you wake up in the morning, things like that."
 
     scene v16s1_lose_2a
     with dissolve

@@ -831,9 +831,21 @@ label v16s15pier_wheel: # -if Wheel of chance
     scene v16s15_30f ### mc speech with imre mouth open
     with dissolve
 
-    u "It's literally the opposite, man..."
+    menu:
 
-    imre "Well, what about the five second rule?"
+        "Back him up":
+            $ add_point(KCT.BRO)
+
+            u "Definitely, sugar is the number one germ weapon."
+
+            imre "See. Plus there's the five second rule."
+
+        "Tell him it's the opposite":
+            $ add_point(KCT.BOYFRIEND)
+
+            u "It's literally the opposite, man..."
+
+            imre "Well, what about the five second rule?"
 
     scene v16s15_33a # FPP. Show just Penelope looking at Imre with a disgusted expression, mouth is open [WHEEL]
     with dissolve
@@ -1290,7 +1302,7 @@ label v16s15pier_hotdog: # -if HotDog Stand
     scene v16s15_49
     with dissolve
 
-    dg3 "I asked, it's all real butter though. The one thing this place doesn't cheap out on is the food. Can you believe it? *Laughs*"
+    dg3 "I asked, it's all real butter though. The one thing this place doesn't cheap out on is the food. Can you believe it?"
 
     scene v16s15_48
     with dissolve

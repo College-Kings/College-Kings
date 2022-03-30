@@ -134,7 +134,7 @@ label v16s4:
         scene v16s4_22
     with dissolve
 
-    u "(That girl loves playing games with your emotions... Can't imagine how hard it was growing up with her, ha.)"
+    u "(That girl loves playing games with your emotions... Can't imagine how hard it was growing up with her.)"
 
     u "(It's finally time to sleep, phew.)"
 

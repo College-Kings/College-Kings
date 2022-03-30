@@ -136,7 +136,8 @@ label v16s26:
 
     li "Haha, that's sweet."
 
-    li "I really wanted to attend the re-opening, but I won't have the time that day... Can you take the donation for me and make sure it gets into the right hands?"
+    li "I really wanted to attend the re-opening, but I won't have the time that day."
+    li "Can you take the donation for me and make sure it gets into the right hands?"
 
     $ mc.money += 50
 

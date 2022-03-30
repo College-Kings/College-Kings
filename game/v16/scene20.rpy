@@ -11,7 +11,8 @@ label v16s20:
         scene v16s20_1a # FPP. same as v16s20_1 the room is messier with some beer bottles, pizza box, etc, but clickable items are in exactly the same places as AmberSober
     with dissolve
 
-    u "(Hmm, I could have a little look around first. Learn a little bit more about Amber. There's the phone charger though. She is in need after all...)"
+    u "(Hmm, I could have a little look around first. Learn a little bit more about Amber.)"
+    u "(I can see the phone charger, right next to the plant. Should I snoop or should I go?)"
 
     call screen v16s20_amber_living_room
 
