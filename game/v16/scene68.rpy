@@ -19,6 +19,10 @@ label v16s68:
     # 0x40 = Friday_shared
     #
     # -if PenelopeFriend and (MC's partner is on baby duty alone) or MC is on baby duty with partner Thursday 
+    
+    ### still to review, both Penelope status and this convoluted 0x20 stuff
+    
+    
     if penelope.relationship == Relationship.FRIEND and ( (2 & v16s27_mc_baby_duty_night == 2 and 0x20 & v16s27_mc_baby_duty_night != 0x20) or 0x20 & v16s27_mc_baby_duty_night == 0x20):
         scene v16s68_2 # TPP. MC (slight smile, mouth is closed) continues walking along the hallway alone, the cafetria is no longer in the render
         with dissolve
@@ -26,7 +30,7 @@ label v16s68:
         pause 0.75
 
     # -if PenelopeFriend and MC is on baby duty alone Thurssday
-    if penelope.relationship == Relationship.FRIEND and 2 & v16s27_mc_baby_duty_night == 2: 
+    if penelope.relationship == Relationship.FRIEND and 2 & v16s27_mc_baby_duty_night == 2:
 
         scene v16s68_2
         with dissolve
