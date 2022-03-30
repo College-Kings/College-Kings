@@ -1052,7 +1052,7 @@ label tomFightStart:
 
     " "
 
-    jump v1_tomWalkAway
+    jump v1_tom_walk_away
 
 label youfinish:
     if reaction == 0.5:

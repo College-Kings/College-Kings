@@ -242,7 +242,7 @@ label v16s69:
 
                 u "*Laughs* That would be child endangerment."
 
-                if not v16s27_parent_chloe: # -if mc is partnered with Nora for the baby project
+                if not v16_parent_chloe: # -if mc is partnered with Nora for the baby project
 
                     scene v16s69_7b
                     with dissolve

@@ -5,7 +5,7 @@
 
 label v16s63c:
 
-    $ sceneList.add("v16s63c_lindsey_sex") # MC had sex with Lindsey during Chloe spa night during massage
+    $ sceneList.add("v16_lindsey") # MC had sex with Lindsey during Chloe spa night during massage
     $ sex_overlay_options = []
     $ sex_overlay_options = [("Boobs", "v16s63c_boobs"), ("Feet", "v16s63c_feet"), ("Vagina", "v16s63c_vagina")] 
 

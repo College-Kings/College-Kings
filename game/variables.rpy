@@ -289,7 +289,7 @@ default v13_imre_disloyal = False
 default v13_invite_samantha = False
 default v13_lauren_smoke = False
 default v13_penelope_concert = False
-default v13_penelope_backstage = False
+default v13_concert_backstage = False
 default v13_perfume = False
 default v13_smoke_weed = False
 default v13_emmy_points = 0
@@ -462,7 +462,7 @@ default v16_amber_mention_laptop = False
 default v16s23_support_amber = False
 default v16_aubrey_date = False
 default v16_lindsey_donation = 50 # Track if MC spends any of the money lindsey gives him (can be spend in s32 and s38)
-default v16s27_parent_chloe = False  # True = Chloe, False = Nora
+default v16_parent_chloe = False  # True = Chloe, False = Nora
 # default v16s27_mc_baby_duty_night = 0 # 0 = Unselected, 1 = Wednesday_alone, 2 = Thrusday_alone, 4 = Friday_alone, 0x10 = Wednesday_shared, 0x20 = Thursday_shared, 0x40 = Friday_shared
 default v16s27_mc_baby_schedule = {
     "wednesday": BabyDuty.PARTNER_ALONE,
@@ -482,8 +482,7 @@ default v16s48_chloe_throws_baby = False
 default v16s50a_dotw = 0 # 0 = nothing, 1 = Sunday, 2 = Monday, 3 = Tuesday, 4 = Wednesday, 5 = Thursday, 6 = Friday, 7 = Saturday
 default v16s52_mc_dogshelter_kiwii_post = False
 default v16s52_aubrey_kiwii_post_for_donations = False # True = Aubrey makes kiwii post to raise donations for dog shelter/ False = Aubrey declines posting to Kiwii
-default v16s55_lindsey_question_set = set() # Possible values: three_positives  , important_quality  , random_kindness
-default v16s55_lindsey_followup_question_set = set() # Possible values: sounds_great or make_suggestion, thatll_do or expand, thats_good or ask_why, more_advice or finish_up
+default v16s55_questions = set() # Possible values: three_positives  , important_quality  , random_kindness || Follow up questions = sounds_great or make_suggestion, thatll_do or expand, thats_good or ask_why, more_advice or finish_up
 default v16s57_agree_with_samantha_or_cameron = 0 # 0 = Stay out of it, 1 = Samantha, 2 = Cameron 
 default v16s59_just_knock = False  #  True == just knock on polly's door / False = Calm Lindsey down before knocking
 default v16s59_polly_endorse_lindsey = False # True == Polly will endorse Lindsey for Pres / False = Polly does not endorse Lindsey for Pres.

@@ -217,7 +217,7 @@ label v16s39:
 
     # TODO: FREE ROAM GOES HERE 
     # 
-    call screen v16s38_fr_screen1
+    call screen v16s39_fr_screen1
 
     label v16s39_fr_aubrey_date_aubrey: # -if Aubrey
         $ freeroam17.add("aubrey")
@@ -355,7 +355,7 @@ label v16s39:
 
                 au "Haha, stop it, of course not. Italian food is great. I've just really wanted to check out that other place, you know?"
 
-        call screen v16s38_fr_screen1# -Return to free roam screen-
+        call screen v16s39_fr_screen1 # -Return to free roam screen-
 
     label v16s39_fr_aubrey_date_clock: # -if Wall clock
         $ freeroam17.add("clock")
@@ -437,7 +437,7 @@ label v16s39:
 
                 au "Haha, that's more like it."
 
-        call screen v16s38_fr_screen1 # -Return to free roam screen-
+        call screen v16s39_fr_screen1 # -Return to free roam screen-
 
     label v16s39_fr_aubrey_date_mc: # -if MC (bottom of screen highlighted)
         $ freeroam17.add("mc")
@@ -550,7 +550,7 @@ label v16s39:
 
                 au "Hehe... We'll see."
             
-        call screen v16s38_fr_screen1 # -Return to free roam screen-
+        call screen v16s39_fr_screen1 # -Return to free roam screen-
 
     label v16s39_fr_aubrey_date_menu: # -if Menu, free roam ends
         $ freeroam17.add("menu")
@@ -799,7 +799,7 @@ label v16s39:
 
         # pause 0.75
 
-        call screen v16s38_fr_screen2 # The player can click on Aubrey, Aubrey's food, MC's food, and Dessert menu. Clicking on the Dessert menu will give the option to end the free roam, Aubrey and MC are both looking at each other slight smiles, mouths are closed
+        call screen v16s39_fr_screen2 # The player can click on Aubrey, Aubrey's food, MC's food, and Dessert menu. Clicking on the Dessert menu will give the option to end the free roam, Aubrey and MC are both looking at each other slight smiles, mouths are closed
 
     label v16s39_fr_aubrey_date_aubrey2: # -if Aubrey
         $ freeroam17.add("aubrey2")
@@ -881,7 +881,7 @@ label v16s39:
 
                 au "Yeah, tell me about it! Ugh, I'm over it."
             
-        call screen v16s38_fr_screen2# -Return to free roam-
+        call screen v16s39_fr_screen2 # -Return to free roam-
 
     label v16s39_fr_aubrey_date_aubrey_food: # -if Aubrey's food
         $ freeroam17.add("aubreyfood")
@@ -891,7 +891,7 @@ label v16s39:
 
         menu:
             "Critique her food":
-                $ v16food_critic = True
+                $ v16s39_food_critic = True
                 $ add_point(KCT.TROUBLEMAKER)
 
                 scene v16s39_5b
@@ -979,7 +979,7 @@ label v16s39:
 
                 u "*Laughs* Same."
 
-        call screen v16s38_fr_screen2 # -Return to free roam-
+        call screen v16s39_fr_screen2 # -Return to free roam-
 
     label v16s39_fr_aubrey_date_mc_food: # -if MC's food
         $ freeroam17.add("mcfood")
@@ -1158,7 +1158,7 @@ label v16s39:
 
                 pause 0.75
 
-        call screen v16s38_fr_screen2# -Return to free roam-
+        call screen v16s39_fr_screen2 # -Return to free roam-
 
     label v16s39_fr_aubrey_date_dessert_menu: # -if Dessert menu, free roam ends
         $ freeroam17.add("dessertmenu")

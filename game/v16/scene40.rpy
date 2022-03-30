@@ -18,6 +18,8 @@ label v16s40:
         scene v16s40_3 # FPP. Show just Aubrey from the waist up, slight smile, mouth is open, looking at MC, show Aubrey holding both of Mc's hand 
         with dissolve
 
+        $ grant_achievement("perfect_first_date")
+
         au "You know, I started out kind of anxious, but that was an amazing first official date, [name]."
 
         au "Thank you."
@@ -25,7 +27,7 @@ label v16s40:
         scene v16s40_4 # TPP. Aubrey kisses MC passionately, her hands on his waist, both of their eyes are closed during the kiss, Mc wraps his arm around Aubreys back as she kisses him.
         with dissolve
 
-        pause 0.75
+        pause
 
     elif v16_aubrey_date_points >= 8: # IF MC scored 8-9 points
         scene v16s40_3a # FPP. Show just Aubrey from the waist up, slight smile, mouth is open, looking at MC, show Aubrey holding one of Mc's hand 
@@ -60,7 +62,6 @@ label v16s40:
         au "Mmm, yeah you probably should, haha."
 
     if v16_aubrey_date_points >= 4: # IF MC scored 4-10 points (passed the date)
-        
         scene v16s40_3c # FPP. Show just Aubrey from the waist up, slight smile, mouth is closed, looking at MC
         with dissolve
 
@@ -87,6 +88,8 @@ label v16s40:
         with dissolve
 
         au "Haha. Exactly... Boyfriend."
+
+        $ aubrey.relationship = Relationship.GIRLFRIEND
 
         scene v16s40_3d
         with dissolve
@@ -158,10 +161,11 @@ label v16s40:
 
         pause 0.75
 
-        ### ERROR: IF MC has baby duties tonight 
-        ### TRANSCRIBER NOTE!!! ### THERE IS NO ALTERNATIVE SCENE TO TRAVEL TO, REGARDLESS OF "BABY DUTIES" MC FIRST HAS TO GO HOME TO CHANGE BEFORE EITHER "BABY DUTY" SCENE HAPPENS MAKING THIS "IF STATEMENT" UNNECESSARY, IF IT IS SCENE DEPENDENT DIALOGUE THEN IT REQUIRES CLARIFICATION AS TO WHICH "BABY DUTY" SCENE THIS DIALOGUE REFERS TOO ### ATTENTION!!! ###
+        # IF MC has baby duties tonight 
+        # TRANSCRIBER NOTE!!! # THERE IS NO ALTERNATIVE SCENE TO TRAVEL TO, REGARDLESS OF "BABY DUTIES" MC FIRST HAS TO GO HOME TO CHANGE BEFORE EITHER "BABY DUTY" SCENE HAPPENS MAKING THIS "IF STATEMENT" UNNECESSARY, IF IT IS SCENE DEPENDENT DIALOGUE THEN IT REQUIRES CLARIFICATION AS TO WHICH "BABY DUTY" SCENE THIS DIALOGUE REFERS TOO # ATTENTION!!! #
         # if 1 & v16s27_mc_baby_duty_night == 1: # MC has babby duty Wednesday night INFO: Using dictionary instead of bitmask for ease of use
-        if v16s27_mc_baby_schedule["wednesday"] == BabyDuty.ALONE:
+
+        if v16s27_mc_baby_schedule["wednesday"] == BabyDuty.ALONE or v16s27_mc_baby_schedule["wednesday"] == BabyDuty.WITH_PARTNER:
             scene v16s40_3c
             with dissolve
 
@@ -265,11 +269,10 @@ label v16s40:
 
         u "*Sighs* Yeah, okay."
 
-            ### ERROR: IF MC has baby duties tonight
-            ### TRANSCRIBER NOTE!!! ### THERE IS NO ALTERNATIVE SCENE TO TRAVEL TO, REGARDLESS OF "BABY DUTIES" MC FIRST HAS TO GO HOME TO CHANGE BEFORE EITHER "BABY DUTY" SCENE HAPPENS MAKING THIS "IF STATEMENT" UNNECESSARY, IF IT IS SCENE DEPENDENT DIALOGUE THEN IT REQUIRES CLARIFICATION AS TO WHICH "BABY DUTY" SCENE THIS DIALOGUE REFERS TOO ### ATTENTION!!! ###
+        # TRANSCRIBER NOTE!!! # THERE IS NO ALTERNATIVE SCENE TO TRAVEL TO, REGARDLESS OF "BABY DUTIES" MC FIRST HAS TO GO HOME TO CHANGE BEFORE EITHER "BABY DUTY" SCENE HAPPENS MAKING THIS "IF STATEMENT" UNNECESSARY, IF IT IS SCENE DEPENDENT DIALOGUE THEN IT REQUIRES CLARIFICATION AS TO WHICH "BABY DUTY" SCENE THIS DIALOGUE REFERS TOO # ATTENTION!!! #
         # if 1 & v16s27_mc_baby_duty_night == 1: # MC has babby duty Wednesday night INFO: Using dictionary instead of bitmask for ease of use
-        if v16s27_mc_baby_schedule["wednesday"] == BabyDuty.ALONE:
 
+        if v16s27_mc_baby_schedule["wednesday"] == BabyDuty.ALONE or v16s27_mc_baby_schedule["wednesday"] == BabyDuty.WITH_PARTNER:
             scene v16s40_3c
             with dissolve
 
@@ -284,8 +287,6 @@ label v16s40:
             with dissolve
 
             u "Haha, I hope so too, thanks."
-
-        ### ERROR: END IF
 
         scene v16s40_3g
         with dissolve
@@ -303,8 +304,6 @@ label v16s40:
         with dissolve
 
         pause 0.75
-
-    ### ERROR: END IF
 
     scene v16s40_2a
     with dissolve

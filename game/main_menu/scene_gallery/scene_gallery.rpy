@@ -126,7 +126,7 @@ init python:
         SceneGallery("As yet untitled", "images/3 hits.webp", "") # 48, Chloe
         SceneGallery("As yet untitled", "images/3 hits.webp", "") # 63a, Nora
         SceneGallery("As yet untitled", "images/3 hits.webp", "") # 63c, Lindsey
-        SceneGallery("As yet untitled", "images/3 hits.webp", "") # 71, Penelope
+        SceneGallery("As yet untitled", "images/3 hits.webp", "") # 71a, Penelope
 
 screen scene_gallery():
     tag menu

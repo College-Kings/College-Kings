@@ -4,6 +4,8 @@
 # Time: Wednesday Night
 
 label v13s13a:
+    $ v13_concert_backstage = True
+
     if v12_murder_count == v12s7_victims: # DON'T KNOW NUMBER FOR ALL KILLS; CHANGE TO CORRECT NUMBER
         $ v13_after_party = True
 

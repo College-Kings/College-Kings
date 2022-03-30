@@ -69,7 +69,7 @@ label v16s27:
 
     menu (fail_label="v16s27_default_chloe_parent"): # 3 second timer default
         "Parent with Chloe":
-            $ v16s27_parent_chloe = True
+            $ v16_parent_chloe = True
 
             jump v16s27_choose_chloe_parent
         
@@ -104,7 +104,7 @@ label v16s27:
             jump v16s27_continue_after_parent_choice
         
     label v16s27_default_chloe_parent:
-        $ v16s27_parent_chloe = True
+        $ v16_parent_chloe = True
 
         scene v16s27_8 # FPP. Show just Chloe (no expression, mouth is closed, looking at her phone) sitting in her seat with her phone in her hands, camera angle is from a seated positon
         with dissolve
@@ -193,7 +193,7 @@ label v16s27:
 
         sexed "Hello, class. I'd like everyone to look at this baby."
 
-        if v16s27_parent_chloe:
+        if v16_parent_chloe:
             scene v16s27_9c # FPP. Show just Nora (slight smile, mouth is open, looking at the (SET)) sitting in her seat, camera angle is from a seated positon, with multiple seats between MC and Nora (MC is not shown)
             with dissolve
 
@@ -252,7 +252,7 @@ label v16s27:
 
         sexed "The sensor inside will detect whether you've used the correct one or not."
 
-        if v16s27_parent_chloe: # -if MC is parenting with Chloe
+        if v16_parent_chloe: # -if MC is parenting with Chloe
             scene v16s27_8
             with dissolve
 
@@ -369,7 +369,7 @@ label v16s27:
 
         u "(I guess we'd better name it something...)"
 
-        if v16s27_parent_chloe: # -if chloe partner
+        if v16_parent_chloe: # -if chloe partner
             scene v16s27_8a
             with dissolve
 
@@ -520,7 +520,7 @@ label v16s27:
 
         sexed "I'll see you all in three days at the Nurse's office for your reviews. Have a good day, parents!"
 
-        if v16s27_parent_chloe: # -if MC is parenting with Chloe
+        if v16_parent_chloe: # -if MC is parenting with Chloe
             scene v16s27_8e
             with dissolve
 

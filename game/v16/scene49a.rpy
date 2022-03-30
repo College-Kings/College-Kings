@@ -9,7 +9,7 @@ label v16s49a:
 
     pause 0.75
 
-    if v16s27_parent_chloe and v16s48_chloe_throws_baby: # -if parent with Chloe and she threw baby out the window
+    if v16_parent_chloe and v16s48_chloe_throws_baby: # -if parent with Chloe and she threw baby out the window
         scene v16s49a_2 # FPP. Show just the baby doll on the ground in the grass
         with dissolve
 
@@ -31,7 +31,7 @@ label v16s49a:
 
         u "(Nora was a natural with the baby. She's going to be an awesome mom one day. No surprises there, to be honest. *Laughs*)"
 
-    if v16s27_parent_chloe: # -if partnered with Chloe
+    if v16_parent_chloe: # -if partnered with Chloe
         scene v16s49a_1
         with dissolve
 

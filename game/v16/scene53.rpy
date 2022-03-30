@@ -40,13 +40,23 @@ label v16s53:
 
         u "(Well, that wasn't very hard...)"
 
-    elif v16_help_lindsey: # Lindsey school intereview with
+    elif v16_help_lindsey: # Lindsey school intereview
         scene v16s53_3 # TPP. MC (neutral face, mouth closed) walking further down the sidewalk.
         with dissolve
 
         pause 0.75
 
-        jump v16s54 
+        # SCENE 54: MC Goes to the Library
+        # Locations: School hallway near library
+        # Characters: MC (Outfit: 2)
+        # Time: Thursday
+
+        scene v16s54_1 # TPP Show MC walking along the hallway toward the library
+        with fade
+
+        pause 0.75
+
+        jump v16s55
     
     else:
         scene v16s53_3

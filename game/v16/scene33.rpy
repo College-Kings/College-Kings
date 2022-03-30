@@ -104,4 +104,14 @@ label v16s33: # 33) MC showers
         jump v16s36
 
     else: # -if MC not going on Aubrey date, transition to Scene 43-
-        jump v16s43
+    # SCENE 43: Transition Mc walks to the park
+    # Locations: Sidewalk/Park Entrance
+    # Characters: MC (Outfit: 9),
+    # Time: Evening
+    
+        scene v16s43_1 # TPP. MC (slight smile, mouth is closed) walks along the street, into the park
+        with fade
+
+        pause 0.75
+
+        jump v16s44

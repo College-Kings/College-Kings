@@ -133,7 +133,7 @@ label v16s59:
 
     polly "Um... Hi."
 
-    if v13_penelope_backstage: # -if MC went backstage at Polly concert
+    if v13_concert_backstage: # -if MC went backstage at Polly concert
         scene v16s59_4g # FPP. Show Lindsey (full smile, mouth closed, looking at Polly) just from the shoulders up (check with mozzart for clothing), Polly (staring/thinking expression, mouth open, looking at MC) tilts her head and stares at MC, with a hand on her chin
         with dissolve
 
@@ -198,7 +198,7 @@ label v16s59:
 
         li "We're here to deliver your meal!"
 
-        if v13_penelope_backstage: # TODO: No clue what this means or how its different from meeting polly backstage so reusing it # -if mc has already met Polly ### (what about Aubrey backstage)
+        if v13_concert_backstage: # -if mc has already met Polly
             scene v16s59_4h
             with dissolve
 
@@ -470,10 +470,7 @@ label v16s59:
 
                 polly "A favor?"
 
-                if v13_penelope_backstage: # -if mc met polly in Amsterdam
-                    scene v16s59_4f
-                    with dissolve
-
+                if v13_concert_backstage: # -if mc met polly in Amsterdam
                     polly "Do I owe you something?"
 
                     scene v16s59_4e
@@ -481,10 +478,9 @@ label v16s59:
 
                     u "Ha, no. Nothing like that."
 
-                # -end if
-
-                scene v16s59_4e
-                with dissolve
+                else:
+                    scene v16s59_4e
+                    with dissolve
 
                 u "Lindsey's currently campaigning to be president of her sorority, the Chicks."
 
@@ -591,18 +587,13 @@ label v16s59:
 
                 u "Really?"
 
-                if v13_penelope_backstage: # -if mc met polly in amsterdam
-                    scene v16s59_4zb
-                    with dissolve
-
+                if v13_concert_backstage: # -if mc met polly in amsterdam
                     u "It's like that, is it?"
 
                     scene v16s59_4zd # FPP. Show Lindsey (nervous expression, mouth closed, looking at Polly) just from the shoulders up (check with mozzart for clothing), Polly (slight smile, mouth open, looking at MC), Polly's Bodyguard (PBG) (slightly angry expression, mouth closed, looking at MC) now standing closer to Lindsey, with one hand cupping a fist made with his other hand
                     with dissolve
 
                     polly "It is this time, yes. *Laughs*"
-
-                # -end if
 
                 scene v16s59_4ze # FPP. Show Lindsey (nervous expression, mouth open, looking at Polly) just from the shoulders up (check with mozzart for clothing), Polly (concerned expression, mouth closed, looking at Lindsey), Polly's Bodyguard (PBG) (slightly angry expression, mouth closed, looking at MC) now standing closer to Lindsey, with one hand cupping a fist made with his other hand
                 with dissolve

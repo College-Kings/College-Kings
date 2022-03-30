@@ -9,12 +9,12 @@ label v16s44:
 
     pause 0.75
 
-    scene v16s44_2 # FPP. Show just Lauren (### Editor Note ### -Trademark cute Lauren smile, mouth is closed, looking at MC)
+    scene v16s44_2 # FPP. Show just Lauren (# Editor Note # -Trademark cute Lauren smile, mouth is closed, looking at MC)
     with dissolve
 
     u "Hey, Lauren."
 
-    scene v16s44_2a # FPP. Show just Lauren (### Editor Note ### -Trademark cute Lauren smile, mouth is open, looking at MC)
+    scene v16s44_2a # FPP. Show just Lauren (# Editor Note # -Trademark cute Lauren smile, mouth is open, looking at MC)
     with dissolve
 
     la "Hey, [name]!"
@@ -88,9 +88,6 @@ label v16s44:
 
     menu:
         "Greet Rubius":
-            scene v16s44_4
-            with dissolve
-
             u "Hey, Rubius. You're a handsome fella. Yes, you are."
 
             scene v16s44_4a # FPP. MC pats Rubius on the head. Rubius likes it. His tongue hanging out for a moment as he takes some head strokes
@@ -110,7 +107,7 @@ label v16s44:
 
         "Don't greet Rubius":
             scene v16s44_4
-            with dissolve
+            #with dissolve
 
             u "(Hmm, I could pat him on the head, but I don't wanna lose a finger today.)"
 
@@ -187,7 +184,7 @@ label v16s44:
     menu:
         "Stay in the park":
             $ v16s44_rubius_park_walk = True
-
+        
             scene v16s44_7
             with dissolve
 
@@ -377,6 +374,70 @@ label v16s44:
 
             pause 0.75
 
+            scene v16s44_5d
+            with dissolve
+
+            pause 0.75
+
+            scene v16s44_5f # TPP. same as v16s44_5b MC and Lauren are just walking the opposite direction and Rubius is where he peed in v16s44_5b
+            with dissolve
+
+            pause 0.75
+
+            scene v16s44_5g # TPP. same as v16s44_5a MC and Lauren are just walking the opposite direction and Rubius is sniffing the same object from v16s44_5a
+            with dissolve
+
+            pause 0.75
+
+            scene v16s44_2a
+            with dissolve
+
+            la "Well, here we are."
+
+            la "Thanks a lot for coming."
+
+            scene v16s44_2
+            with dissolve
+
+            u "Anytime. It was quite eventful in the end."
+
+            scene v16s44_2a
+            with dissolve
+
+            la "Right? I seriously can't believe he's getting adopted, ha!"
+
+            la "And all we had to do was take a walk, one of his favorite things."
+
+            scene v16s44_2
+            with dissolve
+
+            u "I think he's going to a good home, too."
+
+            scene v16s44_2a
+            with dissolve
+
+            la "He'll love being that man's jogging buddy, I know it."
+
+            scene v16s44_2
+            with dissolve
+
+            u "And a personal therapist, haha."
+
+            scene v16s44_2a
+            with dissolve
+
+            la "Ha, maybe! Therapy dogs are pretty common, even if it's just for emotional support."
+
+            scene v16s44_2
+            with dissolve
+
+            u "Yeah, I'm sure he'll be happy."
+
+            scene v16s44_2a
+            with dissolve
+
+            la "Me too."
+
         "Follow Rubius":
             scene v16s44_6a
             with dissolve
@@ -424,8 +485,6 @@ label v16s44:
                 with dissolve
 
                 u "(*Gags*) Oh... God..."
-
-            # -end if
 
             scene v16s44_14b # FPP. Show Rubius licking the old Taco, alleyway background
             with dissolve
@@ -505,7 +564,6 @@ label v16s44:
             u "Oh, I am."
 
             if lauren.relationship >= Relationship.GIRLFRIEND: # -if laurengf
-
                 scene v16s44_18c # FPP. Show just Lauren (Lauren smirks, slight smile, mouth is open, looking at MC) Laurens shirt is completely soaked and you can see the full shape of her boobs and clearly visibly see her nipples through the wet shirt, alleyway background
                 with dissolve
 
@@ -522,7 +580,6 @@ label v16s44:
                 pause 0.75
 
             else:
-
                 scene v16s44_18a
                 with dissolve
 
@@ -548,8 +605,6 @@ label v16s44:
 
                 pause 0.75
 
-            # -end if
-
             scene v16s44_18d # FPP. Show just Lauren (slightly sad expression, mouth is open, looking down at her chest,) puffing her chest out attempting to dry her shirt off, both hands are cupping her breasts exposing them even more if possible, Laurens shirt is still completely soaked and you can see the full shape of her boobs and clearly visibly see her nipples through the wet shirt, alleyway background
             with dissolve
 
@@ -570,121 +625,80 @@ label v16s44:
 
             la "From now on, all walks stay WITHIN the park."
 
-    scene v16s44_5d
-    with dissolve
+            scene v16s44_5d
+            with dissolve
 
-    pause 0.75
+            pause 0.75
 
-    scene v16s44_5f # TPP. same as v16s44_5b MC and Lauren are just walking the opposite direction and Rubius is where he peed in v16s44_5b
-    with dissolve
+            scene v16s44_5f # TPP. same as v16s44_5b MC and Lauren are just walking the opposite direction and Rubius is where he peed in v16s44_5b
+            with dissolve
 
-    pause 0.75
+            pause 0.75
 
-    scene v16s44_5g # TPP. same as v16s44_5a MC and Lauren are just walking the opposite direction and Rubius is sniffing the same object from v16s44_5a
-    with dissolve
+            scene v16s44_5g # TPP. same as v16s44_5a MC and Lauren are just walking the opposite direction and Rubius is sniffing the same object from v16s44_5a
+            with dissolve
 
-    pause 0.75
+            pause 0.75
 
-    scene v16s44_2a
-    with dissolve
+            scene v16s44_2a
+            with dissolve
 
-    la "Well, here we are."
+            la "Well, here we are."
 
-    la "Thanks a lot for coming."
+            la "Thanks a lot for coming."
 
-    scene v16s44_2
-    with dissolve
+            scene v16s44_2
+            with dissolve
 
-    u "Anytime. It was quite eventful in the end."
+            u "Anytime. It was quite eventful in the end."
 
-    if v16s44_rubius_park_walk: # -if you stayed in the park
-        scene v16s44_2a
-        with dissolve
+            scene v16s44_2c # FPP. Show just Lauren (no expression, mouth is open, looking at MC)
+            with dissolve
 
-        la "Right? I seriously can't believe he's getting adopted, ha!"
+            la "Eventful is one word for it. I'd call it disgusting."
+     
+            scene v16s44_2d # FPP. Show just Lauren (no expression, mouth is closed, looking at MC)
+            with dissolve
 
-        la "And all we had to do was take a walk, one of his favorite things."
+            u "Haha, yeah... Guess we could have done without the visit to the alleyway."
 
-        scene v16s44_2
-        with dissolve
+            scene v16s44_2c
+            with dissolve
 
-        u "I think he's going to a good home, too."
+            la "Yeah? And whose idea was that?"
 
-        scene v16s44_2a
-        with dissolve
+            scene v16s44_2d
+            with dissolve
 
-        la "He'll love being that man's jogging buddy, I know it."
+            u "Hey, we were following the dog, remember?"
 
-        scene v16s44_2
-        with dissolve
+            scene v16s44_2e # FPP. Show just Lauren (no expression, mouth is open, looking at her chest) Lauren rubs her hands over her chest unintentionally puffing her breasts out, her shirt is dry and her nipples and breast CAN'T be seen through the shirt
+            with dissolve
 
-        u "And a personal therapist, haha."
+            la "Mhmm... At least my shirts dried off... kind of."
 
-        scene v16s44_2a
-        with dissolve
+            scene v16s44_2
+            with dissolve
 
-        la "Ha, maybe! Therapy dogs are pretty common, even if it's just for emotional support."
-
-        scene v16s44_2
-        with dissolve
-
-        u "Yeah, I'm sure he'll be happy."
-
-        scene v16s44_2a
-        with dissolve
-
-        la "Me too."
-
-    else: # -if you followed Rubius
-        scene v16s44_2c # FPP. Show just Lauren (no expression, mouth is open, looking at MC)
-        with dissolve
-
-        la "Eventful is one word for it. I'd call it disgusting."
- 
-        scene v16s44_2d # FPP. Show just Lauren (no expression, mouth is closed, looking at MC)
-        with dissolve
-
-        u "Haha, yeah... Guess we could have done without the visit to the alleyway."
-
-        scene v16s44_2c
-        with dissolve
-
-        la "Yeah? And whose idea was that?"
-
-        scene v16s44_2d
-        with dissolve
-
-        u "Hey, we were following the dog, remember?"
-
-        scene v16s44_2e # FPP. Show just Lauren (no expression, mouth is open, looking at her chest) Lauren rubs her hands over her chest unintentionally puffing her breasts out, her shirt is dry and her nipples and breast CAN'T be seen through the shirt
-        with dissolve
-
-        la "Mhmm... At least my shirts dried off... kind of."
-
-        scene v16s44_2
-        with dissolve
-
-        u "Ha, I'm glad."
+            u "Ha, I'm glad."
 
 # -Regardless of that-
 
-    # if 1 & v16s27_mc_baby_duty_night == 1: ### -if on baby duty alone Wednesday
+    # -if on baby duty alone Wednesday
     if v16s27_mc_baby_schedule["wednesday"] == BabyDuty.ALONE:
         scene v16s44_2
         with dissolve
 
         u "And now, I need to go pick up a baby."
 
-    # elif 0x10 & v16s27_mc_baby_duty_night == 0x10: ### -if sharing baby duty Wednesday
+    # -if sharing baby duty Wednesday
     elif v16s27_mc_baby_schedule["wednesday"] == BabyDuty.WITH_PARTNER:
-
         scene v16s44_2
         with dissolve
 
         u "And now, I need to go to the Chicks house for baby duty..."
 
-    else: ### -if partner is on baby duty
-
+    else: # -if partner is on baby duty
         scene v16s44_2
         with dissolve
 
@@ -735,11 +749,10 @@ label v16s44:
     if lauren.relationship >= Relationship.GIRLFRIEND: # -if LaurenGF, they have a quick goodbye kiss
         scene v16s44_3
         with dissolve
-
-        pause 0.75
+        play sound "sounds/kiss.mp3"
+        pause 1.5
 
     else: # -if not LaurenGf, they do a side hug as lauren is holding the leash in one hand
-
         scene v16s44_3a # TPP. Show Lauren and MC giving each other a side hug Lauren still holding onto Rubius (the dog) with one hand, Rubio watch's MC and Lauren Kiss tilting his head tounge is out
         with dissolve
 
@@ -750,14 +763,13 @@ label v16s44:
     
     pause 0.75
 
-    # if 1 & v16s27_mc_baby_duty_night == 1: ### -if on baby duty alone Wednesday, transition to Scene45-
+    # -if on baby duty alone Wednesday, transition to Scene45-
     if v16s27_mc_baby_schedule["wednesday"] == BabyDuty.ALONE:
         jump v16s45
 
-    # elif 0x10 & v16s27_mc_baby_duty_night == 0x10: ### -if sharing baby duty Wednesday, transition to Scene47-
-    elif v16s27_mc_baby_schedule["wednesday"] == BabyDuty.WITH_PARTNER:
-        
+    # -if sharing baby duty Wednesday, transition to Scene47-
+    elif v16s27_mc_baby_schedule["wednesday"] == BabyDuty.WITH_PARTNER:    
         jump v16s47
-    else: ### -if partner is on baby duty Wednesday, transition to Scene42-
         
+    else: # -if partner is on baby duty Wednesday, transition to Scene42-
         jump v16s42
