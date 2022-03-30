@@ -156,10 +156,10 @@ screen team_credits():
             vbox:
                 xfill True
 
-                text "{b}UndergradSteve{/b} - Chief Executive Officer"
+                text "{b}UndergradSteve{/b} - Game Creator"
                 text "{b}DomG{/b} - Producer"
-                text "{b}KingLui{/b} - Project Manager"
-                text "{b}OscarSix{/b} - Chief Technical Officer"
+                text "{b}KingLui{/b} - Head of Operations"
+                text "{b}OscarSix{/b} - Technical Lead"
 
                 null height 50
 
@@ -182,13 +182,15 @@ screen team_credits():
 
                 null height 25
 
-                text "{b}Shark Hug{/b} - Animator, Renderer"
+                # text "{b}Shark Hug{/b} - Animator, Renderer"
                 text "{b}TheFatLebowski{/b} - Animator"
 
                 null height 25
 
                 text "{b}Bwonerart{/b} - Renderer"
                 text "{b}François Gibon{/b} - Renderer"
+                text "{b}Infrank{/b} - Renderer"
+                text "{b}Mugi{/b} - Renderer"
                 text "{b}Oduvan{/b} - Renderer"
                 text "{b}RogueRoach{/b} - Renderer"
                 text "{b}sznuk{/b} - Renderer"
