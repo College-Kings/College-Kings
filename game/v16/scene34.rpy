@@ -3,9 +3,11 @@
 # Characters: CHLOE (Outfit: 3), MC (Outfit: 9), ELIJAH (Outfit: x)
 # Time: Wednesday
 
+# can only get here from scene 32, if v16_chloe_newspaper
+
 label v16s34: # 34) Talk to Elijah about the cover with Chloe
     scene v16s34_1 # TPP Show MC walking along the school hallway
-    with dissolve
+    with fade
     
     pause 0.75
 
@@ -46,8 +48,6 @@ label v16s34: # 34) Talk to Elijah about the cover with Chloe
 
     menu:
         "Knock":
-            $ v16s34_knock_on_svc_door = True
-
             play sound "sounds/knock.mp3"
 
             scene v16s34_5 # FPP Show MC's hand knocking on the door
@@ -70,6 +70,40 @@ label v16s34: # 34) Talk to Elijah about the cover with Chloe
 
             u "*Chuckles*"
 
+            scene v16s34_6 # TPP Show door into the office opening, MC holding the door, Chloe entering first with MC right behind her
+            with dissolve
+
+            pause 0.75
+
+            # -Elijah is sitting at a desk at a computer (no, don't waste time showing me the computer screen), SVC Times sign is hanging somewhere in the room, 
+            # there should be a small nook for Riley in there so it's not a tiny room, its like the newspaper headquarters but he has the largest area. 
+            # Think like Michael Scott Paper Company, but a bit bigger. It's obvious that Elijah has taken the time to stock the room business-appropriately-
+
+            scene v16s34_7 # FPP Show Elijah (neutral expression, mouth closed) turning his chair to look at MC and Chloe
+            with dissolve
+
+            pause 0.75
+
+            scene v16s34_7a # FPP Same angle as 7, Elijah (slight smile, mouth open) looking at MC
+            with dissolve
+
+            el "Thanks for respecting the editor and knocking first. You wouldn't believe the number of idiots that just barge in here."
+
+            scene v16s34_7b # FPP Same angle as 7, Elijah (slight smile, mouth closed) looking at MC
+            with dissolve
+
+            u "Civilized people know how to knock before entering a room."
+
+            scene v16s34_7a
+            with dissolve
+
+            el "My sentiments exactly!"
+
+            scene v16s34_8 # FPP Show Chloe (rolling her eyes, mouth closed) not looking at MC or Elijah
+            with dissolve
+
+            pause 0.75
+
         "Just walk in":
             $ add_point(KCT.TROUBLEMAKER)
 
@@ -83,96 +117,74 @@ label v16s34: # 34) Talk to Elijah about the cover with Chloe
 
             cl "Exactly. Acting like he's the Dean..."
 
-    scene v16s34_6 # TPP Show door into the office opening, MC holding the door, Chloe entering first with MC right behind her
-    with dissolve
+            scene v16s34_6 # TPP Show door into the office opening, MC holding the door, Chloe entering first with MC right behind her
+            with dissolve
 
-    pause 0.75
+            pause 0.75
 
-    # -Elijah is sitting at a desk at a computer (no, don't waste time showing me the computer screen), SVC Times sign is hanging somewhere in the room, 
-    # there should be a small nook for Riley in there so it's not a tiny room, its like the newspaper headquarters but he has the largest area. 
-    # Think like Michael Scott Paper Company, but a bit bigger. It's obvious that Elijah has taken the time to stock the room business-appropriately-
+            # -Elijah is sitting at a desk at a computer (no, don't waste time showing me the computer screen), SVC Times sign is hanging somewhere in the room, 
+            # there should be a small nook for Riley in there so it's not a tiny room, its like the newspaper headquarters but he has the largest area. 
+            # Think like Michael Scott Paper Company, but a bit bigger. It's obvious that Elijah has taken the time to stock the room business-appropriately-
 
-    scene v16s34_7 # FPP Show Elijah (neutral expression, mouth closed) turning his chair to look at MC and Chloe
-    with dissolve
+            scene v16s34_7 # FPP Show Elijah (neutral expression, mouth closed) turning his chair to look at MC and Chloe
+            with dissolve
 
-    pause 0.75
+            pause 0.75
 
-    if v16s34_knock_on_svc_door: # IF Knock
-        scene v16s34_7a # FPP Same angle as 7, Elijah (slight smile, mouth open) looking at MC
-        with dissolve
+            scene v16s34_7c # FPP Same angle as 7, Elijah (angry expression, mouth open) looking at MC
+            with dissolve
 
-        el "Thanks for respecting the editor and knocking first. You wouldn't believe the number of idiots that just barge in here."
+            el "You- Seriously?!"
 
-        scene v16s34_7b # FPP Same angle as 7, Elijah (slight smile, mouth closed) looking at MC
-        with dissolve
+            scene v16s34_7d # FPP Same angle as 7, Elijah (angry expression, mouth open) looking at MC, but holding his hound out toward the door
+            with dissolve
 
-        u "Civilized people know how to knock before entering a room."
+            el "What's the point of putting a sign up if everyone's just going to ignore it?"
 
-        scene v16s34_7a
-        with dissolve
+            scene v16s34_7e # FPP Same angle as 7, Elijah (angry expression, mouth closed) looking at MC
+            with dissolve
 
-        el "My sentiments exactly!"
+            u "What's the matter? Worried we'd catch you jerking off? *Laughs*"
 
-        scene v16s34_8 # FPP Show Chloe (rolling her eyes, mouth closed) not looking at MC or Elijah
-        with dissolve
+            scene v16s34_7c
+            with dissolve
 
-        pause 0.75
+            el "That's not the point, [name]! I've created a protocol here and want it to be followed."
 
-    else: # IF Just walk in
-        scene v16s34_7c # FPP Same angle as 7, Elijah (angry expression, mouth open) looking at MC
-        with dissolve
+            scene v16s34_7e
+            with dissolve
 
-        el "You- Seriously?!"
+            u "So, you do jerk off in here?"
 
-        scene v16s34_7d # FPP Same angle as 7, Elijah (angry expression, mouth open) looking at MC, but holding his hound out toward the door
-        with dissolve
+            scene v16s34_7c
+            with dissolve
 
-        el "What's the point of putting a sign up if everyone's just going to ignore it?"
+            el "No!"
 
-        scene v16s34_7e # FPP Same angle as 7, Elijah (angry expression, mouth closed) looking at MC
-        with dissolve
+            scene v16s34_8a # FPP Same angle as 7, Chloe (slight smile, mouth open) looking at Elijah
+            with dissolve
 
-        u "What's the matter? Worried we'd catch you jerking off? *Laughs*"
+            cl "Sorry, Elijah. We'll make sure it doesn't happen again."
 
-        scene v16s34_7c
-        with dissolve
+            scene v16s34_7c
+            with dissolve
 
-        el "That's not the point, [name]! I've created a protocol here and want it to be followed."
+            el "*Sighs* Yes, please do."
 
-        scene v16s34_7e
-        with dissolve
+            scene v16s34_7f # FPP Same angle as 7, Elijah (neutral expression, mouth open) looking at Chloe
+            with dissolve
 
-        u "So, you do jerk off in here?"
+            el "Sorry for raising my voice, Chloe."
 
-        scene v16s34_7c
-        with dissolve
+            scene v16s34_8a
+            with dissolve
 
-        el "No!"
+            cl "Oh, it's okay. Don't worry about it."
 
-        scene v16s34_8a # FPP Same angle as 7, Chloe (slight smile, mouth open) looking at Elijah
-        with dissolve
+            scene v16s34_7
+            with dissolve
 
-        cl "Sorry, Elijah. We'll make sure it doesn't happen again."
-
-        scene v16s34_7c
-        with dissolve
-
-        el "*Sighs* Yes, please do."
-
-        scene v16s34_7f # FPP Same angle as 7, Elijah (neutral expression, mouth open) looking at Chloe
-        with dissolve
-
-        el "Sorry for raising my voice, Chloe."
-
-        scene v16s34_8a
-        with dissolve
-
-        cl "Oh, it's okay. Don't worry about it."
-
-        scene v16s34_7
-        with dissolve
-
-        u "(I bet he jerks off in here.)"
+            u "(I bet he jerks off in here.)"
 
     scene v16s34_7f
     with dissolve
@@ -192,7 +204,7 @@ label v16s34: # 34) Talk to Elijah about the cover with Chloe
     scene v16s34_8a
     with dissolve
 
-    cl "Right... I certainly am committed. I just need some help proving to SVC that I'm the most loyal and responsible candidate."
+    cl "Right... I certainly am committed. I just need some help proving to SVC that I'm the most dedicated and responsible candidate."
 
     scene v16s34_7f
     with dissolve
@@ -343,7 +355,6 @@ label v16s34: # 34) Talk to Elijah about the cover with Chloe
 
     # IF mc did THREE OR MORE OF made fun of Elijah on day one OR Homecoming dance OR in the scene where we meet his mom OR chose Joke About Elijah in this scene
     if v16s34_joke_about_elijah and elijah.relationship <= Relationship.MAKEFUN:
-        
         scene v16s34_7j # FPP Same angle as 7, Elijah (neutral expression, mouth open) looking at MC
         with dissolve
 
@@ -707,7 +718,6 @@ label v16s34: # 34) Talk to Elijah about the cover with Chloe
     menu:
         "It's just a kiss":
             $ add_point(KCT.TROUBLEMAKER)
-            $ v16s34_chloe_kiss_elijah_for_frontpage = True
 
             scene v16s34_13b
             with dissolve
@@ -728,6 +738,134 @@ label v16s34: # 34) Talk to Elijah about the cover with Chloe
             with dissolve
 
             cl "Real and true. That's what I needed. *Deep breaths* Okay, let's do this."
+
+            scene v16s34_6
+            with dissolve
+
+            pause 0.75
+
+            scene v16s34_16 # FPP Show Elijah, in his seat, putting on chapstick, not looking at them
+            with dissolve
+
+            pause 0.75
+
+            scene v16s34_16a # FPP Same angle as 16, Elijah throwing chapstick into a desk draw and looking at MC and Chloe
+            with dissolve
+
+            pause 0.75
+
+            scene v16s34_17 # FPP Elijah (neutral expression, mouth open) now standing (visible from waist up) and looking at Chloe
+            with dissolve
+
+            el "So? What's your decision?"
+
+            scene v16s34_18 # FPP Chloe grabbing Elijah by the face and giving him a kiss on the lips. Elijah's body is stiff, clearly shocked
+            with dissolve
+
+            pause 0.75
+
+            scene v16s34_17a # FPP Same angle as 17, Elijah (shocked expression, mouth hanging open wide), body stiff, looking at Chloe. There is a visible wet spot on the front of his pants
+            with dissolve
+
+            pause 0.75
+
+            scene v16s34_19 # FPP Chloe (slight smile, mouth open) looking at Elijah
+            with dissolve
+
+            cl "There. Pleasure doing business with you, freak."
+
+            scene v16s34_17a
+            with dissolve
+
+            el "Oh... Oh, my... That was-"
+
+            scene v16s34_17b # FPP Same angle as 17, Elijah (embarrassed expression, mouth closed) covering his crotch with his hands, looking down, face red with embarrasment, knees clenched together
+            with dissolve
+
+            u "Did you just fucking cum in your pants?"
+
+            scene v16s34_19
+            with dissolve
+
+            cl "I told you!"
+
+            scene v16s34_19a # FPP Chloe (slight smile, mouth closed) looking at Elijah
+            with dissolve
+
+            u "You did."
+
+            scene v16s34_17b
+            with dissolve
+            
+            u "She did."
+
+            scene v16s34_17c # FPP Same angle as 17, Elijah (embarrassed expression, mouth open) still covering his crotch and looking away
+            with dissolve
+
+            el "Please, just- Go. Now."
+
+            scene v16s34_19
+            with dissolve
+
+            cl "Do I have the front cover?"
+
+            scene v16s34_17c
+            with dissolve
+
+            el "Yes! Yes, you do! Please, go!"
+
+            scene v16s34_17b
+            with dissolve
+
+            u "Gladly. Clean yourself up, buddy. *Chuckles*"
+
+            scene v16s34_17c
+            with dissolve
+
+            el "Shut the door behind you, please."
+
+            scene v16s34_20 # TPP Show MC and Chloe leaving the office, big smiles on both of their faces
+            with dissolve
+
+            pause 0.75
+
+            scene v16s34_13f
+            with dissolve
+
+            cl "*Sighs* Well, now that I can mark that off the list... I have about twenty more things to do before tonight."
+
+            scene v16s34_13g
+            with dissolve
+
+            u "Ha, you need a break."
+
+            scene v16s34_13f
+            with dissolve
+
+            cl "Way too much to do! I'll catch you later."
+
+            if chloe.relationship >= Relationship.GIRLFRIEND: # IF ChloeGF
+                play sound "sounds/kiss.mp3"
+                
+                scene v16s34_15
+                with dissolve
+
+                pause 0.75
+
+                scene v16s34_13f
+                with dissolve
+
+                cl "There. You're the only one that gets the tongue."
+
+                scene v16s34_13g
+                with dissolve
+
+                u "Haha, and for free too? I'm the luckiest guy in town."
+
+                scene v16s34_13f
+                with dissolve
+
+                cl "That must make me the luckiest girl."
 
         "Tell him to fuck off":
             $ add_point(KCT.BOYFRIEND)
@@ -775,186 +913,98 @@ label v16s34: # 34) Talk to Elijah about the cover with Chloe
 
             cl "Let's do this."
 
-    scene v16s34_6
-    with dissolve
+            scene v16s34_6
+            with dissolve
 
-    pause 0.75
+            pause 0.75
 
-    scene v16s34_16 # FPP Show Elijah, in his seat, putting on chapstick, not looking at them
-    with dissolve
+            scene v16s34_16 # FPP Show Elijah, in his seat, putting on chapstick, not looking at them
+            with dissolve
 
-    pause 0.75
+            pause 0.75
 
-    scene v16s34_16a # FPP Same angle as 16, Elijah throwing chapstick into a desk draw and looking at MC and Chloe
-    with dissolve
+            scene v16s34_16a # FPP Same angle as 16, Elijah throwing chapstick into a desk draw and looking at MC and Chloe
+            with dissolve
 
-    pause 0.75
+            pause 0.75
 
-    scene v16s34_17 # FPP Elijah (neutral expression, mouth open) now standing (visible from waist up) and looking at Chloe
-    with dissolve
+            scene v16s34_17 # FPP Elijah (neutral expression, mouth open) now standing (visible from waist up) and looking at Chloe
+            with dissolve
 
-    el "So? What's your decision?"
+            el "So? What's your decision?"
 
-    if v16s34_chloe_kiss_elijah_for_frontpage: # IF It's just a kiss
-        scene v16s34_18 # FPP Chloe grabbing Elijah by the face and giving him a kiss on the lips. Elijah's body is stiff, clearly shocked
-        with dissolve
+            scene v16s34_17d # FPP Same angle as 17, Elijah (neutral expression, mouth closed) looking at MC
+            with dissolve
 
-        pause 0.75
+            u "You can go fuck yourself."
 
-        scene v16s34_17a # FPP Same angle as 17, Elijah (shocked expression, mouth hanging open wide), body stiff, looking at Chloe. There is a visible wet spot on the front of his pants
-        with dissolve
+            scene v16s34_17
+            with dissolve
 
-        pause 0.75
+            el "Oh, can I now?"
 
-        scene v16s34_19 # FPP Chloe (slight smile, mouth open) looking at Elijah
-        with dissolve
+            scene v16s34_19
+            with dissolve
 
-        cl "There. Pleasure doing business with you, freak."
+            cl "Oh, you can. Quite literally."
 
-        scene v16s34_17a
-        with dissolve
+            scene v16s34_19b # FPP Same angle as 19, Chloe (slight smile, eyebrow raised, mouth open) leaning back with her arms crossed in front of her chest, looking at Elijah
+            with dissolve
 
-        el "Oh... Oh, my... That was-"
+            cl "I'm still deciding whether I should tell the Dean about your little request, or if I should just share it with the rest of SVC..."
 
-        scene v16s34_17b # FPP Same angle as 17, Elijah (embarrassed expression, mouth closed) covering his crotch with his hands, looking down, face red with embarrasment, knees clenched together
-        with dissolve
+            scene v16s34_17d
+            with dissolve
 
-        u "Did you just fucking cum in your pants?"
+            u "What kind of creep asks for sex in exchange for a favor? Like, holy shit dude..."
 
-        scene v16s34_19
-        with dissolve
+            scene v16s34_17
+            with dissolve
 
-        cl "I told you!"
+            el "Report me? I'm one of the top students here. No one would believe anything that comes out of either one of your mouths."
 
-        scene v16s34_19a # FPP Chloe (slight smile, mouth closed) looking at Elijah
-        with dissolve
+            scene v16s34_17d
+            with dissolve
 
-        u "You did."
+            u "We'll see about that."
 
-        scene v16s34_17b
-        with dissolve
-        
-        u "She did."
+            scene v16s34_19b
+            with dissolve
 
-        scene v16s34_17c # FPP Same angle as 17, Elijah (embarrassed expression, mouth open) still covering his crotch and looking away
-        with dissolve
+            cl "Oh, we won't, but the backbone of the Chicks will. Good luck hearing from Mr. Rose! Later, pervert."
 
-        el "Please, just- Go. Now."
+            scene v16s34_21 # TPP Show MC and Chloe (both smiling, mouths closed) leaving the office, Elijah (nervous expression, mouth open) reaching out for them, yelling
+            with dissolve
 
-        scene v16s34_19
-        with dissolve
+            el "Wait! Chloe! Don't-"
 
-        cl "Do I have the front cover?"
-
-        scene v16s34_17c
-        with dissolve
-
-        el "Yes! Yes, you do! Please, go!"
-
-        scene v16s34_17b
-        with dissolve
-
-        u "Gladly. Clean yourself up, buddy. *Chuckles*"
-
-        scene v16s34_17c
-        with dissolve
-
-        el "Shut the door behind you, please."
-
-        scene v16s34_20 # TPP Show MC and Chloe leaving the office, big smiles on both of their faces
-        with dissolve
-
-        pause 0.75
-
-    else: # IF Tell him to fuck off
-        scene v16s34_17d # FPP Same angle as 17, Elijah (neutral expression, mouth closed) looking at MC
-        with dissolve
-
-        u "You can go fuck yourself."
-
-        scene v16s34_17
-        with dissolve
-
-        el "Oh, can I now?"
-
-        scene v16s34_19
-        with dissolve
-
-        cl "Oh, you can. Quite literally."
-
-        scene v16s34_19b # FPP Same angle as 19, Chloe (slight smile, eyebrow raised, mouth open) leaning back with her arms crossed in front of her chest, looking at Elijah
-        with dissolve
-
-        cl "I'm still deciding whether I should tell the Dean about your little request, or if I should just share it with the rest of SVC..."
-
-        scene v16s34_17d
-        with dissolve
-
-        u "What kind of creep asks for sex in exchange for a favor? Like, holy shit dude..."
-
-        scene v16s34_17
-        with dissolve
-
-        el "Report me? I'm one of the top students here. No one would believe anything that comes out of either one of your mouths."
-
-        scene v16s34_17d
-        with dissolve
-
-        u "We'll see about that."
-
-        scene v16s34_19b
-        with dissolve
-
-        cl "Oh, we won't, but the backbone of the Chicks will. Good luck hearing from Mr. Rose! Later, pervert."
-
-        scene v16s34_21 # TPP Show MC and Chloe (both smiling, mouths closed) leaving the office, Elijah (nervous expression, mouth open) reaching out for them, yelling
-        with dissolve
-
-        el "Wait! Chloe! Don't-"
-
-    scene v16s34_13f
-    with dissolve
-
-    cl "*Sighs* Well, now that I can mark that off the list... I have about twenty more things to do before tonight."
-
-    scene v16s34_13g
-    with dissolve
-
-    u "Ha, you need a break."
-
-    scene v16s34_13f
-    with dissolve
-
-    cl "Way too much to do! I'll catch you later."
-
-    if chloe.relationship >= Relationship.GIRLFRIEND: # IF ChloeGF
-        play sound "sounds/kiss.mp3"
-        
-        scene v16s34_15
-        with dissolve
-
-        pause 0.75
-
-        if v16s34_chloe_kiss_elijah_for_frontpage: # IF Chloe kissed Elijah
             scene v16s34_13f
             with dissolve
 
-            cl "There. You're the only one that gets the tongue."
+            cl "*Sighs* Well, now that I can mark that off the list... I have about twenty more things to do before tonight."
 
             scene v16s34_13g
             with dissolve
 
-            u "Haha, and for free too? I'm the luckiest guy in town."
+            u "Ha, you need a break."
 
             scene v16s34_13f
             with dissolve
 
-            cl "That must make me the luckiest girl."
+            cl "Way too much to do! I'll catch you later."
 
-        scene v16s34_13g
-        with dissolve
+            if chloe.relationship >= Relationship.GIRLFRIEND: # IF ChloeGF
+                play sound "sounds/kiss.mp3"
+                
+                scene v16s34_15
+                with dissolve
 
-        pause 0.75
+                pause 0.75
+
+    scene v16s34_13g
+    with dissolve
+
+    pause 0.75
 
     scene v16s34_22 # FPP Show Chloe walking away down the hall
     with dissolve

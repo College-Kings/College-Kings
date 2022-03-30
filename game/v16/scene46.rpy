@@ -1,6 +1,6 @@
 # SCENE 46: Solo Baby Night WOLVES OR APES (both)
 # Locations: MC's room (either frat house)
-# Characters: MC (Outfit: 9), [V16_BABY] (Outfit: x), SAMANTHA (unseen), CAMERON (unseen), GRAYSON (unseen)
+# Characters: MC (Outfit: 9), [V16 BABY] (Outfit: x), SAMANTHA (unseen), CAMERON (unseen), GRAYSON (unseen)
 # Time: Wed Night
 
 label v16s46: # 46) Baby night, MC only
@@ -195,7 +195,7 @@ label v16s46: # 46) Baby night, MC only
         with dissolve
 
         menu:
-            "Be sorry":
+            "I'm sorry!":
                 $ add_point(KCT.BRO)
 
                 scene v16s46_15
@@ -208,7 +208,7 @@ label v16s46: # 46) Baby night, MC only
 
                 sa "Well, try harder!"
 
-            "Be agitated":
+            "Don't you think I'm trying?!":
                 $ add_point(KCT.TROUBLEMAKER)
 
                 scene v16s46_14
@@ -390,113 +390,115 @@ label v16s46: # 46) Baby night, MC only
     u "(Okay, it's time for a diaper change. Which key was it?)"
 
     # -If MC chooses an incorrect key, the choice menu appears again for another attempt-
-    while v16_wrong_key: ### NOT SURE IF THIS IS THE BEST WAY TO IMPLIMENT THIS
-        menu:
-            "Blue":
-                play sound "sounds/babycry.mp3" 
 
-                if joinwolves:
-                    scene v16s46_50 # TPP MC (frustrated expression, mouth closed) using the blue key on the baby doll [WOLF ROOM]
-                else:
-                    scene v16s46_20 # TPP MC (frustrated expression, mouth closed) using the blue key on the baby doll [APE ROOM]
-                with dissolve
+    menu v16_wrong_key_1:
+        "Blue":
+            play sound "sounds/babycry.mp3" 
 
-                baby "*Cries*"
-
-                if joinwolves:
-                    scene v16s46_49
-                else:
-                    scene v16s46_19
-                with dissolve
-
-                u "(Dammit... Not blue.)"
-
-            "Green":
-                play sound "sounds/babyscream.mp3"
-
-                if joinwolves:
-                    scene v16s46_50a # TPP Same angle as 20, MC (frustrated expression, mouth closed) using the green key on the baby doll [WOLF ROOM]
-                else:
-                    scene v16s46_20a # TPP Same angle as 20, MC (frustrated expression, mouth closed) using the green key on the baby doll [APE ROOM]
-                with dissolve
-
-                baby "*Scream crying*"
-
-                if joinwolves:
-                    scene v16s46_49
-                else:
-                    scene v16s46_19
-                with dissolve
-
-                u "(Ah, for fuck's sake...) Okay, okay! Wrong one, got it. Shhhh..."
-
-            "Orange":
-                $ v16_wrong_key = False
-
-                play sound "sounds/babycoo.mp3"
-
-                if joinwolves:
-                    scene v16s46_50b # TPP Same angle as 20, MC (relieved expression, mouth closed) using the orange key on the baby doll [WOLF ROOM]
-                else:
-                    scene v16s46_20b # TPP Same angle as 20, MC (relieved expression, mouth closed) using the orange key on the baby doll [APE ROOM]
-                with dissolve
-
-                baby "*Cooing*"
-
-                if joinwolves:
-                    scene v16s46_51 # FPP MC holding baby doll up in front of him in both hands [WOLF ROOM]
-                else:
-                    scene v16s46_21 # FPP MC holding baby doll up in front of him in both hands [APE ROOM]
-                with dissolve
-
-                u "*Sighs* Finally..."
-
-        if joinwolves:
-            scene v16s46_52 # TPP MC (relieved, mouth closed) placing the baby doll on the chair with the keys next to it [WOLF ROOM]
-        else:
-            scene v16s46_22 # TPP MC (relieved, mouth closed) placing the baby doll on the chair with the keys next to it [APE ROOM]
-        with dissolve
-
-        pause 0.75
-    
-        if not joinwolves:
-            ca "Well done, dad!"
-
-            scene v16s46_14
+            if joinwolves:
+                scene v16s46_50 # TPP MC (frustrated expression, mouth closed) using the blue key on the baby doll [WOLF ROOM]
+            else:
+                scene v16s46_20 # TPP MC (frustrated expression, mouth closed) using the blue key on the baby doll [APE ROOM]
             with dissolve
 
-            sa "If I wake up because of that kid one more time tonight, I'm calling child protective services."
+            baby "*Cries*"
 
-            gr "Wait, does [name] actually have a baby?"
-
-            sa "I'll explain tomorrow."
-
-            scene v16s46_23 # TPP MC (exhausted, mouth closed) sitting on the edge of the bed with his head in his hands [APE ROOM]
+            if joinwolves:
+                scene v16s46_49
+            else:
+                scene v16s46_19
             with dissolve
 
-            gr "Wha- Cam?"
+            u "(Dammit... Not blue.)"
 
-            ca "Back to bed, kids."
+            jump v16_wrong_key_1
 
-            scene v16s46_14
+        "Green":
+            play sound "sounds/babyscream.mp3"
+
+            if joinwolves:
+                scene v16s46_50a # TPP Same angle as 20, MC (frustrated expression, mouth closed) using the green key on the baby doll [WOLF ROOM]
+            else:
+                scene v16s46_20a # TPP Same angle as 20, MC (frustrated expression, mouth closed) using the green key on the baby doll [APE ROOM]
             with dissolve
 
-            gr "What the hell is happening around here?"
+            baby "*Scream crying*"
 
-        if joinwolves:
-            scene v16s46_54 # FPP MC shutting off the light [WOLF ROOM]
-        else:
-            scene v16s46_24 # FPP MC shutting off the light [APE ROOM]
+            if joinwolves:
+                scene v16s46_49
+            else:
+                scene v16s46_19
+            with dissolve
+
+            u "(Ah, for fuck's sake...) Okay, okay! Wrong one, got it. Shhhh..."
+
+            jump v16_wrong_key_1
+
+        "Orange":
+            play sound "sounds/babycoo.mp3"
+
+            if joinwolves:
+                scene v16s46_50b # TPP Same angle as 20, MC (relieved expression, mouth closed) using the orange key on the baby doll [WOLF ROOM]
+            else:
+                scene v16s46_20b # TPP Same angle as 20, MC (relieved expression, mouth closed) using the orange key on the baby doll [APE ROOM]
+            with dissolve
+
+            baby "*Cooing*"
+
+            if joinwolves:
+                scene v16s46_51 # FPP MC holding baby doll up in front of him in both hands [WOLF ROOM]
+            else:
+                scene v16s46_21 # FPP MC holding baby doll up in front of him in both hands [APE ROOM]
+            with dissolve
+
+            u "*Sighs* Finally..."
+
+    if joinwolves:
+        scene v16s46_52 # TPP MC (relieved, mouth closed) placing the baby doll on the chair with the keys next to it [WOLF ROOM]
+    else:
+        scene v16s46_22 # TPP MC (relieved, mouth closed) placing the baby doll on the chair with the keys next to it [APE ROOM]
+    with dissolve
+
+    pause 0.75
+
+    if not joinwolves:
+        ca "Well done, dad!"
+
+        scene v16s46_14
         with dissolve
 
-        pause 0.75
+        sa "If I wake up because of that kid one more time tonight, I'm calling child protective services."
 
-        if joinwolves:
-            scene v16s46_55 # TPP MC (eyes closed, mouth open) lays in bed with his arm across his face [WOLF ROOM]
-        else:
-            scene v16s46_25 # TPP MC (eyes closed, mouth open) lays in bed with his arm across his face [APE ROOM]
+        gr "Wait, does [name] actually have a baby?"
+
+        sa "I'll explain tomorrow."
+
+        scene v16s46_23 # TPP MC (exhausted, mouth closed) sitting on the edge of the bed with his head in his hands [APE ROOM]
         with dissolve
 
-        u "Okay, I don't want any more of that, [v16_baby_name]... Please, let's get some sleep now."
+        gr "Wha- Cam?"
+
+        ca "Back to bed, kids."
+
+        scene v16s46_14
+        with dissolve
+
+        gr "What the hell is happening around here?"
+
+    if joinwolves:
+        scene v16s46_54 # FPP MC shutting off the light [WOLF ROOM]
+    else:
+        scene v16s46_24 # FPP MC shutting off the light [APE ROOM]
+    with dissolve
+
+    pause 0.75
+
+    if joinwolves:
+        scene v16s46_55 # TPP MC (eyes closed, mouth open) lays in bed with his arm across his face [WOLF ROOM]
+    else:
+        scene v16s46_25 # TPP MC (eyes closed, mouth open) lays in bed with his arm across his face [APE ROOM]
+    with dissolve
+
+    u "Okay, I don't want any more of that, [v16_baby_name]... Please, let's get some sleep now."
     
     jump v16s50a # -Transition to Scene 50a-

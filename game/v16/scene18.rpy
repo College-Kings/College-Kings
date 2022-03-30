@@ -39,8 +39,6 @@ label v16s18: # MC goes home
 
     pause 0.75
 
-    ### check queue and force check phone
-
     $ amber.messenger.newMessage("Hey. You know how much you love me? ;) I'm at work all night tonight and forgot my phone charger at home! Grab it for me please? Key is under the mat.", force_send=True)
     $ amber.messenger.addReply("Yeah, I guess I can help you out this one time :P")
     $ amber.messenger.addReply("Ughhhhh")

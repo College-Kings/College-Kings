@@ -5,7 +5,7 @@
 
 label v16s33: # 33) MC showers
     scene v16s33_1 # TPP Show MC washing himself in the shower, lips pursed, whistling
-    with dissolve
+    with fade
 
     u "*Whistling badly*"
 
@@ -54,8 +54,7 @@ label v16s33: # 33) MC showers
 
     $ lauren.messenger.newMessage("Hey. Autumn's too busy to walk the dogs tonight so I'm helping, and the dog is way bigger than I thought! Lol. I'm gonna need your help! Please come?")
 
-    if v16s25a_date_with_aubrey: # TODO: Variable # PLACEHOLDER VARIABLE NAME # -if MC going on Aubrey date
-        
+    if v16_aubrey_date: # -if MC going on Aubrey date
         $ lauren.messenger.addReply("I'm sorry but I already have plans and am about to head out. Good luck! :)")
         $ lauren.messenger.newMessage("Aw, okay. Thanks anyway!")
 
@@ -68,8 +67,7 @@ label v16s33: # 33) MC showers
     
     
     else: # -if MC not going on Aubrey date
-        
-        if lauren.relationship >= Relationship.FWB: # -if LaurenGF/RS ###fwb?
+        if lauren.relationship >= Relationship.FWB: # -if LaurenGF/RS
             $ lauren.messenger.addReply("Better be worth it... ;)")
             $ lauren.messenger.newMessage("A kiss is worth a thousand words...?")
             $ lauren.messenger.addReply("Sold! I'm in.")
@@ -102,8 +100,18 @@ label v16s33: # 33) MC showers
 
     pause 0.75
 
-    if v16s25a_date_with_aubrey: #TODO: Variable # PLACEHOLDER VARIALBE # -if MC going on Aubrey date, transition to Scene 36-
+    if v16_aubrey_date: # -if MC going on Aubrey date, transition to Scene 36-
         jump v16s36
 
     else: # -if MC not going on Aubrey date, transition to Scene 43-
-        jump v16s43
+    # SCENE 43: Transition Mc walks to the park
+    # Locations: Sidewalk/Park Entrance
+    # Characters: MC (Outfit: 9),
+    # Time: Evening
+    
+        scene v16s43_1 # TPP. MC (slight smile, mouth is closed) walks along the street, into the park
+        with fade
+
+        pause 0.75
+
+        jump v16s44

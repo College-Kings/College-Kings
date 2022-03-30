@@ -5,10 +5,74 @@
 
 label v16_start:
     play music "<from 28>music/v15/Track Scene 49.mp3" fadein 2
-label v16s1:
-### ERROR: 1) Fight with Tom
 
-# -We fight Tom with the new fight mechanic system-
+label v16s1:
+
+    # Fight with Tom
+    python:
+        mc.fighter = Player(name, FightStance.FORWARD)
+
+        # Player base attacks
+        mc.fighter.base_attacks.append(BodyHook({
+            "start_image": "images/v16/Scene 1/fight/mc-basic-attacks/v16-mc-bhook-start.webp",
+            "hit_image": "images/v16/Scene 1/fight/mc-basic-attacks/v16-mc-bhook-hit.webp",
+            "blocked_image": "images/v16/Scene 1/fight/mc-basic-attacks/v16-mc-bhook-block.webp"
+        }))
+        mc.fighter.base_attacks.append(Jab({
+            "start_image": "images/v16/Scene 1/fight/mc-basic-attacks/v16-mc-jab-start.webp",
+            "hit_image": "images/v16/Scene 1/fight/mc-basic-attacks/v16-mc-jab-hit.webp",
+            "blocked_image": "images/v16/Scene 1/fight/mc-basic-attacks/v16-mc-jab-block.webp"
+        }))
+        mc.fighter.base_attacks.append(Hook({
+            "start_image": "images/v16/Scene 1/fight/mc-basic-attacks/v16-mc-hook-start.webp",
+            "hit_image": "images/v16/Scene 1/fight/mc-basic-attacks/v16-mc-hook-hit.webp",
+            "blocked_image": "images/v16/Scene 1/fight/mc-basic-attacks/v16-mc-hook-block.webp"
+        }))
+        mc.fighter.base_attacks.append(Kick({
+            "start_image": "images/v16/Scene 1/fight/mc-basic-attacks/v16-mc-kick-start.webp",
+            "hit_image": "images/v16/Scene 1/fight/mc-basic-attacks/v16-mc-kick-hit.webp",
+            "blocked_image": "images/v16/Scene 1/fight/mc-basic-attacks/v16-mc-kick-block.webp"
+        }))
+
+        tom.fighter = Opponent("Tom", FightStance.AGGRESSIVE)
+
+        tom.fighter.stance_images = {
+            FightStance.AGGRESSIVE: "images/v16/Scene 1/fight/tom-stances/v16-tom-stance-agr.webp",
+            FightStance.DEFENSIVE: "images/v16/Scene 1/fight/tom-stances/v16-tom-stance-def.webp",
+            FightStance.FORWARD: "images/v16/Scene 1/fight/tom-stances/v16-tom-stance-for.webp",
+            FightStance.SOLID: "images/v16/Scene 1/fight/tom-stances/v16-tom-stance-sol.webp"
+        }
+
+        tom.fighter.base_attacks.append(BodyHook({
+            "start_image": "images/v16/Scene 1/fight/tom-basic-attacks/v16-tom-bhook-start.webp",
+            "hit_image": "images/v16/Scene 1/fight/tom-basic-attacks/v16-tom-bhook-hit.webp",
+            "blocked_image": "images/v16/Scene 1/fight/tom-basic-attacks/v16-tom-bhook-block.webp"
+        }))
+        tom.fighter.base_attacks.append(Jab({
+            "start_image": "images/v16/Scene 1/fight/tom-basic-attacks/v16-tom-jab-start.webp",
+            "hit_image": "images/v16/Scene 1/fight/tom-basic-attacks/v16-tom-jab-hit.webp",
+            "blocked_image": "images/v16/Scene 1/fight/tom-basic-attacks/v16-tom-jab-block.webp"
+        }))
+        tom.fighter.base_attacks.append(Hook({
+            "start_image": "images/v16/Scene 1/fight/tom-basic-attacks/v16-tom-hook-start.webp",
+            "hit_image": "images/v16/Scene 1/fight/tom-basic-attacks/v16-tom-hook-hit.webp",
+            "blocked_image": "images/v16/Scene 1/fight/tom-basic-attacks/v16-tom-hook-block.webp"
+        }))
+        tom.fighter.base_attacks.append(Kick({
+            "start_image": "images/v16/Scene 1/fight/tom-basic-attacks/v16-tom-kick-start.webp",
+            "hit_image": "images/v16/Scene 1/fight/tom-basic-attacks/v16-tom-kick-hit.webp",
+            "blocked_image": "images/v16/Scene 1/fight/tom-basic-attacks/v16-tom-kick-block.webp"
+        }))
+
+        fight = Fight(mc, tom, "v16s1_fight_end")
+
+    call screen fight_overview(fight, "First Fight")
+
+label v16s1_fight_end:
+    if mc.health <= 0:
+        jump v16s1_lose
+    else:
+        jump v16s1_win
 
 # -if MC lost [Checkpoint 1.1]
 
@@ -317,7 +381,7 @@ label v16s1_win:
     scene v16s1_win_3a # FPP. Same as v16s1_win_3, Riley slightly worried, mouth open
     with dissolve
 
-    ri "No, no, it's not that...It's just-"
+    ri "No, no, it's not that... It's just-"
 
     scene v16s1_win_3b # FPP. Same as v16s1_win_3, Riley slight smile, mouth open
     with dissolve
@@ -476,7 +540,7 @@ label v16s1_win:
             scene v16s1_win_3
             with dissolve
 
-            u "Of course. I can't let you walk home alone in the dark, especially if you're not feeling safe, ha."
+            u "Of course. I can't let you walk home alone in the dark, especially if you're not feeling safe."
 
             scene v16s1_win_3b
             with dissolve

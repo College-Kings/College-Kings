@@ -256,6 +256,12 @@ screen whats_new(dialogue):
 
     button action Hide("whats_new")
 
+    textbutton "Exit":
+        action Hide("whats_new")
+        xpos 50
+        yalign 1.0
+        yoffset -50
+
     on "hide" action SetVariable("persistent.previous_whats_new", dialogue)
 
 style whats_new_text is text
@@ -270,28 +276,28 @@ screen sex_overlay(continue_label):
         spacing -100
 
         imagebutton:
-            idle image_path + "sex-positions-idle.png"
-            hover image_path + "sex-positions-hover.png"
-            selected_idle image_path + "sex-positions-selected.png"
+            idle image_path + "sex-positions-idle.webp"
+            hover image_path + "sex-positions-hover.webp"
+            selected_idle image_path + "sex-positions-selected.webp"
             action ToggleScreenVariable("show_sex_overlay")
 
         null height 150
 
         if show_sex_overlay:
-            for row in sex_overlay_options:
-                for cell in row:
-                    button:
-                        idle_background image_path + "sex-button-idle.png"
-                        hover_background image_path + "sex-button-hover.png"
-                        action Jump(cell[1])
-                        xysize (366, 191)
-                        xpos -25
+            for option in sex_overlay_options:
+                button:
+                    idle_background image_path + "sex-button-idle.webp"
+                    hover_background image_path + "sex-button-hover.webp"
+                    focus_mask True
+                    action Jump(option[1])
+                    xysize (366, 191)
+                    xpos -25
 
-                        text cell[0] align (0.5, 0.5)
+                    text option[0] align (0.5, 0.5)
 
     imagebutton:
-        idle image_path + "continue-idle.png"
-        hover image_path + "continue-hover.png"
+        idle image_path + "continue-idle.webp"
+        hover image_path + "continue-hover.webp"
         action Show("confirm", message="Are you sure you want to end the free roam?", yes_action=[Hide("confirm"), Jump(continue_label)])
         xalign 1.0
         xoffset -100

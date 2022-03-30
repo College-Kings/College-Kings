@@ -288,7 +288,7 @@ label v16s5:
         ro "There's a performance Friday evening at the Opera house. It's the one just out of town."
 
         menu:
-            "Be excited":
+            "Sounds exciting":
                 $ add_point(KCT.BOYFRIEND)
                 scene v16s5_2b
                 with dissolve
@@ -310,7 +310,7 @@ label v16s5:
 
                 ro "Only the best for my baby. *Laughs quietly*"
 
-            "Be unsure":
+            "Uhm... opera?":
                 $ add_point(KCT.TROUBLEMAKER)
                 scene v16s5_2b
                 with dissolve

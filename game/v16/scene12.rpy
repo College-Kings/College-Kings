@@ -142,7 +142,7 @@ label v16s12:
     u "Okay, show me what you've got."
 
     python:
-        chloe_board = PlanningBoard("images/v15/planning_boards/chloe_background.webp", money=chloe_board.money) ### to be replaced with v16 board
+        chloe_board = PlanningBoard("images/v16/planning_boards/chloe_background.webp", money=chloe_board.money) ### to be replaced with v16 board
 
         chloe_board.add_approach("Newspaper",
             "Decide the cover of the new student newspaper",
@@ -167,7 +167,7 @@ label v16s12:
             
         chloe_board.add_task("Newspaper",
             "Design cover",
-            opinion="\"The final step is to design it the way we want. As long as i looks perfect, we just give the final image to the newspaper team.\"")
+            opinion="\"The final step is to design it the way we want. As long as it looks perfect, we just give the final image to the newspaper team.\"")
 
         chloe_board.add_task("Sparty",
             "Buy items for spa day",
@@ -287,7 +287,7 @@ label v16s12:
         cl "Haha, have fun!"
     
     menu:
-        "Be enthusiastic":
+        "Always do!":
             $ add_point(KCT.BOYFRIEND)
             scene v16s12_2b
             with dissolve
@@ -299,7 +299,7 @@ label v16s12:
 
             cl "Haha, I'm so happy you're doing this with me."
 
-        "Be wary":
+        "I'll try...":
             $ add_point(KCT.TROUBLEMAKER)
             scene v16s12_2d
             with dissolve

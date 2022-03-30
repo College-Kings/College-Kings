@@ -192,60 +192,59 @@ label v16s49:
 
     pause 0.75
 
-    $ v16_wrong_key = True
-
 # -If MC chooses an incorrect key, the choice menu appears again for another attempt-
-    while v16_wrong_key:
-        menu:
-            "Blue":
-                scene v16s49_9a # FPP. Show just the BLUE Fob Key in MC's hand pressing it to the baby's lower back (Baby is in MCs lap)
-                with dissolve
+    menu v16_wrong_key_5:
+        "Blue":
+            scene v16s49_9a # FPP. Show just the BLUE Fob Key in MC's hand pressing it to the baby's lower back (Baby is in MCs lap)
+            with dissolve
 
-                pause 0.75
+            pause 0.75
 
-                play sound "sounds/babycry.mp3"
+            play sound "sounds/babycry.mp3"
 
-                scene v16s49_8
-                with vpunch
+            scene v16s49_8
+            with vpunch
 
-                baby "*Crying*"
+            baby "*Crying*"
+            
+            u "(Nope! I think blue is for feeding.)"
+
+            scene v16s49_9
+            with dissolve
+
+            pause 0.75
+
+            jump v16_wrong_key_5
                 
-                u "(Nope! I think blue is for feeding.)"
+        "Green":
+            scene v16s49_9b # FPP. Show just the GREEN Fob Key in MC's hand pressing it to the baby's lower back (Baby is in MCs lap)
+            with dissolve
 
-                scene v16s49_9
-                with dissolve
+            pause 0.75
 
-                pause 0.75
-                    
-            "Green":
-                scene v16s49_9b # FPP. Show just the GREEN Fob Key in MC's hand pressing it to the baby's lower back (Baby is in MCs lap)
-                with dissolve
+            play sound "sounds/babycry.mp3"
 
-                pause 0.75
+            scene v16s49_8
+            with vpunch
 
-                play sound "sounds/babycry.mp3"
+            baby "*Crying*"
+            
+            u "(Come on, [v16_baby_name]! Please stop...)"
 
-                scene v16s49_8
-                with vpunch
+            jump v16_wrong_key_5
 
-                baby "*Crying*"
-                
-                u "(Come on, [v16_baby_name]! Please stop...)"
+        "Orange": # (CORRECT)
+            play sound "sounds/babycoo.mp3"
 
-            "Orange": # (CORRECT)
-                $ v16_wrong_key = False
+            scene v16s49_9c # FPP. Show just the ORANGE Fob Key in MC's hand pressing it to the baby's lower back (Baby is in MCs lap)
+            with dissolve
 
-                play sound "sounds/babycoo.mp3"
+            u "Got it! Diaper successfully changed."
 
-                scene v16s49_9c # FPP. Show just the ORANGE Fob Key in MC's hand pressing it to the baby's lower back (Baby is in MCs lap)
-                with dissolve
+            scene v16s49_3d
+            with dissolve
 
-                u "Got it! Diaper successfully changed."
-
-                scene v16s49_3d
-                with dissolve
-
-                no "Nice, good job!"
+            no "Nice, good job!"
 
     scene v16s49_7
     with fade

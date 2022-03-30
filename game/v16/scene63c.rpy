@@ -5,9 +5,9 @@
 
 label v16s63c:
 
-    $ sex_overlay_options = [
-        [("Boobs", "v16s63c_boobs"), ("Feet", "v16s63c_feet"), ("Vagina", "v16s63c_vagina")],
-    ]
+    $ sceneList.add("v16_lindsey") # MC had sex with Lindsey during Chloe spa night during massage
+    $ sex_overlay_options = []
+    $ sex_overlay_options = [("Boobs", "v16s63c_boobs"), ("Feet", "v16s63c_feet"), ("Vagina", "v16s63c_vagina")] 
 
     scene v16s63c_1 # TPP. Lindsey (seductive expression, mouth closed, looking at MC) still laying on the massage table grabs MC's hand and pulls it off her towel, MC (full smile, mouth closed, looking at Lindsey) still standing 
     with dissolve
@@ -26,7 +26,8 @@ label v16s63c:
 
     call screen sex_overlay("v16s63c_end_foreplay_fr")
         
-label v16s6c_lindsey_sex_roam_boobs: # -if Boobs
+label v16s63c_boobs: # -if Boobs
+    
     scene v16s63c_3 # FPP. Close up shot of Lindsey full breast and head shot (seductive expression, mouth closed, looking at MC) lying down on the table, one hand behind her head and the other playing with one of her nipples
     with dissolve
 
@@ -85,7 +86,7 @@ label v16s6c_lindsey_sex_roam_boobs: # -if Boobs
 
     call screen sex_overlay("v16s63c_end_foreplay_fr")
 
-label v16s6c_lindsey_sex_roam_feet: # -if Feet
+label v16s63c_feet: # -if Feet
 
     scene v16s63c_6 # FPP. Render is shown from table height, Lindsey's (seductive expression, mouth is closed, looking at MC) lying on the table, full body is shown with her feet being closest to the camera angle, She has one leg bent at the knee, and the other leg dangling her foot and toes towards MC, Her legs are spread apart, vagina, breasts, and her face are also visible, her hands are behind her head or off to the side which ever is easier to render
     with dissolve
@@ -160,7 +161,8 @@ label v16s6c_lindsey_sex_roam_feet: # -if Feet
 
     call screen sex_overlay("v16s63c_end_foreplay_fr")
 
-label v16s6c_lindsey_sex_roam_vagina: # -if Vagina
+label v16s63c_vagina: # -if Vagina 
+
     scene v16s63c_8 # TPP. MC (slight smile, mouth closed, looking at Lindsey) kneels down on both knees and pulls Lindsey (slightly happily shocked expression, mouth open, looking at MC) towards the end of the massage table and puts her legs over his shoulders just enough so that her vagina is just barely off the table and is more accesible to lick or finger, Lindsey grabs Mc's head with her hands
     with dissolve
 
@@ -488,7 +490,7 @@ label v16s63c_end_foreplay_fr: # -if Mouth / End of Foreplay freeroam
             scene v16s63c_18a
             with dissolve
 
-            u "It's a bit late to worry about it now, ha. I think we're fine. No one knocked."
+            u "It's a bit late to worry about it now, Linds. I think we're fine. No one knocked."
 
             scene v16s63c_18
             with dissolve

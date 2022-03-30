@@ -78,7 +78,7 @@ label v16s8:
 
             cl "I can't believe she said those things about me. It's so... disappointing. *Sobbing*"
 
-            cl "I'm just trying my best, you know? I do everything I can for the Chick's, and this..."
+            cl "I'm just trying my best, you know? I do everything I can for the Chicks, and this..."
 
             scene v16s8_4e # FPP. Chloe starts crying again holding her hands to her face
             with dissolve
@@ -99,12 +99,6 @@ label v16s8:
 
             scene v16s8_4f # FPP. Chloe raises an eyebrow at MC, and a "suspicious expression," mouth is still closed
             with dissolve
-
-            if False: ### looks strange
-                pause 0.75
-
-                scene v16s8_4g # FPP. Chloe gives MC a "don't you dare look," mouth is still closed
-                with dissolve
 
             u "I mean, I can... I've felt... Nevermind."
 

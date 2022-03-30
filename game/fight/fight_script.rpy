@@ -181,7 +181,7 @@ label fight_start_turn(fight, target, attacker):
 
     scene black
 
-    if attacker == fight.player:
+    if attacker == fight.player.fighter:
         show text "Your Turn"
     else:
         show text "Opponent's turn"
@@ -190,7 +190,7 @@ label fight_start_turn(fight, target, attacker):
 
     $ overwhelmed_multiplier = 1
 
-    if attacker == fight.opponent:
+    if attacker == fight.opponent.fighter:
         # Overwhelmed
         if len(fight.move_list[-1][target.name]) >= 4:
             if opponent.health / opponent.max_health <= 0.25:
@@ -289,8 +289,8 @@ label fight_attack_turn(fight, target, attacker, move=None):
         $ attacker.stance = move.end_stance
 
     if attacker.stamina > 0:
-        if attacker == fight.player:
-            call screen fight_player_turn(fight, fight.player, fight.opponent)
+        if attacker == fight.player.fighter:
+            call screen fight_player_turn(fight, fight.player.fighter, fight.opponent.fighter)
         else:
             call fight_attack_turn(fight, target, attacker)
 

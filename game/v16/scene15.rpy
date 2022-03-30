@@ -10,7 +10,7 @@ label v16s15:
 
     pause 0.75
 
-    if penelope.relationship >= Relationship.LIKES: # -if PenelopeRS # TODO: Variable
+    if penelope.relationship >= Relationship.LIKES: # -if PenelopeRS ### TODO: Variable
         scene v16s15_2 # TPP MC gives Penelope a quick kiss [LEFT PIER ENTRANCE]
         with dissolve
         play sound "sounds/kiss.mp3"
@@ -26,7 +26,7 @@ label v16s15:
 
         pe "Haha, why thank you, handsome stranger. Someone's finally here to rescue me!"
 
-    else: # -if PenelopeFriend # TODO: Variable
+    else: # -if PenelopeFriend ### TODO: Variable
         scene v16s15_3a
         with dissolve
 
@@ -223,7 +223,7 @@ label v16s15pier_carousel: # -if Carousel
         "Sit alone":
             $ add_point(KCT.BRO)
 
-            if penelope.relationship >= Relationship.LIKES: # TODO: Variable
+            if penelope.relationship >= Relationship.LIKES: ### TODO: Variable
                 $ add_point(KCT.TROUBLEMAKER)
 
             scene v16s15_11a
@@ -387,7 +387,7 @@ label v16s15pier_carousel: # -if Carousel
 
             pause 0.75
 
-            if penelope.relationship >= Relationship.LIKES: # -if PenelopeRS # TODO: Variable
+            if penelope.relationship >= Relationship.LIKES: ### -if PenelopeRS # TODO: Variable
                 scene v16s15_20 # TPP. Show Penelope sitting in front of MC on the horse, looking over her shoulder back at MC, slight smile, mouth is open [CAROUSEL: Ride Location: Carousel3, Camera: Carousel2]
                 with dissolve
 
@@ -982,7 +982,7 @@ label v16s15pier_wheel: # -if Wheel of chance
 
     pe "Such a gentleman..."
 
-    if penelope.relationship >= Relationship.LIKES: # -penelopers kisses mc on the cheek- TODO: Variable
+    if penelope.relationship >= Relationship.LIKES: ### -penelopers kisses mc on the cheek- TODO: Variable
         scene v16s15_37 # TPP. Show just Penelope Kissing Mc on the cheek in front of the WHEEL, both slight smiles [WHEEL]
         with dissolve
         play sound "sounds/kiss.mp3"
@@ -1257,7 +1257,7 @@ label v16s15pier_wheel: # -if Wheel of chance
 
     # -the group walks away, karen looks grossed out by smiling imre, and penelope and mc are either holding hands and smiling if RS or they are just smiling if they are just friends
 
-    if penelope.relationship >= Relationship.LIKES: # -if PenelopeRS TODO: Variable
+    if penelope.relationship >= Relationship.LIKES: ### -if PenelopeRS TODO: Variable
         scene v16s15_46 # TPP. The group walks away from the Wheel Stand, karen (disgusted, mouth closed) walks next to and is looking at Imre. Imre (mouth closed) smiles back at Karen. Penelope and Mc are holding hands and smiling with mouths closed looking at each other as they are walking behind Imre and Karen [WHEEL]
         with dissolve
 
@@ -1351,7 +1351,7 @@ label v16s15pier_hotdog: # -if HotDog Stand
 
     hv "My powers never fail! One hotdog coming right up!"
 
-    if "wheel_gentle" in freeroam15: # -if MC already went to the Wheel of Chance and chose 'gentle spin' leading to a free hotdog coupon TODO: Variable
+    if "wheel_gentle" in freeroam15: # -if MC already went to the Wheel of Chance and chose 'gentle spin' leading to a free hotdog coupon
         if penelope.relationship >= Relationship.LIKES: ### -if PenelopeRS TODO: Variable
             scene v16s15_53a # FPP. MC turning his head to his right, Show Just Penelope head turned looking at MC with with the HOT DOG STAND to her right, MC hands the hotdog coupon to Penelope, Penelope smiles, mouth is closed [HOTDOG]
             with dissolve

@@ -4,7 +4,7 @@
 # Time: Afternoon
 
 label v16s14:
-# -MC gym outfit, Nora & Rose yoga outfits. Nora's wearing her fav color royal blue if possible (just bc she looks good af in it), i'm gonna assume we should take advantage of this situation and have them be barefoot, especially the girls (painted nails plz)-
+# -MC gym outfit, Nora & Rose yoga outfits. Nora's wearing her fav color royal blue if possible (just bc she looks good af in it), I'm gonna assume we should take advantage of this situation and have them be barefoot, especially the girls (painted nails plz)-
     scene v16s14_1 # FPP. MC sees Nora in the distance, leaning on a tree in the park, Nora slight smile, looking at MC, waving at him, mouth closed, three yoga mats are on the ground, one of the mats is behind the other 2
     with dissolve
 
@@ -40,7 +40,7 @@ label v16s14:
     
     else:
         scene v16s14_3a # FPP. Same as v16s14_3, Nora slight smile, mouth open
-        #with dissolve    
+        #with dissolve
         
         no "Can you believe this weather? It's the perfect day for yoga."
 
@@ -256,7 +256,7 @@ label v16s14:
     scene v16s14_11 # FPP. MC on his hands and knees, he looks forward, seeing both Nora and Ms. Rose with their asses sticking out from doing the pose
     with dissolve
 
-    u "(Holyyyyy... We've got the best seat in the house!)"
+    u "(Holyyyyy... This is the best seat in the house!)"
 
     menu:
         "Stare at Nora":

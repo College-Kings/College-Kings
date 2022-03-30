@@ -11,7 +11,7 @@ label v16s47: # 47) MC goes to the Chicks house
     
     pause 0.75
 
-    if v16s27_parent_chloe: # TODO: PLACEHOLDER VARIABLE # IF partnered with Chloe
+    if v16_parent_chloe: #IF partnered with Chloe
         scene v16s47_2 # FPP Chloe (bored expression, mouth open) answering the door to the Chicks house
         with dissolve
 

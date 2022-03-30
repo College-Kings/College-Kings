@@ -46,7 +46,7 @@ label v16s61:
                 scene v16s61_2a # TPP. In wolves room. Show MC (slight smile, mouth closed) sitting on his bed pulling out his phone from his pocket
                 with dissolve 
 
-                pause 0.75 
+                pause 0.75
                 
                 scene v16s61_2b # TPP In wolves room. Show MC (slight smile, mouth closed) sitting on his bed looking at his phone.
                 with dissolve 
@@ -121,7 +121,7 @@ label v16s61:
 
         pause 0.75
 
-        if (v14_help_chloe and not v16_chloe_newspaper):
+        if (v14_help_chloe and not v16_chloe_newspaper): # if helping Chloe with spa day
             scene v16s61_6
             with dissolve
 
@@ -134,7 +134,7 @@ label v16s61:
 
             jump v16s62
 
-        elif not v14_help_chloe: # -if not helping Chloe with her campaign
+        elif not v14_help_chloe: # -if not helping Chloe at all
             play sound "sounds/vibrate.mp3"
 
             scene v16s61_7
@@ -145,7 +145,7 @@ label v16s61:
             scene v16s61_8 # TPP. In wolves room. MC (slight smile, mouth open) standing up from his chair and holding his phone to his ear.
             with dissolve
 
-            u "Hello, my Chlo. *Chuckles* How are you?"
+            u "Hello, my Chloe. *Chuckles* How are you?"
 
             # -You can show a couple of images, 2-3 max, of Chloe during this convo. I suggest that she's preparing the house and party supplies during the call (These images are not a priority and can be cut if needed, otherwise mc is just shown pacing his room during the call.)
             # -if ChloeGf 
@@ -224,7 +224,7 @@ label v16s61:
             menu:
                 "Be the masseuse":
                     $ v16s61_chloe_pb_override_mc_gives_massages = True
-                    $ add_Point(KCT.TROUBLEMAKER)
+                    $ add_point(KCT.TROUBLEMAKER)
 
                     scene v16s61_9a
                     with dissolve
@@ -257,7 +257,7 @@ label v16s61:
                     cl "*Laughs* Terrific."
 
                 "Be a helper":
-                    $ add_Point(KCT.BRO)
+                    $ add_point(KCT.BRO)
 
                     scene v16s61_9a
                     with dissolve
@@ -304,7 +304,7 @@ label v16s61:
             scene v16s61_8
             with dissolve
 
-            pause 0.75 
+            pause 0.75
 
             play sound "sounds/dooropen.mp3"
 
@@ -315,7 +315,7 @@ label v16s61:
 
             jump v16s62
 
-        else: 
+        else: # if helping Chloe with newspaper
             play sound "sounds/thud.mp3"
 
             scene v16s61_6a # TPP. Show MC fallen asleep his head hitting the book on his desk.
@@ -333,12 +333,12 @@ label v16s61:
             scene v16s61_11 # TPP. Show MC(confused,mouth closed) standing in a black void nightmare and looking around.
             with fade 
 
-            pause 0.75 
+            pause 0.75
 
             scene v16s61_11a # TPP. Show MC(Jaw dropped) looking behind him we don't see whats behind him yet.
             with dissolve 
             
-            pause 0.75 
+            pause 0.75
 
             scene v16s61_12 # TPP. Shot from a bit behind MC of him looking up at a gigantic baby(Angry, mouth closed.) that is towering over him. The Babys eyes locked onto MC
             with dissolve
@@ -447,7 +447,7 @@ label v16s61:
                     scene v16s61_15a # TPP. In apes room. Show MC (slight smile, mouth closed) sitting on his bed pulling out his phone from his pocket
                     with dissolve 
 
-                    pause 0.75 
+                    pause 0.75
                     
                     scene v16s61_15b # TPP In apes room. Show MC (slight smile, mouth closed) sitting on his bed looking at his phone.
                     with dissolve 
@@ -519,7 +519,7 @@ label v16s61:
 
         pause 0.75
 
-        if (v14_help_chloe and not v16_chloe_newspaper):
+        if (v14_help_chloe and not v16_chloe_newspaper): # if helping Chloe with spa day
             scene v16s61_19
             with dissolve
 
@@ -532,7 +532,7 @@ label v16s61:
 
             jump v16s62
         
-        elif not v14_help_chloe: # -if not helping Chloe with her campaign
+        elif not v14_help_chloe: # -if not helping Chloe at all
             play sound "sounds/vibrate.mp3"
 
             scene v16s61_20
@@ -543,7 +543,7 @@ label v16s61:
             scene v16s61_21 # TPP. In apes room. MC (slight smile, mouth open) standing up from his chair and holding his phone to his ear.
             with dissolve
 
-            u "Hello, my Chlo. *Chuckles* How are you?"
+            u "Hello, my Chloe. *Chuckles* How are you?"
 
             # -You can show a couple of images, 2-3 max, of Chloe during this convo. I suggest that she's preparing the house and party supplies during the call (These images are not a priority and can be cut if needed, otherwise mc is just shown pacing his room during the call.)
             # -if ChloeGf 
@@ -622,7 +622,7 @@ label v16s61:
             menu:
                 "Be the masseuse":
                     $ v16s61_chloe_pb_override_mc_gives_massages = True
-                    $ add_Point(KCT.TROUBLEMAKER)
+                    $ add_point(KCT.TROUBLEMAKER)
 
                     scene v16s61_9a
                     with dissolve
@@ -655,7 +655,7 @@ label v16s61:
                     cl "*Laughs* Terrific."
 
                 "Be a helper":
-                    $ add_Point(KCT.BRO)
+                    $ add_point(KCT.BRO)
 
                     scene v16s61_9a
                     with dissolve
@@ -702,7 +702,7 @@ label v16s61:
             scene v16s61_21
             with dissolve
 
-            pause 0.75 
+            pause 0.75
 
             play sound "sounds/dooropen.mp3"
 
@@ -713,13 +713,13 @@ label v16s61:
 
             jump v16s62
 
-        else: 
+        else: # if helping Chloe with newspaper
             play sound "sounds/thud.mp3"
 
             scene v16s61_19a # TPP. Show MC fallen asleep his head hitting the book on his desk.
             with vpunch 
 
-            pause 0.75 
+            pause 0.75
 
             scene black
             with dissolve
@@ -731,12 +731,12 @@ label v16s61:
             scene v16s61_11 # TPP. Show MC(confused,mouth closed) standing in a black void nightmare and looking around.
             with fade
 
-            pause 0.75 
+            pause 0.75
 
             scene v16s61_11a # TPP. Show MC(Jaw dropped) looking behind him we don't see whats behind him yet.
             with dissolve 
             
-            pause 0.75 
+            pause 0.75
 
             scene v16s61_12 # TPP. Shot from a bit behind MC of him looking up at a gigantic baby(Angry, mouth closed.) that is towering over him. The Babys eyes locked onto MC
             with dissolve

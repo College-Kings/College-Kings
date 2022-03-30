@@ -76,12 +76,14 @@ label v16s3a:
             scene v16s3a_2a
             with dissolve
 
-            u "Whatever you say, ha."
+            u "Whatever you say."
 
     image v16rileybj = Movie(play="images/v16/scene_3a/v16rileybj.webm", loop=True, image="images/v16/scene_3a/v16rileybjStart.webp", start_image="images/v16/scene_3a/v16rileybjStart.webp")
     image v16rileybj2 = Movie(play="images/v16/scene_3a/v16rileybj2.webm", loop=True, image="images/v16/scene_3a/v16rileybj2Start.webp", start_image="images/v16/scene_3a/v16rileybj2Start.webp")
     image v16rileybjf = Movie(play="images/v16/scene_3a/v16rileybjf.webm", loop=True, image="images/v16/scene_3a/v16rileybjStart.webp", start_image="images/v16/scene_3a/v16rileybjStart.webp")
     image v16rileybj2f = Movie(play="images/v16/scene_3a/v16rileybj2f.webm", loop=True, image="images/v16/scene_3a/v16rileybj2Start.webp", start_image="images/v16/scene_3a/v16rileybj2Start.webp")
+
+    $ sceneList.add("v16_riley")
 
     scene v16rileybj # Ignore as anim
     with dissolve

@@ -99,7 +99,7 @@ label v16s16:
 
             pe "Imre... You tried to shove a piece of meat into her mouth."
 
-            scene v16s16_5b # FPP. MC looking at Imre, Imre looking at Penelope, Imre neutral face, mouth closed.
+            scene v16s16_5 # FPP. MC looking at Imre, Imre looking at Penelope, Imre neutral face, mouth closed.
             with dissolve
 
             imre "It was just a joke! I was trying to flirt..."
@@ -133,7 +133,7 @@ label v16s16:
 
                     pe "Imre, do you like the girl?"
 
-                    scene v16s16_5b
+                    scene v16s16_5
                     with dissolve
 
                     imre "Yeah, of course."
@@ -143,7 +143,7 @@ label v16s16:
 
                     pe "And is she worth the trouble of apologizing, and attempting to fix your mistakes?"
 
-                    scene v16s16_5b
+                    scene v16s16_5
                     with dissolve
 
                     imre "Well, I thought so... But-"
@@ -196,7 +196,7 @@ label v16s16:
 
                     pe "Oh?"
 
-                    scene v16s16_5b
+                    scene v16s16_5
                     with dissolve
 
                     imre "It takes a lot for me to want to share my food with someone."
@@ -421,7 +421,7 @@ label v16s16:
 
     u "I don't know if I want to pull your trigger, but..."
 
-    if penelope.relationship >= Relationship.LIKES: ###TODO: Variable
+    if penelope.relationship >= Relationship.LIKES: ### TODO: Variable
         scene v16s16_9c # FPP. MC looking at Penelope (winking, slight smile, mouth open) standing up to the shooting range who is looking at MC
         with dissolve
 

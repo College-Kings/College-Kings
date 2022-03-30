@@ -69,13 +69,11 @@ label v16s27:
 
     menu (fail_label="v16s27_default_chloe_parent"): # 3 second timer default
         "Parent with Chloe":
-            $ v16s27_parent_chloe = True
+            $ v16_parent_chloe = True
 
             jump v16s27_choose_chloe_parent
         
         "Parent with Nora":
-            $ v16s27_parent_chloe = False
-
             scene v16s27_9 # FPP. Show just Nora (slight smile, mouth is closed, looking at MC) sitting in her seat, camera angle is from a seated positon
             with dissolve
 
@@ -106,7 +104,7 @@ label v16s27:
             jump v16s27_continue_after_parent_choice
         
     label v16s27_default_chloe_parent:
-        $ v16s27_parent_chloe = True
+        $ v16_parent_chloe = True
 
         scene v16s27_8 # FPP. Show just Chloe (no expression, mouth is closed, looking at her phone) sitting in her seat with her phone in her hands, camera angle is from a seated positon
         with dissolve
@@ -167,15 +165,14 @@ label v16s27:
         scene v16s27_8b
         with dissolve
 
-        cl "It's possible, but that's a concern for me in the future me."
+        cl "It's possible, but that's a concern for future me."
 
         scene v16s27_8
         with dissolve
 
         u "(Perhaps she'll show more interest once we know exactly what we've got to do.)"
 
-    label v16s27_continue_after_parent_choice:# -Regardless of parent choice-
-
+    label v16s27_continue_after_parent_choice: # -Regardless of parent choice-
         scene v16s27_4
         with dissolve
 
@@ -196,14 +193,14 @@ label v16s27:
 
         sexed "Hello, class. I'd like everyone to look at this baby."
 
-        if not v16s27_parent_chloe: # Parent with Nora 
-            scene v16s27_9b # FPP. Show just Nora (slight smile, mouth is open, looking at the (SET)) sitting in her seat, camera angle is from a seated positon
+        if v16_parent_chloe:
+            scene v16s27_9c # FPP. Show just Nora (slight smile, mouth is open, looking at the (SET)) sitting in her seat, camera angle is from a seated positon, with multiple seats between MC and Nora (MC is not shown)
             with dissolve
 
             no "Awww!"
 
-        else:
-            scene v16s27_9c # FPP. Show just Nora (slight smile, mouth is open, looking at the (SET)) sitting in her seat, camera angle is from a seated positon, with multiple seats between MC and Nora (MC is not shown)
+        else: # Parent with Nora 
+            scene v16s27_9b # FPP. Show just Nora (slight smile, mouth is open, looking at the (SET)) sitting in her seat, camera angle is from a seated positon
             with dissolve
 
             no "Awww!"
@@ -255,14 +252,11 @@ label v16s27:
 
         sexed "The sensor inside will detect whether you've used the correct one or not."
 
-        if v16s27_parent_chloe: # -if MC is parenting with Chloe
+        if v16_parent_chloe: # -if MC is parenting with Chloe
             scene v16s27_8
             with dissolve
 
             u "(Is she paying attention to any of this?)"
-
-            scene v16s27_8
-            with dissolve
 
             menu:
                 "Say something":
@@ -291,12 +285,9 @@ label v16s27:
                 "Keep quiet":
                     $ add_point(KCT.BRO)
 
-                    scene v16s27_8
-                    with dissolve
-
                     u "(She's obviously not, and I don't feel like starting an argument.)"
 
-        else:# -if MC is parenting with Nora
+        else: # -if MC is parenting with Nora
             scene v16s27_9d # FPP. Show just Nora (slight smile, mouth is closed, looking at the (SET)) sitting in her seat, camera angle is from a seated positon
             with dissolve
 
@@ -337,7 +328,7 @@ label v16s27:
         scene v16s27_11c
         with dissolve
 
-        sexed "It's all pretty straight forward. Once you've spent some time with your baby, you will start to understand it's needs."
+        sexed "It's all pretty straight forward. Once you've spent some time with your baby, you will start to understand its needs."
 
         sexed "Just like in real life, the babies will cry when you're trying to sleep."
 
@@ -353,14 +344,15 @@ label v16s27:
 
         sexed "You and your partner will be caring for the baby for three nights in total and return your baby on Saturday where I will evaluate your performance."
 
-        sexed "As partners, each of you will spend one night alone with the baby as well as one night together. So, all that's left for you and your partner is to agree on a schedule."
+        sexed "As partners, each of you will spend one night alone with the baby as well as one night together."
+        sexed "So all that's left for you and your partner is to agree on a schedule."
 
         scene v16s27_11b
         with dissolve
 
         u "(Okay, let's see what's best...)"
 
-        # TODO: UI SCREEN #!#!#!#!# -The UI pops up, showing the three nights, and MC can choose the baby-duty schedule- #!#!#!#!#
+        call v16s27_baby_schedule
 
         scene v16s27_11b
         with dissolve
@@ -377,7 +369,7 @@ label v16s27:
 
         u "(I guess we'd better name it something...)"
 
-        if v16s27_parent_chloe: # -if chloe partner
+        if v16_parent_chloe: # -if chloe partner
             scene v16s27_8a
             with dissolve
 
@@ -405,7 +397,7 @@ label v16s27:
                 "Plastic it is":
                     $ add_point(KCT.BRO)
 
-                    $ v16_baby = "Plastic"
+                    $ v16_baby_name = "Plastic"
 
                     scene v16s27_8a
                     with dissolve
@@ -420,7 +412,7 @@ label v16s27:
                 "A different name":
                     # -Player gets to type baby name-
 
-                    $ v16_baby_name = renpy.input("What's your baby's name?", default=("Plastic").strip())
+                    $ v16_baby_name = renpy.input("What's your baby's name?", default=("Plastic").strip()) or _("Plastic")
 
                     scene v16s27_8c
                     with dissolve
@@ -503,7 +495,7 @@ label v16s27:
                 "Something else":
                     # -Player gets to type baby name-
 
-                    $ v16_baby_name = renpy.input("What's your baby's name?", default=("Henry").strip())
+                    $ v16_baby_name = renpy.input("What's your baby's name?", default=("Henry").strip()) or _("Henry")
 
                     scene v16s27_9g # FPP. Show just Nora (slight smile, mouth is closed, looking in the air) in a thinking pose sitting in her seat, camera angle is from a seated positon
                     with dissolve
@@ -526,9 +518,9 @@ label v16s27:
 
         sexed "Congratulations, and welcome to parenthood! Your babies will be available for collection this evening so please stop by later to pick them up."
 
-        sexed "And I'll see you all in three days at the Nurse's office for your reviews. Have a good day, parents!"
+        sexed "I'll see you all in three days at the Nurse's office for your reviews. Have a good day, parents!"
 
-        if v16s27_parent_chloe: # -if MC is parenting with Chloe
+        if v16_parent_chloe: # -if MC is parenting with Chloe
             scene v16s27_8e
             with dissolve
 

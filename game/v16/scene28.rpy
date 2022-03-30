@@ -61,7 +61,7 @@ label v16s28:
     li "I had some other ideas but I think these are the strongest, especially after hearing what Penelope said earlier."
 
     python:
-        lindsey_board = PlanningBoard("images/v15/planning_boards/lindsey_background.webp", money=lindsey_board.money, style="lindsey_board") ### to be replaced with v16 board
+        lindsey_board = PlanningBoard("images/v16/planning_boards/lindsey_background.webp", money=lindsey_board.money, style="lindsey_board") ### to be replaced with v16 board
 
         lindsey_board.add_approach("Newspaper",
             "Lindsey gets interviewed for the student newspaper",
@@ -73,7 +73,7 @@ label v16s28:
 
         v16s28_lindsey_elijah = lindsey_board.add_subtask("Newspaper",
             "Have Elijah interview Lindsey",
-            opinion="\"Elijah is the nead of the newspaper so it makes sense to ask him for an interview. Although... He's such a fucking prick. I wouldn't put it past him to agree to this idea simply because he'll want to twist my words into some gossipy blog. We have to be prepared when we meet with him.\"",
+            opinion="\"Elijah is the head of the newspaper so it makes sense to ask him for an interview. Although... He's such a fucking prick. I wouldn't put it past him to agree to this idea simply because he'll want to twist my words into some gossipy blog. We have to be prepared when we meet with him.\"",
             people=[elijah])
 
         lindsey_board.add_subtask("Newspaper",
@@ -235,20 +235,18 @@ label v16s28:
         scene v16s28_5 # TPP. Lindsey pulling MC by his shirt, Lindsey sexy smile, MC slightly surprised, both mouths closed
         with dissolve
 
-        pause 0.75
-
-        play sound "sounds/kiss.mp3"
+        pause 1.5
 
         scene v16s28_5a # TPP. Lindsey kissing MC
         with dissolve
-
-        pause 0.75
+        play sound "sounds/kiss.mp3"
+        pause 1.5
 
     else:
         scene v16s28_6 # TPP. Lindsey giving MC a hug
         with dissolve
 
-        pause 0.75
+        pause 1.25
     
     scene v16s28_3e
     with dissolve

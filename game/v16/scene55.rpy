@@ -65,33 +65,55 @@ label v16s55: # 55) Prepare Lindsey for the interview
     # scene v16s55_4 # FPP View of notebook on the table. Questions are on the left page, and place to drag them on the right
     # with dissolve
 
-    # Implemented using the menu system 
+    # Implemented using the menu system
+    
+    u "(Hmmm, there's a lot of possible questions that can come up in the interview...)"
+    
+    u "(I think they will ask her...)"
 
-    while len(v16s55_lindsey_question_set) < 2:
-        menu:
-            "Can you say three positive things about your opponent?" if "three_positives" not in v16s55_lindsey_question_set: 
-                $ v16s55_lindsey_question_set.add("three_positives")
+    menu:
+        "Name 3 positive things about your opponent":
+            scene v16s55_3b
+            with dissolve
 
-            "What is the most important quality of a good president?" if "important_quality" not in v16s55_lindsey_question_set:
-                $ v16s55_lindsey_question_set.add("important_quality")
+            u "Okay, are you ready?"
 
-            "What was your last random act of kindness?" if "random_kindness" not in v16s55_lindsey_question_set:
-                $ v16s55_lindsey_question_set.add("random_kindness")
-                
-    #-We exit the UI when the player has confirmed their selections-
+            scene v16s55_3d
+            with dissolve
 
-    scene v16s55_3b
-    with dissolve
+            li "Fire away."
+            
+            jump v16s55_threepositives
 
-    u "Okay, are you ready?"
+        "The most important quality of a good president":
+            scene v16s55_3b
+            with dissolve
 
-    scene v16s55_3d
-    with dissolve
+            u "Okay, are you ready?"
 
-    li "Fire away."
+            scene v16s55_3d
+            with dissolve
 
-    # THE THREE 'IF' STATEMENTS USE PLACEHOLDER VARIABLES. THIS SECTION WILL LIKELY NEED TO BE CHANGED BASED ON IMPLIMENTATION OF DRAG-AND-DROP MENU
-    if "three_positives" in v16s55_lindsey_question_set: # -if Can you say three positive things about your opponent? [Checkpoint 1.1]
+            li "Fire away."
+            
+            jump v16s55_importantquality
+
+        "What was your last random act of kindness?":
+            scene v16s55_3b
+            with dissolve
+
+            u "Okay, are you ready?"
+
+            scene v16s55_3d
+            with dissolve
+
+            li "Fire away."
+            
+            jump v16s55_randomkindness
+
+    label v16s55_threepositives:
+        $ v16s55_questions.add("three_positives")
+
         scene v16s55_3e
         with dissolve
 
@@ -127,7 +149,7 @@ label v16s55: # 55) Prepare Lindsey for the interview
 
         menu:
             "Sounds great":
-                $ v16s55_lindsey_followup_question_set.add("sounds_great")
+                $ v16s55_questions.add("sounds_great")
                 $ add_point(KCT.TROUBLEMAKER)
 
                 scene v16s55_3e
@@ -151,7 +173,7 @@ label v16s55: # 55) Prepare Lindsey for the interview
                 u "Great job."
             
             "Make a suggestion":
-                $ v16s55_lindsey_followup_question_set.add("make_suggestion")
+                $ v16s55_questions.add("make_suggestion")
 
                 scene v16s55_3e
                 #with dissolve
@@ -225,9 +247,14 @@ label v16s55: # 55) Prepare Lindsey for the interview
 
                 li "Okay, got it. Easy enough."
 
-    # [End of Checkpoint 1.1]
+        if "important_quality" in v16s55_questions or "random_kindness" in v16s55_questions:
+            jump v16s55_interviewend
+        else:
+            jump v16s55_secondround
 
-    elif "important_quality" in v16s55_lindsey_question_set: # -if What is the most important quality of a good president? [Checkpoint 1.2]
+    label v16s55_importantquality:
+        $ v16s55_questions.add("important_quality")
+        
         scene v16s55_3e
         with dissolve
 
@@ -258,7 +285,7 @@ label v16s55: # 55) Prepare Lindsey for the interview
 
         menu:
             "That'll do":
-                $ v16s55_lindsey_followup_question_set.add("thatll_do")
+                $ v16s55_questions.add("thatll_do")
 
                 u "Yeah, short but sweet. That'll do."
 
@@ -273,7 +300,7 @@ label v16s55: # 55) Prepare Lindsey for the interview
                 u "It was a good answer. Let's move on."
 
             "Expand on that":
-                $ v16s55_lindsey_followup_question_set.add("expand")
+                $ v16s55_questions.add("expand")
 
                 u "Okay, a little vague. What are you saying there? People skills?"
 
@@ -302,9 +329,14 @@ label v16s55: # 55) Prepare Lindsey for the interview
 
                 li "Ooh, I like that. Yeah, I'll use that one. Effective communicator."
 
-    # [End of Checkpoint 1.2]
+        if "three_positives" in v16s55_questions or "random_kindness" in v16s55_questions:
+            jump v16s55_interviewend
+        else:
+            jump v16s55_secondround
     
-    if "random_kindness" in v16s55_lindsey_question_set: # -if What was your last random act of kindness? [Checkpoint 1.3]
+    label v16s55_randomkindness:
+        $ v16s55_questions.add("random_kindness")
+
         scene v16s55_3e
         with dissolve
 
@@ -321,28 +353,28 @@ label v16s55: # 55) Prepare Lindsey for the interview
         li "Oh! I donated money to the dog shelter!"
 
         # -if mc didn't go on a date with aubrey and gave a full donation to lindsey
-        if not v16s25a_date_with_aubrey and v16s26_lindsey_donation_money == 50: # TODO: Variables 
+        if v16_lindsey_donation == 50:
             scene v16s55_3e
             with dissolve
 
             u "Which was really helpful, by the way. Autumn says thank you."
 
         # -if MC spent some of Lindsey's money
-        elif v16s26_lindsey_donation_money > 0 and v16s26_lindsey_donation_money < 50: # TODO: Variable
+        elif v16_lindsey_donation > 0:
             scene v16s55_3e
             with dissolve
 
             u "(Well, you donated a little less than you think...)"
 
         # -if MC spent all Lindsey's money and mc DID NOT post on Kiwii about the dog shelter
-        elif v16s26_lindsey_donation_money == 0 and not v16s52_mc_dogshelter_kiwii_post: # TODO: PLACEHOLDER VARIABLE
+        elif not v16s52_mc_dogshelter_kiwii_post:
             scene v16s55_3e
             with dissolve
 
             u "(Well, at least you think you did.)"
 
         # -if MC spent all Lindsey's money and MC DID post on Kiwii about the dog shelter
-        elif v16s26_lindsey_donation_money == 0 and v16s52_mc_dogshelter_kiwii_post: # TODO: PLACEHOLDER VARIABLES
+        else:
             scene v16s55_3c
             with dissolve 
 
@@ -350,6 +382,8 @@ label v16s55: # 55) Prepare Lindsey for the interview
 
             scene v16s55_3b
             with dissolve
+
+            $ grant_achievement("caught_red_handed")
 
             u "(Shit...)"
 
@@ -368,7 +402,7 @@ label v16s55: # 55) Prepare Lindsey for the interview
         # -Regardless of MC spending her money-
         menu:
             "That's good to mention":
-                $ v16s55_lindsey_followup_question_set.add("thats_good")
+                $ v16s55_questions.add("thats_good")
                 $ add_point(KCT.BOYFRIEND)
 
                 scene v16s55_3e
@@ -387,7 +421,7 @@ label v16s55: # 55) Prepare Lindsey for the interview
                 u "I'm loving that confidence, haha."
 
             "Ask her why":
-                $ v16s55_lindsey_followup_question_set.add("ask_why")
+                $ v16s55_questions.add("ask_why")
 
                 scene v16s55_3e
                 with dissolve
@@ -422,8 +456,31 @@ label v16s55: # 55) Prepare Lindsey for the interview
                 with dissolve
 
                 li "*Laughs* Okay. I got it."
+                
+        if "three_positives" in v16s55_questions or "important_quality" in v16s55_questions:
+            jump v16s55_interviewend
+        else:
+            jump v16s55_secondround
 
-    # [End of Checkpoint 1.3] # -Regardless of all the question choices-
+    label v16s55_secondround:
+
+    scene v16s55_3e
+    with dissolve
+    
+    u "(Alright, time for one more question...)"
+
+    menu:
+        "Name 3 positive things about your opponent" if "three_positives" not in v16s55_questions:
+            jump v16s55_threepositives
+
+        "The most important quality of a good president" if "important_quality" not in v16s55_questions:
+            jump v16s55_importantquality
+
+        "What was your last random act of kindness?" if "random_kindness" not in v16s55_questions:
+            jump v16s55_randomkindness
+
+    label v16s55_interviewend:
+    
     scene v16s55_3c
     with dissolve
 
@@ -462,7 +519,7 @@ label v16s55: # 55) Prepare Lindsey for the interview
         u "Just make sure you don't get pulled into ranting about Chloe or sounding like you have a big ego."
 
     # -if Lindsey is being interviewed by Riley
-    elif v16_lindsey_newspaper:
+    else:
         scene v16s55_3b
         with dissolve
 
@@ -485,7 +542,7 @@ label v16s55: # 55) Prepare Lindsey for the interview
 
     menu:
         "More advice": # -if More advice [Checkpoint 1.4]
-            $ v16s55_lindsey_followup_question_set.add("more_advice")
+            $ v16s55_questions.add("more_advice")
             $ add_point(KCT.BOYFRIEND)
 
             u "The main thing is to keep control of your emotions. Don't just say the first thing that comes into your head. Think about it first."
@@ -498,7 +555,7 @@ label v16s55: # 55) Prepare Lindsey for the interview
             if v16_lindsey_elijah: # -if being interviewed by Elijah
                 u "And if all else fails, try flirting with him, but keep it subtle. Just give him a little bit of attention and he'll be putty in your hands."
 
-            elif v16_lindsey_newspaper: # -if being interviewed by Riley
+            else: # -if being interviewed by Riley
                 u "I know Riley is treating her role seriously, so just make sure you're professional and it should go well. Even if she does crack a little joke, don't get over-friendly in the interview."
 
                 u "Still, a few well-placed compliments will help too."
@@ -511,7 +568,7 @@ label v16s55: # 55) Prepare Lindsey for the interview
         # [End of Checkpoint 1.4]
         
         "Let's finish up": # -if Let's finish up [Checkpoint 1.5]
-            $ v16s55_lindsey_followup_question_set.add("finish_up")
+            $ v16s55_questions.add("finish_up")
             
             scene v16s55_3e
             with dissolve
@@ -565,7 +622,7 @@ label v16s55: # 55) Prepare Lindsey for the interview
     pause 0.75
 
     # -if LindseyRS
-    if relationship.lindsey >= Relationship.FWB: 
+    if lindsey.relationship >= Relationship.FWB: 
         scene v16s55_7 # FPP Lindsey (sexy smile, mouth open), now standing, looking at MC
         with dissolve
 
@@ -578,14 +635,12 @@ label v16s55: # 55) Prepare Lindsey for the interview
             "Absolutely":
                 $ add_point(KCT.BOYFRIEND)
 
-                play sound "sounds/kiss.mp3"
-
                 u "Ha, absolutely. Come here."
 
                 scene v16s55_8 # TPP MC pulling Lindsey in for a kiss
                 with dissolve
-
-                pause 0.75
+                play sound "sounds/kiss.mp3"
+                pause 1.5
 
                 scene v16s55_7
                 with dissolve

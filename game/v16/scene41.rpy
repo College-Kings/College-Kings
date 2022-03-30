@@ -4,8 +4,7 @@
 # Time: Wednesday
 
 label v16s41: # MC goes home dressed up
-    
-    if v16s39_fr_aubrey_date_points >= 4 and aubrey.relationship < Relationship.TAMED: # TODO: Variable # IF failed the date & lost AubreyTamed
+    if v16_aubrey_date_points < 4: # IF failed the date & lost AubreyTamed
         scene v16s41_1 # TPP MC walking down the street looking sad and upset
         with dissolve
 
@@ -18,14 +17,16 @@ label v16s41: # MC goes home dressed up
         u "(Aubrey is my girlfriend... Aubrey is my fucking girlfriend! Haha!)"
 
         # IF mc is dating chloe, lauren AND aubrey (all three GF variables)
-        if (lauren.relationship >= Relationship.GIRLFRIEND and chloe.relationship >= Relationship.GIRLFRIEND) and aubrey.relationship >= Relationship.TAMED:
+        if lauren.relationship >= Relationship.GIRLFRIEND and chloe.relationship >= Relationship.GIRLFRIEND):
             scene v16s41_3 # TPP Another angle of walking down the street, MC looking happy, but a little nervous
             with dissolve
+
+            $ grant_achievement("threes_a_crowd")
 
             u "(And then there were three... What am I doing out here? *Laughs* I need to start being extra careful around my ladies...)"
 
         # IF mc is dating chloe OR Lauren, and now also aubrey (not both chloe and lauren, only one of them, 2 GF variables total) 
-        elif aubrey.relationship >= Relationship.TAMED and (lauren.relationship >= Relationship.GIRLFRIEND or chloe.relationship >= Relationship.GIRLFRIEND):
+        elif lauren.relationship >= Relationship.GIRLFRIEND or chloe.relationship >= Relationship.GIRLFRIEND:
             scene v16s41_3
             with dissolve
 

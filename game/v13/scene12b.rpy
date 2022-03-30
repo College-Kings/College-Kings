@@ -287,7 +287,6 @@ label v13s12b:
 
             menu (fail_label="v13s12b_failed_timer"):
                 "Steady":
-                    $ v13_penelope_backstage = True
                     scene v13s12b_7b # TPP. Same as v13s12b_7, Polly looking at MC and Penelope's direction, smiling, mouth open
                     with dissolve
 

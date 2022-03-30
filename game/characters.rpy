@@ -203,5 +203,8 @@ define character.sexed = Character("Sex Ed Teacher", who_color="#fc3158", who_ou
 define character.tb = Character("The Bullseye", who_color="#fc3158", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 define character.trucker = Character("Trucker", who_color="#046307", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 define character.wa = Character("Wheel Attendant", who_color="#8b0000", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
+define character.oldw = Character("Old Woman", who_color="#fc3158", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
+define character.tenr = Character("Tenor", who_color="#fecb2e", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
+define character.soprano = Character("Soprano", who_color="#5fc9f8", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 define character.wim = Character("Woman in Moive", who_color="#fd9426", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 define character.wtv = Character("Woman on TV Show", who_color="#fd9426", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])

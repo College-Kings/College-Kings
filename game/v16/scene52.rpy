@@ -21,7 +21,7 @@ label v16s52:
     scene v16s52_3 # TPP. MC (neutral face, mouth closed) in the lobby, looking to his right he sees two people that seem to be talking (both slight smile, mouth open.)
     with dissolve 
 
-    pause 0.75 
+    pause 0.75
 
     scene v16s52_4 # TPP. MC (neutral face, mouth closed) walks a little further through the lobby and finds a wall that has a pic of dogs and their new owners (We need a picture with Blue/dog_name from v15s4 and their new owner and a picture of the jogger and Rubius from v16s44.)
     with dissolve 
@@ -42,7 +42,7 @@ label v16s52:
         scene v16s52_6
         with dissolve
 
-        u "(Oh, awesome, [dog_name] got adopted! He looks so happy, ha.)"
+        u "(Oh, awesome, [dog_name] got adopted! He looks so happy now.)"
 
     else:
         scene v16s52_6
@@ -121,7 +121,7 @@ label v16s52:
     scene v16s52_12 # TPP. Close up of Lauren (slight smile, mouth closed) digging through her pockets for money.
     with dissolve
 
-    pause 0.75 
+    pause 0.75
 
     scene v16s52_9b
     with dissolve
@@ -173,7 +173,7 @@ label v16s52:
 
     aut "Haha, okay. Thank you."
         
-    if v16s26_lindsey_donation_money >= 10: # TODO: Variable
+    if v16_lindsey_donation >= 10:
         scene v16s52_9d # FPP. MC looking at Autumn slight smile, mouth closed.) Autumn looking at MC and standing next to Lauren.
         with dissolve
 
@@ -184,19 +184,7 @@ label v16s52:
 
         pause 0.75
 
-        if v16s26_lindsey_donation_money == 10:
-            scene v16s52_9c # FPP. MC looking at Autumn (slight smile, mouth open.). Autumn looking at MC and standing next to Lauren(slight smile, mouth closed.). Lauren looking at Autumn. 
-            with dissolve
-
-            aut "Thanks, [name]. That's really kind of her!"
-
-            if mc.money >= 10:
-                $ mc.money -= 10 
-
-        elif v16s26_lindsey_donation_money == 50:
-            if mc.money >= 50:
-                $ mc.money -= 50
-
+        if v16_lindsey_donation == 50:
             scene v16s52_9c 
             with dissolve
 
@@ -217,7 +205,13 @@ label v16s52:
 
             aut "Yeah, please do."
 
-    elif v16s26_lindsey_donation_money == 0:
+        else:
+            scene v16s52_9c # FPP. MC looking at Autumn (slight smile, mouth open.). Autumn looking at MC and standing next to Lauren(slight smile, mouth closed.). Lauren looking at Autumn. 
+            with dissolve
+
+            aut "Thanks, [name]. That's really kind of her!"
+
+    else:
         scene v16s52_10
         with dissolve
 
@@ -275,7 +269,7 @@ label v16s52:
 
         pause 0.75
 
-    if v15_autumn_freemug: # TODO: Variable
+    if v15_autumn_freemug:
         scene v16s52_9a
         with dissolve
 
@@ -392,7 +386,7 @@ label v16s52:
 
     menu:
         "Kiwii post":
-            $ add_Point(KCT.BOYFRIEND)
+            $ add_point(KCT.BOYFRIEND)
             scene v16s52_9
             with dissolve
 
@@ -438,13 +432,13 @@ label v16s52:
 
             pause 0.75
 
-            $ aubrey.messenger.addReply("Hey, Aubrey. I'm with Autumn right now at the dog shelter for the re-opening, and we kind of need your help.", func = None, new_message = True)
+            $ aubrey.messenger.addReply("Hey, Aubrey. I'm with Autumn right now at the dog shelter for the re-opening, and we kind of need your help.")
             $ aubrey.messenger.newMessage("I'm not able to come, but can I help from here?")
             $ aubrey.messenger.addReply("Yeah, we don't need much at all. The thing is, we need more donations. Well, more people with donations...")
             $ aubrey.messenger.newMessage("Hmm... Where do I come in? Lmao")
             $ aubrey.messenger.addReply("What about using your modeling powers, aka your large fanbase, and encouraging people to show up??? I'll make it up to you... ;)")
             
-            if relationship.aubrey == Relationship.FRIEND or relationship.aubrey == Relationship.TAMED: ###???
+            if aubrey.relationship == Relationship.FRIEND or aubrey.relationship == Relationship.TAMED: ###???
                 $ aubrey.messenger.newMessage("Oh, yea. No prob, I'll be happy to help :) I've got the perfect pic for it too!")
                 $ aubrey.messenger.addReply("Thank you! You're the best!")
                 $ aubrey.messenger.newMessage("You owe me, haha :P")
@@ -479,12 +473,13 @@ label v16s52:
                 $ v16s52_kiwiiPost1.new_comment(imre, "Aw man! I want a puppy!", numberLikes=545, force_send=True)
                 $ v16s52_kiwiiPost1.new_comment(sebastian, "Hmm... A puppy, eh?", numberLikes=961, force_send=True)
                 $ v16s52_kiwiiPost1.new_comment(lauren, "This is so cool of you, Aubrey <3", numberLikes=1070, force_send=True)
+                $ v16s52_aubrey_kiwii_post_for_donations = True
 
                 if False: # For Lint
                     scene v16s52_aubpost1
                     with dissolve
 
-            elif v16s25a_date_with_aubrey and aubrey.relationship < Relationship.TAMED:
+            elif v16_aubrey_date and aubrey.relationship < Relationship.TAMED:
                 $ aubrey.messenger.newMessage("Sorry, [name]... But I don't want to risk interfering with my brand. Lew's might not like me doing free dog shelter promoting, you know?", force_send=True)
                 $ aubrey.messenger.addReply("Oh, yeah. I get it, that's okay. Thanks")
                 $ aubrey.messenger.newMessage("Good luck")
@@ -542,10 +537,10 @@ label v16s52:
                     scene v16s52_post2
                     with dissolve
                 
-                if v16s26_lindsey_donation_money >= 10:
+                if v16_lindsey_donation >= 10:
                     $ v16s52_kiwiiPost2.new_comment(autumn, "Yes, received! Thank you so so much :D", mentions=lindsey, numberLikes=146, force_send=True)
                 
-                elif v16s26_lindsey_donation_money == 0:
+                elif v16_lindsey_donation == 0:
                     $ v16s52_kiwiiPost2.new_comment(autumn, "Must have missed it... Where did you send it?", mentions=lindsey, numberLikes=119, force_send=True)
                 
                 $ v16s52_kiwiiPost2.new_comment(aubrey, "Good luck u guys :)", numberLikes=91, force_send=True)
@@ -579,12 +574,12 @@ label v16s52:
             scene v16s52_17 # TPP. Show MC (Slight smile, mouth closed) looking at a poster in the dog shelter
             with fade
 
-            pause 0.75 
+            pause 0.75
 
             scene v16s52_17a # TPP. Show MC (slight smile, mouth closed) looking at a poster in the dog shelter while Autumn (slight smile, mouth closed) taps on his shoulder from behind.
             with dissolve 
 
-            pause 0.75 
+            pause 0.75
 
             play sound "sounds/dooropen.mp3"
 
@@ -603,7 +598,7 @@ label v16s52:
             aut "Guess we'll find out."
 
         "Spin sign":
-            $ add_Point(KCT.BRO)
+            $ add_point(KCT.BRO)
             scene v16s52_9
             with dissolve
 
@@ -624,7 +619,7 @@ label v16s52:
             scene v16s52_20 # TPP. Show MC (slight smile, mouth closed) outside by the entrance of the Dog shelter holding a big arrow sign "Love dogs? Come say hello!" with a dog picture if possible.
             with fade
 
-            pause 0.75 
+            pause 0.75
 
             scene v16s52_20a # TPP. Show MC (slight smile, mouth closed) outside by the entrance of the Dog Shelter trying to spin the sign.
             with dissolve 
@@ -664,7 +659,7 @@ label v16s52:
                     mped "*Scoffs* Say it louder, loser."
 
                 "Fuck off":
-                    $ add_Point(KCT.TROUBLEMAKER)
+                    $ add_point(KCT.TROUBLEMAKER)
                     scene v16s52_23
                     with dissolve 
 
@@ -955,7 +950,7 @@ label v16s52:
     scene v16s52_36 # FPP. MC looking at Autumn and the Dean walk away to do paperwork.
     with dissolve
 
-    pause 0.75 
+    pause 0.75
 
     scene v16s52_37 # TPP. A shot of MC(slight smile, mouth open) sitting on the floor with Oscar sitting next to him. Oscar and MC looking at each other.
     with dissolve
@@ -965,7 +960,7 @@ label v16s52:
     scene v16s52_37a # TPP. Show MC(slight smile, mouth closed) playing with Oscar.
     with dissolve
 
-    pause 0.75 
+    pause 0.75
 
     scene v16s52_38 # FPP. MC looking at the Dean (slight smile, mouth closed) who has Oscar on a leash and Autumn(slight smile, mouth open). Autumn looking at the Dean and the Dean looking back at her.
     with dissolve 
@@ -1011,7 +1006,7 @@ label v16s52:
 
     aut "Of course! You're welcome here anytime."
 
-    if autumn.relationship >= relationship.KISS:
+    if autumn.relationship >= Relationship.KISS:
         scene v16s52_41a
         with dissolve
 

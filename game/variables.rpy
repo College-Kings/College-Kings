@@ -289,7 +289,7 @@ default v13_imre_disloyal = False
 default v13_invite_samantha = False
 default v13_lauren_smoke = False
 default v13_penelope_concert = False
-default v13_penelope_backstage = False
+default v13_concert_backstage = False
 default v13_perfume = False
 default v13_smoke_weed = False
 default v13_emmy_points = 0
@@ -317,7 +317,6 @@ default v14_date_distraction = False ###APPROACH B1B (v14_concert_distraction = 
 # Animated Bar
 default animated_value_percent = 0
 
-default AmberLoyal = False #????
 default chrissus = 0
 default irisStrikes = 0
 default v13_threesomeending = False
@@ -384,7 +383,6 @@ default v15_autumn_lunchbreak = False
 default v15_autumn_smoke = False
 default v15_blame_nora = False # blame_chris = (v13_imre_disloyal, or maybe not) and not v15_blame_nora
 default v15_car_sold_price = 0
-default v15_emily_sext = False
 default v15_lindsey_alcohol = False
 default v15_lindsey_recording = 0 # (if recording happened in scene 35, value may be 1, 2 or 3. If recording happened in scene 39, value may be 4, 5 or 6)
 default v15_mad_at_ms_rose = False
@@ -437,9 +435,9 @@ default pb_threesome = False
 
 # 16.0
 default v16_baby_name = "Baby" # Used to store the player designated name of the baby
-default v16_wrong_key = True # This does default to True, not a typo. Used for baby menus
 default v16_wintom = False
 default v16_home_riley = False
+default v16_baby_key_attempts = 0 # tracks the total times MC uses a baby key on the baby; used in s87 
 
 # Chloe Planning Board
 default v16_chloe_newspaper = False ##Approach A. Sparty = (v14_help_chloe and not v16_chloe_newspaper)
@@ -454,49 +452,55 @@ default v16_lindsey_roomservice = False ##Approach B2A. Show up as yourselves = 
 
 default freeroam15 = set() #Pier v16s15
 default freeroam16 = set() #Amber v16s20
-default v16s1_win_fight_with_tom = False
+default freeroam17 = set() #Aubrey date v16s39
+
+
 default v16s11_sign_up = False
 default v16s20_take_twazzlers = False
 default v16_amber_mention_bills = False
 default v16_amber_mention_laptop = False
 default v16s23_support_amber = False
-default v16s25a_date_with_aubrey = False
-default v16s26_lindsey_donation_money = 50 # Track if MC spends any of the money lindsey gives him (can be spend in s32 and s38)
-default v16s27_parent_chloe = False  # True = Chloe, False = Nora
+default v16_aubrey_date = False
+default v16_lindsey_donation = 50 # Track if MC spends any of the money lindsey gives him (can be spend in s32 and s38)
+default v16_parent_chloe = False  # True = Chloe, False = Nora
 # default v16s27_mc_baby_duty_night = 0 # 0 = Unselected, 1 = Wednesday_alone, 2 = Thrusday_alone, 4 = Friday_alone, 0x10 = Wednesday_shared, 0x20 = Thursday_shared, 0x40 = Friday_shared
 default v16s27_mc_baby_schedule = {
     "wednesday": BabyDuty.PARTNER_ALONE,
     "thursday": BabyDuty.PARTNER_ALONE,
     "friday": BabyDuty.PARTNER_ALONE
 }
-default v16s32_birthday_reservation = 0  # 0 = neither, 1 = standard_reserveration, 2 = birthday_reservation  
-default v16s32_aubrey_cab_and_flowers = 0 #  0 = neither, 1 = cab only, 2 = cab and flowers
-default v16s32_cost_cab_and_flowers = 0 # Tracks the cost of Aubrey's cab ride to MC date
-default v16s34_joke_about_elijah = False # used and checked in v16s34 
-default v16s34_knock_on_svc_door = False # False = walk in 
+default v16_aubrey_date_birthday = False
+default v16_aubrey_date_cab = 0 #  0 = neither, 1 = cab only, 2 = cab and flowers
+default v16s34_joke_about_elijah = False 
 default v16s34_get_aggressive_with_elijah = False # False = Laugh
-default v16s34_chloe_kiss_elijah_for_frontpage = False # False = Tell Elijah to fuck off 
-default v16s35_mc_spa_shopping = set() # Tracks what MC purchased during spa shopping for chloe
+default v16s35_mc_spa_shopping = set() # possible values are "tingle_mint_oil", "citrus_oil", "expensive_mask", "cheap_mask"  - Tracks what MC purchased during spa shopping for chloe
 default v16s38_tippped_driver = False
-default v16s39_fr_aubrey_date_list = set() # Tracks player selection during Aubrey date freeroam
-default v16s39_fr_aubrey_date_points = 0
+default v16_aubrey_date_points = 0
 default v16s39_food_critic = False
 default v16s44_rubius_park_walk = False
 default v16s48_chloe_throws_baby = False
-default v16s50a_dotw = 0   # 0 = nothing, 1 = Sunday, 2 = Monday, 3 = Tuesday, 4 = Wednesday, 5 = Thursday, 6 = Friday, 7 = Saturday
-default v16s52_mc_dogshelter_kiwii_post = False  
-default v16s55_lindsey_question_set = set() # Possible values: three_positives  , important_quality  , random_kindness
-default v16s55_lindsey_followup_question_set = set() # Possible values: sounds_great or make_suggestion, thatll_do or expand, thats_good or ask_why, more_advice or finish_up
-default v16s57_agree_with_samantha_or_cameron = 0    # 0 = Stay out of it, 1 = Samantha, 2 = Cameron 
+default v16s50a_dotw = 0 # 0 = nothing, 1 = Sunday, 2 = Monday, 3 = Tuesday, 4 = Wednesday, 5 = Thursday, 6 = Friday, 7 = Saturday
+default v16s52_mc_dogshelter_kiwii_post = False
+default v16s52_aubrey_kiwii_post_for_donations = False # True = Aubrey makes kiwii post to raise donations for dog shelter/ False = Aubrey declines posting to Kiwii
+default v16s55_questions = set() # Possible values: three_positives  , important_quality  , random_kindness || Follow up questions = sounds_great or make_suggestion, thatll_do or expand, thats_good or ask_why, more_advice or finish_up
+default v16s57_agree_with_samantha_or_cameron = 0 # 0 = Stay out of it, 1 = Samantha, 2 = Cameron 
 default v16s59_just_knock = False  #  True == just knock on polly's door / False = Calm Lindsey down before knocking
 default v16s59_polly_endorse_lindsey = False # True == Polly will endorse Lindsey for Pres / False = Polly does not endorse Lindsey for Pres.
 default v16s61_chloe_pb_override_mc_gives_massages = False   # True = Mc says yes to helping chloe give massages as Spa night / False = Mc helps Chloe, but does not give massages.
+default v16s63_mc_wear_facial_mask  = False  # True = MC decides to wear facial mask on MC during s63 / False = MC decides not to wear mask 
+default v16s63a_mc_influence_aubreys_vote = 0 # 0 = Noobdy, 1 = Chloe, 2 = Lindsey (just in case this is used later to help decide the winner of the election Aubrey's vote)
+default v16s63a_mc_choose_keep_convo_friendly = False # True == MC chose not to talk sexy to Lindsey during massage/ False = MC chose Turn up the heat to get Lindsey all hot and bothered out
+default v16s63a_mc_choose_cool_convo = False  # True = MC chose not to take care of Lindsey's sexual needs/ False = MC chose to take care of Lindsey's sexual needs
 default v16s63x_chloe_suggestion_set = set() # Possible values:  "v16s63_compliment", "v16s63b_compliment", "v16s63_breast_reduciton", "v16s63b_breath_mint"
+default v16s64_insulted_chloe = False  # True = Added an insult to suggestion box/ False = did not add insult to suggestion box - MC insults Chloe using suggestion box during Spa night
+default v16s64_confessed_insult = False  # True = Told Truth/ False = Denied it - MC tells the truth when confronted about insults from Spa Night.
+default v16s67_mc_remains_interested_autumn_sex = 0 # 0 = MC did not get asked, 1 = Autumn asked and MC turned her down, 2 = Autumn asked and MC said he was still interested
+default v16s78_rose_ask_mc_contnue_dating = 0 # N 0 = Never asked, 1 = MC answered "If we want to", 2 = MC answered "Probably not"
 default v16_ms_rose_breakup = False
 default v16s4_dissnaomi = False
 default v16s14_focus = 0
 
-#default v16s12_chloe_planboard_decide_newspaper_cover = False # True=Decide Newspaper Cover/False = Chick's Spa Day
+#default v16s12_chloe_planboard_decide_newspaper_cover = False # True=Decide Newspaper Cover/False = Chicks Spa Day
 #default v16s12_chloe_planboard_decide_promote_chloe_on_cover = False #  True = promote chloe on newspaper cover / False = Embarrass Lindsey on front of newspaper cover
 #default v16s12_chloe_planboard_decide_mc_gives_massages = False   # True = Hire a professional to give messages / False = MC gives massages
 # Check v16s60_chloe_pb_override_mc_gives_massages variable as well when determining if MC gives massages   

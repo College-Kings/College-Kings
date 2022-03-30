@@ -121,48 +121,50 @@ label v16s48: # 48) Baby night: Chloe & MC
     cl "Who cares, [name]? Just try them all! And quickly, please."
 
     # -If MC chooses an incorrect key, the choice menu appears again for another attempt-
-    $ v16_wrong_key = True 
-    while v16_wrong_key:
-        menu:
-            "Blue":
-                $ v16_wrong_key = False
-                play sound "sounds/babycoo.mp3"
 
-                scene v16s48_11 # FPP Show close up of MC using the blue key on the baby
-                with dissolve
+    menu v16_wrong_key_2:
+        "Blue":
+            play sound "sounds/babycoo.mp3"
 
-                baby "*Soft coos*"
+            scene v16s48_11 # FPP Show close up of MC using the blue key on the baby
+            with dissolve
 
-                scene v16s48_12 # TPP MC holding the baby up in front of him with one hand raised in victory
-                with dissolve
+            baby "*Soft coos*"
 
-                u "Yes! That was it."
+            scene v16s48_12 # TPP MC holding the baby up in front of him with one hand raised in victory
+            with dissolve
 
-            "Green":
-                play sound "sounds/babyscream.mp3"
-                
-                scene v16s48_11a # FPP Same angle as 11, close up of MC using the green key on the baby
-                with dissolve
+            u "Yes! That was it."
 
-                baby "*Screaming cries*"
+        "Green":
+            play sound "sounds/babyscream.mp3"
+            
+            scene v16s48_11a # FPP Same angle as 11, close up of MC using the green key on the baby
+            with dissolve
 
-                scene v16s48_13 # FPP MC looking at the 3 keys
-                with dissolve
+            baby "*Screaming cries*"
 
-                u "(No, not green. What about...)"
+            scene v16s48_13 # FPP MC looking at the 3 keys
+            with dissolve
 
-            "Orange":
-                play sound "sounds/babycry.mp3"
+            u "(No, not green. What about...)"
 
-                scene v16s48_11b # FPP Same angle as 11, close up of MC using the orange key on the baby
-                with dissolve
+            jump v16_wrong_key_2
 
-                baby "*Cries*"
+        "Orange":
+            play sound "sounds/babycry.mp3"
 
-                scene v16s48_13
-                with dissolve
+            scene v16s48_11b # FPP Same angle as 11, close up of MC using the orange key on the baby
+            with dissolve
 
-                u "(Orange isn't working...)"
+            baby "*Cries*"
+
+            scene v16s48_13
+            with dissolve
+
+            u "(Orange isn't working...)"
+
+            jump v16_wrong_key_2
 
     scene v16s48_14 # TPP MC flopped on the couch, still holding the baby, Chloe (slight smile, mouth open) looking at the TV
     with dissolve
@@ -275,49 +277,50 @@ label v16s48: # 48) Baby night: Chloe & MC
             u "Now, let's see..."
             
             # -If MC chooses an incorrect key, the choice menu appears again for another attempt-
-            $ v16_wrong_key = True
 
-            while v16s48_wrong_key:
-                menu:
-                    "Blue":
-                        play sound "sounds/babycry.mp3"
+            menu v16_wrong_key_3:
+                "Blue":
+                    play sound "sounds/babycry.mp3"
 
-                        scene v16s48_11
-                        with dissolve
+                    scene v16s48_11
+                    with dissolve
 
-                        baby "*Crying*"
+                    baby "*Crying*"
 
-                        scene v16s48_13
-                        with dissolve
+                    scene v16s48_13
+                    with dissolve
 
-                        u "(Nope. I've fucked up.)"
+                    u "(Nope. I've fucked up.)"
 
-                    "Green":
-                        $ v16_wrong_key = False
-                        play sound "sounds/babycoo.mp3"
+                    jump v16_wrong_key_3
 
-                        scene v16s48_11a
-                        with dissolve
+                "Green":
+                    play sound "sounds/babycoo.mp3"
 
-                        u "Yes! There we go."
+                    scene v16s48_11a
+                    with dissolve
 
-                        scene v16s48_17 # TPP MC (slight smile, mouth open) standing with baby on his shoulder like he's burping it. Chloe (annoyed, mouth closed) has her head back, exhausted
-                        with dissolve
+                    u "Yes! There we go."
 
-                        u "All burped up."
+                    scene v16s48_17 # TPP MC (slight smile, mouth open) standing with baby on his shoulder like he's burping it. Chloe (annoyed, mouth closed) has her head back, exhausted
+                    with dissolve
 
-                    "Orange":
-                        play sound "sounds/babycry.mp3"
-                        
-                        scene v16s48_11b
-                        with dissolve
+                    u "All burped up."
 
-                        baby "*Crying*"
+                "Orange":
+                    play sound "sounds/babycry.mp3"
+                    
+                    scene v16s48_11b
+                    with dissolve
 
-                        scene v16s48_13
-                        with dissolve
+                    baby "*Crying*"
 
-                        u "(Nope! I think that one's for a diaper change...)"
+                    scene v16s48_13
+                    with dissolve
+
+                    u "(Nope! I think that one's for a diaper change...)"
+
+                    jump v16_wrong_key_3
 
             scene v16s48_17a # TPP Same angle as 17. Chloe (annoyed expression, mouth open) looking at MC (slight smile, mouth closed) and the baby
             with dissolve
@@ -389,46 +392,46 @@ label v16s48: # 48) Baby night: Chloe & MC
 
             u "Right, then..."
 
-            $ v16_wrong_key = True
-
             # -If MC chooses an incorrect key, the choice menu appears again for another attempt-
-            while v16_wrong_key:
-                menu:
-                    "Blue":
-                        play sound "sounds/babycry.mp3"
 
-                        scene v16s48_11a
-                        with dissolve
+            menu v16_wrong_key_4:
+                "Blue":
+                    play sound "sounds/babycry.mp3"
 
-                        baby "*Crying*"
+                    scene v16s48_11a
+                    with dissolve
 
-                        scene v16s48_13
-                        with dissolve
+                    baby "*Crying*"
 
-                        u "(Nope, nope, nope!)"
+                    scene v16s48_13
+                    with dissolve
 
-                    "Green":
-                        $ v16_wrong_key = False
+                    u "(Nope, nope, nope!)"
 
-                        play sound "sounds/babycoo.mp3"
+                    jump v16_wrong_key_4
 
-                        scene v16s48_11a
-                        with dissolve
+                "Green":
+                    play sound "sounds/babycoo.mp3"
 
-                        u "There, [v16_baby_name]. You've burped. Now leave us in peace!"
+                    scene v16s48_11a
+                    with dissolve
 
-                    "Orange":
-                        play sound "sounds/babycry.mp3"
+                    u "There, [v16_baby_name]. You've burped. Now leave us in peace!"
 
-                        scene v16s48_11b
-                        with dissolve
+                "Orange":
+                    play sound "sounds/babycry.mp3"
 
-                        baby "*Crying*"
+                    scene v16s48_11b
+                    with dissolve
 
-                        scene v16s48_13
-                        with dissolve
+                    baby "*Crying*"
 
-                        u "(Still crying...)"
+                    scene v16s48_13
+                    with dissolve
+
+                    u "(Still crying...)"
+
+                    jump v16_wrong_key_4
 
             scene v16s48_14d # TPP Same angle as 14. Chloe (tired expression, mouth closed) looking at MC (annoyed, mouth open) who is on the couch, the baby carelessly tossed to the end
             with dissolve

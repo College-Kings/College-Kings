@@ -287,7 +287,7 @@ label v16s31:
         scene v16s31_5b # TPP. Close up shot from the head down to MC's dick, Samantha rubs her hand over MC's dick, Samantha bites her lip, MC is slightly shocked but also pleasantly surprised by the action
         with dissolve
 
-        pause 0.75
+        pause 1.25
 
         scene v16s31_5c # TPP. Sam walks out the room with a sly smile. MC watches her go
         with dissolve
