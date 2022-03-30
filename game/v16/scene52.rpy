@@ -173,7 +173,7 @@ label v16s52:
 
     aut "Haha, okay. Thank you."
         
-    if v16_lindsey_donation >= 10: # TODO: Variable
+    if v16_lindsey_donation >= 10:
         scene v16s52_9d # FPP. MC looking at Autumn slight smile, mouth closed.) Autumn looking at MC and standing next to Lauren.
         with dissolve
 
@@ -184,13 +184,7 @@ label v16s52:
 
         pause 0.75
 
-        if v16_lindsey_donation == 10:
-            scene v16s52_9c # FPP. MC looking at Autumn (slight smile, mouth open.). Autumn looking at MC and standing next to Lauren(slight smile, mouth closed.). Lauren looking at Autumn. 
-            with dissolve
-
-            aut "Thanks, [name]. That's really kind of her!"
-
-        elif v16_lindsey_donation == 50: ### only accounts for =10 and =50
+        if v16_lindsey_donation == 50:
             scene v16s52_9c 
             with dissolve
 
@@ -211,7 +205,13 @@ label v16s52:
 
             aut "Yeah, please do."
 
-    elif v16_lindsey_donation == 0:
+        else:
+            scene v16s52_9c # FPP. MC looking at Autumn (slight smile, mouth open.). Autumn looking at MC and standing next to Lauren(slight smile, mouth closed.). Lauren looking at Autumn. 
+            with dissolve
+
+            aut "Thanks, [name]. That's really kind of her!"
+
+    else:
         scene v16s52_10
         with dissolve
 
