@@ -3,7 +3,7 @@
 # Characters: MC (Outfit: 9), CHLOE (Outfit: 3)
 # Time: Wed Night
 
-label v16s48a: ### ERROR: 48a) Chloe and MC sex scene
+label v16s48a: # ERROR: 48a) Chloe and MC sex scene
     $ sex_overlay_options = [("Boobs", "v16s48a_boobs"), ("Feet", "v16s48a_feet"), ("Vagina", "v16s48a_vagina")]
     $ sceneList.add("v16_chloe")
 

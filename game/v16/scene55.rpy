@@ -65,7 +65,7 @@ label v16s55: # 55) Prepare Lindsey for the interview
     # scene v16s55_4 # FPP View of notebook on the table. Questions are on the left page, and place to drag them on the right
     # with dissolve
 
-    ### Implemented using the menu system
+    # Implemented using the menu system
     
     u "(Hmmm, there's a lot of possible questions that can come up in the interview...)"
     

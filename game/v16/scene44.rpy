@@ -9,12 +9,12 @@ label v16s44:
 
     pause 0.75
 
-    scene v16s44_2 # FPP. Show just Lauren (### Editor Note ### -Trademark cute Lauren smile, mouth is closed, looking at MC)
+    scene v16s44_2 # FPP. Show just Lauren (# Editor Note # -Trademark cute Lauren smile, mouth is closed, looking at MC)
     with dissolve
 
     u "Hey, Lauren."
 
-    scene v16s44_2a # FPP. Show just Lauren (### Editor Note ### -Trademark cute Lauren smile, mouth is open, looking at MC)
+    scene v16s44_2a # FPP. Show just Lauren (# Editor Note # -Trademark cute Lauren smile, mouth is open, looking at MC)
     with dissolve
 
     la "Hey, [name]!"
