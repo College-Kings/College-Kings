@@ -481,8 +481,6 @@ label v16s59:
 
                     u "Ha, no. Nothing like that."
 
-                # -end if
-
                 scene v16s59_4e
                 with dissolve
 
@@ -601,8 +599,6 @@ label v16s59:
                     with dissolve
 
                     polly "It is this time, yes. *Laughs*"
-
-                # -end if
 
                 scene v16s59_4ze # FPP. Show Lindsey (nervous expression, mouth open, looking at Polly) just from the shoulders up (check with mozzart for clothing), Polly (concerned expression, mouth closed, looking at Lindsey), Polly's Bodyguard (PBG) (slightly angry expression, mouth closed, looking at MC) now standing closer to Lindsey, with one hand cupping a fist made with his other hand
                 with dissolve
