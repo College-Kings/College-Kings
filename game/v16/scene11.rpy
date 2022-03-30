@@ -308,7 +308,7 @@ label v16s11:
     scene v16s11_6k # FPP. At the pinboard, MC looking at Riley, Riley looking at MC, MC reaching for the PEN, Riley slight smile, mouth closed.
     with dissolve
 
-    u "Hmm... (She's not wrong, though... It would look good on a resume if I took part in a student club.)"
+    u "Hmm... (She's not wrong... It would look good on a resume if I took part in a student club.)"
 
     scene v16s11_8 # FPP. At the pinboard, MC at the sign up sheet, holding the PEN in his hand.
     with dissolve
