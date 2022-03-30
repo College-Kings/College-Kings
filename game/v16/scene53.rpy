@@ -40,7 +40,7 @@ label v16s53:
 
         u "(Well, that wasn't very hard...)"
 
-    elif v16_help_lindsey: # Lindsey school intereview with
+    elif v16_help_lindsey: # Lindsey school intereview
         scene v16s53_3 # TPP. MC (neutral face, mouth closed) walking further down the sidewalk.
         with dissolve
 
