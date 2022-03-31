@@ -256,7 +256,7 @@ screen path_builder():
                 action [
                     SetScreenVariable("start_label", "v{}_start".format(config.version.split(' ')[0].split('.')[0])),
                     SetScreenVariable("catagory_step", catagory_step + 1),
-                    SetScreenVariable("act_number", int(config.version.split(' ')[2][:-1]))
+                    SetScreenVariable("act_number", int(config.version.split(' ')[0].split('.')[0]))
                     ]
                 xysize (270, 61)
                 xalign 0.5
