@@ -164,7 +164,6 @@ label v16s17: # 17) MC catches up to Imre
             u "*Sighs* (Let's go home.)"
 
         "There's tons of girls":
-
             $ add_point(KCT.BRO)
             scene v16s17_4f
             with dissolve
