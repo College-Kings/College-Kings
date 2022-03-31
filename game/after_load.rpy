@@ -359,7 +359,7 @@ label after_load:
         # Transfer kiwiiApp to kiwii
         try:
             kiwii = kiwiiApp
-            kiwii.image = "images/phone/kiwii/appAssets/kiwiiIcon.webp"
+            kiwii.image = "images/phone/kiwii/app-assets/kiwiiIcon.webp"
             kiwii.home_screen = "kiwiiApp"
             kiwii.locked = kiwiiApp.locked
             kiwii.contacts = []
