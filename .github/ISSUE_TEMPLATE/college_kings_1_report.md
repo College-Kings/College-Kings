@@ -1,8 +1,8 @@
 ---
-name: Bug report
-about: Create a report to help us improve
-title: ''
-labels: bug
+name: College Kings 1 Report
+about: Create a report for the College Kings 1 platform
+title: '[CK2] '
+labels: 'platform: CK1'
 
 ---
 
