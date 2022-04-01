@@ -171,7 +171,7 @@ screen path_builder():
                         selected all([a.get_selected() for a in item.actions])
                         if isinstance(item, PathBuilderGirl):
                             sensitive ((item.frat_requirement is None or item.frat_requirement.value == int(joinwolves)) and (item.act_requirement <= act_number))
-                        action [a for a in item.actions]
+                        action item.actions
                         xysize (307, 112)
 
                         vbox:
@@ -283,7 +283,7 @@ screen path_builder():
         imagebutton:
             idle button_img_path + "continue.webp"
 
-            if catagory_step >= len(PathBuilderCatagories) or (act_number == 1 and catagory_step == 2):
+            if catagory_step >= len(PathBuilderCatagories):
                 action [Function(setup), Start(start_label)]
             else:
                 action SetScreenVariable("catagory_step", catagory_step + 1)
