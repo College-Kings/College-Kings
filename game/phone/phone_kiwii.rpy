@@ -24,7 +24,7 @@ init python:
 
             self.liked = False
 
-            self.sent_comments = []
+            self.sentComments = []
             self.pending_comments = []
 
             kiwiiPosts.append(self)
@@ -41,7 +41,7 @@ init python:
 
         @property
         def replies(self):
-            try: return self.sent_comments[-1].replies
+            try: return self.sentComments[-1].replies
             except (AttributeError, IndexError): return []
 
         def toggleLike(self):
@@ -57,7 +57,7 @@ init python:
             if self.replies:
                 self.pending_comments.append(comment)
             else:
-                self.sent_comments.append(comment)
+                self.sentComments.append(comment)
             
             kiwii.notification = True
             return comment
@@ -70,7 +70,7 @@ init python:
                 if self.pending_comments:
                     self.pending_comments[-1].replies.append(reply)
                 else:
-                    self.sent_comments[-1].replies.append(reply)
+                    self.sentComments[-1].replies.append(reply)
             except Exception as e:
                 message = self.newComment(mc, "")
                 message.replies.append(reply)
@@ -79,9 +79,9 @@ init python:
             return reply
 
         def selected_reply(self, reply):
-            self.sent_comments.append(KiwiiComment(mc, reply.message, reply.numberLikes, reply.mentions))
-            self.sent_comments[-1].reply = reply
-            self.sent_comments[-1].replies = []
+            self.sentComments.append(KiwiiComment(mc, reply.message, reply.numberLikes, reply.mentions))
+            self.sentComments[-1].reply = reply
+            self.sentComments[-1].replies = []
 
             # Run reply function
             try:
@@ -92,7 +92,7 @@ init python:
             # Send next queued message(s)
             try:
                 while not self.replies:
-                    self.sent_comments.append(self.pending_comments.pop(0))
+                    self.sentComments.append(self.pending_comments.pop(0))
             except IndexError: pass
 
         def get_message(self):
@@ -164,7 +164,7 @@ init python:
         return sum(post.numberLikes for post in kiwiiPosts if post.user == mc) + sum(
             comment.numberLikes
             for post in kiwiiPosts
-            for comment in post.sent_comments
+            for comment in post.sentComments
             if comment.user == mc
         )
 
@@ -382,7 +382,7 @@ screen kiwiiPost(post):
 
                 null
 
-                for comment in post.sent_comments:
+                for comment in post.sentComments:
                     if comment.message.strip():
                         vbox:
                             spacing 5
