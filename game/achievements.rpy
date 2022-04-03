@@ -183,13 +183,3 @@ init python:
     if renpy.loadable("v14/scene1.rpy"):
         Achievement("ready_player_three", "Three-way with Riley and Aubrey")
         Achievement("saving_ryans_privates", "Don't let Ryan catch an STD")
-        Achievement("beastie_boy", "Sabotage the bake sale")
-        Achievement("double_agent", "Help both Chloe and Lindsey's campaigns")
-        Achievement("agree_to_disagree", "Chris does not help Chloe")
-        Achievement("how_did_you_know", "Buy Amber her favourite candy")
-        Achievement("built_on_trust", "Trust your girlfriend Chloe with her ex")
-        Achievement("wrath_of_pen", "Penelope makes a scene at the restaurant")
-        Achievement("your_eyelids_are_heavy", "Lauren uses her hypnosis powers for good")
-        Achievement("say_chirp", "Take a photo with the bird")
-        Achievement("grand_theft_chloe", "Steal the diary and all the money")
-        Achievement("clean_it_up", "Be a positive influence on Amber and Samantha")
