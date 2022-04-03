@@ -36,3 +36,7 @@ screen girls():
                     xoffset 30
                     xalign 0.5
                     size 30
+    
+    if config_debug:
+        timer 0.1 action Jump(renpy.random.choice(i[1] for i in girl_labels))
+        

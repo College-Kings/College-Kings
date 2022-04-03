@@ -224,6 +224,9 @@ screen fightPopup(fightMove):
         textbutton "OK":
             action Return()
 
+    if config_debug:
+        timer 0.1 action Return()
+
 
 screen fightDamage():
     if youDamage == 3:
@@ -240,6 +243,8 @@ screen whats_new(dialogue):
 
     add "darker_80"
 
+    button action Hide("whats_new")
+
     frame:
         background Frame("gui/whats-new/background.webp")
         xysize (500, 758)
@@ -255,8 +260,6 @@ screen whats_new(dialogue):
                 spacing 10
                 text "What's New:" xalign 0.5 bold True
                 text dialogue size 18
-
-    button action Hide("whats_new")
 
     textbutton "Exit":
         action Hide("whats_new")

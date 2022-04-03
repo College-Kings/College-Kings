@@ -235,7 +235,7 @@ screen choice(items, seconds=3, fail_label=None):
 
     if config_debug:
         $ item = renpy.random.choice(items)
-        on "show" action item.action
+        timer 0.1 action item.action
     else:
         on "show" action Hide("phone_icon")
 
@@ -309,6 +309,10 @@ screen quick_menu():
                 idle Transform(image_path + "settings.webp", zoom=0.35)
                 hover Transform(image_path + "settings_hover.webp", zoom=0.35)
                 action ShowMenu("preferences")
+
+    if config_debug:
+        timer 0.01 repeat True action SetField(config, "skipping", "slow")
+
 
 style quick_menu_button:
     align (0.5, 0.5)
@@ -437,6 +441,9 @@ screen main_menu():
 
     if whats_new_text != persistent.previous_whats_new:
         on "show" action Show("whats_new", dialogue=whats_new_text)
+
+    if config_debug:
+        timer 0.1 action Start()
 
 
 ## Game Menu screen ############################################################
@@ -1172,6 +1179,8 @@ screen confirm(message, yes_action, no_action=Hide("confirm")):
     ## Right-click and escape answer "no".
     key "game_menu" action no_action
 
+    if config_debug:
+        timer 0.1 action yes_action
 
 style confirm_text is bebas_neue_30
 

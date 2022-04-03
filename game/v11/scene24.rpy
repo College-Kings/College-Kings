@@ -5,12 +5,12 @@
 
 label v11_big_ben:
     $ v11s24_kiwiiPost1 = KiwiiPost(sebastian, "v11/v11_caleb.webp", _("Who's laughing now!"), numberLikes=374)
-    $ v11s24_kiwiiPost1.newComment(chris, _("Someone's gonna be upset in the morning!"), numberLikes=renpy.random.randint(100, 200), force_send=True)
-    $ v11s24_kiwiiPost1.newComment(nora, _("Sebastian that's cruel!!"), numberLikes=renpy.random.randint(100, 200), force_send=True)
+    $ v11s24_kiwiiPost1.newComment(chris, _("Someone's gonna be upset in the morning!"), numberLikes=renpy.random.randint(100, 200))
+    $ v11s24_kiwiiPost1.newComment(nora, _("Sebastian that's cruel!!"), numberLikes=renpy.random.randint(100, 200))
 
     $ v11s24_kiwiiPost2 = KiwiiPost(imre, "v11/v11_imrebunny.webp", _("Say hello to our newest Wolf recruit"), numberLikes=306)
-    $ v11s24_kiwiiPost2.newComment(aubrey, _("Awww cute!!"), numberLikes=renpy.random.randint(100, 200), force_send=True)
-    $ v11s24_kiwiiPost2.newComment(nora, _("That thing stinks!"), numberLikes=renpy.random.randint(100, 200), force_send=True)
+    $ v11s24_kiwiiPost2.newComment(aubrey, _("Awww cute!!"), numberLikes=renpy.random.randint(100, 200))
+    $ v11s24_kiwiiPost2.newComment(nora, _("That thing stinks!"), numberLikes=renpy.random.randint(100, 200))
 
     scene v11bb1 # FPP Show Nora, neutral expression, mouth closed
     with dissolve

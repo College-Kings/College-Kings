@@ -31,7 +31,21 @@ screen v1_freeRoam1_1():
         xalign 0.65
         idle "images/v1/fr1b.webp"
         hover "images/v1/fr1bhover.webp"
-        action [Hide("tutorial"), Show("v1_freeRoam1_2")]
+        action 
+
+    if config_debug:
+        python:
+            actions = []
+
+            if not "riley" in freeroam1:
+                actions.append([Hide("tutorial"), Jump("v1_freeRoam1_riley")])
+
+            if not "elijah" in freeroam1:
+                actions.append([Hide("tutorial"), Jump("v1_freeRoam1_elijah")])
+
+            actions.append([Hide("tutorial"), Show("v1_freeRoam1_2")])
+
+        timer 0.1 action renpy.random.choice(actions)
 
 
 screen v1_freeRoam1_2():
@@ -77,6 +91,24 @@ screen v1_freeRoam1_2():
         hover "images/v1/backchrishover.webp"
         action Show("v1_freeRoam1_1")
 
+    if config_debug:
+        python:
+            actions = []
+
+            if not "chris" in freeroam1:
+                actions.append(Jump("v1_freeRoam1_chris"))
+
+            else:
+                if not "nora" in freeroam1:
+                    actions.append(Jump("v1_freeRoam1_nora"))
+                else:
+                    actions.append(Jump("v1_freeRoam1_nora2"))
+
+            actions.append(Show("v1_freeRoam1_3"))
+
+            actions.append(Show("v1_freeRoam1_1"))
+
+        timer 0.1 action renpy.random.choice(actions)
 
 screen v1_freeRoam1_3():
     tag free_roam
@@ -110,6 +142,21 @@ screen v1_freeRoam1_3():
         hover "images/v1/dormbackhover.webp"
         action Show("v1_freeRoam1_2")
 
+    if config_debug:
+        python:
+            actions = []
+
+            if not "aubrey" in freeroam1:
+                actions.append(Jump("v1_freeRoam1_aubrey"))
+            else:
+                actions.append(Jump("v1_freeRoam1_aubrey2"))
+
+            actions.append(Show("confirm", message="Are you sure you want to end the free roam?", yes_action=[Hide("confirm"), Jump("efra")]))
+
+            actions.append(Show("v1_freeRoam1_2"))
+
+        timer 0.1 action renpy.random.choice(actions)
+
 
 screen v1_freeRoam2_1(): # outside
     tag free_roam
@@ -139,6 +186,22 @@ screen v1_freeRoam2_1(): # outside
             action Jump("v1_freeRoam2_door")
         else:
             action Show("v1_freeRoam2_2")
+
+    if config_debug:
+        python:
+            actions = []
+
+            if not "sam" in freeroam2:
+                actions.append(Jump("v1_freeRoam2_sam"))
+            else:
+                actions.append(Jump("v1_freeRoam2_sam2"))
+
+            if not "door" in freeroam2:
+                actions.append(Jump("v1_freeRoam2_door"))
+            else:
+                actions.append(Show("v1_freeRoam2_2"))
+
+        timer 0.1 action renpy.random.choice(actions)
 
 
 screen v1_freeRoam2_2():
@@ -194,6 +257,30 @@ screen v1_freeRoam2_2():
         hover "images/v1/fr2stairsh.webp"
         action Jump("v1_freeRoam2_stairs")
 
+    if config_debug:
+        python:
+            actions = []
+
+            if not "josh" in freeroam2:
+                actions.append(Jump("v1_freeRoam2_josh"))
+            else:
+                actions.append(Jump("v1_freeRoam2_josh2"))
+
+            actions.append(Jump("v1_freeRoam2_pool"))
+
+            actions.append(Show("v1_freeRoam2_1"))
+
+            if not "courtney" in freeroam2:
+                actions.append(Jump("v1_freeRoam2_courtney"))
+            else:
+                actions.append(Jump("v1_freeRoam2_courtney2"))
+
+            actions.append(Jump("v1_freeRoam2_camp"))
+
+            actions.append(Jump("v1_freeRoam2_stairs"))
+
+        timer 0.1 action renpy.random.choice(actions)
+
 
 screen v1_freeRoam2_3():
     tag free_roam
@@ -227,6 +314,25 @@ screen v1_freeRoam2_3():
         hover "images/v1/backpoolh.webp"
         action Show("v1_freeRoam2_2")
 
+    if config_debug:
+        python:
+            actions = []
+
+            if not "mason" in freeroam2:
+                actions.append(Jump("v1_freeRoam2_mason"))
+            else:
+                actions.append(Jump("v1_freeRoam2_mason2"))
+
+            if not "katy" in freeroam2:
+                actions.append(Jump("v1_freeRoam2_katy"))
+            else:
+                actions.append(Jump("v1_freeRoam2_katy2"))
+
+            actions.append(Show("v1_freeRoam2_2"))
+
+        timer 0.1 action renpy.random.choice(actions)
+
+
 screen v1_freeRoam2_4():
     tag free_roam
 
@@ -246,6 +352,17 @@ screen v1_freeRoam2_4():
         idle "images/v1/fr2campback.webp"
         hover "images/v1/fr2campbackh.webp"
         action Show("v1_freeRoam2_2")
+
+    if config_debug:
+        python:
+            actions = []
+
+            actions.append(Show("confirm", message="Are you sure you want to end the free roam?", yes_action=[Hide("confirm"), Jump("v1_freeRoam2_end")]))
+
+            actions.append(Show("v1_freeRoam2_2"))
+
+        timer 0.1 action renpy.random.choice(actions)
+
 
 screen v1_freeRoam2_5():
     tag free_roam
@@ -269,6 +386,20 @@ screen v1_freeRoam2_5():
         idle "images/v1/fr2down.webp"
         hover "images/v1/fr2downh.webp"
         action Show("v1_freeRoam2_2")
+
+    if config_debug:
+        python:
+            actions = []
+
+            if not "grayson" in freeroam2:
+                actions.append(Jump("v1_freeRoam2_grayson"))
+            else:
+                actions.append(Jump("v1_freeRoam2_grayson2"))
+
+            actions.append(Show("v1_freeRoam2_2"))
+
+        timer 0.1 action renpy.random.choice(actions)
+
 
 screen nsfw_Toggle():
     
@@ -304,3 +435,6 @@ screen nsfw_Toggle():
                 text_size 40
                 selected False
                 action [SetVariable("config_censored", True), Return()]
+
+    if config_debug:
+        timer 0.1 action [SetVariable("config_censored", False), Return()]

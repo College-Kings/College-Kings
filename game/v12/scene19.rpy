@@ -200,9 +200,9 @@ label v12_party_wake_up:
         pause 0.75
     
     $ v12s19_kiwiiPost1 = KiwiiPost(amber, "v12/imre_raccoon.webp", _("Happy Birthday, Lindsey!"), numberLikes=419) # Picture of Imre with the raccoon drawing from scene 18 on his face
-    $ v12s19_kiwiiPost1.newComment(chris, _("Oh no... What did you guys do to him?"), mentions=[amber], numberLikes=renpy.random.randint(250,350), force_send=True)
-    $ v12s19_kiwiiPost1.newComment(amber, _("\"We\" taught him why we shouldn't get too drunk at slumber parties... Hehe"), mentions=[chris], numberLikes=renpy.random.randint(150,300), force_send=True)
-    $ v12s19_kiwiiPost1.newComment(imre, _("\"We\"??? Who is we?!?!"), mentions=[amber], numberLikes=renpy.random.randint(250,400), force_send=True)
+    $ v12s19_kiwiiPost1.newComment(chris, _("Oh no... What did you guys do to him?"), mentions=[amber], numberLikes=renpy.random.randint(250,350))
+    $ v12s19_kiwiiPost1.newComment(amber, _("\"We\" taught him why we shouldn't get too drunk at slumber parties... Hehe"), mentions=[chris], numberLikes=renpy.random.randint(150,300))
+    $ v12s19_kiwiiPost1.newComment(imre, _("\"We\"??? Who is we?!?!"), mentions=[amber], numberLikes=renpy.random.randint(250,400))
     $ v12s19_kiwiiPost1.addReply(_("Not cool, Amber... Not cool... ;)"), v12s19_kiwiiReply1, mentions=[amber], numberLikes=renpy.random.randint(250, 330))
     $ v12s19_kiwiiPost1.addReply(_("It's just a prank bro!"), v12s19_kiwiiReply1, mentions=[imre], numberLikes=renpy.random.randint(250, 330))
     

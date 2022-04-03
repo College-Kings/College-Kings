@@ -1,7 +1,7 @@
 ﻿define config.enable_steam = False
 define config.developer = True
 define config.console = True
-define config_debug = False # Automatic Playing
+define config_debug = True # Automatic Playing
 define config_censored = False
 
 define config.version = get_version(14, 0, 0)

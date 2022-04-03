@@ -27,7 +27,7 @@ init python:
             self.sent_comments = []
             self.pending_comments = []
 
-            kiwii_posts.append(self)
+            kiwiiPosts.append(self)
 
             kiwii.unlock()
 
@@ -105,7 +105,7 @@ init python:
             return message
 
         def remove_post(self):
-            kiwii_posts.remove(self)
+            kiwiiPosts.remove(self)
             del self
 
         # Backwards compatibility.
@@ -161,15 +161,15 @@ init python:
             self.disabled = disabled
 
     def get_total_likes():
-        return sum(post.numberLikes for post in kiwii_posts if post.user == mc) + sum(
+        return sum(post.numberLikes for post in kiwiiPosts if post.user == mc) + sum(
             comment.numberLikes
-            for post in kiwii_posts
+            for post in kiwiiPosts
             for comment in post.sent_comments
             if comment.user == mc
         )
 
     def find_kiwii_post(image=None, message=None):
-        for post in kiwii_posts:
+        for post in kiwiiPosts:
             if post.image == image: return post
             if post.message == message: return post
 
@@ -204,7 +204,7 @@ screen kiwii_base():
                 imagebutton:
                     idle image_path + "liked-button-idle.webp"
                     hover image_path + "liked-button-hover.webp"
-                    action Show("kiwii_home", posts=filter(lambda post: post.liked, kiwii_posts))
+                    action Show("kiwii_home", posts=filter(lambda post: post.liked, kiwiiPosts))
                     yalign 0.5
 
                 imagebutton:
@@ -268,7 +268,7 @@ screen kiwii_preferences():
                     outlines [ (absolute(0), "#000", absolute(0), absolute(0)) ]
 
 
-screen kiwii_home(posts=kiwii_posts):
+screen kiwii_home(posts=kiwiiPosts):
     tag phone_tag
 
     default image_path = "images/phone/kiwii/app-assets/"

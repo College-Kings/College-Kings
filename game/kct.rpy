@@ -21,7 +21,7 @@ init python:
         # Sort KCT values
         kctDict = {
             "popular":bro * troublemaker / float(boyfriend),
-            "confident": boyfriend * kct_troublemaker / float(bro),
+            "confident": boyfriend * troublemaker / float(bro),
             "loyal": bro * boyfriend / float(troublemaker)
         }
 
