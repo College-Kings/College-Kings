@@ -211,7 +211,7 @@ label fight_start_turn(fight, target, attacker):
     if attacker == fight.player.fighter:
         call screen fight_player_turn(fight, attacker, target)
     else:
-        call fight_attack_turn(fight, target, attacker)
+        call fight_attack_turn(fight, target, attacker) from _call_fight_attack_turn
 
 
 label fight_attack_turn(fight, target, attacker, move=None):
@@ -230,7 +230,7 @@ label fight_attack_turn(fight, target, attacker, move=None):
     if isinstance(move, EndTurn):
         $ attacker.stamina = attacker.max_stamina + min(attacker.stamina, 2)
         $ attacker.guard = attacker.stance.value
-        call fight_start_turn(fight, attacker, target)
+        call fight_start_turn(fight, attacker, target) from _call_fight_start_turn
 
     elif isinstance(move, Turtle):
         $ attacker.guard = FightStance.DEFENSIVE.value
@@ -239,7 +239,7 @@ label fight_attack_turn(fight, target, attacker, move=None):
         if attacker.stance == FightStance.SOLID:
             $ attacker.guard += 1
 
-        call fight_start_turn(fight, attacker, target)
+        call fight_start_turn(fight, attacker, target) from _call_fight_start_turn_1
 
     if hasattr(move, "images") and not move.images:
         $ raise NotImplementedError("Move {} is missing images.".format(move.name))
@@ -280,7 +280,7 @@ label fight_attack_turn(fight, target, attacker, move=None):
     if isinstance(attacker.quirk, SeeingRed) and not fight.moves_list[-1][attacker.name]:
         $ damage *= 2
 
-    call move_attack(fight, target, attacker, move, damage)
+    call move_attack(fight, target, attacker, move, damage) from _call_move_attack
 
     if target.health <= 0:
         show screen phone_icon
@@ -294,7 +294,7 @@ label fight_attack_turn(fight, target, attacker, move=None):
         if attacker == fight.player.fighter:
             call screen fight_player_turn(fight, fight.player.fighter, fight.opponent.fighter)
         else:
-            call fight_attack_turn(fight, target, attacker)
+            call fight_attack_turn(fight, target, attacker) from _call_fight_attack_turn_1
 
     else:
         # Seeing Red quirk
@@ -303,4 +303,4 @@ label fight_attack_turn(fight, target, attacker, move=None):
         else:
             $ attacker.guard = attacker.stance.value
         $ attacker.stamina = attacker.max_stamina
-        call fight_start_turn(fight, attacker, target)
+        call fight_start_turn(fight, attacker, target) from _call_fight_start_turn_2
