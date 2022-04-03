@@ -551,7 +551,7 @@ screen fr4hallwaybathroom():
             labels = ["labelfr4hallwaygymexit"]
 
             if not "imre" in freeroam4:
-                labels.append(Jump("fr4imre1"))
+                labels.append("fr4imre1")
 
         timer 0.1 action Jump(renpy.random.choice(labels))
 
