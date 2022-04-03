@@ -36,6 +36,25 @@ screen v9s7_lakeFull(): ###### LAKE ZOOM OUT SCREEN
         else:
             action Jump("fr5treeguy2")
 
+    if config_debug:
+        python:
+            actions = []
+
+            actions.append(Show("v9s7_lakeZoomIn"))
+
+            if not "ryan" in freeroam5:
+                actions.append(Jump("fr5ryan1"))
+            else:
+                actions.append(Show("confirm", message="Are you sure you want to end the free roam?", yes_action=[Hide("confirm"), Jump("fr5ryan3")]))
+
+            if not "dogwalker" in freeroam5:
+                actions.append(Jump("fr5dogwalker1"))
+
+            if not "treeguy" in freeroam5:
+                actions.append(Jump("fr5treeguy1"))
+
+        timer 0.1 action renpy.random.choice(actions)
+
 
 screen v9s7_lakeZoomIn(): ###### LAKE ZOOM OUT SCREEN
     tag free_roam
@@ -65,3 +84,17 @@ screen v9s7_lakeZoomIn(): ###### LAKE ZOOM OUT SCREEN
             action Jump("fr5riley1")
         else:
             action Jump("fr5riley2")
+
+    if config_debug:
+        python:
+            actions = []
+
+            actions.append(Show("v9s7_lakeFull"))
+
+            if not "aubrey" in freeroam5:
+                actions.append(Jump("fr5aubrey1"))
+
+            if not "riley" in freeroam5:
+                actions.append(Jump("fr5riley1"))
+
+        timer 0.1 action renpy.random.choice(actions)

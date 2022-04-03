@@ -83,6 +83,9 @@ screen fight_typeMenu():
         sensitive True
         action [SetVariable("fight_type", "simWin"), Return()]
 
+    if config_debug:
+        timer 0.1 action [SetVariable("fight_type", "normal"), Return()]
+
 
 screen fight_selectDifficulty():
     tag tag_fight
@@ -119,6 +122,9 @@ screen fight_selectDifficulty():
         textbutton "Hard":
             text_size 40
             action [Function(selectDifficulty, "hard"), Return()]
+
+    if config_debug:
+        timer 0.1 action [Function(selectDifficulty, "easy"), Return()]
 
 
 screen fight_keybindOptions():
@@ -157,6 +163,9 @@ screen fight_keybindOptions():
         textbutton "Start Fight":
             text_size 40
             action Return()
+
+    if config_debug:
+        timer 0.1 action Return()
 
 
 screen fight_overlay(stance=None):
@@ -222,6 +231,10 @@ screen tomtut1():
 
     use fight_overlay
 
+    if config_debug:
+        timer 0.1 action Jump(renpy.random.choice("tomtut1hook", "tomtut1jab", "tomtut1kick"))
+
+
 screen fight_defendTutorial():
 
     add "images/v2/tomhook.webp"
@@ -256,6 +269,8 @@ screen fight_defendTutorial():
 
     use fight_overlay
 
+    if config_debug:
+        timer 0.1 action Jump(renpy.random.choice("tuthookblock", "tuthookhit", "tuthookhit"))
 
 screen youattack():
 
@@ -370,6 +385,20 @@ screen youattack():
 
     use fight_overlay
 
+    if config_debug:
+        python:
+            if tomstance == 1:
+                labels = ("tomkick1", "tomkick2", "tomkick3")
+
+            if tomstance == 2:
+                labels = ("tomhook1", "tomhook2", "tomhook3")
+
+            if tomstance == 3:
+                labels = ("tomjab1", "tomjab2", "tomjab3")
+
+        timer 0.1 action Jump(renpy.random.choice(labels))
+
+
 
 screen tomattack():
 
@@ -475,6 +504,19 @@ screen tomattack():
         timer reaction action Jump("timer6")
 
     use fight_overlay
+
+    if config_debug:
+        python:
+            if tomattack == 1:
+                labels = ("tomhookhit", "tomhookblocked", "tomhookhit2")
+
+            if tomattack == 2:
+                labels = ("tomjabhit", "tomjabblocked", "tomjabhit2")
+
+            if tomattack == 3:
+                labels = ("tomkickhit", "tomkickhit2", "tomkickblocked")
+
+        timer 0.1 action Jump(renpy.random.choice(labels))
 
 
 screen larsFight_MCDefend(attack=None):

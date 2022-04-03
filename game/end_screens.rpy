@@ -29,7 +29,7 @@ screen save_now(next_version):
 
     text "v" + config.version.split(" ")[0] align (1.0, 1.0) xoffset -20 color "#4e628f" size 30
     
-    on "show" action Play("music", music_file)
+    on "show" action Play("music", "music/horror2.mp3")
 
 style save_now_text is text:
     font "fonts/Freshman.ttf"

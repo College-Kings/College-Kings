@@ -3,7 +3,7 @@ screen letter1():
     add Transform("images/v7/emilyletter.webp", size=(764, 1080))
 
     button:
-        action Hide ("letter1")
+        action Hide("letter1")
 
 screen hc_select():
     modal True
@@ -113,6 +113,9 @@ screen hc_select():
         size 35
         xalign 0.5
         ypos 920
+
+    if config_debug:
+        timer 0.1 action Jump(renpy.random.choice([i["label"] for i in girl_labels.values()]))
 
 
 # GYM
@@ -239,6 +242,45 @@ screen fr4dancefloor():
         hover "images/v7/fr4righthover.webp"
         action Jump("labelfr4gymright")
 
+    if config_debug:
+        python:
+            actions = []
+
+            if not "nora" in freeroam4 or "nora2" in freeroam4:
+                if "nora2" in freeroam4:
+                    actions.append(Jump("fr4nora3"))
+            else:
+                actions.append(Jump("fr4chris1"))
+
+            if not "elijah" in freeroam4:
+                actions.append(Jump("fr4elijah1"))
+
+            if not "mason" in freeroam4:
+                actions.append(Jump("fr4mason1"))
+
+            if hcGirl == "chloe":
+                actions.append(Show("confirm", message="Are you sure you want to end the free roam with Chloe?", yes_action=[Hide("confirm"), Jump("fr4chloedate")]))
+
+            elif hcGirl == "emily":
+                actions.append(Show("confirm", message="Are you sure you want to end the free roam with Emily?", yes_action=[Hide("confirm"), Jump("fr4emilydate")]))
+
+            elif hcGirl == "lauren":
+                actions.append(Show("confirm", message="Are you sure you want to end the free roam with Lauren?", yes_action=[Hide("confirm"), Jump("fr4laurendate")]))
+
+            elif hcGirl == "penelope":
+                actions.append(Show("confirm", message="Are you sure you want to end the free roam with Penelope?", yes_action=[Hide("confirm"), Jump("fr4penelopedate")]))
+
+            elif hcGirl == "riley":
+                actions.append(Show("confirm", message="Are you sure you want to end the free roam with Riley?", yes_action=[Hide("confirm"), Jump("fr4rileydate")]))
+
+            actions.append(Jump("labelfr4gymentrance"))
+
+            actions.append(Jump("labelfr4gymleft"))
+
+            actions.append(Jump("labelfr4gymright"))
+
+        timer 0.1 action renpy.random.choice(actions)
+
 
 screen fr4gymleft():
 
@@ -308,6 +350,28 @@ screen fr4gymleft():
         hover "images/v7/fr4bottomhover.webp"
         action Jump("labelfr4dancefloor")
 
+    if config_debug:
+        python:
+            actions = []
+
+            if not hcGirl == "chloe":
+                if not "chloe" in freeroam4:
+                    actions.append(Jump("fr4chloe1"))
+
+            else:
+                actions.append(Jump("fr4ryan1"))
+
+            if not hcGirl == "riley" and not "riley" in freeroam4:
+                actions.append(Jump("fr4riley1"))
+
+            else:
+                if not "aubrey" in freeroam4:
+                    actions.append(Jump("fr4aubrey1"))
+
+            actions.append(Jump("labelfr4dancefloor"))
+
+        timer 0.1 action renpy.random.choice(actions)
+
 
 screen fr4gymright():
 
@@ -349,6 +413,25 @@ screen fr4gymright():
         idle "images/v7/fr4bottom.webp"
         hover "images/v7/fr4bottomhover.webp"
         action Jump("labelfr4dancefloor")
+
+    if config_debug:
+        python:
+            actions = []
+
+            if not hcGirl == "lauren":
+                if not "lauren" in freeroam4:
+                    actions.append(Jump("fr4lauren1"))
+
+            else:
+                if not "rose" in freeroam4:
+                    actions.append(Jump("fr4msrose1"))
+
+            if not "cameron" in freeroam4:
+                actions.append(Jump("fr4cameron1"))
+
+            actions.append(Jump("labelfr4dancefloor"))
+
+        timer 0.1 action renpy.random.choice(actions)
 
 
 screen fr4gymentrance():
@@ -397,6 +480,25 @@ screen fr4gymentrance():
         hover "images/v7/fr4gymentrancedoorhover.webp"
         action Jump("labelfr4hallwaygymexit")
 
+    if config_debug:
+        python:
+            actions = []
+
+            if "riley" in freeroam4 and not "riley2" in freeroam4:
+                actions.append(Show("confirm", message="Are you sure you want to end the free roam with Riley?", yes_action=[Hide("confirm"), Jump("fr4riley2")]))
+
+            if "nora" in freeroam4 and not "nora2" in freeroam4:
+                actions.append(Jump("fr4nora2"))
+
+            if not "aaron" in freeroam4:
+                actions.append(Jump("fr4aaron1"))
+
+            actions.append(Jump("labelfr4dancefloor"))
+            
+            actions.append(Jump("labelfr4hallwaygymexit"))
+
+        timer 0.1 action renpy.random.choice(actions)
+
 
 ### Hallway ###
 screen fr4hallwaygymexit():
@@ -421,6 +523,9 @@ screen fr4hallwaygymexit():
         hover "images/v7/fr4lefthover.webp"
         action Jump("labelfr4hallway")
 
+    if config_debug:
+        timer 0.1 action Jump(renpy.random.choice(("labelfr4gymentrance", "labelfr4hallwaybathroom", "labelfr4hallway")))
+
 
 screen fr4hallwaybathroom():
 
@@ -440,6 +545,15 @@ screen fr4hallwaybathroom():
             action Jump("fr4imre1")
         else:
             action Jump("fr4imre2")
+
+    if config_debug:
+        python:
+            labels = ["labelfr4hallwaygymexit"]
+
+            if not "imre" in freeroam4:
+                labels.append(Jump("fr4imre1"))
+
+        timer 0.1 action Jump(renpy.random.choice(labels))
 
 
 screen fr4hallway():
@@ -493,6 +607,26 @@ screen fr4hallway():
         hover "images/v7/fr4bottomhover.webp"
         action Jump("labelfr4hallwaygymexit")
 
+    if config_debug:
+        python:
+            actions = []
+
+            if "chloe" in freeroam4 and preventgrayson:
+                if not "chloe2" in freeroam4:
+                    actions.append(Show("confirm", message="Are you sure you want to end the free roam with Chloe?", yes_action=[Hide("confirm"), Jump("fr4chloe2")]))
+
+            if not hcGirl == "penelope":
+                if not "penelope" in freeroam4:
+                    actions.append(Jump("fr4penelope1"))
+
+            actions.append(Jump("labelfr4hallwaycorner"))
+
+            actions.append(Jump("labelfr4outsidestairs"))
+
+            actions.append(Jump("labelfr4hallwaygymexit"))
+
+        timer 0.1 action renpy.random.choice(actions)
+
 
 screen fr4hallwaycorner():
 
@@ -525,6 +659,20 @@ screen fr4hallwaycorner():
         hover "images/v7/fr4bottomhover.webp"
         action Jump("labelfr4hallway")
 
+    if config_debug:
+        python:
+            actions = []
+
+            if "chloe" in freeroam4 and not preventgrayson:
+                actions.append(Show("confirm", message="Are you sure you want to end the free roam with Chloe?", yes_action=[Hide("confirm"), Jump("fr4lockerroomchloe")]))
+
+            if not "grayson" in freeroam4:
+                actions.append(Jump("fr4grayson1"))
+
+            actions.append(Jump("labelfr4hallway"))
+
+        timer 0.1 action renpy.random.choice(actions)
+
 
 ### Outside ###
 screen fr4outsidestairs():
@@ -556,6 +704,20 @@ screen fr4outsidestairs():
         hover "images/v7/fr4righthover.webp"
         action Jump("labelfr4outsidestreet")
 
+    if config_debug:
+        python:
+            actions = []
+
+            if not hcGirl == "emily":
+                if not "emily" in freeroam4:
+                    actions.append(Jump("fr4emily1"))
+
+            actions.append(Jump("labelfr4hallway"))
+
+            actions.append(Jump("labelfr4outsidestreet"))
+
+        timer 0.1 action renpy.random.choice(actions)
+
 
 screen fr4outsidestreet():
 
@@ -575,6 +737,17 @@ screen fr4outsidestreet():
         idle "images/v7/fr4bottom.webp"
         hover "images/v7/fr4bottomhover.webp"
         action Jump("labelfr4outsidestairs")
+
+    if config_debug:
+        python:
+            actions = []
+
+            if not "samantha" in freeroam4:
+                actions.append(Jump("fr4samantha1"))
+
+            actions.append(Jump("labelfr4outsidestairs"))
+
+        timer 0.1 action renpy.random.choice(actions)
 
 
 screen rileysexoverlay():

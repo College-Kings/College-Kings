@@ -64,3 +64,20 @@ screen v13s24_girl():
                 xysize (269, 74)
                 add "gui/common/button_gray.webp"
                 text "No Date" align (0.5, 0.5)
+
+    if config_debug:
+        python:
+            actions = []
+
+            if emmy.relationship >= Relationship.LIKES:
+                actions.append(Jump("v13s24_emmy_date"))
+
+            if kourtney.relationship >= Relationship.LIKES:
+                actions.append(Jump("v13s24_kourtney_date"))
+
+            if aryssa.relationship >= Relationship.LIKES:
+                actions.append(Jump("v13s24_aryssa_date"))
+
+            actions.append(Jump("v13s24_no_simplr_date"))
+
+        timer 0.1 action renpy.random.choice(actions)

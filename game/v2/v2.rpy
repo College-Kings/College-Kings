@@ -316,9 +316,10 @@ label gb:
     scene tomstancekick
     with dissolve
 
-    call screen confirm("Would you like to play the fighting tutorial?",
-        yes_action=[SetVariable("fight_tutorial", True), Call("fight_tutorialLabel")],
-        no_action=[SetVariable("fight_tutorial", False), Return()])
+    if not config_debug:
+        call screen confirm("Would you like to play the fighting tutorial?",
+            yes_action=[SetVariable("fight_tutorial", True), Call("fight_tutorialLabel")],
+            no_action=[SetVariable("fight_tutorial", False), Return()])
 
     if fight_tutorial:
         call screen tomtut1

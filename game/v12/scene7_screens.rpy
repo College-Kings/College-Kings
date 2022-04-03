@@ -25,6 +25,14 @@ screen murder_button_overlay(character):
             else:
                 action [ Function(character.kill), Jump("v12s7_{}_kill".format(char_name)) ]
 
+    if config_debug:
+        timer 0.1 repeat True:
+            if not v12s7_seenList:
+                if char_name == "riley" and "riley2" in freeroam9 and not "riley3" in freeroam9:
+                    action [ Function(character.kill), Jump("v12s7_{}_kill2".format(char_name)) ]
+                else:
+                    action [ Function(character.kill), Jump("v12s7_{}_kill".format(char_name)) ]
+
 
 screen v12s7_minimap(location):
     add Transform("images/v12/Scene 7/minimap/{}.webp".format(location), zoom=0.25)
@@ -79,12 +87,39 @@ screen v12s7_seating_back():
 
             hotspot (331, 898, 1227, 181) action Show("v12s7_seating_front")
 
-
-
-
     use v12s7_minimap(location="ld_seating")
 
     on "replaced" action SetVariable("previous_location", "v12s7_seating_back")
+
+    if config_debug:
+        python:
+            actions = []
+
+            if (emily_europe and not "emily" in freeroam9 and not emily in v12s7_killList and lauren not in v12s7_killList): #Emily and Lauren
+                if "lauren" not in freeroam9:
+                    actions.append(Jump("v12s7_lauren1")) # Lauren
+
+                actions.append(Jump("v12s7_emily1")) # Emily
+
+                actions.append(Show("v12s7_seating_front"))
+
+
+            elif (emily_europe and not "emily" in freeroam9 and not emily in v12s7_killList and lauren in v12s7_killList): #Emily only
+                actions.append(Jump("v12s7_emily1")) # Emily
+
+                actions.append(Show("v12s7_seating_front"))
+
+            elif lauren not in v12s7_killList: #Lauren only
+                if "lauren" not in freeroam9:
+                    actions.append(Jump("v12s7_lauren1")) # Lauren
+
+                actions.append(Show("v12s7_seating_front"))
+
+            else:
+                actions.append(Show("v12s7_seating_front"))
+
+        timer 0.1 action renpy.random.choice(actions)
+
 
 screen v12s7_seating_front():
     tag free_roam
@@ -134,6 +169,35 @@ screen v12s7_seating_front():
 
     on "replaced" action SetVariable("previous_location", "v12s7_seating_front")
 
+    if config_debug:
+        python:
+            actions = []
+
+            # No one
+            if ("samantha" in freeroam9 and ms_rose in v12s7_killList) or (ms_rose in v12s7_killList and not v11_invite_sam_europe):
+                actions.append(Show("v12s7_seating_back"))
+                actions.append(Show("v12s7_walkway"))
+            
+            # Ms Rose
+            elif ("samantha" in freeroam9 and ms_rose not in v12s7_killList) or (not v11_invite_sam_europe and ms_rose not in v12s7_killList):
+                if "rose" not in freeroam9:
+                    actions.append(Jump("v12s7_msrose1")) # ms rose
+
+                actions.append(Show("v12s7_seating_back"))
+                actions.append(Show("v12s7_walkway"))
+
+            # Samantha and Ms Rose
+            elif (v11_invite_sam_europe and not "samantha" in freeroam9 and ms_rose not in v12s7_killList):
+                if "rose" not in freeroam9:
+                    actions.append(Jump("v12s7_msrose1")) # ms rose
+
+                actions.append(Jump("v12s7_sam_cameron")) # sameron
+
+                actions.append(Show("v12s7_seating_back"))
+                actions.append(Show("v12s7_walkway"))
+
+        timer 0.1 action renpy.random.choice(actions)
+
 
 screen v12s7_walkway():
     tag free_roam
@@ -150,6 +214,9 @@ screen v12s7_walkway():
 
     on "replaced" action SetVariable("previous_location", "v12s7_walkway")
 
+    if config_debug:
+        timer 0.1 action Show(renpy.random.choice(("v12s7_left_walkway_middle", "v12s7_right_walkway_middle", "v12s7_seating_front")))
+
 
 screen v12s7_right_walkway_middle():
     tag free_roam
@@ -165,6 +232,9 @@ screen v12s7_right_walkway_middle():
     use v12s7_minimap(location="ld_right_walkway")
 
     on "replaced" action SetVariable("previous_location", "v12s7_right_walkway_middle")
+
+    if config_debug:
+        timer 0.1 action Show(renpy.random.choice(("v12s7_right_walkway_front", "v12s7_right_walkway_back", "v12s7_walkway")))
 
 
 screen v12s7_left_walkway_middle():
@@ -183,6 +253,9 @@ screen v12s7_left_walkway_middle():
     
     on "replaced" action SetVariable("previous_location", "v12s7_left_walkway_middle")
 
+    if config_debug:
+        timer 0.1 action Show(renpy.random.choice(("v12s7_left_walkway_back", "v12s7_left_walkway_front", "v12s7_walkway")))
+
 
 screen v12s7_left_walkway_back():
     tag free_roam
@@ -200,6 +273,9 @@ screen v12s7_left_walkway_back():
     use v12s7_minimap(location="ld_left_walkway")
 
     on "replaced" action SetVariable("previous_location", "v12s7_left_walkway_back")
+
+    if config_debug:
+        timer 0.1 action Show(renpy.random.choice(("v12s7_rear", "v12s7_left_walkway_middle")))
 
 
 screen v12s7_rear():
@@ -226,6 +302,18 @@ screen v12s7_rear():
 
     on "replaced" action SetVariable("previous_location", "v12s7_rear")
 
+    if config_debug:
+        python:
+            actions = []
+
+            if "lindsey2" not in freeroam9:
+                actions.append(Jump("v12s7_lindsey2"))
+            
+            actions.append(Show("v12s7_right_walkway_back"))
+            actions.append(Show("v12s7_left_walkway_back"))
+
+        timer 0.1 action renpy.random.choice(actions)
+
 
 screen v12s7_right_walkway_back():
     tag free_roam
@@ -251,6 +339,18 @@ screen v12s7_right_walkway_back():
     
     on "replaced" action SetVariable("previous_location", "v12s7_right_walkway_back")
 
+    if config_debug:
+        python:
+            actions = []
+
+            if "samantha2" not in freeroam9:
+                actions.append(Jump("v12s7_sam2"))
+            
+            actions.append(Show("v12s7_right_walkway_middle"))
+            actions.append(Show("v12s7_rear"))
+
+        timer 0.1 action renpy.random.choice(actions)
+
 
 screen v12s7_right_walkway_front():
     tag free_roam
@@ -266,6 +366,9 @@ screen v12s7_right_walkway_front():
     use v12s7_minimap(location="ld_right_walkway")
 
     on "replaced" action SetVariable("previous_location", "v12s7_right_walkway_front")
+
+    if config_debug:
+        timer 0.1 action Show(renpy.random.choice(("v12s7_rear_gallery", "v12s7_kitchen", "v12s7_right_walkway_middle")))
 
 
 screen v12s7_kitchen():
@@ -304,6 +407,18 @@ screen v12s7_kitchen():
 
     on "replaced" action SetVariable("previous_location", "v12s7_kitchen")
 
+    if config_debug:
+        python:
+            actions = []
+
+            if "chris" not in freeroam9 and "emily" not in freeroam9 and emily in v12s7_killList:
+                actions.append(Jump("v12s7_chris1"))
+            
+            actions.append(Show("v12s7_bow"))
+            actions.append(Show("v12s7_right_walkway_front"))
+
+        timer 0.1 action renpy.random.choice(actions)
+
 
 screen v12s7_bow():
     tag free_roam
@@ -329,6 +444,18 @@ screen v12s7_bow():
     use v12s7_minimap(location="ld_bow")
 
     on "replaced" action SetVariable("previous_location", "v12s7_bow")
+
+    if config_debug:
+        python:
+            actions = []
+
+            if "emily2" not in freeroam9:
+                actions.append(Jump("v12s7_emily2"))
+            
+            actions.append(Show("v12s7_kitchen"))
+            actions.append(Show("v12s7_foyer"))
+
+        timer 0.1 action renpy.random.choice(actions)
 
 
 screen v12s7_left_walkway_front():
@@ -356,6 +483,19 @@ screen v12s7_left_walkway_front():
 
     on "replaced" action SetVariable("previous_location", "v12s7_left_walkway_front")
 
+    if config_debug:
+        python:
+            actions = []
+
+            if "penelope" not in freeroam9:
+                actions.append(Jump("v12s7_penelope1"))
+            
+            actions.append(Show("v12s7_foyer"))
+            actions.append(Show("v12s7_rear_gallery"))
+            actions.append(Show("v12s7_left_walkway_middle"))
+
+        timer 0.1 action renpy.random.choice(actions)
+
 
 screen v12s7_foyer():
     tag free_roam
@@ -380,6 +520,18 @@ screen v12s7_foyer():
     use v12s7_minimap(location="ld_foyer")
 
     on "replaced" action SetVariable("previous_location", "v12s7_foyer")
+
+    if config_debug:
+        python:
+            actions = []
+
+            if "imre2" not in freeroam9:
+                actions.append(Jump("v12s7_imre2"))
+            
+            actions.append(Show("v12s7_left_walkway_front"))
+            actions.append(Show("v12s7_bow"))
+
+        timer 0.1 action renpy.random.choice(actions)
 
 
 # MIDDLE FLOOR
@@ -427,6 +579,29 @@ screen v12s7_left_viewpoint():
 
     on "replaced" action SetVariable("previous_location", "v12s7_left_viewpoint")
 
+    if config_debug:
+        python:
+            actions = []
+
+            if riley not in v12s7_killList and chloe not in v12s7_killList and ("riley2" in freeroam9 or not v12s7_riley_moved):
+                if "riley2" in freeroam9 and not "riley3" in freeroam9:
+                    actions.append(Jump("v12s7_riley3")) #Riley & Chloe
+                if "riley2" not in freeroam9:
+                    actions.append(Jump("v12s7_riley1")) #Riley & Chloe
+        
+            elif chloe in v12s7_killList and riley not in v12s7_killList and ("riley2" in freeroam9 or not v12s7_riley_moved):
+                if "riley3" not in freeroam9:
+                    actions.append(Jump("v12s7_riley3a")) # riley
+
+            elif chloe not in v12s7_killList:
+                if "chloe" not in freeroam9:
+                    actions.append(Jump("v12s7_chloe1")) # chloe
+            
+            actions.append(Show("v12s7_right_viewpoint"))
+            actions.append(Show("v12s7_rear_gallery"))
+
+        timer 0.1 action renpy.random.choice(actions)
+
 
 screen v12s7_right_viewpoint():
     tag free_roam
@@ -458,6 +633,19 @@ screen v12s7_right_viewpoint():
     use v12s7_minimap(location="md_right_viewpoint")
 
     on "replaced" action SetVariable("previous_location", "v12s7_right_viewpoint")
+
+    if config_debug:
+        python:
+            actions = []
+
+            if josh_europe and not "josh" in freeroam9 and josh not in v12s7_killList:
+                if "josh" not in freeroam9:
+                    actions.append(Jump("v12s7_josh1")) # josh
+            
+            actions.append(Show("v12s7_rear_gallery"))
+            actions.append(Show("v12s7_left_viewpoint"))
+
+        timer 0.1 action renpy.random.choice(actions)
 
 
 screen v12s7_rear_gallery():
@@ -499,6 +687,32 @@ screen v12s7_rear_gallery():
 
     on "replaced" action SetVariable("previous_location", "v12s7_rear_gallery")
 
+    if config_debug:
+        python:
+            actions = []
+
+            if v11_invite_sam_europe and "samantha" in freeroam9:
+                if "cameron" not in freeroam9:
+                    actions.append(Jump("v12s7_cameron2"))
+
+            if len(v12s7_killList) >= v12s7_victims:
+                actions.append(Show("confirm", message="Are you sure you want to end the free roam?", yes_action=[Hide("confirm"), Jump("v12_murder_mystery_reveal")]))
+            else:
+                actions.append(Jump("v12s7_mrlee"))
+            
+            if previous_location == "v12s7_left_walkway_front" or previous_location == "v12s7_right_walkway_front":
+                actions.append(Show(previous_location))
+            else:
+                actions.append(Show("v12s7_right_walkway_front"))
+
+            actions.append(Show("v12s7_left_viewpoint"))
+            actions.append(Show("v12s7_right_viewpoint"))
+
+            actions.append(Show("v12s7_left_gallery_back"))
+            actions.append(Show("v12s7_right_gallery_back"))
+
+        timer 0.1 action renpy.random.choice(actions)
+
 
 screen v12s7_right_gallery_back():
     tag free_roam
@@ -531,6 +745,22 @@ screen v12s7_right_gallery_back():
     use v12s7_minimap(location="md_right_gallery")
 
     on "replaced" action SetVariable("previous_location", "v12s7_right_gallery_back")
+
+    if config_debug:
+        python:
+            actions = []
+
+            if not "imre" in freeroam9:
+                actions.append(Jump("v12s7_ryan_imre1")) # Imre & Ryan
+
+            elif ryan not in v12s7_killList:
+                if "ryan" not in freeroam9:
+                    actions.append(Jump("v12s7_ryan1")) # Ryan
+            
+            actions.append(Show("v12s7_rear_gallery"))
+            actions.append(Show("v12s7_right_gallery_front"))
+
+        timer 0.1 action renpy.random.choice(actions)
 
 
 screen v12s7_right_gallery_front():
@@ -567,6 +797,9 @@ screen v12s7_right_gallery_front():
 
     on "replaced" action SetVariable("previous_location", "v12s7_right_gallery_front")
 
+    if config_debug:
+        timer 0.1 action Show(renpy.random.choice(("v12s7_front_gallery", "v12s7_right_gallery_back", "v12s7_utility")))
+
 
 screen v12s7_utility():
     tag free_roam
@@ -594,6 +827,18 @@ screen v12s7_utility():
     use v12s7_minimap(location="md_utility")
 
     on "replaced" action SetVariable("previous_location", "v12s7_utility")
+
+    if config_debug:
+        python:
+            actions = []
+
+            if "josh" in freeroam9 and josh not in v12s7_killList:
+                if "josh2" not in freeroam9:
+                    actions.append(Jump("v12s7_josh2")) # Josh
+
+            actions.append(Show("v12s7_right_gallery_front"))
+
+        timer 0.1 action renpy.random.choice(actions)
 
 
 screen v12s7_front_gallery():
@@ -641,6 +886,28 @@ screen v12s7_front_gallery():
 
     on "replaced" action SetVariable("previous_location", "v12s7_front_gallery")
 
+    if config_debug:
+        python:
+            actions = []
+
+            if v12s7_riley_moved and not "riley2" in freeroam9 and amber not in v12s7_killList and riley not in v12s7_killList:
+                actions.append(Jump("v12s7_riley2_amber")) # Riley & Amber
+
+            elif v12s7_riley_moved and not "riley2" in freeroam9 and amber in v12s7_killList and riley not in v12s7_killList: # Riley
+                if "riley2" not in freeroam9:
+                    actions.append(Jump("v12s7_riley2")) # Riley
+
+            elif amber not in v12s7_killList: # Amber
+                if "amber" not in freeroam9:
+                    actions.append(Jump("v12s7_amber1")) # Riley
+
+            actions.append(Show("v12s7_balcony_middle"))
+            actions.append(Show("v12s7_right_gallery_front"))
+        
+            actions.append(Show("v12s7_balcony_middle"))
+
+        timer 0.1 action renpy.random.choice(actions)
+
 
 screen v12s7_balcony_middle():
     tag free_roam
@@ -656,6 +923,10 @@ screen v12s7_balcony_middle():
     use v12s7_minimap(location="md_balcony")
 
     on "replaced" action SetVariable("previous_location", "v12s7_balcony_middle")
+
+    if config_debug:
+        timer 0.1 action Show(renpy.random.choice(("v12s7_balcony_left", "v12s7_balcony_right", "v12s7_front_gallery")))
+
 
 
 screen v12s7_balcony_left():
@@ -683,6 +954,18 @@ screen v12s7_balcony_left():
 
     on "replaced" action SetVariable("previous_location", "v12s7_balcony_left")
 
+    if config_debug:
+        python:
+            actions = []
+
+            if nora not in v12s7_killList:
+                if "nora" not in freeroam9:
+                    actions.append(Jump("v12s7_nora1")) # Nora
+
+            actions.append(Show("v12s7_balcony_middle"))
+
+        timer 0.1 action renpy.random.choice(actions)
+
 
 screen v12s7_balcony_right():
     tag free_roam
@@ -709,6 +992,18 @@ screen v12s7_balcony_right():
 
     on "replaced" action SetVariable("previous_location", "v12s7_balcony_right")
 
+    if config_debug:
+        python:
+            actions = []
+
+            if not (aubrey in v12s7_killList or v12s7_aubrey_moved):
+                if "aubrey" not in freeroam9:
+                    actions.append(Jump("v12s7_aubrey1")) # Aubrey
+
+            actions.append(Show("v12s7_balcony_middle"))
+
+        timer 0.1 action renpy.random.choice(actions)
+
 
 screen v12s7_left_gallery_back():
     tag free_roam
@@ -726,6 +1021,9 @@ screen v12s7_left_gallery_back():
     use v12s7_minimap(location="md_left_gallery")
 
     on "replaced" action SetVariable("previous_location", "v12s7_left_gallery_back")
+
+    if config_debug:
+        timer 0.1 action Show(renpy.random.choice(("v12s7_left_gallery_front", "v12s7_rear_gallery")))
 
 
 screen v12s7_left_gallery_front():
@@ -745,6 +1043,9 @@ screen v12s7_left_gallery_front():
     use v12s7_minimap(location="md_left_gallery")
 
     on "replaced" action SetVariable("previous_location", "v12s7_left_gallery_front")
+
+    if config_debug:
+        timer 0.1 action Show(renpy.random.choice(("v12s7_left_gallery_back", "v12s7_bathroom", "v12s7_captains_room")))
 
 
 screen v12s7_bathroom():
@@ -774,6 +1075,21 @@ screen v12s7_bathroom():
     use v12s7_minimap(location="md_bathroom")
 
     on "replaced" action SetVariable("previous_location", "v12s7_bathroom")
+
+    if config_debug:
+        python:
+            actions = []
+
+            if not (aubrey in v12s7_killList or not v12s7_aubrey_moved):
+                if "aubrey2" not in freeroam9:
+                    actions.append(Jump("v12s7_aubrey2")) # Aubrey
+                    
+                actions.append(Show("v12s7_left_gallery_front"))
+
+            else:
+                actions.append(Show("v12s7_left_gallery_front"))
+        
+        timer 0.1 action renpy.random.choice(actions)
 
 
 screen v12s7_captains_room():
@@ -813,3 +1129,19 @@ screen v12s7_captains_room():
     use v12s7_minimap(location="ud_captains_room")
 
     on "replaced" action SetVariable("previous_location", "v12s7_captains_room")
+
+    if config_debug:
+        python:
+            actions = []
+
+            if not v12s7_lindsey_moved:
+                if "lindsey" not in freeroam9:
+                    actions.append(Jump("v12s7_lindsey_charlie1")) # Lindsey & Charli
+
+            elif charli not in v12s7_killList:
+                if "charli" not in freeroam9:
+                    actions.append(Jump("v12s7_charli2")) # Charli
+
+            actions.append(Show("v12s7_left_gallery_front"))
+
+        timer 0.1 action renpy.random.choice(actions)

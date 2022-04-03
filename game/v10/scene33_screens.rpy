@@ -40,6 +40,9 @@ screen v10s33_entrance():
         hover "images/v10/scene 33/fr4tophover.webp"
         action Show("v10s33_centeraisle")
 
+    if config_debug:
+        timer 0.1 action Show(renpy.random.choice(("v10s33_cakestatue", "v10s33_toilet", "v10s33_centeraisle")))
+
 
 screen v10s33_cakestatue():
     tag free_roam
@@ -86,6 +89,24 @@ screen v10s33_cakestatue():
         hover "images/v10/scene 33/fr4bottomhover.webp"
         action Show("v10s33_entrance")
 
+    if config_debug:
+        python:
+            actions = []
+
+            if v10s33_laurenBakeSale:
+                if "lauren" not in freeroam6:
+                    actions.append(Jump("v10s33_laurenbake1"))
+
+            else:
+                if "lauren" not in freeroam6:
+                    actions.append(Jump("v10s33_laurenstatue1"))
+
+            actions.append(Show("v10s33_bench"))
+
+            actions.append(Show("v10s33_entrance"))
+
+        timer 0.1 action renpy.random.choice(actions)
+
 
 screen v10s33_bench():
     tag free_roam
@@ -119,7 +140,20 @@ screen v10s33_bench():
         idle "images/v10/scene 33/freeroamidle_vert.webp"
         hover "images/v10/scene 33/fr4bottomhover.webp"
         action Show("v10s33_cakestatue")
-        
+
+    if config_debug:
+        python:
+            actions = []
+
+            if not "emily" in freeroam6:
+                actions.append(Jump("v10s33_emily1"))
+
+            actions.append(Show("v10s33_centeraisle"))
+
+            actions.append(Show("v10s33_cakestatue"))
+
+        timer 0.1 action renpy.random.choice(actions)
+
  
 screen v10s33_toilet(): # NO
     tag free_roam
@@ -165,6 +199,24 @@ screen v10s33_toilet(): # NO
         hover "images/v10/scene 33/fr4bottomhover.webp"
         action Show("v10s33_entrance")
 
+    if config_debug:
+        python:
+            actions = []
+
+            if not "evelyn" in freeroam6:
+                actions.append(Jump("v10s33_evelyn1"))
+
+            # Toilet Ryan
+            if "ryan" in freeroam6:            
+                if not "ryan2" in freeroam6:
+                    actions.append(Jump("v10s33_toiletryan1"))
+
+            actions.append(Show("v10s33_bodypaint"))
+
+            actions.append(Show("v10s33_entrance"))
+
+        timer 0.1 action renpy.random.choice(actions)
+
 
 screen v10s33_bodypaint():
     tag free_roam
@@ -209,6 +261,22 @@ screen v10s33_bodypaint():
         hover "images/v10/scene 33/fr4bottomhover.webp"
         action Show("v10s33_toilet")
 
+    if config_debug:
+        python:
+            actions = []
+
+            if not "rose" in freeroam6:
+                actions.append(Jump("v10s33_msrose1"))
+
+            if not "lindsey" in freeroam6:
+                actions.append(Jump("v10s33_lindsey1"))
+
+            actions.append(Show("v10s33_thrift"))
+
+            actions.append(Show("v10s33_toilet"))
+
+        timer 0.1 action renpy.random.choice(actions)
+
 
 screen v10s33_thrift():
     tag free_roam
@@ -248,6 +316,21 @@ screen v10s33_thrift():
         hover "images/v10/scene 33/fr4bottomhover.webp"
         action Show("v10s33_bodypaint")
 
+    if config_debug:
+        python:
+            actions = []
+
+            actions.append(Jump("v10s33_deergirl41"))
+
+            if not "riley" in freeroam6:                
+                actions.append(Jump("v10s33_riley1"))
+
+            actions.append(Show("v10s33_stagefromleft"))
+
+            actions.append(Show("v10s33_bodypaint"))
+
+        timer 0.1 action renpy.random.choice(actions)
+
 
 screen v10s33_stagefromleft():
     tag free_roam
@@ -275,6 +358,9 @@ screen v10s33_stagefromleft():
         idle "images/v10/scene 33/freeroamidle_vert.webp"
         hover "images/v10/scene 33/fr4bottomhover.webp"
         action Show("v10s33_thrift")
+
+    if config_debug:
+        timer 0.1 action Show(renpy.random.choice(("v10s33_stage", "v10s33_thrift")))
 
 
 screen v10s33_stage():
@@ -339,6 +425,27 @@ screen v10s33_stage():
         hover "images/v10/scene 33/fr4bottomhover.webp"
         action Show("v10s33_centeraisle")
 
+    if config_debug:
+        python:
+            actions = []
+
+            if not "aubrey" in freeroam6:
+                actions.append(Jump("v10s33_aubrey1"))
+
+            if not v10s33_aubreyriley:
+                actions.append(Jump("v10s33_riley2"))
+
+            if not "rachel" in freeroam6:
+                actions.append(Jump("v10s33_deergirl11"))
+
+            actions.append(Show("v10s33_stagefromleft"))
+
+            actions.append(Show("v10s33_bagtoss"))
+
+            actions.append(Show("v10s33_centeraisle"))
+
+        timer 0.1 action renpy.random.choice(actions)
+
 
 screen v10s33_bagtoss():
     tag free_roam
@@ -386,6 +493,25 @@ screen v10s33_bagtoss():
         idle "images/v10/scene 33/freeroamidle_vert.webp"
         hover "images/v10/scene 33/fr4bottomhover.webp"
         action Show("v10s33_stage")
+
+    if config_debug:
+        python:
+            actions = []
+
+            if not "eleanor" in freeroam6:
+                actions.append(Jump("v10s33_deergirl21"))
+
+            if not "chris" in freeroam6:
+                actions.append(Jump("v10s33_chris1"))
+
+            # Nora
+            if not v10s33_toldChloe:
+                if not "nora" in freeroam6:
+                    actions.append(Jump("v10s33_nora1"))
+
+            actions.append(Show("v10s33_stage"))
+
+        timer 0.1 action renpy.random.choice(actions)
 
 
 screen v10s33_centeraisle():
@@ -462,6 +588,29 @@ screen v10s33_centeraisle():
         hover "images/v10/scene 33/fr4bottomhover.webp"
         action Show("v10s33_entrance")
 
+    if config_debug:
+        python:
+            actions = []
+
+            if not v10s33_toldChloe:
+                if not "chloe" in freeroam6:
+                    actions.append(Jump("v10s33_chloe1"))
+
+            if not "karen" in freeroam6:
+                actions.append(Jump("v10s33_deergirl31"))
+            
+            if not "ryan" in freeroam6:
+                if not "ryan" in freeroam6:
+                    actions.append(Jump("v10s33_ryan1"))
+
+            actions.append(Show("v10s33_stage"))
+
+            actions.append(Show("v10s33_mudwrestling"))
+
+            actions.append(Show("v10s33_entrance"))
+
+        timer 0.1 action renpy.random.choice(actions)
+
 
 screen v10s33_mudwrestling():
     tag free_roam
@@ -498,3 +647,19 @@ screen v10s33_mudwrestling():
         idle "images/v10/scene 33/freeroamidle_vert.webp"
         hover "images/v10/scene 33/fr4bottomhover.webp"
         action Show("v10s33_centeraisle")
+
+    if config_debug:
+        python:
+            actions = []
+
+            if not "amber" in freeroam6:
+                actions.append(Jump("v10s33_amber1"))
+        
+            if not "autumn" in freeroam6:
+                actions.append(Jump("v10s33_autumn1"))
+            else:
+                actions.append(Show("confirm", message="Are you sure you want to end the free roam?", yes_action=[Hide("confirm"), Jump("v10_autumn_announcement")]))
+
+            actions.append(Show("v10s33_centeraisle"))
+
+        timer 0.1 action renpy.random.choice(actions)
