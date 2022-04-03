@@ -208,9 +208,6 @@ screen simplr_messenger(contact):
 
     default image_path = "images/phone/simplr/app-assets/"
 
-    python:
-        yadj.value = yadjValue
-
     use base_phone:
         frame:
             background image_path + "conversation-background.webp"
@@ -231,7 +228,7 @@ screen simplr_messenger(contact):
                 text contact.name style "nametext" yalign 0.5
 
             viewport:
-                yadjustment yadj
+                yadjustment inf_adj
                 mousewheel True
                 pos (11, 157)
                 xysize (416, 686)

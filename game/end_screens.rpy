@@ -3,7 +3,6 @@ screen save_now(next_version):
     modal True
     style_prefix "save_now"
 
-    default music_file = "music/horror2.mp3"
     default image_path = "gui/end_screen/"
 
     add image_path + "end_screen_background.webp"
@@ -13,10 +12,10 @@ screen save_now(next_version):
         spacing 25
 
         text "WARNING" color "#FF0000" xalign 0.5 size 105
-        null height 250
+        null height 100
         text "END OF CURRENT VERSION" xalign 0.5
         text "SAVE HERE TO KEEP PROGRESS" xalign 0.5
-        null height 250
+        null height 50
         text "DO NOT CLICK CONTINUE UNTIL YOU HAVE SAVED!" xalign 0.5 size 50
             
         imagebutton:

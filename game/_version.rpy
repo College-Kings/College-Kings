@@ -1,5 +1,6 @@
 python early:
     def get_short_git_sha():
+        import os
         import subprocess
 
         VERSION_DIR = os.path.join(config.basedir, "game", "version.txt")
@@ -23,8 +24,12 @@ python early:
 
 
     def get_version(major, minor, patch, development=False):
+        act_1 = 7
+
+        act = "DEVELOPMENT" if development else max(-((major - act_1) // -3) + 1, 1)    
+
         version = "{}.{}.{}".format(major, minor, patch)
         if config.enable_steam:
             version += "s"
 
-        return "{} (SHA: {})".format(version, get_short_git_sha())
+        return "{} (Act: {}) (SHA: {})".format(version, act, get_short_git_sha())

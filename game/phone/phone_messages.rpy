@@ -212,6 +212,11 @@ screen messenger_home():
                             if contact.notification:
                                 add "contact_notification" align (1.0, 0.5) xoffset -25
 
+    if config_debug:
+        for contact in messenger.contacts:
+            if contact.notification:
+                timer 0.1 action [Function(renpy.retain_after_load), Show("messager", contact=contact)]
+
 
 screen messager(contact=None):
     tag phone_tag
@@ -220,7 +225,6 @@ screen messager(contact=None):
     default image_path = "images/phone/messenger/app-assets/"
 
     python:
-        yadj.value = yadjValue
         contact.notification = False
 
     use base_phone:
@@ -243,7 +247,7 @@ screen messager(contact=None):
                 text contact.name style "nametext" yalign 0.5
 
             viewport:
-                yadjustment yadj
+                yadjustment inf_adj
                 mousewheel True
                 pos (11, 157)
                 xysize (416, 686)
@@ -299,3 +303,9 @@ screen messager(contact=None):
 
     if kiwii_firstTime:
         on "show" action Show("kiwiiPopup")
+
+    if config_debug:
+        if contact.replies:
+            timer 0.1 repeat True action Show("message_reply", contact=contact)
+        else:
+            timer 0.1 repeat True action [Hide("message_reply"), Show("phone")]

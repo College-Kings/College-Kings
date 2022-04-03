@@ -5,8 +5,7 @@ screen alert_template(message):
 
     python:
         message = message.upper()
-        message = message.replace("{B}", "{b}")
-        message = message.replace("{/B}", "{/b}")
+        message = message.replace("{B}", "{b}").replace("{/B}", "{/b}")
 
     frame:
         align (0.5, 0.5)
@@ -93,6 +92,8 @@ screen real_life_mode():
 
             text "DISABLE" align (0.5, 0.5)
 
+    if config_debug:
+        timer 0.1 action [SetVariable("realmode", False), SetVariable("config.rollback_enabled", True), SetVariable("showkct", True), Show("phone_icon"), Jump("v1start")]
 
 screen fantasyOverlay():
     add "images/fantasyoverlay.webp"
@@ -240,19 +241,20 @@ screen whats_new(dialogue):
     add "darker_80"
 
     frame:
-        background "gui/whats-new/background.webp"
-        xysize (363, 758)
+        background Frame("gui/whats-new/background.webp")
+        xysize (500, 758)
         align (0.5, 0.5)
         padding (20, 20)
 
         viewport:
+            mousewheel True
+            draggable True
             align (0.5, 0.5)
 
             vbox:
-                xsize 323
-                
-                text "What's New:" xalign 0.5
-                text dialogue
+                spacing 10
+                text "What's New:" xalign 0.5 bold True
+                text dialogue size 18
 
     button action Hide("whats_new")
 
@@ -307,3 +309,14 @@ screen sex_overlay(continue_label):
     on "hide" action Show("phone_icon")
     on "replace" action Hide("phone_icon")
     on "replaced" action Show("phone_icon")
+
+    if config_debug:
+        timer 0.1 repeat True action SetField(config, "skipping", "slow")
+
+
+screen timerBar(seconds=3):
+    bar value AnimatedValue(0, seconds, seconds, seconds) at alpha_dissolve
+    
+
+screen fantasy_overlay():
+    add "images/common/fantasy-overlay.webp"

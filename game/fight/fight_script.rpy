@@ -76,9 +76,9 @@ init python:
                 if fight.move_list[-1][fight.player.name].count(move.name) != 2:
                     return 1.0
 
-                if self.health / self.max_health <= 0.25:
+                if self.health / float(self.max_health) <= 0.25: ### decimals!
                     return 0.7
-                elif 0.25 < self.health / self.max_health <= 0.5:
+                elif 0.25 < self.health / float(self.max_health) <= 0.5:
                     return 0.4
                 else:
                     return 0.1
@@ -94,9 +94,9 @@ init python:
                 if not isinstance(fight.move_list[-5][fight.player.name][-1], Turtle) and not isinstance(fight.move_list[-3][fight.player.name][-1], Turtle):
                     return 1.0
 
-                if self.health / self.max_health <= 0.25:
+                if self.health / float(self.max_health) <= 0.25:
                     return 1.9
-                elif 0.25 < self.health / self.max_health <= 0.5:
+                elif 0.25 < self.health / float(self.max_health) <= 0.5:
                     return 1.6
                 else:
                     return 1.3
@@ -112,9 +112,9 @@ init python:
                 if fight.move_list[-4][self.name] != fight.move_list[-2][self.name]:
                     return 0
 
-                if opponent.health / opponent.max_health <= 0.25:
+                if fight.opponent.fighter.health / float(fight.opponent.fighter.max_health) <= 0.25:
                     return 0.9
-                elif 0.25 < opponent.health / opponent.max_health <= 0.5:
+                elif 0.25 < fight.opponent.fighter.health / float(fight.opponent.fighter.max_health) <= 0.5:
                     return 0.6
                 else:
                     return 0.3
@@ -126,7 +126,8 @@ init python:
             if self.stance_bonus == "Body Hook":
                 return 1.2
 
-            if self.stance_bonus == "Kick" and self.stamina == 6:
+            # Stance Bonus: Kick
+            if self.stance_bonus == "Kick" and self.stamina == 5:
                 return 1.2
 
             return 1.0
@@ -193,9 +194,9 @@ label fight_start_turn(fight, target, attacker):
     if attacker == fight.opponent.fighter:
         # Overwhelmed
         if len(fight.move_list[-1][target.name]) >= 4:
-            if opponent.health / opponent.max_health <= 0.25:
+            if attacker.health / float(attacker.max_health) <= 0.25:
                 $ overwhelmed_multiplier = 1.9
-            elif 0.25 < opponent.health / opponent.max_health <= 0.5:
+            elif 0.25 < attacker.health / float(attacker.max_health) <= 0.5:
                 $ overwhelmed_multiplier = 1.6
             else:
                 $ overwhelmed_multiplier = 1.3
@@ -248,14 +249,15 @@ label fight_attack_turn(fight, target, attacker, move=None):
     scene expression move.images["start_image"]
     pause 1.0
 
-    # Player attacks
-    # Opponent Approachs
-    $ primed_multiplier = target.get_primed_muliplier(fight, move)
+        # Player attacks
+        # Opponent Approachs
+    $ primed_multiplier = target.get_primed_muliplier(fight, move) 
 
     $ reckless_multiplier = target.get_reckless_multiplier(fight)
 
-    # Calculating
-    $ attacker.health -= round(move.damage * target.get_calculating_muliplier(fight))
+    if attacker == fight.player.fighter: 
+        # Calculating
+        $ attacker.health -= round(move.damage * target.get_calculating_muliplier(fight))
 
     # Stance Bonus
     $ stance_multiplier = target.get_stance_multiplier(fight)

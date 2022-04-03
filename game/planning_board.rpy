@@ -202,6 +202,18 @@ screen planning_board(planning_board):
     
     on "show" action Show("planning_board_help", message="Please select an approach")
 
+    if config_debug:
+        $ approach = renpy.random.choice(planning_board.approaches.values())
+        timer 0.1 action [SetField(planning_board, "approach", approach, None), Show("planning_board_help", message="Please select optional tasks")]
+
+        if planning_board.approach:
+            $ subtask = renpy.random.choice(filter(lambda task: isinstance(task, list), approach.tasks)[0])
+            timer 0.1 action [SetField(planning_board, "selected_task", subtask), Show("planning_board_confirm_tasks", None, planning_board)]
+
+        if planning_board.selected_task:
+            timer 0.1 action [Hide("planning_board_bottom"), Hide("planning_board_task_desc"), Hide("planning_board_blank"), Return()]
+
+
 
 screen planning_board_approach_desc(approach):
     zorder 100

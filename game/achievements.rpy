@@ -193,31 +193,3 @@ init python:
         Achievement("say_chirp", "Take a photo with the bird")
         Achievement("grand_theft_chloe", "Steal the diary and all the money")
         Achievement("clean_it_up", "Be a positive influence on Amber and Samantha")
-    
-    #v15
-    if renpy.loadable("v15/scene1.rpy"):
-        Achievement("horn_dog", "Peek on Autumn") #s4
-        Achievement("da_ba_dee_da_ba_dai", "I'm Blue") #s4
-        Achievement("counter_intelligence", "Lindsey was expecting that strategy") #s12
-        Achievement("mmmm_donut", "Eat the donut") #s13
-        Achievement("honey_bear", "Lick Ms. Rose's pancakes") #s15
-        Achievement("pumpkin_season", "You really like that pumpkin, huh?") #s18
-        Achievement("childhood_memories", "Surprise the birthday girl") #s18
-        Achievement("taskmaster", "Clear the checklist") #s18
-        Achievement("too_much_information", "Check your meeting notes often") #s21
-        Achievement("emotional_blackmail", "Threaten Ms. Rose") #s21
-        Achievement("karen", "Where is your manager?!") #s24
-        Achievement("polycurious", "Monogamy is overrated") #s26
-        Achievement("blue_cheese_and_sambuca", "Worst wedding catering ever") #s33
-        Achievement("what_goes_around", "Aubrey tastes her own medicine at the wedding") #s33
-        Achievement("just_one_more_thing", "Find all the leads and crack the case") #s46
-        
-    #v16
-    if renpy.loadable("v16/scene1.rpy"):
-        Achievement("the_answer_to_everything", "Nice try, you were close") #s10
-        Achievement("extra_extra", "Apply for the Newspaper Squad") #s11
-        Achievement("must_resist_temptation", "Stay focused at the park") #s14
-        Achievement("just_curious_about_you", "Tell Amber you looked through all her stuff") #s22
-        Achievement("perfect_first_date", "") #s40
-        Achievement("threes_a_crowd", "") #s41
-        Achievement("caught_red_handed", "") #s55

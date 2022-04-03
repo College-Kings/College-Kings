@@ -1,4 +1,4 @@
-screen bugTesting_Overlay():
+screen bug_testing_overlay():
     zorder 1000
     
     if config.developer:
@@ -6,4 +6,3 @@ screen bugTesting_Overlay():
         vbox:
             text "[fileLine!q]" xpos 10 color "#0f0"
             text "Stack Depth: {}".format(renpy.call_stack_depth())
-            

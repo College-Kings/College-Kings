@@ -36,7 +36,7 @@ init python:
 label v1start:
 label starta: #for compatibility only
     if config.developer:
-        show screen bugTesting_Overlay
+        show screen bug_testing_overlay
 
     show screen fantasyOverlay
 

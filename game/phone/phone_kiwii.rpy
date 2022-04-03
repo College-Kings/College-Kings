@@ -24,10 +24,10 @@ init python:
 
             self.liked = False
 
-            self.sentComments = []
-            self.pendingComments = []
+            self.sent_comments = []
+            self.pending_comments = []
 
-            kiwiiPosts.append(self)
+            kiwii_posts.append(self)
 
             kiwii.unlock()
 
@@ -41,7 +41,7 @@ init python:
 
         @property
         def replies(self):
-            try: return self.sentComments[-1].replies
+            try: return self.sent_comments[-1].replies
             except (AttributeError, IndexError): return []
 
         def toggleLike(self):
@@ -50,15 +50,14 @@ init python:
             if self.liked: self.numberLikes += 1
             else: self.numberLikes -= 1
             
-        def new_comment(self, user, message, numberLikes=renpy.random.randint(250, 500), mentions=None, force_send=False):
+        def new_comment(self, user, message, numberLikes=renpy.random.randint(250, 500), mentions=None):
             comment = KiwiiComment(user, message, numberLikes, mentions)
             
             # Add message to queue
-            if not force_send:
-                self.pendingComments.append(comment)
+            if self.replies:
+                self.pending_comments.append(comment)
             else:
-                self.pendingComments = []
-                self.sentComments.append(comment)
+                self.sent_comments.append(comment)
             
             kiwii.notification = True
             return comment
@@ -68,21 +67,21 @@ init python:
             
             # Append reply to last sent message
             try:
-                if self.pendingComments:
-                    self.pendingComments[-1].replies.append(reply)
+                if self.pending_comments:
+                    self.pending_comments[-1].replies.append(reply)
                 else:
-                    self.sentComments[-1].replies.append(reply)
+                    self.sent_comments[-1].replies.append(reply)
             except Exception as e:
-                message = self.newComment(mc, "", force_send=True)
+                message = self.newComment(mc, "")
                 message.replies.append(reply)
 
             kiwii.notification = True
             return reply
 
         def selected_reply(self, reply):
-            self.newComment(mc, reply.message, reply.numberLikes, reply.mentions, force_send=True)
-            self.sentComments[-1].reply = reply
-            self.sentComments[-1].replies = []
+            self.sent_comments.append(KiwiiComment(mc, reply.message, reply.numberLikes, reply.mentions))
+            self.sent_comments[-1].reply = reply
+            self.sent_comments[-1].replies = []
 
             # Run reply function
             try:
@@ -93,7 +92,7 @@ init python:
             # Send next queued message(s)
             try:
                 while not self.replies:
-                    self.sentComments.append(self.pendingComments.pop(0))
+                    self.sent_comments.append(self.pending_comments.pop(0))
             except IndexError: pass
 
         def get_message(self):
@@ -106,12 +105,12 @@ init python:
             return message
 
         def remove_post(self):
-            kiwiiPosts.remove(self)
+            kiwii_posts.remove(self)
             del self
 
         # Backwards compatibility.
-        def newComment(self, user, message, numberLikes=renpy.random.randint(250, 500), mentions=None, force_send=False):
-            return self.new_comment(user, message, numberLikes, mentions, force_send)
+        def newComment(self, user, message, numberLikes=renpy.random.randint(250, 500), mentions=None):
+            return self.new_comment(user, message, numberLikes, mentions)
 
         def addReply(self, message, func=None, numberLikes=renpy.random.randint(250, 500), mentions=None, disabled=False):
             return self.add_reply(message, func, numberLikes, mentions, disabled)
@@ -162,21 +161,17 @@ init python:
             self.disabled = disabled
 
     def get_total_likes():
-        return sum(post.numberLikes for post in kiwiiPosts if post.user == mc) + sum(
+        return sum(post.numberLikes for post in kiwii_posts if post.user == mc) + sum(
             comment.numberLikes
-            for post in kiwiiPosts
-            for comment in post.sentComments
+            for post in kiwii_posts
+            for comment in post.sent_comments
             if comment.user == mc
         )
 
     def find_kiwii_post(image=None, message=None):
-        for post in kiwiiPosts:
+        for post in kiwii_posts:
             if post.image == image: return post
             if post.message == message: return post
-
-
-default kiwiiPosts = []
-default liked_kiwiPosts = []
 
 
 screen kiwii_base():
@@ -209,7 +204,7 @@ screen kiwii_base():
                 imagebutton:
                     idle image_path + "liked-button-idle.webp"
                     hover image_path + "liked-button-hover.webp"
-                    action Show("kiwii_home", posts=filter(lambda post: post.liked, kiwiiPosts))
+                    action Show("kiwii_home", posts=filter(lambda post: post.liked, kiwii_posts))
                     yalign 0.5
 
                 imagebutton:
@@ -273,7 +268,7 @@ screen kiwii_preferences():
                     outlines [ (absolute(0), "#000", absolute(0), absolute(0)) ]
 
 
-screen kiwii_home(posts=kiwiiPosts):
+screen kiwii_home(posts=kiwii_posts):
     tag phone_tag
 
     default image_path = "images/phone/kiwii/app-assets/"
@@ -350,6 +345,18 @@ screen kiwii_home(posts=kiwiiPosts):
                                 action Show("kiwiiPost", post=post)
                                 xalign 1.0
 
+    if config_debug:
+        for post in reversed(posts):
+            if post.replies:
+                timer 0.1 action Show("kiwiiPost", post=post)
+        
+        if not any(post.replies for post in reversed(posts)):
+            timer 0.1:
+                if renpy.get_screen("free_roam"):
+                    action [Hide("tutorial"), Hide("phone"), Hide("message_reply")]
+                else:
+                    action [Hide("tutorial"), Hide("message_reply"), Return()]
+
 
 screen kiwiiPost(post):
     tag phone_tag
@@ -375,7 +382,7 @@ screen kiwiiPost(post):
 
                 null
 
-                for comment in post.sentComments:
+                for comment in post.sent_comments:
                     if comment.message.strip():
                         vbox:
                             spacing 5
@@ -413,6 +420,17 @@ screen kiwiiPost(post):
                     else:
                         style "kiwii_reply"
                         action Function(post.selectedReply, reply)
+
+    if config_debug:
+        if post.replies:
+            $ reply = renpy.random.choice(post.replies)
+            timer 0.1 repeat True action Function(post.selectedReply, reply)
+        else:
+            timer 0.1:
+                if renpy.get_screen("free_roam"):
+                    action [Hide("tutorial"), Hide("phone"), Hide("message_reply")]
+                else:
+                    action [Hide("tutorial"), Hide("message_reply"), Return()]
 
 
 screen kiwii_image(img):

@@ -19,6 +19,12 @@ screen message_reply(contact=None):
                 elif isinstance(reply, ImgReply):
                     add Transform(reply.image, zoom=0.15)
 
+    if config_debug:
+        if contact.replies:
+            timer 0.1 action [Hide("message_reply"), Function(contact.selected_reply, renpy.random.choice(contact.replies))]
+        else:
+            timer 0.1 action Hide("message_reply")
+
 
 screen phone_image(img=None):
     modal True

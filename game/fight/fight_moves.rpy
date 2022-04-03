@@ -119,7 +119,7 @@ init python:
             self.stamina_cost = 5
             self.ideal_stance = FightStance.SOLID
             self.end_stance = FightStance.FORWARD
-            self.effect = "+20% Damage if used with exactly 6 Stamina left"
+            self.effect = "+20% Damage if used with exactly 5 Stamina left"
 
     
     class Headbutt(SpecialMove):

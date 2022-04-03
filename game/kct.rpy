@@ -19,11 +19,16 @@ init python:
         old_kct = kct
 
         # Sort KCT values
-        kctDict = {"popular": bro * troublemaker / boyfriend, "confident": boyfriend * troublemaker / bro, "loyal": bro * boyfriend / troublemaker}
-        setattr(store, "sortedKCT", [k for k, v in sorted(kctDict.items(), key=lambda item: item[1], reverse=True)])
+        kctDict = {
+            "popular":bro * troublemaker / float(boyfriend),
+            "confident": boyfriend * kct_troublemaker / float(bro),
+            "loyal": bro * boyfriend / float(troublemaker)
+        }
+
+        store.sortedKCT = [k for k, v in sorted(kctDict.items(), key=lambda item: item[1], reverse=True)]
         
         # Update KCT
-        setattr(store, "kct", sortedKCT[0])
+        store.kct = sortedKCT[0]
 
         # Notify user on KCT change
         if sortedKCT[0] != old_kct:
@@ -65,3 +70,6 @@ screen kct_popup(required_kct=None):
         textbutton "OK":
             align (0.5, 1.0)
             action Return()
+
+    if config_debug:
+        timer 0.1 action Return()

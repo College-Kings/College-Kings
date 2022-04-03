@@ -15,6 +15,7 @@ init python:
             self.detective = None
             self.relationships = set()
             self.girlfriends = set()
+            self.frat = None
 
         @property
         def name(self):

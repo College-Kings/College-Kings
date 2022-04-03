@@ -1068,8 +1068,8 @@ label after_load:
     hide screen simplr_reply
 
     if config.developer:
-        show screen bugTesting_Overlay
+        show screen bug_testing_overlay
     else:
-        hide screen bugTesting_Overlay
+        hide screen bug_testing_overlay
 
     return

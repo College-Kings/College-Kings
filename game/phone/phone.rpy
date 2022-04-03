@@ -146,4 +146,15 @@ screen phone():
                         action [Function(renpy.retain_after_load), Show(app.home_screen)]
                             
                     text app.name style "application_name" xalign 0.5
-        
+
+    if config_debug:
+        for app in phone.applications:
+            if app.notification:
+                timer 0.1 action [Function(renpy.retain_after_load), Show(app.home_screen)]
+
+        if not any(app.notification for app in phone.applications):
+            timer 0.1:
+                if renpy.get_screen("free_roam"):
+                    action [Hide("tutorial"), Hide("phone"), Hide("message_reply")]
+                else:
+                    action [Hide("tutorial"), Hide("message_reply"), Return()]

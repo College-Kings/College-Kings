@@ -49,7 +49,7 @@ screen fight_overview_info(competitor, profile_picture, is_player=False):
 
         vbox:
             align (0.5, 0.5)
-            spacing 10
+            spacing 25
 
             hbox:
                 spacing 50
@@ -129,7 +129,7 @@ screen fight_overview_info(competitor, profile_picture, is_player=False):
 
         fixed:
             align (0.5, 1.0)
-            xysize (700, 125)
+            xysize (700, 100)
 
             if tooltip and is_player:
                 text "[tooltip]" align (0.5, 0.5)
@@ -222,8 +222,14 @@ screen fight_overview(fight, title):
                 Jump(fight.end_label)]
             yalign 0.5
 
+    if config_debug:
+        timer 0.1 action [SetField(opponent, "max_health", int(opponent.max_health)),
+                SetField(opponent, "max_stamina", int(opponent.max_stamina)),
+                Call("fight_start_turn", fight, opponent, player)]
+
 
 screen fight_player_turn(fight, player, opponent):
+    tag fight_screen
     style_prefix "fight_turn"
 
     default image_path = "images/fight/player-turn/"
@@ -302,7 +308,7 @@ screen fight_player_turn(fight, player, opponent):
                     idle_background image_path + "actions-idle.webp"
                     hover_background image_path + "actions-hover.webp"
                     selected_background image_path + "actions-hover.webp"
-                insensitive_background "#a7a7a7"
+                insensitive_background image_path + "actions-insensitive.webp"
                 sensitive (player.stamina >= move.stamina_cost)
                 selected (selected_move == move)
                 if selected_move == move:
@@ -364,6 +370,10 @@ screen fight_player_turn(fight, player, opponent):
                     add image_path + "stamina-empty.webp"
                 else:
                     add image_path + "stamina-filled.webp"
+
+    if config_debug:
+        timer 0.1 action [Function(player.set_stance_bonus, renpy.random.choice(player.base_attacks + player.turn_moves)), Call("fight_attack_turn", fight, opponent, player, move)]
+
 
 style fight_turn_text is text:
     size 26
@@ -477,13 +487,14 @@ screen action_info(fight, player, opponent, move):
     style_prefix "fight_turn"
 
     default image_path = "images/fight/player-turn/"
+    default player_max_stamina = player.stamina
 
     vbox:
         align (0.5, 1.0)
         yoffset -250
         spacing 35
 
-        if move.ideal_stance == player.stance:
+        if move.ideal_stance == player.stance or move.ideal_stance is None:
             frame:
                 xysize (428, 132)
                 background image_path + "action-stance-info.webp"
@@ -512,7 +523,7 @@ screen action_info(fight, player, opponent, move):
                         align (1.0, 0.5)
                         spacing 2
 
-                        for i in range(1, player.max_stamina + 1):
+                        for i in range(1, player_max_stamina + 1):
                             if i > move.stamina_cost:
                                 add Transform(image_path + "stamina-empty.webp", zoom=0.4)
                             else:

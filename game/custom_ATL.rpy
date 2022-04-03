@@ -9,3 +9,4 @@ transform achievementShow:
     linear 0.5 xpos 0 ypos 0
     2.0
     linear 0.5 xpos 0 ypos -200
+    
