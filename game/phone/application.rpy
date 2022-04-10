@@ -18,7 +18,7 @@ init python:
     
     class Messenger(Application):
         def __init__(self):
-            Application.__init__(self, "Messenger")
+            super(Messenger, self).__init__("Messenger")
 
         @property
         def notification(self):
@@ -31,7 +31,7 @@ init python:
 
     class Simplr(Application):
         def __init__(self):
-            Application.__init__(self, "Simplr")
+            super(Simplr, self).__init__("Simplr")
 
             self.pending_contacts = []
 
