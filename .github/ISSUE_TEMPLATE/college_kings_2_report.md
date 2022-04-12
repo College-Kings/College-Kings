@@ -1,8 +1,8 @@
 ---
 name: College Kings 2 Report
 about: Create a report for the College Kings 2 platform
-title: '[CK2] '
-labels: 'platform: CK2'
+title: ''
+labels: 'platform: ck2'
 
 ---
 

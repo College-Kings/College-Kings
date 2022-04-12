@@ -1,8 +1,8 @@
 ---
-name: College Kings 1 Report
-about: Create a report for the College Kings 1 platform
+name: Launcher Report
+about: Create a report for the Launcher platform
 title: ''
-labels: 'platform: ck1'
+labels: 'platform: launcher'
 
 ---
 
