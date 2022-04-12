@@ -10,7 +10,7 @@ labels: 'platform: launcher'
 A clear and concise description of what the bug is.
 
 **To Reproduce**
-Steps to reproduce the behaviour or save file:
+Steps to reproduce the behaviour or save the file:
 1. 
 2. 
 3. 
