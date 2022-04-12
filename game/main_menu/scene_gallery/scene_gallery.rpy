@@ -99,34 +99,6 @@ init python:
     if renpy.loadable("v14/scene1.rpy"):
         SceneGallery("Why not both?", "images/v14/scene 1/v14s01_4.webp", "v14s01") # 1, Riley Aubrey, xx
         SceneGallery("Satin-ly pleased", "images/v14/scene 3d/v14s03d_5.webp", "v14s03c_sg") # 3d, Satin, xx
-        SceneGallery("Right here, right now", "images/v14/scene 21a/v14chlcgTPP.webp", "v14s21a") # 21a, Chloe, xx
-        SceneGallery("Fuck while fucked up", "images/v14/scene 25a/v14s25a_17.webp", "v14s25a") # 25a, Amber, xx
-        SceneGallery("Lagoon of love", "images/v14/scene 36/v14jenmo2Start.webp", "v14s36_sg") # 36, Jenny, xx
-        SceneGallery("Good Dr. Lauren", "images/v14/scene 46a/v14s46a_12.webp", "v14s46a_sga") # 46a, Lauren good (scope is Lauren GIRLFRIEND)
-        SceneGallery("Evil Dr. Lauren", "images/v14/scene 46a/v14s46a_27c.webp", "v14s46a_sgb") # 46a, Lauren bad
-        SceneGallery("Messy with Samantha", "images/v14/scene 53a/v14s53a_16.webp", "v14s53_sg") # 53a, Samantha, xx
-
-    ## v15
-    if renpy.loadable("v15/scene1.rpy"):
-        SceneGallery("Angry with Ms. Rose", "images/v15/scene 15/v15s15_7f.webp", "v15s15sg") # 15, Ms. Rose
-        SceneGallery("The List (Amber)", "images/v15/scene 18a/v15s18aamber_9e.webp", "v15s18a_ambersg") # 18a, Amber
-        SceneGallery("The List (Aubrey)", "images/v15/scene 18c/v15s18c_imau_14.webp", "v15s18c_aubreysg") # 18c, Aubrey
-        SceneGallery("The List (Autumn)", "images/v15/scene 18c/v15autkiss.webp", "v15s18c_autumnsg") # 18c, Autumn
-        SceneGallery("The List (Penelope)", "images/v15/scene 18c/v15s18c_chpe_11.webp", "v15s18c_penelopesg") # 18c, Penelope
-        SceneGallery("The List (Riley)", "images/v15/scene 18a/v15s18ariley_14.webp", "v15s18a_rileysg") # 18a, Riley
-        SceneGallery("Birthday treat", "images/v15/scene 18e/v15s18eend_6.webp", "v15s18e_sg") # 18e, Lauren
-        SceneGallery("Late night sexting", "images/v15/scene 29/v15s29_emily_lingerie.webp", "v15s29_emilysg") # 18e, Lauren
-        SceneGallery("Fun at the wedding", "images/v15/scene 33/v15s33_46b.webp", "v15s35_naomisg") # 33, Naomi
-        SceneGallery("Choosing Nora", "images/v15/scene 48a/v15noror2Start.webp", "v15s48a_norasg") # 48, Nora
-
-    if renpy.loadable("v16/scene1.rpy"):
-        SceneGallery("As yet untitled", "images/v16/scene 3a/v16s3a_1a.webp", "v16s3a") # 3a, Riley
-        SceneGallery("As yet untitled", "images/v16/scene 10/v16s10_2g.webp", "v16s10_sg") # 10, Lauren
-        SceneGallery("As yet untitled", "images/v16/scene 25/v16s25_11h.webp", "v16s25_sg") # 25, Emily
-        SceneGallery("As yet untitled", "images/3 hits.webp", "") # 48, Chloe
-        SceneGallery("As yet untitled", "images/3 hits.webp", "") # 63a, Nora
-        SceneGallery("As yet untitled", "images/3 hits.webp", "") # 63c, Lindsey
-        SceneGallery("As yet untitled", "images/3 hits.webp", "") # 71a, Penelope
 
 screen scene_gallery():
     tag menu
