@@ -147,17 +147,14 @@ label v13s40:
 
     u "*Chuckles* Shhh."
 
-    $ sex_overlay_options = [
-        [],
-        [("Neck", "v13s40_neck"), ("Chest", "v13s40_chest"), ("Back", "v13s40_back"), ("Shoulders", "v13s40_shoulder")]
-    ]
+    $ sex_overlay_options = [("Neck", "v13s40_neck"), ("Chest", "v13s40_chest"), ("Back", "v13s40_back"), ("Shoulders", "v13s40_shoulder")]
 
     if mc.has_item(honey):
-        $ sex_overlay_options[0].append((honey.name, "v13s40_honey"))
+        $ sex_overlay_options.append((honey.name, "v13s40_honey"))
     if mc.has_item(spankers):
-        $ sex_overlay_options[0].append((spankers.name, "v13s40_spanker"))
+        $ sex_overlay_options.append((spankers.name, "v13s40_spanker"))
     if mc.has_item(feather):
-        $ sex_overlay_options[0].append((feather.name, "v13s40_feather"))
+        $ sex_overlay_options.append((feather.name, "v13s40_feather"))
 
     call screen sex_overlay("v13s40_end_free_roam")
 

@@ -18,7 +18,7 @@ init python:
             return file_name + "-notification" + extention
 
 
-    phone = Phone("phone-icon.webp")
+default phone = Phone("phone-icon.webp")
 
 
 screen phone_icon():

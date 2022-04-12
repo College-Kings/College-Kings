@@ -28,7 +28,7 @@ init python:
 
         Attributes:
             name (str): The display name for the character
-            profile_picture (str): The file name for the characters profile picture, located in "images/nonplayable_characters/profile_pictures/"
+            profile_picture (str): The file name for the characters profile picture, located in "images/characters/"
         """
 
         characters = {}

@@ -270,7 +270,7 @@ screen messager(contact=None):
                                 background "message_background"
 
                                 imagebutton:
-                                    idle Transform(message.image, ysize=216)
+                                    idle Transform(message.image, zoom=0.15)
                                     action Show("phone_image", img=message.image)
 
                             elif isinstance(message, Reply):
@@ -284,7 +284,7 @@ screen messager(contact=None):
                                 xalign 1.0
 
                                 imagebutton:
-                                    idle Transform(message.image, ysize=216)
+                                    idle Transform(message.image, zoom=0.15)
                                     action Show("phone_image", img=message.image)
 
                     null height 75
@@ -302,7 +302,7 @@ screen messager(contact=None):
                         align (0.5, 0.5)
 
     if kiwii_firstTime:
-        on "show" action Show("kiwiiPopup")
+        timer 0.01 action Show("kiwiiPopup")
 
     if config_debug:
         if contact.replies:

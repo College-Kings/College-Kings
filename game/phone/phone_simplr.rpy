@@ -21,7 +21,8 @@ init python:
             self.sent_messages = []
             self.pending_messages = []
 
-            simplr_app.unlock()
+            if simplr_app not in phone.applications:
+                phone.applications.append(simplr_app)
 
         @property
         def notification(self):
@@ -251,7 +252,7 @@ screen simplr_messenger(contact):
                                 background "message_background"
 
                                 imagebutton:
-                                    idle Transform(message.image, ysize=216)
+                                    idle Transform(message.image, zoom=0.15)
                                     action Show("phone_image", img=message.image)
 
                             elif isinstance(message, Reply):
@@ -263,7 +264,7 @@ screen simplr_messenger(contact):
                                 background "message_background"
 
                                 imagebutton:
-                                    idle Transform(message.image, ysize=216)
+                                    idle Transform(message.image, zoom=0.15)
                                     action Show("phone_image", img=message.image)
 
             if contact.replies:

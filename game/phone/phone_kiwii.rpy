@@ -29,7 +29,8 @@ init python:
 
             kiwiiPosts.append(self)
 
-            kiwii.unlock()
+            if kiwii not in phone.applications:
+                phone.applications.append(kiwii)
 
         @property
         def username(self):

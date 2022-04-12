@@ -1,8 +1,8 @@
 ---
 name: College Kings 2 Report
 about: Create a report for the College Kings 2 platform
-title: '[CK2] '
-labels: 'platform: CK2'
+title: ''
+labels: 'platform: ck2'
 
 ---
 
@@ -10,7 +10,7 @@ labels: 'platform: CK2'
 A clear and concise description of what the bug is.
 
 **To Reproduce**
-Steps to reproduce the behaviour or save file:
+Steps to reproduce the behaviour or save the file:
 1. 
 2. 
 3. 
