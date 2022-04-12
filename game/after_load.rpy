@@ -795,6 +795,22 @@ label after_load:
 
         # Simplr Contacts
         try:
+            simplr_app.contacts = simplr_contacts
+            del simpler_contacts
+        except NameError: pass
+
+        try:
+            simplr_app.pending_contacts = simplr_pendingContacts
+            del simplr_pendingContacts
+        except NameError: pass
+
+        try: simplr_app.contacts
+        except AttributeError: simplr_app.contacts = []
+
+        try: simplr_app.pending_contacts
+        except AttributeError: simplr_app.pending_contacts = []
+
+        try:
             beth.simplr = simplr_Beth
             del simplr_Beth
         except NameError: pass
@@ -812,7 +828,7 @@ label after_load:
         except NameError: pass
 
         try:
-            for contact in (simplr_contacts + simplr_pendingContacts):
+            for contact in (simplr_app.contacts + simplr_app.pending_contacts):
                 for (dirpath, dirname, filenames) in os.walk(os.path.join(contacts_file_path, contact.name.lower(), "large_profile_pictures")):
                     contact.large_profile_pictures = ["images/nonplayable_characters/{}/large_profile_pictures/{}".format(contact.name.lower(), filename) for filename in filenames]
 
