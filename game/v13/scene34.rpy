@@ -276,6 +276,8 @@ label v13s34:
 
     u "Oh!"
 
+label v13s34_1:
+
     menu: 
         "Threaten him":
             scene v13s34_17b # FPP. Same as v13s34_17a, serious expression
@@ -680,6 +682,8 @@ label v13s34:
             with dissolve
 
             pause 0.75 
+
+label v13s34_2:
 
     scene v13s34_35 # FPP. Riley, looking at Mr. Lee, surprised expression, mouth open 
     with dissolve
