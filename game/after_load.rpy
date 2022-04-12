@@ -4,7 +4,7 @@ python early:
         "bugTesting/bugTesting_typoNotes.rpy",
         "bugTesting/bugTesting_cheats.rpy",
         "bugTesting/styles.rpy",
-        "phone/applications.rpy"
+        "phone/applications.rpy",
         "phone/phonescript.rpy",
         "phone/phone_msg.rpy",
         "phone/phone_script.rpy",
@@ -20,7 +20,7 @@ python early:
         "scriptv06.rpy",
         "scriptv07.rpy",
         "screen.rpy",
-        "sex_overlay.rpy"
+        "sex_overlay.rpy",
     }
 
     restart_game = False # NEVER CHANGE
@@ -348,20 +348,20 @@ label after_load:
             chloe.relationship = Relationship.MAD
 
         ## PHONE
-        try: phone.base_image
-        except AttributeError: phone.base_image = "images/phone/phone-icon.webp"
+        phone.base_image = "images/phone/phone-icon.webp"
 
         ### APPLICATIONS
+        messenger.name = "Messenger"
+        stats_app.name = "KCT"
+
         try:
             messenger.contacts = contacts.copy()
             del contacts
         except NameError: pass
 
-
         # Transfer kiwiiApp to kiwii
         try:
             kiwii = kiwiiApp
-            kiwii.image = "images/phone/kiwii/app-assets/icon.webp"
             kiwii.home_screen = "kiwiiApp"
             kiwii.locked = kiwiiApp.locked
             kiwii.contacts = []
@@ -375,7 +375,16 @@ label after_load:
             if not isinstance(app, Application):
                 phone.applications.remove(app)
 
-        ### MESSENGER
+        for app in phone.applications:
+            app.home_screen = "{}_home".format(app.name.lower())
+
+        messenger.home_screen = "{}_home".format(messenger.name.lower())
+        stats_app.home_screen = "{}_home".format(stats_app.name.lower())
+        achievement_app.home_screen = "{}_home".format(achievement_app.name.lower())
+        kiwii.home_screen = "{}_home".format(kiwii.name.lower())
+        simplr_app.home_screen = "{}_home".format(simplr_app.name.lower())
+        relationship_app.home_screen = "{}_home".format(relationship_app.name.lower())
+
         #### MESSENGER CONTRACTS
         for contact in messenger.contacts:
             try: contact.sent_messages = contact.sentMessages
@@ -383,6 +392,9 @@ label after_load:
 
             try: contact.pending_messages = contact.pendingMessages
             except AttributeError: contact.pending_messages = []
+
+            try: contact._notification
+            except AttributeError: contact._notification = False
 
 
         # Transfer Contact object to NonPlayableCharacter class
@@ -813,6 +825,9 @@ label after_load:
                 except AttributeError:
                     contact.sent_messages = contact.sentMessages
                     del contact.sentMessages
+
+                try: contact._notification
+                except AttributeError: contact._notification = False
                     
         except NameError:
             pass
@@ -1066,6 +1081,9 @@ label after_load:
         except NameError: v14_ryan_satin = False
 
         setup()
+        phone.applications.append(stats_app)
+        phone.applications.append(kiwii)
+        phone.applications.append(simplr_app)
 
     hide screen reply
     hide screen simplr_reply

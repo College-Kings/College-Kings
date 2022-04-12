@@ -353,7 +353,7 @@ screen main_menu():
 
     add image_path + "background.webp"
 
-    textbutton _("Test Language") action Language("francais")
+    # textbutton _("Test Language") action Language("francais")
 
     # Patreon
     if not config.enable_steam:

@@ -32,4 +32,5 @@ label v14s10:
     pause 1.5
 
     stop music fadeout 3
-    jump v14s11
+
+    call screen end_screen

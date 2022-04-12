@@ -31,7 +31,7 @@ screen v1_freeRoam1_1():
         xalign 0.65
         idle "images/v1/fr1b.webp"
         hover "images/v1/fr1bhover.webp"
-        action 
+        action [Hide("tutorial"), Show("v1_freeRoam1_2")]
 
     if config_debug:
         python:
