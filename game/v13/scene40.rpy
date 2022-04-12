@@ -147,10 +147,7 @@ label v13s40:
 
     u "*Chuckles* Shhh."
 
-    $ sex_overlay_options = [
-        [],
-        [("Neck", "v13s40_neck"), ("Chest", "v13s40_chest"), ("Back", "v13s40_back"), ("Shoulders", "v13s40_shoulder")]
-    ]
+    $ sex_overlay_options = [("Neck", "v13s40_neck"), ("Chest", "v13s40_chest"), ("Back", "v13s40_back"), ("Shoulders", "v13s40_shoulder")]
 
     if mc.has_item(honey):
         $ sex_overlay_options[0].append((honey.name, "v13s40_honey"))
