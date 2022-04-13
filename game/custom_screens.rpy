@@ -68,33 +68,6 @@ screen popup(message):
 
     timer 4 action Hide("popup")
 
-
-screen real_life_mode():
-    modal True
-
-    add "images/start/real_life_mode_background.webp"
-
-    use warning_template("THIS MODE PROHIBITS you from saving during important choices, meaning all choices are final. this can't be disabled without starting a new game."):
-
-        button:
-            idle_background "blue_button_idle"
-            hover_background "blue_button_hover"
-            action [SetVariable("realmode", True), SetVariable("config.rollback_enabled", False), SetVariable("showkct", False), Show("phone_icon"), Jump("v1start")]
-            xysize (215, 55)
-
-            text "ENABLE" align (0.5, 0.5)
-
-        button:
-            idle_background "blue_button_idle"
-            hover_background "blue_button_hover"
-            action [SetVariable("realmode", False), SetVariable("config.rollback_enabled", True), SetVariable("showkct", True), Show("phone_icon"), Jump("v1start")]
-            xysize (215, 55)
-
-            text "DISABLE" align (0.5, 0.5)
-
-    if config_debug:
-        timer 0.1 action [SetVariable("realmode", False), SetVariable("config.rollback_enabled", True), SetVariable("showkct", True), Show("phone_icon"), Jump("v1start")]
-
 screen fantasyOverlay():
     add "images/fantasyoverlay.webp"
 

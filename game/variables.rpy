@@ -8,6 +8,7 @@ default name = "Alex"
 default realmode = False
 default showkct = True
 default checklist = Checklist()
+define is_CK2 = False
 
 # Persistent
 default persistent.previous_whats_new = None
@@ -35,6 +36,16 @@ default pb_kct_notification = False
 default path_builder = False
 default pb_name_set = False
 default pb_kct_shown = False
+
+## Recap 
+default recap_first_run = True # used by the ending scene for each girl narraitive to determine if to return to the recap_girl_summary or to continue to the next girl. Jenny's last scene changes this to false.
+default girl_info = {} # Empty
+default recap_choose_threesome = False # True = During Aubrey or Riley intereview, player choose to have 3 some/ Falase == Player decided not to have threesome or has yet to decide
+
+## Settings
+default real_life_mode = False
+
+default show_reputation = False
 
     # Voice Acting
 default voice_acted = True

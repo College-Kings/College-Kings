@@ -14,3 +14,7 @@ style montserrat_extra_bold_64 is text:
 style effra_regular_23 is text:
     font "fonts/Effra-Regular.ttf"
     size 23
+
+style effra_regular_26 is text:
+    font "fonts/Effra-Regular.ttf"
+    size 26
