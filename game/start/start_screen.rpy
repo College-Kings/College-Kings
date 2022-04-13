@@ -6,15 +6,15 @@ screen start_screen():
 
     add "images/start/start_screen_bg.webp"
 
-    # Recap
+    # Recap/ CK1 First Day of College 
     frame:
         xysize (558, 520)
-        pos (306, 271)
+        pos (301, 271)
 
-        text "Jump into the action (and bed) right away with a pre-generated and summarized story, but with the chance to make major game choices.":
+        text "Students come to San Vallejo College for dynamic student life. . . though the zero tolerance for drinking, drugs and violence is often overlooked. The full College Kings experience from the first day of college on.":
             style "effra_regular_23"
             text_align 0.5
-            xsize 373
+            xsize (373,140)
             align (0.5, 0.5)
 
         button:
@@ -24,16 +24,16 @@ screen start_screen():
             xalign 0.5
             yalign 1.0
             yoffset -35
-            action [Function(setup), Hide("start_screen", transition=dissolve), Jump("recap_start")]
+            action [Function(setup), Hide("start_screen", transition=dissolve), Jump("v1start")]
 
             text "Start" style "bebas_neue_30" align (0.5, 0.5)
 
-    # Path builder
+    # Path builder/ CK1 EuroTrip
     frame:
         xysize (558, 520)
-        pos (970, 271)
+        pos (975, 271)
 
-        text "Played the game before, or want to choose your own path? Pick where you start in the story, your major character trait and romantic history.":
+        text "The students of San Vallejo College gear up for an educational trip to Europe, although not the education the chaperones are hoping for. Jump right into the action for the best College Kings has to offer with a recap of the early game.":
             style "effra_regular_23"
             text_align 0.5
             xsize (373, 140)
@@ -46,7 +46,7 @@ screen start_screen():
             xalign 0.5
             yalign 1.0
             yoffset -35
-            action [Function(setup), Show("path_builder", from_main_menu=False)]
+            action [Function(setup), Hide("start_screen", transition=dissolve), Jump("recap_start")]
 
             text "Start" style "bebas_neue_30" align (0.5, 0.5)
 

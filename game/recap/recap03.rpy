@@ -91,25 +91,21 @@ label recap_end:
                 scene recap03_11 #v13s12b_8a.webp
                 with dissolve
 
-    pause 1.5
+        pause 1.5
 
-    scene recap03_12 #v14s07_1.webp
-    with dissolve
+        scene recap03_12 #v14s07_1.webp
+        with dissolve
 
-    pause 1.5
+        pause 1.5
 
-    scene recap03_12a #v14s10_1.webp
-    with dissolve
+        scene recap03_12a #v14s10_1.webp
+        with dissolve
 
-    pause 1.5
-        
-    scene recap03_12b #v14s10_5.webp
-    with dissolve
+        pause 1.5
+            
+        scene recap03_12b #v14s10_5.webp
+        with dissolve
 
-    u "And then our Europe trip was over and it was time to fly home. It went by so fast but it's something I'll never forget!"
+        u "And then our Europe trip was over and it was time to fly home. It went by so fast but it's something I'll never forget!"
 
-    if not is_CK2:
-        jump v11_nora_chloe_hallway
-    
-    else:
-        jump v1_start
+    jump v11_nora_chloe_hallway
