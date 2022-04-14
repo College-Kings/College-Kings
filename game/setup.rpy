@@ -3,15 +3,10 @@ init python:
         nonplayable_character_setup()
         
         # Phone Setup
-        try: phone.applications
-        except AttributeError: phone.applications = []
-        
-        if messenger not in phone.applications:
-            phone.applications.append(messenger)
-        if achievement_app not in phone.applications:
-            phone.applications.append(achievement_app)
-        if relationship_app not in phone.applications:
-            phone.applications.append(relationship_app)
+        phone.applications = []
+        phone.applications.append(messenger)
+        phone.applications.append(achievement_app)
+        phone.applications.append(relationship_app)
 
 
         # Set up murder mystery stats

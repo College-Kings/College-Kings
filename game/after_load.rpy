@@ -1094,10 +1094,17 @@ label after_load:
         try: v14_ryan_satin
         except NameError: v14_ryan_satin = False
 
+        temp = []
+        if stats_app in phone.applications:
+            temp.append(stats_app)
+        if kiwii in phone.applications:
+            temp.append(kiwii)
+        if simplr_app in phone.applications:
+            temp.append(simplr_app)
+
         setup()
-        phone.applications.append(stats_app)
-        phone.applications.append(kiwii)
-        phone.applications.append(simplr_app)
+        phone.applications.extend(temp)
+        del temp
 
     hide screen reply
     hide screen simplr_reply
