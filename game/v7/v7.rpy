@@ -17032,7 +17032,7 @@ label fr4laurenending:
 
     la "You could just turn the lights off..."
 
-    jump v7end
+    jump v8start
 
 ############### SCENE 47 RILEY ENDING (LEWD & NON-LEWD)
 label fr4rileyending:
@@ -17102,7 +17102,7 @@ label fr4rileyending2:
 
         ri "*Whispers* I have a surprise for you."
 
-        jump v7end
+        jump v8start
 
     else:
         scene sfr4ri56 # ffp close up riley a bit nervous but also excited to tell you a secret
@@ -17120,7 +17120,7 @@ label fr4rileyending2:
 
         ri "I-"
 
-        jump v7end
+        jump v8start
 
 ############### SCENE 48 CHLOE ENDING
 label fr4chloeending:
@@ -17241,16 +17241,14 @@ label fr4chloeending:
     # towel drop sound #check - add towel.mp3 sound file
     play sound "sounds/towel.mp3"
 
-    if config_censored and renpy.loadable("v8/scene2.rpy"):
+    if config_censored:
         call screen censored_popup("v8s2_nsfwSkipLabel1")
-    elif config_censored:
-        call screen censored_popup("v7end")
 
     scene sfr4cl62 #Chloe steps out of the bathroom. We see her feet and a bathrobe drop to the floor.
     with dissolve
 
     " "
-    jump v7end
+    jump v8start
 
 ############### SCENE 48 AMBER ENDING
 label fr4amberending:
@@ -17260,12 +17258,5 @@ label fr4amberending:
     with dissolve
 
     am "I have another idea of what might feel good..."
-
-    jump v7end
-
-label v7end:
-    if not renpy.loadable("v8/scene1.rpy"):
-        call screen save_now(8)
-        with Fade(1, 0, 1)
 
     jump v8start

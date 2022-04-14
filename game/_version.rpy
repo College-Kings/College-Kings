@@ -23,13 +23,11 @@ python early:
         return short_hash
 
 
-    def get_version(major, minor, patch, development=False):
-        act_1 = 7
-
-        act = "DEVELOPMENT" if development else max(-((major - act_1) // -3) + 1, 1)    
-
+    def get_version(major, minor, patch, deluxe=False):
         version = "{}.{}.{}".format(major, minor, patch)
-        if config.enable_steam:
+        if deluxe:
+            version += 'd'
+        elif config.enable_steam:
             version += "s"
 
-        return "{} (Act: {}) (SHA: {})".format(version, act, get_short_git_sha())
+        return "{} (SHA: {})".format(version, get_short_git_sha())

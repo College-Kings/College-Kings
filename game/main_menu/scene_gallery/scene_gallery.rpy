@@ -156,7 +156,7 @@ screen scene_gallery():
         pos (1748, 231)
         xysize (17, 724)
         base_bar "#0000"
-        thumb image_path + "bar_thumb.webp"
+        thumb "gui/bar/bar_thumb.webp"
         value YScrollValue("vpg")
 
 

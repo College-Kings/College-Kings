@@ -55,7 +55,7 @@ label v8_ending:
 
         u "(What the...? Is this about the upcoming fight?)"
 
-        jump v8end
+        jump v9start
 
     else:
         scene v8send5 # TPP. Show MC lying on his Apes bed, looking tired.
@@ -116,11 +116,4 @@ label v8_ending:
         scene v8send8 # TPP. Show MC, MC looks really confused.
         with dissolve
 
-        jump v8end
-
-label v8end:
-    if not renpy.loadable("v9/scene01.rpy"):
-        call screen save_now(9)
-        with Fade(1, 0, 1)
-
-    jump v9start
+        jump v9start

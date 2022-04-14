@@ -33,4 +33,4 @@ label v14s10:
 
     stop music fadeout 3
 
-    call screen end_screen
+    call game_end

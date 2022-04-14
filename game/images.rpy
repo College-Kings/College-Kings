@@ -33,7 +33,7 @@ image path_builder_button_idle = Frame("main_menu/path_builder/images/button_idl
 image path_builder_button_hover = Frame("main_menu/path_builder/images/button_hover.webp", 24, 6)
 
 ## Scene Gallery
-image scene_gallery_bar_base = Frame("main_menu/scene_gallery/images/bar_base.webp", 5, 10)
+image scene_gallery_bar_base = Frame("gui/bar/bar_base.webp")
 
 ## Settings
 image settings_bar_left = Frame("gui/settings/bar_right.webp", 14, 5)

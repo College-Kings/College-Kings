@@ -37,10 +37,5 @@ label v9_ending:
     with fade
 
     pause 2
-
-label end9:
-    if not renpy.loadable("v10/scene1.rpy"):
-        call screen save_now(10)
-        with Fade(1, 0, 1)
-
+    
     jump v10start

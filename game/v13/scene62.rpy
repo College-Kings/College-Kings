@@ -88,12 +88,4 @@ label v13s62:
 
     stop music fadeout 3
 
-label end13:
-    if config_debug:
-        return
-
-    if not renpy.loadable("v14/scene1.rpy"):
-        call screen save_now(14)
-        with Fade(1, 0, 1)
-
     jump v14_start

@@ -43,7 +43,6 @@ label v10_waking_up_end:
 
         pause 1
         stop music fadeout 3
-        jump end10
 
     else:
         scene v10end4 # TPP. Show MC waking up drowsy in his Apes room.
@@ -82,11 +81,5 @@ label v10_waking_up_end:
 
         pause 1
         stop music fadeout 3
-        jump end10
-
-label end10:
-    if not renpy.loadable("v11/scene1.rpy"):
-        call screen save_now(11)
-        with Fade(1, 0, 1)
 
     jump v11_start

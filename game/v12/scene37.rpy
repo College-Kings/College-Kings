@@ -105,11 +105,4 @@ label v12_riley_ending:
 
     stop music fadeout 3
 
-    jump end12
-
-label end12:
-    if not renpy.loadable("v13/scene1.rpy"):
-        call screen save_now(13)
-        with Fade(1, 0, 1)
-
     jump v13_start

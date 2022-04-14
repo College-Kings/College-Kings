@@ -42,10 +42,7 @@ label v13s62a:
     with dissolve
 
     if config_censored:
-        if renpy.loadable("v14/scene1.rpy"):
-            call screen censored_popup("v14s01a_nsfwSkipLabel1")
-        else:
-            call screen censored_popup("end13")
+        call screen censored_popup("v14s01a_nsfwSkipLabel1")
 
     pause
 
@@ -93,4 +90,5 @@ label v13s62a:
 
     stop music fadeout 3
 
-    jump end13
+    jump v14_start
+    

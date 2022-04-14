@@ -110,11 +110,5 @@ label v11_walking_back:
 
     no "AHHHH!!!!"
     stop music fadeout 3
-    jump end11
-
-label end11:
-    if not renpy.loadable("v12/scene1.rpy"):
-        call screen save_now(12)
-        with Fade(1, 0, 1)
 
     jump v12_start
