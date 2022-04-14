@@ -75,8 +75,6 @@ label path_builder_setup:
             PB_ACT_2 = PathBuilderItem(PathBuilderCatagories.START_LOCATION, "Act 2 Start", actions=[SetScreenVariable("start_label", "v7_homecoming"), SetScreenVariable("act_number", 2)])
         if renpy.loadable("v11/scene1.rpy"):
             PB_ACT_3 = PathBuilderItem(PathBuilderCatagories.START_LOCATION, "Act 3 Start", actions=[SetScreenVariable("start_label", "v11_start"), SetScreenVariable("act_number", 3)])
-        if renpy.loadable("v14/scene1.rpy"):
-            PB_ACT_4 = PathBuilderItem(PathBuilderCatagories.START_LOCATION, "Act 4 Start", actions=[SetScreenVariable("start_label", "v14_start"), SetScreenVariable("act_number", 4)])
 
         HC_CHLOE = PathBuilderItem(PathBuilderCatagories.HOMECOMING_DATE, "Chloe", actions=ToggleVariable("hcGirl", "chloe"))
         HC_RILEY = PathBuilderItem(PathBuilderCatagories.HOMECOMING_DATE, "Riley", actions=ToggleVariable("hcGirl", "riley"))
