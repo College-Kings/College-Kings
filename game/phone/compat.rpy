@@ -19,9 +19,10 @@ screen messenger_contacts(contact=None):
                     action [Hide("message_reply"), Show("messenger_home")]
                     yalign 0.5
 
-                add Transform(contact.profile_picture, xysize=(65, 65)) yalign 0.5
+                if contact is not None:
+                    add Transform(contact.profile_picture, xysize=(65, 65)) yalign 0.5
 
-                text contact.name style "nametext" yalign 0.5
+                    text contact.name style "nametext" yalign 0.5
 
             viewport:
                 yadjustment inf_adj
@@ -34,39 +35,42 @@ screen messenger_contacts(contact=None):
 
                     null height 25
 
-                    for message in contact.sent_messages:
-                        frame:
-                            padding (50, 50)
+                    if contact is not None:
+                        for message in contact.sent_messages:
+                            frame:
+                                padding (50, 50)
 
-                            if isinstance(message, Message) and message.message.strip():
-                                background "message_background"
+                                if isinstance(message, Message) and message.message.strip():
+                                    background "message_background"
 
-                                text message.message  style "message_text"
+                                    text message.message  style "message_text"
 
-                            elif isinstance(message, ImageMessage):
-                                background "message_background"
+                                elif isinstance(message, ImageMessage):
+                                    background "message_background"
 
-                                imagebutton:
-                                    idle Transform(message.image, zoom=0.15)
-                                    action Show("phone_image", img=message.image)
+                                    imagebutton:
+                                        idle Transform(message.image, zoom=0.15)
+                                        action Show("phone_image", img=message.image)
 
-                            elif isinstance(message, Reply):
-                                background "reply_background"
-                                xalign 1.0
+                                elif isinstance(message, Reply):
+                                    background "reply_background"
+                                    xalign 1.0
 
-                                text message.message  style "reply_text"
+                                    text message.message  style "reply_text"
 
-                            elif isinstance(message, ImgReply):
-                                background "reply_background"
-                                xalign 1.0
+                                elif isinstance(message, ImgReply):
+                                    background "reply_background"
+                                    xalign 1.0
 
-                                imagebutton:
-                                    idle Transform(message.image, zoom=0.15)
-                                    action Show("phone_image", img=message.image)
+                                    imagebutton:
+                                        idle Transform(message.image, zoom=0.15)
+                                        action Show("phone_image", img=message.image)
+                    else:
+                        text "Exception: Contact is None. Please make a support ticket at https://discord.gg/H98n8ubrGA if this error persists."
 
                     null height 75
 
-            if contact.replies:
+            if contact is not None and contact.replies:
                 fixed:
                     xysize (416, 63)
                     ypos 780
