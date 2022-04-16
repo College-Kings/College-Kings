@@ -25,11 +25,6 @@ python early:
 
     restart_game = False # NEVER CHANGE
 
-    try: v9s35_reply5a
-    except NameError:
-        def v9s35_reply5a():
-            pass
-
     for rpy_file in old_files:
         rpyc_file = rpy_file + "c"
 
@@ -67,6 +62,15 @@ init 100 python:
     class FightCharacter(NonPlayableCharacter):
         pass
 
+    try: v7_msgReply9
+    except AttributeError:
+        def v7_msgReply9():
+            pass
+
+    try: v9s35_reply5a
+    except NameError:
+        def v9s35_reply5a():
+            pass
 
 label after_load:
     python:
