@@ -23,11 +23,9 @@ python early:
         return short_hash
 
 
-    def get_version(major, minor, patch, deluxe=False):
+    def get_version(major, minor, patch):
         version = "{}.{}.{}".format(major, minor, patch)
-        if deluxe:
-            version += 'd'
-        elif config.enable_steam:
+        if config.enable_steam:
             version += "s"
 
         return "{} (SHA: {})".format(version, get_short_git_sha())
