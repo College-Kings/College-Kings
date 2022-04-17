@@ -63,7 +63,7 @@ init 100 python:
         pass
 
     try: v7_msgReply9
-    except AttributeError:
+    except NameError:
         def v7_msgReply9():
             pass
 
