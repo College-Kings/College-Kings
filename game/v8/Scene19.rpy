@@ -84,7 +84,7 @@ label sun_eve_room:
             $ lauren.messenger.newMessage(_("Goodnight"))
             $ lauren.messenger.addReply(_("Goodnight"))
 
-        else:
+        elif amber.relationship >= Relationship.FWB:
             play sound "sounds/vibrate.mp3"
             $ amber.messenger.newMessage(_("Hey u up?"), force_send=True)
             $ amber.messenger.addReply(_("Always for you ;)"))
