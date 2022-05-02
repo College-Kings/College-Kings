@@ -1,3 +1,6 @@
+# Persistent
+default persistent.previous_whats_new = None
+
 # Init
 define flash = Fade(.25, 0, .75, color="#fff")
 define config.default_music_volume = 1
@@ -8,11 +11,14 @@ default name = "Alex"
 default realmode = False
 default showkct = True
 default checklist = Checklist()
+define is_CK2 = False
 
-# Persistent
-default persistent.previous_whats_new = None
+# Recap 
+default recap_first_run = True # used by the ending scene for each girl narraitive to determine if to return to the recap_girl_summary or to continue to the next girl. Jenny's last scene changes this to false.
+default girl_info = {} # Empty
+default recap_choose_threesome = False # True = During Aubrey or Riley intereview, player choose to have 3 some/ Falase == Player decided not to have threesome or has yet to decide 
 
-    ## Phone
+# Phone
 define contacts_file_path = os.path.join(config.basedir, "game", "images", "nonplayable_characters")
 
     ## Kiwii Vars
