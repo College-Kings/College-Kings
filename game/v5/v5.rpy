@@ -2850,14 +2850,14 @@ label hospitala:
 
     scene af4
 
-    # call screen fight_typeMenu
+    call screen fight_typeMenu
 
     if fight_type == "normal":
         $ simadamfight = False
 
-        # call screen fight_selectDifficulty
+        call screen fight_selectDifficulty
 
-        # call screen fight_keybindOptions
+        call screen fight_keybindOptions
     
     elif fight_type == "simReal" or fight_type == "simWin":
         $ simadamfight = True
