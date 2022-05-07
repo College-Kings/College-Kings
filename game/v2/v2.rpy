@@ -456,15 +456,11 @@ label tomFightStart:
     call screen fight_typeMenu
 
     if fight_type == "normal":
-        $ simtomfight = False
-
         call screen fight_selectDifficulty
 
         call screen fight_keybindOptions
     
-    elif fight_type == "simReal" or fight_type == "simWin":
-        $ simtomfight = True
-        
+    $ simtomfight = (fight_type != "normal")
     $ stance = 1
     $ tomstance = renpy.random.choice([1, 2, 3, 4])
     $ tomattack = renpy.random.choice([1, 2, 3, 4])
@@ -479,6 +475,8 @@ label tomFightStart:
     $ enemyhealth = 5
     $ youDamage = 0
     $ tomdmg = 0
+
+    call screen youattack()
 
     label tomkick1:
         if tomdmg >= enemyhealth:
@@ -505,9 +503,6 @@ label tomFightStart:
             pause 0.5 #Variable here
             jump tomattack1
 
-
-
-
     label tomkick2:
         if youDamage >= youHealth:
 
@@ -523,9 +518,8 @@ label tomFightStart:
 
 
             jump tomfinish6
+
         else:
-
-
             scene hook1movie
             $ renpy.pause(0.7)
             play sound "sounds/bs.mp3"
