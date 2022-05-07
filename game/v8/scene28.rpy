@@ -132,14 +132,14 @@ label int_deal_w_josh:
         
     scene v8sdd10
 
-    # call screen fight_typeMenu
+    call screen fight_typeMenu
 
     if fight_type == "normal":
         $ simLarsFight = False
 
-        # call screen fight_selectDifficulty
+        call screen fight_selectDifficulty
 
-        # call screen fight_keybindOptions
+        call screen fight_keybindOptions
     
     elif fight_type == "simReal" or fight_type == "simWin":
         $ simLarsFight = True
@@ -163,7 +163,7 @@ label int_deal_w_josh:
 label lars_McAttack:
     $ stance = 2
 
-    # show screen fight_overlay(stance="defend") TODO: Update fight code
+    show screen fight_overlay(stance="defend") # TODO: Update fight code
     
     # Lars hook
     if larsAttack == 1:
@@ -182,8 +182,7 @@ label lars_McAttack:
                 jump lars_McKickBlock
 
         else:
-            pass
-            # call screen larsFight_MCDefend(attack="Hook")
+            call screen larsFight_MCDefend(attack="Hook")
 
     # Lars jab
     if larsAttack == 2:
@@ -202,8 +201,7 @@ label lars_McAttack:
                 jump lars_McJabBlock
 
         else:
-            pass
-            # call screen larsFight_MCDefend(attack="Jab")
+            call screen larsFight_MCDefend(attack="Jab")
 
     # Lars body hook
     if larsAttack == 3:
@@ -222,8 +220,7 @@ label lars_McAttack:
                 jump lars_McHookBlock
 
         else:
-            pass
-            # call screen larsFight_MCDefend(attack="BodyHook")
+            call screen larsFight_MCDefend(attack="BodyHook")
 
     # Lars kick
     if larsAttack == 4:
@@ -242,8 +239,7 @@ label lars_McAttack:
                 jump lars_McBodyhookBlock
 
         else:
-            pass
-            # call screen larsFight_MCDefend(attack="Kick")
+            call screen larsFight_MCDefend(attack="Kick")
 
 
 # label Attacker_TargetAction
@@ -456,14 +452,13 @@ label mc_larsAttack:
             if simyou == 4 or simyou == 5 or simyou == 6:
                 jump mc_LarsKickHit
     else:
-        pass
-        # call screen larsFight_MCAttack
+        call screen larsFight_MCAttack
 
 
 label mc_larsFightEnd: # MC wins fight against Lars
     hide screen s28_larsMcAttack
     hide screen s28_mcLarsAttack
-    # hide screen fight_overlay TODO: Update fight code
+    hide screen fight_overlay # TODO: Update fight code
     $ youDamage = 0
     $ stance = 0
     $ s28_fightWinner = "MC"
@@ -473,7 +468,7 @@ label mc_larsFightEnd: # MC wins fight against Lars
 label lars_McFightEnd: # MC loses fight against Lars
     hide screen s28_larsMcAttack
     hide screen s28_mcLarsAttack
-    # hide screen fight_overlay TODO: Update fight code
+    hide screen fight_overlay # TODO: Update fight code
     $ youDamage = 0
     $ stance = 0
     $ s28_fightWinner = "Lars"
