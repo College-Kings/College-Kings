@@ -4,7 +4,8 @@
 # Time: Afternoon
 
 label v13s9:
-    $ chloe.relationship = Relationship.FRIEND
+    if chloe.relationship < Relationship.FRIEND:
+        $ chloe.relationship = Relationship.FRIEND
 
     scene v13s9_1 # TPP. Hotel hallway. MC walking down the hallway, back to camera, angled to where hotel room doors are visible on MC's right.
     with dissolve
