@@ -84,6 +84,8 @@ label sun_eve_room:
             $ lauren.messenger.newMessage(_("Goodnight"))
             $ lauren.messenger.addReply(_("Goodnight"))
 
+            call screen phone
+
         elif amber.relationship >= Relationship.FWB:
             play sound "sounds/vibrate.mp3"
             $ amber.messenger.newMessage(_("Hey u up?"), force_send=True)
@@ -98,7 +100,7 @@ label sun_eve_room:
             $ amber.messenger.addReply(_("Wanna see what thinking about you has done to me?"), v8s19_reply1)
             $ amber.messenger.addReply(_("I look at your pic all the time...when I'm thinking about things"), v8s19_reply2)
 
-        call screen phone
+            call screen phone
 
         if forgiveemily:
             # -MC's phone buzzes-
@@ -152,6 +154,8 @@ label sun_eve_room:
             $ lauren.messenger.newMessage(_("Goodnight"))
             $ lauren.messenger.addReply(_("Goodnight"))
 
+            call screen phone
+
         elif amber.relationship >= Relationship.FWB:
             play sound "sounds/vibrate.mp3"
             $ amber.messenger.newMessage(_("Hey u up?"), force_send=True)
@@ -166,7 +170,7 @@ label sun_eve_room:
             $ amber.messenger.addReply(_("Wanna see what thinking about you has done to me?"), v8s19_reply1)
             $ amber.messenger.addReply(_("I look at your pic all the time...when I'm thinking about things"), v8s19_reply2)
 
-        call screen phone
+            call screen phone
             
         if forgiveemily:
             # -MC's phone buzzes-
