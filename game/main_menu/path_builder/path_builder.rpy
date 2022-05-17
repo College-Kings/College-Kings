@@ -70,7 +70,6 @@ screen path_builder_alert():
             xalign 0.5
             ypos 66
 
-
         hbox:
             pos (217, 258)
             spacing 5
