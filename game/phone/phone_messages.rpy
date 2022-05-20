@@ -68,25 +68,25 @@ init python:
             return message
 
         def add_reply(self, message, func=None, new_message=False, disabled=False):
-            reply = Reply(message, func, disabled)
+            reply = Reply(message, func)
 
             # Append reply to last sent message
             try:
-                if new_message:
-                    self.newMessage("")
-                    message.replies.append(reply)
-                elif self.pending_messages:
+                if self.pending_messages:
                     self.pending_messages[-1].replies.append(reply)
-                else:
+                elif self.sent_messages:
                     self.sent_messages[-1].replies.append(reply)
+                else:
+                    message = self.new_message("", force_send=True)
+                    message.replies.append(reply)
             except IndexError:
-                message = self.newMessage("", force_send=True)
+                message = self.new_message("", force_send=True)
                 message.replies.append(reply)
 
             self.notification = True
 
         def add_image_reply(self, img, func=None, newMessage=False, disabled=False):
-            reply = ImgReply(img, func, disabled)
+            reply = ImgReply(img, func)
 
             # Append reply to last sent message
             try:
@@ -143,10 +143,10 @@ init python:
             return self.new_image_message(img, force_send)
 
         def addReply(self, message, func=None, newMessage=False, disabled=False):
-            return self.add_reply(message, func, newMessage, disabled)
+            return self.add_reply(message, func, newMessage)
 
         def addImgReply(self, img, func=None, newMessage=False, disabled=False):
-            return self.add_image_reply(img, func, newMessage, disabled)
+            return self.add_image_reply(img, func, newMessage)
 
 
     class Message:
@@ -169,14 +169,12 @@ init python:
         def __init__(self, message, func=None, disabled=False):
             self.message = message
             self.func = func
-            self.disabled = disabled
 
 
     class ImgReply:
         def __init__(self, image, func=None, disabled=False):
             self.image = image
             self.func = func
-            self.disabled = disabled
 
 
 screen messenger_home():

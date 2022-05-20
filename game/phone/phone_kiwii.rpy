@@ -64,16 +64,15 @@ init python:
             return comment
 
         def add_reply(self, message, func=None, numberLikes=renpy.random.randint(250, 500), mentions=None, disabled=False):
-            reply = KiwiiReply(message, func, numberLikes, mentions, disabled)
+            reply = KiwiiReply(message, func, numberLikes, mentions)
             
             # Append reply to last sent message
-            try:
-                if self.pending_comments:
-                    self.pending_comments[-1].replies.append(reply)
-                else:
-                    self.sentComments[-1].replies.append(reply)
-            except Exception as e:
-                message = self.newComment(mc, "")
+            if self.pending_comments:
+                self.pending_comments[-1].replies.append(reply)
+            elif self.sentComments:
+                self.sentComments[-1].replies.append(reply)
+            else:
+                message = self.new_comment(mc, "")
                 message.replies.append(reply)
 
             kiwii.notification = True
@@ -114,7 +113,7 @@ init python:
             return self.new_comment(user, message, numberLikes, mentions)
 
         def addReply(self, message, func=None, numberLikes=renpy.random.randint(250, 500), mentions=None, disabled=False):
-            return self.add_reply(message, func, numberLikes, mentions, disabled)
+            return self.add_reply(message, func, numberLikes, mentions)
 
         def selectedReply(self, reply):
             return self.selected_reply(reply)
@@ -158,8 +157,6 @@ init python:
             if isinstance(mentions, basestring): self.mentions = [mentions]
             elif isinstance(mentions, list): self.mentions = mentions
             else: self.mentions = []
-
-            self.disabled = disabled
 
     def get_total_likes():
         return sum(post.numberLikes for post in kiwiiPosts if post.user == mc) + sum(
@@ -416,11 +413,8 @@ screen kiwiiPost(post):
             for reply in post.replies:
                 textbutton reply.message:
                     text_style "kiwii_ReplyText"
-                    if reply.disabled:
-                        style "reply_disabled"
-                    else:
-                        style "kiwii_reply"
-                        action Function(post.selectedReply, reply)
+                    style "kiwii_reply"
+                    action Function(post.selectedReply, reply)
 
     if config_debug:
         if post.replies:
