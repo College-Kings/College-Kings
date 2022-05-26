@@ -2417,7 +2417,6 @@ label continueab:
 
             menu:
                 "Alright, just for a bit":
-                    $ chloe.relationship = Relationship.MAD
                     scene s357a
                     with dissolve
 
@@ -2441,7 +2440,7 @@ label continueab:
     with dissolve
 
     jo "I just gotta put in our names."
-
+    
     # montage style evening
 
     scene joclock1
@@ -2871,6 +2870,8 @@ label continueab:
     scene s370b
     with dissolve
     cl "Well there you have it! Grayson put him up to this, just to fuck with me! I didn't do anything shady!"
+
+    $ chloe.relationship = Relationship.MAD
 
     menu:
         "Accuse her of lying":
