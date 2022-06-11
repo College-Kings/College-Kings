@@ -21,6 +21,7 @@ python early:
         "scriptv07.rpy",
         "screen.rpy",
         "sex_overlay.rpy",
+        "after_load.rpy"
     }
 
     restart_game = False # NEVER CHANGE
@@ -45,32 +46,7 @@ python early:
             renpy.quit()
         except OSError:
             raise Exception("Deleting old files please RESTART GAME.")
-
-init 100 python:
-    class CheatItem:
-        pass
-
-    class CustomCharacter(NonPlayableCharacter):
-        pass
-
-    class MainCharacter(PlayableCharacter):
-        pass
-
-    class Teacher(NonPlayableCharacter):
-        pass
-
-    class FightCharacter(NonPlayableCharacter):
-        pass
-
-    try: v7_msgReply9
-    except NameError:
-        def v7_msgReply9():
-            pass
-
-    try: v9s35_reply5a
-    except NameError:
-        def v9s35_reply5a():
-            pass
+            
 
 label after_load:
     python:
