@@ -43,9 +43,9 @@ label v14_start:
         if samantha.relationship == Relationship.FWB:
             $ cameron.relationship = Relationship.BRO
     
-    if emmy.simplr.pending_messages: #for compatibility with v12 players where emmy replies were not forced to be seen
-        $ emmy.simplr.pending_messages = []
-        $ emmy.simplr.sent_messages[-1].replies = []
+    #if emmy.simplr.pending_messages: #for compatibility with v12 players where emmy replies were not forced to be seen
+        #$ emmy.simplr.pending_messages = []
+        #$ emmy.simplr.sent_messages[-1].replies = []
 
     if aubrey.relationship >= Relationship.FWB and riley.relationship >= Relationship.FWB:
         $ v13_threesomeending = True
