@@ -1159,17 +1159,10 @@ label v11_case_verdict:
 
         u "*Whisper* You're welcome."
 
-        if penelope.relationship >= Relationship.LIKES:
-            scene v11coc24e # FPP. Same as 24c, but Penelope's mouth is open
-            with dissolve
+        scene v11coc24e # FPP. Same as 24c, but Penelope's mouth is open
+        with dissolve
 
-            pe "No I mean it, thank you. You have no idea how much this means to me. When I got that letter from the school I thought my life was ruined. I don't know what I would have done without you."
-
-        else:
-            scene v11coc24e # FPP. Same as 24c, but Penelope's mouth is open
-            with dissolve
-
-            pe "No I mean it, thank you."
+        pe "No I mean it, thank you. You have no idea how much this means to me. When I got that letter from the school I thought my life was ruined. I don't know what I would have done without you."
 
         scene v11coc24c
         with dissolve
@@ -1213,22 +1206,17 @@ label v11_case_verdict:
         pe "I have to get going as well, thankfully I still have a class to get to."
 
         pause 0.75
-        if penelope.relationship >= Relationship.LIKES:
-            scene v11coc25b # TPP. Same cam as 25, but Penelope is kissing MC on the cheek
-            with dissolve
 
-            play sound "sounds/kiss.mp3"
+        scene v11coc25b # TPP. Same cam as 25, but Penelope is kissing MC on the cheek
+        with dissolve
 
-            scene v11coc24e
-            with dissolve
+        play sound "sounds/kiss.mp3"
 
-            pe "Really [name], I can't thank you enough for all you've done."
+        scene v11coc24e
+        with dissolve
 
-        else:
-            scene v11coc24e
-            with dissolve
+        pe "Really [name], I can't thank you enough for all you've done."
 
-            pe "Thanks again, bye."
     else:
         $ v11_pen_goes_europe = False
         play music "music/v11/Track Scene 1_1.mp3" fadein 2
