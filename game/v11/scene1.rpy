@@ -1205,12 +1205,12 @@ label v11_case_verdict:
 
         pe "I have to get going as well, thankfully I still have a class to get to."
 
-        pause 0.75
-
         scene v11coc25b # TPP. Same cam as 25, but Penelope is kissing MC on the cheek
         with dissolve
 
         play sound "sounds/kiss.mp3"
+
+        pause 0.75
 
         scene v11coc24e
         with dissolve
