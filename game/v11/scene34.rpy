@@ -830,10 +830,11 @@ label v11_cardealership:
 
         lee "[name], I don't believe that's your room."
 
-        scene v11cd48a # FPP. same as 47, mouth closed
-        with dissolve
+        if chloe.relationship >= Relationship.GIRLFRIEND:
+            scene v11cd48a # FPP. same as 47, mouth closed
+            with dissolve
 
-        u "(What a fucking cock-block.)"
+            u "(What a fucking cock-block.)"
 
         scene v11cd49 # FPP. Looking at chloe, mouth closed
         with dissolve
