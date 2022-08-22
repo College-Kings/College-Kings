@@ -12,7 +12,7 @@ init python:
 
         def __getitem__(self, index: int):
             if _in_replay:
-                return ChecklistItem("Replay Template")
+                return ChecklistItem(_("Replay Template"))
             else:
                 return self.items[index]
 

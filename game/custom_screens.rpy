@@ -74,7 +74,7 @@ screen real_life_mode():
 
     add "images/start/real_life_mode_background.webp"
 
-    use warning_template("THIS MODE PROHIBITS you from saving during important choices, meaning all choices are final. this can't be disabled without starting a new game."):
+    use warning_template(_("THIS MODE PROHIBITS you from saving during important choices, meaning all choices are final. this can't be disabled without starting a new game.")):
 
         button:
             idle_background "blue_button_idle"
@@ -82,7 +82,7 @@ screen real_life_mode():
             action [SetVariable("realmode", True), SetVariable("config.rollback_enabled", False), SetVariable("showkct", False), Show("phone_icon"), Jump("v1start")]
             xysize (215, 55)
 
-            text "ENABLE" align (0.5, 0.5)
+            text _("ENABLE") align (0.5, 0.5)
 
         button:
             idle_background "blue_button_idle"
@@ -90,7 +90,7 @@ screen real_life_mode():
             action [SetVariable("realmode", False), SetVariable("config.rollback_enabled", True), SetVariable("showkct", True), Show("phone_icon"), Jump("v1start")]
             xysize (215, 55)
 
-            text "DISABLE" align (0.5, 0.5)
+            text _("DISABLE") align (0.5, 0.5)
 
     if config_debug:
         timer 0.1 action [SetVariable("realmode", False), SetVariable("config.rollback_enabled", True), SetVariable("showkct", True), Show("phone_icon"), Jump("v1start")]
@@ -104,14 +104,14 @@ screen censored_popup(continueLabel):
 
     add "gui/censoredPopup/censoredBackground.webp"
 
-    text "THE NEXT SCENE HAS NSFW CONTENT":
+    text _("THE NEXT SCENE HAS NSFW CONTENT"):
         size 70
         color "#FFFFFF"
         style "nsfw_text"
         xalign 0.5
         ypos 125
 
-    text "* CONTENT NOT SUITABLE FOR TWITCH OR YOUTUBE":
+    text _("* CONTENT NOT SUITABLE FOR TWITCH OR YOUTUBE"):
         size 40
         color "#FFFFFF"
         style "nsfw_italic_text"
@@ -124,32 +124,32 @@ screen censored_popup(continueLabel):
         xsize 1050
 
         if config_censored:
-            text "TO VIEW THIS SCENE YOU MUST HAVE NSFW ENABLED":
+            text _("TO VIEW THIS SCENE YOU MUST HAVE NSFW ENABLED"):
                 size 35
                 color "#FFFFFF"
                 style "nsfw_text"
                 xalign 0.5
 
-            text "IN THE SETTINGS MENU":
+            text _("IN THE SETTINGS MENU"):
                 size 35
                 color "#FFFFFF"
                 style "nsfw_text"
                 xalign 0.5
 
         else:
-            text "YOU HAVE NSFW CONTENT ENABLED SO YOU MAY":
+            text _("YOU HAVE NSFW CONTENT ENABLED SO YOU MAY"):
                 size 35
                 color "#FFFFFF"
                 style "nsfw_text"
                 xalign 0.5
 
-            text "CONTINUE TO VIEW THE FOLLOWING SCENE":
+            text _("CONTINUE TO VIEW THE FOLLOWING SCENE"):
                 size 35
                 color "#FFFFFF"
                 style "nsfw_text"
                 xalign 0.5
 
-    text "OR YOU MAY CHOOSE TO SKIP THIS SCENE":
+    text _("OR YOU MAY CHOOSE TO SKIP THIS SCENE"):
         size 35
         color "#FFFFFF"
         style "nsfw_text"
@@ -208,9 +208,9 @@ screen kiwiiPopup():
     modal True
     zorder 200
 
-    use alert_template("You've just unlocked the social media app Kiwii! Open it now from the homescreen."):
+    use alert_template(_("You've just unlocked the social media app Kiwii! Open it now from the homescreen.")):
 
-        textbutton "OK":
+        textbutton _("OK"):
             xalign 0.5
             action [Function(kiwii_firstTimeMessages), SetVariable("kiwii_firstTime", False), Hide("kiwiiPopup")]
 
@@ -222,9 +222,9 @@ screen kiwiiPopup():
 screen fightPopup(fightMove):
     modal True
     
-    use alert_template("Congratulations! You have learned a new fighting move: {{b}}{}{{/b}}.".format(fightMove)):
+    use alert_template(_("Congratulations! You have learned a new fighting move: {{b}}{}{{/b}}.".format(fightMove))):
 
-        textbutton "OK":
+        textbutton _("OK"):
             action Return()
 
     if config_debug:
@@ -261,10 +261,10 @@ screen whats_new(dialogue):
 
             vbox:
                 spacing 10
-                text "What's New:" xalign 0.5 bold True
+                text _("What's New:") xalign 0.5 bold True
                 text dialogue size 18
 
-    textbutton "Exit":
+    textbutton _("Exit"):
         action Hide("whats_new")
         xpos 50
         yalign 1.0
@@ -306,7 +306,7 @@ screen sex_overlay(continue_label):
     imagebutton:
         idle image_path + "continue-idle.webp"
         hover image_path + "continue-hover.webp"
-        action Show("confirm", message="Are you sure you want to end the free roam?", yes_action=[Hide("confirm"), Jump(continue_label)])
+        action Show("confirm", message=_("Are you sure you want to end the free roam?"), yes_action=[Hide("confirm"), Jump(continue_label)])
         xalign 1.0
         xoffset -100
         ypos 100

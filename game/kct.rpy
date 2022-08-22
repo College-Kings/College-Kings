@@ -1,8 +1,8 @@
 init python:
     class KCT(Enum):
-        BRO = "bro"
-        BOYFRIEND = "boyfriend"
-        TROUBLEMAKER = "troublemaker"
+        BRO = _("bro")
+        BOYFRIEND = _("boyfriend")
+        TROUBLEMAKER = _("troublemaker")
 
 
     def add_point(var, value=1):
@@ -11,7 +11,7 @@ init python:
             return
 
         if pb_kct_notification:
-            renpy.show_screen("popup", message="{} point added".format(var.value.capitalize()))
+            renpy.show_screen("popup", message=_("{} point added".format(var.value.capitalize())))
 
         # Update the KCT variables
         setattr(store, var.value, getattr(store, var.value) + value)
@@ -30,7 +30,7 @@ init python:
 
         # Notify user on KCT change
         if kct != old_kct:
-            renpy.notify("Your KCT has changed to " + kct)
+            renpy.notify(_("Your KCT has changed to " + kct))
 
 
 # KCT Screens
@@ -60,12 +60,12 @@ screen kct_popup(required_kct=None):
     zorder 300
 
     if required_kct is None or required_kct == kct:
-        $ message = "Congratulations! Your Key Character Trait {{b}}{}{{/b}} has just changed the outcome of a decision someone was making.".format(kct)
+        $ message = _("Congratulations! Your Key Character Trait {b}[kct]{/b} has just changed the outcome of a decision someone was making.")
     else:
-        $ message = "Unfortunately, your Key Character Trait {{b}}{}{{/b}} did not change the outcome of this decision.".format(kct)
+        $ message = _("Unfortunately, your Key Character Trait {b}[kct]{/b} did not change the outcome of this decision.")
 
     use alert_template(message):
-        textbutton "OK":
+        textbutton _("OK"):
             align (0.5, 1.0)
             action Return()
 
