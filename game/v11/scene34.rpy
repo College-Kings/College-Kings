@@ -846,9 +846,10 @@ label v11_cardealership:
 
         cl "You better."
 
-        scene v11cd50 # TPP. Mc heads to his room, disapointed face, mouth closed
-        with dissolve
+        if chloe.relationship >= Relationship.GIRLFRIEND:
+            scene v11cd50 # TPP. Mc heads to his room, disapointed face, mouth closed
+            with dissolve
 
-        pause 0.75
+            pause 0.75
 
         jump v11_riley_sex
