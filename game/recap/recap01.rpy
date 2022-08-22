@@ -44,8 +44,7 @@ label recap_start:
     # r2 
 
     # input Ask the player for their name 
-    $ name = renpy.input("What's your name?", default=("Alex").strip())
-    $ name = name.strip()
+    $ name = renpy.input(_("What's your name?"), default=(_("Alex"))).strip() or _("Alex")
 
     narrator "All of the sudden, I could be whoever I wanted to be..."
 

@@ -1,23 +1,23 @@
 init python:
     class PathBuilderCatagories(Enum):
         START_LOCATION = {
-            1: "Pick your starting location (Act 1 Start skips steps 3-5)",
+            1: _("Pick your starting location (Act 1 Start skips steps 3-5)"),
             "background": "main_menu/path_builder/images/path_builder_step_1.webp"
         }
         KCT = {
-            2: "Pick your starting KCT",
+            2: _("Pick your starting KCT"),
             "background": "main_menu/path_builder/images/path_builder_step_2.webp",
         }
         FRATERNITY = {
-            3: "Pick a fraternity",
+            3: _("Pick a fraternity"),
             "background": "main_menu/path_builder/images/path_builder_step_3.webp",
         }
         GIRL = {
-            4: "Pick which girls you want to be romantically involved with",
+            4: _("Pick which girls you want to be romantically involved with"),
             "background": "main_menu/path_builder/images/path_builder_step_4.webp",
         }
         HOMECOMING_DATE = {
-            5: "Pick your homecoming date",
+            5: _("Pick your homecoming date"),
             "background": "main_menu/path_builder/images/path_builder_step_5.webp"
         }     
 
@@ -87,7 +87,7 @@ screen path_builder_alert():
         xysize (742, 356)
         pos (587, 364)
 
-        text "THE PATH BUILDER CONTAINS SPOILERS FOR THE STORY\nOF THE GAME. ARE YOU SURE YOU WANT TO CONTINUE?\nYOU WILL NOT BE ABLE TO EARN ACHIEVEMENTS IN THIS MODE.":
+        text _("THE PATH BUILDER CONTAINS SPOILERS FOR THE STORY\nOF THE GAME. ARE YOU SURE YOU WANT TO CONTINUE?\nYOU WILL NOT BE ABLE TO EARN ACHIEVEMENTS IN THIS MODE."):
             xsize 572
             xalign 0.5
             ypos 66
@@ -103,7 +103,7 @@ screen path_builder_alert():
                     idle "path_builder_button_idle"
                     hover "path_builder_button_hover"
                     action [Hide("path_builder_alert"), Show("path_builder")]
-                text "YES" align (0.5, 0.5)
+                text _("YES") align (0.5, 0.5)
 
             fixed:
                 xysize (132, 61)
@@ -112,7 +112,7 @@ screen path_builder_alert():
                     idle "path_builder_button_idle"
                     hover "path_builder_button_hover"
                     action Hide("path_builder_alert")
-                text "NO" align (0.5, 0.5)
+                text _("NO") align (0.5, 0.5)
 
 
 style path_builder_alert_text is bebas_neue_30
@@ -153,7 +153,7 @@ screen path_builder():
             selected_idle image_path + "button_hover.webp"
             action ShowMenu("path_builder_advanced_settings")
 
-        text "Advanced":
+        text _("Advanced"):
             align (0.5, 0.5)
             yoffset -50
             color "#FFF"
@@ -265,7 +265,7 @@ screen path_builder():
                     selected_idle image_path + "pb_ticked.webp"
                     action ToggleVariable("locked_kct")
 
-                text "Lock KCT (Prevent it from changing)":
+                text _("Lock KCT (Prevent it from changing)"):
                     yoffset -7
 
         elif catagory == PathBuilderCatagories.START_LOCATION and not config.enable_steam:
@@ -282,7 +282,7 @@ screen path_builder():
                 xysize (270, 61)
                 xalign 0.5
 
-                text "Latest Update" align (0.5, 0.5)
+                text _("Latest Update") align (0.5, 0.5)
 
     hbox: 
         spacing 50
@@ -318,7 +318,7 @@ screen path_builder_advanced_settings():
 
     add image_path + "path_builder_background.webp"
 
-    text "Advanced Settings" align (0.5, 0.15)
+    text _("Advanced Settings") align (0.5, 0.15)
 
     imagebutton:
         idle "gui/common/return_idle.webp"
@@ -333,7 +333,7 @@ screen path_builder_advanced_settings():
         vbox:
             spacing 20
 
-            text "Extras" color "#FFD166" size 50
+            text _("Extras") color "#FFD166" size 50
 
             if renpy.loadable("v10/scene1.rpy"):
                 hbox:
@@ -345,7 +345,7 @@ screen path_builder_advanced_settings():
                         selected_idle image_path + "pb_ticked.webp"
                         action ToggleVariable("emily_europe")
 
-                    text "Invite Emily to Europe":
+                    text _("Invite Emily to Europe"):
                         yoffset -7
 
             if renpy.loadable("v11/scene1.rpy"):
@@ -358,7 +358,7 @@ screen path_builder_advanced_settings():
                         selected_idle image_path + "pb_ticked.webp"
                         action ToggleVariable("v11s1_courtpoints", 100, 0)
 
-                    text "Win Penelope's court case":
+                    text _("Win Penelope's court case"):
                         yoffset -7
 
             if renpy.loadable("v14/scene1.rpy"):
@@ -371,7 +371,7 @@ screen path_builder_advanced_settings():
                         selected_idle image_path + "pb_ticked.webp"
                         action ToggleVariable("v14_help_chloe")
 
-                    text "Help Chloe's Campaign":
+                    text _("Help Chloe's Campaign"):
                         yoffset -7
                 
                 hbox:
@@ -383,7 +383,7 @@ screen path_builder_advanced_settings():
                         selected_idle image_path + "pb_ticked.webp"
                         action ToggleVariable("v14_help_lindsey")
 
-                    text "Help Lindsey's Campaign":
+                    text _("Help Lindsey's Campaign"):
                         yoffset -7
 
                 hbox:
@@ -395,7 +395,7 @@ screen path_builder_advanced_settings():
                         selected_idle image_path + "pb_ticked.webp"
                         action ToggleVariable("v14_SamanthaDrugs", False, True)
 
-                    text "Encourage Sam to get clean":
+                    text _("Encourage Sam to get clean"):
                         yoffset -7
 
                 hbox:
@@ -407,7 +407,7 @@ screen path_builder_advanced_settings():
                         selected_idle image_path + "pb_ticked.webp"
                         action ToggleVariable("v14_amber_clean")
 
-                    text "Encourage Amber to get clean":
+                    text _("Encourage Amber to get clean"):
                         yoffset -7
 
                 hbox:
@@ -419,7 +419,7 @@ screen path_builder_advanced_settings():
                         selected_idle image_path + "pb_ticked.webp"
                         action ToggleVariable("v14_emily_ily")
 
-                    text "Tell Emily you love her":
+                    text _("Tell Emily you love her"):
                         yoffset -7
 
                 hbox:
@@ -431,7 +431,7 @@ screen path_builder_advanced_settings():
                         selected_idle image_path + "pb_ticked.webp"
                         action ToggleVariable("AutumnTrust")
 
-                    text "Autumn trusts you":
+                    text _("Autumn trusts you"):
                         yoffset -7
 
                 hbox:
@@ -447,7 +447,7 @@ screen path_builder_advanced_settings():
                         else:
                             action AddToSet(sceneList, "v14_threesome")
 
-                    text "Had Riley & Aubrey Threesome":
+                    text _("Had Riley & Aubrey Threesome"):
                         yoffset -7
                         
                 hbox:
@@ -459,13 +459,13 @@ screen path_builder_advanced_settings():
                         selected_idle image_path + "pb_ticked.webp"
                         action ToggleField(lauren, "relationship", Relationship.KISS, Relationship.FRIEND)
 
-                    text "Kissed Lauren":
+                    text _("Kissed Lauren"):
                         yoffset -7
 
         vbox:
             spacing 20
 
-            text "Gameplay Changes" color "#FFD166" size 50
+            text _("Gameplay Changes") color "#FFD166" size 50
 
             if renpy.loadable("v14/scene1.rpy"):            
                 hbox:
@@ -477,7 +477,7 @@ screen path_builder_advanced_settings():
                         selected_idle image_path + "pb_ticked.webp"
                         action [ToggleVariable("lindsey_board.money", 10000, 200), ToggleVariable("chloe_board.money", 10000, 1500)]
 
-                    text "Unlimited Presidency Campaign Budget":
+                    text _("Unlimited Presidency Campaign Budget"):
                         yoffset -7
 
             hbox:
@@ -489,7 +489,7 @@ screen path_builder_advanced_settings():
                     selected_idle image_path + "pb_ticked.webp"
                     action ToggleVariable("pb_kct_shown")
 
-                text "Show preferred KCT for each girl":
+                text _("Show preferred KCT for each girl"):
                     yoffset -7
 
             hbox:
@@ -501,7 +501,7 @@ screen path_builder_advanced_settings():
                     selected_idle image_path + "pb_ticked.webp"
                     action ToggleVariable("pb_kct_notification")
 
-                text "Show a notification whenever you gain KCT points":
+                text _("Show a notification whenever you gain KCT points"):
                     yoffset -7
     
 

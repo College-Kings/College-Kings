@@ -202,9 +202,9 @@ label fight_start_turn(fight, target, attacker):
     scene black
 
     if attacker == fight.player.fighter:
-        show text "Your Turn"
+        show text _("Your Turn")
     else:
-        show text "Opponent's turn"
+        show text _("Opponent's turn")
 
     pause 1.0
 

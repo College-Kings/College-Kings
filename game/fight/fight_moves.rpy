@@ -62,87 +62,87 @@ init 10 python:
 
     class EndTurn(TurnMove):
         def __init__(self):
-            self.name = "End Turn"
-            self.description = "End your turn and retain up to 2 stamina"
+            self.name = _("End Turn")
+            self.description = _("End your turn and retain up to 2 stamina")
             self.stamina_cost = 0
             self.ideal_stance = None
             self.end_stance = None
-            self.effect = "Save up to 2 Stamina to use next turn."
+            self.effect = _("Save up to 2 Stamina to use next turn.")
 
 
     class Turtle(TurnMove):
         def __init__(self):
-            self.name = "Turtle"
-            self.description = "End turn and set stance to Defensive"
+            self.name = _("Turtle")
+            self.description = _("End turn and set stance to Defensive")
             self.stamina_cost = 4
             self.ideal_stance = FightStance.SOLID
             self.end_stance = FightStance.DEFENSIVE
-            self.effect = "+1 Guard"
+            self.effect = _("+1 Guard")
 
 
     class BodyHook(BaseAttack):
         def __init__(self, images: dict[str, str]):
             self.images = images
 
-            self.name = "Body Hook"
-            self.description = "A devastating attack to your opponent's body"
+            self.name = _("Body Hook")
+            self.description = _("A devastating attack to your opponent's body")
             self.damage = 1
             self.stamina_cost = 2
             self.ideal_stance = FightStance.FORWARD
             self.end_stance = FightStance.SOLID
-            self.effect = "+20% Damage to next attack this turn"
+            self.effect = _("+20% Damage to next attack this turn")
 
 
     class Jab(BaseAttack):
         def __init__(self, images: dict[str, str]):
             self.images = images
 
-            self.name = "Jab"
-            self.description = "Attack with a quick jab straight to the chin."
+            self.name = _("Jab")
+            self.description = _("Attack with a quick jab straight to the chin.")
             self.damage = 2
             self.stamina_cost = 3
             self.ideal_stance = FightStance.AGGRESSIVE
             self.end_stance = FightStance.FORWARD
-            self.effect = "Next Attack this turn ignores guard"
+            self.effect = _("Next Attack this turn ignores guard")
 
 
     class Hook(BaseAttack):
         def __init__(self, images: dict[str, str]):
             self.images = images
 
-            self.name = "Hook"
-            self.description = "A devastating attack to your opponent's head."
+            self.name = _("Hook")
+            self.description = _("A devastating attack to your opponent's head.")
             self.damage = 3
             self.stamina_cost = 4
             self.ideal_stance = FightStance.FORWARD
             self.end_stance = FightStance.AGGRESSIVE
-            self.effect = "Opp has -2 Stamina at the start of their next turn if not blocked [[Once per turn]]"
+            self.effect = _("Opp has -2 Stamina at the start of their next turn if not blocked [[Once per turn]]")
 
 
     class Kick(BaseAttack):
         def __init__(self, images: dict[str, str]):
             self.images = images
 
-            self.name = "Kick"
-            self.description = "A devastating attack to your opponent's body."
+            self.name = _("Kick")
+            self.description = _("A devastating attack to your opponent's body.")
             self.damage = 4
             self.stamina_cost = 5
             self.ideal_stance = FightStance.SOLID
             self.end_stance = FightStance.FORWARD
-            self.effect = "+20% Damage if used with exactly 5 Stamina left"
+            self.effect = _("+20% Damage if used with exactly 5 Stamina left")
 
 
     class Headbutt(SpecialMove):
         def __init__(self, images: dict[str, str]):
             self.images = images
 
-            self.name = "Headbutt"
-            self.description = ""
+            self.name = _("Headbutt")
+            self.description = _("")
             self.damage = 2
             self.stamina_cost = 2
             self.ideal_stance = FightStance.AGGRESSIVE
             self.end_stance = FightStance.SOLID
-            self.effect = 'If you used "Turtle" last turn, deal +30% more Damage'
+            self.effect = _('If you used "Turtle" last turn, deal +30% more Damage')
 
         def is_sensitive(self, fight: Fight, target: BasePlayer, attacker: BasePlayer):
             return fight.stats[target.name]["guards_broken"] >= 3
@@ -167,13 +167,13 @@ init 10 python:
         def __init__(self, images: dict[str, str]):
             self.images = images
 
-            self.name = "Overhand Punch"
-            self.description = ""
+            self.name = _("Overhand Punch")
+            self.description = _("")
             self.damage = 3
             self.stamina_cost = 3
             self.ideal_stance = FightStance.FORWARD
             self.end_stance = FightStance.AGGRESSIVE
-            self.effect = "Breaks Guard and deals 100% Damage if it's at 30% or less"
+            self.effect = _("Breaks Guard and deals 100% Damage if it's at 30% or less")
 
         def is_sensitive(self, fight: Fight, target: BasePlayer, attacker: BasePlayer):
             return fight.stats[attacker.name]["guards_broken"] >= 3
@@ -198,14 +198,14 @@ init 10 python:
         def __init__(self, images: dict[str, str]):
             self.images = images
 
-            self.name = "Uppercut"
-            self.description = ""
+            self.name = _("Uppercut")
+            self.description = _("")
             self.damage = 4
             self.stamina_cost = 4
             self.ideal_stance = FightStance.AGGRESSIVE
             self.end_stance = FightStance.FORWARD
             self.effect = (
-                "If Opponents's Will is 20% or less, this attack deals +50% Damage"
+                _("If Opponents's Will is 20% or less, this attack deals +50% Damage")
             )
 
         def is_sensitive(self, fight: Fight, target: BasePlayer, attacker: BasePlayer):
@@ -231,13 +231,13 @@ init 10 python:
         def __init__(self, images: dict[str, str]):
             self.images = images
 
-            self.name = "Sucker Punch"
-            self.description = ""
+            self.name = _("Sucker Punch")
+            self.description = _("")
             self.damage = 5
             self.stamina_cost = 5
             self.ideal_stance = FightStance.SOLID
             self.end_stance = FightStance.FORWARD
-            self.effect = "50% Damage bypasses Guard"
+            self.effect = _("50% Damage bypasses Guard")
 
         def is_sensitive(self, fight: Fight, target: BasePlayer, attacker: BasePlayer):
             return fight.stats[attacker.name]["damage_taken"] >= 40

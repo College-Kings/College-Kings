@@ -25,7 +25,7 @@ screen fight_overview_info(competitor, profile_picture, is_player=False):
             xysize (170, 30)
             pos (568, -40)
 
-            text "COMPETITOR" size 16 align (0.5, 0.5)
+            text _("COMPETITOR") size 16 align (0.5, 0.5)
 
         hbox:
             pos (20, -55)
@@ -37,7 +37,7 @@ screen fight_overview_info(competitor, profile_picture, is_player=False):
                 spacing 20
 
                 text competitor.name size 34
-                text "VICTORIES: {}".format(competitor.wins) size 19
+                text _("VICTORIES: [competitor.wins]") size 19
 
         hbox:
             xalign 0.5
@@ -54,7 +54,7 @@ screen fight_overview_info(competitor, profile_picture, is_player=False):
             hbox:
                 spacing 50
 
-                text "BASIC ATTACKS" yalign 0.5
+                text _("BASIC ATTACKS") yalign 0.5
 
                 grid 2 2:
                     spacing 10
@@ -74,7 +74,7 @@ screen fight_overview_info(competitor, profile_picture, is_player=False):
             hbox:
                 spacing 35
 
-                text "SPECIAL ATTACK" yalign 0.5
+                text _("SPECIAL ATTACK") yalign 0.5
 
                 vpgrid:
                     cols 2
@@ -101,7 +101,7 @@ screen fight_overview_info(competitor, profile_picture, is_player=False):
             hbox:
                 spacing 25
 
-                text "QUIRK" yalign 0.5
+                text _("QUIRK") yalign 0.5
 
                 vpgrid:
                     cols 3
@@ -132,9 +132,9 @@ screen fight_overview_info(competitor, profile_picture, is_player=False):
             xysize (700, 100)
 
             if tooltip and is_player:
-                text "[tooltip]" align (0.5, 0.5)
+                text _("[tooltip]") align (0.5, 0.5)
             else:
-                text "Special Attacks and Quirks are {b}disabled{/b} to keep the fight simple and get accurate feedback on player experience" align (0.5, 0.5)
+                text _("Special Attacks and Quirks are {b}disabled{/b} to keep the fight simple and get accurate feedback on player experience") align (0.5, 0.5)
 
 
 screen fight_overview(fight, title):
@@ -142,7 +142,7 @@ screen fight_overview(fight, title):
     style_prefix "fight_overview"
 
     default image_path = "images/fight/overview/"
-    default difficulties = ["Easy", "Normal", "Hard", "Oscar"]
+    default difficulties = [_("Easy"), _("Normal"), _("Hard"), _("Oscar")]
     default difficulty_index = 1
 
     python:
@@ -175,7 +175,7 @@ screen fight_overview(fight, title):
         yoffset -100
         spacing 20
 
-        text "DIFFICULTY:"
+        text _("DIFFICULTY:")
 
         imagebutton:
             idle Transform("gui/common/left-arrow.webp", xysize=(10, 15))
@@ -262,7 +262,7 @@ screen fight_player_turn(fight, player, opponent):
                         vbox:
                             align (0.5, 0.5)
 
-                            text "CURRENT STANCE" size 14 xalign 0.5
+                            text _("CURRENT STANCE") size 14 xalign 0.5
                             text i.name xalign 0.5
 
                     elif selected_move is not None and i == selected_move.ideal_stance:
@@ -273,7 +273,7 @@ screen fight_player_turn(fight, player, opponent):
                         vbox:
                             align (0.5, 0.5)
 
-                            text "IDEAL STANCE" size 14 xalign 0.5
+                            text _("IDEAL STANCE") size 14 xalign 0.5
                             text i.name xalign 0.5
  
                     elif selected_move is not None and i == selected_move.end_stance:
@@ -284,7 +284,7 @@ screen fight_player_turn(fight, player, opponent):
                         vbox:
                             align (0.5, 0.5)
 
-                            text "END STANCE" size 14 xalign 0.5
+                            text _("END STANCE") size 14 xalign 0.5
                             text i.name xalign 0.5
 
                     else:
@@ -351,7 +351,7 @@ screen fight_player_turn(fight, player, opponent):
                 else:
                     action [SetScreenVariable("selected_move", player.special_attack), Show("action_info", None, fight, player, opponent, player.special_attack)]
 
-                text str(player.special_attack.stamina_cost) xalign 1.0 font "fonts/Montserrat-Bold.ttf"
+                text _("[player.special_attack.stamina_cost]") xalign 1.0 font "fonts/Montserrat-Bold.ttf"
                 text player.special_attack.name align (0.5, 0.5) text_align 0.5
 
     vbox:
@@ -360,7 +360,7 @@ screen fight_player_turn(fight, player, opponent):
         yoffset -35
         spacing 5
 
-        text "STAMINA" size 15
+        text _("STAMINA") size 15
 
         hbox:
             spacing 5
@@ -515,7 +515,7 @@ screen action_info(fight, player, opponent, move):
                     ysize 30
 
                     if hasattr(move, "damage") and move.damage is not None:
-                        text "Damage: {}".format(move.damage) size 15 yalign 0.5
+                        text _("Damage: [move.damage]") size 15 yalign 0.5
 
                     text move.name size 30 align (0.5, 0.5)
 
@@ -540,7 +540,7 @@ screen action_info(fight, player, opponent, move):
                 xysize (160, 96)
                 padding (32, 32)
 
-                text "USE" align (0.5, 0.5)
+                text _("USE") align (0.5, 0.5)
 
 
 screen fight_debug(player, opponent):
