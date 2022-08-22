@@ -1,36 +1,108 @@
 init python:
+    class KiwiiComment:
+        def __init__(
+            self,
+            user: Union["PlayableCharacter", NonPlayableCharacter],
+            message: str,
+            numberLikes: int = renpy.random.randint(250, 500),
+            mentions: Optional[
+                list[Union[NonPlayableCharacter, "PlayableCharacter"]]
+            ] = None,
+        ):
+            self.user = user
+            self.message = message
+            self.numberLikes = numberLikes
+
+            self.mentions = mentions if mentions is not None else []
+
+            self.liked = False
+            self._replies: list[KiwiiReply] = []
+            self.reply: Optional[KiwiiReply] = None
+
+            # Test cases
+            assert iter(self.mentions)
+
+        @property
+        def replies(self):
+            try:
+                self._replies
+            except AttributeError:
+                self._replies = []
+
+            return self._replies
+
+        @replies.setter
+        def replies(self, value: list["KiwiiReply"]):
+            self._replies = value
+
+
+    class KiwiiReply(KiwiiComment):
+        def __init__(
+            self,
+            message: str,
+            func: Optional[Callable[["KiwiiPost"], None]] = None,
+            numberLikes: int = renpy.random.randint(250, 500),
+            mentions: Optional[
+                list[Union[NonPlayableCharacter, "PlayableCharacter"]]
+            ] = None,
+            disabled: bool = False,
+        ):
+            self.message = message
+            self.func = func
+
+            if kct == "popular":
+                self.numberLikes = int(numberLikes * 1.5)
+            elif kct == "confident":
+                self.numberLikes = int(numberLikes * 1.2)
+            else:
+                self.numberLikes = numberLikes
+
+            self.mentions = mentions if mentions is not None else []
+
+            # Test cases
+            assert iter(self.mentions)
+
+
     class KiwiiPost:
         """
         Creates a post for the in game phone app, Kiwii
 
         Attributes:
-            user (NonPlayableCharacter): 
-            image (str): 
+            user (NonPlayableCharacter):
+            image (str):
             message (str, optional):
-            mentions (list<NonPlayableCharacter>, optional): 
+            mentions (list<NonPlayableCharacter>, optional):
             numberLikes (int, optional):
         """
 
-        def __init__(self, user, image, message="", mentions=None, numberLikes=renpy.random.randint(250, 500)):
+        def __init__(
+            self,
+            user: Union["PlayableCharacter", NonPlayableCharacter],
+            image: str,
+            message: str = "",
+            mentions: Optional[
+                list[Union[NonPlayableCharacter, "PlayableCharacter"]]
+            ] = None,
+            numberLikes: int = renpy.random.randint(250, 500),
+        ):
             self.user = user
-            self.image = "images/phone/kiwii/posts/{}".format(image)
+            self.image = f"images/{image}"
             self.message = message
-
-            if isinstance(mentions, basestring): self.mentions = [mentions]
-            elif isinstance(mentions, list): self.mentions = mentions
-            else: self.mentions = []
+            self.mentions = mentions if mentions is not None else []
 
             self.numberLikes = numberLikes
 
             self.liked = False
 
-            self.sentComments = []
-            self.pending_comments = []
+            self.sent_comments: list[KiwiiComment] = []
+            self.pending_comments: list[KiwiiComment] = []
 
-            kiwiiPosts.append(self)
+            kiwii_posts.append(self)
 
-            if kiwii not in phone.applications:
-                phone.applications.append(kiwii)
+            kiwii.unlock()
+
+            # Test cases
+            assert iter(self.mentions)
 
         @property
         def username(self):
@@ -41,36 +113,49 @@ init python:
             return self.user.profile_picture
 
         @property
-        def replies(self):
-            try: return self.sentComments[-1].replies
-            except (AttributeError, IndexError): return []
+        def replies(self) -> list[KiwiiReply]:
+            try:
+                return self.sent_comments[-1].replies
+            except (AttributeError, IndexError):
+                return []
 
-        def toggleLike(self):
-            self.liked = not self.liked
-
-            if self.liked: self.numberLikes += 1
-            else: self.numberLikes -= 1
-            
-        def new_comment(self, user, message, numberLikes=renpy.random.randint(250, 500), mentions=None):
+        def new_comment(
+            self,
+            user: Union["PlayableCharacter", NonPlayableCharacter],
+            message: str,
+            numberLikes: int = renpy.random.randint(250, 500),
+            mentions: Optional[
+                list[Union[NonPlayableCharacter, "PlayableCharacter"]]
+            ] = None
+        ):
             comment = KiwiiComment(user, message, numberLikes, mentions)
-            
+
             # Add message to queue
             if self.replies:
                 self.pending_comments.append(comment)
             else:
-                self.sentComments.append(comment)
-            
+                self.sent_comments.append(comment)
+
             kiwii.notification = True
             return comment
 
-        def add_reply(self, message, func=None, numberLikes=renpy.random.randint(250, 500), mentions=None, disabled=False):
-            reply = KiwiiReply(message, func, numberLikes, mentions)
-            
+        def add_reply(
+            self,
+            content: str,
+            func: Optional[Callable[["KiwiiPost"], None]] = None,
+            numberLikes: int = renpy.random.randint(250, 500),
+            mentions: Optional[
+                list[Union[NonPlayableCharacter, "PlayableCharacter"]]
+            ] = None,
+            disabled: bool = False,
+        ):
+            reply = KiwiiReply(content, func, numberLikes, mentions)
+
             # Append reply to last sent message
             if self.pending_comments:
                 self.pending_comments[-1].replies.append(reply)
-            elif self.sentComments:
-                self.sentComments[-1].replies.append(reply)
+            elif self.sent_comments:
+                self.sent_comments[-1].replies.append(reply)
             else:
                 message = self.new_comment(mc, "")
                 message.replies.append(reply)
@@ -78,98 +163,76 @@ init python:
             kiwii.notification = True
             return reply
 
-        def selected_reply(self, reply):
-            self.sentComments.append(KiwiiComment(mc, reply.message, reply.numberLikes, reply.mentions))
-            self.sentComments[-1].reply = reply
-            self.sentComments[-1].replies = []
+        def selected_reply(self, reply: KiwiiReply):
+            self.sent_comments.append(
+                KiwiiComment(mc, reply.message, reply.numberLikes, reply.mentions)
+            )
+            self.sent_comments[-1].reply = reply
+            self.sent_comments[-1].replies = []
 
             # Run reply function
-            try:
-                reply.func()
+            if reply.func is not None:
+                try:
+                    reply.func(self)
+                except TypeError:
+                    reply.func()  # type: ignore
                 reply.func = None
-            except TypeError: pass
 
             # Send next queued message(s)
             try:
                 while not self.replies:
-                    self.sentComments.append(self.pending_comments.pop(0))
-            except IndexError: pass
-
-        def get_message(self):
-            usernames = [mention.username for mention in self.mentions]
-
-            message = ", @".join(usernames)
-            if usernames: message = "{{color=#3498DB}}{{b}}@{users}{{/b}}{{/color}} {text}".format(users=message, text=self.message)
-            else: message = self.message
-
-            return message
+                    self.sent_comments.append(self.pending_comments.pop(0))
+            except IndexError:
+                pass
 
         def remove_post(self):
-            kiwiiPosts.remove(self)
+            if self in kiwii_posts:
+                kiwii_posts.remove(self)
             del self
 
         # Backwards compatibility.
-        def newComment(self, user, message, numberLikes=renpy.random.randint(250, 500), mentions=None):
+        def newComment(
+            self,
+            user: NonPlayableCharacter,
+            message: str,
+            numberLikes: int = renpy.random.randint(250, 500),
+            mentions: Optional[
+                list[Union[NonPlayableCharacter, "PlayableCharacter"]]
+            ] = None
+        ):
             return self.new_comment(user, message, numberLikes, mentions)
 
-        def addReply(self, message, func=None, numberLikes=renpy.random.randint(250, 500), mentions=None, disabled=False):
+        def addReply(
+            self,
+            message: str,
+            func: Optional[Callable[["KiwiiPost"], None]] = None,
+            numberLikes: int = renpy.random.randint(250, 500),
+            mentions: Optional[
+                list[Union[NonPlayableCharacter, "PlayableCharacter"]]
+            ] = None,
+            disabled: bool = False,
+        ):
             return self.add_reply(message, func, numberLikes, mentions)
 
-        def selectedReply(self, reply):
+        def selectedReply(self, reply: KiwiiReply):
             return self.selected_reply(reply)
 
 
-    class KiwiiComment(KiwiiPost):
-        def __init__(self, user, message, numberLikes=renpy.random.randint(250, 500), mentions=None):
-            self.user = user
-            self.message = message
-            self.numberLikes = numberLikes
-
-            if isinstance(mentions, basestring): self.mentions = [mentions]
-            elif isinstance(mentions, list): self.mentions = mentions
-            else: self.mentions = []
-
-            self.liked = False
-            self._replies = []
-            self.reply = None
-
-        @property
-        def replies(self):
-            try: self._replies
-            except AttributeError: self._replies = []
-
-            return self._replies
-
-        @replies.setter
-        def replies(self, value):
-            self._replies = value
-
-
-    class KiwiiReply(KiwiiComment):
-        def __init__(self, message, func=None, numberLikes=renpy.random.randint(250, 500), mentions=None, disabled=False):
-            self.message = message
-            self.func = func
-
-            if kct == "popular": self.numberLikes = int(numberLikes * 1.5)
-            elif kct == "confident": self.numberLikes = int(numberLikes * 1.2)
-            else: self.numberLikes = numberLikes
-
-            if isinstance(mentions, basestring): self.mentions = [mentions]
-            elif isinstance(mentions, list): self.mentions = mentions
-            else: self.mentions = []
-
     def get_total_likes():
-        return sum(post.numberLikes for post in kiwiiPosts if post.user == mc) + sum(
+        return sum(post.numberLikes for post in kiwii_posts if post.user == mc) + sum(
             comment.numberLikes
-            for post in kiwiiPosts
-            for comment in post.sentComments
+            for post in kiwii_posts
+            for comment in post.sent_comments
             if comment.user == mc
         )
 
-    def find_kiwii_post(image=None, message=None):
-        for post in kiwiiPosts:
-            if post.image == image: return post
-            if post.message == message: return post
+
+    def find_kiwii_post(image: Optional[str] = None, message: Optional[str] = None):
+        for post in kiwii_posts:
+            if post.image == image:
+                return post
+            if post.message == message:
+                return post
 
 
 screen kiwii_base():
@@ -202,7 +265,7 @@ screen kiwii_base():
                 imagebutton:
                     idle image_path + "liked-button-idle.webp"
                     hover image_path + "liked-button-hover.webp"
-                    action Show("kiwii_home", posts=filter(lambda post: post.liked, kiwiiPosts))
+                    action Show("kiwii_home", posts=filter(lambda post: post.liked, kiwii_posts))
                     yalign 0.5
 
                 imagebutton:
@@ -266,7 +329,7 @@ screen kiwii_preferences():
                     outlines [ (absolute(0), "#000", absolute(0), absolute(0)) ]
 
 
-screen kiwii_home(posts=kiwiiPosts):
+screen kiwii_home(posts=kiwii_posts):
     tag phone_tag
 
     default image_path = "images/phone/kiwii/app-assets/"
@@ -301,8 +364,8 @@ screen kiwii_home(posts=kiwiiPosts):
                             hbox:
                                 spacing 10
 
-                                add Transform(post.profile_picture, xysize=(55, 55))
-                                text post.username style "kiwii_ProfileName" yalign 0.5
+                                add Transform(post.user.profile_picture, xysize=(55, 55))
+                                text post.user.username style "kiwii_ProfileName" yalign 0.5
 
                             hbox:
                                 spacing 5
@@ -320,7 +383,7 @@ screen kiwii_home(posts=kiwiiPosts):
                                 idle Transform(post.image, xysize=(366, 206))
                                 action Show("kiwii_image", img=post.image)
                                 xalign 0.5
-                            text post.get_message() style "kiwii_CommentText" xalign 0.5
+                            text Kiwii.get_message(post) style "kiwii_CommentText" xalign 0.5
 
                         null height 10
 
@@ -333,7 +396,7 @@ screen kiwii_home(posts=kiwiiPosts):
                                     hover image_path + "like-press.webp"
                                     selected_idle image_path + "like-press.webp"
                                     selected post.liked
-                                    action Function(post.toggleLike)
+                                    action Function(Kiwii.toggle_liked, post)
 
                                 text "{}".format(post.numberLikes) style "kiwii_LikeCounter" yalign 0.5
 
@@ -380,7 +443,7 @@ screen kiwiiPost(post):
 
                 null
 
-                for comment in post.sentComments:
+                for comment in post.sent_comments:
                     if comment.message.strip():
                         vbox:
                             spacing 5
@@ -388,10 +451,10 @@ screen kiwiiPost(post):
                             hbox:
                                 spacing 10
 
-                                add Transform(comment.profile_picture, xysize=(55, 55))
-                                text comment.username style "kiwii_ProfileName" yalign 0.5
+                                add Transform(comment.user.profile_picture, xysize=(55, 55))
+                                text comment.user.username style "kiwii_ProfileName" yalign 0.5
 
-                            text comment.get_message() style "kiwii_CommentText"
+                            text Kiwii.get_message(comment) style "kiwii_CommentText"
 
                             hbox:
                                 spacing 5
@@ -401,7 +464,7 @@ screen kiwiiPost(post):
                                     hover image_path + "like-press.webp"
                                     selected_idle image_path + "like-press.webp"
                                     selected comment.liked
-                                    action Function(comment.toggleLike)
+                                    action Function(Kiwii.toggle_liked, comment)
                                 text "[comment.numberLikes]" style "kiwii_LikeCounter" yalign 0.5
 
     if post.replies:

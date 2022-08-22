@@ -268,7 +268,7 @@ screen v6_fr3middleroom():
     if config_debug:
         $ actions = (Show("v6_fr3kitchen2"), Jump("v6_fr3dsbathroom"), Show("v6_fr3garage"))
 
-        timer 0.1 action Show(renpy.random.choice(actions))
+        timer 0.1 action renpy.random.choice(actions)
 
 
 screen v6_fr3garage():

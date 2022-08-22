@@ -207,7 +207,7 @@ label v11_roommate:
 
             cl "Goodnight."
 
-            $ v11s19_kiwiiPost2 = KiwiiPost(chloe, "v11/v11_chloemcselfie.webp", _("My Europe roommate!"), numberLikes=756)
+            $ v11s19_kiwiiPost2 = KiwiiPost(chloe, "phone/kiwii/Posts/v11/v11_chloemcselfie.webp", _("My Europe roommate!"), numberLikes=756)
             $ v11s19_kiwiiPost2.newComment(aubrey, _("Look at you two!"), numberLikes=renpy.random.randint(100, 200))
             $ v11s19_kiwiiPost2.addReply(_("I think I made the correct choice of roommate ;)"), numberLikes=321)
             $ v11s19_kiwiiPost2.addReply(_("Glad to have you as my roommate Chloe!"), numberLikes=334)
@@ -318,7 +318,7 @@ label v11_roommate:
 
             cl "Haha, just like that."
 
-            $ v11s19_kiwiiPost1 = KiwiiPost(chloe, "v11/v11_chloemcselfie.webp", _("My Europe roommate!"), numberLikes=756)
+            $ v11s19_kiwiiPost1 = KiwiiPost(chloe, "phone/kiwii/Posts/v11/v11_chloemcselfie.webp", _("My Europe roommate!"), numberLikes=756)
             $ v11s19_kiwiiPost1.newComment(aubrey, _("Look at you two!"), numberLikes=renpy.random.randint(100, 200))
             $ v11s19_kiwiiPost1.addReply(_("I think I made the correct choice of roommate ;)"), numberLikes=321)
             $ v11s19_kiwiiPost1.addReply(_("Glad to have you as my roommate Chloe!"), numberLikes=334)
@@ -892,7 +892,7 @@ label v11_roommate:
 
                     ri "...And all of a sudden I'm tired. *Chuckles*"
 
-        $ v11s19_kiwiiPost3 = KiwiiPost(riley, "v11/v11_rileymcselfie.webp", _("Roll on Europe!"), numberLikes=456)
+        $ v11s19_kiwiiPost3 = KiwiiPost(riley, "phone/kiwii/Posts/v11/v11_rileymcselfie.webp", _("Roll on Europe!"), numberLikes=456)
         $ v11s19_kiwiiPost3.newComment(ryan, _("Good roommate pick!"), numberLikes=renpy.random.randint(100, 300))
         $ v11s19_kiwiiPost3.addReply(_("Europe's gonna be a blast!"), numberLikes=321)
         $ v11s19_kiwiiPost3.addReply(_("Glad to have you as my roommate Riley!"), numberLikes=334)

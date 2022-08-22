@@ -1,7 +1,10 @@
 python early:
     import os
-    from abc import ABCMeta, abstractmethod
+    from abc import ABC, abstractmethod
+    from dataclasses import dataclass
     from enum import Enum
+    from typing import Any, Callable, Optional, Union
+
 
     class SmartEnum(Enum):
         """

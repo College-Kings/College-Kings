@@ -6,15 +6,15 @@ init python:
         }
         KCT = {
             2: "Pick your starting KCT",
-            "background": "main_menu/path_builder/images/path_builder_step_2.webp"
+            "background": "main_menu/path_builder/images/path_builder_step_2.webp",
         }
         FRATERNITY = {
             3: "Pick a fraternity",
-            "background": "main_menu/path_builder/images/path_builder_step_3.webp"
+            "background": "main_menu/path_builder/images/path_builder_step_3.webp",
         }
         GIRL = {
             4: "Pick which girls you want to be romantically involved with",
-            "background": "main_menu/path_builder/images/path_builder_step_4.webp"
+            "background": "main_menu/path_builder/images/path_builder_step_4.webp",
         }
         HOMECOMING_DATE = {
             5: "Pick your homecoming date",
@@ -22,26 +22,48 @@ init python:
         }     
 
     class PathBuilderItem:
-        items = []
+        items: list["PathBuilderItem"] = []
 
-        def __init__(self, catagory, name, actions=None):
+        def __init__(
+            self,
+            catagory: PathBuilderCatagories,
+            name: str,
+            actions: Optional[list[Callable[[], None]]] = None,
+        ):
             self.catagory = catagory
             self.name = name
 
-            if actions is None: self.actions = []
-            elif isinstance(actions, list): self.actions = actions
-            else: self.actions = [actions]
+            if actions is None:
+                self.actions = []
+            elif isinstance(actions, list):
+                self.actions = actions
+            else:
+                self.actions = [actions]
 
             PathBuilderItem.items.append(self)
 
 
     class PathBuilderGirl(PathBuilderItem):
-        def __init__(self, catagory, name, kct, actions, frat_requirement=None, act_requirement=2):
-            PathBuilderItem.__init__(self, catagory, name, actions)
+        def __init__(
+            self,
+            girl: "NonPlayableCharacter",
+            reputation: str,
+            frat_requirement: Optional["Frat"] = None,
+            relationships: Optional[list["Relationship"]] = None,
+            actions: Optional[list[Callable[[], None]]] = None,
+        ):
+            PathBuilderItem.__init__(self, PathBuilderCatagories.GIRL, girl.name, actions)
 
-            self.kct = kct
+            self.girl = girl
+            self.reputation = reputation
             self.frat_requirement = frat_requirement
-            self.act_requirement = act_requirement
+
+            if relationships is None:
+                self.relationships: list[Relationship] = []
+            elif isinstance(relationships, list):
+                self.relationships = relationships
+            else:
+                self.relationships = [relationships]
 
 
     def get_catagory(step):

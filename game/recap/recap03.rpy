@@ -109,7 +109,7 @@ label recap_end:
     u "And then our Europe trip was over and it was time to fly home. It went by so fast but it's something I'll never forget!"
 
     if not is_CK2:
-        jump v11s2
+        jump v11_nora_chloe_hallway
     
     else:
         jump v1_start

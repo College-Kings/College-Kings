@@ -43,12 +43,12 @@ label v8_ending:
         $ imre.messenger.addReply(_("No, what?"))
         $ imre.messenger.newMessage(_("IDK, it's crazy"))
 
-        $ newKiwiiPost = KiwiiPost(chris, "v8/red_square.webp", "", numberLikes=renpy.random.randint(100, 200))
-        $ newKiwiiPost = KiwiiPost(grayson, "v8/red_square.webp", "", numberLikes=renpy.random.randint(100, 200))
-        $ newKiwiiPost = KiwiiPost(aaron, "v8/red_square.webp", "", numberLikes=renpy.random.randint(100, 200))
-        $ newKiwiiPost = KiwiiPost(cameron, "v8/red_square.webp", "", numberLikes=renpy.random.randint(100, 200))
-        $ newKiwiiPost = KiwiiPost(aubrey, "v8/red_square.webp", "", numberLikes=renpy.random.randint(100, 200))
-        $ newKiwiiPost = KiwiiPost(samantha, "v8/red_square.webp", "", numberLikes=renpy.random.randint(100, 200))
+        $ newKiwiiPost = KiwiiPost(chris, "phone/kiwii/Posts/v8/red_square.webp", "", numberLikes=renpy.random.randint(100, 200))
+        $ newKiwiiPost = KiwiiPost(grayson, "phone/kiwii/Posts/v8/red_square.webp", "", numberLikes=renpy.random.randint(100, 200))
+        $ newKiwiiPost = KiwiiPost(aaron, "phone/kiwii/Posts/v8/red_square.webp", "", numberLikes=renpy.random.randint(100, 200))
+        $ newKiwiiPost = KiwiiPost(cameron, "phone/kiwii/Posts/v8/red_square.webp", "", numberLikes=renpy.random.randint(100, 200))
+        $ newKiwiiPost = KiwiiPost(aubrey, "phone/kiwii/Posts/v8/red_square.webp", "", numberLikes=renpy.random.randint(100, 200))
+        $ newKiwiiPost = KiwiiPost(samantha, "phone/kiwii/Posts/v8/red_square.webp", "", numberLikes=renpy.random.randint(100, 200))
         
         scene v8send4 # TPP. Show MC, MC looks really confused.
         with dissolve
@@ -97,12 +97,12 @@ label v8_ending:
         $ ryan.messenger.addReply(_("I don't know. What is it?"))
         $ ryan.messenger.newMessage(_("Fuckin check it out man. Crazy shit"))
 
-        $ newKiwiiPost = KiwiiPost(chris, "v8/red_square.webp", "", numberLikes=renpy.random.randint(100, 200))
-        $ newKiwiiPost = KiwiiPost(grayson, "v8/red_square.webp", "", numberLikes=renpy.random.randint(100, 200))
-        $ newKiwiiPost = KiwiiPost(aaron, "v8/red_square.webp", "", numberLikes=renpy.random.randint(100, 200))
-        $ newKiwiiPost = KiwiiPost(cameron, "v8/red_square.webp", "", numberLikes=renpy.random.randint(100, 200))
-        $ newKiwiiPost = KiwiiPost(aubrey, "v8/red_square.webp", "", numberLikes=renpy.random.randint(100, 200))
-        $ newKiwiiPost = KiwiiPost(samantha, "v8/red_square.webp", "", numberLikes=renpy.random.randint(100, 200))
+        $ newKiwiiPost = KiwiiPost(chris, "phone/kiwii/Posts/v8/red_square.webp", "", numberLikes=renpy.random.randint(100, 200))
+        $ newKiwiiPost = KiwiiPost(grayson, "phone/kiwii/Posts/v8/red_square.webp", "", numberLikes=renpy.random.randint(100, 200))
+        $ newKiwiiPost = KiwiiPost(aaron, "phone/kiwii/Posts/v8/red_square.webp", "", numberLikes=renpy.random.randint(100, 200))
+        $ newKiwiiPost = KiwiiPost(cameron, "phone/kiwii/Posts/v8/red_square.webp", "", numberLikes=renpy.random.randint(100, 200))
+        $ newKiwiiPost = KiwiiPost(aubrey, "phone/kiwii/Posts/v8/red_square.webp", "", numberLikes=renpy.random.randint(100, 200))
+        $ newKiwiiPost = KiwiiPost(samantha, "phone/kiwii/Posts/v8/red_square.webp", "", numberLikes=renpy.random.randint(100, 200))
 
         label v8s46_phoneCheck:
             if ryan.messenger.replies:

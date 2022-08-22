@@ -38,5 +38,5 @@ screen girls():
                     size 30
     
     if config_debug:
-        timer 0.1 action Jump(renpy.random.choice(i[1] for i in girl_labels))
+        timer 0.1 action Jump(renpy.random.choice(list(i[1] for i in girl_labels)))
         

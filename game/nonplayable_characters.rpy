@@ -31,9 +31,9 @@ init python:
             profile_picture (str): The file name for the characters profile picture, located in "images/characters/"
         """
 
-        characters = {}
+        characters: dict[str, "NonPlayableCharacter"] = {}
 
-        def __init__(self, name, username=None):
+        def __init__(self, name: str, username: Optional[str] = None):
             self.name = name
             self._username = name if username is None else username
 
@@ -42,13 +42,12 @@ init python:
             self._relationship = Relationship.FRIEND
             self._fighter = None
 
+            self.points = 0
             self.stats = {
                 "Competitive": None,
                 "Vindictive": [],
                 "Talkative": None
             }
-
-            self.points = 0
 
             NonPlayableCharacter.characters[name] = self
 
@@ -57,53 +56,61 @@ init python:
             try:
                 if self._username is not None:
                     return self._username
-            except AttributeError: pass
+            except AttributeError:
+                pass
 
             return self.name
 
         @username.setter
-        def username(self, value):
+        def username(self, value: str):
             self._username = value
 
         @property
         def relationship(self):
-            try: return self._relationship
-            except AttributeError: return Relationship.FRIEND
+            try:
+                return self._relationship
+            except AttributeError:
+                return Relationship.FRIEND
 
         @relationship.setter
-        def relationship(self, value):
+        def relationship(self, value: Relationship):
             if not isinstance(value, Relationship):
-                raise TypeError("{} must be of type Relationship".format(value))
+                raise TypeError(f"{value} must be of type Relationship")
 
             self._relationship = value
-            
+
             if value == Relationship.GIRLFRIEND:
                 mc.relationships.add(self)
                 mc.girlfriends.add(self)
 
             elif value == Relationship.FWB:
-                try: mc.relationships.remove(self)
-                except KeyError: pass
+                try:
+                    mc.relationships.remove(self)
+                except KeyError:
+                    pass
                 mc.relationships.add(self)
 
             else:
                 try:
                     mc.relationships.remove(self)
                     mc.girlfriends.remove(self)
-                except KeyError: pass
+                except KeyError:
+                    pass
 
         @property
         def messenger(self):
-            try: self._messenger
-            except AttributeError: self._messenger = None
+            try:
+                self._messenger
+            except AttributeError:
+                self._messenger = None
 
             if self._messenger is None:
-                self._messenger = Contact(self.name)
+                self._messenger = Contact(self)
                 messenger.contacts.append(self.messenger)
             return self._messenger
 
         @messenger.setter
-        def messenger(self, value):
+        def messenger(self, value: "Contact"):
             self._messenger = value
 
         @property
@@ -112,7 +119,7 @@ init python:
             except AttributeError: self._simplr = None
 
             if self._simplr is None:
-                self._simplr = SimplrContact(self.name)
+                self._simplr = SimplrContact(self)
                 simplr_app.pending_contacts.append(self._simplr)
             return self._simplr
 
@@ -125,12 +132,26 @@ init python:
             return self._fighter
 
         @fighter.setter
-        def fighter(self, value):
+        def fighter(self, value: BasePlayer):
             self._fighter = value
 
         @property
         def profile_picture(self):
-            return "images/nonplayable_characters/profile_pictures/{}.webp".format(self.name.replace(' ', '_').lower())
+            try:
+                return self.profile_pictures[0]
+            except IndexError:
+                raise IndexError(f"{self.name} has no profile pictures")
+
+        @property
+        def profile_pictures(self):
+            if self.name.lower() == "ms_rose":
+                self.name = "Ms Rose"
+
+            return [
+                file
+                for file in renpy.list_files()
+                if file.startswith(f"images/characters/{self.name.lower()}/")
+            ]
 
         def __after_load__(self):
             attrs = vars(self).copy()

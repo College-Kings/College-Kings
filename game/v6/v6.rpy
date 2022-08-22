@@ -6185,7 +6185,10 @@ label wakeupa:
 
         pe "What do you want your name to be?"
 
-        $ bname = renpy.input("Choose your bowling name:", default=name) or name
+        if config_debug:
+            $ bname = name
+        else:
+            $ bname = renpy.input("Choose your bowling name:", default=name) or name
 
         scene s634a # Penelope turns around and looks at you mouth closed smile
         with dissolve

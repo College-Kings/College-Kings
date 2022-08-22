@@ -1,9 +1,8 @@
 init python:
     class Phone:
-        def __init__(self):
+        def __init__(self, *applications):
             self.base_image = "images/phone/phone-icon.webp"
-
-            self.applications = []
+            self.applications = list(applications)
 
         @property
         def notification(self):
@@ -14,15 +13,11 @@ init python:
             if not self.notification:
                 return self.base_image
 
-            file_name, extention = os.path.splitext(self.base_image) 
+            file_name, extention = os.path.splitext(self.base_image)
             return file_name + "-notification" + extention
 
 
-    def phone_setup():
-        phone.applications = [messenger, achievement_app, relationship_app]
-
-
-default phone = Phone()
+default phone = Phone(messenger, stats_app, achievement_app, kiwii, simplr_app, relationship_app)
 
 
 screen phone_icon():

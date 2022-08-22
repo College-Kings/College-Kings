@@ -21,7 +21,8 @@ python early:
         "scriptv07.rpy",
         "screen.rpy",
         "sex_overlay.rpy",
-        "after_load.rpy"
+        "after_load.rpy",
+        "items.rpy"
     }
 
     restart_game = False # NEVER CHANGE
@@ -59,11 +60,6 @@ label after_load:
         ## PLAYABLE CHARACTERS
         if isinstance(mc, FightCharacter) or isinstance(mc, MainCharacter):
             mc = PlayableCharacter()
-
-        mc.__after_load__()
-
-        try: mc.profile_picture
-        except AttributeError: mc.profile_picture = profile_pictures[0]
 
         try: mc.username
         except AttributeError: mc.username = name
@@ -295,6 +291,7 @@ label after_load:
             if "v14_samantha" in sceneList: samantha.relationship = Relationship.FWB
         except NameError: pass
 
+        ms_rose.name = "Ms Rose"
 
         chloe.username = "Chloe101"
         amber.username = "Amber_xx"
@@ -376,6 +373,8 @@ label after_load:
             try: contact._notification
             except AttributeError: contact._notification = False
 
+            try: contact.user
+            except AttributeError: contact.user = getattr(store, contact.name.lower().replace(' ', '_'))
 
         # Transfer Contact object to NonPlayableCharacter class
         try:
@@ -464,7 +463,6 @@ label after_load:
         except AttributeError: pass
         del message
 
-
         ### KIWII
         #### KIWII POSTS
         try: v11s1_kiwiiPost.img = "images/phone/kiwii/posts/v11/v11_autumn_kiwii.webp"
@@ -488,7 +486,12 @@ label after_load:
         try: v13s49_kiwiiPost1.img = "images/phone/kiwii/posts/v13/aubrey_beach.webp"
         except NameError: pass
 
-        for kiwii_post in kiwiiPosts:
+        try:
+            kiwii_posts = kiwiiPosts
+            del kiwiiPosts
+        except NameError: pass
+
+        for kiwii_post in kiwii_posts:
             if kiwii_post.user == "Aaron": kiwii_post.user = aaron
             if kiwii_post.user == "Amber": kiwii_post.user = amber
             if kiwii_post.user == "Aubrey": kiwii_post.user = aubrey
@@ -566,8 +569,18 @@ label after_load:
                 del kiwii_post.comments
             except AttributeError: pass
 
+            try:
+                kiwii_post.sent_comments = kiwii_post.sentComments
+                del kiwii_post.sentComments
+            except AttributeError: pass
+
             try: kiwii_post.pendingComments
             except AttributeError: kiwii_post.pendingComments = []
+
+            try:
+                kiwii_post.pending_comments = kiwii_post.pendingComments
+                del kiwii_post.pendingComments
+            except AttributeError: pass
 
             if kiwii_post.image == "images/aupost1.png":
                 kiwii_post.image = "images/phone/kiwii/Posts/v7/aupost1.webp"
@@ -581,7 +594,7 @@ label after_load:
                 kiwii_post.image = "images/phone/kiwii/Posts/v7/lapost1.webp"
 
             ##### KIWII SENT COMMENTS
-            for comment in kiwii_post.sentComments:
+            for comment in kiwii_post.sent_comments:
                 if comment.user == "Aaron": comment.user = aaron
                 if comment.user == "Amber": comment.user = amber
                 if comment.user == "Aubrey": comment.user = aubrey
@@ -677,7 +690,7 @@ label after_load:
                         reply.mentions = temp_mentions
 
             ##### KIWII PENDING COMMENTS
-            for comment in kiwii_post.pendingComments:
+            for comment in kiwii_post.pending_comments:
                 if comment.user == "Aaron": comment.user = aaron
                 if comment.user == "Amber": comment.user = amber
                 if comment.user == "Aubrey": comment.user = aubrey
@@ -772,6 +785,7 @@ label after_load:
                         if mention == "Sebastian": temp_mentions.append(sebastian)
                         reply.mentions = temp_mentions
 
+        kiwii_posts = [kiwii_post for kiwii_post in kiwii_posts if hasattr(kiwii_post.user, "name")]
 
         # Simplr Contacts
         try:
@@ -826,7 +840,9 @@ label after_load:
         except NameError:
             pass
 
-        
+        ## RELATIONSHIP APP
+        relationship_girls = [relationship_girl for relationship_girl in relationship_girls if hasattr(relationship_girl, "name")]
+
         # Items
         honey.insensitive_image = "images/v13/Scene 35/sex_shop/honey_insensitive.webp"
         butt_plug.insensitive_image = "images/v13/Scene 35/sex_shop/butt_plug_insensitive.webp"

@@ -1,7 +1,4 @@
 init python:
-    achievements = []
-
-
     class Achievement:
         """
         Achievement data class for storing and managing the creation, syncing and managing of in-game achievements
@@ -11,7 +8,7 @@ init python:
             text (str): Short description of achievement
         """
 
-        def __init__(self, _achievement, text):
+        def __init__(self, _achievement: str, text: str):
             self.achievement = _achievement
             self.text = text
 
@@ -23,17 +20,17 @@ init python:
             achievement.register(_achievement)
             achievement.sync()
 
-        def checkCondition(self):
-            return getattr(store, self.condition)
 
-
-    def grant_achievement(_achievement):
+    def grant_achievement(_achievement: str):
         if path_builder or _in_replay:
             return
-            
+
         renpy.show(_achievement, [achievementShow])
-        achievement.grant(_achievement) 
+        achievement.grant(_achievement)
         achievement.sync()
+
+
+    achievements: list[Achievement] = []
 
 
 # ACHIEVEMENT ITEMS HERE

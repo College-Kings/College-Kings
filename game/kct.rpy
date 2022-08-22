@@ -19,19 +19,17 @@ init python:
         old_kct = kct
 
         # Sort KCT values
-        kctDict = {
-            "popular":bro * troublemaker / float(boyfriend),
+        kct_dict = {
+            "popular": bro * troublemaker / float(boyfriend),
             "confident": boyfriend * troublemaker / float(bro),
             "loyal": bro * boyfriend / float(troublemaker)
         }
-
-        store.sortedKCT = [k for k, v in sorted(kctDict.items(), key=lambda item: item[1], reverse=True)]
         
         # Update KCT
-        store.kct = sortedKCT[0]
+        store.kct = max(kct_dict, key=lambda k: kct_dict[k])
 
         # Notify user on KCT change
-        if sortedKCT[0] != old_kct:
+        if kct != old_kct:
             renpy.notify("Your KCT has changed to " + kct)
 
 

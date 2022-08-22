@@ -2,23 +2,28 @@ default persistent.name = ""
 default scopeDict = {}
 
 init python:
-    scene_gallery_items = []
-
     class SceneGallery:
-        def __init__(self, title, image, label, scope=None):
+        def __init__(
+            self, title: str, image: str, label: str, scope: Optional[dict[str, Any]] = None
+        ):
             self.title = title
             self.image = image
             self.label = label
 
-            if scope is None: self.scope = {}
-            else: self.scope = scope
+            if scope is None:
+                self.scope = {}
+            else:
+                self.scope = scope
 
             scene_gallery_items.append(self)
 
-    def update_scope(newScope):
-        rv = scopeDict.copy()
-        rv.update(newScope)
+
+    def update_scope(new_scope: dict[str, Any]):
+        rv: dict[str, Any] = scopeDict.copy()
+        rv.update(new_scope)
         return rv
+
+    scene_gallery_items: list[SceneGallery] = []
 
     # SCENE GALLERY ITEMS HERE
     ## v1

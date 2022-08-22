@@ -1,7 +1,5 @@
 init python:
-    class FightQuirk:
-        __metaclass__ = ABCMeta
-
+    class FightQuirk(ABC):
         quirks = []
 
         @abstractmethod

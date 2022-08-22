@@ -379,7 +379,7 @@ label v12s27a:
 
     u "Let me just take some pictures for Kiwii..."
 
-    $ v12s27a_kiwiiPost1 = KiwiiPost(mc, "v12/roastedape.webp", _("#RoastedApe"), numberLikes=469)
+    $ v12s27a_kiwiiPost1 = KiwiiPost(mc, "phone/kiwii/Posts/v12/roastedape.webp", _("#RoastedApe"), numberLikes=469)
     $ v12s27a_kiwiiPost1.newComment(imre, "Holy shit... You make it way too easy, Ryan!", mentions=[ryan], numberLikes=renpy.random.randint(250,350))
     $ v12s27a_kiwiiPost1.newComment(amber, "Haha, yes! That's what you get, moron...", mentions=[ryan], numberLikes=renpy.random.randint(250,400))
    

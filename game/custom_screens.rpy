@@ -214,6 +214,9 @@ screen kiwiiPopup():
             xalign 0.5
             action [Function(kiwii_firstTimeMessages), SetVariable("kiwii_firstTime", False), Hide("kiwiiPopup")]
 
+    if config_debug:
+        timer 0.1 action [Function(kiwii_firstTimeMessages), SetVariable("kiwii_firstTime", False), Hide("kiwiiPopup")]
+
 
 # Fight Screens
 screen fightPopup(fightMove):

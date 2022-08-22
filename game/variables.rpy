@@ -23,7 +23,7 @@ define contacts_file_path = os.path.join(config.basedir, "game", "images", "nonp
 
     ## Kiwii Vars
 default kiwii_firstTime = False
-default kiwiiPosts = []
+default kiwii_posts = []
 
     ## Fight Vars
 default fight_tutorial = False

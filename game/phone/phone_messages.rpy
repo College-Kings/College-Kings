@@ -1,43 +1,50 @@
 init python:
     class Contact:
-        def __init__(self, name):
-            self.name = name
-            self.sent_messages = []
-            self.pending_messages = []
-            self._notification = False
+        def __init__(self, user: Union["PlayableCharacter", "NonPlayableCharacter"]):
+            self.user = user
+            self.sent_messages: list[BaseMessage] = []
+            self.pending_messages: list[BaseMessage] = []
+            self._notification: bool = False
 
         @property
         def notification(self):
             if not self.sent_messages and not self.pending_messages:
                 return False
-            
+
             if self.replies:
                 return True
 
-            return self._notification
+            try:
+                return self._notification
+            except AttributeError:
+                return False
 
         @notification.setter
-        def notification(self, value):
+        def notification(self, value: bool):
             self._notification = value
 
         @property
-        def profile_picture(self):
-            return "images/nonplayable_characters/profile_pictures/{}.webp".format(self.name.replace(' ', '_').lower())
-
-        @property
-        def replies(self):
-            try: self.sent_messages
-            except AttributeError: self.sent_messages = []
+        def replies(self) -> list[BaseReply]:
+            try:
+                self.sent_messages
+            except AttributeError:
+                self.sent_messages = []
 
             try:
                 return self.sent_messages[-1].replies
-            except IndexError: return []
+            except IndexError:
+                return []
 
-        def new_message(self, message, force_send=False):
-            message = Message(self, message)
+        def new_message(self, content: str, force_send: bool = False):
+            message = Message(self, content)
 
             # Moves contact to the top when recieving a new message
-            messenger.contacts.insert(0, messenger.contacts.pop(messenger.contacts.index(self)))
+            try:
+                messenger.contacts.insert(
+                    0, messenger.contacts.pop(messenger.contacts.index(self))
+                )
+            except ValueError:
+                messenger.contacts.insert(0, self)
 
             # Add message to queue
             if self.replies and not force_send:
@@ -47,14 +54,19 @@ init python:
                 self.sent_messages.append(message)
 
             self.notification = True
-            
+
             return message
 
-        def new_image_message(self, img, force_send=False):
-            message = ImageMessage(self, img)
+        def new_image_message(self, image: str, force_send: bool = False):
+            message = ImageMessage(self, image)
 
-            try: contacts.insert(0, contacts.pop(contacts.index(self))) # Moves contact to the top when recieving a new message
-            except Exception: pass
+            # Moves contact to the top when recieving a new message
+            try:
+                messenger.contacts.insert(
+                    0, messenger.contacts.pop(messenger.contacts.index(self))
+                )
+            except ValueError:
+                messenger.contacts.insert(0, self)
 
             # Add message to queue
             if not force_send:
@@ -67,8 +79,14 @@ init python:
 
             return message
 
-        def add_reply(self, message, func=None, new_message=False, disabled=False):
-            reply = Reply(message, func)
+        def add_reply(
+            self,
+            content: str,
+            func: Optional[Callable[[], None]] = None,
+            new_message: bool = False,
+            disabled: bool = False,
+        ):
+            reply = Reply(content, func)
 
             # Append reply to last sent message
             try:
@@ -85,96 +103,85 @@ init python:
 
             self.notification = True
 
-        def add_image_reply(self, img, func=None, newMessage=False, disabled=False):
-            reply = ImgReply(img, func)
+        def add_image_reply(
+            self,
+            content: str,
+            func: Optional[Callable[[], None]] = None,
+            newMessage: bool = False,
+            disabled: bool = False,
+        ):
+            reply = ImgReply(content, func)
 
             # Append reply to last sent message
             try:
                 if newMessage:
-                    message = self.newMessage("")
+                    message = self.new_message("")
                     message.replies.append(reply)
                 elif self.pending_messages:
                     self.pending_messages[-1].replies.append(reply)
                 else:
                     self.sent_messages[-1].replies.append(reply)
             except IndexError:
-                message = self.newMessage("", force_send=True)
+                message = self.new_message("", force_send=True)
                 message.replies.append(reply)
 
             self.notification = True
 
-        def selected_reply(self, reply):
+        def selected_reply(self, reply: BaseReply):
             self.sent_messages.append(reply)
             self.sent_messages[-1].reply = reply
             self.sent_messages[-1].replies = []
 
-            try:
+            if reply.func is not None:
                 reply.func()
                 reply.func = None
-            except TypeError:
-                pass
 
             # Send next queued message(s)
             try:
                 while not self.replies:
                     self.sent_messages.append(self.pending_messages.pop(0))
-            except IndexError: pass
+            except IndexError:
+                pass
 
         def unlock(self):
             if self not in messenger.contacts:
-                messenger.contacts.append(self)
+                messenger.contacts.append(self)  # type: ignore
             self.locked = False
 
-        def find_message(self, message):
+        def find_message(self, message: str):
             for msg in self.sent_messages:
-                try:
-                    if message == msg.message:
-                        return msg
-                except AttributeError:
-                    if message == msg.image:
-                        return msg
+                if hasattr(msg, "content") and message == msg.content:
+                    return msg
+                elif hasattr(msg, "message") and message == msg.message:
+                    return msg
+                elif hasattr(msg, "image") and message == msg.image:
+                    return msg
             return False
 
         ## Backwards compatibility
-        def newMessage(self, message, force_send=False):
+        def newMessage(self, message: str, force_send: bool = False):
             return self.new_message(message, force_send)
 
-        def newImgMessage(self, img, force_send=False):
-            return self.new_image_message(img, force_send)
+        def newImgMessage(self, image: str, force_send: bool = False):
+            return self.new_image_message(image, force_send)
 
-        def addReply(self, message, func=None, newMessage=False, disabled=False):
+        def addReply(
+            self,
+            message: str,
+            func: Optional[Callable[[], None]] = None,
+            newMessage: bool = False,
+            disabled: bool = False,
+        ):
             return self.add_reply(message, func, newMessage)
 
-        def addImgReply(self, img, func=None, newMessage=False, disabled=False):
-            return self.add_image_reply(img, func, newMessage)
-
-
-    class Message:
-        def __init__(self, contact, message):
-            self.contact = contact
-            self.message = message
-            self.replies = []
-            self.reply = None
-
-
-    class ImageMessage:
-        def __init__(self, contact, image):
-            self.contact = contact
-            self.image = image
-            self.replies = []
-            self.reply = None
-
-
-    class Reply:
-        def __init__(self, message, func=None, disabled=False):
-            self.message = message
-            self.func = func
-
-
-    class ImgReply:
-        def __init__(self, image, func=None, disabled=False):
-            self.image = image
-            self.func = func
+        def addImgReply(
+            self,
+            image: str,
+            func: Optional[Callable[[], None]] = None,
+            newMessage: bool = False,
+            disabled: bool = False,
+        ):
+            return self.add_image_reply(image, func, newMessage)
 
 
 screen messenger_home():
@@ -203,9 +210,9 @@ screen messenger_home():
                             action [Function(renpy.retain_after_load), Show("messager", contact=contact)]
                             ysize 80
 
-                            add Transform(contact.profile_picture, xysize=(65, 65)) xpos 20 yalign 0.5
+                            add Transform(contact.user.profile_picture, xysize=(65, 65)) xpos 20 yalign 0.5
                             
-                            text contact.name style "nametext" xpos 100 yalign 0.5
+                            text contact.user.name style "nametext" xpos 100 yalign 0.5
 
                             if contact.notification:
                                 add "contact_notification" align (1.0, 0.5) xoffset -25
@@ -240,9 +247,9 @@ screen messager(contact=None):
                     action [Hide("message_reply"), Show("messenger_home")]
                     yalign 0.5
 
-                add Transform(contact.profile_picture, xysize=(65, 65)) yalign 0.5
+                add Transform(contact.user.profile_picture, xysize=(65, 65)) yalign 0.5
 
-                text contact.name style "nametext" yalign 0.5
+                text contact.user.name style "nametext" yalign 0.5
 
             viewport:
                 yadjustment inf_adj

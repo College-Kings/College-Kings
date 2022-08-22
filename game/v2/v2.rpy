@@ -462,7 +462,7 @@ label tomFightStart:
     
     $ simtomfight = (fight_type != "normal")
     $ stance = 1
-    $ tomstance = renpy.random.choice([1, 2, 3, 4])
+    $ tomstance = renpy.random.choice([1, 2, 3])
     $ tomattack = renpy.random.choice([1, 2, 3, 4])
     $ simtom = renpy.random.choice([1, 2, 3, 4, 5, 6])
     $ simyou = renpy.random.choice([1, 2, 3, 4, 5, 6])

@@ -20,9 +20,9 @@ screen messenger_contacts(contact=None):
                     yalign 0.5
 
                 if contact is not None:
-                    add Transform(contact.profile_picture, xysize=(65, 65)) yalign 0.5
+                    add Transform(contact.user.profile_picture, xysize=(65, 65)) yalign 0.5
 
-                    text contact.name style "nametext" yalign 0.5
+                    text contact.user.name style "nametext" yalign 0.5
 
             viewport:
                 yadjustment inf_adj

@@ -1,6 +1,6 @@
 init python:
     class ChecklistItem:
-        def __init__(self, name):
+        def __init__(self, name: str):
             self.name = name
 
             self.complete = False
@@ -8,9 +8,9 @@ init python:
 
     class Checklist:
         def __init__(self):
-            self.items = []
+            self.items: list[ChecklistItem] = []
 
-        def __getitem__(self, index):
+        def __getitem__(self, index: int):
             if _in_replay:
                 return ChecklistItem("Replay Template")
             else:
@@ -22,12 +22,11 @@ init python:
         def __len__(self):
             return len(self.items)
 
-        def add_item(self, name):
+        def add_item(self, name: str):
             self.items.append(ChecklistItem(name))
 
         def get_completed(self):
-            return filter(lambda item: item.complete, self.items)
+            return list(filter(lambda item: item.complete, self.items))
 
         def reset(self):
             self.items = []
-

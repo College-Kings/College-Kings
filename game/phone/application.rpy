@@ -1,37 +1,40 @@
 init python:
     class Application:
-        def __init__(self, name, *args, **kwargs):
+        def __init__(self, name: str):
             self.name = name
-            self.home_screen = "{}_home".format(self.name.lower())
-            
+            self.home_screen = f"{self.name.lower()}_home"
+
             self.notification = False
-            self.contacts = []
+            self.contacts: list[Contact] = []
 
         @property
         def image(self):
-            return "images/phone/{}/app-assets/icon{}.webp".format(self.name.lower(), "-notification" if self.notification else "")
+            if self.notification:
+                return f"images/phone/{self.name.lower()}/app-assets/icon-notification.webp"
+            else:
+                return f"images/phone/{self.name.lower()}/app-assets/icon.webp"
 
         def unlock(self):
             if self not in phone.applications:
                 phone.applications.append(self)
 
-    
+
     class Messenger(Application):
         def __init__(self):
-            super(Messenger, self).__init__("Messenger")
+            super().__init__("Messenger")
 
         @property
         def notification(self):
             return any(contact.notification for contact in self.contacts)
 
         @notification.setter
-        def notification(self, value):
+        def notification(self, value: Any):
             pass
 
 
     class Simplr(Application):
         def __init__(self):
-            super(Simplr, self).__init__("Simplr")
+            super().__init__("Simplr")
 
             self.pending_contacts = []
 
@@ -40,13 +43,41 @@ init python:
             return any(contact.notification for contact in self.contacts)
 
         @notification.setter
-        def notification(self, value):
+        def notification(self, value: Any):
             pass
+
+
+    class Kiwii(Application):
+        def __init__(self):
+            super().__init__("Kiwii")
+
+        @staticmethod
+        def get_message(kiwii_obj: Union["KiwiiComment", "KiwiiPost"]):
+            usernames = [mention.username for mention in kiwii_obj.mentions]
+
+            message = ", @".join(usernames)
+            if usernames:
+                message = (
+                    f"{{color=#3498DB}}{{b}}@{message}{{/b}}{{/color}} {kiwii_obj.message}"
+                )
+            else:
+                message = kiwii_obj.message
+
+            return message
+
+        @staticmethod
+        def toggle_liked(kiwii_obj: Union["KiwiiComment", "KiwiiPost"]):
+            kiwii_obj.liked = not kiwii_obj.liked
+
+            if kiwii_obj.liked:
+                kiwii_obj.numberLikes += 1
+            else:
+                kiwii_obj.numberLikes -= 1
 
 
 default messenger = Messenger()
 default stats_app = Application("KCT")
 default achievement_app = Application("Achievements")
-default kiwii = Application("Kiwii")
+default kiwii = Kiwii()
 default simplr_app = Simplr()
-default relationship_app = Application("Relationships", "relationships/appAssets/relationships_icon.webp", "relationship_app", locked=False)
+default relationship_app = Application("Relationships")

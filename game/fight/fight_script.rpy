@@ -6,10 +6,19 @@ init python:
         DEFENSIVE = 4
 
 
+init python:
     class BasePlayer:
-        MAX_GUARD = FightStance.DEFENSIVE.value + 1 # Turtle stance bonus
+        MAX_GUARD = FightStance.DEFENSIVE.value + 1  # Turtle stance bonus
 
-        def __init__(self, name, stance, health=20, stamina=8, attack_multiplier=1, quirk=None):
+        def __init__(
+            self,
+            name: str,
+            stance: FightStance,
+            health: int = 20,
+            stamina: int = 8,
+            attack_multiplier: int = 1,
+            quirk: Optional[FightQuirk] = None,
+        ):
             self.name = name
             self.stance = stance
             self.stamina = stamina
@@ -18,23 +27,26 @@ init python:
             self.quirk = quirk
 
             self.max_stamina = stamina
-            self.stance_bonus = None
+            self.stance_bonus: Optional[str] = None
 
             self._health = health
             self._guard = stance.value
 
             self.wins = 0
-            self.turn_moves = [Turtle(), EndTurn()]
+            self.turn_moves: list[FightMoves] = [
+                Turtle(),
+                EndTurn(),
+            ]
             self.base_attacks = []
             self.special_attack = None
             self.previous_moves = []
-            
+
         @property
         def health(self):
             return int(self._health)
 
         @health.setter
-        def health(self, value):
+        def health(self, value: int):
             self._health = max(value, 0)
 
         @property
@@ -42,56 +54,43 @@ init python:
             return int(self._guard)
 
         @guard.setter
-        def guard(self, value):
+        def guard(self, value: int):
             self._guard = max(value, 0)
 
-        @property
-        def rank(self):
-            rv = FightRank.UNDERDOG
-            for rank in FightRank:
-                if rank.value["win_requirement"] > self.wins:
-                    break
-                rv = rank
-            return rv
-
-        def set_specials(self):
-            for attr in self.attributes:
-                if attr.value == 10:
-                    self.special_abilities.add(attr.active_ability)
-                    self.passive_abilities.add(attr.passive_ability)
-                elif attr.value >= 5:
-                    self.passive_abilities.add(attr.passive_ability)
-
-        def set_stance_bonus(self, move):
+        def set_stance_bonus(self, move: "FightMoves"):
             if self.stance == move.ideal_stance:
                 self.stance_bonus = move.name
             else:
                 self.stance_bonus = None
 
-        def get_primed_muliplier(self, fight, move):
+        def get_primed_muliplier(
+            self, fight: Fight, move: "FightMoves"
+        ):
             if isinstance(self, Player):
                 return 1.0
-            
+
             try:
-                if fight.move_list[-1][fight.player.name].count(move.name) != 2:
+                if fight.move_list[-1][fight.player.name].count(move) != 2:
                     return 1.0
 
-                if self.health / float(self.max_health) <= 0.25: ### decimals!
+                if self.health / float(self.max_health) <= 0.25:  ### decimals!
                     return 0.7
                 elif 0.25 < self.health / float(self.max_health) <= 0.5:
                     return 0.4
                 else:
                     return 0.1
-            
+
             except IndexError:
                 return 1.0
 
-        def get_reckless_multiplier(self, fight):
+        def get_reckless_multiplier(self, fight: Fight):
             if isinstance(self, Player):
                 return 1.0
 
             try:
-                if not isinstance(fight.move_list[-5][fight.player.name][-1], Turtle) and not isinstance(fight.move_list[-3][fight.player.name][-1], Turtle):
+                if not isinstance(
+                    fight.move_list[-5][fight.player.name][-1], Turtle
+                ) and not isinstance(fight.move_list[-3][fight.player.name][-1], Turtle):
                     return 1.0
 
                 if self.health / float(self.max_health) <= 0.25:
@@ -104,7 +103,12 @@ init python:
             except IndexError:
                 return 1.0
 
-        def get_calculating_muliplier(self, fight):
+        def get_calculating_muliplier(self, fight: Fight):
+            if fight.opponent.fighter is None:
+                raise AttributeError(
+                    f"object '{fight.opponent.__class__.__name__}' attribute 'fighter' not set"
+                )
+
             if isinstance(self, Player):
                 return 0
 
@@ -112,17 +116,25 @@ init python:
                 if fight.move_list[-4][self.name] != fight.move_list[-2][self.name]:
                     return 0
 
-                if fight.opponent.fighter.health / float(fight.opponent.fighter.max_health) <= 0.25:
+                if (
+                    fight.opponent.fighter.health / float(fight.opponent.fighter.max_health)
+                    <= 0.25
+                ):
                     return 0.9
-                elif 0.25 < fight.opponent.fighter.health / float(fight.opponent.fighter.max_health) <= 0.5:
+                elif (
+                    0.25
+                    < fight.opponent.fighter.health
+                    / float(fight.opponent.fighter.max_health)
+                    <= 0.5
+                ):
                     return 0.6
                 else:
                     return 0.3
-            
+
             except IndexError:
                 return 0
 
-        def get_stance_multiplier(self, fight):
+        def get_stance_multiplier(self, fight: Fight):
             if self.stance_bonus == "Body Hook":
                 return 1.2
 
@@ -134,10 +146,17 @@ init python:
 
 
     class Opponent(BasePlayer):
-        def __init__(self, name, stance, health=20, stamina=8, attack_multiplier=1):
+        def __init__(
+            self,
+            name: str,
+            stance: FightStance,
+            health: int = 20,
+            stamina: int = 8,
+            attack_multiplier: int = 1,
+        ):
             BasePlayer.__init__(self, name, stance, health, stamina, attack_multiplier)
 
-            self.stance_images = None
+            self.stance_images: dict[FightStance, str] = {}
 
         @property
         def stance_image(self):

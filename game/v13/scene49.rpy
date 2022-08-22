@@ -21,7 +21,7 @@ label v13s49:
 
     pause 0.75
     
-    $ v13s49_kiwiiPost1 = KiwiiPost(aubrey, "v13/aubrey_beach.webp", _("Swimming up the ladder! #ScheveningenBeach"), numberLikes=4218)
+    $ v13s49_kiwiiPost1 = KiwiiPost(aubrey, "phone/kiwii/Posts/v13/aubrey_beach.webp", _("Swimming up the ladder! #ScheveningenBeach"), numberLikes=4218)
     $ v13s49_kiwiiPost1.newComment(imre, _("Hot as fuck Aubrey!!"), numberLikes=renpy.random.randint(1800, 3600))
     $ v13s49_kiwiiPost1.newComment(chloe, _("This is the hottest pic I've ever seen of you!"), mentions=[aubrey], numberLikes=renpy.random.randint(1800, 3600))
     $ v13s49_kiwiiPost1.addReply(_("Wow, they turned out great!"), numberLikes=renpy.random.randint(1800, 3600))

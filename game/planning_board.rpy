@@ -1,19 +1,21 @@
 init python:
     class PlanningBoardApproach:
-        def __init__(self, id, name, opinion):
+        def __init__(self, id: str, name: str, opinion: str):
             self.id = id
             self.name = name
             self.opinion = opinion
 
-            self.tasks = []
+            self.tasks: list[Union[PlanningBoardTask, list[PlanningBoardTask]]] = []
             self.completed = False
 
         @property
         def cost(self):
-            return sum(task.cost for task in self.get_tasks())
+            return sum(
+                task.cost for task in self.tasks if isinstance(task, PlanningBoardTask)
+            )
 
         def get_tasks(self):
-            tasks = []
+            tasks: list[PlanningBoardTask] = []
             for task in self.tasks:
                 if isinstance(task, PlanningBoardTask):
                     tasks.append(task)
@@ -23,39 +25,61 @@ init python:
 
 
     class PlanningBoardTask:
-        def __init__(self, name, opinion, people, cost):
+        def __init__(
+            self,
+            name: str,
+            opinion: str,
+            people: Optional[list[NonPlayableCharacter]] = None,
+            cost: int = 0,
+        ):
             self.name = name
             self.opinion = opinion
             self.cost = cost
 
-            if people is None: self.people = []
-            else: self.people = people
+            if people is None:
+                self.people = []
+            else:
+                self.people = people
 
             self.completed = False
 
 
     class PlanningBoard:
-        def __init__(self, background, money=0, style=None):
+        def __init__(self, background: str, money: int = 0, style: Optional[str] = None):
             self.background = background
             self.money = money
             self.style = style
 
-            self.approaches = {}
-            self.approach = None
-            self.selected_task = None
+            self.approaches: dict[str, PlanningBoardApproach] = {}
+            self.approach: Optional[PlanningBoardApproach] = None
+            self.selected_task: Optional[PlanningBoardTask] = None
 
-        def add_approach(self, id, name, opinion=""):
+        def add_approach(self, id: str, name: str, opinion: str = ""):
             approach = PlanningBoardApproach(id, name, opinion)
             self.approaches[id] = approach
             return approach
 
-        def add_task(self, approach_id, name, opinion="", people=None, cost=0):
+        def add_task(
+            self,
+            approach_id: str,
+            name: str,
+            opinion: str = "",
+            people: Optional[list[NonPlayableCharacter]] = None,
+            cost: int = 0,
+        ):
             approach = self.approaches[approach_id]
             task = PlanningBoardTask(name, opinion, people, cost)
             approach.tasks.append(task)
             return task
 
-        def add_subtask(self, approach_id, name, opinion="", people=None, cost=0):
+        def add_subtask(
+            self,
+            approach_id: str,
+            name: str,
+            opinion: str = "",
+            people: Optional[list[NonPlayableCharacter]] = None,
+            cost: int = 0,
+        ):
             approach = self.approaches[approach_id]
             subtask = PlanningBoardTask(name, opinion, people, cost)
             if approach.tasks and (isinstance(approach.tasks[-1], list)):
@@ -65,10 +89,16 @@ init python:
             return subtask
 
         def get_total_cost(self):
-            total_cost = 0
+            if self.approach is None or self.selected_task is None:
+                return 0
+
+            total_cost: int = 0
+
             for task in self.approach.tasks:
-                try: total_cost += task.cost
-                except AttributeError: total_cost += self.selected_task.cost
+                if isinstance(task, list):
+                    total_cost += self.selected_task.cost
+                else:
+                    total_cost += task.cost
 
             return total_cost
 

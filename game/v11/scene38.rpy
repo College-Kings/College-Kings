@@ -15,7 +15,7 @@ init python:
 
 label v11_amber_bar:
 
-    $ v11s38_kiwiiPost1 = KiwiiPost(amber, "v11/v11s38_amber_kiwii.webp", _("Living the London life"), numberLikes=312) # Amber sitting at the bar with a drink in her hand, smiling at the camera, hers legs are crossed, sexy pose
+    $ v11s38_kiwiiPost1 = KiwiiPost(amber, "phone/kiwii/Posts/v11/v11s38_amber_kiwii.webp", _("Living the London life"), numberLikes=312) # Amber sitting at the bar with a drink in her hand, smiling at the camera, hers legs are crossed, sexy pose
     $ v11s38_kiwiiPost1.newComment(lauren, _("So that's where you've been this entire trip! Beautiful as always"), numberLikes=renpy.random.randint(150,300))
     $ v11s38_kiwiiPost1.newComment(riley, _("Hotttt! We need a girls night soon ;)"), numberLikes=renpy.random.randint(150,300))
     $ v11s38_kiwiiPost1.newComment(caleb, _("Damn... looking good"), numberLikes=renpy.random.randint(150,300))

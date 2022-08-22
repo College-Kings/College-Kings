@@ -1,5 +1,5 @@
 init python:
-    class SimplrContact(Contact):
+    class SimplrContact:
         """
         The Contact class for Simplr. Used to manage and create messages for simplr characters.
 
@@ -9,14 +9,11 @@ init python:
             condition (str): A string repersenting a python condition which deems if the character unlocks 
         """
 
-        def __init__(self, name):
-            self.name = name
+        def __init__(self, user: Union["PlayableCharacter", "NonPlayableCharacter"]):
+            self.user = user
             self.condition = True
 
             self._notification = False
-
-            for (dirpath, dirname, filenames) in os.walk(os.path.join(contacts_file_path, name.lower(), "large_profile_pictures")):
-                self.large_profile_pictures = ["images/nonplayable_characters/{}/large_profile_pictures/{}".format(name.lower(), filename) for filename in filenames]
 
             self.sent_messages = []
             self.pending_messages = []
@@ -37,10 +34,6 @@ init python:
         @notification.setter
         def notification(self, value):
             self._notification = value
-
-        @property
-        def profile_picture(self):
-            return "images/nonplayable_characters/{0}/{0}_profile_picture.webp".format(self.name.lower())
 
         def removeContact(self):
             simplr_app.pending_contacts.pop(0)
@@ -195,9 +188,9 @@ screen simplr_contacts():
                             action [Function(renpy.retain_after_load), SetField(contact, "notification", False), Show("simplr_messenger", contact=contact)]
                             ysize 80
 
-                            add Transform(contact.profile_picture, xysize=(65, 65)) xpos 20 yalign 0.5
+                            add Transform(contact.user.profile_picture, xysize=(65, 65)) xpos 20 yalign 0.5
                             
-                            text contact.name style "nametext" xpos 100 yalign 0.5
+                            text contact.user.name style "nametext" xpos 100 yalign 0.5
 
                             if contact.notification:
                                 add "contact_notification" align (1.0, 0.5) xoffset -25
@@ -224,9 +217,9 @@ screen simplr_messenger(contact):
                     action [Hide("message_reply"), Show("simplr_home")]
                     yalign 0.5
 
-                add Transform(contact.profile_picture, xysize=(65, 65)) yalign 0.5
+                add Transform(contact.user.profile_picture, xysize=(65, 65)) yalign 0.5
 
-                text contact.name style "nametext" yalign 0.5
+                text contact.user.name style "nametext" yalign 0.5
 
             viewport:
                 yadjustment inf_adj
