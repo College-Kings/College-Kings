@@ -830,7 +830,7 @@ label v11_cardealership:
 
         lee "[name], I don't believe that's your room."
 
-        if chloe.relationship >= Relationship.GIRLFRIEND:
+        if chloe.relationship >= Relationship.FWB:
             scene v11cd48a # FPP. same as 47, mouth closed
             with dissolve
 
@@ -846,7 +846,7 @@ label v11_cardealership:
 
         cl "You better."
 
-        if chloe.relationship >= Relationship.GIRLFRIEND:
+        if chloe.relationship >= Relationship.FWB:
             scene v11cd50 # TPP. Mc heads to his room, disapointed face, mouth closed
             with dissolve
 
