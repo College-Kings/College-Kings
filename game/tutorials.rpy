@@ -35,7 +35,7 @@ screen tutorial(tutorial_text, position=(1046, 73)):
                 else:
                     action SetScreenVariable("page_number", 1)
 
-            text _("[page_number] of [len(tutorial_text)]") style "tutorial_page_number" xalign 0.5 ypos 170
+            text _("{} of {}".format(page_number, len(tutorial_text))) style "tutorial_page_number" xalign 0.5 ypos 170
 
 
 style tutorial_text is text:
