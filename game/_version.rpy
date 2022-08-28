@@ -20,7 +20,7 @@ python early:
                 open(VERSION_DIR, "w").close()
 
         os.chdir(cwd)
-        return short_hash
+        return short_hash.decode("utf-8")
 
 
     def get_version(major, minor, patch):
