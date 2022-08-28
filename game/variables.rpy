@@ -22,7 +22,7 @@ default recap_choose_threesome = False # True = During Aubrey or Riley interevie
 define contacts_file_path = os.path.join(config.basedir, "game", "images", "nonplayable_characters")
 
     ## Kiwii Vars
-default kiwii_firstTime = False
+default kiwii_first_time = False
 default kiwii_posts = []
 
     ## Fight Vars
