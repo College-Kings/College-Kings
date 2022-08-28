@@ -363,11 +363,17 @@ label after_load:
 
         #### MESSENGER CONTRACTS
         for contact in messenger.contacts:
-            try: contact.sent_messages = contact.sentMessages
+            try: contact.sent_messages
             except AttributeError: contact.sent_messages = []
 
-            try: contact.pending_messages = contact.pendingMessages
+            try: contact.sent_messages = contact.sentMessages
+            except AttributeError: pass
+
+            try: contact.pending_messages
             except AttributeError: contact.pending_messages = []
+
+            try: contact.pending_messages = contact.pendingMessages
+            except AttributeError: pass
 
             try: contact._notification
             except AttributeError: contact._notification = False
