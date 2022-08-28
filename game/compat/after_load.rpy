@@ -22,7 +22,8 @@ python early:
         "screen.rpy",
         "sex_overlay.rpy",
         "after_load.rpy",
-        "items.rpy"
+        "items.rpy",
+        "setup.rpy",
     }
 
     restart_game = False # NEVER CHANGE
@@ -329,7 +330,6 @@ label after_load:
 
         ### APPLICATIONS
         messenger.name = "Messenger"
-        stats_app.name = "KCT"
 
         try:
             messenger.contacts = contacts.copy()
@@ -356,7 +356,6 @@ label after_load:
             app.home_screen = "{}_home".format(app.name.lower())
 
         messenger.home_screen = "{}_home".format(messenger.name.lower())
-        stats_app.home_screen = "{}_home".format(stats_app.name.lower())
         achievement_app.home_screen = "{}_home".format(achievement_app.name.lower())
         kiwii.home_screen = "{}_home".format(kiwii.name.lower())
         simplr_app.home_screen = "{}_home".format(simplr_app.name.lower())
@@ -374,7 +373,9 @@ label after_load:
             except AttributeError: contact._notification = False
 
             try: contact.user
-            except AttributeError: contact.user = getattr(store, contact.name.lower().replace(' ', '_'))
+            except AttributeError:
+                contact.user = getattr(store, contact.name.lower().replace(' ', '_'))
+
 
         # Transfer Contact object to NonPlayableCharacter class
         try:
@@ -1090,8 +1091,8 @@ label after_load:
         try: v14_ryan_satin
         except NameError: v14_ryan_satin = False
 
-        setup()
-        phone.applications = [messenger, stats_app, achievement_app, kiwii, simplr_app, relationship_app]
+        try: kiwii_first_time = kiwii_firstTime
+        except NameError: pass
 
     hide screen reply
     hide screen simplr_reply
