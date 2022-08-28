@@ -5309,7 +5309,7 @@ label wakeupa:
 
         $ moveuppercut = True
 
-        call screen fightPopup("Uppercut")
+        call screen fightPopup(_("Uppercut"))
 
         scene s600
         with dissolve
@@ -6188,7 +6188,7 @@ label wakeupa:
         if config_debug:
             $ bname = name
         else:
-            $ bname = renpy.input("Choose your bowling name:", default=name) or name
+            $ bname = renpy.input(_("Choose your bowling name:"), default=name).strip() or name
 
         scene s634a # Penelope turns around and looks at you mouth closed smile
         with dissolve

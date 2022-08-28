@@ -241,8 +241,6 @@ label starta: #for compatibility only
     show s15
     with dissolve
 
-    $ stats_app.unlock()
-
     ju "Fraternities can be dangerous, honey."
     
     hide s15

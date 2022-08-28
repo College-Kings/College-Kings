@@ -132,7 +132,7 @@ screen v1_freeRoam1_3():
         xalign 0.82
         idle "images/v1/fr1yours.webp"
         hover "images/v1/fr1yourshover.webp"
-        action Show("confirm", message="Are you sure you want to end the free roam?", yes_action=[Hide("confirm"), Jump("efra")])
+        action Show("confirm", message=_("Are you sure you want to end the free roam?"), yes_action=[Hide("confirm"), Jump("efra")])
 
     # Back
     imagebutton:
@@ -344,7 +344,7 @@ screen v1_freeRoam2_4():
         xalign 0.21
         idle "images/v1/fr2chloe.webp"
         hover "images/v1/fr2chloeh.webp"
-        action Show("confirm", message="Are you sure you want to end the free roam?", yes_action=[Hide("confirm"), Jump("v1_freeRoam2_end")])
+        action Show("confirm", message=_("Are you sure you want to end the free roam?"), yes_action=[Hide("confirm"), Jump("v1_freeRoam2_end")])
 
     imagebutton:
         yalign 1.0
@@ -412,13 +412,13 @@ screen nsfw_Toggle():
         xsize 700
         align (0.5, 0.5)
         spacing 20
-        text "Explicit Sex Scenes":
+        text _("Explicit Sex Scenes"):
             #color "#FFD166"
             size 40
             text_align 0.5
             xalign 0.5
 
-        text "This game contains fully explicit sex scenes. These are not suitable for Twitch or Youtube. Please select if you'd like to enable explicit sex scenes.":
+        text _("This game contains fully explicit sex scenes. These are not suitable for Twitch or Youtube. Please select if you'd like to enable explicit sex scenes."):
             font "fonts/OpenSans.ttf"
             size 25
             text_align 0.5
@@ -427,11 +427,11 @@ screen nsfw_Toggle():
         hbox:
             xalign 0.5
             spacing 100
-            textbutton "Enable":
+            textbutton _("Enable"):
                 text_size 40
                 selected False
                 action [SetVariable("config_censored", False), Return()]
-            textbutton "Disable":
+            textbutton _("Disable"):
                 text_size 40
                 selected False
                 action [SetVariable("config_censored", True), Return()]

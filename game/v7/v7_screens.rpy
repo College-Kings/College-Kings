@@ -12,61 +12,61 @@ screen hc_select():
     default girl_path = "gui/julia_call/"
 
     $ girl_labels = {
-        "Amber": {
+        _("Amber"): {
             "label": "hc_asking_amber",
             "condition": ("amber" not in hcAsked) and (lauren.relationship < Relationship.GIRLFRIEND),
-            "tooltip": "I'm not that close with Amber but she does seem quite flirty around me"
+            "tooltip": _("I'm not that close with Amber but she does seem quite flirty around me")
         },
-        "Aubrey": {
+        _("Aubrey"): {
             "label": "hc_asking_aubrey",
             "condition": ("aubrey" not in hcAsked) and (lauren.relationship < Relationship.GIRLFRIEND),
-            "tooltip": ("Aubrey and I get along well, she might be down to go with me."
+            "tooltip": (_("Aubrey and I get along well, she might be down to go with me.")
                 if aubrey.relationship < Relationship.FWB else
-                "I'm pretty sure that Aubrey would go with me and that would probably lead to a pretty hot night afterwards...")
+                _("I'm pretty sure that Aubrey would go with me and that would probably lead to a pretty hot night afterwards..."))
         },
-        "Autumn": {
+        _("Autumn"): {
             "label": "hc_asking_autumn",
             "condition": ("autumn" not in hcAsked) and (not autumn.relationship <= Relationship.MAD) and (lauren.relationship < Relationship.GIRLFRIEND),
-            "tooltip": ("Autumn and I aren't really close, but I'll never know if she'd say yes if I don't try."
+            "tooltip": (_("Autumn and I aren't really close, but I'll never know if she'd say yes if I don't try.")
                 if autumn.relationship > Relationship.MAD else
-                "I think Autumn might be mad at me, so I probably shouldn't ask her.")
+                _("I think Autumn might be mad at me, so I probably shouldn't ask her."))
         },
-        "Chloe": {
+        _("Chloe"): {
             "label": "hc_asking_chloe",
             "condition": ("chloe" not in hcAsked) and (chloe.relationship > Relationship.MAD) and (lauren.relationship < Relationship.GIRLFRIEND),
-            "tooltip": ("Chloe and I have been getting closer recently. Who knows, I might have a shot."
+            "tooltip": (_("Chloe and I have been getting closer recently. Who knows, I might have a shot.")
                 if chloe.relationship > Relationship.MAD else
-                "I think Chloe is mad at me, so I probably shouldn't ask her.")
+                _("I think Chloe is mad at me, so I probably shouldn't ask her."))
         },
-        "Emily": {
+        _("Emily"): {
             "label": "hc_asking_emily",
             "condition": ("emily" not in hcAsked) and (forgiveemily) and (lauren.relationship < Relationship.GIRLFRIEND),
-            "tooltip": ("I could take Emily. She definitely still has a thing for me."
+            "tooltip": (_("I could take Emily. She definitely still has a thing for me.")
                 if forgiveemily else
-                "I don't think asking Emily is the right call.")
+                _("I don't think asking Emily is the right call."))
         },
-        "Lauren": {
+        _("Lauren"): {
             "label": "hc_asking_lauren",
             "condition": ("lauren" not in hcAsked) and (lauren.relationship > Relationship.MAD),
-            "tooltip": ("I'm not sure Lauren sees me as more than a friend, but we have been getting closer."
+            "tooltip": (_("I'm not sure Lauren sees me as more than a friend, but we have been getting closer.")
                 if lauren.relationship > Relationship.MAD else
-                "It's kinda weird between Lauren and me, I probably should ask someone else.")
+                _("It's kinda weird between Lauren and me, I probably should ask someone else."))
         },
-        "Penelope": {
+        _("Penelope"): {
             "label": "hc_asking_penelope",
             "condition": ("penelope" not in hcAsked) and (not v7_emily_bowling) and (lauren.relationship < Relationship.GIRLFRIEND),
-            "tooltip": ("Penelope didn't seem too eager to talk to me today, I better ask someone else."
+            "tooltip": (_("Penelope didn't seem too eager to talk to me today, I better ask someone else.")
                 if v7_emily_bowling else
-                "Penelope and I got along really well when we went bowling together, I think she could say yes."
+                _("Penelope and I got along really well when we went bowling together, I think she could say yes.")
                 if bowling else
-                "I haven't done that much with Penelope so far, but maybe she'll yes.")
+                _("I haven't done that much with Penelope so far, but maybe she'll yes."))
         },
-        "Riley": {
+        _("Riley"): {
             "label": "hc_asking_riley",
             "condition": ("riley" not in hcAsked) and (lauren.relationship < Relationship.GIRLFRIEND),
-            "tooltip": ("Riley and I are good friends. She might say yes if I ask her."
+            "tooltip": (_("Riley and I are good friends. She might say yes if I ask her.")
                 if riley.relationship < Relationship.LIKES else
-                "Riley and I are good friends. She might say yes if I ask her.")
+                _("Riley and I are good friends. She might say yes if I ask her."))
         }
     }
 
@@ -102,11 +102,11 @@ screen hc_select():
     $ tooltip = GetTooltip()
     
     if lauren.relationship >= Relationship.GIRLFRIEND:
-        $ message = "Lauren would kill me if I asked someone other than her."
+        $ message = _("Lauren would kill me if I asked someone other than her.")
     elif tooltip:
         $ message = tooltip
     else:
-        $ message = "I could always go alone..."
+        $ message = _("I could always go alone...")
     
     text message:
         color "#FFF"
@@ -194,35 +194,35 @@ screen fr4dancefloor():
             pos (645, 30)
             idle "images/v7/fr4dancefloorchloe.webp"
             hover "images/v7/fr4dancefloorchloehover.webp"
-            action Show("confirm", message="Are you sure you want to end the free roam with Chloe?", yes_action=[Hide("confirm"), Jump("fr4chloedate")])
+            action Show("confirm", message=_("Are you sure you want to end the free roam with Chloe?"), yes_action=[Hide("confirm"), Jump("fr4chloedate")])
 
     elif hcGirl == "emily":
         imagebutton:
             xpos 615
             idle "images/v7/fr4danceflooremily.webp"
             hover "images/v7/fr4danceflooremilyhover.webp"
-            action Show("confirm", message="Are you sure you want to end the free roam with Emily?", yes_action=[Hide("confirm"), Jump("fr4emilydate")])
+            action Show("confirm", message=_("Are you sure you want to end the free roam with Emily?"), yes_action=[Hide("confirm"), Jump("fr4emilydate")])
 
     elif hcGirl == "lauren":
         imagebutton:
             xpos 617
             idle "images/v7/fr4dancefloorlauren.webp"
             hover "images/v7/fr4dancefloorlaurenhover.webp"
-            action Show("confirm", message="Are you sure you want to end the free roam with Lauren?", yes_action=[Hide("confirm"), Jump("fr4laurendate")])
+            action Show("confirm", message=_("Are you sure you want to end the free roam with Lauren?"), yes_action=[Hide("confirm"), Jump("fr4laurendate")])
 
     elif hcGirl == "penelope":
         imagebutton:
             xpos 655
             idle "images/v7/fr4dancefloorpenelope.webp"
             hover "images/v7/fr4dancefloorpenelopehover.webp"
-            action Show("confirm", message="Are you sure you want to end the free roam with Penelope?", yes_action=[Hide("confirm"), Jump("fr4penelopedate")])
+            action Show("confirm", message=_("Are you sure you want to end the free roam with Penelope?"), yes_action=[Hide("confirm"), Jump("fr4penelopedate")])
 
     elif hcGirl == "riley":
         imagebutton:
             pos (675, 25)
             idle "images/v7/fr4dancefloorriley.webp"
             hover "images/v7/fr4dancefloorrileyhover.webp"
-            action Show("confirm", message="Are you sure you want to end the free roam with Riley?", yes_action=[Hide("confirm"), Jump("fr4rileydate")])
+            action Show("confirm", message=_("Are you sure you want to end the free roam with Riley?"), yes_action=[Hide("confirm"), Jump("fr4rileydate")])
 
     imagebutton:
         align (0.5, 1.0)
@@ -450,7 +450,7 @@ screen fr4gymentrance():
             pos (365, 318)
             idle "images/v7/fr4gymentrancerileyidle.webp"
             hover "images/v7/fr4gymentrancerileyhover.webp"
-            action Show("confirm", message="Are you sure you want to end the free roam with Riley?", yes_action=[Hide("confirm"), Jump("fr4riley2")])
+            action Show("confirm", message=_("Are you sure you want to end the free roam with Riley?"), yes_action=[Hide("confirm"), Jump("fr4riley2")])
 
     if "nora" in freeroam4 and not "nora2" in freeroam4:
         imagebutton:
@@ -575,7 +575,7 @@ screen fr4hallway():
             idle "images/v7/fr4hallwaychloeidle.webp"
             hover "images/v7/fr4hallwaychloehover.webp"
             if not "chloe2" in freeroam4:
-                action Show("confirm", message="Are you sure you want to end the free roam with Chloe?", yes_action=[Hide("confirm"), Jump("fr4chloe2")])
+                action Show("confirm", message=_("Are you sure you want to end the free roam with Chloe?"), yes_action=[Hide("confirm"), Jump("fr4chloe2")])
             else:
                 action Jump("fr4chloe3")
 
@@ -642,7 +642,7 @@ screen fr4hallwaycorner():
         idle "images/v7/fr4hallwaycornerdoor.webp"
         hover "images/v7/fr4hallwaycornerdoorhover.webp"
         if "chloe" in freeroam4 and not preventgrayson:
-            action Show("confirm", message="Are you sure you want to end the free roam with Chloe?", yes_action=[Hide("confirm"), Jump("fr4lockerroomchloe")])
+            action Show("confirm", message=_("Are you sure you want to end the free roam with Chloe?"), yes_action=[Hide("confirm"), Jump("fr4lockerroomchloe")])
         else:
             action Jump("fr4lockerroom")
 
@@ -755,11 +755,11 @@ screen rileysexoverlay():
     default overlay = True
 
     if overlay:
-        textbutton "hide overlay":
+        textbutton _("hide overlay"):
             xpos 250
             action SetScreenVariable("overlay", False)
     else:
-        textbutton "show overlay":
+        textbutton _("show overlay"):
             xpos 10
             action SetScreenVariable("overlay", True)
 

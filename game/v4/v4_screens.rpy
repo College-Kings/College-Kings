@@ -3,12 +3,12 @@ screen girls():
 
     # character, label
     default girl_labels = [
-            ["Chloe", "juchloe"],
-            ["Aubrey", "juaubrey"],
-            ["Lauren", "julauren"],
-            ["Riley", "juriley"],
-            ["Emily", "juemily"],
-            ["Penelope", "jupenelope"],
+            [_("Chloe"), "juchloe"],
+            [_("Aubrey"), "juaubrey"],
+            [_("Lauren"), "julauren"],
+            [_("Riley"), "juriley"],
+            [_("Emily"), "juemily"],
+            [_("Penelope"), "jupenelope"],
         ]
         
     default image_path = "gui/julia_call/"

@@ -3072,7 +3072,7 @@ label continueq:
                     $ add_point(KCT.TROUBLEMAKER)
 
                     show rikiss2
-                    pause(1)
+                    pause 1
                     play sound "sounds/kiss.mp3"
 
                     $ grant_achievement("lips_dont_lie")

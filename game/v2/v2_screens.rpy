@@ -33,7 +33,7 @@ screen costumes():
         hover "images/v2/buyh.webp"
         pos (256, 935)
         action Show("confirm",
-            message="Once you decide which outfit to buy, you will no longer be able to play through all of the \"Try\" scenes. Are you sure you want to continue?",
+            message=_("Once you decide which outfit to buy, you will no longer be able to play through all of the \"Try\" scenes. Are you sure you want to continue?"),
             yes_action=[Hide("confirm"), Jump("buy1{}".format("" if costumeaubrey else "p"))])
 
     imagebutton:
@@ -41,7 +41,7 @@ screen costumes():
         hover "images/v2/buyh.webp"
         pos (738, 935)
         action Show("confirm",
-            message="Once you decide which outfit to buy, you will no longer be able to play through all of the \"Try\" scenes. Are you sure you want to continue?",
+            message=_("Once you decide which outfit to buy, you will no longer be able to play through all of the \"Try\" scenes. Are you sure you want to continue?"),
             yes_action=[Hide("confirm"), Jump("buy2{}".format("" if costumeaubrey else "p"))])
 
     imagebutton:
@@ -49,7 +49,7 @@ screen costumes():
         hover "images/v2/buyh.webp"
         pos (1219, 935)
         action Show("confirm",
-            message="Once you decide which outfit to buy, you will no longer be able to play through all of the \"Try\" scenes. Are you sure you want to continue?",
+            message=_("Once you decide which outfit to buy, you will no longer be able to play through all of the \"Try\" scenes. Are you sure you want to continue?"),
             yes_action=[Hide("confirm"), Jump("buy3{}".format("" if costumeaubrey else "p"))])
 
     if config_debug:
@@ -72,15 +72,15 @@ screen costumes():
                 actions.append(Jump("try3p"))
 
             actions.append(Show("confirm",
-                message="Once you decide which outfit to buy, you will no longer be able to play through all of the \"Try\" scenes. Are you sure you want to continue?",
+                message=_("Once you decide which outfit to buy, you will no longer be able to play through all of the \"Try\" scenes. Are you sure you want to continue?"),
                 yes_action=[Hide("confirm"), Jump("buy1{}".format("" if costumeaubrey else "p"))]))
 
             actions.append(Show("confirm",
-                message="Once you decide which outfit to buy, you will no longer be able to play through all of the \"Try\" scenes. Are you sure you want to continue?",
+                message=_("Once you decide which outfit to buy, you will no longer be able to play through all of the \"Try\" scenes. Are you sure you want to continue?"),
                 yes_action=[Hide("confirm"), Jump("buy2{}".format("" if costumeaubrey else "p"))]))
 
             actions.append(Show("confirm",
-                message="Once you decide which outfit to buy, you will no longer be able to play through all of the \"Try\" scenes. Are you sure you want to continue?",
+                message=_("Once you decide which outfit to buy, you will no longer be able to play through all of the \"Try\" scenes. Are you sure you want to continue?"),
                 yes_action=[Hide("confirm"), Jump("buy3{}".format("" if costumeaubrey else "p"))]))
 
         timer 0.1 action renpy.random.choice(actions)

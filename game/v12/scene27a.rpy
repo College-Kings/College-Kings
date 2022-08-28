@@ -380,13 +380,8 @@ label v12s27a:
     u "Let me just take some pictures for Kiwii..."
 
     $ v12s27a_kiwiiPost1 = KiwiiPost(mc, "phone/kiwii/Posts/v12/roastedape.webp", _("#RoastedApe"), numberLikes=469)
-    $ v12s27a_kiwiiPost1.newComment(imre, "Holy shit... You make it way too easy, Ryan!", mentions=[ryan], numberLikes=renpy.random.randint(250,350))
-    $ v12s27a_kiwiiPost1.newComment(amber, "Haha, yes! That's what you get, moron...", mentions=[ryan], numberLikes=renpy.random.randint(250,400))
-   
-### ERROR: KiwiiPost(mc, "Ryan sitting in chair at salon not facing the mirror with black hair", "#RoastedApe", numberLikes=469)
-### ERROR: kiwiiPost.newComment(imre, "Holy shit... You make it way to easy, Ryan!", mentions=[ryan])
-### ERROR: kiwiiPost.newComment(amber, "Haha, yes! That's what you get, moron...”, mentions=[ryan])
-### ERROR: kiwiiPost.addReply("Haha, an Ape doesn't back down!")### ERROR: kiwiiPost.addReply("Aw, come on guys! It doesn't look... that bad... Lmao")
+    $ v12s27a_kiwiiPost1.newComment(imre, _("Holy shit... You make it way too easy, Ryan!"), mentions=[ryan], numberLikes=renpy.random.randint(250,350))
+    $ v12s27a_kiwiiPost1.newComment(amber, _("Haha, yes! That's what you get, moron..."), mentions=[ryan], numberLikes=renpy.random.randint(250,400))
   
     scene v12s27a_8b # same as 8a, ryan mouth open, outraged, hiding his face behind his hands
     with dissolve

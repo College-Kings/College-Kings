@@ -907,8 +907,6 @@ label v11s1_mrrose:
 
             u "Whatever man, at least I'm actually doing something. Now, if you'll excuse me I have a friend to fight for."
 
-            call screen v11s1_hallway2
-
         else:
 
             scene v11cocmrr1
@@ -932,7 +930,7 @@ label v11s1_mrrose:
 
             u "Okayyy..."
 
-            call screen v11s1_hallway2
+        call screen v11s1_hallway2
 
     # -Back to free roam-
 
