@@ -1062,35 +1062,41 @@ screen history():
     ## Avoid predicting this screen, as it can be very large.
     predict False
 
-    use game_menu(_("History"), scroll=("vpgrid" if gui.history_height else "viewport")):
+    style_prefix "history"
 
-        style_prefix "history"
+    viewport:
+        scrollbars "vertical"
+        mousewheel True
+        draggable True
+        pagekeys True
+        yinitial 1.0
+        xysize (1900, 900)
 
-        for h in _history_list:
+        vbox:
+            xfill True
+            spacing 10
 
-            viewport:
-                yoffset -200
-                ysize 100
+            for h in _history_list:
+                hbox:
+                    if h.who:
+                        text h.who:
+                            style "history_name"
+                            substitute False
+                            yalign 0.5
 
-                ## This lays things out properly if history_height is None.
+                            if "color" in h.who_args:
+                                color h.who_args["color"]
 
-                if h.who:
-
-                    label h.who:
-                        style "history_name"
+                    text renpy.filter_text_tags(h.what, allow=gui.history_allow_tags):
                         substitute False
 
-                        ## Take the color of the who text from the Character, if
-                        ## set.
-                        if "color" in h.who_args:
-                            text_color h.who_args["color"]
+    if not _history_list:
+        label _("The dialogue history is empty.")
 
-                $ what = renpy.filter_text_tags(h.what, allow=gui.history_allow_tags)
-                text what:
-                    substitute False
-
-        if not _history_list:
-            label _("The dialogue history is empty.")
+    textbutton "Return":
+        action Return()
+        align (0.5, 1.0)
+        yoffset -20
 
 
 ## This determines what tags are allowed to be displayed on the history screen.
