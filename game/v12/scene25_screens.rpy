@@ -50,6 +50,7 @@ screen v12_girls():
         spacing 40
         xalign 0.5
         ypos 350
+        allow_underfull True
 
         for character, i in girl_labels.items():
             vbox:
