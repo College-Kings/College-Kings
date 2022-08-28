@@ -16,7 +16,11 @@ define _quit_slot = "99-1"
 
 # The game starts here.
 label start:
-    $ setup()
+    python:
+        phone.applications = [messenger, achievement_app, kiwii, simplr_app, relationship_app]
+        
+        nonplayable_character_setup()
+    
     call screen real_life_mode
 
 
