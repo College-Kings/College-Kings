@@ -41,8 +41,6 @@ screen end_screen():
     on "replace" action Hide("phone_icon")
     on "replaced" action Show("phone_icon")
 
-    timer 0.1 action MainMenu()
-
 
 screen team_credits():
     tag end_screen
