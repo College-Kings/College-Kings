@@ -8,8 +8,8 @@
 
 init python:
     def v12s19_kiwiiReply1():
-        v12s19_kiwiiPost1.newComment(amber, _("Hahahaha"), numberLikes=renpy.random.randint(250,350), force_send=True)
-        v12s19_kiwiiPost1.newComment(imre, _("Karma's a bitch..."), numberLikes=renpy.random.randint(250,350), force_send=True)
+        v12s19_kiwiiPost1.newComment(amber, _("Hahahaha"), numberLikes=renpy.random.randint(250,350))
+        v12s19_kiwiiPost1.newComment(imre, _("Karma's a bitch..."), numberLikes=renpy.random.randint(250,350))
 
 label v12_party_wake_up:
     scene v12pwu1 # TPP. Show MC sleeping, it's morning now, alone in the bed
