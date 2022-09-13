@@ -1092,7 +1092,8 @@ label v11_case_verdict:
 
         lee "As punishment for the actions taken, you will be subject to attend this year's abroad trip to Europe. While attending, you will serve as an Assistant Chaperone and help with all the chaperones may need."
 
-        lee "Alongside that, you will be volunteering with a university research company that is in great need of computer inclined individuals such as yourself for the remainder of your time here at the college. Do you agree?"
+        lee "Alongside that, you will be volunteering with a university research company."
+        lee "They're in great need of computer-inclined individuals such as yourself for the remainder of your time here at the college. Do you agree?"
 
         scene v11coc15a # TPP. Same as 15, but Penelope is shocked, mouth open
         with dissolve
