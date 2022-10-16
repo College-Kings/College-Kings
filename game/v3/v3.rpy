@@ -2081,6 +2081,8 @@ label continuem: #for compatibility only
 
     menu:
         "Kiss her":
+            label v3_aubreysg:
+        
             $ aubrey.relationship = Relationship.FWB
             $ sceneList.add("v3_aubrey")
 
