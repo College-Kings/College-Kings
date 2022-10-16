@@ -36,7 +36,7 @@ label v9_start_apes:
 
     menu:
         "Not a pledge anymore":
-            $ add_point(KCT.TROUBLEMAKER)
+            $ reputation.add_point(Reputations.TROUBLEMAKER)
 
             u "Not a pledge anymore."
 
@@ -69,7 +69,7 @@ label v9_start_apes:
             u "Something's going on. I just don't know what."
 
         "Let it slide":
-            $ add_point(KCT.BRO)
+            $ reputation.add_point(Reputations.BRO)
 
             u "(Cam's just a dick. Not worth it.)"
             u "Do you know what's going on?"
@@ -120,7 +120,7 @@ label v9_start_apes:
 
     menu:
         "Defend your honor":
-            $ add_point(KCT.TROUBLEMAKER)
+            $ reputation.add_point(Reputations.TROUBLEMAKER)
 
             u "I do fine. And they ALL call me Big Daddy."
 
@@ -141,7 +141,7 @@ label v9_start_apes:
             ca "That's for the Freshman Brawl! It's gonna be epic!"
 
         "Just ask him about the red square":
-            $ add_point(KCT.BRO)
+            $ reputation.add_point(Reputations.BRO)
 
             u "What's up with the red square? That's all I wanna know."
 
@@ -167,7 +167,7 @@ label v9_start_apes:
 
     menu:
         "Excited reply":
-            $ add_point(KCT.TROUBLEMAKER)
+            $ reputation.add_point(Reputations.TROUBLEMAKER)
 
             u "Pledge vs pledge!?"
 
@@ -202,7 +202,7 @@ label v9_start_apes:
 
         "Hesitant reply":
             $ v9_brawl_hesitant = True
-            $ add_point(KCT.BOYFRIEND)
+            $ reputation.add_point(Reputations.BOYFRIEND)
 
             u "(Bloodbath? I don't like the sound of that.)"
             u "Freshman Brawl? Sounds dangerous."

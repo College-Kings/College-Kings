@@ -84,7 +84,7 @@ label v10_wolves_redec:
 
     menu:
         "Accept help":
-            $ add_point(KCT.BRO)
+            $ reputation.add_point(Reputations.BRO)
 
             u "Yeah I'd love some help. Will go much faster haha."
 

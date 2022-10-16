@@ -131,7 +131,7 @@ label v14s09:
 
         menu:
             "Scare him":
-                $ add_point(KCT.TROUBLEMAKER)
+                $ reputation.add_point(Reputations.TROUBLEMAKER)
                 u "(This should be fun.)"
 
                 scene v14s09_6 # FPP. MC looks at Mr. Lee, show just Mr. Lee looking at mc, holding a clipboard with one hand and a pen in the other, no expression, mouth closed
@@ -190,7 +190,7 @@ label v14s09:
                 u "Ha... Good to hear, pal."
 
             "I've done enough":
-                $ add_point(KCT.BOYFRIEND)
+                $ reputation.add_point(Reputations.BOYFRIEND)
                 scene v14s09_5f # FPP. same as v14s09_5b charli has a relieved expression on his face
                 with dissolve
 

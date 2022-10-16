@@ -61,7 +61,7 @@ label v9_fri_training_w_wolves:
 
     menu: 
         "Answer": 
-            $ add_point(KCT.BRO)
+            $ reputation.add_point(Reputations.BRO)
 
             u "The Brawl."
 
@@ -71,7 +71,7 @@ label v9_fri_training_w_wolves:
             ch "Right."
 
         "Keep quiet":
-            $ add_point(KCT.TROUBLEMAKER)
+            $ reputation.add_point(Reputations.TROUBLEMAKER)
     
             pause 1
 
@@ -106,7 +106,7 @@ label v9_fri_training_w_wolves:
 
     menu: 
         "Make joke": 
-            $ add_point(KCT.TROUBLEMAKER)
+            $ reputation.add_point(Reputations.TROUBLEMAKER)
 
             u "I think punching an Ape's thick skull is gonna be like hitting a wall."
 
@@ -116,7 +116,7 @@ label v9_fri_training_w_wolves:
             ch "Yes, I'm sure it will be."
 
         "Agree":
-            $ add_point(KCT.BRO)
+            $ reputation.add_point(Reputations.BRO)
 
             u "(I don't want to interrupt.)"
    
@@ -273,7 +273,7 @@ label v9_fri_training_w_wolves:
         
         menu: 
             "Be cocky": 
-                $ add_point(KCT.TROUBLEMAKER)
+                $ reputation.add_point(Reputations.TROUBLEMAKER)
 
                 u "Never know."
 
@@ -288,7 +288,7 @@ label v9_fri_training_w_wolves:
                 u "What's that?"
 
             "Agree":
-                $ add_point(KCT.BRO)
+                $ reputation.add_point(Reputations.BRO)
 
                 u "Yeah that was kinda lucky."
 
@@ -357,7 +357,7 @@ label v9_fri_training_w_wolves:
 
         menu: 
             "Hit first": 
-                $ add_point(KCT.BRO)
+                $ reputation.add_point(Reputations.BRO)
 
                 u "Hit first."
 
@@ -377,7 +377,7 @@ label v9_fri_training_w_wolves:
                 ch "So you have to be ready for it."
 
             "Run":
-                $ add_point(KCT.TROUBLEMAKER)
+                $ reputation.add_point(Reputations.TROUBLEMAKER)
 
                 u "Run!"
 
@@ -440,7 +440,7 @@ label v9_fri_training_w_wolves:
 
         menu:
             "Act cool":
-                $ add_point(KCT.TROUBLEMAKER)
+                $ reputation.add_point(Reputations.TROUBLEMAKER)
 
                 scene v9tww15a
                 with dissolve
@@ -453,7 +453,7 @@ label v9_fri_training_w_wolves:
                 u "How?"
 
             "Ask for help":
-                $ add_point(KCT.BRO)
+                $ reputation.add_point(Reputations.BRO)
 
                 u "I need it. I don't know what happened."
 
@@ -529,7 +529,7 @@ label v9_fri_training_w_wolves:
     
         menu:
             "Agree":
-                $ add_point(KCT.BRO)
+                $ reputation.add_point(Reputations.BRO)
 
                 u "Yeah, I know."
 
@@ -539,7 +539,7 @@ label v9_fri_training_w_wolves:
                 ch "So we use that to our advantage."
 
             "Defend yourself":
-                $ add_point(KCT.TROUBLEMAKER)
+                $ reputation.add_point(Reputations.TROUBLEMAKER)
 
                 u "I mean, it's not my first fight ever. I can still have some tricks up my sleeve."
 

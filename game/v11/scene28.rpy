@@ -17,7 +17,7 @@ label v11_ms_rose_sex:
 
     menu:
         "Open the door":
-            $ add_point(KCT.TROUBLEMAKER)
+            $ reputation.add_point(Reputations.TROUBLEMAKER)
 
             scene v11ros2a # FPP. Same as v11ros2, MC is grabbing the door handle
             with dissolve
@@ -36,7 +36,7 @@ label v11_ms_rose_sex:
             pause 1
 
         "Knock":
-            $ add_point(KCT.BOYFRIEND)
+            $ reputation.add_point(Reputations.BOYFRIEND)
 
             scene v11ros2c # FPP. Same as v11ros2, show MC knocking on the door
             with dissolve

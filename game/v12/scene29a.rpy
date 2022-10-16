@@ -402,7 +402,7 @@ label v12_late_night_workout:
 
     menu:
         "Show off":
-            $ add_point(KCT.TROUBLEMAKER)
+            $ reputation.add_point(Reputations.TROUBLEMAKER)
 
             scene v12lnw9b
             with dissolve
@@ -581,7 +581,7 @@ label v12_late_night_workout:
                     li "*Chuckles*"
                 
                 "Best spot ever":
-                    $ add_point(KCT.TROUBLEMAKER)
+                    $ reputation.add_point(Reputations.TROUBLEMAKER)
 
                     scene v12lnw21d
                     #with dissolve
@@ -840,7 +840,7 @@ label v12_late_night_workout:
 
     menu:
         "Hard":
-            $ add_point(KCT.TROUBLEMAKER)
+            $ reputation.add_point(Reputations.TROUBLEMAKER)
             play sound "sounds/ks.mp3"
             scene v12lnw25c # TPP Same angle as v12lnw25, MC kicking back at the punching bag, missing, and losing his balance
             with dissolve

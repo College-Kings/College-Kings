@@ -209,7 +209,7 @@ label v11_airport_arrival:
             ri "Oh hush, quit trying to ruin the fun."
 
         "Be excited":
-            $ add_point(KCT.BRO)
+            $ reputation.add_point(Reputations.BRO)
             $ riley.points += 1
 
             scene v11aira10a

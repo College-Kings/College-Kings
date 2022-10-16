@@ -165,7 +165,7 @@ label v11_apes_manhunt:
 
     menu:
         "Ready":
-            $ add_point(KCT.BRO)
+            $ reputation.add_point(Reputations.BRO)
 
             scene v11amh7
             with dissolve
@@ -173,7 +173,7 @@ label v11_apes_manhunt:
             u "Yeah man, I'm ready!"
 
         "One last question":
-            $ add_point(KCT.TROUBLEMAKER)
+            $ reputation.add_point(Reputations.TROUBLEMAKER)
 
             scene v11amh7
             with dissolve
@@ -536,7 +536,7 @@ label v11_apes_manhunt:
                             menu:
                                 "Run":
                                     $ v11_manhunt_winner = "Caleb"
-                                    $ add_point(KCT.TROUBLEMAKER)
+                                    $ reputation.add_point(Reputations.TROUBLEMAKER)
 
                                     scene v11amh31b 
                                     with dissolve
@@ -582,7 +582,7 @@ label v11_apes_manhunt:
 
                                 "Warn him":
                                     $ v11_manhunt_winner = "Caleb"
-                                    $ add_point(KCT.BRO)
+                                    $ reputation.add_point(Reputations.BRO)
 
                                     scene v11amh31b
                                     with dissolve

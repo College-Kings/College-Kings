@@ -258,7 +258,7 @@ label v12_riley_cafe:
 
     menu:
         "I'd be able to tell":
-            $ add_point(KCT.TROUBLEMAKER)
+            $ reputation.add_point(Reputations.TROUBLEMAKER)
             scene v12ric4a
             with dissolve
 
@@ -320,12 +320,12 @@ label v12_riley_cafe:
 
     menu:
         "Oh yeah, good idea":
-            $ add_point(KCT.BOYFRIEND)
+            $ reputation.add_point(Reputations.BOYFRIEND)
             u "Almost forgot about that... Yeah, that's definitely the move."
 
         "Ugh, do we have to?":
-            $ add_point(KCT.BRO)
-            $ add_point(KCT.TROUBLEMAKER)
+            $ reputation.add_point(Reputations.BRO)
+            $ reputation.add_point(Reputations.TROUBLEMAKER)
             u "Oh yayyy, another boring treasure hunt."
 
     scene v12ric4a

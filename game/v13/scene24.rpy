@@ -58,7 +58,7 @@ label v13s24:
 
     menu:
         "I already have a girl":
-            $ add_point(KCT.BOYFRIEND)
+            $ reputation.add_point(Reputations.BOYFRIEND)
 
             scene v13s24_3a
             with dissolve
@@ -96,9 +96,9 @@ label v13s24:
             barh "Awkward..."
 
         "Fuck yeah, let's mingle":
-            $ add_point(KCT.BRO)
+            $ reputation.add_point(Reputations.BRO)
             if chloe.relationship >= Relationship.GIRLFRIEND or lauren.relationship >= Relationship.GIRLFRIEND:
-                $ add_point(KCT.TROUBLEMAKER)
+                $ reputation.add_point(Reputations.TROUBLEMAKER)
 
             scene v13s24_3a
             with dissolve
@@ -374,7 +374,7 @@ label v13s24:
 
     menu:
         "No kids for me":
-            $ add_point(KCT.BRO)
+            $ reputation.add_point(Reputations.BRO)
             $ v13_emmy_points += 1
             
             scene v13s24_11a
@@ -388,7 +388,7 @@ label v13s24:
             pause 0.75
 
         "I'm a family man":
-            $ add_point(KCT.BOYFRIEND)
+            $ reputation.add_point(Reputations.BOYFRIEND)
             
             scene v13s24_11a
             #with dissolve
@@ -565,7 +565,7 @@ label v13s24:
 
     menu:
         "Yes, I'm a romantic":
-            $ add_point(KCT.BOYFRIEND)
+            $ reputation.add_point(Reputations.BOYFRIEND)
             $ kourtney.relationship = Relationship.LIKES
             
             scene v13s24_16h
@@ -574,7 +574,7 @@ label v13s24:
             u "I feel like I'm a romantic, so of course."
 
         "No, that's too old school":
-            $ add_point(KCT.TROUBLEMAKER)
+            $ reputation.add_point(Reputations.TROUBLEMAKER)
 
             scene v13s24_16i # FPP. same as v13s24_16h kourtney slight frown
             with dissolve
@@ -688,7 +688,7 @@ label v13s24:
 
     menu:
         "Work":
-            $ add_point(KCT.BOYFRIEND)
+            $ reputation.add_point(Reputations.BOYFRIEND)
             $ aryssa.relationship = Relationship.LIKES
             
             scene v13s24_16l
@@ -697,8 +697,8 @@ label v13s24:
             u "I'd still be working in some way, shape or form. Don't have time for boredom."
 
         "Retired life":
-            $ add_point(KCT.BRO)
-            $ add_point(KCT.TROUBLEMAKER)
+            $ reputation.add_point(Reputations.BRO)
+            $ reputation.add_point(Reputations.TROUBLEMAKER)
 
             scene v13s24_16m # FPP. same as v13s24_16l aryssa slight frown
             with dissolve

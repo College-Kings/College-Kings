@@ -42,7 +42,7 @@ label v14s03e:
 
         menu: 
             "Good to hear":
-                $ add_point(KCT.BRO)
+                $ reputation.add_point(Reputations.BRO)
                 
                 u "Oh, good to hear..."
 
@@ -52,7 +52,7 @@ label v14s03e:
                 ry "Damn right it's good!" 
 
             "Oof, poor Satin":
-                $ add_point(KCT.TROUBLEMAKER)
+                $ reputation.add_point(Reputations.TROUBLEMAKER)
 
                 scene v14s03e_3
                 #with dissolve
@@ -127,7 +127,7 @@ label v14s03e:
 
         menu:
             "I'm glad you waited":
-                $ add_point(KCT.BRO)
+                $ reputation.add_point(Reputations.BRO)
                 u "I'm glad you did."
 
                 scene v14s03e_6b
@@ -141,7 +141,7 @@ label v14s03e:
                 u "That girl you were talking to... She had herpes."
 
             "You should've done it":
-                $ add_point(KCT.TROUBLEMAKER)
+                $ reputation.add_point(Reputations.TROUBLEMAKER)
 
                 u "I don't know man, I think you should've done it."
 
@@ -327,11 +327,11 @@ label v14s03e:
     menu:
 
         "Laugh":
-            $ add_point(KCT.TROUBLEMAKER)
+            $ reputation.add_point(Reputations.TROUBLEMAKER)
             u "*Laughs* Oh god."
 
         "Get mad":
-            $ add_point(KCT.BRO)
+            $ reputation.add_point(Reputations.BRO)
             u "What the fuck?!"
 
     u "So you set Imre up? I thought you two were finally getting along."
@@ -422,7 +422,7 @@ label v14s03e:
 
     menu:
         "That was hilarious":
-            $ add_point(KCT.TROUBLEMAKER)
+            $ reputation.add_point(Reputations.TROUBLEMAKER)
             u "Haha, that was hilarious."
 
             scene v14s03e_20
@@ -431,7 +431,7 @@ label v14s03e:
             ry "Right???"
 
         "Not cool, Ryan":
-            $ add_point(KCT.BOYFRIEND)
+            $ reputation.add_point(Reputations.BOYFRIEND)
             
             scene v14s03e_20a
             #with dissolve

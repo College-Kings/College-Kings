@@ -52,14 +52,14 @@ label v12_nora_exploring:
 
     menu:
         "Not at all":
-            $ add_point(KCT.TROUBLEMAKER)
+            $ reputation.add_point(Reputations.TROUBLEMAKER)
             scene v12noe2h # FPP. Same as v12noe2f, Nora taking a sip of her drink
             with dissolve
 
             u "No, not at all. *Chuckles* You're good."
 
         "A little surprising...":
-            $ add_point(KCT.BRO)
+            $ reputation.add_point(Reputations.BRO)
             scene v12noe2i # FPP. Same as v12noe2f, Nora slight smile, mouth closed
             with dissolve
 
@@ -236,7 +236,7 @@ label v12_nora_exploring:
 
     menu:
         "Speak her language":
-            $ add_point(KCT.TROUBLEMAKER)
+            $ reputation.add_point(Reputations.TROUBLEMAKER)
             scene v12noe6c
             with dissolve
 
@@ -314,7 +314,7 @@ label v12_nora_exploring:
             clady "You're... so kind! Thank you! Thank you..."
 
         "Tell her off":
-            $ add_point(KCT.BRO)
+            $ reputation.add_point(Reputations.BRO)
             scene v12noe6g # FPP. Same as v12noe6e, Nora slightly annoyed, mouth closed
             with dissolve
 

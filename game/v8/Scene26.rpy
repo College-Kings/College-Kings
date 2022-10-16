@@ -150,7 +150,7 @@ label s26:
 
     menu:
         "Take the glasses":
-            $ add_point(KCT.BOYFRIEND)
+            $ reputation.add_point(Reputations.BOYFRIEND)
             jump take_aub_glasses
         "Find a better pair":
             jump no_take_aub_glasses

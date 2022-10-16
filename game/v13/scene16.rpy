@@ -132,7 +132,7 @@ label v13s16:
     menu:
         "Of course":
             $ v13s16_lauren_points += 1
-            $ add_point(KCT.BOYFRIEND)
+            $ reputation.add_point(Reputations.BOYFRIEND)
             scene v13s16_7b
             with dissolve
 
@@ -176,7 +176,7 @@ label v13s16:
     menu:
         "I don't see why not":
             $ v13s16_lauren_points += 1
-            $ add_point(KCT.BOYFRIEND)
+            $ reputation.add_point(Reputations.BOYFRIEND)
             scene v13s16_7f
             with dissolve
             u "I don't see why not. Even if it's just out of respect for you, I'd do what I had to do in order to get along."

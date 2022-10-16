@@ -45,8 +45,8 @@ label josh_room:
 
     menu:
         "Agree to help":
-            $ add_point(KCT.TROUBLEMAKER)
-            $ add_point(KCT.BRO)
+            $ reputation.add_point(Reputations.TROUBLEMAKER)
+            $ reputation.add_point(Reputations.BRO)
             $ helpJosh = True
 
             u "Yeah, okay, I'll go. I can't let you do this alone."
@@ -80,7 +80,7 @@ label josh_room:
             jo "Yeah, see you then, bro!"
 
         "Say no":
-            $ add_point(KCT.BOYFRIEND)
+            $ reputation.add_point(Reputations.BOYFRIEND)
 
             u "Honestly, man, I don't think so. This isn't me and I don't want to get caught, especially with that shit."
 

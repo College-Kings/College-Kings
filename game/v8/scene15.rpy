@@ -91,7 +91,7 @@ label penelope_dorm_hack:
 
     menu:
         "Help Penelope":
-            $ add_point(KCT.BOYFRIEND)
+            $ reputation.add_point(Reputations.BOYFRIEND)
             jump help_pen
 
         "Leave":

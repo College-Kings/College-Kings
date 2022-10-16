@@ -32,7 +32,7 @@ label v14s08:
 
     menu:
         "Ask her what's wrong":
-            $ add_point(KCT.BOYFRIEND)
+            $ reputation.add_point(Reputations.BOYFRIEND)
             u "Hey, what's wrong?"
 
             scene v14s08_3d
@@ -72,7 +72,7 @@ label v14s08:
             pause 0.75
 
         "Leave her alone":
-            $ add_point(KCT.BRO)
+            $ reputation.add_point(Reputations.BRO)
             scene v14s08_3
             with dissolve
 

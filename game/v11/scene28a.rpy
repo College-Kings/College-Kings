@@ -64,7 +64,7 @@ label v11_sam_spa:
 
     menu:
         "Check her out":
-            $ add_point(KCT.BRO)
+            $ reputation.add_point(Reputations.BRO)
 
             scene v11sas3d # FPP. Same as v11sas3, but Samantha only in underwear
             with dissolve
@@ -715,7 +715,7 @@ label v11s28a_galleryScene:
         "Massage her boob":
             $ samantha.relationship = Relationship.MOVE
             $ sceneList.add("v11_samantha")
-            $ add_point(KCT.TROUBLEMAKER)
+            $ reputation.add_point(Reputations.TROUBLEMAKER)
 
             scene v11sas18a # TPP. Same as v11sas18, MC has his hands over her boob, she is smiling, mouth closed
             with dissolve
@@ -743,7 +743,7 @@ label v11s28a_galleryScene:
             u "Oh."
 
         "Don't massage her boob":
-            $ add_point(KCT.BOYFRIEND)
+            $ reputation.add_point(Reputations.BOYFRIEND)
 
             scene v11sas18
             with dissolve

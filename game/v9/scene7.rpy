@@ -222,7 +222,7 @@ label fr5ryan1:
 
         menu:
             "Talk about your dream":
-                $ add_point(KCT.BOYFRIEND)
+                $ reputation.add_point(Reputations.BOYFRIEND)
 
                 u "I'm not so sure about that. Last night I had a fucked up dream."
 
@@ -326,7 +326,7 @@ label fr5ryan1:
                 u "Right as fuck, my man."
 
             "Talk about the brawl":
-                $ add_point(KCT.BRO)
+                $ reputation.add_point(Reputations.BRO)
 
                 # -if MC chooses to tell Ryan how excited he is about the Brawl-
 
@@ -452,7 +452,7 @@ label fr5riley1:
 
         menu:
             "Kiss her":
-                $ add_point(KCT.TROUBLEMAKER)
+                $ reputation.add_point(Reputations.TROUBLEMAKER)
 
                 play sound "sounds/kiss.mp3"
 
@@ -648,7 +648,7 @@ label fr5aubrey1:
 
     menu: 
         "Don't join her":
-            $ add_point(KCT.TROUBLEMAKER)
+            $ reputation.add_point(Reputations.TROUBLEMAKER)
 
             u "That was a nice try, miss. But you must be mistaking me for a child, if you thought that would work."
 
@@ -683,7 +683,7 @@ label fr5aubrey1:
             u "Sounds interesting. I guess we will see."
 
         "Join her":
-            $ add_point(KCT.BOYFRIEND)
+            $ reputation.add_point(Reputations.BOYFRIEND)
 
             u "Fine, let me just take my clothes off."
 

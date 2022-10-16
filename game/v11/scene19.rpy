@@ -610,7 +610,7 @@ label v11_roommate:
 
             menu:
                 "Just tell her":
-                    $ add_point(KCT.BOYFRIEND)
+                    $ reputation.add_point(Reputations.BOYFRIEND)
                     $ riley.points += 1
 
                     scene v11rm21c
@@ -624,7 +624,7 @@ label v11_roommate:
                     ri "You're probably right."
 
                 "Ease into it":
-                    $ add_point(KCT.BRO)
+                    $ reputation.add_point(Reputations.BRO)
 
                     scene v11rm21c
                     with dissolve
@@ -825,7 +825,7 @@ label v11_roommate:
 
             menu:
                 "Just tell her":
-                    $ add_point(KCT.BOYFRIEND)
+                    $ reputation.add_point(Reputations.BOYFRIEND)
                     $ riley.points += 1
                     
                     scene v11rm21c
@@ -842,7 +842,7 @@ label v11_roommate:
                     with dissolve
 
                 "Ease into it":
-                    $ add_point(KCT.BRO)
+                    $ reputation.add_point(Reputations.BRO)
 
                     scene v11rm21c
                     with dissolve

@@ -66,7 +66,7 @@ label v11_nora_chloe_hallway:
     menu:
         "I'll be there":
             $ nora.points += 1
-            $ add_point(KCT.BOYFRIEND)
+            $ reputation.add_point(Reputations.BOYFRIEND)
 
             scene v11nohall2b
             with dissolve
@@ -86,7 +86,7 @@ label v11_nora_chloe_hallway:
                 no "I just wish he'd make more of an effort."
 
         "Have a good time":
-            $ add_point(KCT.BRO)
+            $ reputation.add_point(Reputations.BRO)
 
             scene v11nohall2d
             with dissolve
@@ -120,7 +120,7 @@ label v11_nora_chloe_hallway:
 
     menu:
         "Defend Chloe":
-            $ add_point(KCT.TROUBLEMAKER)
+            $ reputation.add_point(Reputations.TROUBLEMAKER)
             $ nora.points -= 1
 
             scene v11nohall2d
@@ -256,7 +256,7 @@ label v11_nora_chloe_hallway:
 
     menu:
         "Mellow":
-            $ add_point(KCT.BOYFRIEND)
+            $ reputation.add_point(Reputations.BOYFRIEND)
             scene v11nohall11c # same 11b, just change pose a little so conversation isn't stale
             with dissolve
 
@@ -275,7 +275,7 @@ label v11_nora_chloe_hallway:
 
     menu:
         "Hanging with the girls":
-            $ add_point(KCT.BOYFRIEND)
+            $ reputation.add_point(Reputations.BOYFRIEND)
 
             scene v11nohall11c
             with dissolve
@@ -366,7 +366,7 @@ label v11_nora_chloe_hallway:
                 menu:
                     "Apologize":
                         $ chloe.relationship = Relationship.FRIEND
-                        $ add_point(KCT.BOYFRIEND)
+                        $ reputation.add_point(Reputations.BOYFRIEND)
 
                         scene v11clhall1c
                         with dissolve
@@ -403,7 +403,7 @@ label v11_nora_chloe_hallway:
 
                         menu:
                             "Yes":
-                                $ add_point(KCT.BOYFRIEND)
+                                $ reputation.add_point(Reputations.BOYFRIEND)
                                 $ chloe.points += 1
 
                                 scene v11clhall1f
@@ -632,7 +632,7 @@ label v11_nora_chloe_hallway:
 
                 menu:
                     "Yes":
-                        $ add_point(KCT.BOYFRIEND)
+                        $ reputation.add_point(Reputations.BOYFRIEND)
                         $ chloe.points += 1
 
                         scene v11clhall1f

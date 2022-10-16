@@ -69,13 +69,13 @@ label emily_arcade:
 
         menu:
             "Take the bet":
-                $ add_point(KCT.BOYFRIEND)
+                $ reputation.add_point(Reputations.BOYFRIEND)
                 $ emilyArcade = 1
 
                 jump em_arcade_1
 
             "Make it more interesting":
-                $ add_point(KCT.TROUBLEMAKER)
+                $ reputation.add_point(Reputations.TROUBLEMAKER)
                 $ emilyArcade = 2
 
                 jump em_arcade_2
@@ -126,13 +126,13 @@ label emily_arcade:
 
         menu:
             "Take the bet":
-                $ add_point(KCT.BRO)
+                $ reputation.add_point(Reputations.BRO)
                 $ emilyArcade = 3
 
                 jump em_arcade_3
 
             "Make it more fun":
-                $ add_point(KCT.TROUBLEMAKER)
+                $ reputation.add_point(Reputations.TROUBLEMAKER)
                 $ emilyArcade = 4
 
                 jump em_arcade_4
@@ -802,10 +802,10 @@ label em_arcade_1:
     menu:
         "Kiss her":
             if lauren.relationship >= Relationship.GIRLFRIEND:
-                $ add_point(KCT.TROUBLEMAKER)
+                $ reputation.add_point(Reputations.TROUBLEMAKER)
 
             else:
-                $ add_point(KCT.BOYFRIEND)
+                $ reputation.add_point(Reputations.BOYFRIEND)
 
             scene v8arcade24
             with dissolve
@@ -852,7 +852,7 @@ label em_arcade_1:
 
         "Good night":
             if lauren.relationship >= Relationship.GIRLFRIEND:
-                $ add_point(KCT.BOYFRIEND)
+                $ reputation.add_point(Reputations.BOYFRIEND)
 
             scene v8arcade23a
             with dissolve
@@ -1257,9 +1257,9 @@ label v8s20_nsfwSkipLabel1:
     menu:
         "Kiss her":
             if lauren.relationship >= Relationship.GIRLFRIEND:
-                $ add_point(KCT.TROUBLEMAKER)
+                $ reputation.add_point(Reputations.TROUBLEMAKER)
             else:
-                $ add_point(KCT.BOYFRIEND)
+                $ reputation.add_point(Reputations.BOYFRIEND)
 
             scene v8arcade24
             with dissolve
@@ -1306,7 +1306,7 @@ label v8s20_nsfwSkipLabel1:
 
         "Good night":
             if lauren.relationship >= Relationship.GIRLFRIEND:
-                $ add_point(KCT.BOYFRIEND)
+                $ reputation.add_point(Reputations.BOYFRIEND)
 
             scene v8arcade23a
             with dissolve

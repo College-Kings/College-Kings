@@ -38,7 +38,7 @@ label v10_chloe_hallway:
 
         menu:
             "Cute":
-                $ add_point(KCT.BOYFRIEND)
+                $ reputation.add_point(Reputations.BOYFRIEND)
 
                 u "I'd say cute fits better..."
 
@@ -81,7 +81,7 @@ label v10_chloe_hallway:
 
                     menu:
                         "Ask Chloe how she is":
-                            $ add_point(KCT.BOYFRIEND)
+                            $ reputation.add_point(Reputations.BOYFRIEND)
                             $ chloe.points += 1
 
                             u "So uhm... how have you been?"
@@ -126,7 +126,7 @@ label v10_chloe_hallway:
 
                             menu:
                                 "Have a Rematch":
-                                    $ add_point(KCT.BOYFRIEND)
+                                    $ reputation.add_point(Reputations.BOYFRIEND)
                                     $ chloe.relationship = Relationship.FRIEND
                                     
                                     $ grant_achievement("on_the_court")
@@ -136,7 +136,7 @@ label v10_chloe_hallway:
                                     jump v10_chloe_gym
 
                                 "Decline a Rematch":
-                                    $ add_point(KCT.TROUBLEMAKER)
+                                    $ reputation.add_point(Reputations.TROUBLEMAKER)
                                     $ chloe.points -= 1
 
                                     u "Uhm, I shouldn't, I have a lot to do. Sorry."
@@ -218,7 +218,7 @@ label v10_chloe_hallway:
                 au "Anyways, I'm gonna head to class, see you guys."
 
             "Sexy":
-                $ add_point(KCT.BOYFRIEND)
+                $ reputation.add_point(Reputations.BOYFRIEND)
                 $ chloe.points += 1
 
                 u "Definitely gotta go with sexy."
@@ -273,7 +273,7 @@ label v10_chloe_hallway:
 
         menu:
             "Have a Rematch":
-                $ add_point(KCT.BOYFRIEND)
+                $ reputation.add_point(Reputations.BOYFRIEND)
                 $ chloe.points += 1
                 
                 $ grant_achievement("on_the_court")

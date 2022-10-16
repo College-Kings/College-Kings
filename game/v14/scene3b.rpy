@@ -139,13 +139,13 @@ label v14s03b:
 
         "Take him seriously":
             
-            $ add_point(KCT.BRO)
+            $ reputation.add_point(Reputations.BRO)
 
             u "Oh shit."
 
         "Take it as a joke":
 
-            $ add_point(KCT.TROUBLEMAKER)
+            $ reputation.add_point(Reputations.TROUBLEMAKER)
 
             u "*Laughs*"
 
@@ -240,7 +240,7 @@ label v14s03b:
 
     menu:
         "Go for it":
-            $ add_point(KCT.TROUBLEMAKER)
+            $ reputation.add_point(Reputations.TROUBLEMAKER)
             u "Well, no. Honestly, if it's just for practice then there's probably no better place than this. Just make sure that's really what you want to do."
 
             scene v14s03b_5b
@@ -254,7 +254,7 @@ label v14s03b:
             u "Not at all. I think you should go for it."
 
         "Don't ruin your first time":
-            $ add_point(KCT.BRO)
+            $ reputation.add_point(Reputations.BRO)
             u "Well, honestly... I wouldn't want my first time to be in a brothel."
 
             scene v14s03b_5a

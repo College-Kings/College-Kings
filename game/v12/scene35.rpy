@@ -71,7 +71,7 @@ label v12_chris_nora_room:
 
     menu:
         "Go to Nora":
-            $ add_point(KCT.BOYFRIEND)
+            $ reputation.add_point(Reputations.BOYFRIEND)
             scene v12cnr10 # TPP. Show MC walking towards his hotel room door to the hallway, neutral expression, mouth closed
             with dissolve
 
@@ -154,7 +154,7 @@ label v12_chris_nora_room:
                 jump v12_nora_room #scene 35a
 
         "Leave her alone":
-            $ add_point(KCT.BRO)
+            $ reputation.add_point(Reputations.BRO)
             scene v12cnr5
             with dissolve
 

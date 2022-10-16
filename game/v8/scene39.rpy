@@ -59,8 +59,8 @@ label hosp_climb_seb:
 
     menu:
         "Climb the hospital":
-            $ add_point(KCT.BRO)
-            $ add_point(KCT.TROUBLEMAKER)
+            $ reputation.add_point(Reputations.BRO)
+            $ reputation.add_point(Reputations.TROUBLEMAKER)
             $ climbwseb = True
             jump climb_the_hos
 

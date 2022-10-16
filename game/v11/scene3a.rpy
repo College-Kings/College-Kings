@@ -75,7 +75,7 @@ label v11_wolves_packing_chris:
     with dissolve
     menu:
         "Let him":
-            $ add_point(KCT.BRO)
+            $ reputation.add_point(Reputations.BRO)
             scene v10swpc4
             with dissolve
 
@@ -90,7 +90,7 @@ label v11_wolves_packing_chris:
             with dissolve
             menu:
                 "Of course":
-                    $ add_point(KCT.BRO)
+                    $ reputation.add_point(Reputations.BRO)
                     scene v10swpc4
                     with dissolve
 
@@ -230,7 +230,7 @@ label v11_wolves_packing_chris:
                     ch "I hope you're right."
                 
                 "Her or the frat":
-                    $ add_point(KCT.TROUBLEMAKER)
+                    $ reputation.add_point(Reputations.TROUBLEMAKER)
                     scene v10swpc4
                     with dissolve
 

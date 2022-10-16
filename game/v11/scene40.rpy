@@ -163,7 +163,7 @@ label v11_carriage_ride:
 
     menu:
         "Tease":
-            $ add_point(KCT.TROUBLEMAKER)
+            $ reputation.add_point(Reputations.TROUBLEMAKER)
             scene v11car4m # FPP. Same as v11car4l, different pose, Lindsey slightly sad, mouth closed
             with dissolve
 
@@ -856,7 +856,7 @@ label v11_carriage_ride:
 
     menu:
         "Tell her about Lindsey":
-            $ add_point(KCT.TROUBLEMAKER)
+            $ reputation.add_point(Reputations.TROUBLEMAKER)
             $ v11_told_aubrey = True
 
             scene v11car22c # FPP. Same as v11car22a, different pose, Aubrey curious, mouth closed

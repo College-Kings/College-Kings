@@ -219,7 +219,7 @@ label v11_hotel_bar_wolves: #can only get here if joinwolves
 
         menu:
             "Go to her room":
-                $ add_point(KCT.TROUBLEMAKER)
+                $ reputation.add_point(Reputations.TROUBLEMAKER)
 
                 scene v11hrs5a # TPP Same angle as v11hrs5, MC alone at bar, getting off of bar stool to leave
                 with dissolve

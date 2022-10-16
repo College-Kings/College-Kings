@@ -174,7 +174,7 @@ label v12_chase_nora:
             u "I think you were right to be upset, what you've been asking for is more than reasonable."
 
         "Support Chris":
-            $ add_point(KCT.BRO)
+            $ reputation.add_point(Reputations.BRO)
 
             u "I try to play the safe zone, so I'm not gonna point fingers at anyone. I will say this though, nothing you're asking of him is unreasonable and nothing he's doing is unreasonable."
 

@@ -75,7 +75,7 @@ label v12_chase_robber:
 
             menu (fail_label="v12s1a_failed_timer"):
                 "Dodge":
-                    $ add_point(KCT.TROUBLEMAKER)
+                    $ reputation.add_point(Reputations.TROUBLEMAKER)
                     $ v12_fight_win = True
                     scene v12car12 # TPP Show MC dodging robber's punch
                     with dissolve
@@ -306,7 +306,7 @@ label v12_chase_robber:
 
         menu:
             "Kick him":
-                $ add_point(KCT.TROUBLEMAKER)
+                $ reputation.add_point(Reputations.TROUBLEMAKER)
                 scene v12car16b # TPP Same angle as v12car16, show MC kicking robber
                 with dissolve
                 play sound "sounds/facepunch1.mp3"

@@ -253,7 +253,7 @@ label v13s14b:
 
     menu:
         "Be a gentleman":
-            $ add_point(KCT.BOYFRIEND)
+            $ reputation.add_point(Reputations.BOYFRIEND)
             u "Penelope, you're pretty drunk. *Chuckles* I should get you back so you can get a good night's worth of sleep."
 
             scene v13s14b_16a # FPP Same angle as 16, Penelope dissapointed but still smiling, mouth open
@@ -287,7 +287,7 @@ label v13s14b:
             u "You could say that. *Chuckles*"
 
         "Have fun":
-            $ add_point(KCT.TROUBLEMAKER)
+            $ reputation.add_point(Reputations.TROUBLEMAKER)
             u "I may just let you..."
 
             play sound "sounds/kiss.mp3"

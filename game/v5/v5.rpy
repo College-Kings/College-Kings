@@ -1,13 +1,13 @@
 init python:
     # Amber messages
     def v5_reply1():
-        add_point(KCT.BRO)
+        add_point(Reputations.BRO)
         amber.messenger.newMessage(_("Oh really? How are you gonna do that?"))
         amber.messenger.addReply(_("I give some world-class massages"), v5_reply2)
         amber.messenger.addReply(_("I'll stay longer next time"), v5_reply3)
 
     def v5_reply2():
-        add_point(KCT.TROUBLEMAKER)
+        add_point(Reputations.TROUBLEMAKER)
         amber.messenger.newMessage(_("That does sound enticing ;)"))
 
     def v5_reply3():
@@ -19,13 +19,13 @@ init python:
         amber.messenger.newMessage(_("Deal xx"))
 
     def v5_reply5():
-        add_point(KCT.BRO)
+        add_point(Reputations.BRO)
         amber.messenger.newMessage(_("Oh wow, I was just checking. :P"))
         amber.messenger.addReply(_("Don't worry, you'll see me soon."), v5_reply6)
         amber.messenger.addReply(_("Haha, I'm fine."), v5_reply7)
 
     def v5_reply6():
-        add_point(KCT.TROUBLEMAKER)
+        add_point(Reputations.TROUBLEMAKER)
         amber.messenger.newMessage(_("Was hoping xx"))
 
     def v5_reply7():
@@ -37,13 +37,13 @@ init python:
         amber.messenger.newMessage(_("That's good xx"))
 
     def v5_reply9():
-        add_point(KCT.BRO)
+        add_point(Reputations.BRO)
         amber.messenger.newMessage(_("Oh shut up, I was just checking in"))
         amber.messenger.addReply(_("Don't worry, you'll see me again"), v5_reply10)
         amber.messenger.addReply(_("Haha, I'm fine"), v5_reply11)
 
     def v5_reply10():
-        add_point(KCT.TROUBLEMAKER)
+        add_point(Reputations.TROUBLEMAKER)
         amber.messenger.newMessage(_("Was hoping xx"))
 
     def v5_reply11():
@@ -288,7 +288,7 @@ label jorepb:
 
     menu:
         "I believe you":
-            $ add_point(KCT.BOYFRIEND)
+            $ reputation.add_point(Reputations.BOYFRIEND)
 
             scene s370
             with dissolve
@@ -358,7 +358,7 @@ label jorepb:
 
         "You're lying":
             $ chloe.relationship = Relationship.MAD
-            $ add_point(KCT.TROUBLEMAKER)
+            $ reputation.add_point(Reputations.TROUBLEMAKER)
 
             scene s370a
             with dissolve
@@ -728,7 +728,7 @@ label continuez:
         menu:
             "Complaints? I love it":
                 $ laurenpublic = True
-                $ add_point(KCT.BOYFRIEND)
+                $ reputation.add_point(Reputations.BOYFRIEND)
 
                 u "Complaints? I love kissing you. I can't wait till we say goodbye and I can kiss you again. *Laughs*"
 
@@ -743,7 +743,7 @@ label continuez:
                 u "Hahaha, oops."
 
             "I don't like kissing in public":
-                $ add_point(KCT.TROUBLEMAKER)
+                $ reputation.add_point(Reputations.TROUBLEMAKER)
 
                 u "Uhm, actually do you mind if we don't do that in public?"
 
@@ -777,7 +777,7 @@ label continuez:
 
                 menu:
                     "Sorry, not in public":
-                        $ add_point(KCT.TROUBLEMAKER)
+                        $ reputation.add_point(Reputations.TROUBLEMAKER)
                         
                         $ grant_achievement("on_the_low")
 
@@ -876,7 +876,7 @@ label gokissb:
 
     menu:
         "Agree":
-            $ add_point(KCT.BOYFRIEND)
+            $ reputation.add_point(Reputations.BOYFRIEND)
             $ laurentest.add("q1")
 
             scene s382a
@@ -885,7 +885,7 @@ label gokissb:
             u "Agree."
 
         "Disagree":
-            $ add_point(KCT.TROUBLEMAKER)
+            $ reputation.add_point(Reputations.TROUBLEMAKER)
 
             scene s382a
             with dissolve
@@ -899,8 +899,8 @@ label gokissb:
 
     menu:
         "Agree":
-            $ add_point(KCT.BOYFRIEND)
-            $ add_point(KCT.BRO)
+            $ reputation.add_point(Reputations.BOYFRIEND)
+            $ reputation.add_point(Reputations.BRO)
             $ laurentest.add("q2")
 
             scene s382a
@@ -909,7 +909,7 @@ label gokissb:
             u "Uhm... agree I guess."
 
         "Disagree":
-            $ add_point(KCT.TROUBLEMAKER)
+            $ reputation.add_point(Reputations.TROUBLEMAKER)
 
             scene s382a
             with dissolve
@@ -928,7 +928,7 @@ label gokissb:
 
     menu:
         "Agree":
-            $ add_point(KCT.BOYFRIEND)
+            $ reputation.add_point(Reputations.BOYFRIEND)
             $ laurentest.add("q3")
 
             scene s382a
@@ -999,7 +999,7 @@ label gokissb:
                 pause 0.5
 
         "Disagree":
-            $ add_point(KCT.BRO)
+            $ reputation.add_point(Reputations.BRO)
 
             scene s382a
             with dissolve
@@ -1007,7 +1007,7 @@ label gokissb:
             u "Not really, sooo... disagree."
 
             if lauren.relationship >= Relationship.GIRLFRIEND:
-                $ add_point(KCT.TROUBLEMAKER)
+                $ reputation.add_point(Reputations.TROUBLEMAKER)
 
                 scene s382f # Lauren passive agressive
                 with dissolve
@@ -1171,7 +1171,7 @@ label continuetrolley:
 
 label trolleyaa: # you don't press the lever
     stop sound
-    $ add_point(KCT.BOYFRIEND)
+    $ reputation.add_point(Reputations.BOYFRIEND)
 
     scene s388 # hands away from lever
     with dissolve
@@ -1189,7 +1189,7 @@ label trolleyaa: # you don't press the lever
 
 label trolleyab: # you do press the lever
     stop sound
-    $ add_point(KCT.BRO)
+    $ reputation.add_point(Reputations.BRO)
     play sound "sounds/lever.mp3"
     scene s388e #you press lever
     with dissolve
@@ -1283,7 +1283,7 @@ label continueam:
 
 label trolleyba: # you don't press the lever
     stop sound
-    $ add_point(KCT.TROUBLEMAKER)
+    $ reputation.add_point(Reputations.TROUBLEMAKER)
     scene s388 # hands away from lever
     with dissolve
 
@@ -1396,7 +1396,7 @@ label continuean:
 
 label trolleyca: # you don't press the lever
     stop sound
-    $ add_point(KCT.BRO)
+    $ reputation.add_point(Reputations.BRO)
 
     scene s388 # hands away from lever
     with dissolve
@@ -1414,7 +1414,7 @@ label trolleyca: # you don't press the lever
 
 label trolleycb: # you do press the lever
     stop sound
-    $ add_point(KCT.BOYFRIEND)
+    $ reputation.add_point(Reputations.BOYFRIEND)
     play sound "sounds/lever.mp3"
     scene s388e #you press lever
     with dissolve
@@ -1444,7 +1444,7 @@ label continueao:
 
     menu:
         "At least we're done now":
-            $ add_point(KCT.BOYFRIEND)
+            $ reputation.add_point(Reputations.BOYFRIEND)
 
             scene s382a
             with dissolve
@@ -1515,7 +1515,7 @@ label continueao:
             jump hospitala
 
         "That was too far":
-            $ add_point(KCT.TROUBLEMAKER)
+            $ reputation.add_point(Reputations.TROUBLEMAKER)
 
             scene s382a
             with dissolve
@@ -1671,7 +1671,7 @@ label continueaf:
 
                 menu:
                     "I'm someone else":
-                        $ add_point(KCT.TROUBLEMAKER)
+                        $ reputation.add_point(Reputations.TROUBLEMAKER)
 
                         u "What? No, I'm just a friend looking for her, where is she?"
 
@@ -1694,7 +1694,7 @@ label continueaf:
                             jump hospitala
 
                     "I didn't mean to":
-                        $ add_point(KCT.BOYFRIEND)
+                        $ reputation.add_point(Reputations.BOYFRIEND)
 
                         u "I didn't mean to... it was a misunderstanding!"
 
@@ -2087,7 +2087,7 @@ label continueaf:
     menu:
         "Complaints? I love it":
             $ laurenpublic = True
-            $ add_point(KCT.BOYFRIEND)
+            $ reputation.add_point(Reputations.BOYFRIEND)
 
             u "Complaints? Kissing you rules."
 
@@ -2102,7 +2102,7 @@ label continueaf:
 
 
         "I don't like kissing in public":
-            $ add_point(KCT.TROUBLEMAKER)
+            $ reputation.add_point(Reputations.TROUBLEMAKER)
 
             u "Uhm, actually do you mind if we don't do that in public?"
 
@@ -2136,7 +2136,7 @@ label continueaf:
 
             menu:
                 "Sorry, not in public":
-                    $ add_point(KCT.TROUBLEMAKER)
+                    $ reputation.add_point(Reputations.TROUBLEMAKER)
                     
                     $ grant_achievement("on_the_low")
 
@@ -2700,7 +2700,7 @@ label hospitala:
 
     menu:
         "Confront Adam":
-            $ add_point(KCT.BRO)
+            $ reputation.add_point(Reputations.BRO)
 
             scene s397
             with dissolve
@@ -2719,12 +2719,12 @@ label hospitala:
             menu:
                 "Punch him":
                     $ fightadam = True
-                    $ add_point(KCT.TROUBLEMAKER)
+                    $ reputation.add_point(Reputations.TROUBLEMAKER)
 
                     jump fk_a
 
                 "Talk to him":
-                    $ add_point(KCT.BOYFRIEND)
+                    $ reputation.add_point(Reputations.BOYFRIEND)
 
                     scene s398a
                     with dissolve
@@ -2744,12 +2744,12 @@ label hospitala:
                     menu:
                         "Punch him":
                             $ fightadam = True
-                            $ add_point(KCT.TROUBLEMAKER)
+                            $ reputation.add_point(Reputations.TROUBLEMAKER)
 
                             jump fk_a
 
                         "Threaten to tell school":
-                            $ add_point(KCT.BOYFRIEND)
+                            $ reputation.add_point(Reputations.BOYFRIEND)
 
                             scene s398a
                             with dissolve
@@ -2775,17 +2775,17 @@ label hospitala:
                             menu:
                                 "Tell the school":
                                     $ tellschool = True
-                                    $ add_point(KCT.BOYFRIEND)
+                                    $ reputation.add_point(Reputations.BOYFRIEND)
 
                                     jump fl_a
 
                                 "Keep it to yourself":
-                                    $ add_point(KCT.BRO)
+                                    $ reputation.add_point(Reputations.BRO)
 
                                     jump fl_b
 
         "Leave it":
-            $ add_point(KCT.BOYFRIEND)
+            $ reputation.add_point(Reputations.BOYFRIEND)
 
             scene s397b
             with dissolve
@@ -2797,11 +2797,11 @@ label hospitala:
             menu:
                 "Tell the school":
                     $ tellschool = True
-                    $ add_point(KCT.BOYFRIEND)
+                    $ reputation.add_point(Reputations.BOYFRIEND)
                     jump fl_a
 
                 "Keep it to yourself":
-                    $ add_point(KCT.BRO)
+                    $ reputation.add_point(Reputations.BRO)
                     jump fl_b
 
 ########## Adam fight
@@ -3721,7 +3721,7 @@ label youfinishadam: #### You beat adam
 
     menu:
         "Yeah, I'm interested":
-            $ add_point(KCT.BRO)
+            $ reputation.add_point(Reputations.BRO)
 
             scene s428a
             with dissolve
@@ -3758,7 +3758,7 @@ label youfinishadam: #### You beat adam
             jump findimre
 
         "Not really":
-            $ add_point(KCT.BOYFRIEND)
+            $ reputation.add_point(Reputations.BOYFRIEND)
 
             scene s428a
             with dissolve

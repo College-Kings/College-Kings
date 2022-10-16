@@ -166,7 +166,7 @@ label v13s50:
 
     menu:
         "He knows more":
-            $ add_point(KCT.BRO)
+            $ reputation.add_point(Reputations.BRO)
             scene v13s50_9a
             with dissolve
 

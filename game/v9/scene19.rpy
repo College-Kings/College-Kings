@@ -98,7 +98,7 @@ label v9_lau_dorm:
     if lauren.relationship >= Relationship.KISS:
         menu:
             "Offer Lauren a back rub":
-                $ add_point(KCT.BOYFRIEND)
+                $ reputation.add_point(Reputations.BOYFRIEND)
 
                 u "Here, let me help."
 
@@ -123,7 +123,7 @@ label v9_lau_dorm:
                 la "Yeah! Let's get to work."
 
             "Offer Lauren a hug":
-                $ add_point(KCT.BOYFRIEND)
+                $ reputation.add_point(Reputations.BOYFRIEND)
             
                 u "Aww, come here."
 
@@ -155,7 +155,7 @@ label v9_lau_dorm:
     else:
         menu:
             "Offer guidance":
-                $ add_point(KCT.BRO)
+                $ reputation.add_point(Reputations.BRO)
 
                 u "It's simple. Start with your main goal and work your way back to what to do now."
 
@@ -180,7 +180,7 @@ label v9_lau_dorm:
                 u "(Whew!)"
 
             "Just listen":
-                $ add_point(KCT.BOYFRIEND)
+                $ reputation.add_point(Reputations.BOYFRIEND)
 
                 u "What part's giving you the most trouble? How can I help?"
 
@@ -237,7 +237,7 @@ label v9_lau_dorm:
             u "No! We can top that!"
 
         "Support Lauren":
-            $ add_point(KCT.BOYFRIEND)
+            $ reputation.add_point(Reputations.BOYFRIEND)
         
             u "Hmm. I see why you're stressed. But don't worry. We can come up with something just as awesome."
 
@@ -515,7 +515,7 @@ label v9_lau_dorm:
         if lauren.relationship >= Relationship.GIRLFRIEND:
             menu:
                 "Flirt":
-                    $ add_point(KCT.BOYFRIEND)
+                    $ reputation.add_point(Reputations.BOYFRIEND)
 
                     u "One might say, your hero?"
 
@@ -525,7 +525,7 @@ label v9_lau_dorm:
                     la "One might."
 
                 "Be romantic":
-                    $ add_point(KCT.BOYFRIEND)
+                    $ reputation.add_point(Reputations.BOYFRIEND)
 
                     u "I just want you to know you can count on me. Always."
 
@@ -571,7 +571,7 @@ label v9_lau_dorm:
 
             menu:
                 "Kiss Lauren":
-                    $ add_point(KCT.BOYFRIEND)
+                    $ reputation.add_point(Reputations.BOYFRIEND)
 
                     jump v9_lau_dorm_kiss
 
@@ -592,7 +592,7 @@ label v9_lau_dorm:
 
         menu:
             "Credit Lauren":
-                $ add_point(KCT.BOYFRIEND)
+                $ reputation.add_point(Reputations.BOYFRIEND)
 
                 u "It's gonna be a great event. Those Deer will be begging you to host every event from now on."
 

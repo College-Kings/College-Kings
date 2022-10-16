@@ -272,7 +272,7 @@ label v12s32:
 
     menu:
         "Turn your back to Aubrey":
-            $ add_point(KCT.BRO)
+            $ reputation.add_point(Reputations.BRO)
             scene v12s32_15a #same 15, MC crosses his arms and puts his back to Aubrey, aubrey a bit dissapointed, mouth upen
             with dissolve
 
@@ -294,7 +294,7 @@ label v12s32:
             pg "I wouldn't call that sexy but, alright..."
 
         "Put your arms around Aubrey":
-            $ add_point(KCT.BOYFRIEND)
+            $ reputation.add_point(Reputations.BOYFRIEND)
             scene v12s32_15c #same 15, Aubrey has her back to MC and he wraps his arms around her, squeezing her in tight, Aubrey smiles at him, mouth closed
             with dissolve
 
@@ -482,7 +482,7 @@ label v12s32:
 
     menu:
         "Boost Aubrey":
-            $ add_point(KCT.TROUBLEMAKER)
+            $ reputation.add_point(Reputations.TROUBLEMAKER)
             $ v12s32_Aubrey_Boost = True
             $ aubrey.points += 1
 
@@ -505,7 +505,7 @@ label v12s32:
             u "*Whisper* You got this, just be yourself."
 
         "Leave it alone":
-            $ add_point(KCT.BRO)
+            $ reputation.add_point(Reputations.BRO)
             scene v12s32_21c 
             with dissolve
 
@@ -833,7 +833,7 @@ label v12s32:
     menu: 
         "Get Aubrey flowers":
             $ s12v32_get_aubrey_flowers = True
-            $ add_point(KCT.BOYFRIEND)
+            $ reputation.add_point(Reputations.BOYFRIEND)
             u "Wait a minute, Aubrey."
 
             scene v12s32_33d # aubrey turns around, looks at mc, curious, mouth open

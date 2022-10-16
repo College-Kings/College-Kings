@@ -1,7 +1,7 @@
 init python:
     # Josh messages
     def v4_reply1():
-        add_point(KCT.BRO)
+        add_point(Reputations.BRO)
         josh.messenger.newMessage(_("Dope"))
         josh.messenger.newMessage(_("Come by 995 Sereno Drive at 8, it's my friends house."))
 
@@ -23,7 +23,7 @@ init python:
         josh.messenger.newMessage(_("Come by 995 Sereno Drive at 8, it's my friends house."))
 
     def v4_reply5():
-        add_point(KCT.BOYFRIEND)
+        add_point(Reputations.BOYFRIEND)
         josh.messenger.newMessage(_("This guy"))
 
 label v4start:
@@ -82,7 +82,7 @@ label v4start:
 
     menu:
         "You should be more careful":
-            $ add_point(KCT.BOYFRIEND)
+            $ reputation.add_point(Reputations.BOYFRIEND)
 
             scene s297a
             with dissolve
@@ -98,7 +98,7 @@ label v4start:
 
             menu:
                 "Let me help":
-                    $ add_point(KCT.BRO)
+                    $ reputation.add_point(Reputations.BRO)
 
                     scene s297a
                     with dissolve
@@ -128,7 +128,7 @@ label v4start:
                     u "I'll see you then, get better soon."
 
                 "That's a dumb idea":
-                    $ add_point(KCT.BOYFRIEND)
+                    $ reputation.add_point(Reputations.BOYFRIEND)
 
                     scene s297a
                     with dissolve
@@ -158,8 +158,8 @@ label v4start:
                     u "I'll see you then, get better soon."
 
         "Let's fuck him up":
-            $ add_point(KCT.BRO)
-            $ add_point(KCT.TROUBLEMAKER)
+            $ reputation.add_point(Reputations.BRO)
+            $ reputation.add_point(Reputations.TROUBLEMAKER)
 
             scene s297a
             with dissolve
@@ -314,8 +314,8 @@ label v4start:
 
     menu:
         "Take responsibility":
-            $ add_point(KCT.BRO)
-            $ add_point(KCT.BOYFRIEND)
+            $ reputation.add_point(Reputations.BRO)
+            $ reputation.add_point(Reputations.BOYFRIEND)
 
             scene s303c
             with dissolve
@@ -331,7 +331,7 @@ label v4start:
             with dissolve
 
         "Blame Ryan":
-            $ add_point(KCT.TROUBLEMAKER)
+            $ reputation.add_point(Reputations.TROUBLEMAKER)
 
             scene s303c
             with dissolve
@@ -572,7 +572,7 @@ label v4start:
 
         menu:
             "Someone punched me":
-                $ add_point(KCT.BOYFRIEND)
+                $ reputation.add_point(Reputations.BOYFRIEND)
 
                 scene s315a
                 with dissolve
@@ -607,7 +607,7 @@ label v4start:
                 ju "Okay honey, let's go shopping then."
 
             "It was an accident":
-                $ add_point(KCT.TROUBLEMAKER)
+                $ reputation.add_point(Reputations.TROUBLEMAKER)
 
                 scene s315a
                 with dissolve
@@ -1086,7 +1086,7 @@ label v4start:
     u "(Oh that's Lauren's sister Autumn...)"
 
     if toldlauren:
-        $ add_point(KCT.TROUBLEMAKER)
+        $ reputation.add_point(Reputations.TROUBLEMAKER)
 
         u "(Hopefully Lauren didn't tell her about what happened...)"
 
@@ -1173,7 +1173,7 @@ label v4start:
 
 
     elif laurentoofar:
-        $ add_point(KCT.TROUBLEMAKER)
+        $ reputation.add_point(Reputations.TROUBLEMAKER)
 
         u "(Hopefully Lauren didn't tell her about what happened...)"
 
@@ -1260,7 +1260,7 @@ label v4start:
                 jump ea_b
 
     elif lauren.relationship < Relationship.GIRLFRIEND: #if not a girlfriend, but not because messed up date
-        $ add_point(KCT.BOYFRIEND)
+        $ reputation.add_point(Reputations.BOYFRIEND)
         scene s334
         with dissolve
 
@@ -1299,7 +1299,7 @@ label v4start:
         jump autumnsita
 
     else:
-        $ add_point(KCT.BOYFRIEND)
+        $ reputation.add_point(Reputations.BOYFRIEND)
         scene s334
         with dissolve
 
@@ -1473,7 +1473,7 @@ label readmontagea:
 
     menu:
         "Talk to him":
-            $ add_point(KCT.BRO)
+            $ reputation.add_point(Reputations.BRO)
 
             scene s339 #you walking closer to Ryan
             with dissolve
@@ -1498,7 +1498,7 @@ label readmontagea:
             ry "Yeah, man. I messed up, I'm sorry."
 
         "Ignore him":
-            $ add_point(KCT.TROUBLEMAKER)
+            $ reputation.add_point(Reputations.TROUBLEMAKER)
 
             scene s339 #you walking closer to Ryan
             with dissolve
@@ -1632,7 +1632,7 @@ label readmontagea:
 
         menu:
             "Magic Powers":
-                $ add_point(KCT.BRO)
+                $ reputation.add_point(Reputations.BRO)
 
                 scene s349d
                 with dissolve
@@ -1655,7 +1655,7 @@ label readmontagea:
                 u "Yeah, sure."
 
             "I didn't":
-                $ add_point(KCT.BOYFRIEND)
+                $ reputation.add_point(Reputations.BOYFRIEND)
 
                 scene s349d
                 with dissolve
@@ -1683,7 +1683,7 @@ label readmontagea:
 
         menu:
             "Buy Penelope a muffin":
-                $ add_point(KCT.BOYFRIEND)
+                $ reputation.add_point(Reputations.BOYFRIEND)
                 $ muffin = True
                 $ v2_caughtpeekingcounter = True
 
@@ -1767,7 +1767,7 @@ label readmontagea:
 
             menu:
                 "Grab her hand":
-                    $ add_point(KCT.BOYFRIEND)
+                    $ reputation.add_point(Reputations.BOYFRIEND)
 
                     scene s347 # your hand grabbing her hand
                     with dissolve
@@ -1784,7 +1784,7 @@ label readmontagea:
 
                     menu:
                         "Kiss her":
-                            $ add_point(KCT.TROUBLEMAKER)
+                            $ reputation.add_point(Reputations.TROUBLEMAKER)
                             $ penelopekiss = True
 
                             scene s348 # you reaching for kiss, she's pulled away
@@ -1878,7 +1878,7 @@ label readmontagea:
 
         menu:
             "Magic Powers":
-                $ add_point(KCT.BRO)
+                $ reputation.add_point(Reputations.BRO)
 
                 scene s345g
                 with dissolve
@@ -1898,7 +1898,7 @@ label readmontagea:
                 u "Yeah, sure."
 
             "I didn't":
-                $ add_point(KCT.BOYFRIEND)
+                $ reputation.add_point(Reputations.BOYFRIEND)
 
                 scene s345g
                 with dissolve
@@ -2008,7 +2008,7 @@ label ef_bd:
 
     menu:
         "We should watch some":
-            $ add_point(KCT.TROUBLEMAKER)
+            $ reputation.add_point(Reputations.TROUBLEMAKER)
 
             u "You know, we should watch some together sometime."
 
@@ -2028,7 +2028,7 @@ label ef_bd:
             pe "Right, thank you."
 
         "You should try it":
-            $ add_point(KCT.BRO)
+            $ reputation.add_point(Reputations.BRO)
 
             u "You know, you should try it sometime."
 
@@ -2064,7 +2064,7 @@ label ef_bd:
 
             menu:
                 "Encourage her":
-                    $ add_point(KCT.BOYFRIEND)
+                    $ reputation.add_point(Reputations.BOYFRIEND)
                     $ bowling = True
 
                     scene s350e
@@ -2090,7 +2090,7 @@ label ef_bd:
                     jump el_ad
 
                 "Tease her":
-                    $ add_point(KCT.BRO)
+                    $ reputation.add_point(Reputations.BRO)
                     $ bowling = False
 
                     scene s350e
@@ -2274,8 +2274,8 @@ label continueab:
 
     menu:
         "I can move":
-            $ add_point(KCT.BOYFRIEND)
-            $ add_point(KCT.BRO)
+            $ reputation.add_point(Reputations.BOYFRIEND)
+            $ reputation.add_point(Reputations.BRO)
 
             scene s359a
             with dissolve
@@ -2288,7 +2288,7 @@ label continueab:
             jo "Hahaha, buddy I'm just kidding, stay put."
 
         "It's my spot now":
-            $ add_point(KCT.TROUBLEMAKER)
+            $ reputation.add_point(Reputations.TROUBLEMAKER)
 
             scene s359a
             with dissolve
@@ -2336,7 +2336,7 @@ label continueab:
 
     menu:
         "I'll join the Wolves":
-            $ add_point(KCT.BRO)
+            $ reputation.add_point(Reputations.BRO)
 
             u "I'll join the Wolves."
 
@@ -2346,7 +2346,7 @@ label continueab:
             jo "See? I knew he was a fighter."
 
         "I don't know yet":
-            $ add_point(KCT.BOYFRIEND)
+            $ reputation.add_point(Reputations.BOYFRIEND)
 
             u "I don't know yet."
 
@@ -2395,7 +2395,7 @@ label continueab:
 
     menu:
         "Sounds good":
-            $ add_point(KCT.BRO)
+            $ reputation.add_point(Reputations.BRO)
 
             scene s361g
             with dissolve
@@ -2403,7 +2403,7 @@ label continueab:
             u "Cool, sounds good."
 
         "I should stop here":
-            $ add_point(KCT.BOYFRIEND)
+            $ reputation.add_point(Reputations.BOYFRIEND)
 
             scene s361f
             with dissolve
@@ -2463,10 +2463,10 @@ label continueab:
 
     menu:
         "Do a handstand":
-            $ add_point(KCT.BRO)
+            $ reputation.add_point(Reputations.BRO)
 
         "Drink three sips":
-            $ add_point(KCT.BOYFRIEND)
+            $ reputation.add_point(Reputations.BOYFRIEND)
             
             u "I'll drink."
 
@@ -2678,7 +2678,7 @@ label continueab:
 
             menu:
                 "Kiss her":
-                    $ add_point(KCT.TROUBLEMAKER)
+                    $ reputation.add_point(Reputations.TROUBLEMAKER)
                     $ amber.relationship = Relationship.KISS
 
                     play sound "sounds/spit.mp3"
@@ -2703,7 +2703,7 @@ label continueab:
                     pause 0.5
 
                 "Don't kiss her":
-                    $ add_point(KCT.TROUBLEMAKER)
+                    $ reputation.add_point(Reputations.TROUBLEMAKER)
 
                     play sound "sounds/spit.mp3"
 
@@ -2745,7 +2745,7 @@ label continueab:
 
             menu:
                 "Kiss her":
-                    $ add_point(KCT.TROUBLEMAKER)
+                    $ reputation.add_point(Reputations.TROUBLEMAKER)
 
                     play sound "sounds/spit.mp3"
 
@@ -2772,7 +2772,7 @@ label continueab:
                     pause 0.5
 
                 "Don't kiss her":
-                    $ add_point(KCT.TROUBLEMAKER)
+                    $ reputation.add_point(Reputations.TROUBLEMAKER)
 
                     play sound "sounds/spit.mp3"
 
@@ -2875,7 +2875,7 @@ label continueab:
 
     menu:
         "Accuse her of lying":
-            $ add_point(KCT.TROUBLEMAKER)
+            $ reputation.add_point(Reputations.TROUBLEMAKER)
 
             scene s370c
             with dissolve

@@ -8,27 +8,27 @@ init python:
     def v1_reply2():
         grant_achievement("open_wound")
 
-        add_point(KCT.TROUBLEMAKER)
+        add_point(Reputations.TROUBLEMAKER)
         emily.messenger.newMessage(_("Ugh :/"))
 
     # Julia messages
     def v1_reply3():
-        add_point(KCT.BOYFRIEND)
+        add_point(Reputations.BOYFRIEND)
 
     def v1_reply4():
-        add_point(KCT.BRO)
+        add_point(Reputations.BRO)
 
     # Lauren messages
     def v1_reply5():
-        add_point(KCT.BOYFRIEND)
+        add_point(Reputations.BOYFRIEND)
 
     # Lauren messages
     def v1_reply6():
-        add_point(KCT.BOYFRIEND)
+        add_point(Reputations.BOYFRIEND)
         lauren.messenger.newMessage(_("Cool :)"))
 
     def v1_reply7():
-        add_point(KCT.TROUBLEMAKER)
+        add_point(Reputations.TROUBLEMAKER)
         lauren.messenger.newMessage(_("Idk, it's just feels kinda weird now. Can we please just talk tomorrow?"))
         lauren.messenger.addReply(_("Fine"))
         lauren.messenger.newMessage(_(":)"))
@@ -222,7 +222,7 @@ label starta: #for compatibility only
             hide s14
             show s14a
             with dissolve
-            $ add_point(KCT.TROUBLEMAKER)
+            $ reputation.add_point(Reputations.TROUBLEMAKER)
 
             u "I don't know... it might be fun."
 
@@ -230,7 +230,7 @@ label starta: #for compatibility only
             hide s14
             show s14a
             with dissolve
-            $ add_point(KCT.BOYFRIEND)
+            $ reputation.add_point(Reputations.BOYFRIEND)
 
             u "No, I don't think so, Julia."
 
@@ -639,7 +639,7 @@ label starta: #for compatibility only
             u "Wow Elijah, way to start the fun."
 
             $ elijah.relationship = Relationship.MAKEFUN
-            $ add_point(KCT.TROUBLEMAKER)
+            $ reputation.add_point(Reputations.TROUBLEMAKER)
 
             scene s46b
             with dissolve
@@ -723,7 +723,7 @@ label starta: #for compatibility only
 
     menu:
         "Agree":
-            $ add_point(KCT.BOYFRIEND)
+            $ reputation.add_point(Reputations.BOYFRIEND)
 
             scene s50a
             with dissolve
@@ -738,7 +738,7 @@ label starta: #for compatibility only
             la "Not at all, pretty much any girl that's part of the Deer hates it."
 
         "Disagree":
-            $ add_point(KCT.TROUBLEMAKER)
+            $ reputation.add_point(Reputations.TROUBLEMAKER)
 
             scene s50a
             with dissolve
@@ -806,7 +806,7 @@ label starta: #for compatibility only
             la "I bet you think she's cute, don't you?"
 
         "Defend Autumn":
-            $ add_point(KCT.BOYFRIEND)
+            $ reputation.add_point(Reputations.BOYFRIEND)
 
             scene s50a
             with dissolve
@@ -836,7 +836,7 @@ label starta: #for compatibility only
             u "Only for the right girl."
 
         "Yeah, kinda":
-            $ add_point(KCT.BOYFRIEND)
+            $ reputation.add_point(Reputations.BOYFRIEND)
 
             scene s53a
             with dissolve
@@ -949,7 +949,7 @@ label starta: #for compatibility only
 
         menu:
             "She's hot":
-                $ add_point(KCT.BRO)
+                $ reputation.add_point(Reputations.BRO)
 
                 scene s50ri2a
                 with dissolve
@@ -1088,7 +1088,7 @@ label starta: #for compatibility only
 
         menu:
             "So... the nerds?":
-                $ add_point(KCT.TROUBLEMAKER)
+                $ reputation.add_point(Reputations.TROUBLEMAKER)
 
                 scene s50el2a
                 with dissolve
@@ -1103,7 +1103,7 @@ label starta: #for compatibility only
                 el "Just get out of my face."
 
             "That's cool":
-                $ add_point(KCT.BOYFRIEND)
+                $ reputation.add_point(Reputations.BOYFRIEND)
 
                 scene s50el2a
                 with dissolve
@@ -1201,7 +1201,7 @@ label starta: #for compatibility only
 
         menu:
             "Flirt":
-                $ add_point(KCT.TROUBLEMAKER)
+                $ reputation.add_point(Reputations.TROUBLEMAKER)
                 $ nora.relationship = Relationship.MOVE
 
                 scene s56no1a
@@ -1378,7 +1378,7 @@ label efra:
 
     menu:
         "So, they're equally good?":
-            $ add_point(KCT.TROUBLEMAKER)
+            $ reputation.add_point(Reputations.TROUBLEMAKER)
 
             scene s63a
             with dissolve
@@ -1399,7 +1399,7 @@ label efra:
             with dissolve
 
         "The Wolves sound sick":
-            $ add_point(KCT.BRO)
+            $ reputation.add_point(Reputations.BRO)
 
             scene s64a
             with dissolve
@@ -1780,7 +1780,7 @@ label efra:
             la "I guess we'll never know."
 
         "Dodged a bullet there":
-            $ add_point(KCT.TROUBLEMAKER)
+            $ reputation.add_point(Reputations.TROUBLEMAKER)
 
             scene s73gr
             with dissolve
@@ -1851,7 +1851,7 @@ label efra:
 
     menu:
         "Take your shirt off":
-            $ add_point(KCT.TROUBLEMAKER)
+            $ reputation.add_point(Reputations.TROUBLEMAKER)
 
             scene s76
             with dissolve
@@ -1909,7 +1909,7 @@ label efra:
 
     menu:
         "Do it, or drink":
-            $ add_point(KCT.BRO)
+            $ reputation.add_point(Reputations.BRO)
 
             scene s71ef
             with dissolve
@@ -1927,7 +1927,7 @@ label efra:
             " "
 
         "You're right":
-            $ add_point(KCT.BOYFRIEND)
+            $ reputation.add_point(Reputations.BOYFRIEND)
             
             scene s71ef
             with dissolve
@@ -1966,7 +1966,7 @@ label efra:
 
     menu:
         "Riley's mine":
-            $ add_point(KCT.TROUBLEMAKER)
+            $ reputation.add_point(Reputations.TROUBLEMAKER)
 
             scene s79b
             with dissolve
@@ -1980,7 +1980,7 @@ label efra:
 
             menu:
                 "You're right, sorry":
-                    $ add_point(KCT.BRO)
+                    $ reputation.add_point(Reputations.BRO)
 
                     scene s79a
                     with dissolve
@@ -1993,7 +1993,7 @@ label efra:
                     imre "It's fine bro, I get it. She is really cute."
 
                 "She wants me":
-                    $ add_point(KCT.TROUBLEMAKER)
+                    $ reputation.add_point(Reputations.TROUBLEMAKER)
 
                     scene s79b
                     with dissolve
@@ -2025,7 +2025,7 @@ label efra:
                     jump at_bd
 
         "They're both hot":
-            $ add_point(KCT.BRO)
+            $ reputation.add_point(Reputations.BRO)
 
             scene s79
             with dissolve
@@ -2527,7 +2527,7 @@ label v1_nsfwSkipLabel1:
 
     menu:
         "Move in with me?":
-            $ add_point(KCT.BOYFRIEND)
+            $ reputation.add_point(Reputations.BOYFRIEND)
 
             scene s87a
             with dissolve
@@ -2547,7 +2547,7 @@ label v1_nsfwSkipLabel1:
             u "How about we go to the park this afternoon? I'll bring some sandwiches and we'll make your day better."
 
         "Bad roommates suck":
-            $ add_point(KCT.BRO)
+            $ reputation.add_point(Reputations.BRO)
 
             scene s87a
             with dissolve
@@ -2868,7 +2868,7 @@ label aw_bd:
 
     menu:
         "You're really beautiful":
-            $ add_point(KCT.BOYFRIEND)
+            $ reputation.add_point(Reputations.BOYFRIEND)
 
             u "You know... you're really beautiful."
 
@@ -2878,7 +2878,7 @@ label aw_bd:
             la "Awww."
 
         "You're not ugly":
-            $ add_point(KCT.BRO)
+            $ reputation.add_point(Reputations.BRO)
 
             u "You know... you're not ugly."
 
@@ -3413,7 +3413,7 @@ label v1_freeRoam2_josh:
 
             menu:
                 "Say you're a fighter":
-                    $ add_point(KCT.TROUBLEMAKER)
+                    $ reputation.add_point(Reputations.TROUBLEMAKER)
 
                     scene fr2jo2d
                     with dissolve
@@ -3487,7 +3487,7 @@ label v1_freeRoam2_josh:
                     u "Alright, I'll leave you guys alone and look around a bit more."
 
         "Ask if she likes fighters":
-            $ add_point(KCT.BOYFRIEND)
+            $ reputation.add_point(Reputations.BOYFRIEND)
 
             scene fr2jo2b
             with dissolve
@@ -3505,7 +3505,7 @@ label v1_freeRoam2_josh:
 
             menu:
                 "I'll be the next Fight King":
-                    $ add_point(KCT.TROUBLEMAKER)
+                    $ reputation.add_point(Reputations.TROUBLEMAKER)
 
                     scene fr2jo2d
                     with dissolve
@@ -3638,8 +3638,8 @@ label v1_freeRoam2_mason:
 
     menu:
         "Yeah, he better watch out":
-            $ add_point(KCT.TROUBLEMAKER)
-            $ add_point(KCT.BRO)
+            $ reputation.add_point(Reputations.TROUBLEMAKER)
+            $ reputation.add_point(Reputations.BRO)
 
             scene fr2ma1a
             with dissolve
@@ -3962,7 +3962,7 @@ label fr2end: #for compatibility only
 
     menu:
         "You're right, I'll talk to her":
-            $ add_point(KCT.BRO)
+            $ reputation.add_point(Reputations.BRO)
 
             scene s108e
             with dissolve
@@ -4068,7 +4068,7 @@ label fr2end: #for compatibility only
 
     menu:
         "Apologize":
-            $ add_point(KCT.BOYFRIEND)
+            $ reputation.add_point(Reputations.BOYFRIEND)
 
             u "I'm really sorry for interrupting your conversation."
 
@@ -4083,7 +4083,7 @@ label fr2end: #for compatibility only
             u "In that case, you're very welcome."
 
         "Make fun of him":
-            $ add_point(KCT.BRO)
+            $ reputation.add_point(Reputations.BRO)
 
             u "Don't worry, I'm not gonna start talking about my rock collection."
 
@@ -4173,7 +4173,7 @@ label fr2end: #for compatibility only
 
     menu:
         "Empathize":
-            $ add_point(KCT.BOYFRIEND)
+            $ reputation.add_point(Reputations.BOYFRIEND)
 
             u "Wow, that sounds awful."
 
@@ -4183,7 +4183,7 @@ label fr2end: #for compatibility only
             cl "It really was."
 
         "Poke fun":
-            $ add_point(KCT.TROUBLEMAKER)
+            $ reputation.add_point(Reputations.TROUBLEMAKER)
 
             u "Hahaha, sounds like the Dean was into you."
 

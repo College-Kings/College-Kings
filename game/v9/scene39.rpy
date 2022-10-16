@@ -80,7 +80,7 @@ label v9_hang_w_linds:
         menu:
             "Play it cool":
                 $ playCoolWLins = True
-                $ add_point(KCT.BRO)
+                $ reputation.add_point(Reputations.BRO)
 
                 u "Damn right! You gonna be there to cheer me on?"
 
@@ -110,7 +110,7 @@ label v9_hang_w_linds:
                 li "Sure do." 
 
             "Get real":
-                $ add_point(KCT.BOYFRIEND)
+                $ reputation.add_point(Reputations.BOYFRIEND)
 
                 u "I'm sure everyone's expecting me to fall in my first fight."
 
@@ -148,10 +148,10 @@ label v9_hang_w_linds:
     menu:
         "Let Lindsey grab your hand":
             if chloe.relationship >= Relationship.FWB:
-                $ add_point(KCT.TROUBLEMAKER)
+                $ reputation.add_point(Reputations.TROUBLEMAKER)
 
             else:
-                $ add_point(KCT.BOYFRIEND)
+                $ reputation.add_point(Reputations.BOYFRIEND)
             
             scene v9hwl6a # TPP. Same camera as v9hwl6, Lindsey now holding MC's hand, looking into his eyes.
             with dissolve
@@ -201,10 +201,10 @@ label v9_hang_w_linds:
             menu:
                 "Make out with Lindsey":
                     if chloe.relationship >= Relationship.FWB:
-                        $ add_point(KCT.TROUBLEMAKER)
+                        $ reputation.add_point(Reputations.TROUBLEMAKER)
                     
                     else:
-                        $ add_point(KCT.BOYFRIEND)
+                        $ reputation.add_point(Reputations.BOYFRIEND)
 
                     $ lindsey.relationship = Relationship.KISS
                     $ sceneList.add("v9_lindsey")
@@ -314,7 +314,7 @@ label v9_hang_w_linds:
 
                 "Pull away":
                     if chloe.relationship >= Relationship.FWB:
-                        $ add_point(KCT.BOYFRIEND)
+                        $ reputation.add_point(Reputations.BOYFRIEND)
                         
                     scene v9hwl7b # TPP. Same camera as v9hwl7, Show MC pulling away from Lindsey who is trying to kiss him.
                     with dissolve

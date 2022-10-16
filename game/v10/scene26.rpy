@@ -6,7 +6,7 @@
 init python:
     def v10s26_reply1():
         setattr(store, "v10_amber_condoms", True)
-        add_point(KCT.BOYFRIEND)
+        add_point(Reputations.BOYFRIEND)
         amber.messenger.newMessage("Beer, obviously")
 
 

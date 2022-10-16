@@ -41,11 +41,11 @@ label v9_hallway:
 
     menu (fail_label="v9_hall_calm"): 
         "Apologize": 
-            $ add_point(KCT.BRO)
+            $ reputation.add_point(Reputations.BRO)
             jump v9_hall_apol
 
         "Tell him to calm down":
-            $ add_point(KCT.TROUBLEMAKER)
+            $ reputation.add_point(Reputations.TROUBLEMAKER)
             jump v9_hall_calm
 
 label v9_hall_apol:
@@ -120,12 +120,12 @@ label v9_hall_cont1:
 
     menu (fail_label="v9_hall_no_punch"): 
         "Punch the guy": 
-            $ add_point(KCT.BRO)
+            $ reputation.add_point(Reputations.BRO)
             $ hl_punch = True
             jump v9_hall_punch
 
         "Don't punch the guy":
-            $ add_point(KCT.TROUBLEMAKER)
+            $ reputation.add_point(Reputations.TROUBLEMAKER)
             $ hl_punch = False
             jump v9_hall_no_punch
 

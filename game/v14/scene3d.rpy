@@ -147,7 +147,7 @@ label v14s03d:
 
     menu:
         "You get what you pay for":
-            $ add_point(KCT.TROUBLEMAKER)
+            $ reputation.add_point(Reputations.TROUBLEMAKER)
 
             u "*Chuckles* Hey, you get what you pay for right?"
 

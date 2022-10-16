@@ -36,7 +36,7 @@ label v14s02:
     menu:
 
         "A little bit":
-            $ add_point(KCT.BOYFRIEND)
+            $ reputation.add_point(Reputations.BOYFRIEND)
 
             u "Maybe a little bit."
 
@@ -46,7 +46,7 @@ label v14s02:
             imre "Haha, I knew it."
 
         "Not at all":
-            $ add_point(KCT.TROUBLEMAKER)
+            $ reputation.add_point(Reputations.TROUBLEMAKER)
 
             scene v14s02_2a
             #with dissolve

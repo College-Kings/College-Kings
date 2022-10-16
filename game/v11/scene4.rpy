@@ -157,7 +157,7 @@ label v11_emily_park:
             u "Ugh, obviously your mind is made up."
         
         "Be friends":
-            $ add_point(KCT.BOYFRIEND)
+            $ reputation.add_point(Reputations.BOYFRIEND)
             scene v11seap4d
             with dissolve
 

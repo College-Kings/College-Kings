@@ -18,7 +18,7 @@ label v10_aubrey_house:
 
         menu:
             "Maybe":
-                $ add_point(KCT.TROUBLEMAKER)
+                $ reputation.add_point(Reputations.TROUBLEMAKER)
                 scene v10auh1b # FPP Same angle and expression as v10auh1a,, Aubrey mouth closed
                 with dissolve
 
@@ -123,7 +123,7 @@ label v10_aubrey_house:
 
     menu:
         "Compliment her":
-            $ add_point(KCT.BOYFRIEND)
+            $ reputation.add_point(Reputations.BOYFRIEND)
 
             scene v10auh1f # FPP Same angle as v10auh1, Aubrey has a big smile, mouth closed
             with dissolve
@@ -141,7 +141,7 @@ label v10_aubrey_house:
             u "*Laughs*"
 
         "Make a joke":
-            $ add_point(KCT.TROUBLEMAKER)
+            $ reputation.add_point(Reputations.TROUBLEMAKER)
 
             scene v10auh1b
             with dissolve
@@ -210,7 +210,7 @@ label v10_aubrey_house:
 
     menu:
         "Ask about her":
-            $ add_point(KCT.BOYFRIEND)
+            $ reputation.add_point(Reputations.BOYFRIEND)
             
             scene v10auh1
             with dissolve
@@ -235,7 +235,7 @@ label v10_aubrey_house:
                 au "Not too bad. *Chuckles*"
 
         "Ask about her sister":
-            $ add_point(KCT.TROUBLEMAKER)
+            $ reputation.add_point(Reputations.TROUBLEMAKER)
 
             scene v10auh1h
             with dissolve
@@ -257,7 +257,7 @@ label v10_aubrey_house:
 
     menu:
         "Ask to watch":
-            $ add_point(KCT.TROUBLEMAKER)
+            $ reputation.add_point(Reputations.TROUBLEMAKER)
             if aubrey.relationship >= Relationship.FWB: # Aubrey relationship check
                 label v10s17_galleryScene:
                 $ sceneList.add("v10_aubrey")
@@ -540,7 +540,7 @@ label v10_aubrey_house:
                         u "(Yup. Classic day in my life.) *Chuckles*"
 
                     "Make a joke":
-                        $ add_point(KCT.TROUBLEMAKER)
+                        $ reputation.add_point(Reputations.TROUBLEMAKER)
                         scene v10auh6a
                         with dissolve
 
@@ -700,7 +700,7 @@ label v10_aubrey_house:
 
     menu:
         "Compliment":
-            $ add_point(KCT.BOYFRIEND)
+            $ reputation.add_point(Reputations.BOYFRIEND)
             scene v10auh2e
             with dissolve
 

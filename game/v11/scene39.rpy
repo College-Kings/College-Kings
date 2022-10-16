@@ -282,7 +282,7 @@ label v11_mc_amber_gokart:
 
 
         "Be excited":
-            $ add_point(KCT.BRO)
+            $ reputation.add_point(Reputations.BRO)
             scene v11cam7
             with dissolve
 
@@ -421,7 +421,7 @@ label v11_mc_amber_gokart:
 
     menu:
         "Agree":
-            $ add_point(KCT.TROUBLEMAKER)
+            $ reputation.add_point(Reputations.TROUBLEMAKER)
             scene v11cam14a # FPP. looking at amber, mouth closed
             with dissolve
 
@@ -456,7 +456,7 @@ label v11_mc_amber_gokart:
             with dissolve
 
         "Disagree":
-            $ add_point(KCT.BOYFRIEND)
+            $ reputation.add_point(Reputations.BOYFRIEND)
             scene v11cam14c # FPP. Same as 14, mouth closed
             with dissolve
 
@@ -1021,8 +1021,8 @@ label v11_race_continue3:
 
     menu:
         "Stand up for Amber":
-            $ add_point(KCT.BOYFRIEND)
-            $ add_point(KCT.TROUBLEMAKER)
+            $ reputation.add_point(Reputations.BOYFRIEND)
+            $ reputation.add_point(Reputations.TROUBLEMAKER)
             $ amber.points += 1
 
             scene v11cam14f
@@ -1088,7 +1088,7 @@ label v11_race_continue3:
             u "At least we both had a good time, right?"
 
         "Let her handle it":
-            $ add_point(KCT.BRO)
+            $ reputation.add_point(Reputations.BRO)
             scene v11cam14f
             with dissolve
 
@@ -1140,7 +1140,7 @@ label v11_race_continue3:
 
     menu:
         "Tease":
-            $ add_point(KCT.TROUBLEMAKER)
+            $ reputation.add_point(Reputations.TROUBLEMAKER)
             $ v11_tease_amber += 1
 
             u "You know what, if the job at Lew's doesn't work out, maybe you can work with our friend back there."

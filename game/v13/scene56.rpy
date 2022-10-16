@@ -102,7 +102,7 @@ label v13s56:
 
     menu:
         "*Accidently* bump against her":
-            $ add_point(KCT.TROUBLEMAKER)
+            $ reputation.add_point(Reputations.TROUBLEMAKER)
             scene v13s56_98 # TPP. MC grinds up against Nora's ass, Nora looks back slightly shocked, mouth open
             with dissolve
 
@@ -141,7 +141,7 @@ label v13s56:
                 no "Yeah... I heard you."
 
         "Be respectful":
-            $ add_point(KCT.BRO)
+            $ reputation.add_point(Reputations.BRO)
             scene v13s56_99 # FPP. same as v13s56_5 MC looks down at his crotch
             with dissolve
 

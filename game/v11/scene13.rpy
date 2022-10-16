@@ -316,14 +316,14 @@ label v11_aubrey_plane_sex:
 
                 menu:
                     "No, not really":
-                        $ add_point(KCT.TROUBLEMAKER)
+                        $ reputation.add_point(Reputations.TROUBLEMAKER)
                         scene v11aub18a # FPP. Same as v11aub18, Aubrey mouth closed, slightly smiling
                         with dissolve
 
                         u "Uhm... I'm not sure I agree."
                         
                     "Kinda hot":
-                        $ add_point(KCT.BOYFRIEND)
+                        $ reputation.add_point(Reputations.BOYFRIEND)
                         scene v11aub18a
                         with dissolve
 

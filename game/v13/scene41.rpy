@@ -323,7 +323,7 @@ label v13s41:
     menu:
         "What about you":
             $ v13s41_lindsey_points += 1
-            $ add_point(KCT.BOYFRIEND)
+            $ reputation.add_point(Reputations.BOYFRIEND)
 
             scene v13s41_14c
             with dissolve
@@ -341,7 +341,7 @@ label v13s41:
             u "Always."
 
         "Agree":
-            $ add_point(KCT.BRO)
+            $ reputation.add_point(Reputations.BRO)
 
             scene v13s41_14c
             with dissolve
@@ -394,7 +394,7 @@ label v13s41:
     menu:
         "They should":
             $ v13s41_lindsey_points += 1
-            $ add_point(KCT.TROUBLEMAKER)
+            $ reputation.add_point(Reputations.TROUBLEMAKER)
 
             scene v13s41_14g
             with dissolve
@@ -449,7 +449,7 @@ label v13s41:
 
     menu:
         "Then back out the race":
-            $ add_point(KCT.BRO)
+            $ reputation.add_point(Reputations.BRO)
 
             scene v13s41_14c
             with dissolve
@@ -473,7 +473,7 @@ label v13s41:
 
         "You did right":
             $ v13s41_lindsey_points += 1
-            $ add_point(KCT.BOYFRIEND)
+            $ reputation.add_point(Reputations.BOYFRIEND)
 
             scene v13s41_14g
             with dissolve
@@ -525,7 +525,7 @@ label v13s41:
 
     menu:
         "You're beautiful":
-            $ add_point(KCT.BOYFRIEND)
+            $ reputation.add_point(Reputations.BOYFRIEND)
             scene v13s41_14l # FPP. same as v13s41_14g lindsey mouth closed slight smile
             with dissolve
 
@@ -560,7 +560,7 @@ label v13s41:
                 li "Yes you are."
 
         "Of course":
-            $ add_point(KCT.BRO)
+            $ reputation.add_point(Reputations.BRO)
             scene v13s41_14g
             with dissolve
 

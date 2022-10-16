@@ -87,7 +87,7 @@ label v10_autumn_announcement:
         "Root for Chloe":
             $ chloe.points += 1
             $ nora.points -= 1
-            $ add_point(KCT.BOYFRIEND)
+            $ reputation.add_point(Reputations.BOYFRIEND)
             scene v10samw6 
             with dissolve
     
@@ -141,7 +141,7 @@ label v10_autumn_announcement:
         "Root for Emily":
             $ forgiveemily = True
             $ emily.points += 1
-            $ add_point(KCT.BOYFRIEND)
+            $ reputation.add_point(Reputations.BOYFRIEND)
             scene v10samw6a
             with dissolve
 
@@ -158,7 +158,7 @@ label v10_autumn_announcement:
         "Root for Riley":
             $ amber.points -= 1
             $ riley.points += 1
-            $ add_point(KCT.BOYFRIEND)
+            $ reputation.add_point(Reputations.BOYFRIEND)
             scene v10samw6b
             with dissolve
 

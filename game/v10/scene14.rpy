@@ -81,7 +81,7 @@ label v10_apes_samantha:
 
     menu:
         "I can be a hothead":
-            $ add_point(KCT.TROUBLEMAKER)
+            $ reputation.add_point(Reputations.TROUBLEMAKER)
 
             scene v10ssap2c
             with dissolve
@@ -151,7 +151,7 @@ label v10_apes_samantha:
             u "Haha, I'll remember that."
        
         "What's that supposed to mean?":
-            $ add_point(KCT.BRO)
+            $ reputation.add_point(Reputations.BRO)
             
             scene v10ssap2c
             with dissolve
@@ -213,7 +213,7 @@ label v10_apes_samantha:
 
     menu:
         "Maybe":
-            $ add_point(KCT.TROUBLEMAKER)
+            $ reputation.add_point(Reputations.TROUBLEMAKER)
             
             scene v10ssap3a
             with dissolve

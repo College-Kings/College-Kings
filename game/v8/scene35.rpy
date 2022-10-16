@@ -121,7 +121,7 @@ label steak_w_chloe:
 
         menu:
             "Flirt with Chloe":
-                $ add_point(KCT.BOYFRIEND)
+                $ reputation.add_point(Reputations.BOYFRIEND)
                 jump steak_flirt_w_chloe
 
             "Don't flirt with Chloe":
@@ -236,7 +236,7 @@ label steak_w_chloe_cont:
 
     menu:
         "Ask to see Chloe's muscles":
-            $ add_point(KCT.BOYFRIEND)
+            $ reputation.add_point(Reputations.BOYFRIEND)
             jump steak_w_chloe_muscles
 
         "Turn the conversation serious":
@@ -438,7 +438,7 @@ label steak_w_chloe_cont_2:
         menu:
             "Say a dirty joke":
                 jump steak_w_chloe_dirty
-                $ add_point(KCT.TROUBLEMAKER)
+                $ reputation.add_point(Reputations.TROUBLEMAKER)
             "Don't say a joke":
                 jump steak_w_chloe_dirty_no
 

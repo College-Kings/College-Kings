@@ -24,14 +24,14 @@ label v12_roomate_talk:
 
         menu:
             "Yes":
-                $ add_point(KCT.BOYFRIEND)
+                $ reputation.add_point(Reputations.BOYFRIEND)
                 scene v12rcr2
                 with dissolve
 
                 u "Yeah, kinda... It's not like we weren't just in the middle of a robbery or anything."
 
             "No":
-                $ add_point(KCT.BRO)
+                $ reputation.add_point(Reputations.BRO)
                 scene v12rcr2
                 with dissolve
                        
@@ -145,7 +145,7 @@ label v12_roomate_talk:
 
         menu:
             "He is":
-                $ add_point(KCT.BRO)
+                $ reputation.add_point(Reputations.BRO)
                 scene v12rcr5a
                 with dissolve
 
@@ -162,7 +162,7 @@ label v12_roomate_talk:
                 u "Not Grayson-level crazy. *Laughs*"
 
             "Nope":
-                $ add_point(KCT.TROUBLEMAKER)
+                $ reputation.add_point(Reputations.TROUBLEMAKER)
                 scene v12rcr5a
                 with dissolve
 
@@ -313,7 +313,7 @@ label v12_roomate_talk:
 
         menu:
             "A little":
-                $ add_point(KCT.BOYFRIEND)
+                $ reputation.add_point(Reputations.BOYFRIEND)
                 scene v12rcr12
                 with dissolve
 
@@ -325,7 +325,7 @@ label v12_roomate_talk:
                 ri "Aww. I guess I can't be upset at you for missing me. *Chuckles*"
 
             "Not really":
-                $ add_point(KCT.BRO)
+                $ reputation.add_point(Reputations.BRO)
                 scene v12rcr12 
                 with dissolve
 
@@ -401,7 +401,7 @@ label v12_roomate_talk:
 
         menu:
             "I know":
-                $ add_point(KCT.TROUBLEMAKER)
+                $ reputation.add_point(Reputations.TROUBLEMAKER)
                 scene v12rcr13b
                 with dissolve
 

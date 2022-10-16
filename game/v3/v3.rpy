@@ -144,7 +144,7 @@ label v3start:
 
     menu:
         "You're crazy":
-            $ add_point(KCT.BRO)
+            $ reputation.add_point(Reputations.BRO)
 
             scene s206c
             with dissolve
@@ -152,7 +152,7 @@ label v3start:
             u "Hahaha, man you're crazy."
 
         "That's not cool":
-            $ add_point(KCT.BOYFRIEND)
+            $ reputation.add_point(Reputations.BOYFRIEND)
             $ notcool = True
 
             scene s206c
@@ -204,7 +204,7 @@ label v3start:
 
     menu:
         "Hell yeah":
-            $ add_point(KCT.BRO)
+            $ reputation.add_point(Reputations.BRO)
 
             scene s208a
             with dissolve
@@ -504,7 +504,7 @@ label conl:
 
     menu:
         "Ask her about it":
-            $ add_point(KCT.TROUBLEMAKER)
+            $ reputation.add_point(Reputations.TROUBLEMAKER)
             label cq_a: #for compatibility only
 
             scene s216 # chloe walking next to the volleyball
@@ -538,7 +538,7 @@ label conl:
             cl "Haha, good."
 
         "Don't question it":
-            $ add_point(KCT.BOYFRIEND)
+            $ reputation.add_point(Reputations.BOYFRIEND)
             label cq_b: #for compatibility only
 
     scene s216c # cl grabs volleyball
@@ -600,7 +600,7 @@ label conl:
 
     menu:
         "Win the game":
-            $ add_point(KCT.TROUBLEMAKER)
+            $ reputation.add_point(Reputations.TROUBLEMAKER)
 
             # volleybal hit sounds
 
@@ -632,7 +632,7 @@ label conl:
             u "I'm sure you'll get me next time."
 
         "Let her win":
-            $ add_point(KCT.BOYFRIEND)
+            $ reputation.add_point(Reputations.BOYFRIEND)
 
             scene s218c # you missing the ball
             with vpunch
@@ -1059,7 +1059,7 @@ label conl:
 
     menu:
         "Show off":
-            $ add_point(KCT.BRO)
+            $ reputation.add_point(Reputations.BRO)
             label cw_a: #for compatibility only
 
             scene s240
@@ -1163,7 +1163,7 @@ label conl:
 
         menu:
             "Approach her":
-                $ add_point(KCT.BRO)
+                $ reputation.add_point(Reputations.BRO)
                 label cx_a: #for compatibility only
 
                 scene s244
@@ -1268,7 +1268,7 @@ label conl:
                         u "(Damn, that didn't go as planned...)"
 
             "Leave it":
-                $ add_point(KCT.BOYFRIEND)
+                $ reputation.add_point(Reputations.BOYFRIEND)
                 label cx_ad: #for compatibility only
 
     scene s247 # imre coming back
@@ -1523,8 +1523,8 @@ label conl:
                 label cy_b: #for compatibility only
                 menu:
                     "Take off your clothes":
-                        $ add_point(KCT.BOYFRIEND)
-                        $ add_point(KCT.BRO)
+                        $ reputation.add_point(Reputations.BOYFRIEND)
+                        $ reputation.add_point(Reputations.BRO)
 
                         scene s256b #showing you pulling down your pants
                         with dissolve
@@ -1542,7 +1542,7 @@ label conl:
                         pause 0.5
 
                     "Refuse":
-                        $ add_point(KCT.TROUBLEMAKER)
+                        $ reputation.add_point(Reputations.TROUBLEMAKER)
 
                         scene s254e
                         with dissolve
@@ -1712,7 +1712,7 @@ label conl:
 
                 menu:
                     "Truth":
-                        $ add_point(KCT.BOYFRIEND)
+                        $ reputation.add_point(Reputations.BOYFRIEND)
 
                         scene s254h
                         with dissolve
@@ -1777,8 +1777,8 @@ label conl:
 
 
                     "Dare":
-                        $ add_point(KCT.TROUBLEMAKER)
-                        $ add_point(KCT.BRO)
+                        $ reputation.add_point(Reputations.TROUBLEMAKER)
+                        $ reputation.add_point(Reputations.BRO)
 
                 scene s254m
                 with dissolve
@@ -1957,7 +1957,7 @@ label conl:
 
         menu:
             "Truth":
-                $ add_point(KCT.BOYFRIEND)
+                $ reputation.add_point(Reputations.BOYFRIEND)
 
                 scene s254h
                 with dissolve
@@ -2017,8 +2017,8 @@ label conl:
                 au "Okay, now it's your turn again."
 
             "Dare":
-                $ add_point(KCT.TROUBLEMAKER)
-                $ add_point(KCT.BRO)
+                $ reputation.add_point(Reputations.TROUBLEMAKER)
+                $ reputation.add_point(Reputations.BRO)
 
         scene s254m
         with dissolve
@@ -2536,7 +2536,7 @@ label continuen:
 
     menu:
         "I'd love to":
-            $ add_point(KCT.BOYFRIEND)
+            $ reputation.add_point(Reputations.BOYFRIEND)
 
             scene s268a
             with dissolve
@@ -2544,7 +2544,7 @@ label continuen:
             u "Yeah, I'd love to."
 
         "I don't know...":
-            $ add_point(KCT.TROUBLEMAKER)
+            $ reputation.add_point(Reputations.TROUBLEMAKER)
 
             scene s268a
             with dissolve
@@ -2614,7 +2614,7 @@ label continueq:
         "Answer":
             stop sound
             play sound "sounds/answercall.mp3"
-            $ add_point(KCT.BOYFRIEND)
+            $ reputation.add_point(Reputations.BOYFRIEND)
 
             scene s270b # you answer, hold phone next to your ear
             with dissolve
@@ -2648,7 +2648,7 @@ label continueq:
             menu:
                 "Shopping sounds great":
                     $ meetjulia = True
-                    $ add_point(KCT.BOYFRIEND)
+                    $ reputation.add_point(Reputations.BOYFRIEND)
 
                     u "Yeah, shopping sounds great, Julia."
 
@@ -2672,7 +2672,7 @@ label continueq:
                     play sound "sounds/rejectcall.mp3"
 
                 "I can't, sorry":
-                    $ add_point(KCT.TROUBLEMAKER)
+                    $ reputation.add_point(Reputations.TROUBLEMAKER)
 
                     u "Sorry, Julia... I'm really busy this weekend."
 
@@ -2692,7 +2692,7 @@ label continueq:
             stop sound
             play sound "sounds/rejectcall.mp3"
 
-            $ add_point(KCT.TROUBLEMAKER)
+            $ reputation.add_point(Reputations.TROUBLEMAKER)
             # phone call declined sound
 
             scene s270
@@ -2751,7 +2751,7 @@ label continueq:
 
     menu:
         "Compliment Riley":
-            $ add_point(KCT.BOYFRIEND)
+            $ reputation.add_point(Reputations.BOYFRIEND)
 
             scene s273d # Riley looking at ryan joking annoyed but her mouth is closed, ryan looking at her with a grin
             with dissolve
@@ -2776,7 +2776,7 @@ label continueq:
             u "Yeah, alright. Let me just change out of my gym clothes."
 
         "Agree with Ryan":
-            $ add_point(KCT.BRO)
+            $ reputation.add_point(Reputations.BRO)
 
             scene s273d
             with dissolve
@@ -2918,7 +2918,7 @@ label continueq:
 
     menu:
         "Insult Ryan":
-            $ add_point(KCT.TROUBLEMAKER)
+            $ reputation.add_point(Reputations.TROUBLEMAKER)
             
             u "Cause you were too fucking pussy to do it yourself."
 
@@ -2935,7 +2935,7 @@ label continueq:
             u "You don't know Chloe at all! You're just fucking jealous!"
 
         "Walk away":
-            $ add_point(KCT.BRO)
+            $ reputation.add_point(Reputations.BRO)
 
     scene s276b #RIley sad and concerned
     with dissolve
@@ -3027,7 +3027,7 @@ label continueq:
 
     menu:
         "I like her":
-            $ add_point(KCT.BOYFRIEND)
+            $ reputation.add_point(Reputations.BOYFRIEND)
 
             scene s281a
             with dissolve
@@ -3042,7 +3042,7 @@ label continueq:
             ri "Oh uhm... yeah, that sounds really good. I'm happy for you."
 
         "She's into me":
-            $ add_point(KCT.TROUBLEMAKER)
+            $ reputation.add_point(Reputations.TROUBLEMAKER)
 
             scene s281a
             with dissolve
@@ -3069,7 +3069,7 @@ label continueq:
             menu:
                 "Kiss her":
                     $ riley.relationship = Relationship.MOVE
-                    $ add_point(KCT.TROUBLEMAKER)
+                    $ reputation.add_point(Reputations.TROUBLEMAKER)
 
                     show rikiss2
                     pause 1
@@ -3095,7 +3095,7 @@ label continueq:
                     ri "I'm glad you did."
 
                 "Don't kiss her":
-                    $ add_point(KCT.BOYFRIEND)
+                    $ reputation.add_point(Reputations.BOYFRIEND)
 
                     ri "Just a really great guy."
 
@@ -3187,7 +3187,7 @@ label continueq:
             menu:
                 "Tell her what happened":
                     $ toldlauren = True
-                    $ add_point(KCT.BOYFRIEND)
+                    $ reputation.add_point(Reputations.BOYFRIEND)
                     $ lauren.relationship = Relationship.MAD
 
                     u "(Lauren values honesty and we're not in a relationship yet, so she'll probably be understanding as long as I tell her the truth.)"
@@ -3252,7 +3252,7 @@ label continueq:
                     jump dk_ad
 
                 "Don't tell her":
-                    $ add_point(KCT.TROUBLEMAKER)
+                    $ reputation.add_point(Reputations.TROUBLEMAKER)
 
                     u "(Lauren seems to value loyalty, she might be upset if she finds out and I don't wanna ruin our date before it even started.)"
 
@@ -3338,7 +3338,7 @@ label continueq:
 
                 menu:
                     "Reach under her skirt":
-                        $ add_point(KCT.TROUBLEMAKER)
+                        $ reputation.add_point(Reputations.TROUBLEMAKER)
 
                         scene s291a # same camera angle but your hand is under her skirt
                         with dissolve
@@ -3349,7 +3349,7 @@ label continueq:
 
                         menu:
                             "Keep going":
-                                $ add_point(KCT.TROUBLEMAKER)
+                                $ reputation.add_point(Reputations.TROUBLEMAKER)
                                 $ laurentoofar = True
                                 $ lauren.relationship = Relationship.MAD
 
@@ -3390,7 +3390,7 @@ label continueq:
                                 jump dk_ad
 
                             "Stop":
-                                $ add_point(KCT.BOYFRIEND)
+                                $ reputation.add_point(Reputations.BOYFRIEND)
 
                                 scene s290b
                                 with dissolve
@@ -3405,7 +3405,7 @@ label continueq:
                                 pause 0.5
 
                     "Keep hands to yourself":
-                        $ add_point(KCT.BOYFRIEND)
+                        $ reputation.add_point(Reputations.BOYFRIEND)
 
                         pause 1.0
 

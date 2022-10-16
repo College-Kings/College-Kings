@@ -5,12 +5,12 @@
 
 init python:
     def v11s38_kiwiiReply1():
-        add_point(KCT.BOYFRIEND)
+        add_point(Reputations.BOYFRIEND)
         v11s38_kiwiiPost1.newComment(amber, _("Haha, thank you [name]"), numberLikes=138, mentions=[mc])
         v11s38_kiwiiPost1.newComment(cameron, _("Fucking simp"), numberLikes=126, mentions=[mc])
     
     def v11s38_kiwiiReply2():
-        add_point(KCT.BRO)
+        add_point(Reputations.BRO)
         v11s38_kiwiiPost1.newComment(amber, _("You were busy somewhere else... ;)"), numberLikes=173)
 
 label v11_amber_bar:

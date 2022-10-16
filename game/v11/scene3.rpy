@@ -103,7 +103,7 @@ label v11_samantha_packing:
 
     menu:
         "Invite her":
-            $ add_point(KCT.BOYFRIEND)
+            $ reputation.add_point(Reputations.BOYFRIEND)
             $ samantha.points += 1
             $ v11_invite_sam_europe = True
             scene v11samp2e

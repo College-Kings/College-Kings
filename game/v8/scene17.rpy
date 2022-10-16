@@ -149,7 +149,7 @@ label phn_penelope6_done:
 
     menu:
         "Stay to console her":
-            $ add_point(KCT.BOYFRIEND)
+            $ reputation.add_point(Reputations.BOYFRIEND)
             $ consoledRose = True
 
             u "(This is important. There are enough Wolves to move boxes quickly.)"
@@ -200,7 +200,7 @@ label phn_penelope6_done:
             ro "Awww, this was from before the accident. Before everything... How did this happen?"
 
         "Focus on moving the boxes":
-            $ add_point(KCT.BRO)
+            $ reputation.add_point(Reputations.BRO)
 
             u "Don't worry. We'll be out of here in no time."
             u "I'll uh... go and get more boxes."

@@ -79,7 +79,7 @@ label v9_start_wolves:
 
     menu:
         "Excited reply":
-            $ add_point(KCT.TROUBLEMAKER)
+            $ reputation.add_point(Reputations.TROUBLEMAKER)
 
             u "No shit! That's amazing!"
 
@@ -96,7 +96,7 @@ label v9_start_wolves:
             ch "Great! We're gonna need it if we plan on beating the Apes."
 
         "Hesitant reply":
-            $ add_point(KCT.BOYFRIEND)
+            $ reputation.add_point(Reputations.BOYFRIEND)
             $ v9_brawl_hesitant = True
 
             u "(I haven't been training enough for this.)"
@@ -155,7 +155,7 @@ label v9_start_wolves:
 
     menu:
         "Try to back out":
-            $ add_point(KCT.BOYFRIEND)
+            $ reputation.add_point(Reputations.BOYFRIEND)
             $ v9_brawl_hesitant = True
 
             u "I don't know... I'm not ready for something like this. A... BRAWL?"
@@ -176,7 +176,7 @@ label v9_start_wolves:
             stop music fadeout 3
 
         "Go with it":
-            # $ add_point(KCT.TROUBLEMAKER)
+            # $ reputation.add_point(Reputations.TROUBLEMAKER)
 
             u "Wow, trial by fire!"
 

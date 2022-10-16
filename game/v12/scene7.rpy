@@ -454,14 +454,14 @@ label v12s7_aubrey1:
 
     menu:
         "Major fight":
-            $ add_point(KCT.BRO)
+            $ reputation.add_point(Reputations.BRO)
             scene v12ferau1a
             with dissolve
 
             u "It was a serious fight. I'm surprised you haven't heard about it yet. It feels as if the whole world watched it."
 
         "Light work":
-            $ add_point(KCT.TROUBLEMAKER)
+            $ reputation.add_point(Reputations.TROUBLEMAKER)
             scene v12ferau1a
             with dissolve
 
@@ -548,7 +548,7 @@ label v12s7_aubrey1:
     menu:
         "It does hurt pretty bad":
             $ v12s7_aubrey_moved = True
-            $ add_point(KCT.BOYFRIEND)
+            $ reputation.add_point(Reputations.BOYFRIEND)
             scene v12ferau1
             with dissolve
 
@@ -584,7 +584,7 @@ label v12s7_aubrey1:
             call screen v12s7_balcony_right
             
         "Didn't even feel it":
-            $ add_point(KCT.BRO)
+            $ reputation.add_point(Reputations.BRO)
             scene v12ferau1a
             with dissolve
 
@@ -664,7 +664,7 @@ label v12s7_aubrey2:
 
     menu:
         "Let her":
-            $ add_point(KCT.BOYFRIEND)
+            $ reputation.add_point(Reputations.BOYFRIEND)
             scene v12ferauh2a # TPP. same 2, mc mouth open
             with dissolve
             
@@ -725,7 +725,7 @@ label v12s7_aubrey2:
             label v12s7_aubrey_kill:
             hide screen murder_button_overlay
 
-            $ add_point(KCT.TROUBLEMAKER)
+            $ reputation.add_point(Reputations.TROUBLEMAKER)
             scene v12ferauh6 # TPP. Show MC pointing finger gun at aubrey, mc mouth open, aubrey mouth closed
             with dissolve
 
@@ -1179,7 +1179,7 @@ label v12s7_chloe1:
             cl "Exactly. So, I don't know. I'm doing my best to not think about it..."
 
         "Enjoy Europe":
-            $ add_point(KCT.TROUBLEMAKER)
+            $ reputation.add_point(Reputations.TROUBLEMAKER)
             scene v12ferch1c
             with dissolve
             
@@ -1609,7 +1609,7 @@ label v12s7_riley3a:
 
     menu:
         "Me":
-            $ add_point(KCT.BRO)
+            $ reputation.add_point(Reputations.BRO)
             scene v12ferril1
             with dissolve
 
@@ -1621,7 +1621,7 @@ label v12s7_riley3a:
             ri "*Southern accent* Someone else must come by when neither of us were with her."
 
         "You":
-            $ add_point(KCT.TROUBLEMAKER)
+            $ reputation.add_point(Reputations.TROUBLEMAKER)
             scene v12ferril1
             with dissolve
 
@@ -1732,7 +1732,7 @@ label v12s7_lauren1:
 
         menu:
             "Apologize":
-                $ add_point(KCT.BOYFRIEND)
+                $ reputation.add_point(Reputations.BOYFRIEND)
                 scene v12ferla1
                 with dissolve
                 
@@ -1741,7 +1741,7 @@ label v12s7_lauren1:
                 u "(Damn, she's still really pissed.)"
 
             "Kill her":
-                $ add_point(KCT.TROUBLEMAKER)
+                $ reputation.add_point(Reputations.TROUBLEMAKER)
                 $ v12s7_killList.add(lauren)
                 scene v12ferla1
                 with dissolve
@@ -2135,7 +2135,7 @@ label v12s7_ryan_imre1:
 
     menu:
         "Tease Imre":
-            $ add_point(KCT.TROUBLEMAKER)
+            $ reputation.add_point(Reputations.TROUBLEMAKER)
             scene v12ferryi9a
             with dissolve
             
@@ -2157,7 +2157,7 @@ label v12s7_ryan_imre1:
             u "Oh, that's unfortunate."
 
         "Tell Ryan to cool it":
-            $ add_point(KCT.BRO)
+            $ reputation.add_point(Reputations.BRO)
             
             scene v12ferryi9a
             with dissolve
@@ -2795,7 +2795,7 @@ label v12s7_lindsey_charlie1:
 
     menu:
         "Ryan is suspicious":
-            $ add_point(KCT.TROUBLEMAKER)
+            $ reputation.add_point(Reputations.TROUBLEMAKER)
             scene v12ferlich2a
             with dissolve
             
@@ -3018,14 +3018,14 @@ label v12s7_lindsey2:
 
     menu:
         "Me":
-            $ add_point(KCT.BOYFRIEND)
+            $ reputation.add_point(Reputations.BOYFRIEND)
             scene v12ferli3
             with dissolve
             
             u "I can be your distraction. I'll just try and separate them... then see if I get murked or not."
 
         "Charli":
-            $ add_point(KCT.TROUBLEMAKER)
+            $ reputation.add_point(Reputations.TROUBLEMAKER)
             scene v12ferli3
             with dissolve
 
@@ -3439,14 +3439,14 @@ label v12s7_msrose1:
 
     menu:
         "Not really":
-            $ add_point(KCT.BRO)
+            $ reputation.add_point(Reputations.BRO)
             scene v12fermsr1a
             with dissolve
             
             u "No not really, if anyone runs up on me I have two guns waiting for them."
 
         "Who wouldn't be":
-            $ add_point(KCT.BOYFRIEND)
+            $ reputation.add_point(Reputations.BOYFRIEND)
             scene v12fermsr1a
             with dissolve
             
@@ -3614,7 +3614,7 @@ label v12s7_penelope1:
 
     menu:
         "Let her work":
-            $ add_point(KCT.BRO)
+            $ reputation.add_point(Reputations.BRO)
             scene v12ferpen1
             with dissolve
             
@@ -3633,7 +3633,7 @@ label v12s7_penelope1:
             call screen v12s7_left_walkway_front
 
         "Help her out":
-            $ add_point(KCT.BOYFRIEND)
+            $ reputation.add_point(Reputations.BOYFRIEND)
             scene v12ferpen1
             with dissolve
 
@@ -3991,7 +3991,7 @@ label v12s7_amber1:
 
     menu:
         "A little":
-            $ add_point(KCT.BRO)
+            $ reputation.add_point(Reputations.BRO)
             scene v12feram7
             with dissolve
             
@@ -4003,7 +4003,7 @@ label v12s7_amber1:
             am "Hmmm, good to know. I'll remember that for future reference."
 
         "No":
-            $ add_point(KCT.BOYFRIEND)
+            $ reputation.add_point(Reputations.BOYFRIEND)
             scene v12feram7
             with dissolve
             
@@ -4522,7 +4522,7 @@ label v12s7_sam_cameron:
 
     menu:
         "Laugh":
-            $ add_point(KCT.BRO)
+            $ reputation.add_point(Reputations.BRO)
             scene v12fersaca2a
             with dissolve
             
@@ -4534,7 +4534,7 @@ label v12s7_sam_cameron:
             sa "His jokes aren't funny."
 
         "Don't laugh":
-            $ add_point(KCT.BOYFRIEND)
+            $ reputation.add_point(Reputations.BOYFRIEND)
             scene v12fersaca2a
             with dissolve
             
@@ -4683,14 +4683,14 @@ label v12s7_sam2:
 
     menu:
         "Focus on the game":
-            $ add_point(KCT.BRO)
+            $ reputation.add_point(Reputations.BRO)
             scene v12fersam1b # FPP. same 1, new pose, mouth closed
             with dissolve
 
             u "Wanna focus on the game? That's the point of all of this, I think... To make us focus on something else for a while."
 
         "Go for the kiss":
-            $ add_point(KCT.BOYFRIEND)
+            $ reputation.add_point(Reputations.BOYFRIEND)
 
             scene v12fersam1b
             with dissolve
@@ -5173,7 +5173,7 @@ label v12s7_nora1:
 
     menu:
         "See you later":
-            $ add_point(KCT.BRO)
+            $ reputation.add_point(Reputations.BRO)
             scene v12fernor1
             with dissolve
             
@@ -5190,7 +5190,7 @@ label v12s7_nora1:
             call screen v12s7_balcony_left
 
         "Want some company?":
-            $ add_point(KCT.BOYFRIEND)
+            $ reputation.add_point(Reputations.BOYFRIEND)
             scene v12fernor1b # FPP. same 1, new pose,annoyed look, mouth closed
             with dissolve
             
@@ -5224,7 +5224,7 @@ label v12s7_nora1:
             menu:
                 "Chris cares about you":
                     $ v12_help_chris += 1
-                    $ add_point(KCT.BRO)
+                    $ reputation.add_point(Reputations.BRO)
                     scene v12fernor1b
                     with dissolve
 
@@ -5271,7 +5271,7 @@ label v12s7_nora1:
                     call screen v12s7_balcony_left
 
                 "Of course I care":
-                    $ add_point(KCT.BOYFRIEND)
+                    $ reputation.add_point(Reputations.BOYFRIEND)
 
                     scene v12fernor1b
                     with dissolve
@@ -5294,7 +5294,7 @@ label v12s7_nora1:
 
             menu:
                 "Sounds like you're dumping him":
-                    $ add_point(KCT.TROUBLEMAKER)
+                    $ reputation.add_point(Reputations.TROUBLEMAKER)
                     scene v12fernor1b
                     with dissolve
 
@@ -5338,7 +5338,7 @@ label v12s7_nora1:
                     call screen v12s7_balcony_left
                     
                 "I'd choose you":
-                    $ add_point(KCT.BOYFRIEND)
+                    $ reputation.add_point(Reputations.BOYFRIEND)
                     $ nora.relationship = Relationship.LIKES
 
                     scene v12fernor1
@@ -5812,7 +5812,7 @@ label v12s7_josh1:
 
     menu:
         "Really care about cats, huh?":
-            $ add_point(KCT.TROUBLEMAKER)
+            $ reputation.add_point(Reputations.TROUBLEMAKER)
             $ josh.relationship = Relationship.MAD
             scene v12ferjo1
             with dissolve
@@ -5830,7 +5830,7 @@ label v12s7_josh1:
             u "*Laughs* Have you seen yourself?"
 
         "You're the best actor here":
-            $ add_point(KCT.BRO)
+            $ reputation.add_point(Reputations.BRO)
             scene v12ferjo1
             with dissolve
 

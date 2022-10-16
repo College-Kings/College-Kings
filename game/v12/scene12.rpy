@@ -44,7 +44,7 @@ label v12_room_chloe_riley:
 
         menu:
             "Truth":
-                $ add_point(KCT.BOYFRIEND)
+                $ reputation.add_point(Reputations.BOYFRIEND)
                 scene v12crm2
                 with dissolve
 
@@ -56,7 +56,7 @@ label v12_room_chloe_riley:
                 cl "Mhmm, sure. I'll be keeping my eyes on you."
 
             "Lie":
-                $ add_point(KCT.TROUBLEMAKER)
+                $ reputation.add_point(Reputations.TROUBLEMAKER)
                 scene v12crm2 
                 with dissolve
 
