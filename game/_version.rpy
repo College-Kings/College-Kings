@@ -9,7 +9,7 @@ python early:
         os.chdir(config.basedir)
 
         try:
-            short_hash = subprocess.check_output([ "git", "rev-parse", "--short", "HEAD"]).strip().decode("utf-8")
+            short_hash = subprocess.check_output([ "git", "rev-parse", "--short", "HEAD"]).decode("utf-8").strip()
             with open(VERSION_DIR, "w") as file:
                 file.write(str(short_hash))
         except (subprocess.CalledProcessError, OSError):
