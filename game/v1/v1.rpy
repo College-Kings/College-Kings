@@ -213,8 +213,8 @@ label starta: #for compatibility only
         "Your decisions strongly influence the way the story progresses and how other characters perceive you.",
         "With each choice you'll either gain Bro, Boyfriend or Troublemaker points.",
         "Bros put the squad first, boyfriends show strong affinity towards a few selected individuals and troublemakers seek thrills and take risks.",
-        "These points are then used to identify your Key Character Trait (KCT).  Each KCT will unlock different possibilities and choices, but you can only have one active at a time.",
-        "You can read more about each individual KCT in the Stats app on your phone.",
+        "These points are then used to identify your reputation (rep). Each reputation will unlock different possibilities and choices, but you can only have one active at a time.",
+        "You can read more about each individual rep in the Stats app on your phone.",
     ])
     
     menu:

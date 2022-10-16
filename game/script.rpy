@@ -1,10 +1,10 @@
-define config.enable_steam = False
+define config.enable_steam = True
 define config.console = True
-define config.developer = True
+define config.developer = False
 define config_debug = False # Automatic Testing
 define config_censored = False
 
-define config.version = get_version(1, 2, 0)
+define config.version = get_version(1, 2, 1)
 
 define config.steam_appid = 1463120
 # define config.load_failed_label = "load_failed"

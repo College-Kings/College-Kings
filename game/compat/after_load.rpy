@@ -325,6 +325,15 @@ label after_load:
         if chloe.relationship == 4:
             chloe.relationship = Relationship.MAD
 
+        ## KCT
+        try:
+            reputation.components = {
+                Reputations.BRO: bro,
+                Reputations.BOYFRIEND: boyfriend,
+                Reputations.TROUBLEMAKER: troublemaker,
+            }
+        except NameError: pass
+
         ## PHONE
         phone.base_image = "images/phone/phone-icon.webp"
 
@@ -362,27 +371,6 @@ label after_load:
         relationship_app.home_screen = "{}_home".format(relationship_app.name.lower())
 
         #### MESSENGER CONTRACTS
-        for contact in messenger.contacts:
-            try: contact.sent_messages
-            except AttributeError: contact.sent_messages = []
-
-            try: contact.sent_messages = contact.sentMessages
-            except AttributeError: pass
-
-            try: contact.pending_messages
-            except AttributeError: contact.pending_messages = []
-
-            try: contact.pending_messages = contact.pendingMessages
-            except AttributeError: pass
-
-            try: contact._notification
-            except AttributeError: contact._notification = False
-
-            try: contact.user
-            except AttributeError:
-                contact.user = getattr(store, contact.name.lower().replace(' ', '_'))
-
-
         # Transfer Contact object to NonPlayableCharacter class
         try:
             emily.messenger = contact_Emily
@@ -452,6 +440,26 @@ label after_load:
             nora.messenger = contact_Nora
             del contact_Nora
         except NameError: pass
+
+        for contact in messenger.contacts:
+            try: contact.sent_messages
+            except AttributeError: contact.sent_messages = []
+
+            try: contact.sent_messages = contact.sentMessages
+            except AttributeError: pass
+
+            try: contact.pending_messages
+            except AttributeError: contact.pending_messages = []
+
+            try: contact.pending_messages = contact.pendingMessages
+            except AttributeError: pass
+
+            try: contact._notification
+            except AttributeError: contact._notification = False
+
+            try: contact.user
+            except AttributeError:
+                contact.user = getattr(store, contact.name.lower().replace(' ', '_'))
 
         # Correct image paths
         message = josh.messenger.find_message("images/text1.webp")
@@ -843,7 +851,10 @@ label after_load:
 
                 try: contact._notification
                 except AttributeError: contact._notification = False
-                    
+
+                try: contact.user
+                except AttributeError:
+                    contact.user = getattr(store, contact.name.lower().replace(' ', '_'))
         except NameError:
             pass
 

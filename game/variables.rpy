@@ -46,13 +46,8 @@ default pb_kct_shown = False
 default voice_acted = True
 
 # KCT
+default reputation = Reputation()
 default locked_kct = False
-default kct = _("confident")
-default sortedKCT = [_("confident"), _("loyal"), _("popular")]
-
-default bro = 1
-default boyfriend = 2
-default troublemaker = 1
 
 # Scenes
 default sceneList = set()

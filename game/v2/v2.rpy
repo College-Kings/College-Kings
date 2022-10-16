@@ -1161,10 +1161,11 @@ label meet_lauren2:
     la "About yesterday in the park..."
 
     show screen tutorial([
-        "When people make important decisions on how they feel about you, they consider what kind of a person you are.",
-        "Your Key Character Trait (Loyal, Popular or Confident) has a strong influence on how other characters react to your behavior.",
-        "Some people value a popular leader, some care more about loyalty than status and some are drawn to confidence.",
-        "Your decisions matter and have long time effects, as you can only have one KCT at a time. So think about what kind of person you want to be."
+        "Your decisions strongly influence the way the story progresses and how other characters perceive you.",
+        "With each choice you'll either gain Bro, Boyfriend or Troublemaker points.",
+        "Bros put the squad first, boyfriends show strong affinity towards a few selected individuals and troublemakers seek thrills and take risks.",
+        "These points are then used to identify your reputation (rep). Each reputation will unlock different possibilities and choices, but you can only have one active at a time.",
+        "You can read more about each individual rep in the Stats app on your phone.",
     ])
 
     menu:
@@ -3048,10 +3049,11 @@ label v2_nsfwSkipLabel3:
     au "This costume is literally just historic lingerie."
 
     show screen tutorial([
-        "When people make important decisions on how they feel about you, they consider what kind of a person you are.",
-        "Your Key Character Trait (Loyal, Popular or Confident) has a strong influence on how other characters react to your behavior.",
-        "Some people value a popular leader, some care more about loyalty than status and some are drawn to confidence.",
-        "Your decisions matter and have long time effects, as you can only have one KCT at a time. So think about what kind of person you want to be."
+        "Your decisions strongly influence the way the story progresses and how other characters perceive you.",
+        "With each choice you'll either gain Bro, Boyfriend or Troublemaker points.",
+        "Bros put the squad first, boyfriends show strong affinity towards a few selected individuals and troublemakers seek thrills and take risks.",
+        "These points are then used to identify your reputation (rep). Each reputation will unlock different possibilities and choices, but you can only have one active at a time.",
+        "You can read more about each individual rep in the Stats app on your phone.",
     ])
 
     au "I'm not showing you this, haha."
@@ -3790,10 +3792,11 @@ label v1_caughtContinue_pen:
     with Fade (1,0,1)
 
     show screen tutorial([
-        "When people make important decisions on how they feel about you, they consider what kind of a person you are.",
-        "Your Key Character Trait (Loyal, Popular or Confident) has a strong influence on how other characters react to your behavior.",
-        "Some people value a popular leader, some care more about loyalty than status and some are drawn to confidence.",
-        "Your decisions matter and have long time effects, as you can only have one KCT at a time. So think about what kind of person you want to be."
+        "Your decisions strongly influence the way the story progresses and how other characters perceive you.",
+        "With each choice you'll either gain Bro, Boyfriend or Troublemaker points.",
+        "Bros put the squad first, boyfriends show strong affinity towards a few selected individuals and troublemakers seek thrills and take risks.",
+        "These points are then used to identify your reputation (rep). Each reputation will unlock different possibilities and choices, but you can only have one active at a time.",
+        "You can read more about each individual rep in the Stats app on your phone.",
     ])
 
     pe "[name]! What were you thinking?!"
