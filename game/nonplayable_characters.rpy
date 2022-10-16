@@ -5,6 +5,7 @@ init python:
 
 
     class Relationship(SmartEnum):
+        EX = -5
         MAD = -4
         THREATEN = -3
         MAKEFUN = -2
