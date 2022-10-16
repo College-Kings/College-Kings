@@ -9,7 +9,7 @@ python early:
         os.chdir(config.basedir)
 
         try:
-            short_hash = subprocess.check_output([ "git", "rev-parse", "--short", "HEAD"]).strip()
+            short_hash = subprocess.check_output([ "git", "rev-parse", "--short", "HEAD"]).strip().decode("utf-8")
             with open(VERSION_DIR, "w") as file:
                 file.write(str(short_hash))
         except (subprocess.CalledProcessError, OSError):
@@ -20,7 +20,7 @@ python early:
                 open(VERSION_DIR, "w").close()
 
         os.chdir(cwd)
-        return short_hash.decode("utf-8")
+        return short_hash
 
 
     def get_version(major, minor, patch):
