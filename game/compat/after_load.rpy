@@ -1117,6 +1117,8 @@ label after_load:
         try: kiwii_first_time = kiwii_firstTime
         except NameError: pass
 
+        setup()
+
     hide screen reply
     hide screen simplr_reply
 
