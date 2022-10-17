@@ -1,6 +1,6 @@
 define config.enable_steam = True
 define config.console = True
-define config.developer = True
+define config.developer = False
 define config_debug = False # Automatic Testing
 define config_censored = False
 

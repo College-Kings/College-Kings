@@ -132,6 +132,7 @@ screen scene_gallery():
             top_margin 50
             bottom_margin 80
             mousewheel True
+            allow_underfull True
             
             for gallery_item in scene_gallery_items:
                 fixed:
