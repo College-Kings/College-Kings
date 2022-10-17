@@ -338,7 +338,7 @@ label v11_dinner_with_lauren:
                 
                 u "Haha, I don't think so, no. Why?"
 
-                if kct == "loyal":
+                if reputation() == Reputations.LOYAL:
                     scene v11dwl1e
                     with dissolve
 

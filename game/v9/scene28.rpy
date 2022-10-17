@@ -58,10 +58,10 @@ label v9_call_w_lindsey:
         scene v9cwl3b
         with dissolve
 
-        if kct == "confident":
+        if reputation() == Reputations.CONFIDENT:
             u "Does a fish need water? Of course I'll come out on top. When I set my mind to something that's it, mission accomplished."
 
-        elif kct == "popular":
+        elif reputation() == Reputations.POPULAR:
             u "I know there's a lot of focus on me, but I'm just really focused on bringing this home for the boys. They deserve this and I wanna make 'em proud."
 
         else:
@@ -185,10 +185,10 @@ label v9_call_w_lindsey:
         scene v9cwl1b
         with dissolve
 
-        if kct == "confident":
+        if reputation() == Reputations.CONFIDENT:
             u "Does a fish need water? Of course I'll come out on top. When I set my mind to something that's it, mission accomplished."
 
-        elif kct == "popular":
+        elif reputation() == Reputations.POPULAR:
             u "I know there's a lot of focus on me, but I'm just really focused on bringing this home for the boys. They deserve this and I wanna make 'em proud."
 
         else:

@@ -46,7 +46,7 @@ label v10_riley_sex:
 
     u "(Okay, she should be coming out soon.)"
 
-    if riley.relationship >= Relationship.FWB or kct == "confident":
+    if riley.relationship >= Relationship.FWB or reputation() == Reputations.CONFIDENT:
         label v10s40_galleryScene:
             if _in_replay:
                 $ riley.relationship = Relationship.FWB
@@ -563,7 +563,7 @@ label v10_riley_sex:
 
         jump v10_mc_pen_call # -Transition to Scene 41-
 
-    elif kct == "confident": # -If not riley rs with KCT Confident #
+    elif reputation() == Reputations.CONFIDENT: # -If not riley rs with KCT Confident #
         call screen reputation_popup
 
         scene v10srds3a

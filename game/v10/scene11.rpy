@@ -216,7 +216,7 @@ label v10_linds_room:
                     li "Honestly, just venting it all out already has me feeling a lot better."
 
         "Make a joke":
-            if kct == "confident":
+            if reputation() == Reputations.CONFIDENT:
                 scene v10slds3e # FPP. Same camera as v10slds3. Show Lindsey, with a somewhat amused smile, mouth closed.
                 with dissolve
 
@@ -364,7 +364,7 @@ label v10_linds_room:
 
     menu:
         "I like it":
-            if kct == "confident":
+            if reputation() == Reputations.CONFIDENT:
                 scene v10slds3e
                 with dissolve
                 u "I'd never say no to any attention you wanted to give."

@@ -234,7 +234,7 @@ label v12_nora_room:
 
     no "For not being like Chris."
 
-    if v12_nora_points == 2 or kct == "loyal":
+    if v12_nora_points == 2 or reputation() == Reputations.LOYAL:
         if v12_nora_points < 2:
             call screen reputation_popup
         

@@ -164,10 +164,10 @@ label v9_hall_punch:
     scene v9hlw11 # FPP. Show the passers by who stopped and surrounded MC, looking at camera, all mouths closed.
     with dissolve
 
-    if kct == "loyal":
+    if reputation() == Reputations.LOYAL:
         u "(Actually, that might be one of the stupidest things I've done lately. Fuck it, [name]! That guy was a jerk, but did I really have to knock him out in front of everybody?)"
 
-    elif kct == "popular":
+    elif reputation() == Reputations.POPULAR:
         u "I tried to stop this guys. Guess he wasn't smart enough to listen."
 
     else: 

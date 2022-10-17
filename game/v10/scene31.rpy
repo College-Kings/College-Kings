@@ -172,7 +172,7 @@ label v10_late_alley:
             jo "Not a bad idea. I appreciate the talk man."
 
         "Don't support":
-            if kct == "confident":
+            if reputation() == Reputations.CONFIDENT:
                 scene v10all3a
                 with dissolve
 

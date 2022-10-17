@@ -148,7 +148,7 @@ label imrecona: # Find Imre
 
             u "You know our friendship comes first, but sometimes loyalty means protecting each other even if we don't wanna be protected."
 
-            if kct == "loyal":
+            if reputation() == Reputations.LOYAL:
                 call screen reputation_popup
 
                 $ imreforgives = True
@@ -3898,7 +3898,7 @@ label fy_bd: # not gone to Emily's
 
                 au "Good thing you have me."
 
-            elif kct == "popular":
+            elif reputation() == Reputations.POPULAR:
                 call screen reputation_popup
 
                 scene s570h # aubrey flirting
@@ -5861,7 +5861,7 @@ label wakeupa:
                 "Act out a lullaby":
                     $ reputation.add_point(Reputations.BRO)
 
-                    if kct == "confident":
+                    if reputation() == Reputations.CONFIDENT:
                         call screen reputation_popup
                         $ perform = 2
 
@@ -9095,7 +9095,7 @@ label v6_fr3chloe1:
 
         u "Chloe. Stop. Just let me help."
 
-        if kct == "popular":
+        if reputation() == Reputations.POPULAR:
             call screen reputation_popup
 
             cl "*Sniff* Okay..."
@@ -9580,7 +9580,7 @@ label v6_fr3amber3:
 
     u "Just thought maybe you wanna go upstairs. You know, talk somewhere quiet."
 
-    if kct == "popular":
+    if reputation() == Reputations.POPULAR:
         call screen reputation_popup
         $ upstairs = "amber"
 

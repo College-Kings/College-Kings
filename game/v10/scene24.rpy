@@ -91,7 +91,7 @@ label v10_lauren_room:
 
             u "I really do."
 
-            if lauren.relationship >= Relationship.GIRLFRIEND or kct == "loyal":
+            if lauren.relationship >= Relationship.GIRLFRIEND or reputation() == Reputations.LOYAL:
                 if lauren.relationship < Relationship.GIRLFRIEND:
                     call screen reputation_popup
                 $ v10s33_laurenBakeSale = False
@@ -295,7 +295,7 @@ label v10_lauren_room:
                 with dissolve
                 pause
 
-                if lauren.relationship >= Relationship.GIRLFRIEND or (lauren.relationship >= Relationship.KISS and kct == "loyal"):
+                if lauren.relationship >= Relationship.GIRLFRIEND or (lauren.relationship >= Relationship.KISS and reputation() == Reputations.LOYAL):
                     if lauren.relationship < Relationship.GIRLFRIEND:
                         $ lauren.relationship = Relationship.GIRLFRIEND
                         call screen reputation_popup

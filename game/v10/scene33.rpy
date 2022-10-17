@@ -1185,7 +1185,7 @@ label v10s33_chloe1:
                                     scene v10cfrcl1a
                                     with dissolve
 
-                                    if kct == "popular" or chloe.relationship >= Relationship.FWB:
+                                    if reputation() == Reputations.POPULAR or chloe.relationship >= Relationship.FWB:
                                         scene v10cfrcl1a
                                         with dissolve
 
@@ -1599,7 +1599,7 @@ label v10s33_deergirl21:
 
                     u "Oh I wanted to ask, I'm planning on going on this year's Europe trip. Would you want to go?"
 
-                    if kct == "loyal":
+                    if reputation() == Reputations.LOYAL:
                         call screen reputation_popup
 
                         scene v10cfrla1
@@ -1799,7 +1799,7 @@ label v10s33_deergirl21:
 
                     u "Oh I wanted to ask, I'm planning on going on this year's Europe trip. Would you want to go?"
 
-                    if kct == "loyal":
+                    if reputation() == Reputations.LOYAL:
                         call screen reputation_popup
 
                         scene v10cfrla3d

@@ -739,7 +739,7 @@ label hd_bd:
 
         u "Come on let's do something fun. It'll take your mind of things."
 
-        if kct == "confident":
+        if reputation() == Reputations.CONFIDENT:
             call screen reputation_popup
 
             scene s699f # nora curious smile
@@ -1124,7 +1124,7 @@ label hd_ad:
 
             ri "*Laughs* It sounded a lot cooler in my head."
 
-            if kct == "confident":
+            if reputation() == Reputations.CONFIDENT:
                 ri "I just thought. I'd give it a [name]-style response."
 
                 scene s706a
@@ -1159,7 +1159,7 @@ label hd_ad:
 
             u "No worries, it was a nice walk."
 
-            if kct == "confident" or riley.relationship >= Relationship.MOVE:
+            if reputation() == Reputations.CONFIDENT or riley.relationship >= Relationship.MOVE:
                 if riley.relationship < Relationship.MOVE:
                     call screen reputation_popup
 
@@ -1736,7 +1736,7 @@ label apologylauren:
 
         jump thisbewalk
 
-    elif kct == "loyal":
+    elif reputation() == Reputations.LOYAL:
         $ lauren.relationship = Relationship.FRIEND
         call screen reputation_popup
 
@@ -1925,7 +1925,7 @@ label thisbelauren:
 
                     u "You. Of course I want you. That's all I want. I promise. It's never gonna happen again."
 
-                    if kct == "loyal":
+                    if reputation() == Reputations.LOYAL:
                         call screen reputation_popup
 
                         $ lauren.relationship = Relationship.FRIEND
@@ -2392,7 +2392,7 @@ label thisbewalk:
 
                     u "Yeah, definitely. Just let me know when you're making them."
 
-                elif kct == "loyal":
+                elif reputation() == Reputations.LOYAL:
                     call screen reputation_popup
 
                     $ signs = True
@@ -3263,7 +3263,7 @@ label beachlauren:
                 scene s742a
                 with dissolve
 
-                if kct == "loyal":
+                if reputation() == Reputations.LOYAL:
                     call screen reputation_popup
 
                     menu:
@@ -6578,7 +6578,7 @@ label hc_asking_amber:
     am "And I'm telling you it's not my thing."
     am "Sorry [name]."
 
-    if kct == "popular":
+    if reputation() == Reputations.POPULAR:
         call screen reputation_popup
 
         scene s919d # Amber flirty and talking
@@ -6838,7 +6838,7 @@ label hc_asking_chloe:
 
     u "Come on, I know you want to."
 
-    if volleyball or kct == "popular":
+    if volleyball or reputation() == Reputations.POPULAR:
         $ hcGirl = "chloe"
 
         if not volleyball:
@@ -6978,7 +6978,7 @@ label hc_asking_lauren:
 
         jump after_hc_selection
 
-    elif kct == "loyal" or beachfirstkiss:
+    elif reputation() == Reputations.LOYAL or beachfirstkiss:
         $ hcGirl = "lauren"
         
         if not beachfirstkiss:
@@ -7137,7 +7137,7 @@ label hc_asking_riley:
 
     u "Will you be my Cinderella for homecoming?"
 
-    if riley.relationship >= Relationship.LIKES or kct == "confident":
+    if riley.relationship >= Relationship.LIKES or reputation() == Reputations.CONFIDENT:
         if riley.relationship < Relationship.LIKES:
             call screen reputation_popup
 
@@ -16220,7 +16220,7 @@ label fr4grayson1:
 
                 u "Whatever she did, I'm sure she doesn't deserve this."
 
-                if kct == "confident":
+                if reputation() == Reputations.CONFIDENT:
                     $ preventgrayson = True
                     call screen reputation_popup
 
@@ -16515,7 +16515,7 @@ label fr4lockerroomchloe:
 
                     u "You don't have to. Let's just get out of here."
 
-                    if kct == "popular":
+                    if reputation() == Reputations.POPULAR:
                         call screen reputation_popup
 
                         scene sfr4cl52b

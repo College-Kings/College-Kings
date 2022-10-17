@@ -205,7 +205,7 @@ label v10_cafe_w_jenny:
         menu:
             "Flirt":
                 $ reputation.add_point(Reputations.BOYFRIEND)
-                if kct == "popular":
+                if reputation() == Reputations.POPULAR:
                     $ jenny.points += 1
 
                 else:

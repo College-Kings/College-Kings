@@ -63,7 +63,7 @@ label v12_amber_after_spa:
 
             jump v12_chris_nora_room
                 
-    if v11_tease_amber <= 2 or kct == "popular":
+    if v11_tease_amber <= 2 or reputation() == Reputations.POPULAR:
         $ v11_amber_sauna_convo = True
         if not (v11_tease_amber <= 2):
             call screen reputation_popup

@@ -364,7 +364,7 @@ label v10_amber_skatepark:
 
     u "*Laughs*"
 
-    if amber.relationship >= Relationship.FWB or kct == "popular":
+    if amber.relationship >= Relationship.FWB or reputation() == Reputations.POPULAR:
         label v10_amber_skatepark_sg:
         
         if _in_replay:
@@ -658,7 +658,7 @@ label v10_amber_skatepark:
         with dissolve
         menu:
             "Place hand on her leg":
-                if kct == "popular": # kct is popular
+                if reputation() == Reputations.POPULAR: # kct is popular
                     call screen reputation_popup
                     
                     scene v10sasp5j # FPP. Same camera as v10sasp5. Show Amber glancing down at her leg, smiling, mouth closed.

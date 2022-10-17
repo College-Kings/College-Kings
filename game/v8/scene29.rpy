@@ -576,7 +576,7 @@ label after_drugs:
     with Dissolve(1)
     pause 0.5
 
-    if ending == "amber" or kct == "popular":
+    if ending == "amber" or reputation() == Reputations.POPULAR:
         if ending != "amber":
             call screen reputation_popup
 

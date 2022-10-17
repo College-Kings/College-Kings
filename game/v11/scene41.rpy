@@ -233,7 +233,7 @@ label v11_chloe_bathroom:
 
             cl "*Moans*"
 
-            if chloe.relationship >= Relationship.FWB or kct == "popular":
+            if chloe.relationship >= Relationship.FWB or reputation() == Reputations.POPULAR:
                 $ sceneList.add("v11_chloe")
 
                 if chloe.relationship < Relationship.FWB:

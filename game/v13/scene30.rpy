@@ -443,7 +443,7 @@ label v13s30:
 
     am "As long as you don't do too much you'll be fine."
 
-    if v13_lauren_smoke or (kct == "loyal" and not "v11_aubrey" in sceneList):
+    if v13_lauren_smoke or (reputation() == Reputations.LOYAL and not "v11_aubrey" in sceneList):
         if not v13_lauren_smoke:
             $ v13_lauren_smoke = True
             call screen reputation_popup

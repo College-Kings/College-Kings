@@ -48,7 +48,7 @@ label v10_chloe_hallway:
                 cl "Ugh, who cares what you think?"
 
             "Sexy":
-                if not kct == "popular":
+                if not reputation() == Reputations.POPULAR:
                     u "No, sexy definitely describes her better."
 
                     scene v10such3a
@@ -154,7 +154,7 @@ label v10_chloe_hallway:
 
                             cl "Yeah. Alright."   
 
-        if not kct == "popular":
+        if not reputation() == Reputations.POPULAR:
             scene v10such4 # TPP. Show Chloe walking away, Aubrey and MC watching her.
             with dissolve
 

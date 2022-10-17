@@ -311,7 +311,7 @@ label v11_dinner_with_aubrey:
 
                 u "I know you said that before, but I thought that maybe things felt a little different lately."
 
-                if kct == "confident":
+                if reputation() == Reputations.CONFIDENT:
                     scene v11dwa1e
                     with dissolve
 

@@ -1892,7 +1892,7 @@ label v12s18_bet: # END OF FREE ROAM
 
             u "Something like that."
 
-            if amber.relationship >= Relationship.FWB or kct == "popular":
+            if amber.relationship >= Relationship.FWB or reputation() == Reputations.POPULAR:
                 if amber.relationship < Relationship.FWB:
                     call screen reputation_popup
                 

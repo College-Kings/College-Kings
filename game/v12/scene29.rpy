@@ -736,7 +736,7 @@ label v12_lauren_sex:
 
             u "Yes. *Chuckles* Yes, Lauren."
 
-            if v12_lauren_points >= 3 or kct == "loyal":
+            if v12_lauren_points >= 3 or reputation() == Reputations.LOYAL:
                 $ sceneList.add("v12_lauren")
 
                 if v12_lauren_points < 3:

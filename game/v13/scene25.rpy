@@ -125,7 +125,7 @@ label v13s25:
 
             pause 0.5
 
-            if v12s24_emmymatch or kct == "confident": 
+            if v12s24_emmymatch or reputation() == Reputations.CONFIDENT: 
                 if not v12s24_emmymatch:
                     call screen reputation_popup
 
