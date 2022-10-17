@@ -222,7 +222,7 @@ label v10_linds_room:
 
                 u "Hey, at least you're not gonna end up like that sailor that followed the North Star and ended up freezing to death in a snow storm, right?"
 
-                call screen kct_popup
+                call screen reputation_popup
                 
                 scene v10slds3f # FPP. Same camera as v10slds3. Show Lindsey, with a somewhat amused smile, mouth open.
                 with dissolve
@@ -369,7 +369,7 @@ label v10_linds_room:
                 with dissolve
                 u "I'd never say no to any attention you wanted to give."
 
-                call screen kct_popup
+                call screen reputation_popup
 
                 scene v10slds3f
                 with dissolve

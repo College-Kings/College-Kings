@@ -93,7 +93,7 @@ label v10_lauren_room:
 
             if lauren.relationship >= Relationship.GIRLFRIEND or kct == "loyal":
                 if lauren.relationship < Relationship.GIRLFRIEND:
-                    call screen kct_popup
+                    call screen reputation_popup
                 $ v10s33_laurenBakeSale = False
 
                 scene v10lar3b
@@ -298,7 +298,7 @@ label v10_lauren_room:
                 if lauren.relationship >= Relationship.GIRLFRIEND or (lauren.relationship >= Relationship.KISS and kct == "loyal"):
                     if lauren.relationship < Relationship.GIRLFRIEND:
                         $ lauren.relationship = Relationship.GIRLFRIEND
-                        call screen kct_popup
+                        call screen reputation_popup
                         
                     image v10lauts = Movie(play="images/v10/Scene 24/v10lauts.webm", loop=True, image="images/v10/Scene 24/v10lautsStart.webp", start_image="images/v10/Scene 24/v10lautsStart.webp") # TPP MC's arms around Lauren's waist while he sucks on her nipple, Lauren eyes rolled back in pleasure
                     image v10lautsf = Movie(play="images/v10/Scene 24/v10lautsf.webm", loop=True, image="images/v10/Scene 24/v10lautsStart.webp", start_image="images/v10/Scene 24/v10lautsStart.webp")

@@ -740,7 +740,7 @@ label v12_lauren_sex:
                 $ sceneList.add("v12_lauren")
 
                 if v12_lauren_points < 3:
-                    call screen kct_popup
+                    call screen reputation_popup
 
                 label v12_lauren_sex_sg:
                 
@@ -1194,7 +1194,7 @@ label v12_lauren_sex:
                 scene v12las46e
                 with dissolve
                 
-                call screen kct_popup(required_kct="loyal")
+                call screen reputation_popup(required_reputation="loyal")
 
                 la "Let's not rush this, okay? When all is said and done, I want our first time to be all that I've dreamed of."
 

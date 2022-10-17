@@ -57,7 +57,7 @@ label v10_chloe_hallway:
                     cl "Ugh, I don't care what you think."
 
                 else:
-                    call screen kct_popup
+                    call screen reputation_popup
 
                     u "No, sexy definitely describes her better."
 

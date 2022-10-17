@@ -1203,7 +1203,7 @@ label meet_lauren2:
                 $ laawk = False
 
                 if lauren.relationship < Relationship.KISS:
-                    call screen kct_popup
+                    call screen reputation_popup
 
                 $ lauren.relationship = Relationship.GIRLFRIEND
 
@@ -3066,7 +3066,7 @@ label v2_nsfwSkipLabel3:
             u "Oh come on, Aubrey. I wanna see."
 
             if kct == "popular":
-                call screen kct_popup
+                call screen reputation_popup
             else:
                 au "Sorry but... I'm gonna get dressed again."
 
@@ -3707,7 +3707,7 @@ label v1_caughtContinue:
             u "What are you talking about? You probably just saw my foot."
 
             if kct == "confident":
-                call screen kct_popup
+                call screen reputation_popup
 
                 $ v2_caughtpeekingcounter = True
 
@@ -3837,7 +3837,7 @@ label v1_caughtContinue_pen:
             u "What are you talking about? You probably just saw my foot."
 
             if kct == "confident":
-                call screen kct_popup
+                call screen reputation_popup
 
                 $ v2_caughtpeekingcounter = True
 

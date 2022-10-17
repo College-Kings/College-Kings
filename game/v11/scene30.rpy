@@ -1336,7 +1336,7 @@ label v11_quiz_bonus:
 
     if (lauren.relationship >= Relationship.GIRLFRIEND or (kct == "loyal" and lauren.relationship >= Relationship.KISS)) and not "v11_aubrey" in sceneList:
         if lauren.relationship < Relationship.GIRLFRIEND:
-            call screen kct_popup
+            call screen reputation_popup
 
         scene v11las44f # FPP. Lauren has her hands around MC's neck, she is looking into his eyes, she is nervous, mouth open
         with dissolve

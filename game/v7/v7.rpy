@@ -740,7 +740,7 @@ label hd_bd:
         u "Come on let's do something fun. It'll take your mind of things."
 
         if kct == "confident":
-            call screen kct_popup
+            call screen reputation_popup
 
             scene s699f # nora curious smile
             with dissolve
@@ -1161,7 +1161,7 @@ label hd_ad:
 
             if kct == "confident" or riley.relationship >= Relationship.MOVE:
                 if riley.relationship < Relationship.MOVE:
-                    call screen kct_popup
+                    call screen reputation_popup
 
             else:
                 scene s708 # riley smiling
@@ -1738,7 +1738,7 @@ label apologylauren:
 
     elif kct == "loyal":
         $ lauren.relationship = Relationship.FRIEND
-        call screen kct_popup
+        call screen reputation_popup
 
         scene s717
         with dissolve
@@ -1926,7 +1926,7 @@ label thisbelauren:
                     u "You. Of course I want you. That's all I want. I promise. It's never gonna happen again."
 
                     if kct == "loyal":
-                        call screen kct_popup
+                        call screen reputation_popup
 
                         $ lauren.relationship = Relationship.FRIEND
                         $ autumn.relationship = Relationship.MAD
@@ -2393,7 +2393,7 @@ label thisbewalk:
                     u "Yeah, definitely. Just let me know when you're making them."
 
                 elif kct == "loyal":
-                    call screen kct_popup
+                    call screen reputation_popup
 
                     $ signs = True
 
@@ -3264,7 +3264,7 @@ label beachlauren:
                 with dissolve
 
                 if kct == "loyal":
-                    call screen kct_popup
+                    call screen reputation_popup
 
                     menu:
                         "Kiss her":
@@ -6579,7 +6579,7 @@ label hc_asking_amber:
     am "Sorry [name]."
 
     if kct == "popular":
-        call screen kct_popup
+        call screen reputation_popup
 
         scene s919d # Amber flirty and talking
         with dissolve
@@ -6842,7 +6842,7 @@ label hc_asking_chloe:
         $ hcGirl = "chloe"
 
         if not volleyball:
-            call screen kct_popup
+            call screen reputation_popup
 
         scene s937d # chloe smiling eyebrow raised
         with dissolve
@@ -6982,7 +6982,7 @@ label hc_asking_lauren:
         $ hcGirl = "lauren"
         
         if not beachfirstkiss:
-            call screen kct_popup
+            call screen reputation_popup
 
         $ lauren.relationship = Relationship.GIRLFRIEND
 
@@ -7139,7 +7139,7 @@ label hc_asking_riley:
 
     if riley.relationship >= Relationship.LIKES or kct == "confident":
         if riley.relationship < Relationship.LIKES:
-            call screen kct_popup
+            call screen reputation_popup
 
         $ hcGirl = "riley"
 
@@ -16222,7 +16222,7 @@ label fr4grayson1:
 
                 if kct == "confident":
                     $ preventgrayson = True
-                    call screen kct_popup
+                    call screen reputation_popup
 
                     scene sfr4gr1b
                     with dissolve
@@ -16516,7 +16516,7 @@ label fr4lockerroomchloe:
                     u "You don't have to. Let's just get out of here."
 
                     if kct == "popular":
-                        call screen kct_popup
+                        call screen reputation_popup
 
                         scene sfr4cl52b
                         with dissolve

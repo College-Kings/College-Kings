@@ -178,7 +178,7 @@ label v10_late_alley:
 
                 u "I get that this isn't supposed to be a permanent thing for you and you have an out plan, but I still don't support what you're doing. There's other ways to get money. You're gonna end up fucking up your life."
 
-                call screen kct_popup
+                call screen reputation_popup
                 scene v10all3
                 with dissolve
 

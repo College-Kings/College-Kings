@@ -1894,7 +1894,7 @@ label v12s18_bet: # END OF FREE ROAM
 
             if amber.relationship >= Relationship.FWB or kct == "popular":
                 if amber.relationship < Relationship.FWB:
-                    call screen kct_popup
+                    call screen reputation_popup
                 
                 scene v12slpbet17
                 with dissolve
@@ -1912,7 +1912,7 @@ label v12s18_bet: # END OF FREE ROAM
                 pause 1.75
 
             else:
-                call screen kct_popup(required_kct="popular")
+                call screen reputation_popup(required_reputation="popular")
             
                 scene v12slpbet17
                 with dissolve

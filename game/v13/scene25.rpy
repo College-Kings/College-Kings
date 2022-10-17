@@ -127,7 +127,7 @@ label v13s25:
 
             if v12s24_emmymatch or kct == "confident": 
                 if not v12s24_emmymatch:
-                    call screen kct_popup
+                    call screen reputation_popup
 
                 scene v13s25_3c
                 with dissolve
@@ -227,7 +227,7 @@ label v13s25:
                         jump v13s25_no_sex
 
             else:
-                call screen kct_popup(required_kct="confident")
+                call screen reputation_popup(required_reputation="confident")
                 
                 scene v13s25_3a
                 with dissolve

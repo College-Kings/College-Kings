@@ -236,7 +236,7 @@ label v12_nora_room:
 
     if v12_nora_points == 2 or kct == "loyal":
         if v12_nora_points < 2:
-            call screen kct_popup
+            call screen reputation_popup
         
         scene v12nos6 # TPP. Same as v12nos3, different angle, Nora mouth closed, slight smile
         with dissolve
@@ -271,7 +271,7 @@ label v12_nora_room:
 
                 jump v12_nora_sex
     else:
-        call screen kct_popup(required_kct="loyal")
+        call screen reputation_popup(required_reputation="loyal")
     
         jump v12_nora_no_sex
 

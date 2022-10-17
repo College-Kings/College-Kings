@@ -237,7 +237,7 @@ label v11_chloe_bathroom:
                 $ sceneList.add("v11_chloe")
 
                 if chloe.relationship < Relationship.FWB:
-                    call screen kct_popup
+                    call screen reputation_popup
 
                 if chloe.relationship < Relationship.FWB:
                     $ chloe.relationship = Relationship.FWB
@@ -246,7 +246,7 @@ label v11_chloe_bathroom:
                 jump v11_chloe_sex_scene
 
             else:
-                call screen kct_popup(required_kct="popular")
+                call screen reputation_popup(required_reputation="popular")
             
                 scene v11chb9e # TPP. Same as v11chb9a, but Chloe is the one pulling back from the kiss instead of MC
                 with dissolve

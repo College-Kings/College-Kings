@@ -567,7 +567,7 @@ label v9_lau_dorm:
 
         if lauren.relationship < Relationship.GIRLFRIEND and kct == "loyal":
             if kct == "loyal":
-                call screen kct_popup
+                call screen reputation_popup
 
             menu:
                 "Kiss Lauren":

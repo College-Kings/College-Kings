@@ -66,7 +66,7 @@ label v12_amber_after_spa:
     if v11_tease_amber <= 2 or kct == "popular":
         $ v11_amber_sauna_convo = True
         if not (v11_tease_amber <= 2):
-            call screen kct_popup
+            call screen reputation_popup
 
         scene v12ams2a
         with dissolve

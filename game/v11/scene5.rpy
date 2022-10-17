@@ -586,7 +586,7 @@ label v11s4_PhoneContinueJosh1:
 
     if candyLike < 3 and not kct == "popular":
         if not kct == "popular":
-            call screen kct_popup(required_kct="popular")
+            call screen reputation_popup(required_reputation="popular")
     
         scene v11swc6o
         with dissolve
@@ -634,7 +634,7 @@ label v11s4_PhoneContinueJosh1:
     $ candy.relationship = Relationship.LIKES
 
     if candyLike < 3:
-        call screen kct_popup
+        call screen reputation_popup
 
     scene v11swc6l
     with dissolve

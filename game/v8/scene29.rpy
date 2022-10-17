@@ -578,7 +578,7 @@ label after_drugs:
 
     if ending == "amber" or kct == "popular":
         if ending != "amber":
-            call screen kct_popup
+            call screen reputation_popup
 
         $ amberSexOfferAtJoshs = True
 

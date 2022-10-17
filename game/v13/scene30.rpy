@@ -446,7 +446,7 @@ label v13s30:
     if v13_lauren_smoke or (kct == "loyal" and not "v11_aubrey" in sceneList):
         if not v13_lauren_smoke:
             $ v13_lauren_smoke = True
-            call screen kct_popup
+            call screen reputation_popup
 
         scene v13s30_8a
         with dissolve
@@ -680,7 +680,7 @@ label v13s30:
 
     else:
         if not "v11_aubrey" in sceneList:
-            call screen kct_popup(required_kct="loyal")
+            call screen reputation_popup(required_reputation="loyal")
     
         scene v13s30_21 # FPP. Amber the only one sitting. MC looking at Lauren, Lauren looking at Amber where she is sitting, Lauren slight frown, mouth open, Amber slight frown, mouth closed.
         with dissolve
