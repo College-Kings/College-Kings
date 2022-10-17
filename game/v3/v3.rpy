@@ -2075,12 +2075,13 @@ label conl:
 
         au "Yeah..."
 
-label continuem: #for compatibility only
     scene aub1start
     with dissolve
 
     menu:
         "Kiss her":
+            label continuem:
+        
             $ aubrey.relationship = Relationship.FWB
             $ sceneList.add("v3_aubrey")
 
