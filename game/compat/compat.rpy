@@ -14,6 +14,9 @@ init 100 python:
     class FightCharacter(NonPlayableCharacter):
         pass
 
+    class PathBuilderCatagories:
+        pass
+
     def v7_msgReply9():
         pass
 
