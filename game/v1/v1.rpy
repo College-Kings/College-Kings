@@ -8,27 +8,27 @@ init python:
     def v1_reply2():
         grant_achievement("open_wound")
 
-        add_point(Reputations.TROUBLEMAKER)
+        reputation.add_point(Reputations.TROUBLEMAKER)
         emily.messenger.newMessage(_("Ugh :/"))
 
     # Julia messages
     def v1_reply3():
-        add_point(Reputations.BOYFRIEND)
+        reputation.add_point(Reputations.BOYFRIEND)
 
     def v1_reply4():
-        add_point(Reputations.BRO)
+        reputation.add_point(Reputations.BRO)
 
     # Lauren messages
     def v1_reply5():
-        add_point(Reputations.BOYFRIEND)
+        reputation.add_point(Reputations.BOYFRIEND)
 
     # Lauren messages
     def v1_reply6():
-        add_point(Reputations.BOYFRIEND)
+        reputation.add_point(Reputations.BOYFRIEND)
         lauren.messenger.newMessage(_("Cool :)"))
 
     def v1_reply7():
-        add_point(Reputations.TROUBLEMAKER)
+        reputation.add_point(Reputations.TROUBLEMAKER)
         lauren.messenger.newMessage(_("Idk, it's just feels kinda weird now. Can we please just talk tomorrow?"))
         lauren.messenger.addReply(_("Fine"))
         lauren.messenger.newMessage(_(":)"))

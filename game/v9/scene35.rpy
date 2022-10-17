@@ -12,7 +12,7 @@ init python:
         chloe.messenger.addReply(_("That's better haha"), v9s35_reply3)
 
     def v9s35_reply2():
-        add_point(Reputations.BOYFRIEND)
+        reputation.add_point(Reputations.BOYFRIEND)
         v9s35_reply3()
 
     def v9s35_reply3():
@@ -21,7 +21,7 @@ init python:
         chloe.messenger.addReply(_("You need to ask? :)"), v9s35_reply5)
 
     def v9s35_reply4():
-        add_point(Reputations.BOYFRIEND)
+        reputation.add_point(Reputations.BOYFRIEND)
         v9s35_reply5()
 
     def v9s35_reply5():
@@ -48,7 +48,7 @@ init python:
         chloe.messenger.addReply(_("Goodnight, Chloe."))
 
     def v9s35_reply7():
-        add_point(Reputations.BOYFRIEND)
+        reputation.add_point(Reputations.BOYFRIEND)
 
     def v9s35_reply8():
         chloe.messenger.newMessage(_("Ugh. I'm so tired of studying."))

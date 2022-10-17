@@ -1,29 +1,29 @@
 init python:
     def v7_kiwiiReply1():
         v7_kiwiiPost1.newComment(cameron, _("Lol, pussy"), mentions=[mc], numberLikes=renpy.random.randint(1, 10))
-        add_point(Reputations.BOYFRIEND)
+        reputation.add_point(Reputations.BOYFRIEND)
 
     def v7_kiwiiReply2():
         v7_kiwiiPost1.newComment(imre, _("Slide into her DMs bro!"), mentions=[mc], numberLikes=renpy.random.randint(5, 15))
-        add_point(Reputations.BRO)
-        add_point(Reputations.TROUBLEMAKER)
+        reputation.add_point(Reputations.BRO)
+        reputation.add_point(Reputations.TROUBLEMAKER)
 
     def v7_kiwiiReply3():
-        add_point(Reputations.BOYFRIEND)
+        reputation.add_point(Reputations.BOYFRIEND)
 
     def v7_kiwiiReply4():
         v7_kiwiiPost2.newComment(autumn, _("Yeah, they really are"), mentions=[mc], numberLikes=renpy.random.randint(8, 18))
     
     def v7_kiwiiReply5():
-        add_point(Reputations.BRO)
+        reputation.add_point(Reputations.BRO)
         v7_kiwiiPost3.newComment(aubrey, _("Bring it on!"), mentions=[mc], numberLikes=renpy.random.randint(15, 35))
 
     def v7_kiwiiReply6():
-        add_point(Reputations.TROUBLEMAKER)
+        reputation.add_point(Reputations.TROUBLEMAKER)
         v7_kiwiiPost4.newComment(josh, _("lol"), mentions=[mc], numberLikes=renpy.random.randint(3, 7))
 
     def v7_msgReply1():
-        add_point(Reputations.BRO)
+        reputation.add_point(Reputations.BRO)
         penelope.messenger.newMessage(_("Okay..."))
 
     def v7_msgReply2():

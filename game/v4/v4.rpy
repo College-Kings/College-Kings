@@ -1,7 +1,7 @@
 init python:
     # Josh messages
     def v4_reply1():
-        add_point(Reputations.BRO)
+        reputation.add_point(Reputations.BRO)
         josh.messenger.newMessage(_("Dope"))
         josh.messenger.newMessage(_("Come by 995 Sereno Drive at 8, it's my friends house."))
 
@@ -23,7 +23,7 @@ init python:
         josh.messenger.newMessage(_("Come by 995 Sereno Drive at 8, it's my friends house."))
 
     def v4_reply5():
-        add_point(Reputations.BOYFRIEND)
+        reputation.add_point(Reputations.BOYFRIEND)
         josh.messenger.newMessage(_("This guy"))
 
 label v4start:

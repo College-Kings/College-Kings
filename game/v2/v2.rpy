@@ -2,20 +2,20 @@ init python:
 
     # Ryan messages
     def v2_reply1():
-        add_point(Reputations.BRO)
+        reputation.add_point(Reputations.BRO)
         ryan.messenger.newMessage(_("Look, I know what Grayson did was a dick move, but he was just being overprotective of Chloe"))
         ryan.messenger.addReply(_("Whatever"), v2_reply2)
         ryan.messenger.addReply(_("Don't you dare defend that guy"), v2_reply3)
 
     def v2_reply2():
-        add_point(Reputations.BRO)
+        reputation.add_point(Reputations.BRO)
 
     def v2_reply3():
-        add_point(Reputations.TROUBLEMAKER)
+        reputation.add_point(Reputations.TROUBLEMAKER)
         ryan.messenger.newMessage(_("Sorry..."))
 
     def v2_reply4():
-        add_point(Reputations.TROUBLEMAKER)
+        reputation.add_point(Reputations.TROUBLEMAKER)
         ryan.messenger.newMessage(_("Look, I know what Grayson did was a dick move, but he was just being overprotective of Chloe"))
         ryan.messenger.addReply(_("Whatever"), v2_reply2)
         ryan.messenger.addReply(_("Don't you dare defend that guy"), v2_reply3)
@@ -23,7 +23,7 @@ init python:
     # Lauren messages
     def v2_reply5():
         setattr(store, "meetlauren", True)
-        add_point(Reputations.BOYFRIEND)
+        reputation.add_point(Reputations.BOYFRIEND)
         lauren.messenger.newMessage(_("Great, I'll see you then :)"))
 
     def v2_reply6():
@@ -31,36 +31,36 @@ init python:
 
     # Josh messages
     def v2_reply7():
-        add_point(Reputations.BRO)
+        reputation.add_point(Reputations.BRO)
         josh.messenger.newMessage(_("It's fine, you go get her."))
 
     def v2_reply8():
-        add_point(Reputations.BOYFRIEND)
+        reputation.add_point(Reputations.BOYFRIEND)
         josh.messenger.newMessage(_("Nah, you don't want a bitch like her."))
         josh.messenger.addReply(_("Yeah, I guess you're right."), v2_reply9)
         josh.messenger.addReply(_("Dude, what the fuck?!"), v2_reply10)
 
     def v2_reply9():
-        add_point(Reputations.BRO)
+        reputation.add_point(Reputations.BRO)
         josh.messenger.newMessage(_("Hahaha, I'm just kidding, yo."))
         josh.messenger.newMessage(_("Of course I gave her your number."))
         josh.messenger.addReply(_("Damn, you got me."))
 
     def v2_reply10():
-        add_point(Reputations.TROUBLEMAKER)
+        reputation.add_point(Reputations.TROUBLEMAKER)
         josh.messenger.newMessage(_("Hahaha, I'm just kidding, yo."))
         josh.messenger.newMessage(_("Of course I gave her your number."))
         josh.messenger.addReply(_("Damn, you got me."))
 
     # Aubrey messages
     def v2_reply11():
-        add_point(Reputations.BRO)
+        reputation.add_point(Reputations.BRO)
         aubrey.messenger.newMessage(_("Yeah, I mean they had a thing a while ago but she broke it off 'cause he lied about some shit."))
         aubrey.messenger.newMessage(_("So... tomorrow?"))
         aubrey.messenger.addReply(_("My day tomorrow is quite full, but how about today?\n\nI need to buy a costume."), v2_reply12)
 
     def v2_reply12():
-        add_point(Reputations.BOYFRIEND)
+        reputation.add_point(Reputations.BOYFRIEND)
         aubrey.messenger.newMessage(_("I've got dance practice tonight \n:("))
         aubrey.messenger.addReply(_("I'm not talking tonight, I can pick you up right now."))
         aubrey.messenger.newMessage(_("Oh wow, that's spontaneous, I like it haha.\n\nI guess come to the Chicks' house whenever you're ready and then we can go costume shopping."))
@@ -68,12 +68,12 @@ init python:
 
     def v2_reply13():
         setattr(store, "costumeaubrey", True)
-        add_point(Reputations.BOYFRIEND)
+        reputation.add_point(Reputations.BOYFRIEND)
         aubrey.messenger.newMessage(_("Good :)"))
 
     def v2_reply14():
         setattr(store, "costumeaubrey", False)
-        add_point(Reputations.TROUBLEMAKER)
+        reputation.add_point(Reputations.TROUBLEMAKER)
         aubrey.messenger.newMessage(_("Oh, okay. Guess we'll have to postpone the costume buying."))
 
 label v2start:

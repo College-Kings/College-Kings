@@ -6,7 +6,7 @@
 
 init python:
     def v8s34_reply1():
-        add_point(Reputations.BOYFRIEND)
+        reputation.add_point(Reputations.BOYFRIEND)
         chloe.messenger.newMessage(_("I bet you were"))
         chloe.messenger.addReply(_("I miss them"))
         chloe.messenger.newMessage(_("I know... we should def try again"))
@@ -34,7 +34,7 @@ init python:
 
     def v8s34_reply5():
         setattr(store, "chloeSteakHouse", True)
-        add_point(Reputations.BOYFRIEND)
+        reputation.add_point(Reputations.BOYFRIEND)
         chloe.messenger.newMessage(_("Um... how's now? ;)"))
         chloe.messenger.addReply(_("Now's perfect! Should I cum to your place or you wanna cum here? ;)"))
         chloe.messenger.newMessage(_("I was thinking more along the lines of food. I'm hungry!"))
@@ -44,7 +44,7 @@ init python:
 
     def v8s34_reply6():
         setattr(store, "chloeSteakHouse", True)
-        add_point(Reputations.BOYFRIEND)
+        reputation.add_point(Reputations.BOYFRIEND)
         chloe.messenger.newMessage(_("..."))
         chloe.messenger.addReply(_("As friends"))
         chloe.messenger.newMessage(_("Ok, yeah. I'm actually starving!"))

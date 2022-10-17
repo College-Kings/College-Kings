@@ -1,31 +1,31 @@
 init python:
     def v6_reply1():
-        add_point(Reputations.BRO)
+        reputation.add_point(Reputations.BRO)
         amber.messenger.newMessage(_("I'm playing drink or dare and got dared to send an underwear pic to a guy."))
         amber.messenger.addReply(_("And you chose me, huh?"), v6_reply2)
         amber.messenger.addReply(_("Feel free to do so anytime :)"), v6_reply3)
 
     def v6_reply2():
-        add_point(Reputations.BRO)
+        reputation.add_point(Reputations.BRO)
         amber.messenger.newMessage(_("Maybe I picked someone at random ;)"))
 
     def v6_reply3():
-        add_point(Reputations.BOYFRIEND)
+        reputation.add_point(Reputations.BOYFRIEND)
         amber.messenger.newMessage(_("Maybe if you're lucky xx"))
 
     def v6_reply4():
-        add_point(Reputations.BOYFRIEND)
+        reputation.add_point(Reputations.BOYFRIEND)
         amber.messenger.newMessage(_("I'm glad you like it xx"))
         amber.messenger.addReply(_( "I hope there's more of that in the future :P"))
         amber.messenger.newMessage(_("Maybe if you're lucky xx"))
 
     def v6_reply5():
-        add_point(Reputations.TROUBLEMAKER)
-        add_point(Reputations.BRO)
+        reputation.add_point(Reputations.TROUBLEMAKER)
+        reputation.add_point(Reputations.BRO)
         amber.messenger.newMessage(_("Moment's passed..."))
 
     def v6_reply6():
-        add_point(Reputations.BOYFRIEND)
+        reputation.add_point(Reputations.BOYFRIEND)
         amber.messenger.newMessage(_("You better xx"))
 
     def v6_reply7():
@@ -39,7 +39,7 @@ init python:
         amber.messenger.newMessage(_("Yeah maybe we should xx"))
 
     def v6_reply10():
-        add_point(Reputations.BOYFRIEND)
+        reputation.add_point(Reputations.BOYFRIEND)
         setattr(store, "homrworkout", False)
 
     def v6_reply11():
