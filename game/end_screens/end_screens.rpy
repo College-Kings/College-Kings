@@ -1,4 +1,4 @@
-screen end_screen():
+screen end_screen(support_link="https://store.steampowered.com/app/1924480/College_Kings_2__Episode_1/"):
     tag end_screen
     modal True
     style_prefix "end_screen"
