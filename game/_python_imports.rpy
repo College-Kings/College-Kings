@@ -1,9 +1,13 @@
 python early:
+    import datetime
+    import math
     import os
+    import re
+    import requests
     from abc import ABC, abstractmethod
     from dataclasses import dataclass
     from enum import Enum
-    from typing import Any, Callable, Optional, Union
+    from typing import Any, Callable, ClassVar, Optional, Union
 
 
     class SmartEnum(Enum):

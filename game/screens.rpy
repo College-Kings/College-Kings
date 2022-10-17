@@ -210,7 +210,7 @@ screen choice(items, seconds=3, fail_label=None):
     style_prefix "choice"
     # Show KCT
     if showkct and len(items) > 1:
-        use kct_choice_hint
+        use reputation_choice_hint
     
     hbox:
         xalign 0.5

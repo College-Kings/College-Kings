@@ -4,6 +4,7 @@ python early:
         "bugTesting/bugTesting_typoNotes.rpy",
         "bugTesting/bugTesting_cheats.rpy",
         "bugTesting/styles.rpy",
+        "main_menu/path_builder/path_builder_setup.rpy",
         "phone/applications.rpy",
         "phone/phonescript.rpy",
         "phone/phone_msg.rpy",
@@ -11,6 +12,7 @@ python early:
         "phone/phoneStyle.rpy",
         "sceneGallery/sceneGallery.rpy",
         "v14/chicks_presidency_race/planning_board.rpy",
+        "before_main_menu.rpy",
         "customCharacters.rpy",
         "customLabels.rpy",
         "customATL.rpy",
@@ -23,7 +25,7 @@ python early:
         "sex_overlay.rpy",
         "after_load.rpy",
         "items.rpy",
-        "setup.rpy",
+        "kct.rpy",
     }
 
     restart_game = False # NEVER CHANGE
@@ -332,6 +334,10 @@ label after_load:
                 Reputations.BOYFRIEND: boyfriend,
                 Reputations.TROUBLEMAKER: troublemaker,
             }
+        except NameError: pass
+
+        try:
+            locked_reputation = locked_kct
         except NameError: pass
 
         ## PHONE

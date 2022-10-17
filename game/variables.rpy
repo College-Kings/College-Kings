@@ -37,17 +37,17 @@ default enemyhealth = 0
 default previous_location = ""
 
     ## Path Builder
-default pb_kct_notification = False
+default pb_reputation_notification = False
 default path_builder = False
 default pb_name_set = False
-default pb_kct_shown = False
+default pb_reputation_shown = False
 
     # Voice Acting
 default voice_acted = True
 
 # KCT
 default reputation = Reputation()
-default locked_kct = False
+default locked_reputation = False
 
 # Scenes
 default sceneList = set()
