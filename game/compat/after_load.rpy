@@ -878,8 +878,14 @@ label after_load:
         try:
             if chlorers: chloers = True
         except NameError: pass
+        
         try: kiwiiPost1
-        except NameError: kiwii_firstTime = False
+        except NameError: kiwii_first_time = False
+
+        try:
+            kiwii_first_time = kiwii_firstTime
+            del kiwii_firstTime
+        except NameError: pass
 
         try:
             if v13s40fromgame: sceneList.add("v13_chloe")
@@ -1113,9 +1119,6 @@ label after_load:
         except NameError: v13_aubrey_vote = "na"
         try: v14_ryan_satin
         except NameError: v14_ryan_satin = False
-
-        try: kiwii_first_time = kiwii_firstTime
-        except NameError: pass
 
         setup()
 

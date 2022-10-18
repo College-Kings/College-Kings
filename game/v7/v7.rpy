@@ -64,7 +64,7 @@ init python:
             lauren.messenger.newMessage(_("Fine. I'm in my dorm, we can talk now."))
 
     def v7_msgReply7():
-        setattr(store, "kiwii_firstTime", True)
+        setattr(store, "kiwii_first_time", True)
 
 label start7: #for compatibility only
 label v7start:
@@ -1393,7 +1393,7 @@ label conyourdorm:
                 u "(I need to respond to some of these messages.)"
                 jump phoneam
 
-            if kiwii_firstTime:
+            if kiwii_first_time:
                 u "(I should check out what Emily posted on Kiwii.)"
                 jump phoneam
 
