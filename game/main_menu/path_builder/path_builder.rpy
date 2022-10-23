@@ -288,137 +288,22 @@ screen path_builder_advanced_settings():
                     text _("Invite Emily to Europe"):
                         yoffset -7
 
-            if renpy.loadable("v11/scene1.rpy"):
-                hbox:
-                    spacing 20
-                    
-                    imagebutton:
-                        idle image_path + "pb_tick.webp"
-                        hover image_path + "pb_ticked.webp"
-                        selected_idle image_path + "pb_ticked.webp"
-                        action ToggleVariable("v11s1_courtpoints", 100, 0)
-
-                    text _("Win Penelope's court case"):
-                        yoffset -7
-
-            if renpy.loadable("v14/scene1.rpy"):
-                hbox:
-                    spacing 20
-                    
-                    imagebutton:
-                        idle image_path + "pb_tick.webp"
-                        hover image_path + "pb_ticked.webp"
-                        selected_idle image_path + "pb_ticked.webp"
-                        action ToggleVariable("v14_help_chloe")
-
-                    text _("Help Chloe's Campaign"):
-                        yoffset -7
+            hbox:
+                spacing 20
                 
-                hbox:
-                    spacing 20
-                    
-                    imagebutton:
-                        idle image_path + "pb_tick.webp"
-                        hover image_path + "pb_ticked.webp"
-                        selected_idle image_path + "pb_ticked.webp"
-                        action ToggleVariable("v14_help_lindsey")
+                imagebutton:
+                    idle image_path + "pb_tick.webp"
+                    hover image_path + "pb_ticked.webp"
+                    selected_idle image_path + "pb_ticked.webp"
+                    action ToggleField(lauren, "relationship", Relationship.KISS, Relationship.FRIEND)
 
-                    text _("Help Lindsey's Campaign"):
-                        yoffset -7
-
-                hbox:
-                    spacing 20
-                    
-                    imagebutton:
-                        idle image_path + "pb_tick.webp"
-                        hover image_path + "pb_ticked.webp"
-                        selected_idle image_path + "pb_ticked.webp"
-                        action ToggleVariable("v14_SamanthaDrugs", False, True)
-
-                    text _("Encourage Sam to get clean"):
-                        yoffset -7
-
-                hbox:
-                    spacing 20
-                    
-                    imagebutton:
-                        idle image_path + "pb_tick.webp"
-                        hover image_path + "pb_ticked.webp"
-                        selected_idle image_path + "pb_ticked.webp"
-                        action ToggleVariable("v14_amber_clean")
-
-                    text _("Encourage Amber to get clean"):
-                        yoffset -7
-
-                hbox:
-                    spacing 20
-                    
-                    imagebutton:
-                        idle image_path + "pb_tick.webp"
-                        hover image_path + "pb_ticked.webp"
-                        selected_idle image_path + "pb_ticked.webp"
-                        action ToggleVariable("v14_emily_ily")
-
-                    text _("Tell Emily you love her"):
-                        yoffset -7
-
-                hbox:
-                    spacing 20
-                    
-                    imagebutton:
-                        idle image_path + "pb_tick.webp"
-                        hover image_path + "pb_ticked.webp"
-                        selected_idle image_path + "pb_ticked.webp"
-                        action ToggleVariable("AutumnTrust")
-
-                    text _("Autumn trusts you"):
-                        yoffset -7
-
-                hbox:
-                    spacing 20
-                    
-                    imagebutton:
-                        idle image_path + "pb_tick.webp"
-                        hover image_path + "pb_ticked.webp"
-                        selected_idle image_path + "pb_ticked.webp"
-                        selected "v14_threesome" in sceneList
-                        if "v14_threesome" in sceneList:
-                            action RemoveFromSet(sceneList, "v14_threesome")
-                        else:
-                            action AddToSet(sceneList, "v14_threesome")
-
-                    text _("Had Riley & Aubrey Threesome"):
-                        yoffset -7
-                        
-                hbox:
-                    spacing 20
-                    
-                    imagebutton:
-                        idle image_path + "pb_tick.webp"
-                        hover image_path + "pb_ticked.webp"
-                        selected_idle image_path + "pb_ticked.webp"
-                        action ToggleField(lauren, "relationship", Relationship.KISS, Relationship.FRIEND)
-
-                    text _("Kissed Lauren"):
-                        yoffset -7
+                text _("Kissed Lauren"):
+                    yoffset -7
 
         vbox:
             spacing 20
 
             text _("Gameplay Changes") color "#FFD166" size 50
-
-            if renpy.loadable("v14/scene1.rpy"):            
-                hbox:
-                    spacing 20
-                    
-                    imagebutton:
-                        idle image_path + "pb_tick.webp"
-                        hover image_path + "pb_ticked.webp"
-                        selected_idle image_path + "pb_ticked.webp"
-                        action [ToggleVariable("lindsey_board.money", 10000, 200), ToggleVariable("chloe_board.money", 10000, 1500)]
-
-                    text _("Unlimited Presidency Campaign Budget"):
-                        yoffset -7
 
             hbox:
                 spacing 20
