@@ -184,7 +184,7 @@ label v11_chloe_hotel_room_amber_call:
         scene v11hrc11a
         with dissolve
 
-        cl "\"Such a beautiful couple\", that guy was so sweet to us. He thought hhe had a sale though, now I feel bad..."
+        cl "\"Such a beautiful couple\", that guy was so sweet to us. He thought he had a sale though, now I feel bad..."
 
         scene v11hrc11
         with dissolve
