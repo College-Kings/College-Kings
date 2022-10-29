@@ -4,6 +4,7 @@ python early:
         "bugTesting/bugTesting_typoNotes.rpy",
         "bugTesting/bugTesting_cheats.rpy",
         "bugTesting/styles.rpy",
+        "fights/fight_labels.rpy",
         "main_menu/path_builder/path_builder_setup.rpy",
         "phone/applications.rpy",
         "phone/phonescript.rpy",
