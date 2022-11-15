@@ -98,6 +98,7 @@ default askfinn = False
 default bowling = False
 default v2_caughtpeeking = False
 default v2_caughtpeekingcounter = False
+default v4_skip_josh_party = False
 default checkonrose = False
 default chloecaught = False
 default chooseimre = True
