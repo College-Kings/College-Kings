@@ -23,6 +23,7 @@ init python:
         josh.messenger.newMessage(_("Come by 995 Sereno Drive at 8, it's my friends house."))
 
     def v4_reply5():
+        setattr(store, "v4_skip_josh_party", True)
         reputation.add_point(Reputations.BOYFRIEND)
         josh.messenger.newMessage(_("This guy"))
 
@@ -2169,7 +2170,7 @@ label continueab:
             u "(I should probably reply to my messages.)"
             jump phonew
 
-    if len(josh.messenger.sent_messages) >= 2 and josh.messenger.sent_messages[-2].reply and josh.messenger.sent_messages[-2].reply.message == "I can't, sorry.":
+    if v4_skip_josh_party:
         u "(Fucking hell, I forgot how persistent Josh could be...)"
         jump jorepb
 
