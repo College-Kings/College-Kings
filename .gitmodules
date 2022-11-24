@@ -4,3 +4,6 @@
 [submodule "game/phone"]
 	path = game/phone
 	url = https://github.com/College-Kings/college-kings-phone.git
+[submodule "game/images"]
+	path = game/images
+	url = https://github.com/College-Kings/college-kings-images.git
