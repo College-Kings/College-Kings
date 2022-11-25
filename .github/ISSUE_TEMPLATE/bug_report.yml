@@ -9,46 +9,70 @@ body:
     attributes:
       value: |
         Thanks for taking the time to fill out this bug report!
-  - type: textarea
-    id: what-happened
-    attributes:
-      label: What happened?
-      description: Also tell us, what did you expect to happen?
-      placeholder: Tell us what you see!
-      value: "A bug happened!"
-    validations:
-      required: true
-  - type: dropdown
-    id: version
-    attributes:
-      label: Version
-      description: What version of our software are you running?
-      options:
-        - 1.0.2 (Default)
-        - 1.0.3 (Edge)
-    validations:
-      required: true
-  - type: dropdown
-    id: browsers
-    attributes:
-      label: What browsers are you seeing the problem on?
-      multiple: true
-      options:
-        - Firefox
-        - Chrome
-        - Safari
-        - Microsoft Edge
-  - type: textarea
-    id: logs
-    attributes:
-      label: Relevant log output
-      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
-      render: shell
   - type: checkboxes
-    id: terms
+    id: new-bug
     attributes:
-      label: Code of Conduct
-      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com)
+      label: Is there an existing issue for this?
+      description: Please search under [Issues](https://github.com/College-Kings/College-Kings-2/issues) to see if an issue already exists for the bug you are about to report.
       options:
-        - label: I agree to follow this project's Code of Conduct
+        - label: I have searched the existing issues
           required: true
+  - type: textarea
+    id: scene-id
+    attributes:
+      label: Scene number
+      description: ~NEEDS DESC~
+    validations:
+      required: true
+  # - type: textarea
+  #   id: bug-desription
+  #   attributes:
+  #     label: Bug Description
+  #     description: A clear and concise description of what the bug is.
+  #     placeholder: ""
+  #   validations:
+  #     required: true
+  # - type: textarea
+  #   id: expected-behaviour
+  #   attributes:
+  #     label: Expected behaviour
+  #     description: A clear and concise description of what you expected to happen.
+  #     placeholder: ""
+  #   validations:
+  #     required: true
+  # - type: textarea
+  #   id: environment
+  #   attributes:
+  #     label: Environment
+  #     description: |
+  #       examples:
+  #         - **OS**: Windows 10
+  #         - **Version**: 7.6.4
+  #     value: |
+  #       - OS:
+  #       - Version:
+  #     render: Markdown
+  #   validations:
+  #     required: true
+  # - type: textarea
+  #   id: additional-info
+  #   attributes:
+  #     label: Additional context
+  #     description: Add any other context about the problem here.
+  #     placeholder: ""
+  #   validations:
+  #     required: false
+  # - type: dropdown
+  #   id: versions
+  #   attributes:
+  #     label: Which version of the app are you using?
+  #     description: If this issue is occurring on more than 1 version of the app, select the appropriate versions.
+  #     multiple: true
+  #     options:
+  #       - 1.0.0
+  #       - 1.1.0
+  #       - 1.2.0
+  #       - 2.0.0
+  #       - 2.1.0
+  #   validations:
+  #     required: true
