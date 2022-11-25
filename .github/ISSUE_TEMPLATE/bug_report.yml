@@ -24,14 +24,14 @@ body:
       description: ~NEEDS DESC~
     validations:
       required: true
-  # - type: textarea
-  #   id: bug-desription
-  #   attributes:
-  #     label: Bug Description
-  #     description: A clear and concise description of what the bug is.
-  #     placeholder: ""
-  #   validations:
-  #     required: true
+  - type: textarea
+    id: bug-desription
+    attributes:
+      label: Bug Description
+      description: A clear and concise description of what the bug is.
+      placeholder: ""
+    validations:
+      required: true
   # - type: textarea
   #   id: expected-behaviour
   #   attributes:
