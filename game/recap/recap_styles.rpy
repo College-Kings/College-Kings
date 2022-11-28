@@ -1,2 +1,0 @@
-style recap_text is effra_regular_23
-style recap_button_text is bebas_neue_30
