@@ -7,3 +7,6 @@
 [submodule "game/images"]
 	path = game/images
 	url = https://github.com/College-Kings/college-kings-images.git
+[submodule "game/recap"]
+	path = game/recap
+	url = https://github.com/College-Kings/college-kings-recap.git
