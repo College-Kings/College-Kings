@@ -16152,12 +16152,12 @@ label fr4chloe2:
 
 label fr4chloe3:
     if not hcGirl == "penelope":
-        if fr4chloe and preventgrayson:
+        if "chloe" in freeroam4 and preventgrayson:
             scene fr4hallwaychloe
         else:
             scene fr4hallway
     else:
-        if fr4chloe and preventgrayson:
+        if "chloe" in freeroam4 and preventgrayson:
             scene fr4hallwaynopenelopechloe
         else:
             scene fr4hallwaynopenelope
