@@ -188,7 +188,7 @@ style nsfw_italic_text is text:
     font "fonts/Montserrat-MediumItalic.ttf"
 
 
-screen timerBar(seconds=3):
+screen timer_bar(seconds=3):
     bar value AnimatedValue(0, seconds, seconds, seconds) at alpha_dissolve
 
 
@@ -318,10 +318,6 @@ screen sex_overlay(continue_label):
 
     if config_debug:
         timer 0.1 repeat True action SetField(config, "skipping", "slow")
-
-
-screen timerBar(seconds=3):
-    bar value AnimatedValue(0, seconds, seconds, seconds) at alpha_dissolve
     
 
 screen fantasy_overlay():

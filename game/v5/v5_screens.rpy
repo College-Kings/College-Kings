@@ -413,7 +413,7 @@ screen trolleyProblem(option1, option2):
         action Jump(option2)
 
     timer 3 action Jump(option1)
-    use timerBar
+    use timer_bar
 
     if config_debug:
         timer 0.1 action Jump(renpy.random.choice((option1, option2)))

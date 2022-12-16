@@ -205,33 +205,42 @@ style input_window is say_window
 ##
 ## https://www.renpy.org/doc/html/screen_special.html#choice
 
-
 screen choice(items, seconds=3, fail_label=None):
     style_prefix "choice"
+
+    default number_of_rows = math.ceil(len(items) / 3)
+
     # Show KCT
     if showkct and len(items) > 1:
         use reputation_choice_hint
-    
-    hbox:
-        xalign 0.5
-        ypos 833
-        spacing 25
 
-        for item in items:
-            button:
-                idle_background "choice_button_idle"
-                hover_background "choice_button_hover"
-                action item.action
-                minimum (550, 131)
-                
-                text "[item.caption!uit]":
-                    align (0.5, 0.5)
+    vbox:
+        xfill True
+        yalign 1.0
+        yoffset -50
+
+        for i in range(number_of_rows):
+            hbox:
+                xalign 0.5
+                spacing 25
+
+                for j in range(min(3, len(items) - i * 3)):
+                    $ item = items[i*3 + j]
+                    
+                    button:
+                        idle_background "choice_button_idle"
+                        hover_background "choice_button_hover"
+                        action item.action
+                        padding (25, 35)
+                        minimum (550, 131)
+
+                        text "[item.caption!uit]" align (0.5, 0.5)
 
     if fail_label is not None:
         timer seconds:
             action Jump(fail_label)
 
-        use timerBar(seconds)
+        use timer_bar(seconds)
 
     if config_debug:
         $ item = renpy.random.choice(items)
@@ -243,12 +252,16 @@ screen choice(items, seconds=3, fail_label=None):
     on "replace" action Hide("phone_icon")
     on "replaced" action Show("phone_icon")
 
-style choice_text is bebas_neue_30:
-    properties gui.button_text_properties("choice_button")
+style choice_text is bebas_neue_30
 
 ## When this is true, menu captions will be spoken by the narrator. When false,
 ## menu captions will be displayed as empty buttons.
 define config.narrator_menu = True
+
+
+style choice_vbox is vbox
+style choice_button is button
+style choice_button_text is button_text
 
 
 ## Quick Menu screen ###########################################################
