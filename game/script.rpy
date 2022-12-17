@@ -16,7 +16,6 @@ define _quit_slot = "99-1"
 
 # The game starts here.
 label start:
-    
     $ setup()
 
     call screen real_life_mode
@@ -25,5 +24,10 @@ label start:
 label game_end:
     stop music fadeout 3
     play music "music/vocal.mp3"
+
+    scene save_now
+    with dissolve
+
+    ""
 
     call screen end_screen
