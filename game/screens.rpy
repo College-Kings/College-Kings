@@ -361,8 +361,11 @@ screen main_menu():
     tag menu
     style_prefix "main_menu"
 
+    python:
+        with open(os.path.join(config.gamedir, "whats_new", "whats-new.txt"), "r") as f:
+            what_new_content = f.read()
+
     default image_path = "gui/main_menu/"
-    default whats_new_text = get_file_contents(os.path.join(config.basedir, "game", "whats-new.txt"))
 
     add image_path + "background.webp"
 
@@ -424,7 +427,7 @@ screen main_menu():
         imagebutton:
             idle image_path + "whats-new-idle.webp"
             hover image_path + "whats-new-hover.webp"
-            action Show("whats_new", dialogue=whats_new_text)
+            action Show("whats_new")
             yalign 0.5
 
         # LEARN MORE
@@ -452,8 +455,8 @@ screen main_menu():
 
     text "v" + config.version.split(" ")[0] align (1.0, 1.0) xoffset -20 color "#4e628f" size 30
 
-    if whats_new_text != persistent.previous_whats_new:
-        on "show" action Show("whats_new", dialogue=whats_new_text)
+    if not config_debug and not what_new_content == persistent.previous_whats_new:
+        on "show" action Show("whats_new")
 
     if config_debug:
         timer 0.1 action Start()

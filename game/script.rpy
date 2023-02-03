@@ -1,6 +1,5 @@
 define config.enable_steam = True
 define config.console = True
-define config.developer = False
 define config_debug = False # Automatic Testing
 define config_censored = False
 
@@ -25,8 +24,8 @@ label game_end:
     stop music fadeout 3
     play music "music/vocal.mp3"
 
-    scene save_now
-    with dissolve
+    # scene save_now
+    # with dissolve
 
     ""
 

@@ -10,3 +10,6 @@
 [submodule "game/recap"]
 	path = game/recap
 	url = https://github.com/College-Kings/college-kings-recap.git
+[submodule "game/whats_new"]
+	path = game/whats_new
+	url = https://github.com/College-Kings/college-kings-whats-new.git

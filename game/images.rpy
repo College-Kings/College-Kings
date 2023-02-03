@@ -23,7 +23,7 @@ image choice_button_idle = Frame("gui/choice/button_idle.webp", 40, 8)
 image choice_button_hover = Frame("gui/choice/button_hover.webp", 40, 8)
 
 ## End Screen
-image save_now = ""
+# image save_now = ""
 image patreon_credits = Movie(channel="movie", play="gui/end_screen/patreon_credits.webm")
 
 ## KCT Choice Hint
