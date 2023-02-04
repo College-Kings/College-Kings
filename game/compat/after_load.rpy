@@ -573,6 +573,9 @@ label after_load:
                 if mention == "Sebastian": temp_mentions.append(sebastian)
                 kiwii_post.mentions = temp_mentions
 
+            try: kiwii_post.number_likes
+            except AttributeError: kiwii_post.number_likes = kiwii_post.numberLikes
+
             try:
                 kiwii_post.image = kiwii_post.img
                 del kiwii_post.img
@@ -599,10 +602,8 @@ label after_load:
             try: kiwii_post.pendingComments
             except AttributeError: kiwii_post.pendingComments = []
 
-            try:
-                kiwii_post.pending_comments = kiwii_post.pendingComments
-                del kiwii_post.pendingComments
-            except AttributeError: pass
+            try: kiwii_post.pending_comments
+            except AttributeError: kiwii_post.pending_comments = kiwii_post.pendingComments
 
             if kiwii_post.image == "images/aupost1.png":
                 kiwii_post.image = "images/phone/kiwii/Posts/v7/aupost1.webp"
@@ -616,7 +617,7 @@ label after_load:
                 kiwii_post.image = "images/phone/kiwii/Posts/v7/lapost1.webp"
 
             ##### KIWII SENT COMMENTS
-            for comment in kiwii_post.sent_comments:
+            for comment in kiwii_post.sent_comments + kiwii_post.pending_comments:
                 if comment.user == "Aaron": comment.user = aaron
                 if comment.user == "Amber": comment.user = amber
                 if comment.user == "Aubrey": comment.user = aubrey
@@ -676,101 +677,8 @@ label after_load:
                     if mention == "Sebastian": temp_mentions.append(sebastian)
                     comment.mentions = temp_mentions
 
-                ###### KIWII COMMENT REPLIES
-                for reply in comment.replies:
-                    reply.disabled = False
-
-                    for mention in reply.mentions:
-                        temp_mentions = []
-                        if mention == "Aaron": temp_mentions.append(aaron)
-                        if mention == "Amber": temp_mentions.append(amber)
-                        if mention == "Aubrey": temp_mentions.append(aubrey)
-                        if mention == "Autumn": temp_mentions.append(autumn)
-                        if mention == "Caleb": temp_mentions.append(caleb)
-                        if mention == "Cameron": temp_mentions.append(cameron)
-                        if mention == "Charli": temp_mentions.append(charli)
-                        if mention == "Chloe": temp_mentions.append(chloe)
-                        if mention == "Chris": temp_mentions.append(chris)
-                        if mention == "Elijah": temp_mentions.append(elijah)
-                        if mention == "Emily": temp_mentions.append(emily)
-                        if mention == "Grayson": temp_mentions.append(grayson)
-                        if mention == "Imre": temp_mentions.append(imre)
-                        if mention == "Josh": temp_mentions.append(josh)
-                        if mention == "Lauren": temp_mentions.append(lauren)
-                        if mention == "LewsOfficial": temp_mentions.append(lews_official)
-                        if mention == "Lindsey": temp_mentions.append(lindsey)
-                        if mention == "Mason": temp_mentions.append(mason)
-                        if mention == "MC": temp_mentions.append(mc)
-                        if mention == "Naomi": temp_mentions.append(naomi)
-                        if mention == "Nora": temp_mentions.append(nora)
-                        if mention == "Parker": temp_mentions.append(parker)
-                        if mention == "Penelope": temp_mentions.append(penelope)
-                        if mention == "Riley": temp_mentions.append(riley)
-                        if mention == "Ryan": temp_mentions.append(ryan)
-                        if mention == "Samantha": temp_mentions.append(samantha)
-                        if mention == "Sebastian": temp_mentions.append(sebastian)
-                        reply.mentions = temp_mentions
-
-            ##### KIWII PENDING COMMENTS
-            for comment in kiwii_post.pending_comments:
-                if comment.user == "Aaron": comment.user = aaron
-                if comment.user == "Amber": comment.user = amber
-                if comment.user == "Aubrey": comment.user = aubrey
-                if comment.user == "Autumn": comment.user = autumn
-                if comment.user == "Caleb": comment.user = caleb
-                if comment.user == "Cameron": comment.user = cameron
-                if comment.user == "Charli": comment.user = charli
-                if comment.user == "Chloe": comment.user = chloe
-                if comment.user == "Chris": comment.user = chris
-                if comment.user == "Elijah": comment.user = elijah
-                if comment.user == "Emily": comment.user = emily
-                if comment.user == "Grayson": comment.user = grayson
-                if comment.user == "Imre": comment.user = imre
-                if comment.user == "Josh": comment.user = josh
-                if comment.user == "Lauren": comment.user = lauren
-                if comment.user == "LewsOfficial": comment.user = lews_official
-                if comment.user == "Lindsey": comment.user = lindsey
-                if comment.user == "Mason": comment.user = mason
-                if comment.user == "MC": comment.user = mc
-                if comment.user == "Naomi": comment.user = naomi
-                if comment.user == "Nora": comment.user = nora
-                if comment.user == "Parker": comment.user = parker
-                if comment.user == "Penelope": comment.user = penelope
-                if comment.user == "Riley": comment.user = riley
-                if comment.user == "Ryan": comment.user = ryan
-                if comment.user == "Samantha": comment.user = samantha
-                if comment.user == "Sebastian": comment.user = sebastian
-
-                for mention in comment.mentions:
-                    temp_mentions = []
-                    if mention == "Aaron": temp_mentions.append(aaron)
-                    if mention == "Amber": temp_mentions.append(amber)
-                    if mention == "Aubrey": temp_mentions.append(aubrey)
-                    if mention == "Autumn": temp_mentions.append(autumn)
-                    if mention == "Caleb": temp_mentions.append(caleb)
-                    if mention == "Cameron": temp_mentions.append(cameron)
-                    if mention == "Charli": temp_mentions.append(charli)
-                    if mention == "Chloe": temp_mentions.append(chloe)
-                    if mention == "Chris": temp_mentions.append(chris)
-                    if mention == "Elijah": temp_mentions.append(elijah)
-                    if mention == "Emily": temp_mentions.append(emily)
-                    if mention == "Grayson": temp_mentions.append(grayson)
-                    if mention == "Imre": temp_mentions.append(imre)
-                    if mention == "Josh": temp_mentions.append(josh)
-                    if mention == "Lauren": temp_mentions.append(lauren)
-                    if mention == "LewsOfficial": temp_mentions.append(lews_official)
-                    if mention == "Lindsey": temp_mentions.append(lindsey)
-                    if mention == "Mason": temp_mentions.append(mason)
-                    if mention == "MC": temp_mentions.append(mc)
-                    if mention == "Naomi": temp_mentions.append(naomi)
-                    if mention == "Nora": temp_mentions.append(nora)
-                    if mention == "Parker": temp_mentions.append(parker)
-                    if mention == "Penelope": temp_mentions.append(penelope)
-                    if mention == "Riley": temp_mentions.append(riley)
-                    if mention == "Ryan": temp_mentions.append(ryan)
-                    if mention == "Samantha": temp_mentions.append(samantha)
-                    if mention == "Sebastian": temp_mentions.append(sebastian)
-                    comment.mentions = temp_mentions
+                try: comment.number_likes
+                except AttributeError: comment.number_likes = comment.numberLikes
 
                 ###### KIWII COMMENT REPLIES
                 for reply in comment.replies:
@@ -806,6 +714,9 @@ label after_load:
                         if mention == "Samantha": temp_mentions.append(samantha)
                         if mention == "Sebastian": temp_mentions.append(sebastian)
                         reply.mentions = temp_mentions
+
+                    try: reply.number_likes
+                    except AttributeError: reply.number_likes = reply.numberLikes
 
         kiwii_posts = [kiwii_post for kiwii_post in kiwii_posts if hasattr(kiwii_post.user, "name")]
 
