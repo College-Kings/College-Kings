@@ -4,13 +4,13 @@
 # Time: Evening
 
 label v11_big_ben:
-    $ v11s24_kiwiiPost1 = KiwiiPost(sebastian, "phone/kiwii/Posts/v11/v11_caleb.webp", _("Who's laughing now!"), numberLikes=374)
-    $ v11s24_kiwiiPost1.newComment(chris, _("Someone's gonna be upset in the morning!"), numberLikes=renpy.random.randint(100, 200))
-    $ v11s24_kiwiiPost1.newComment(nora, _("Sebastian that's cruel!!"), numberLikes=renpy.random.randint(100, 200))
+    $ v11s24_kiwiiPost1 = KiwiiPost(sebastian, "phone/kiwii/Posts/v11/v11_caleb.webp", _("Who's laughing now!"), number_likes=374)
+    $ v11s24_kiwiiPost1.newComment(chris, _("Someone's gonna be upset in the morning!"), number_likes=renpy.random.randint(100, 200))
+    $ v11s24_kiwiiPost1.newComment(nora, _("Sebastian that's cruel!!"), number_likes=renpy.random.randint(100, 200))
 
-    $ v11s24_kiwiiPost2 = KiwiiPost(imre, "phone/kiwii/Posts/v11/v11_imrebunny.webp", _("Say hello to our newest Wolf recruit"), numberLikes=306)
-    $ v11s24_kiwiiPost2.newComment(aubrey, _("Awww cute!!"), numberLikes=renpy.random.randint(100, 200))
-    $ v11s24_kiwiiPost2.newComment(nora, _("That thing stinks!"), numberLikes=renpy.random.randint(100, 200))
+    $ v11s24_kiwiiPost2 = KiwiiPost(imre, "phone/kiwii/Posts/v11/v11_imrebunny.webp", _("Say hello to our newest Wolf recruit"), number_likes=306)
+    $ v11s24_kiwiiPost2.newComment(aubrey, _("Awww cute!!"), number_likes=renpy.random.randint(100, 200))
+    $ v11s24_kiwiiPost2.newComment(nora, _("That thing stinks!"), number_likes=renpy.random.randint(100, 200))
 
     scene v11bb1 # FPP Show Nora, neutral expression, mouth closed
     with dissolve

@@ -522,9 +522,9 @@ label v12_chase_robber:
 
     pause 0.75
 
-    $ v12s1a_kiwiiPost1 = KiwiiPost(imre, "phone/kiwii/Posts/v12/impost1.webp", _("Would your man chase a robber down in the middle of the night? If not, you don't have a real man..."), numberLikes=216)
-    $ v12s1a_kiwiiPost1.newComment(charli, _("If you want a man Imre I can take you to a few bars... All you had to do was ask."), numberLikes=14)
-    $ v12s1a_kiwiiPost1.newComment(ryan, _("LMAO"), numberLikes=1, mentions=[imre])
+    $ v12s1a_kiwiiPost1 = KiwiiPost(imre, "phone/kiwii/Posts/v12/impost1.webp", _("Would your man chase a robber down in the middle of the night? If not, you don't have a real man..."), number_likes=216)
+    $ v12s1a_kiwiiPost1.newComment(charli, _("If you want a man Imre I can take you to a few bars... All you had to do was ask."), number_likes=14)
+    $ v12s1a_kiwiiPost1.newComment(ryan, _("LMAO"), number_likes=1, mentions=[imre])
 
     $ imre.messenger.newMessage("Check Kiwii... you're welcome. :)", force_send=True)
     $ imre.messenger.addReply("Haha okay", func=None)

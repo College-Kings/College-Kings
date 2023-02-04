@@ -330,13 +330,13 @@ label v12_slumber_party:
 
     au "*Laughs* Let's have fun, guys."
 
-    $ v12s18_kiwiiPost1 = KiwiiPost(lindsey, "phone/kiwii/Posts/v12/lindsey_aubrey_pjs.webp", _("Couldn't have asked for a better night... <3"), numberLikes=571) # Lindsey Selfie with Aubrey in pajamas
-    $ v12s18_kiwiiPost1.newComment(aubrey, _("You're so welcome boo... Girls night again ASAP!"), mentions=[lindsey], numberLikes=renpy.random.randint(250,350))
-    $ v12s18_kiwiiPost1.newComment(imre, _("Even more beautiful in person, ladies..."), mentions=[lindsey], numberLikes=renpy.random.randint(150,300))
-    $ v12s18_kiwiiPost1.newComment(chloe, _("Yesss! We have to do this again."), mentions=[aubrey], numberLikes=renpy.random.randint(250,400))
-    $ v12s18_kiwiiPost1.addReply(_("Just say when and where! Had a lot of fun :)"), mentions=[aubrey], numberLikes=renpy.random.randint(250, 330))
-    $ v12s18_kiwiiPost1.addReply(_("You deserve the best! Glad you enjoyed it ;)"), mentions=[lindsey], numberLikes=renpy.random.randint(250, 330))
-    $ v12s18_kiwiiPost1.newComment(lindsey, _("Haha, thank you guys <3"), numberLikes=renpy.random.randint(150,300))
+    $ v12s18_kiwiiPost1 = KiwiiPost(lindsey, "phone/kiwii/Posts/v12/lindsey_aubrey_pjs.webp", _("Couldn't have asked for a better night... <3"), number_likes=571) # Lindsey Selfie with Aubrey in pajamas
+    $ v12s18_kiwiiPost1.newComment(aubrey, _("You're so welcome boo... Girls night again ASAP!"), mentions=[lindsey], number_likes=renpy.random.randint(250,350))
+    $ v12s18_kiwiiPost1.newComment(imre, _("Even more beautiful in person, ladies..."), mentions=[lindsey], number_likes=renpy.random.randint(150,300))
+    $ v12s18_kiwiiPost1.newComment(chloe, _("Yesss! We have to do this again."), mentions=[aubrey], number_likes=renpy.random.randint(250,400))
+    $ v12s18_kiwiiPost1.addReply(_("Just say when and where! Had a lot of fun :)"), mentions=[aubrey], number_likes=renpy.random.randint(250, 330))
+    $ v12s18_kiwiiPost1.addReply(_("You deserve the best! Glad you enjoyed it ;)"), mentions=[lindsey], number_likes=renpy.random.randint(250, 330))
+    $ v12s18_kiwiiPost1.newComment(lindsey, _("Haha, thank you guys <3"), number_likes=renpy.random.randint(150,300))
     call screen v12s18_room1
 
 # -Start of free roam-
@@ -1700,10 +1700,10 @@ label v12s18_bet: # END OF FREE ROAM
     imre "*Drunk* I'm just scrolling through my Kiwii and-"
 
     if v11_overtake_points >= 2: # MC wins the race
-        $ v12s18_kiwiiPost2 = KiwiiPost(amber, "phone/kiwii/Posts/v12/amber_bet.webp", _("A bet is a bet..."), numberLikes=5) # Amber nude pic
+        $ v12s18_kiwiiPost2 = KiwiiPost(amber, "phone/kiwii/Posts/v12/amber_bet.webp", _("A bet is a bet..."), number_likes=5) # Amber nude pic
 
     else: # MC loses the race
-        $ v12s18_kiwiiPost3 = KiwiiPost(amber, "phone/kiwii/Posts/v12/mc_bet.webp", _("A bet is a bet..."), numberLikes=5) # MC nude pic
+        $ v12s18_kiwiiPost3 = KiwiiPost(amber, "phone/kiwii/Posts/v12/mc_bet.webp", _("A bet is a bet..."), number_likes=5) # MC nude pic
     
     scene v12slpbet7b # TPP. Same as v12slpbet7, Imre surprised, mouth open
     with dissolve

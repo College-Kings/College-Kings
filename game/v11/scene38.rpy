@@ -6,22 +6,22 @@
 init python:
     def v11s38_kiwiiReply1():
         reputation.add_point(Reputations.BOYFRIEND)
-        v11s38_kiwiiPost1.newComment(amber, _("Haha, thank you [name]"), numberLikes=138, mentions=[mc])
-        v11s38_kiwiiPost1.newComment(cameron, _("Fucking simp"), numberLikes=126, mentions=[mc])
+        v11s38_kiwiiPost1.newComment(amber, _("Haha, thank you [name]"), number_likes=138, mentions=[mc])
+        v11s38_kiwiiPost1.newComment(cameron, _("Fucking simp"), number_likes=126, mentions=[mc])
     
     def v11s38_kiwiiReply2():
         reputation.add_point(Reputations.BRO)
-        v11s38_kiwiiPost1.newComment(amber, _("You were busy somewhere else... ;)"), numberLikes=173)
+        v11s38_kiwiiPost1.newComment(amber, _("You were busy somewhere else... ;)"), number_likes=173)
 
 label v11_amber_bar:
 
-    $ v11s38_kiwiiPost1 = KiwiiPost(amber, "phone/kiwii/Posts/v11/v11s38_amber_kiwii.webp", _("Living the London life"), numberLikes=312) # Amber sitting at the bar with a drink in her hand, smiling at the camera, hers legs are crossed, sexy pose
-    $ v11s38_kiwiiPost1.newComment(lauren, _("So that's where you've been this entire trip! Beautiful as always"), numberLikes=renpy.random.randint(150,300))
-    $ v11s38_kiwiiPost1.newComment(riley, _("Hotttt! We need a girls night soon ;)"), numberLikes=renpy.random.randint(150,300))
-    $ v11s38_kiwiiPost1.newComment(caleb, _("Damn... looking good"), numberLikes=renpy.random.randint(150,300))
-    $ v11s38_kiwiiPost1.newComment(charli, _("I told you that outfit was made for you... absolutely stunning."), numberLikes=renpy.random.randint(150,300))
-    $ v11s38_kiwiiPost1.addReply(_("Woah! Hot as always"), v11s38_kiwiiReply1, numberLikes=renpy.random.randint(260, 340))
-    $ v11s38_kiwiiPost1.addReply(_("Thanks for the invite... lol"), v11s38_kiwiiReply2, numberLikes=renpy.random.randint(250, 330))
+    $ v11s38_kiwiiPost1 = KiwiiPost(amber, "phone/kiwii/Posts/v11/v11s38_amber_kiwii.webp", _("Living the London life"), number_likes=312) # Amber sitting at the bar with a drink in her hand, smiling at the camera, hers legs are crossed, sexy pose
+    $ v11s38_kiwiiPost1.newComment(lauren, _("So that's where you've been this entire trip! Beautiful as always"), number_likes=renpy.random.randint(150,300))
+    $ v11s38_kiwiiPost1.newComment(riley, _("Hotttt! We need a girls night soon ;)"), number_likes=renpy.random.randint(150,300))
+    $ v11s38_kiwiiPost1.newComment(caleb, _("Damn... looking good"), number_likes=renpy.random.randint(150,300))
+    $ v11s38_kiwiiPost1.newComment(charli, _("I told you that outfit was made for you... absolutely stunning."), number_likes=renpy.random.randint(150,300))
+    $ v11s38_kiwiiPost1.addReply(_("Woah! Hot as always"), v11s38_kiwiiReply1, number_likes=renpy.random.randint(260, 340))
+    $ v11s38_kiwiiPost1.addReply(_("Thanks for the invite... lol"), v11s38_kiwiiReply2, number_likes=renpy.random.randint(250, 330))
     play music "music/v11/Track Scene 3.mp3" fadein 2
     scene v11amb1 # TPP. Show MC walking in the lobby, he has a slight smile, mouth closed
     with dissolve

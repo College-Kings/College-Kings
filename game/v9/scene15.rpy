@@ -56,9 +56,9 @@ label v9_thur_room_w_cam_punch:
     with dissolve
     u "What? No. I've just been chilling. What's going on?"
 
-    $ v9s15KiwiiPost1 = KiwiiPost(grayson, "v9/Scene 12/v9hlw8c.webp", "That's my boy! Go [name]! Fuck yeah!", numberLikes=renpy.random.randint(100, 200))
-    $ v9s15KiwiiPost1.newComment(cameron, "Fuckin' A!", numberLikes=renpy.random.randint(100, 200))
-    $ v9s15KiwiiPost1.newComment(riley, "Knew he had it in him!", numberLikes=renpy.random.randint(200, 250))
+    $ v9s15KiwiiPost1 = KiwiiPost(grayson, "v9/Scene 12/v9hlw8c.webp", "That's my boy! Go [name]! Fuck yeah!", number_likes=renpy.random.randint(100, 200))
+    $ v9s15KiwiiPost1.newComment(cameron, "Fuckin' A!", number_likes=renpy.random.randint(100, 200))
+    $ v9s15KiwiiPost1.newComment(riley, "Knew he had it in him!", number_likes=renpy.random.randint(200, 250))
 
     call screen phone
 
@@ -251,9 +251,9 @@ label v9_thur_room_w_cam_no_punch:
     with dissolve
     sa "You better check it."
 
-    $ v9s15KiwiiPost2 = KiwiiPost(sebastian, "v9/Scene 12/v9hlw20.webp", "", numberLikes=renpy.random.randint(100, 200))
-    $ v9s15KiwiiPost2.newComment(chris, "Wow, hope he's OK!", numberLikes=renpy.random.randint(100, 200))
-    $ v9s15KiwiiPost2.newComment(cameron, "Ahhhh! Preview of Saturday's Freshman Brawl!", numberLikes=renpy.random.randint(150, 170))
+    $ v9s15KiwiiPost2 = KiwiiPost(sebastian, "v9/Scene 12/v9hlw20.webp", "", number_likes=renpy.random.randint(100, 200))
+    $ v9s15KiwiiPost2.newComment(chris, "Wow, hope he's OK!", number_likes=renpy.random.randint(100, 200))
+    $ v9s15KiwiiPost2.newComment(cameron, "Ahhhh! Preview of Saturday's Freshman Brawl!", number_likes=renpy.random.randint(150, 170))
 
     call screen phone
     
