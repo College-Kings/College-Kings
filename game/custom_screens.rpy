@@ -239,42 +239,6 @@ screen fightDamage():
     elif youDamage >= 5:
         add "images/5 hits.webp"
 
-
-screen whats_new(dialogue):
-    modal True
-    style_prefix "whats_new"
-
-    add "darker_80"
-
-    button action Hide("whats_new")
-
-    frame:
-        background Frame("gui/whats-new/background.webp")
-        xysize (500, 758)
-        align (0.5, 0.5)
-        padding (20, 20)
-
-        viewport:
-            mousewheel True
-            draggable True
-            align (0.5, 0.5)
-
-            vbox:
-                spacing 10
-                text _("What's New:") xalign 0.5 bold True
-                text dialogue size 18
-
-    textbutton _("Exit"):
-        action Hide("whats_new")
-        xpos 50
-        yalign 1.0
-        yoffset -50
-
-    on "hide" action SetVariable("persistent.previous_whats_new", dialogue)
-
-style whats_new_text is text
-
-
 screen sex_overlay(continue_label):
     default image_path = "images/custom-screens/sex-overlay/"
     default show_sex_overlay = False
