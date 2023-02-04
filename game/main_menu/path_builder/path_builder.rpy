@@ -274,19 +274,18 @@ screen path_builder_advanced_settings():
             spacing 20
 
             text "Extras" color "#FFD166" size 50
- 
-            if renpy.loadable("v10/scene1.rpy"):
-                hbox:
-                    spacing 20
-                    
-                    imagebutton:
-                        idle image_path + "pb_tick.webp"
-                        hover image_path + "pb_ticked.webp"
-                        selected_idle image_path + "pb_ticked.webp"
-                        action ToggleVariable("emily_europe")
 
-                    text _("Invite Emily to Europe"):
-                        yoffset -7
+            hbox:
+                spacing 20
+                
+                imagebutton:
+                    idle image_path + "pb_tick.webp"
+                    hover image_path + "pb_ticked.webp"
+                    selected_idle image_path + "pb_ticked.webp"
+                    action ToggleVariable("emily_europe")
+
+                text _("Invite Emily to Europe"):
+                    yoffset -7
 
             hbox:
                 spacing 20

@@ -892,31 +892,25 @@ screen preferences():
         hbox:
             spacing 6
 
-            if renpy.loadable("v14/scene1.rpy"):
-                fixed:
-                    xysize (137, 61)
+            fixed:
+                xysize (137, 61)
 
-                    imagebutton:
-                        idle "blue_button_idle"
-                        hover "blue_button_hover"
-                        selected_idle "blue_button_hover"
-                        action SetVariable("voice_acted", True)
-                    text "On" align (0.5, 0.5)
+                imagebutton:
+                    idle "blue_button_idle"
+                    hover "blue_button_hover"
+                    selected_idle "blue_button_hover"
+                    action SetVariable("voice_acted", True)
+                text "On" align (0.5, 0.5)
 
-                fixed:
-                    xysize (137, 61)
+            fixed:
+                xysize (137, 61)
 
-                    imagebutton:
-                        idle "blue_button_idle"
-                        hover "blue_button_hover"
-                        selected_idle "blue_button_hover"
-                        action SetVariable("voice_acted", False)
-                    text "Off" align (0.5, 0.5)
-            else:
-                fixed:
-                    xysize (280, 61)
-                    
-                    text "(from Act 4 only)" align (0.5, 0.5)
+                imagebutton:
+                    idle "blue_button_idle"
+                    hover "blue_button_hover"
+                    selected_idle "blue_button_hover"
+                    action SetVariable("voice_acted", False)
+                text "Off" align (0.5, 0.5)
 
         # SHOW KCT
         hbox:
