@@ -34,7 +34,7 @@ init python:
         chloe.messenger.addReply(_("Like? I love it! That just made my whole day better."))
         chloe.messenger.newMessage(_("Awww, such a charmer haha. Your turn. Let me see yours."))
         chloe.messenger.addReply(_("Your wish is my command."))
-        chloe.messenger.addImgReply("images/v9/Scene 35/mcdickwolves.webp", newMessage=True)
+        chloe.messenger.addImgReply("images/v9/Scene 35/mcdickwolves.webp", new_message=True)
         chloe.messenger.newMessage(_("God, I miss that cock."))
         chloe.messenger.addReply(_("Can I come over? Haha."))
         chloe.messenger.newMessage(_("I wish. I have a lot to do for tomorrow, but that would be nice."))
