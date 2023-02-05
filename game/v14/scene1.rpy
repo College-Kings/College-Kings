@@ -5,7 +5,7 @@
 
 label v14_start:
     if path_builder and not pb_name_set:
-        $ name = renpy.input(_("What's your name?"), default=_("Alex")).strip() or _("Alex")
+        $ name = renpy.input(_("What's your name?"), default=name).strip() or _("Alex")
         $ pb_name_set = True
     
         $ v11_lindsey_slogan = 1
