@@ -270,7 +270,7 @@ style choice_button_text is button_text
 ## menus.
 
 screen quick_menu():
-    zorder 100
+    zorder 10
     style_prefix "quick_menu"
 
     default image_path = "gui/quick_menu/"
@@ -1168,7 +1168,7 @@ style history_label_text:
 ## https://www.renpy.org/doc/html/screen_special.html#confirm
 
 screen confirm(message, yes_action, no_action=Hide("confirm")):
-    zorder 200
+    zorder 20
     modal True
     style_prefix "confirm"
 
@@ -1210,7 +1210,7 @@ style confirm_text is bebas_neue_30
 
 screen skip_indicator():
 
-    zorder 100
+    zorder 10
     style_prefix "skip"
 
     frame:
@@ -1266,7 +1266,7 @@ style skip_triangle:
 
 screen notify(message):
 
-    zorder 100
+    zorder 10
     style_prefix "notify"
 
     frame at notify_appear:
@@ -1309,7 +1309,7 @@ style pref_vbox:
 screen quick_menu():
     variant "touch"
 
-    zorder 100
+    zorder 10
 
     if quick_menu:
 
