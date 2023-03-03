@@ -3,6 +3,8 @@ init python:
         with open("console.txt", "w") as f:
             f.write(str(data))
 
+    def helper_sorted_key(item):
+        return item[1]
 
     def exception_handler(
         short_traceback: str, long_traceback: str, path_to_traceback_file: str
