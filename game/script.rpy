@@ -3,7 +3,7 @@ define config.console = True
 define config_debug = False # Automatic Testing
 define config_censored = False
 
-define config.version = get_version(1, 2, 16)
+define config.version = get_version(1, 2, 17)
 
 define config.steam_appid = 1463120
 # define config.load_failed_label = "load_failed"
