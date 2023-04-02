@@ -1,12 +1,22 @@
 init python:
+    class RepComponent(Enum):
+        BRO = enum.auto()
+        BOYFRIEND = enum.auto()
+        TROUBLEMAKER = enum.auto()
+
+
     class Reputations(Enum):
+        POPULAR = enum.auto()
+        CONFIDENT = enum.auto()
+        LOYAL = enum.auto()
+
         BRO = "bro"
         BOYFRIEND = "boyfriend"
         TROUBLEMAKER = "troublemaker"
 
-        POPULAR = "popular"
-        CONFIDENT = "confident"
-        LOYAL = "loyal"
+        @classmethod
+        def _missing_(cls, value):
+            return cls.POPULAR
 
 
     class Reputation:
