@@ -180,9 +180,6 @@ init python:
 
     ## Classify files as None to exclude them from the built distributions.
 
-    build.archive("media")
-    build.archive("scripts")
-
     build.classify('**~', None)
     build.classify('**.bak', None)
     build.classify('**/.**', None)
@@ -191,16 +188,8 @@ init python:
 
     ## To archive files, classify them as 'archive'.
 
-    build.classify("game/**.png", "media")
-    build.classify('game/**.webp', 'media')
-    build.classify('game/**.mp4', 'media')
-    build.classify('game/**.webm', 'media')
-    build.classify('game/**.ttf', 'media')
-    build.classify('game/**.otf', 'media')
-    build.classify('game/**.mp3', 'media')
-
-    build.classify('game/**.rpy', 'scripts')
-    build.classify("game/**.rpyc", "scripts")
+    build.classify('game/**.rpy', "arhive")
+    build.classify("game/**.rpyc", "archive")
 
     ## Files matching documentation patterns are duplicated in a mac app build,
     ## so they appear in both the app and the zip file.
