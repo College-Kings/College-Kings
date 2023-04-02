@@ -329,9 +329,9 @@ label after_load:
             chloe.relationship = Relationship.MAD
 
         try:
-            bro = reputation.components[Reputation.BRO]
-            boyfriend = reputation.components[Reputation.BOYFRIEND]
-            troublemaker = reputation.components[Reputation.TROUBLEMAKER]
+            bro = reputation.components[Reputations.BRO]
+            boyfriend = reputation.components[Reputations.BOYFRIEND]
+            troublemaker = reputation.components[Reputations.TROUBLEMAKER]
         except KeyError: pass
 
         ## KCT
