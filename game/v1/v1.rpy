@@ -33,7 +33,7 @@ init python:
         lauren.messenger.addReply(_("Fine"))
         lauren.messenger.newMessage(_(":)"))
 
-label v1start:
+label v1_start:
 label starta: #for compatibility only
     if config.developer:
         show screen bug_testing_overlay
