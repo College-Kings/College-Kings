@@ -22,15 +22,15 @@ init python:
     class Reputation:
         def __init__(self):
             self.components = {
-                Reputations.BRO: 1,
-                Reputations.BOYFRIEND: 2,
-                Reputations.TROUBLEMAKER: 2,
+                RepComponent.BRO: 10,
+                RepComponent.BOYFRIEND: 20,
+                RepComponent.TROUBLEMAKER: 20,
             }
 
         def __call__(self):
-            bro = self.components[Reputations.BRO]
-            boyfriend = self.components[Reputations.BOYFRIEND]
-            troublemaker = self.components[Reputations.TROUBLEMAKER]
+            bro = self.components[RepComponent.BRO]
+            boyfriend = self.components[RepComponent.BOYFRIEND]
+            troublemaker = self.components[RepComponent.TROUBLEMAKER]
 
             # Sort reputation values
             reputation_dict = {
@@ -43,9 +43,9 @@ init python:
 
         @property
         def sorted_reputations(self):
-            bro = self.components[Reputations.BRO]
-            boyfriend = self.components[Reputations.BOYFRIEND]
-            troublemaker = self.components[Reputations.TROUBLEMAKER]
+            bro = self.components[RepComponent.BRO]
+            boyfriend = self.components[RepComponent.BOYFRIEND]
+            troublemaker = self.components[RepComponent.TROUBLEMAKER]
 
             # Sort reputation values
             reputation_dict = {
@@ -62,7 +62,7 @@ init python:
                 return
 
             if pb_reputation_notification:
-                renpy.show_screen("popup", message=f"{var.value.capitalize()} point added")
+                renpy.show_screen("popup", message=f"{var.name.capitalize()} point added")
 
             old_reputation = self()
 
@@ -70,32 +70,28 @@ init python:
 
             # Notify user on reputation change
             if self() != old_reputation:
-                renpy.notify(f"Your reputation has changed to {self().value}")
+                renpy.notify(f"Your reputation has changed to {self().name}")
 
-        def debug_change_reputation(self, target_reputation: Reputations):
-            if not config.developer:
-                print("Debug functions are only available in the development enviroment.")
-                return
-
+        def change_reputation(self, target_reputation: Reputations):
             if target_reputation == Reputations.POPULAR:
                 self.components = {
-                    Reputations.BRO: 999,
-                    Reputations.TROUBLEMAKER: 999,
-                    Reputations.BOYFRIEND: 1,
+                    RepComponent.BRO: 20,
+                    RepComponent.TROUBLEMAKER: 20,
+                    RepComponent.BOYFRIEND: 10,
                 }
 
             elif target_reputation == Reputations.LOYAL:
                 self.components = {
-                    Reputations.BRO: 999,
-                    Reputations.TROUBLEMAKER: 1,
-                    Reputations.BOYFRIEND: 999,
+                    RepComponent.BRO: 20,
+                    RepComponent.TROUBLEMAKER: 10,
+                    RepComponent.BOYFRIEND: 20,
                 }
 
             elif target_reputation == Reputations.CONFIDENT:
                 self.components = {
-                    Reputations.BRO: 1,
-                    Reputations.TROUBLEMAKER: 999,
-                    Reputations.BOYFRIEND: 999,
+                    RepComponent.BRO: 10,
+                    RepComponent.TROUBLEMAKER: 20,
+                    RepComponent.BOYFRIEND: 20,
                 }
 
 
