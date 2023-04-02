@@ -61,6 +61,9 @@ label after_load:
         ### renpy.music.stop(channel=u'music')
         ### If using dummy files, don't need to stop music anymore
 
+        # Phone
+        phone = Phone()
+
         ## PLAYABLE CHARACTERS
         if isinstance(mc, FightCharacter) or isinstance(mc, MainCharacter):
             mc = PlayableCharacter()
