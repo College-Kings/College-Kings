@@ -328,12 +328,18 @@ label after_load:
         if chloe.relationship == 4:
             chloe.relationship = Relationship.MAD
 
+        try:
+            bro = reputation.components[Reputation.BRO]
+            boyfriend = reputation.components[Reputation.BOYFRIEND]
+            troublemaker = reputation.components[Reputation.TROUBLEMAKER]
+        except KeyError: pass
+
         ## KCT
         try:
             reputation.components = {
-                Reputations.BRO: bro,
-                Reputations.BOYFRIEND: boyfriend,
-                Reputations.TROUBLEMAKER: troublemaker,
+                RepComponent.BRO: bro,
+                RepComponent.BOYFRIEND: boyfriend,
+                RepComponent.TROUBLEMAKER: troublemaker,
             }
         except NameError: pass
 
