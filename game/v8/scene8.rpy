@@ -73,11 +73,11 @@ label prot_w_au:
 
     menu:
         "Pretend you know what you're doing":
-            $ reputation.add_point(Reputations.TROUBLEMAKER)
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
             jump prot_w_au_wing
 
         "Ask what you need to do":
-            $ reputation.add_point(Reputations.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             jump prot_w_au_no_wing
 
 label prot_w_au_wing:
@@ -190,7 +190,7 @@ label prot_w_au_1:
 
     menu:
         "Pretend you know about it":
-            $ reputation.add_point(Reputations.TROUBLEMAKER)
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
             jump prot_w_au_leg
         "Admit you don't know":
             jump prot_w_au_no_leg

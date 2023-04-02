@@ -101,7 +101,7 @@ label drug_deal_w_josh:
 
     menu:
         "Intervene":
-            $ reputation.add_point(Reputations.BRO)
+            $ reputation.add_point(RepComponent.BRO)
             jump int_deal_w_josh
         "Don't intervene":
             jump no_int_deal_w_josh
@@ -574,7 +574,7 @@ label dodged_pipe:
 
     menu:
         "Kick Joe":
-            $ reputation.add_point(Reputations.TROUBLEMAKER)
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
             jump volley_joe
 
         "Walk away":

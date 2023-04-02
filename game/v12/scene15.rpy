@@ -114,7 +114,7 @@ label v12_riddle_riley:
 
     menu:
         "Keep looking":
-            $ reputation.add_point(Reputations.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             scene v12rrl10 # FPP. MC still searching looking at riley who is also still searching, mouth closed
             with dissolve
 
@@ -131,7 +131,7 @@ label v12_riddle_riley:
             u "Nope, still looking. I'm telling you Riley, there's nothing down h-"
 
         "Give up":
-            $ reputation.add_point(Reputations.BRO)
+            $ reputation.add_point(RepComponent.BRO)
             scene v12rrl11 # TPP. MC sits down
             with dissolve
 
@@ -421,7 +421,7 @@ label v12_riddle_riley:
 
     menu:
         "Help her walk":
-            $ reputation.add_point(Reputations.BRO)
+            $ reputation.add_point(RepComponent.BRO)
             scene v12rrl32 # TPP. MC helps riley stand up
             with dissolve
 
@@ -483,7 +483,7 @@ label v12_riddle_riley:
             pause 1
 
         "Carry her":
-            $ reputation.add_point(Reputations.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             scene v12rrl38 # TPP. MC Picks up riley
             with dissolve
 
@@ -516,7 +516,7 @@ label v12_riddle_riley:
 
             menu:
                 "Kiss her":
-                    $ reputation.add_point(Reputations.BOYFRIEND)
+                    $ reputation.add_point(RepComponent.BOYFRIEND)
 
                     scene v12rrl41 # TPP MC kisses Riley
                     with dissolve
@@ -588,7 +588,7 @@ label v12_riddle_riley:
 
             menu:
                 "Hold her hand":
-                    $ reputation.add_point(Reputations.BOYFRIEND)
+                    $ reputation.add_point(RepComponent.BOYFRIEND)
                     scene v12rrl45 # TPP. MC and riley hold hands 
                     with dissolve
 
@@ -603,7 +603,7 @@ label v12_riddle_riley:
                     with dissolve
 
                 "Scratch your face":
-                    $ reputation.add_point(Reputations.BRO)
+                    $ reputation.add_point(RepComponent.BRO)
                     scene v12rrl48 # TPP. MC scratches his face
                     with dissolve
 

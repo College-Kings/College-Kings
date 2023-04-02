@@ -436,7 +436,7 @@ label v13s46:
             u "Let's go ahead and head back before they see us creepin', you weirdo."
 
         "Haha, okay":
-            $ reputation.add_point(Reputations.TROUBLEMAKER)
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
             $ grant_achievement("voyeur")
 
             u "Okay, lead the way. *Chuckles*"

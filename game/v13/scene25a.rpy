@@ -26,7 +26,7 @@ label v13s25a:
 
     menu:
         "Maybe":
-            $ reputation.add_point(Reputations.TROUBLEMAKER)
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             scene v13s25a_2
             with dissolve
@@ -123,7 +123,7 @@ label v13s25a:
             jump v13s27
 
         "No":
-            $ reputation.add_point(Reputations.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
 
             scene v13s25a_2
             with dissolve

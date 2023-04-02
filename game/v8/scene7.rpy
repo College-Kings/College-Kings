@@ -251,7 +251,7 @@ label au_prot_call:
 
     menu:
         "Go to the protest":
-            $ reputation.add_point(Reputations.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             jump caf_prot_au
 
         "Don't go to the protest":

@@ -222,7 +222,7 @@ label fr5ryan1:
 
         menu:
             "Talk about your dream":
-                $ reputation.add_point(Reputations.BOYFRIEND)
+                $ reputation.add_point(RepComponent.BOYFRIEND)
 
                 u "I'm not so sure about that. Last night I had a fucked up dream."
 
@@ -326,7 +326,7 @@ label fr5ryan1:
                 u "Right as fuck, my man."
 
             "Talk about the brawl":
-                $ reputation.add_point(Reputations.BRO)
+                $ reputation.add_point(RepComponent.BRO)
 
                 # -if MC chooses to tell Ryan how excited he is about the Brawl-
 
@@ -452,7 +452,7 @@ label fr5riley1:
 
         menu:
             "Kiss her":
-                $ reputation.add_point(Reputations.TROUBLEMAKER)
+                $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
                 play sound "sounds/kiss.mp3"
 
@@ -648,7 +648,7 @@ label fr5aubrey1:
 
     menu: 
         "Don't join her":
-            $ reputation.add_point(Reputations.TROUBLEMAKER)
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             u "That was a nice try, miss. But you must be mistaking me for a child, if you thought that would work."
 
@@ -683,7 +683,7 @@ label fr5aubrey1:
             u "Sounds interesting. I guess we will see."
 
         "Join her":
-            $ reputation.add_point(Reputations.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
 
             u "Fine, let me just take my clothes off."
 

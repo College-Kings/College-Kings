@@ -622,9 +622,9 @@ label after_drugs:
                 $ sceneList.add("v8_amber2")
                 $ amber.relationship = Relationship.FWB
                 if lauren.relationship >= Relationship.GIRLFRIEND:
-                    $ reputation.add_point(Reputations.TROUBLEMAKER)
+                    $ reputation.add_point(RepComponent.TROUBLEMAKER)
                 else:
-                    $ reputation.add_point(Reputations.BOYFRIEND)
+                    $ reputation.add_point(RepComponent.BOYFRIEND)
 
                 u "*Whispers* Fuck yes! Let's go!"
 
@@ -633,7 +633,7 @@ label after_drugs:
             "Reject her advances":
                 $ amber.relationship = Relationship.FRIEND
                 if lauren.relationship >= Relationship.GIRLFRIEND:
-                    $ reputation.add_point(Reputations.BOYFRIEND)
+                    $ reputation.add_point(RepComponent.BOYFRIEND)
 
                 u "*Whispers* Sorry Amber, I'm not feeling it tonight."
 

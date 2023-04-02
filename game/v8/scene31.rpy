@@ -139,7 +139,7 @@ label v8_tues_eco_class:
 
         menu:
             "Confide in Ryan":
-                $ reputation.add_point(Reputations.BRO)
+                $ reputation.add_point(RepComponent.BRO)
                 jump tec_conf_ryan
             "Play it cool":
                 jump tec_cool_ryan
@@ -198,7 +198,7 @@ label tec_cont:
 
         menu:
             "Flirt with Lauren":
-                $ reputation.add_point(Reputations.BOYFRIEND)
+                $ reputation.add_point(RepComponent.BOYFRIEND)
                 jump fl_w_lau
 
             "Don't flirt with Lauren":

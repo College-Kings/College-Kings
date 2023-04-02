@@ -27,11 +27,11 @@ label v14s04:
     menu:
         "I'll talk to him later":
             $ v14s4_tell_imre = True
-            $ reputation.add_point(Reputations.BRO)
+            $ reputation.add_point(RepComponent.BRO)
             u "(Fuck it, I'll talk to him later I guess.)"
 
         "It's not that important":
-            $ reputation.add_point(Reputations.TROUBLEMAKER)
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
             u "(Fuck it, I'll talk to him later I guess.)"
 
     scene v14s04_5 # TPP. Show MC walking through the hotel corridor, slightly annoyed, mouth closed

@@ -118,7 +118,7 @@ label phn_chloe11_done:
 
     menu:
         "Party":
-            $ reputation.add_point(Reputations.TROUBLEMAKER)
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             scene v8apes25d
             with dissolve
@@ -133,7 +133,7 @@ label phn_chloe11_done:
             pause 0.5
 
         "Stay back and study":
-            $ reputation.add_point(Reputations.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
 
             scene v8apes25d
             with dissolve
@@ -288,7 +288,7 @@ label phn_chloe11_done:
 
     menu:
         "Press it":
-            $ reputation.add_point(Reputations.BRO)
+            $ reputation.add_point(RepComponent.BRO)
 
             scene v8apes34c
             with dissolve
@@ -299,7 +299,7 @@ label phn_chloe11_done:
             ca "It's just..."
 
         "Let it go":
-            $ reputation.add_point(Reputations.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
 
             scene v8apes34c
             with dissolve

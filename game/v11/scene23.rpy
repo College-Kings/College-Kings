@@ -243,7 +243,7 @@ label v11s23_mrlee1:
 
     menu:
         "Laugh":
-            $ reputation.add_point(Reputations.TROUBLEMAKER)
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
             scene v11frmlee1a
             with dissolve
 
@@ -255,7 +255,7 @@ label v11s23_mrlee1:
             lee "It wasn't so funny back then."
 
         "Feel bad":
-            $ reputation.add_point(Reputations.BRO)
+            $ reputation.add_point(RepComponent.BRO)
             scene v11frmlee1b
             with dissolve
 
@@ -375,7 +375,7 @@ label v11s23_riley1:
 
     menu:
         "Seek revenge":
-            $ reputation.add_point(Reputations.TROUBLEMAKER)
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             scene v11frmri3a # FPP Same angle as v11frmri3, Riley smiling with mouth closed
             with dissolve
@@ -733,7 +733,7 @@ label v11s23_penelope1:
         menu:
             "Flirt":
                 $ v11s23_penelope_date = True
-                $ reputation.add_point(Reputations.BOYFRIEND)
+                $ reputation.add_point(RepComponent.BOYFRIEND)
 
                 scene v11frmpe10
                 with dissolve
@@ -1138,7 +1138,7 @@ label v11s23_freeroamend:
             jump v11_hotel_bar
 
         "Sneak out":
-            $ reputation.add_point(Reputations.TROUBLEMAKER)
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             scene v11frm1b
             with dissolve

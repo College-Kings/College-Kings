@@ -82,7 +82,7 @@ label v12_ms_rose_sex: #can only get here if joinwolves
                 pause 0.75
 
             "Let's go":
-                $ reputation.add_point(Reputations.TROUBLEMAKER)
+                $ reputation.add_point(RepComponent.TROUBLEMAKER)
                 
                 $ sceneList.add("v12_rose")
                 $ ms_rose.relationship = Relationship.FWB

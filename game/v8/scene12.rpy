@@ -301,7 +301,7 @@ label apes_faceoff_task:
 
     menu:
         "Wish them good luck":
-            $ reputation.add_point(Reputations.BRO)
+            $ reputation.add_point(RepComponent.BRO)
 
             u "Good luck, guys!"
 
@@ -311,7 +311,7 @@ label apes_faceoff_task:
             coop "Let the best man win."
 
         "Just get to the task":
-            $ reputation.add_point(Reputations.TROUBLEMAKER)
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
     scene black
     with dissolve

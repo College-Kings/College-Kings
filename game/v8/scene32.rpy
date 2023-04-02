@@ -61,7 +61,7 @@ label mr_aft_class:
 
         menu:
             "Ask more questions":
-                $ reputation.add_point(Reputations.BOYFRIEND)
+                $ reputation.add_point(RepComponent.BOYFRIEND)
                 jump ask_rose_more_q
             "Leave":
                 jump no_ask_rose_more_q

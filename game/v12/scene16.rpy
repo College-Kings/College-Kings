@@ -607,7 +607,7 @@ label v12_valentine:
 
     menu:
         "Leave her be":
-            $ reputation.add_point(Reputations.BRO)
+            $ reputation.add_point(RepComponent.BRO)
             u "(Not the time, not in front of everyone.)"
 
             scene v12val29a # FPP. Same as v12val29, Lindsey looking at Nora, Lindsey smiling, excited, mouth open (screaming)
@@ -622,7 +622,7 @@ label v12_valentine:
 
         "Comfort her":
             pause 0.5
-            $ reputation.add_point(Reputations.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             scene v12val31 # TPP. Show MC leaning in a whispering in Nora's ear, holding her hand, Nora slight smile, mouth closed, MC slight smile, mouth open
             with dissolve
 
@@ -718,7 +718,7 @@ label v12_valentine:
 
     menu:
         "Joke":
-            $ reputation.add_point(Reputations.BRO)
+            $ reputation.add_point(RepComponent.BRO)
             scene v12val30h # FPP. Same as v12val30c, different pose
             with dissolve
 
@@ -751,7 +751,7 @@ label v12_valentine:
             bishop "Haven't heard any vows like that before, but... Vows are vows I suppose."
 
         "Be serious":
-            $ reputation.add_point(Reputations.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             scene v12val30h
             with dissolve
 
@@ -825,7 +825,7 @@ label v12_valentine:
 
         menu:
             "Fist bump":
-                $ reputation.add_point(Reputations.BRO)
+                $ reputation.add_point(RepComponent.BRO)
                 scene v12val30i # FPP. Same as v12val30c, MC has his fist extended, Nora slight smile, mouth closed, fist bumping MC
                 with dissolve
 
@@ -837,7 +837,7 @@ label v12_valentine:
                 bishop "Very sweet, you two."
 
             "Kiss her cheek":
-                $ reputation.add_point(Reputations.BOYFRIEND)
+                $ reputation.add_point(RepComponent.BOYFRIEND)
                 scene v12val35 # TPP. Show MC kissing Nora's cheek, Nora slight smile, blushing, mouth closed
                 with dissolve
 

@@ -44,7 +44,7 @@ label v12_room_chloe_riley:
 
         menu:
             "Truth":
-                $ reputation.add_point(Reputations.BOYFRIEND)
+                $ reputation.add_point(RepComponent.BOYFRIEND)
                 scene v12crm2
                 with dissolve
 
@@ -56,7 +56,7 @@ label v12_room_chloe_riley:
                 cl "Mhmm, sure. I'll be keeping my eyes on you."
 
             "Lie":
-                $ reputation.add_point(Reputations.TROUBLEMAKER)
+                $ reputation.add_point(RepComponent.TROUBLEMAKER)
                 scene v12crm2 
                 with dissolve
 

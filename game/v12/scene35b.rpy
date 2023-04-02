@@ -296,7 +296,7 @@ label v12_game_roommate:
 
         menu:
             "Kill parents for insurance":
-                $ reputation.add_point(Reputations.TROUBLEMAKER)
+                $ reputation.add_point(RepComponent.TROUBLEMAKER)
                 scene v12grm2f
                 with dissolve
 
@@ -343,7 +343,7 @@ label v12_game_roommate:
                 u "I guess so. *Laughs*"
 
             "Sell your house":
-                $ reputation.add_point(Reputations.BOYFRIEND)
+                $ reputation.add_point(RepComponent.BOYFRIEND)
                 scene v12grm2d
                 with dissolve
 

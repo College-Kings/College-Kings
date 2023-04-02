@@ -406,13 +406,13 @@ label v11_imre_and_ryan:
     menu:
         "Side with Imre":
             if joinwolves:
-                $ reputation.add_point(Reputations.BRO)
+                $ reputation.add_point(RepComponent.BRO)
 
             u "Ryan, really? You remember what he said."
 
         "Side with Ryan":
             if not joinwolves:
-                $ reputation.add_point(Reputations.BRO)
+                $ reputation.add_point(RepComponent.BRO)
 
             u "If he doesn't even remember it must not have been that serious."
 

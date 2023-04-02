@@ -2,20 +2,20 @@ init python:
 
     # Ryan messages
     def v2_reply1():
-        reputation.add_point(Reputations.BRO)
+        reputation.add_point(RepComponent.BRO)
         ryan.messenger.newMessage(_("Look, I know what Grayson did was a dick move, but he was just being overprotective of Chloe"))
         ryan.messenger.addReply(_("Whatever"), v2_reply2)
         ryan.messenger.addReply(_("Don't you dare defend that guy"), v2_reply3)
 
     def v2_reply2():
-        reputation.add_point(Reputations.BRO)
+        reputation.add_point(RepComponent.BRO)
 
     def v2_reply3():
-        reputation.add_point(Reputations.TROUBLEMAKER)
+        reputation.add_point(RepComponent.TROUBLEMAKER)
         ryan.messenger.newMessage(_("Sorry..."))
 
     def v2_reply4():
-        reputation.add_point(Reputations.TROUBLEMAKER)
+        reputation.add_point(RepComponent.TROUBLEMAKER)
         ryan.messenger.newMessage(_("Look, I know what Grayson did was a dick move, but he was just being overprotective of Chloe"))
         ryan.messenger.addReply(_("Whatever"), v2_reply2)
         ryan.messenger.addReply(_("Don't you dare defend that guy"), v2_reply3)
@@ -23,7 +23,7 @@ init python:
     # Lauren messages
     def v2_reply5():
         setattr(store, "meetlauren", True)
-        reputation.add_point(Reputations.BOYFRIEND)
+        reputation.add_point(RepComponent.BOYFRIEND)
         lauren.messenger.newMessage(_("Great, I'll see you then :)"))
 
     def v2_reply6():
@@ -31,36 +31,36 @@ init python:
 
     # Josh messages
     def v2_reply7():
-        reputation.add_point(Reputations.BRO)
+        reputation.add_point(RepComponent.BRO)
         josh.messenger.newMessage(_("It's fine, you go get her."))
 
     def v2_reply8():
-        reputation.add_point(Reputations.BOYFRIEND)
+        reputation.add_point(RepComponent.BOYFRIEND)
         josh.messenger.newMessage(_("Nah, you don't want a bitch like her."))
         josh.messenger.addReply(_("Yeah, I guess you're right."), v2_reply9)
         josh.messenger.addReply(_("Dude, what the fuck?!"), v2_reply10)
 
     def v2_reply9():
-        reputation.add_point(Reputations.BRO)
+        reputation.add_point(RepComponent.BRO)
         josh.messenger.newMessage(_("Hahaha, I'm just kidding, yo."))
         josh.messenger.newMessage(_("Of course I gave her your number."))
         josh.messenger.addReply(_("Damn, you got me."))
 
     def v2_reply10():
-        reputation.add_point(Reputations.TROUBLEMAKER)
+        reputation.add_point(RepComponent.TROUBLEMAKER)
         josh.messenger.newMessage(_("Hahaha, I'm just kidding, yo."))
         josh.messenger.newMessage(_("Of course I gave her your number."))
         josh.messenger.addReply(_("Damn, you got me."))
 
     # Aubrey messages
     def v2_reply11():
-        reputation.add_point(Reputations.BRO)
+        reputation.add_point(RepComponent.BRO)
         aubrey.messenger.newMessage(_("Yeah, I mean they had a thing a while ago but she broke it off 'cause he lied about some shit."))
         aubrey.messenger.newMessage(_("So... tomorrow?"))
         aubrey.messenger.addReply(_("My day tomorrow is quite full, but how about today?\n\nI need to buy a costume."), v2_reply12)
 
     def v2_reply12():
-        reputation.add_point(Reputations.BOYFRIEND)
+        reputation.add_point(RepComponent.BOYFRIEND)
         aubrey.messenger.newMessage(_("I've got dance practice tonight \n:("))
         aubrey.messenger.addReply(_("I'm not talking tonight, I can pick you up right now."))
         aubrey.messenger.newMessage(_("Oh wow, that's spontaneous, I like it haha.\n\nI guess come to the Chicks' house whenever you're ready and then we can go costume shopping."))
@@ -68,12 +68,12 @@ init python:
 
     def v2_reply13():
         setattr(store, "costumeaubrey", True)
-        reputation.add_point(Reputations.BOYFRIEND)
+        reputation.add_point(RepComponent.BOYFRIEND)
         aubrey.messenger.newMessage(_("Good :)"))
 
     def v2_reply14():
         setattr(store, "costumeaubrey", False)
-        reputation.add_point(Reputations.TROUBLEMAKER)
+        reputation.add_point(RepComponent.TROUBLEMAKER)
         aubrey.messenger.newMessage(_("Oh, okay. Guess we'll have to postpone the costume buying."))
 
 label v2start:
@@ -139,7 +139,7 @@ label v2start:
 
     menu:
         "Hmm... maybe":
-            $ reputation.add_point(Reputations.BRO)
+            $ reputation.add_point(RepComponent.BRO)
 
             scene s123d
             with dissolve
@@ -150,7 +150,7 @@ label v2start:
             imre "Just think about it, okay? I'll see you later."
 
         "I'm not fighting":
-            $ reputation.add_point(Reputations.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
 
             scene s123d
             with dissolve
@@ -165,7 +165,7 @@ label v2start:
 
             menu:
                 "I'll think about it":
-                    $ reputation.add_point(Reputations.BRO)
+                    $ reputation.add_point(RepComponent.BRO)
 
                     scene s123d
                     with dissolve
@@ -176,7 +176,7 @@ label v2start:
                     imre "That's all I'm asking for. I'll see you later."
 
                 "I won't fight":
-                    $ reputation.add_point(Reputations.BOYFRIEND)
+                    $ reputation.add_point(RepComponent.BOYFRIEND)
 
                     scene s123d
                     with dissolve
@@ -198,7 +198,7 @@ label v2start:
     $ ryan.messenger.addReply(_("I'm fine"), v2_reply1)
     $ ryan.messenger.addReply(_("No, wtf was that?! Fuck Grayson and fuck the Apes"), v2_reply4)
 
-    $ reputation.add_point(Reputations.TROUBLEMAKER)
+    $ reputation.add_point(RepComponent.TROUBLEMAKER)
     $ lauren.messenger.newMessage(_("Is everything okay?"))
     $ lauren.messenger.addReply(_("Yeah, I'm fine."))
     $ lauren.messenger.newMessage(_("Okay..."))
@@ -1057,7 +1057,7 @@ label youfinish:
 
     menu:
         "Kick him":
-            $ reputation.add_point(Reputations.TROUBLEMAKER)
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             play sound "sounds/js.mp3"
             scene yf
@@ -1066,7 +1066,7 @@ label youfinish:
             u "Fuck you!"
 
         "Walk away":
-            $ reputation.add_point(Reputations.BRO)
+            $ reputation.add_point(RepComponent.BRO)
 
     $ renpy.end_replay()
 
@@ -1170,7 +1170,7 @@ label meet_lauren2:
 
     menu:
         "There was something there":
-            $ reputation.add_point(Reputations.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             
             if lauren.relationship >= Relationship.KISS:
                     scene s130c
@@ -1305,7 +1305,7 @@ label meet_lauren2:
                             u "(I should probably wash the blood off my face in the restroom before I go to class.)"
 
         "Let's forget about it":
-            $ reputation.add_point(Reputations.BRO)
+            $ reputation.add_point(RepComponent.BRO)
             $ laawk = False
 
             scene s130a
@@ -1806,7 +1806,7 @@ label history2:
     menu:
         "Okay, I guess":
             $ forgiveemily = True
-            $ reputation.add_point(Reputations.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
 
             scene s144c
             with dissolve
@@ -1833,7 +1833,7 @@ label history2:
         "No, sorry":
             $ emilyandben = True
             $ forgiveemily = False
-            $ reputation.add_point(Reputations.TROUBLEMAKER)
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             scene s144c
             with dissolve
@@ -1878,7 +1878,7 @@ label bo_ad:
 
     menu:
         "Yeah, of course. (joke)":
-            $ reputation.add_point(Reputations.TROUBLEMAKER)
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             hide s145
             show s145a
@@ -1917,7 +1917,7 @@ label bo_ad:
             em "Maybe a little bit."
 
         "I'm still single":
-            $ reputation.add_point(Reputations.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
 
             hide s145
             show s145e
@@ -1953,7 +1953,7 @@ label bo_ad:
 
     menu:
         "It was adorable":
-            $ reputation.add_point(Reputations.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
 
             hide s145c
             show s145d
@@ -1970,7 +1970,7 @@ label bo_ad:
             em "It was so thoughtful."
 
         "It was so funny":
-            $ reputation.add_point(Reputations.BRO)
+            $ reputation.add_point(RepComponent.BRO)
 
             hide s145c
             show s145d
@@ -2096,7 +2096,7 @@ label bo_ad:
     menu:
         "Sure, knock yourself out":
             $ emilyandben = True
-            $ reputation.add_point(Reputations.BRO)
+            $ reputation.add_point(RepComponent.BRO)
 
             scene s148b
             with dissolve
@@ -2117,7 +2117,7 @@ label bo_ad:
 
         "Stay away from her":
             $ emilyandben = False
-            $ reputation.add_point(Reputations.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
 
             scene s148b
             with dissolve
@@ -2137,8 +2137,8 @@ label bo_ad:
 
     menu:
         "Tell Emily about Benjamin":
-            $ reputation.add_point(Reputations.BOYFRIEND)
-            $ reputation.add_point(Reputations.TROUBLEMAKER)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             scene s149a
             with dissolve
@@ -2197,7 +2197,7 @@ label bo_ad:
                 u "As a receptionist."
 
         "Don't tell Emily":
-            $ reputation.add_point(Reputations.BRO)
+            $ reputation.add_point(RepComponent.BRO)
 
             scene s149a
             with dissolve
@@ -2714,7 +2714,7 @@ label try1new:
 
     menu:
         "Peek":
-            $ reputation.add_point(Reputations.TROUBLEMAKER)
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             scene s164 # Aubrey changing bad view
             with dissolve
@@ -2743,7 +2743,7 @@ label try1new:
                     pass
 
         "Don't peek":
-            $ reputation.add_point(Reputations.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
 
 label v2_nsfwSkipLabel1:
     scene s163
@@ -2773,7 +2773,7 @@ label v2_nsfwSkipLabel1:
 
     menu:
         "It's kinda hot":
-            $ reputation.add_point(Reputations.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
 
             scene s166c
             with dissolve
@@ -2800,7 +2800,7 @@ label v2_nsfwSkipLabel1:
                 au "Have you decided which one to buy yet?"
 
         "It's definitely something":
-            $ reputation.add_point(Reputations.BRO)
+            $ reputation.add_point(RepComponent.BRO)
 
             scene s166c
             with dissolve
@@ -2853,7 +2853,7 @@ label try2new:
 
     menu:
         "Peek":
-            $ reputation.add_point(Reputations.TROUBLEMAKER)
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             scene s168 # Aubrey changing bad view
             with dissolve
@@ -2882,7 +2882,7 @@ label try2new:
                     pass
 
         "Don't peek":
-            $ reputation.add_point(Reputations.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
 
 label v2_nsfwSkipLabel2:
     scene s167
@@ -2909,7 +2909,7 @@ label v2_nsfwSkipLabel2:
 
     menu:
         "looking mighty fine":
-            $ reputation.add_point(Reputations.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
 
             u "...looking mighty fine as well."
 
@@ -2936,7 +2936,7 @@ label v2_nsfwSkipLabel2:
                 au "Are you gonna buy this one?"
 
         "certainly practical":
-            $ reputation.add_point(Reputations.BRO)
+            $ reputation.add_point(RepComponent.BRO)
 
             u "... certainly practical."
 
@@ -3005,7 +3005,7 @@ label try3new:
 
     menu:
         "Peek":
-            $ reputation.add_point(Reputations.TROUBLEMAKER)
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             scene s172 # Aubrey changing bad view
             with dissolve
@@ -3033,7 +3033,7 @@ label try3new:
                     pass
 
         "Don't peek":
-            $ reputation.add_point(Reputations.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
 
 label v2_nsfwSkipLabel3:
     scene s171
@@ -3061,7 +3061,7 @@ label v2_nsfwSkipLabel3:
     menu:
         "Oh come on":
             hide screen tutorial
-            $ reputation.add_point(Reputations.TROUBLEMAKER)
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             u "Oh come on, Aubrey. I wanna see."
 
@@ -3109,7 +3109,7 @@ label v2_nsfwSkipLabel3:
 
         "Fine":
             hide screen tutorial
-            $ reputation.add_point(Reputations.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
 
             u "Alright, fine."
 
@@ -3248,7 +3248,7 @@ label try4new:
 
     menu:
         "Peek":
-            $ reputation.add_point(Reputations.TROUBLEMAKER)
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             scene s183 # penelope changing bad view
             with dissolve
@@ -3277,7 +3277,7 @@ label try4new:
                     pass
 
         "Don't peek":
-            $ reputation.add_point(Reputations.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
 
 label v2_nsfwSkipLabel4:
     scene s163
@@ -3318,7 +3318,7 @@ label v2_nsfwSkipLabel4:
 
     menu:
         "You look beautiful":
-            $ reputation.add_point(Reputations.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
 
             scene s179a
             with dissolve
@@ -3339,7 +3339,7 @@ label v2_nsfwSkipLabel4:
                 pe "Are you ready to buy an outfit?"
 
         "I guess it's nice":
-            $ reputation.add_point(Reputations.BRO)
+            $ reputation.add_point(RepComponent.BRO)
 
             scene s179a
             with dissolve
@@ -3393,7 +3393,7 @@ label try5new:
 
     menu:
         "Peek":
-            $ reputation.add_point(Reputations.TROUBLEMAKER)
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             scene s183 # pen changing bad view
             with dissolve
@@ -3421,7 +3421,7 @@ label try5new:
                     pass
 
         "Don't peek":
-            $ reputation.add_point(Reputations.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
 
 label v2_nsfwSkipLabel5:
     scene s167
@@ -3461,7 +3461,7 @@ label v2_nsfwSkipLabel5:
 
     menu:
         "Flirt":
-            $ reputation.add_point(Reputations.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
 
             u "Yeah, maybe it's like the costume of two lovers, you know... historically speaking."
 
@@ -3477,7 +3477,7 @@ label v2_nsfwSkipLabel5:
                 pe "Are you ready to buy an outfit?"
 
         "Agree":
-            $ reputation.add_point(Reputations.BRO)
+            $ reputation.add_point(RepComponent.BRO)
 
             u "Yeah, it would be a cool partner costume."
 
@@ -3530,7 +3530,7 @@ label try6new:
 
     menu:
         "Peek":
-            $ reputation.add_point(Reputations.TROUBLEMAKER)
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             scene s180 # pen changing bad view
             with dissolve
@@ -3558,7 +3558,7 @@ label try6new:
                     pass
 
         "Don't peek":
-            $ reputation.add_point(Reputations.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
 
 label v2_nsfwSkipLabel6:
     scene s171
@@ -3580,7 +3580,7 @@ label v2_nsfwSkipLabel6:
 
     menu:
         "Oh come on":
-            $ reputation.add_point(Reputations.TROUBLEMAKER)
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             u "Oh come on, Penelope. I wanna see."
 
@@ -3591,7 +3591,7 @@ label v2_nsfwSkipLabel6:
             u "Alright, fine."
 
         "Fine":
-            $ reputation.add_point(Reputations.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
 
             u "Okay, fine."
 
@@ -3681,7 +3681,7 @@ label v1_caughtContinue:
 
     menu:
         "Apologize":
-            $ reputation.add_point(Reputations.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             $ v2_caughtpeekingcounter = True
 
             scene s177e
@@ -3699,7 +3699,7 @@ label v1_caughtContinue:
             au "How about we just buy a costume and get going?"
 
         "Deny it":
-            $ reputation.add_point(Reputations.TROUBLEMAKER)
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             scene s177e
             with dissolve
@@ -3804,7 +3804,7 @@ label v1_caughtContinue_pen:
     menu:
         "Apologize":
             hide screen tutorial
-            $ reputation.add_point(Reputations.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
 
             scene s186a
             with dissolve
@@ -3829,7 +3829,7 @@ label v1_caughtContinue_pen:
 
         "Deny it":
             hide screen tutorial
-            $ reputation.add_point(Reputations.TROUBLEMAKER)
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             scene s186
             with dissolve
@@ -4069,7 +4069,7 @@ label eve1:
     menu:
         "Make a move":
             $ evelyn.relationship = Relationship.MOVE
-            $ reputation.add_point(Reputations.BRO)
+            $ reputation.add_point(RepComponent.BRO)
 
             scene s188d
             with dissolve
@@ -4157,7 +4157,7 @@ label eve1:
                     u "(Damn, that didn't go as planned...)"
 
         "Leave":
-            $ reputation.add_point(Reputations.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
 
             scene s188d
             with dissolve

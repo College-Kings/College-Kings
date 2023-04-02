@@ -60,7 +60,7 @@ label work_with_seb:
 
     menu:
         "Open up to Sebastian":
-            $ reputation.add_point(Reputations.BRO)
+            $ reputation.add_point(RepComponent.BRO)
             jump wolves_gym_conf
 
         "Play it cool":

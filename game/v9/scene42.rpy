@@ -17,7 +17,7 @@ label v9_at_warehouse:
 
         menu:
             "Be upset":
-                $ reputation.add_point(Reputations.BOYFRIEND)
+                $ reputation.add_point(RepComponent.BOYFRIEND)
 
                 u "Shit, Sebastian, was that really necessary?"
 
@@ -27,7 +27,7 @@ label v9_at_warehouse:
                 se "You tell me."
 
             "Be excited":
-                $ reputation.add_point(Reputations.BRO)
+                $ reputation.add_point(RepComponent.BRO)
 
                 u "Mysterious! I like it."
 
@@ -118,7 +118,7 @@ label v9_at_warehouse:
 
         menu:
             "Talk about Ryan":
-                $ reputation.add_point(Reputations.TROUBLEMAKER)
+                $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
                 u "*Whispers* Hey, Im, if I draw Ryan first, want me to warm him up for you?"
 
@@ -203,7 +203,7 @@ label v9_at_warehouse:
 
         menu:
             "Tell Chris about Ryan":
-                $ reputation.add_point(Reputations.TROUBLEMAKER)
+                $ reputation.add_point(RepComponent.TROUBLEMAKER)
                 
                 u "(If I don't say something, this could get out of hand.)"
 
@@ -221,7 +221,7 @@ label v9_at_warehouse:
 
 
             "Keep quiet":
-                $ reputation.add_point(Reputations.BRO)
+                $ reputation.add_point(RepComponent.BRO)
 
                 u "(Not my place.)"
 
@@ -248,7 +248,7 @@ label v9_at_warehouse:
 
         menu:
             "Complain":
-                $ reputation.add_point(Reputations.TROUBLEMAKER)
+                $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
                 u "What the fuck, man?"
 
@@ -263,7 +263,7 @@ label v9_at_warehouse:
                 u "Geez."
 
             "Deal with it":
-                $ reputation.add_point(Reputations.BRO)
+                $ reputation.add_point(RepComponent.BRO)
 
                 u "(A bit over the top with the ambiance, bro.)"
 
@@ -339,7 +339,7 @@ label v9_at_warehouse:
 
         menu:
             "Say something":
-                $ reputation.add_point(Reputations.TROUBLEMAKER)
+                $ reputation.add_point(RepComponent.TROUBLEMAKER)
                 u "Um... what's up with Cam?"
 
                 scene v9aaw12d # FPP. Same camera as v9aaw12, Grayson turns to face cameron, Cameron looks at Grayson, Cameron angry, Grayson serious, Grayson mouth open.
@@ -396,7 +396,7 @@ label v9_at_warehouse:
 
         menu:
             "Get pumped":
-                $ reputation.add_point(Reputations.BRO)
+                $ reputation.add_point(RepComponent.BRO)
 
                 u "They're going down!"
                 

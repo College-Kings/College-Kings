@@ -1359,7 +1359,7 @@ label v11_quiz_bonus:
         menu:
             "I love you too":
                 $ lauren.relationship = Relationship.GIRLFRIEND
-                $ reputation.add_point(Reputations.BOYFRIEND)
+                $ reputation.add_point(RepComponent.BOYFRIEND)
                 $ lauren.points += 2
 
                 scene v11las44h # FPP. Same as v11las44g, Lauren mouth closed, big smile
@@ -1375,7 +1375,7 @@ label v11_quiz_bonus:
                 pause 1
 
             "Play it off":
-                $ reputation.add_point(Reputations.BRO)
+                $ reputation.add_point(RepComponent.BRO)
                 $ lauren.points -= 2
 
                 scene v11las44i # FPP. Same as v11las44g, Lauren mouth closed, sad and embarrassed, no longer holding MC's neck

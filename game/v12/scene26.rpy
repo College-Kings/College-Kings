@@ -201,7 +201,7 @@ label v12_nora_chris_fight:
 
     menu:
         "Go to Nora":
-            $ reputation.add_point(Reputations.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             $ v12_followed_nora = True
 
             stop music fadeout 3
@@ -209,7 +209,7 @@ label v12_nora_chris_fight:
 
         "Go to Chris":
             $ v12_help_chris += 1
-            $ reputation.add_point(Reputations.BRO)
+            $ reputation.add_point(RepComponent.BRO)
 
             stop music fadeout 3
             jump v12_follow_chris #scene 26a

@@ -37,7 +37,7 @@ label v13s20_closet:
 
     menu:
         "Soak that shit":
-            $ reputation.add_point(Reputations.TROUBLEMAKER)
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
             u "(Guess I gotta be that someone...)"
 
             scene v13s20clo_4 # TPP. Show MC pissing on Charli's clothes, smirking, mouth closed
@@ -82,7 +82,7 @@ label v13s20_bleach:
 
     menu:
         "Bleach his suitcase":
-            $ reputation.add_point(Reputations.TROUBLEMAKER)
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
             $ v13s20_bleach_suitcase = True
             u "(Riley said this suitcase is special to him, and that bleach would be a good addition to it... Let's find out.) *Laughs*"
 
@@ -156,7 +156,7 @@ label v13s20_toothbrush:
 
     menu:
         "Flush, flush, motherfucker!":
-            $ reputation.add_point(Reputations.TROUBLEMAKER)
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
             scene v13s20brush_4 # TPP. Show MC bending over the toilet, sticking the toothbrush in the toilet, smirking, mouth closed
             with dissolve
 

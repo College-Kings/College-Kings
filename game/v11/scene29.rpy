@@ -39,7 +39,7 @@ label v11_hotel_room:
 
     menu (fail_label="v11timera"):
         "Save Lauren":
-            $ reputation.add_point(Reputations.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             $ v11save = 1
 
             scene v11bane5 # Mc tackles Lauren out of the guns aim (replace bane like character for MC )
@@ -67,7 +67,7 @@ label v11_hotel_room:
             jump v11wakeupa
 
         "Save Riley":
-            $ reputation.add_point(Reputations.BRO)
+            $ reputation.add_point(RepComponent.BRO)
             $ v11save = 2
 
             scene v11bane6 # Mc tackles Riley out of the guns aim (replace bane character with MC, Mc should still be tackling Riley out the way)
@@ -344,7 +344,7 @@ label v11wakeupa:
 
         menu:
             "Tease":
-                $ reputation.add_point(Reputations.TROUBLEMAKER)
+                $ reputation.add_point(RepComponent.TROUBLEMAKER)
                 $ riley.points -= 1
 
                 scene v11hr11
@@ -358,7 +358,7 @@ label v11wakeupa:
                 ri "You wish."
 
             "Flirt":
-                $ reputation.add_point(Reputations.BOYFRIEND)
+                $ reputation.add_point(RepComponent.BOYFRIEND)
                 $ riley.points += 1
 
                 scene v11hr11b # FPP. Same as v11hr11, Riley slightly smiling, mouth closed

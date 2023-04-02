@@ -304,7 +304,7 @@ label v12_paris_hotel:
 
     menu:
         "Support her choice":
-            $ reputation.add_point(Reputations.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             scene v12pht9d
             with dissolve
 
@@ -323,7 +323,7 @@ label v12_paris_hotel:
 
         "Help Chris":
             $ v12_help_chris += 1
-            $ reputation.add_point(Reputations.BRO)
+            $ reputation.add_point(RepComponent.BRO)
             scene v12pht9d
             with dissolve
 
@@ -362,7 +362,7 @@ label v12_paris_hotel:
 
     menu:
         "Yes":
-            $ reputation.add_point(Reputations.TROUBLEMAKER)
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
             scene v12pht9h
             with dissolve
 
@@ -374,7 +374,7 @@ label v12_paris_hotel:
             no "Haha, I'll think about it."
 
         "No":
-            $ reputation.add_point(Reputations.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             scene v12pht9h 
             with dissolve
 

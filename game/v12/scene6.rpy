@@ -91,14 +91,14 @@ label v12_docks:
 
     menu:
         "Not much":
-            $ reputation.add_point(Reputations.TROUBLEMAKER)
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
             scene v12dock6e # FPP. Same as v12dock6d, Riley looking at MC, slightly worried, mouth closed, different pose
             with dissolve
 
             u "Not much, we didn't really talk. What's going on?"
 
         "No":
-            $ reputation.add_point(Reputations.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             scene v12dock6e
             with dissolve
 

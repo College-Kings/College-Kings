@@ -547,7 +547,7 @@ label v12s18_bottlespin:
 
     menu:
         "Kiss him":
-            $ reputation.add_point(Reputations.TROUBLEMAKER)
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             u "Fuck. Well, I'm not in the mood to get slapped, so let's get this over with."
 
@@ -606,7 +606,7 @@ label v12s18_bottlespin:
                 ch "Wish you were a Wolf, hitting like that."
 
         "Get slapped":
-            $ reputation.add_point(Reputations.BRO)
+            $ reputation.add_point(RepComponent.BRO)
             scene v12slpbs7f # FPP. Same as v12slpbs7b, Ryan slight smile, mouth closed
             with dissolve
 
@@ -1282,7 +1282,7 @@ label v12s18_fmk:
 
     menu:
         "Marry Amber":
-            $ reputation.add_point(Reputations.BRO)
+            $ reputation.add_point(RepComponent.BRO)
             scene v12slpfmk4d
             with dissolve
 
@@ -1876,7 +1876,7 @@ label v12s18_bet: # END OF FREE ROAM
 
     menu:
         "Cuddle":
-            $ reputation.add_point(Reputations.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             scene v12slpbet16b # TPP. Show MC cuddling with Amber, both smiling, mouths closed
             with dissolve
 
@@ -1935,7 +1935,7 @@ label v12s18_bet: # END OF FREE ROAM
                 pause 0.75
 
         "Stay away":
-            $ reputation.add_point(Reputations.BRO)
+            $ reputation.add_point(RepComponent.BRO)
             scene v12slpbet18 # FPP. MC and Amber lying in bed, not cuddled up (check v12slpbet16a), MC looking at Amber, Amber's back turned to MC
             with dissolve
 

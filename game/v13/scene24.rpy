@@ -58,7 +58,7 @@ label v13s24:
 
     menu:
         "I already have a girl":
-            $ reputation.add_point(Reputations.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
 
             scene v13s24_3a
             with dissolve
@@ -96,9 +96,9 @@ label v13s24:
             barh "Awkward..."
 
         "Fuck yeah, let's mingle":
-            $ reputation.add_point(Reputations.BRO)
+            $ reputation.add_point(RepComponent.BRO)
             if chloe.relationship >= Relationship.GIRLFRIEND or lauren.relationship >= Relationship.GIRLFRIEND:
-                $ reputation.add_point(Reputations.TROUBLEMAKER)
+                $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             scene v13s24_3a
             with dissolve
@@ -374,7 +374,7 @@ label v13s24:
 
     menu:
         "No kids for me":
-            $ reputation.add_point(Reputations.BRO)
+            $ reputation.add_point(RepComponent.BRO)
             $ v13_emmy_points += 1
             
             scene v13s24_11a
@@ -388,7 +388,7 @@ label v13s24:
             pause 0.75
 
         "I'm a family man":
-            $ reputation.add_point(Reputations.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             
             scene v13s24_11a
             #with dissolve
@@ -565,7 +565,7 @@ label v13s24:
 
     menu:
         "Yes, I'm a romantic":
-            $ reputation.add_point(Reputations.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             $ kourtney.relationship = Relationship.LIKES
             
             scene v13s24_16h
@@ -574,7 +574,7 @@ label v13s24:
             u "I feel like I'm a romantic, so of course."
 
         "No, that's too old school":
-            $ reputation.add_point(Reputations.TROUBLEMAKER)
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             scene v13s24_16i # FPP. same as v13s24_16h kourtney slight frown
             with dissolve
@@ -688,7 +688,7 @@ label v13s24:
 
     menu:
         "Work":
-            $ reputation.add_point(Reputations.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             $ aryssa.relationship = Relationship.LIKES
             
             scene v13s24_16l
@@ -697,8 +697,8 @@ label v13s24:
             u "I'd still be working in some way, shape or form. Don't have time for boredom."
 
         "Retired life":
-            $ reputation.add_point(Reputations.BRO)
-            $ reputation.add_point(Reputations.TROUBLEMAKER)
+            $ reputation.add_point(RepComponent.BRO)
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             scene v13s24_16m # FPP. same as v13s24_16l aryssa slight frown
             with dissolve

@@ -313,14 +313,14 @@ label v13s8:
 
     menu:
         "Yeah":
-            $ reputation.add_point(Reputations.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             scene v13s8_9f
             with dissolve
 
             u "Yeah, I think I'd have to pick Lindsey at the moment."
 
         "I haven't decided yet":
-            $ reputation.add_point(Reputations.TROUBLEMAKER)
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
             scene v13s8_9f
             with dissolve
 

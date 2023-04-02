@@ -51,7 +51,7 @@ label v9_warehouse_lindsey:
 
         menu:
             "Stop her":
-                $ reputation.add_point(Reputations.BOYFRIEND)
+                $ reputation.add_point(RepComponent.BOYFRIEND)
 
                 u "Um... Lindsey?"
 
@@ -137,7 +137,7 @@ label v9_warehouse_lindsey:
 
         menu:
             "It was a joke":
-                $ reputation.add_point(Reputations.BRO)
+                $ reputation.add_point(RepComponent.BRO)
                 
                 u "Aww, don't worry. No cold feet here. You're just very hard to resist."
                 
@@ -185,7 +185,7 @@ label v9_warehouse_lindsey:
                 with dissolve
     
             "Be serious":
-                $ reputation.add_point(Reputations.BOYFRIEND)
+                $ reputation.add_point(RepComponent.BOYFRIEND)
 
                 u "Sorry, I'm just getting in my head. There's a lot riding on this fight."
 
@@ -285,7 +285,7 @@ label v9_warehouse_lindsey:
                 u "(Am I nuts or was that a cold shoulder? Damn. I really want to fix it but I have to get ready.)"
 
             "Stop her":
-                $ reputation.add_point(Reputations.BOYFRIEND)
+                $ reputation.add_point(RepComponent.BOYFRIEND)
 
                 u "Um, I'm sorry about earlier. I..."
 

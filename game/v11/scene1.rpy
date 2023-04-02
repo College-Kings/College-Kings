@@ -676,7 +676,7 @@ label v11_start:
             u "No further comments. I know you as the board will make the right decision."
 
         "I won":
-            $ reputation.add_point(Reputations.TROUBLEMAKER)
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             scene v11coc12b
             with dissolve

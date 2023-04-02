@@ -42,7 +42,7 @@ label v14s03e:
 
         menu: 
             "Good to hear":
-                $ reputation.add_point(Reputations.BRO)
+                $ reputation.add_point(RepComponent.BRO)
                 
                 u "Oh, good to hear..."
 
@@ -52,7 +52,7 @@ label v14s03e:
                 ry "Damn right it's good!" 
 
             "Oof, poor Satin":
-                $ reputation.add_point(Reputations.TROUBLEMAKER)
+                $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
                 scene v14s03e_3
                 #with dissolve
@@ -127,7 +127,7 @@ label v14s03e:
 
         menu:
             "I'm glad you waited":
-                $ reputation.add_point(Reputations.BRO)
+                $ reputation.add_point(RepComponent.BRO)
                 u "I'm glad you did."
 
                 scene v14s03e_6b
@@ -141,7 +141,7 @@ label v14s03e:
                 u "That girl you were talking to... She had herpes."
 
             "You should've done it":
-                $ reputation.add_point(Reputations.TROUBLEMAKER)
+                $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
                 u "I don't know man, I think you should've done it."
 
@@ -327,11 +327,11 @@ label v14s03e:
     menu:
 
         "Laugh":
-            $ reputation.add_point(Reputations.TROUBLEMAKER)
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
             u "*Laughs* Oh god."
 
         "Get mad":
-            $ reputation.add_point(Reputations.BRO)
+            $ reputation.add_point(RepComponent.BRO)
             u "What the fuck?!"
 
     u "So you set Imre up? I thought you two were finally getting along."
@@ -422,7 +422,7 @@ label v14s03e:
 
     menu:
         "That was hilarious":
-            $ reputation.add_point(Reputations.TROUBLEMAKER)
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
             u "Haha, that was hilarious."
 
             scene v14s03e_20
@@ -431,7 +431,7 @@ label v14s03e:
             ry "Right???"
 
         "Not cool, Ryan":
-            $ reputation.add_point(Reputations.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             
             scene v14s03e_20a
             #with dissolve

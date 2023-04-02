@@ -36,7 +36,7 @@ label v14s02:
     menu:
 
         "A little bit":
-            $ reputation.add_point(Reputations.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
 
             u "Maybe a little bit."
 
@@ -46,7 +46,7 @@ label v14s02:
             imre "Haha, I knew it."
 
         "Not at all":
-            $ reputation.add_point(Reputations.TROUBLEMAKER)
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             scene v14s02_2a
             #with dissolve

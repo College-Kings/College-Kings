@@ -134,14 +134,14 @@ label v13s48:
     
     menu:
         "Stay quiet":
-            $ reputation.add_point(Reputations.BRO)
+            $ reputation.add_point(RepComponent.BRO)
             scene v13s48_6
             with dissolve
 
             u "(I'll let her work.)"
 
         "DAMNNN...!":
-            $ reputation.add_point(Reputations.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             scene v13s48_6
             with dissolve
             
@@ -299,11 +299,11 @@ label v13s48:
 
     menu:
         "Because we're friends":
-            $ reputation.add_point(Reputations.BRO)
+            $ reputation.add_point(RepComponent.BRO)
             u "Because we're friends and it'd be nice to know you a bit better. *Chuckles*"
 
         "Because I like you":
-            $ reputation.add_point(Reputations.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             u "Because I like you, and it'd be nice to add more reasons why I like you to my list. *Chuckles*"
 
     scene v13s48_8a
@@ -533,7 +533,7 @@ label v13s48:
     menu :
         "Get her chocolates":
             $ aubrey.points += 1
-            $ reputation.add_point(Reputations.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             $ v13s48_get_aubrey_chocolate = True
 
             u "Wait right here okay?"
@@ -641,7 +641,7 @@ label v13s48:
         
         menu:
             "I meant as friends":
-                $ reputation.add_point(Reputations.BRO)
+                $ reputation.add_point(RepComponent.BRO)
 
                 u "I meant it as friends."
 
@@ -651,7 +651,7 @@ label v13s48:
                 au "Mhmm, okay. *Chuckles* When are you thinking about going?"
 
             "I meant as a date":
-                $ reputation.add_point(Reputations.BOYFRIEND)
+                $ reputation.add_point(RepComponent.BOYFRIEND)
 
                 scene v13s48_8
                 #with dissolve
@@ -719,7 +719,7 @@ label v13s48:
 
         menu :
             "Go on the date":
-                $ reputation.add_point(Reputations.BRO)
+                $ reputation.add_point(RepComponent.BRO)
                 $ v13s48_ryan_double_date = True
 
                 scene v13s48_12
@@ -738,7 +738,7 @@ label v13s48:
                 u "Alright, sounds good."
 
             "Don't go on the date":
-                $ reputation.add_point(Reputations.BOYFRIEND)
+                $ reputation.add_point(RepComponent.BOYFRIEND)
 
                 scene v13s48_12
                 with dissolve

@@ -147,7 +147,7 @@ label v12_mc_chilling:
 
         menu:
             "What?":
-                $ reputation.add_point(Reputations.TROUBLEMAKER)
+                $ reputation.add_point(RepComponent.TROUBLEMAKER)
                 scene v12mor9
                 with dissolve
 
@@ -164,7 +164,7 @@ label v12_mc_chilling:
                 u "No, Sam. I mean, yeah. Of course you're pretty. I just wasn't expecting that question I guess."
 
             "Yes":
-                $ reputation.add_point(Reputations.BOYFRIEND)
+                $ reputation.add_point(RepComponent.BOYFRIEND)
                 scene v12mor9
                 with dissolve
 
@@ -304,7 +304,7 @@ label v12_mc_chilling:
                 sa "*Drunk* Good... Right answer."
 
             "No":
-                $ reputation.add_point(Reputations.TROUBLEMAKER)
+                $ reputation.add_point(RepComponent.TROUBLEMAKER)
                 scene v12mor13a
                 with dissolve
 
@@ -338,7 +338,7 @@ label v12_mc_chilling:
         menu:
             "I can beat Cameron":
                 $ v12s23a_sam += 1
-                $ reputation.add_point(Reputations.TROUBLEMAKER)
+                $ reputation.add_point(RepComponent.TROUBLEMAKER)
                 
                 scene v12mor13a
                 with dissolve
@@ -346,7 +346,7 @@ label v12_mc_chilling:
                 u "Yeah. Of course I can take him. He may be a lunatic, but I can handle that."
 
             "Not fighting your brother":
-                $ reputation.add_point(Reputations.BRO)
+                $ reputation.add_point(RepComponent.BRO)
                 scene v12mor13a 
                 with dissolve
                 
@@ -472,7 +472,7 @@ label v12_mc_chilling:
 
         menu:
             "Call Cameron":
-                $ reputation.add_point(Reputations.BRO)
+                $ reputation.add_point(RepComponent.BRO)
 
                 scene v12mor23 # TPP. MC holding his phone, mouth closed
                 with dissolve
@@ -566,7 +566,7 @@ label v12_mc_chilling:
                 pause 0.75
 
             "Don't call Cameron":
-                $ reputation.add_point(Reputations.BOYFRIEND)
+                $ reputation.add_point(RepComponent.BOYFRIEND)
                 scene v12mor22
                 with dissolve
 
@@ -651,7 +651,7 @@ label v12_mc_chilling:
 
 
             "No, I don't miss you (Joke)":
-                $ reputation.add_point(Reputations.TROUBLEMAKER)
+                $ reputation.add_point(RepComponent.TROUBLEMAKER)
                 scene v12mor24a
                 with dissolve
 
@@ -769,7 +769,7 @@ label v12_mc_chilling:
 
         menu:
             "Call Cameron":
-                $ reputation.add_point(Reputations.BRO)
+                $ reputation.add_point(RepComponent.BRO)
 
                 scene v12mor24d
                 with dissolve
@@ -860,7 +860,7 @@ label v12_mc_chilling:
                 pause 0.75
 
             "Don't call Cameron":
-                $ reputation.add_point(Reputations.BOYFRIEND)
+                $ reputation.add_point(RepComponent.BOYFRIEND)
                 scene v12mor22
                 with dissolve
 

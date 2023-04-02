@@ -204,12 +204,12 @@ label v14s05a:
         menu:
             "I think you should":
                 $ v14s5a_riley_should_join_chicks = True
-                $ reputation.add_point(Reputations.BRO)
+                $ reputation.add_point(RepComponent.BRO)
 
                 u "I think you should. You'd really fit in there."
 
             "You sure it's for you?":
-                $ reputation.add_point(Reputations.BOYFRIEND)
+                $ reputation.add_point(RepComponent.BOYFRIEND)
 
                 u "Hmm, are you sure it's for you?"
 
@@ -246,9 +246,9 @@ label v14s05a:
         menu: 
             "Help Chloe":
                 if chloe.relationship >= Relationship.GIRLFRIEND:
-                    $ reputation.add_point(Reputations.BOYFRIEND)
+                    $ reputation.add_point(RepComponent.BOYFRIEND)
                 elif lindsey.relationship >= Relationship.FWB:
-                    $ reputation.add_point(Reputations.TROUBLEMAKER)
+                    $ reputation.add_point(RepComponent.TROUBLEMAKER)
                 scene v14s05a_13
                 with dissolve
 
@@ -256,9 +256,9 @@ label v14s05a:
 
             "Help Lindsey":
                 if lindsey.relationship >= Relationship.FWB:
-                    $ reputation.add_point(Reputations.BOYFRIEND)
+                    $ reputation.add_point(RepComponent.BOYFRIEND)
                 elif chloe.relationship >= Relationship.GIRLFRIEND:
-                    $ reputation.add_point(Reputations.TROUBLEMAKER)
+                    $ reputation.add_point(RepComponent.TROUBLEMAKER)
                 scene v14s05a_13
                 with dissolve
 

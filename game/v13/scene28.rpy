@@ -174,7 +174,7 @@ label v13s28:
 
         menu:
             "Not a good idea, Sam":
-                $ reputation.add_point(Reputations.BRO)
+                $ reputation.add_point(RepComponent.BRO)
                 scene v13s28_7b # FPP. Same as v13s28_7, Samantha looking at MC, Samantha slight smile, mouth closed.
                 with dissolve
 

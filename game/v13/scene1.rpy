@@ -185,8 +185,8 @@ label v13_start:
 
     menu:
         "Don't let it happen again":
-            $ reputation.add_point(Reputations.BRO)
-            $ reputation.add_point(Reputations.TROUBLEMAKER)
+            $ reputation.add_point(RepComponent.BRO)
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
             u "Just don't let it happen again, okay? I don't like being blamed for shit I didn't do."
 
             scene v13s1_3c
@@ -195,7 +195,7 @@ label v13_start:
             ri "Of course, and I know you're a true friend. I won't jump to conclusions so quickly in the future."
 
         "Apology accepted":
-            $ reputation.add_point(Reputations.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             $ riley.points += 1
 
             scene v13s1_3d

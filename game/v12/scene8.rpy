@@ -182,7 +182,7 @@ label v12_murder_mystery_reveal:
     menu:
         "Let Chris help her":
             $ v12_help_chris += 1
-            $ reputation.add_point(Reputations.BRO)
+            $ reputation.add_point(RepComponent.BRO)
 
             u "(It's his girl, he's got her.)"
 
@@ -207,7 +207,7 @@ label v12_murder_mystery_reveal:
             pause 0.75
 
         "Hurry to help her":
-            $ reputation.add_point(Reputations.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             $ nora.relationship = Relationship.LIKES
             
             scene v12mmr9 # TPP. Show MC rushing to Nora, MC worried, mouth closed, Nora feeling sick, mouth closed

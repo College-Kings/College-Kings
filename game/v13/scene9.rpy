@@ -296,7 +296,7 @@ label v13s9:
             cl "I knew I could count on you."
 
             if chloe.relationship >= Relationship.GIRLFRIEND: # -If Chloegirlfriend (extra dialog)
-                $ reputation.add_point(Reputations.BOYFRIEND)
+                $ reputation.add_point(RepComponent.BOYFRIEND)
 
                 play sound "sounds/kiss.mp3"
                 
@@ -346,7 +346,7 @@ label v13s9:
             if chloe.relationship >= Relationship.GIRLFRIEND: # -If Chloegirlfriend (extra dialog)
                 $ chloe.points -= 1 
                 
-                $ reputation.add_point(Reputations.TROUBLEMAKER)
+                $ reputation.add_point(RepComponent.TROUBLEMAKER)
                 
                 scene v13s9_12l # FPP. Chloe facing MC (not leaning) very MAD, leaning in towards MC, pointing finger at MC (Yelling at him)
                 with dissolve
@@ -607,7 +607,7 @@ label v13s9:
         
         menu:
             "Go with Ryan":
-                $ reputation.add_point(Reputations.BRO) # only give points for the decision; not the else (default) flow.   
+                $ reputation.add_point(RepComponent.BRO) # only give points for the decision; not the else (default) flow.   
                 jump v13s9_no_concert
 
             "Don't go with Ryan":

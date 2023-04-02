@@ -34,7 +34,7 @@ label v10_sam_kitchen:
     menu:
         "Make her a cocktail":
             $ makeSamCock = True
-            $ reputation.add_point(Reputations.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             $ samantha.points += 1
             scene v10skt2 
             with dissolve
@@ -91,7 +91,7 @@ label v10_sam_kitchen:
             menu:
                 "Drink with her":
                     $ drinkWsam = True
-                    $ reputation.add_point(Reputations.BOYFRIEND)
+                    $ reputation.add_point(RepComponent.BOYFRIEND)
                     $ samantha.points += 1
                     scene v10skt4a 
                     with dissolve
@@ -119,7 +119,7 @@ label v10_sam_kitchen:
 
         "Get mad":
             $ samantha.points -= 1
-            $ reputation.add_point(Reputations.TROUBLEMAKER)
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
             scene v10skt2
             with dissolve
 
@@ -172,7 +172,7 @@ label v10_sam_kitchen:
 
     menu:
         "Tease her":
-            $ reputation.add_point(Reputations.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             $ samantha.points += 1
             scene v10skt4a
             with dissolve

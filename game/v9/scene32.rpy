@@ -55,7 +55,7 @@ label v9_sat_hit_gym:
 
         menu:
             "Convince her":
-                $ reputation.add_point(Reputations.BOYFRIEND)
+                $ reputation.add_point(RepComponent.BOYFRIEND)
                 jump v9_sat_hit_gym_convince
             "Forget it":
                 jump v9_sat_hit_gym_forget

@@ -147,7 +147,7 @@ label v14s03d:
 
     menu:
         "You get what you pay for":
-            $ reputation.add_point(Reputations.TROUBLEMAKER)
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             u "*Chuckles* Hey, you get what you pay for right?"
 

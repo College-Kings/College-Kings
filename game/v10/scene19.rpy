@@ -41,7 +41,7 @@ label v10_walk_jenny_text:
         "Invite Penelope":
             $ penelope.points += 1
             $ v10_inv_pen_cafe = True
-            $ reputation.add_point(Reputations.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
 
             u "(Yeah, I should invite her. Best if she's the one that breaks the news to her.)"
 

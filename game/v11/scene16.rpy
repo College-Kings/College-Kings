@@ -112,7 +112,7 @@ label v11_lauren_airport_convo:
 
                 menu:
                     "Yes":
-                        $ reputation.add_point(Reputations.TROUBLEMAKER)
+                        $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
                         scene v11laac2e
                         with dissolve
@@ -214,7 +214,7 @@ label v11_lauren_airport_convo:
 
             menu:
                 "Play it cool":
-                    $ reputation.add_point(Reputations.BRO)
+                    $ reputation.add_point(RepComponent.BRO)
 
                     scene v11laac2h # FPP. Same as v11laac2e, Lauren has a slightly seductive look, mouth closed
                     with dissolve
@@ -222,7 +222,7 @@ label v11_lauren_airport_convo:
                     u "*Smirks* Sounds nice."
 
                 "Act clueless":
-                    $ reputation.add_point(Reputations.BOYFRIEND)
+                    $ reputation.add_point(RepComponent.BOYFRIEND)
 
                     scene v11laac2h
                     with dissolve

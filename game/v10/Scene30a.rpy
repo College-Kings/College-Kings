@@ -87,7 +87,7 @@ label v10_emily_course:
 
                 menu:
                     "Join Emily":
-                        $ reputation.add_point(Reputations.BOYFRIEND)
+                        $ reputation.add_point(RepComponent.BOYFRIEND)
                         $ emily.points += 1
 
                         u "I'm sure I could try it out."
@@ -137,14 +137,14 @@ label v10_emily_course:
 
                         menu:
                             "Save Emily":
-                                $ reputation.add_point(Reputations.BOYFRIEND)
+                                $ reputation.add_point(RepComponent.BOYFRIEND)
 
                                 u "Don't you die on us!"
 
                                 be "Looks like you two are really getting into it."                                
 
                             "Don't save Emily":
-                                $ reputation.add_point(Reputations.TROUBLEMAKER)
+                                $ reputation.add_point(RepComponent.TROUBLEMAKER)
                             
                                 u "Oh no, if only someone could save her."
 
@@ -168,7 +168,7 @@ label v10_emily_course:
 
                         menu:
                             "Agree with Emily":
-                                $ reputation.add_point(Reputations.BOYFRIEND)
+                                $ reputation.add_point(RepComponent.BOYFRIEND)
                                 $ emily.points += 1
 
                                 u "Yeah, I could be down."
@@ -224,7 +224,7 @@ label v10_emily_course:
                         jump v10_late_alley
 
                     "Leave":
-                        $ reputation.add_point(Reputations.TROUBLEMAKER)
+                        $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
                         u "Shoot, what time is it?"
 
@@ -308,7 +308,7 @@ label v10_emily_course:
 
                 menu:
                     "Join Emily":
-                        $ reputation.add_point(Reputations.BOYFRIEND)
+                        $ reputation.add_point(RepComponent.BOYFRIEND)
                         $ emily.points += 1
                         $ forgiveemily = True
 
@@ -359,14 +359,14 @@ label v10_emily_course:
 
                         menu:
                             "Save Emily":
-                                $ reputation.add_point(Reputations.BOYFRIEND)
+                                $ reputation.add_point(RepComponent.BOYFRIEND)
 
                                 u "Don't you die on us!"
 
                                 be "Looks like you two are really getting into it."                                
 
                             "Don't save Emily":
-                                $ reputation.add_point(Reputations.TROUBLEMAKER)
+                                $ reputation.add_point(RepComponent.TROUBLEMAKER)
                             
                                 u "Oh no, if only someone could save her."
 
@@ -390,7 +390,7 @@ label v10_emily_course:
 
                         menu:
                             "Agree with Emily":
-                                $ reputation.add_point(Reputations.BOYFRIEND)
+                                $ reputation.add_point(RepComponent.BOYFRIEND)
                                 $ emily.points += 1
 
                                 u "Yeah, I could be down."
@@ -446,7 +446,7 @@ label v10_emily_course:
                         jump v10_late_alley
 
                     "Leave":
-                        $ reputation.add_point(Reputations.TROUBLEMAKER)
+                        $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
                         u "Shoot, what time is it?"
 

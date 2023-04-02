@@ -187,7 +187,7 @@ label v12_nursing_aubrey:
 
     menu:
         "If I was your boyfriend...":
-            $ reputation.add_point(Reputations.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             $ v12_aubrey_gf = True
 
             scene v12aun4f

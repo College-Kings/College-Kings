@@ -1,29 +1,29 @@
 init python:
     def v7_kiwiiReply1():
         v7_kiwiiPost1.newComment(cameron, _("Lol, pussy"), mentions=[mc], number_likes=renpy.random.randint(1, 10))
-        reputation.add_point(Reputations.BOYFRIEND)
+        reputation.add_point(RepComponent.BOYFRIEND)
 
     def v7_kiwiiReply2():
         v7_kiwiiPost1.newComment(imre, _("Slide into her DMs bro!"), mentions=[mc], number_likes=renpy.random.randint(5, 15))
-        reputation.add_point(Reputations.BRO)
-        reputation.add_point(Reputations.TROUBLEMAKER)
+        reputation.add_point(RepComponent.BRO)
+        reputation.add_point(RepComponent.TROUBLEMAKER)
 
     def v7_kiwiiReply3():
-        reputation.add_point(Reputations.BOYFRIEND)
+        reputation.add_point(RepComponent.BOYFRIEND)
 
     def v7_kiwiiReply4():
         v7_kiwiiPost2.newComment(autumn, _("Yeah, they really are"), mentions=[mc], number_likes=renpy.random.randint(8, 18))
     
     def v7_kiwiiReply5():
-        reputation.add_point(Reputations.BRO)
+        reputation.add_point(RepComponent.BRO)
         v7_kiwiiPost3.newComment(aubrey, _("Bring it on!"), mentions=[mc], number_likes=renpy.random.randint(15, 35))
 
     def v7_kiwiiReply6():
-        reputation.add_point(Reputations.TROUBLEMAKER)
+        reputation.add_point(RepComponent.TROUBLEMAKER)
         v7_kiwiiPost4.newComment(josh, _("lol"), mentions=[mc], number_likes=renpy.random.randint(3, 7))
 
     def v7_msgReply1():
-        reputation.add_point(Reputations.BRO)
+        reputation.add_point(RepComponent.BRO)
         penelope.messenger.newMessage(_("Okay..."))
 
     def v7_msgReply2():
@@ -260,8 +260,8 @@ label v7start:
 
     menu:
         "Why aren't you on here?":
-            $ reputation.add_point(Reputations.BRO)
-            $ reputation.add_point(Reputations.TROUBLEMAKER)
+            $ reputation.add_point(RepComponent.BRO)
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             u "So, I don't know if it's weird asking, but if you're not one of the Fight Kings, how come you're the current President?"
 
@@ -284,7 +284,7 @@ label v7start:
             u "Yeah, I can see that. But winning must be surreal too."
 
         "That's really impressive":
-            $ reputation.add_point(Reputations.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
 
             u "That's really impressive. Winning the entire tournament must be surreal."
 
@@ -460,7 +460,7 @@ label v7start:
 
         menu:
             "Walk Riley home":
-                $ reputation.add_point(Reputations.BRO)
+                $ reputation.add_point(RepComponent.BRO)
 
                 scene s683a
                 with dissolve
@@ -477,7 +477,7 @@ label v7start:
                 jump hd_ad
 
             "Go after Nora":
-                $ reputation.add_point(Reputations.TROUBLEMAKER)
+                $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
                 scene s683a
                 with dissolve
@@ -512,12 +512,12 @@ label v7start:
 
         menu:
             "Go after Nora":
-                $ reputation.add_point(Reputations.BOYFRIEND)
+                $ reputation.add_point(RepComponent.BOYFRIEND)
 
                 u "(I should go after her and make sure she's okay.)"
 
             "Leave her alone":
-                $ reputation.add_point(Reputations.BRO)
+                $ reputation.add_point(RepComponent.BRO)
 
                 u "(I should leave her alone, she probably just wants to be alone right now.)"
                 u "(It's late anyway, I better go home.)"
@@ -1008,7 +1008,7 @@ label hd_ad:
     menu:
         "Keep it friendly":
             if lauren.relationship >= Relationship.GIRLFRIEND:
-                $ reputation.add_point(Reputations.BOYFRIEND)
+                $ reputation.add_point(RepComponent.BOYFRIEND)
 
             u "I'm glad. A lot of the Wolves seem really cool. How's classes going? Finish the econ assignment yet?"
 
@@ -1083,9 +1083,9 @@ label hd_ad:
 
         "Start flirting":
             if lauren.relationship >= Relationship.GIRLFRIEND :
-                $ reputation.add_point(Reputations.TROUBLEMAKER)
+                $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
-            $ reputation.add_point(Reputations.BRO)
+            $ reputation.add_point(RepComponent.BRO)
 
             u "I'd imagine. Plus you saved the best for last."
 
@@ -1192,9 +1192,9 @@ label hd_ad:
     menu:
         "Yeah, I'd like that":
             if lauren.relationship >= Relationship.GIRLFRIEND or emily.relationship >= Relationship.FWB:
-                $ reputation.add_point(Reputations.TROUBLEMAKER)
+                $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
-            $ reputation.add_point(Reputations.BRO)
+            $ reputation.add_point(RepComponent.BRO)
             $ riley.relationship = Relationship.LIKES
 
             u "Yeah, I'd like that."
@@ -1303,7 +1303,7 @@ label hd_ad:
 
         "Uhm... I shouldn't":
             if lauren.relationship >= Relationship.GIRLFRIEND or emily.relationship >= Relationship.FWB:
-                $ reputation.add_point(Reputations.BOYFRIEND)
+                $ reputation.add_point(RepComponent.BOYFRIEND)
 
             u "Uhm... I probably shouldn't. It's quite late."
 
@@ -1421,7 +1421,7 @@ label conyourdorm:
 
         menu:
             "Be calm":
-                $ reputation.add_point(Reputations.BOYFRIEND)
+                $ reputation.add_point(RepComponent.BOYFRIEND)
 
                 scene s714
                 with dissolve
@@ -1536,7 +1536,7 @@ label conyourdorm:
                         jump thisbewalk
 
             "Get angry":
-                $ reputation.add_point(Reputations.TROUBLEMAKER)
+                $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
                 scene s714b # mc angry mouth open
                 with dissolve
@@ -1870,7 +1870,7 @@ label thisbelauren:
 
     menu:
         "Come clean about Emily":
-            $ reputation.add_point(Reputations.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
 
             u "I'm just gonna come right out and say it."
 
@@ -1911,7 +1911,7 @@ label thisbelauren:
 
             menu:
                 "This won't happen again":
-                    $ reputation.add_point(Reputations.BOYFRIEND)
+                    $ reputation.add_point(RepComponent.BOYFRIEND)
 
                     u "Like I said, it was a stupid mistake. After it happened, I realized that's not what I want at all."
 
@@ -2023,8 +2023,8 @@ label thisbelauren:
                         u "(I need to go for a walk and clear my head.)"
 
                 "Open relationship?":
-                    $ reputation.add_point(Reputations.BRO)
-                    $ reputation.add_point(Reputations.TROUBLEMAKER)
+                    $ reputation.add_point(RepComponent.BRO)
+                    $ reputation.add_point(RepComponent.TROUBLEMAKER)
                     $ lauren.relationship = Relationship.MAD
                     $ autumn.relationship = Relationship.MAD
 
@@ -2070,8 +2070,8 @@ label thisbelauren:
                     u "(I need to go for a walk and clear my head.)"
 
         "Deny the cheating":
-            $ reputation.add_point(Reputations.BRO)
-            $ reputation.add_point(Reputations.TROUBLEMAKER)
+            $ reputation.add_point(RepComponent.BRO)
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
             $ lauren.relationship = Relationship.GIRLFRIEND
 
             u "I know how this looks."
@@ -2237,9 +2237,9 @@ label thisbewalk:
         menu:
             "Almost as cute as you":
                 if lauren.relationship >= Relationship.GIRLFRIEND:
-                    $ reputation.add_point(Reputations.TROUBLEMAKER)
+                    $ reputation.add_point(RepComponent.TROUBLEMAKER)
                 else:
-                    $ reputation.add_point(Reputations.BOYFRIEND)
+                    $ reputation.add_point(RepComponent.BOYFRIEND)
 
                 u "Almost as cute as you."
 
@@ -2290,7 +2290,7 @@ label thisbewalk:
 
         menu:
             "Yes, of course":
-                $ reputation.add_point(Reputations.TROUBLEMAKER)
+                $ reputation.add_point(RepComponent.TROUBLEMAKER)
                 $ politics = True
 
                 u "Yes, of course. I guess we all have something. Am I right?"
@@ -2341,7 +2341,7 @@ label thisbewalk:
                 aut "Oh, alright. I'll definitely check it out."
 
             "No, not really":
-                $ reputation.add_point(Reputations.BRO)
+                $ reputation.add_point(RepComponent.BRO)
 
                 u "No, not really. I'm not really into politics myself."
 
@@ -2365,7 +2365,7 @@ label thisbewalk:
 
         menu:
             "Can I join?":
-                $ reputation.add_point(Reputations.BOYFRIEND)
+                $ reputation.add_point(RepComponent.BOYFRIEND)
                 $ protest = True
 
                 u "Really? Any chance I can join you?"
@@ -2429,7 +2429,7 @@ label thisbewalk:
                     with dissolve
 
             "That's really cool":
-                $ reputation.add_point(Reputations.BRO)
+                $ reputation.add_point(RepComponent.BRO)
                 $ signs = False
 
                 u "That's really cool."
@@ -2752,8 +2752,8 @@ label beachlauren:
         if imre.relationship <= Relationship.MAD:
             menu:
                 "Tell her it's fine":
-                    $ reputation.add_point(Reputations.BRO)
-                    $ reputation.add_point(Reputations.TROUBLEMAKER)
+                    $ reputation.add_point(RepComponent.BRO)
+                    $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
                     u "Good, great. You know how he is. It's just uhm... really good."
 
@@ -2775,7 +2775,7 @@ label beachlauren:
                     u "I mean he's teaching me how to fight and everything..."
 
                 "Tell her he moved out":
-                    $ reputation.add_point(Reputations.BOYFRIEND)
+                    $ reputation.add_point(RepComponent.BOYFRIEND)
 
                     u "Uhm... Imre and I had a fight and he moved out..."
 
@@ -3157,8 +3157,8 @@ label beachlauren:
         if imre.relationship <= Relationship.MAD:
             menu:
                 "Tell her it's fine":
-                    $ reputation.add_point(Reputations.BRO)
-                    $ reputation.add_point(Reputations.TROUBLEMAKER)
+                    $ reputation.add_point(RepComponent.BRO)
+                    $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
                     u "Good, great. You know how he is. It's just uhm... really good."
 
@@ -3180,7 +3180,7 @@ label beachlauren:
                     u "I mean he's teaching me how to fight and everything..."
 
                 "Tell her he moved out":
-                    $ reputation.add_point(Reputations.BOYFRIEND)
+                    $ reputation.add_point(RepComponent.BOYFRIEND)
 
                     u "Uhm... Imre and I had a fight and he moved out..."
 
@@ -3248,7 +3248,7 @@ label beachlauren:
 
         menu:
             "You're cute":
-                $ reputation.add_point(Reputations.TROUBLEMAKER)
+                $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
                 scene s742e
                 with dissolve
@@ -3319,7 +3319,7 @@ label beachlauren:
                             u "Yeah, me too."
 
                         "Don't risk it":
-                            $ reputation.add_point(Reputations.BOYFRIEND)
+                            $ reputation.add_point(RepComponent.BOYFRIEND)
 
                             u "*Chuckles*"
 
@@ -3327,7 +3327,7 @@ label beachlauren:
                     u "*Chuckles*"
 
             "I won't":
-                $ reputation.add_point(Reputations.BOYFRIEND)
+                $ reputation.add_point(RepComponent.BOYFRIEND)
 
                 u "I won't... don't worry."
 
@@ -3505,7 +3505,7 @@ label afterbeach:
 
 ####### SCENE 13 PLEDGING THE WOLVES
 label pledgewolves:
-    $ reputation.add_point(Reputations.BRO)
+    $ reputation.add_point(RepComponent.BRO)
     $ joinwolves = True
 
     scene s756 # Camera - third person, MC walking through town during evening wearing jeans
@@ -3746,7 +3746,7 @@ label pledgewolves:
     with dissolve
     menu:
         "Eliminate Imre":
-            $ reputation.add_point(Reputations.TROUBLEMAKER)
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             scene s768a
             with dissolve
@@ -3754,7 +3754,7 @@ label pledgewolves:
 
         "Decline":
             $ wolvesTasks.add("task1")
-            $ reputation.add_point(Reputations.BRO)
+            $ reputation.add_point(RepComponent.BRO)
 
             scene s768a
             with dissolve
@@ -3887,8 +3887,8 @@ label pledgewolves:
 
     menu:
         "Get the call":
-            $ reputation.add_point(Reputations.BOYFRIEND)
-            $ reputation.add_point(Reputations.TROUBLEMAKER)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             scene s779 # Close up of MC leaving out of the tub, mouth open
             with dissolve
@@ -3898,7 +3898,7 @@ label pledgewolves:
 
         "Continue the challenge":
             $ wolvesTasks.add("task2")
-            $ reputation.add_point(Reputations.BRO)
+            $ reputation.add_point(RepComponent.BRO)
 
             u "I'll get it later. I'm in this to win."
             ch "That's the spirit!"
@@ -4298,8 +4298,8 @@ label aftercall:
     with dissolve
     menu:
         "Do it":
-            $ reputation.add_point(Reputations.TROUBLEMAKER)
-            $ reputation.add_point(Reputations.BRO)
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
+            $ reputation.add_point(RepComponent.BRO)
 
             u "Why not, you should do it."
 
@@ -4316,7 +4316,7 @@ label aftercall:
             no "Okaaay, well I'll mark that down."
 
         "Of course not":
-            $ reputation.add_point(Reputations.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
 
             u "Isn't that obvious? You don't do it."
 
@@ -4411,8 +4411,8 @@ label aftercall:
             if lauren.relationship >= Relationship.GIRLFRIEND:
                 $ reputation.add_point(Reputations.TROUBLEMAKER, 2)
             else:
-                $ reputation.add_point(Reputations.TROUBLEMAKER)
-                $ reputation.add_point(Reputations.BOYFRIEND)
+                $ reputation.add_point(RepComponent.TROUBLEMAKER)
+                $ reputation.add_point(RepComponent.BOYFRIEND)
 
             ### NEW ACHIEVEMENT UNLOCK? ###
             scene s793c # Nora still leaning into the MC. MC tilts forward his head and goes for a kiss
@@ -4457,9 +4457,9 @@ label aftercall:
 
         "Pull away":
             $ wolvesTasks.add("task4")
-            $ reputation.add_point(Reputations.BRO)
+            $ reputation.add_point(RepComponent.BRO)
             if lauren.relationship >= Relationship.GIRLFRIEND:
-                $ reputation.add_point(Reputations.BOYFRIEND)
+                $ reputation.add_point(RepComponent.BOYFRIEND)
 
             scene s793f # MC tilts back when Nora is tilting towards him. MC talking, Nora mouth closed
             with dissolve
@@ -4968,7 +4968,7 @@ label pledgeapes:
 
     menu:
         "Stand up to him":
-            $ reputation.add_point(Reputations.TROUBLEMAKER)
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             scene s843a # Cameron threatening and mouth closed
             with dissolve
@@ -5011,7 +5011,7 @@ label pledgeapes:
             ca "Then get in the ring with me."
 
         "Hold yourself back":
-            $ reputation.add_point(Reputations.BRO)
+            $ reputation.add_point(RepComponent.BRO)
             pause 0.5
 
             scene s844a # MC holding in anger and clenching his fists. Cameron back to normal position and mouth open, with a smirk
@@ -5041,7 +5041,7 @@ label ep7_fight_cam:
 
     menu:
         "Punch him":
-            $ reputation.add_point(Reputations.TROUBLEMAKER)
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             scene s846b # MC throws a punch but Cameron blocks it
             with hpunch
@@ -5065,8 +5065,8 @@ label ep7_fight_cam:
             pause 0.7
 
         "Retreat":
-            $ reputation.add_point(Reputations.BOYFRIEND)
-            $ reputation.add_point(Reputations.BRO)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BRO)
 
             scene s846c # Same as s846 but Cameron mouth closed
             with dissolve
@@ -5206,7 +5206,7 @@ label ep7_cam_picture:
 
     menu:
         "Take the slip":
-            $ reputation.add_point(Reputations.TROUBLEMAKER)
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             scene s856
             with dissolve
@@ -5217,7 +5217,7 @@ label ep7_cam_picture:
             gr "No problem. Just looking out."
 
         "Decline":
-            $ reputation.add_point(Reputations.BRO)
+            $ reputation.add_point(RepComponent.BRO)
 
             scene s856
             with dissolve
@@ -5285,13 +5285,13 @@ label ep7_cam_picture:
     menu:
         "Call her":
             $ apesVids += 1
-            $ reputation.add_point(Reputations.BRO)
-            $ reputation.add_point(Reputations.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BRO)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
 
             u "Okay."
 
         "Refuse to do it":
-            $ reputation.add_point(Reputations.TROUBLEMAKER)
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             u "Nah, I'm not calling Chloe."
 
@@ -5421,7 +5421,7 @@ label after_pledges:
         menu:
             "Text her":
                 $ emilyText = True
-                $ reputation.add_point(Reputations.BOYFRIEND)
+                $ reputation.add_point(RepComponent.BOYFRIEND)
 
                 $ emily.messenger.addReply(_("Hey, sorry I lost track of time. You up?"))
 
@@ -5436,7 +5436,7 @@ label after_pledges:
 
             "Don't text her":
                 $ forgiveemily = False
-                $ reputation.add_point(Reputations.TROUBLEMAKER)
+                $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
                 u "(Nah, I've had enough of her.)"
 
@@ -5919,7 +5919,7 @@ label after_pledges:
 
         menu:
             "Defend yourself":
-                $ reputation.add_point(Reputations.TROUBLEMAKER)
+                $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
                 scene s886 # Camera - TPP (Similar to s884 but closer). MC confident and talking looking at Lee. Lee mouth closed and looking at the MC
                 with dissolve
@@ -5979,7 +5979,7 @@ label after_pledges:
                 jump after_history
 
             "Stay silent":
-                $ reputation.add_point(Reputations.BOYFRIEND)
+                $ reputation.add_point(RepComponent.BOYFRIEND)
 
                 scene s886c # MC looking down in embarrassment. Lee looking at MC. Both mouths closed
                 with dissolve
@@ -6304,7 +6304,7 @@ label after_history:
 
     menu:
         "Make fun of his costume":
-            $ reputation.add_point(Reputations.TROUBLEMAKER)
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             u "You serious bro? Elvis? Is that how far you could think back? Hahaha."
 
@@ -6317,7 +6317,7 @@ label after_history:
             u "Disagree, but what's up?"
 
         "Just say hello":
-            $ reputation.add_point(Reputations.BRO)
+            $ reputation.add_point(RepComponent.BRO)
 
             u "Hey, what's up?"
 
@@ -6374,7 +6374,7 @@ label after_history:
 
     menu:
         "Do it":
-            $ reputation.add_point(Reputations.TROUBLEMAKER)
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             u "Fine! If you're that interested in looking at Mr. Lee's naked ass."
 
@@ -6383,7 +6383,7 @@ label after_history:
             ca "Haha, fuck you! Lemme get the cam running."
 
         "That's stupid and risky":
-            $ reputation.add_point(Reputations.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
 
             u "Nah, that's stupid as fuck. I'm not getting kicked out of school just to join the Apes."
 
@@ -6421,7 +6421,7 @@ label after_history:
 
     menu (fail_label="lee_pants_fail"): # 3 second timer default
         "Pull it":
-            $ reputation.add_point(Reputations.TROUBLEMAKER)
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
             $ apesVids += 1
             stop sound
 
@@ -6595,7 +6595,7 @@ label hc_asking_amber:
         am "How about we skip the dance together? I promise it'll be a lot more fun."
         menu:
             "Alright, I'm in":
-                $ reputation.add_point(Reputations.TROUBLEMAKER)
+                $ reputation.add_point(RepComponent.TROUBLEMAKER)
                 $ hcGirl = "amber"
                 $ amber.relationship = Relationship.FWB
 
@@ -6615,7 +6615,7 @@ label hc_asking_amber:
                 jump after_hc_selection
 
             "I'd rather go to the dance":
-                $ reputation.add_point(Reputations.BOYFRIEND)
+                $ reputation.add_point(RepComponent.BOYFRIEND)
 
                 scene s919e
                 with dissolve
@@ -7469,7 +7469,7 @@ label cameron_thurs_tasks:
 
     menu:
         "Do it":
-            $ reputation.add_point(Reputations.TROUBLEMAKER)
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
             $ apesVids += 1
 
             scene scc19 # TPP. Show MC grabbing the glue from Cameron, Cameron smile, MC mouth open.
@@ -7513,7 +7513,7 @@ label cameron_thurs_tasks:
             pause 0.5
 
         "Don't do it":
-            $ reputation.add_point(Reputations.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
 
             scene scc18 # FPP. Show Cameron disappointed expression, mouth closed.
             with dissolve
@@ -7587,7 +7587,7 @@ label cameron_thurs_tasks:
 
     menu:
         "Do it":
-            $ reputation.add_point(Reputations.TROUBLEMAKER)
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             scene scc28 # TPP. Show MC and Cameron high fiving, smile on both faces, MC mouth open.
             with dissolve
@@ -7625,7 +7625,7 @@ label cameron_thurs_tasks:
             # CRICKET DROP TIMER
             menu (fail_label="av_crickets_no_drop"):
                 "Drop the crickets":
-                    $ reputation.add_point(Reputations.TROUBLEMAKER)
+                    $ reputation.add_point(RepComponent.TROUBLEMAKER)
                     $ apesVids += 1
 
                     scene scc31a # FPP. As above but, show MC arms turning the container of crickets upside down with them falling out.
@@ -7699,7 +7699,7 @@ label cameron_thurs_tasks:
                         ca "Yeah well, next time act faster. I don't have time for this bullshit."
 
         "Don't do it":
-            $ reputation.add_point(Reputations.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
 
             scene scc27a # TPP. Show Cameron and MC back at campus stood together, Cameron angry expression.
             with dissolve
@@ -7919,7 +7919,7 @@ label v7_nsfwSkipLabel4:
 
     menu:
         "Console Samantha":
-            $ reputation.add_point(Reputations.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
 
             scene scc72 # TPP. Show MC sat on the sidewalk next to Samantha, MC looking at Samantha mouth open, Samantha head in hands crying.
             with dissolve
@@ -7974,7 +7974,7 @@ label v7_nsfwSkipLabel4:
             sa "Thank you, really."
 
         "Leave her be":
-            $ reputation.add_point(Reputations.BRO)
+            $ reputation.add_point(RepComponent.BRO)
 
     label av_no_sam: #for compatibility only
     if apesVids > 3:
@@ -9348,7 +9348,7 @@ label signs_with_autumn:
             u "Thanks."
 
         "Same something direct":
-            $ reputation.add_point(Reputations.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
 
             u "Men against misogyny."
 
@@ -10404,7 +10404,7 @@ label chloehocodate:
 
     menu:
         "Aubrey":
-            $ reputation.add_point(Reputations.BRO)
+            $ reputation.add_point(RepComponent.BRO)
             scene sfr4cl21a # aubrey looking at you smiling mouth closed
             with dissolve
 
@@ -10421,7 +10421,7 @@ label chloehocodate:
             au "This man's got taste!"
 
         "Lindsey":
-            $ reputation.add_point(Reputations.TROUBLEMAKER)
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             u "I'm gonna go with Lindsey. Sorry, Aubrey."
 
@@ -10450,8 +10450,8 @@ label chloehocodate:
 
     menu:
         "Ask something sexual":
-            $ reputation.add_point(Reputations.BRO)
-            $ reputation.add_point(Reputations.TROUBLEMAKER)
+            $ reputation.add_point(RepComponent.BRO)
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             u "Would you rather have a threesome with two guys, or a guy and a girl?"
 
@@ -10479,7 +10479,7 @@ label chloehocodate:
             with dissolve
 
         "Ask something funny":
-            $ reputation.add_point(Reputations.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
 
             u "Would you rather fight 100 hamster sized zebras or one zebra sized hamster?"
 
@@ -10530,8 +10530,8 @@ label chloehocodate:
 
     menu:
         "Joke around":
-            $ reputation.add_point(Reputations.BRO)
-            $ reputation.add_point(Reputations.TROUBLEMAKER)
+            $ reputation.add_point(RepComponent.BRO)
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             u "And then on the other side of me, you're sitting. So that's really cool too."
 
@@ -10541,7 +10541,7 @@ label chloehocodate:
             cl "*Laughs* Oh wow! You're unbelievable."
 
         "Keep it romantic":
-            $ reputation.add_point(Reputations.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
 
             u "We'll make this the best night ever."
 
@@ -10835,7 +10835,7 @@ label emilyhocodate:
 
     menu:
         "Of course":
-            $ reputation.add_point(Reputations.BRO)
+            $ reputation.add_point(RepComponent.BRO)
 
             u "Of course. Dancing is like riding a bicycle. You don't unlearn that."
 
@@ -10847,7 +10847,7 @@ label emilyhocodate:
             em "Show me then."
 
         "I'm not sure":
-            $ reputation.add_point(Reputations.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
 
             u "I'm not sure... I haven't properly done couple dancing since high school."
 
@@ -11233,7 +11233,7 @@ label laurenhocodate:
 
     menu:
         "Keep it light":
-            $ reputation.add_point(Reputations.BRO)
+            $ reputation.add_point(RepComponent.BRO)
 
             u "I'm not surprised."
 
@@ -11243,7 +11243,7 @@ label laurenhocodate:
             la "Oh wow."
 
         "Reassure her":
-            $ reputation.add_point(Reputations.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
 
             u "I'm sure you're not that bad."
 
@@ -11499,7 +11499,7 @@ label penelopehocodate:
 
     menu:
         "Enter her room":
-            $ reputation.add_point(Reputations.TROUBLEMAKER)
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
             play sound "sounds/dooropen.mp3"
             scene sfr4pe1b # showing mc entering her room, door still only half open, cant see penelope or much in the room
             with dissolve
@@ -11539,7 +11539,7 @@ label penelopehocodate:
             u "Wow You look... stunning."
 
         "Knock again":
-            $ reputation.add_point(Reputations.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
 
             scene sfr4pe1 #you knocking on penelopes door
             with dissolve
@@ -11650,7 +11650,7 @@ label penelopehocodate:
 
     menu:
         "Ask about sex toys":
-            $ reputation.add_point(Reputations.TROUBLEMAKER)
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             u "Come on, were you hiding your sex toys?"
 
@@ -11694,7 +11694,7 @@ label penelopehocodate:
             pe "It was weird... but good. I don't know."
 
         "Ask about drugs":
-            $ reputation.add_point(Reputations.BRO)
+            $ reputation.add_point(RepComponent.BRO)
 
             u "I bet it was weed."
 
@@ -14057,7 +14057,7 @@ label fr4nora1:
 
         menu:
             "Give Chris advice":
-                $ reputation.add_point(Reputations.BOYFRIEND)
+                $ reputation.add_point(RepComponent.BOYFRIEND)
 
                 u "You ever thought of just taking her home?"
 
@@ -14102,7 +14102,7 @@ label fr4nora1:
                 u "Cool."
 
             "Agree":
-                $ reputation.add_point(Reputations.BRO)
+                $ reputation.add_point(RepComponent.BRO)
                 u "Yeah, seems like it. But you're enjoying yourself at least?"
 
                 scene sfr4no2
@@ -14189,7 +14189,7 @@ label fr4elijah1:
 
     menu:
         "Say hi to Elijah":
-            $ reputation.add_point(Reputations.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
 
             u "Cool moves, man."
 
@@ -14204,8 +14204,8 @@ label fr4elijah1:
             u "*Chuckles* Keep it up."
 
         "Make fun of Elijah":
-            $ reputation.add_point(Reputations.TROUBLEMAKER)
-            $ reputation.add_point(Reputations.BRO)
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
+            $ reputation.add_point(RepComponent.BRO)
 
 
             u "You dance like a clown, man."
@@ -14397,7 +14397,7 @@ label fr4aaron1:
 
     menu:
         "Back up Aaron":
-            $ reputation.add_point(Reputations.BRO)
+            $ reputation.add_point(RepComponent.BRO)
 
             if joinwolves or hcGirl == "chloe":
                 u "Trust me, Aaron's a great guy and any girl would be lucky to go home with him."
@@ -14476,7 +14476,7 @@ label fr4aaron1:
                 u "Uhhh, bye."
 
         "Side with Lindsey":
-            $ reputation.add_point(Reputations.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
 
             if joinwolves or hcGirl == "chloe":
                 u "You guys should stay. It's fun!"
@@ -14742,14 +14742,14 @@ label fr4riley2:
 
         menu:
             "Alright, let's go":
-                $ reputation.add_point(Reputations.TROUBLEMAKER)
+                $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
                 u "Alright. Let me tell my date that I gotta leave early and let's go."
 
                 jump fr4rileyending
 
             "I can't ditch my date":
-                $ reputation.add_point(Reputations.BOYFRIEND)
+                $ reputation.add_point(RepComponent.BOYFRIEND)
                 $ freeroam4.add("riley2")
 
                 u "Riley, I- I can't ditch my date like that."
@@ -14802,14 +14802,14 @@ label fr4riley2:
 
         menu:
             "Alright, let's go":
-                $ reputation.add_point(Reputations.TROUBLEMAKER)
+                $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
                 u "Alright. Let me tell my date that I gotta leave early and let's go."
 
                 jump fr4rileyending
 
             "I can't ditch my date":
-                $ reputation.add_point(Reputations.BOYFRIEND)
+                $ reputation.add_point(RepComponent.BOYFRIEND)
                 $ freeroam4.add("riley2")
 
                 u "*Chuckles* I can't ditch my date like that."
@@ -14869,7 +14869,7 @@ label fr4nora2:
 
         menu:
             "Agree with Nora":
-                $ reputation.add_point(Reputations.BOYFRIEND)
+                $ reputation.add_point(RepComponent.BOYFRIEND)
 
                 u "Sorry, that must suck. He should be spending time with you."
 
@@ -14904,7 +14904,7 @@ label fr4nora2:
                 u "Yeah, see ya."
 
             "Defend Chris":
-                $ reputation.add_point(Reputations.BRO)
+                $ reputation.add_point(RepComponent.BRO)
 
                 u "I mean I get where he's coming from. He's got his own priorities to deal with too. And he's President of a frat-"
 
@@ -15158,7 +15158,7 @@ label fr4aubrey1:
 
         menu:
             "Alright, let's go":
-                $ reputation.add_point(Reputations.BRO)
+                $ reputation.add_point(RepComponent.BRO)
                 $ sceneList.add("v7_aubrey")
 
                 u "Yeah, alright. Let's go."
@@ -15254,7 +15254,7 @@ label fr4aubrey1:
                     jump labelfr4hallwaybathroom
 
             "I'm not really feeling it":
-                $ reputation.add_point(Reputations.TROUBLEMAKER)
+                $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
                 scene sfr4ri39d # aubrey a bit disappointed
                 with dissolve
@@ -15342,8 +15342,8 @@ label fr4chloe1:
     menu:
         "Defend Chloe":
             $ chloe.relationship = Relationship.FRIEND
-            $ reputation.add_point(Reputations.BOYFRIEND)
-            $ reputation.add_point(Reputations.TROUBLEMAKER)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             scene sfr4cl48a
             with dissolve
@@ -15376,7 +15376,7 @@ label fr4chloe1:
             u "Shut up, man. Not cool."
 
         "Say nothing":
-            $ reputation.add_point(Reputations.BRO)
+            $ reputation.add_point(RepComponent.BRO)
 
             scene sfr4cl49
             with dissolve
@@ -15820,8 +15820,8 @@ label fr4imre1:
     if joinwolves:
         menu:
             "Say something to Imre":
-                $ reputation.add_point(Reputations.BRO)
-                $ reputation.add_point(Reputations.TROUBLEMAKER)
+                $ reputation.add_point(RepComponent.BRO)
+                $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
                 u "*Laughs* Imre?"
 
@@ -15840,7 +15840,7 @@ label fr4imre1:
                 jump labelfr4hallwaybathroom
 
             "Leave them alone":
-                $ reputation.add_point(Reputations.BOYFRIEND)
+                $ reputation.add_point(RepComponent.BOYFRIEND)
 
                 u "(I should probably leave these two alone.)"
 
@@ -15932,7 +15932,7 @@ label fr4penelope1:
 
     menu:
         "I like your dress":
-            $ reputation.add_point(Reputations.BRO)
+            $ reputation.add_point(RepComponent.BRO)
 
             u "I really like your dress."
 
@@ -15955,7 +15955,7 @@ label fr4penelope1:
             with dissolve
 
         "I'll let you get back":
-            $ reputation.add_point(Reputations.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
 
     u "Alright, well I'll let you get back to your friend. She sounds like she needs you more than I do."
 
@@ -16061,7 +16061,7 @@ label fr4chloe2:
 
         menu:
             "You got this":
-                $ reputation.add_point(Reputations.BOYFRIEND)
+                $ reputation.add_point(RepComponent.BOYFRIEND)
 
                 u "You got this."
 
@@ -16117,7 +16117,7 @@ label fr4chloe2:
                     jump fr4penelopedatechloe
 
             "Or we could just leave":
-                $ reputation.add_point(Reputations.TROUBLEMAKER)
+                $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
                 u "Or we could just leave right now and not look back..."
 
@@ -16206,7 +16206,7 @@ label fr4grayson1:
 
         menu:
             "Don't do that":
-                $ reputation.add_point(Reputations.BOYFRIEND)
+                $ reputation.add_point(RepComponent.BOYFRIEND)
 
                 u "Hey man, don't do that. That's a real dick move."
 
@@ -16253,7 +16253,7 @@ label fr4grayson1:
                     u "*Sighs* Fine."
 
             "Alright, enjoy":
-                $ reputation.add_point(Reputations.TROUBLEMAKER)
+                $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
                 u "Alright, enjoy."
 
@@ -16297,7 +16297,7 @@ label fr4grayson1:
         menu:
             "Don't do that":
                 $ preventgrayson = True
-                $ reputation.add_point(Reputations.BOYFRIEND)
+                $ reputation.add_point(RepComponent.BOYFRIEND)
 
                 u "Hey man, don't do that. That's a real dick move."
 
@@ -16327,7 +16327,7 @@ label fr4grayson1:
                 pause 0.5
 
             "Alright, enjoy":
-                $ reputation.add_point(Reputations.TROUBLEMAKER)
+                $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
                 u "Alright, enjoy."
 
@@ -16453,7 +16453,7 @@ label fr4lockerroomchloe:
 
             menu:
                 "Of course you can":
-                    $ reputation.add_point(Reputations.BOYFRIEND)
+                    $ reputation.add_point(RepComponent.BOYFRIEND)
 
                     u "Of course you can."
 
@@ -16511,7 +16511,7 @@ label fr4lockerroomchloe:
                         jump fr4emilydate
                         
                 "Let's get out of here":
-                    $ reputation.add_point(Reputations.TROUBLEMAKER)
+                    $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
                     u "You don't have to. Let's just get out of here."
 

@@ -208,7 +208,7 @@ label v9_emily_dorm:
 
         menu:
             "Let Emily gloat":
-                $ reputation.add_point(Reputations.BOYFRIEND)
+                $ reputation.add_point(RepComponent.BOYFRIEND)
 
                 u "You're just so much better than me."
 
@@ -248,7 +248,7 @@ label v9_emily_dorm:
                 em "You always were a slick one, [name]."
 
             "Say you were winning":
-                $ reputation.add_point(Reputations.TROUBLEMAKER)
+                $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
                 u "I was one second away from the holy grail."
 
@@ -339,7 +339,7 @@ label v9_emily_dorm:
 
         menu:
             "Brag":
-                $ reputation.add_point(Reputations.TROUBLEMAKER)
+                $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
                 u "I guess that makes you my Adrian."
 
@@ -359,7 +359,7 @@ label v9_emily_dorm:
                 em "Well, in that case..."
 
             "Play it off":
-                $ reputation.add_point(Reputations.BRO)
+                $ reputation.add_point(RepComponent.BRO)
 
                 u "Aww, you don't have anything to worry about. One punch isn't gonna change me."
 
@@ -441,7 +441,7 @@ label v9_emily_dorm:
 
         menu:
             "Be macho":
-                $ reputation.add_point(Reputations.BRO)
+                $ reputation.add_point(RepComponent.BRO)
 
                 u "I've been training. Gotta learn to take a punch as much as land one."
 

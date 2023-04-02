@@ -116,7 +116,7 @@ label v14s03c:
 
     menu:
         "Good genes":
-            $ reputation.add_point(Reputations.BRO)
+            $ reputation.add_point(RepComponent.BRO)
 
             u "Good genes. *Chuckles*"
 
@@ -126,7 +126,7 @@ label v14s03c:
             satin "Same here."
 
         "My friends dragged me here":
-            $ reputation.add_point(Reputations.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
 
             u "My friends dragged me in here."
 
@@ -232,11 +232,11 @@ label v14s03c:
 
     menu:
         "Yes, kinda":
-            $ reputation.add_point(Reputations.BRO)
+            $ reputation.add_point(RepComponent.BRO)
             u "Yeah, but I don't have that kind of money."
 
         "No, not really":
-            $ reputation.add_point(Reputations.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             u "Oh, no. I don't have that kind of money."
 
     scene v14s03c_4h
@@ -306,7 +306,7 @@ label v14s03c:
             $ satin.relationship = Relationship.FWB
             label v14s03c_sg:
                    
-            $ reputation.add_point(Reputations.TROUBLEMAKER)
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             scene v14s03c_4f
             with dissolve
@@ -337,7 +337,7 @@ label v14s03c:
             jump v14s03d
            
         "Help Ryan":
-            $ reputation.add_point(Reputations.BRO)
+            $ reputation.add_point(RepComponent.BRO)
             $ v14_ryan_satin = True
 
             scene v14s03c_5a # FPP. Same as v14s03c_5, Emerald on Ryan's lap, both slight smile, mouth closed.

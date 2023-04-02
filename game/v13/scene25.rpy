@@ -73,7 +73,7 @@ label v13s25:
 
     menu:
         "Yes":
-            $ reputation.add_point(Reputations.TROUBLEMAKER)
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
           
             scene v13s25_3d # FPP. Same as v13s25_3c Emmy's finger has moved from corner of lip to just under the lip, mouth closed
             with dissolve
@@ -156,7 +156,7 @@ label v13s25:
 
                 menu:
                     "Let her":
-                        $ reputation.add_point(Reputations.TROUBLEMAKER)
+                        $ reputation.add_point(RepComponent.TROUBLEMAKER)
                         label v13s25_emmysg:
 
                         scene v13s25_9
@@ -177,7 +177,7 @@ label v13s25:
                         jump v13_emmy_sex
 
                     "Stop her":
-                        $ reputation.add_point(Reputations.BOYFRIEND)
+                        $ reputation.add_point(RepComponent.BOYFRIEND)
 
                         scene v13s25_9
                         with dissolve
@@ -273,7 +273,7 @@ label v13s25:
                 jump v13s25_no_sex
 
         "No":
-            $ reputation.add_point(Reputations.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             scene v13s25_3
             with dissolve
 

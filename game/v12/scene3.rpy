@@ -22,7 +22,7 @@ label v12_penelope_roof:
     menu:
         "Reply":
             if penelope.relationship >= Relationship.LIKES:
-                $ reputation.add_point(Reputations.BOYFRIEND)
+                $ reputation.add_point(RepComponent.BOYFRIEND)
 
             $ penelope.messenger.addReply("Yeah, one sec", func=None)
 
@@ -169,14 +169,14 @@ label v12_penelope_roof:
 
             menu:
                 "Sure is":
-                    $ reputation.add_point(Reputations.BRO)
+                    $ reputation.add_point(RepComponent.BRO)
                     scene v12penr11 # FPP View of MC, who is laying on his back looking up at the stars
                     with dissolve
 
                     u "It really is."
 
                 "You sure are":
-                    $ reputation.add_point(Reputations.BOYFRIEND)
+                    $ reputation.add_point(RepComponent.BOYFRIEND)
                     u "Yes, you are."
 
                     scene v12penr10a # FPP Same angle as v12penr10, Penelope looking back at MC, neutral expression, mouth open
@@ -320,7 +320,7 @@ label v12_penelope_roof:
 
                 menu:
                     "Be shocked":
-                        $ reputation.add_point(Reputations.BRO)
+                        $ reputation.add_point(RepComponent.BRO)
 
                         u "*Gulp*"
 
@@ -340,7 +340,7 @@ label v12_penelope_roof:
                         pe "*Laughs* Yeah, you've got a few other things to figure out before you start thinking about tying the knot."
 
                     "Be bold":
-                        $ reputation.add_point(Reputations.BOYFRIEND)
+                        $ reputation.add_point(RepComponent.BOYFRIEND)
                         $ grant_achievement("a_person_like_me")
 
                         scene v12penr10e
@@ -477,7 +477,7 @@ label v12_penelope_roof:
             pause 0.75
 
         "Don't reply":
-            $ reputation.add_point(Reputations.BRO)
+            $ reputation.add_point(RepComponent.BRO)
 
             scene v12penr19 # FPP MC's view sitting on his bed, looking down at his phone, which he just turned off
             with dissolve

@@ -282,7 +282,7 @@ label v13s29:
             u "It wasn't my choice to come."
             
         "Okay":
-            $ reputation.add_point(Reputations.BRO)
+            $ reputation.add_point(RepComponent.BRO)
             $ v13_smoke_weed = True
             u "Okay, sure."
 

@@ -54,7 +54,7 @@ label v10_lauren_room:
         "Agree":
             $ v10s33_laurenBakeSale = True
 
-            $ reputation.add_point(Reputations.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             scene v10lar3a
             with dissolve
 
@@ -171,7 +171,7 @@ label v10_lauren_room:
 
     menu:
         "Encourage her":
-            $ reputation.add_point(Reputations.TROUBLEMAKER)
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
             scene v10lar3c
             with dissolve
 

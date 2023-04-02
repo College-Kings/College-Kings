@@ -17,7 +17,7 @@ label v12_amber_after_spa:
 
     menu:
         "Tease Amber":
-            $ reputation.add_point(Reputations.TROUBLEMAKER)
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
             $ v11_tease_amber += 1
 
             scene v12ams2a # FPP. Same as v12ams2, Amber slightly annoyed, mouth closed
@@ -96,7 +96,7 @@ label v12_amber_after_spa:
 
         menu:
             "Pull away":
-                $ reputation.add_point(Reputations.BRO)
+                $ reputation.add_point(RepComponent.BRO)
                 scene v12ams4
                 with dissolve
 

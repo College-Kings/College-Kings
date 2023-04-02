@@ -9,7 +9,7 @@ label v11_Amber_Penelope:
     play music "music/v11/Track Scene 11.mp3" fadein 2
     menu:
         "Tease her":
-            $ reputation.add_point(Reputations.TROUBLEMAKER)
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
             $ v11_tease_amber += 1
             scene v11amp1
             with dissolve
@@ -240,7 +240,7 @@ label v11_Amber_Penelope:
         menu:
             "Kiss her":
                 $ penelope.relationship = Relationship.LIKES
-                $ reputation.add_point(Reputations.BOYFRIEND)
+                $ reputation.add_point(RepComponent.BOYFRIEND)
 
                 play sound "sounds/kiss.mp3"
 

@@ -155,7 +155,7 @@ label v9_room_w_sam:
                 u "I have my moments."                    
                 
             "Console Samantha":
-                $ reputation.add_point(Reputations.BOYFRIEND)
+                $ reputation.add_point(RepComponent.BOYFRIEND)
 
                 u "You're not a mess! You're figuring your life out. We're supposed to screw up."
 
@@ -195,7 +195,7 @@ label v9_room_w_sam:
 
         menu:
             "Play it off":
-                $ reputation.add_point(Reputations.BRO)
+                $ reputation.add_point(RepComponent.BRO)
 
                 u "No need to thank me. Really. it was nothing. I support my fellow Apes."
 
@@ -220,7 +220,7 @@ label v9_room_w_sam:
                 u "In that case, you're both welcome."
 
             "Accept the thanks":
-                $ reputation.add_point(Reputations.BOYFRIEND)
+                $ reputation.add_point(RepComponent.BOYFRIEND)
 
                 u "Aww, you're welcome. Apes gotta stick together, you know. And that includes you now."
 

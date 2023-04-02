@@ -89,7 +89,7 @@ label v11_riley_sex:
 
         menu:
             "Ladies love me":
-                $ reputation.add_point(Reputations.BRO)
+                $ reputation.add_point(RepComponent.BRO)
 
                 scene v11ris3e # FPP. Same as v11ris3d, different pose
                 with dissolve
@@ -147,7 +147,7 @@ label v11_riley_sex:
                 u "*Chuckles* Night Riley."
 
             "Wasn't a ladies man":
-                $ reputation.add_point(Reputations.BOYFRIEND)
+                $ reputation.add_point(RepComponent.BOYFRIEND)
 
                 scene v11ris3e
                 with dissolve

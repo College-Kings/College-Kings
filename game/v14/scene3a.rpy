@@ -58,7 +58,7 @@ label v14s03a:
 
     menu:
         "Yes, of course":
-            $ reputation.add_point(Reputations.TROUBLEMAKER)
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
             scene v14s03a_2
             with dissolve
         
@@ -70,7 +70,7 @@ label v14s03a:
             ngam "My man!"
         
         "Never heard of it":
-            $ reputation.add_point(Reputations.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             scene v14s03a_2
             with dissolve
             
@@ -113,7 +113,7 @@ label v14s03a:
 
     menu: # Play the game 
         "I'll pass":
-            $ reputation.add_point(Reputations.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             scene v14s03a_2e # FPP. Gambler, slightly sad, mouth closed.
             with dissolve
             
@@ -212,7 +212,7 @@ label v14s03a:
             stop music fadeout 3
             play music "music/v13/Track Scene 29_2.mp3" fadein 2
 
-            $ reputation.add_point(Reputations.TROUBLEMAKER)
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
             scene v14s03a_2
             with dissolve
 
@@ -474,7 +474,7 @@ label v14s03a:
                 
             menu:
                 "Take the wallet": # -If Take the wallet
-                    $ reputation.add_point(Reputations.TROUBLEMAKER)
+                    $ reputation.add_point(RepComponent.TROUBLEMAKER)
                     $ v14s03a_take_wallet = True
                     
                     scene v14s03a_12a # FPP. Same as v14s03a_12, but Gambler mouth closed.
@@ -527,7 +527,7 @@ label v14s03a:
                     imre "Maybe after today you'll make money the right way."
 
                 "Don't take the wallet": # -If Don't take the wallet
-                    $ reputation.add_point(Reputations.BOYFRIEND)
+                    $ reputation.add_point(RepComponent.BOYFRIEND)
                     scene v14s03a_4e
                     with dissolve
                     

@@ -43,7 +43,7 @@ label v12_amber_bus:
     menu:
         "Tease her":
             $ v11_tease_amber += 1
-            $ reputation.add_point(Reputations.TROUBLEMAKER)
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
             scene v12amb3b # FPP. Same as v12amb3, Amber slight smile, mouth closed, different pose
             with dissolve
 
@@ -60,7 +60,7 @@ label v12_amber_bus:
             u "I may be willing to take that risk."
 
         "Convince her":
-            $ reputation.add_point(Reputations.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             scene v12amb3b
             with dissolve
 
@@ -212,7 +212,7 @@ label v12_amber_bus:
             u "Exactly."
 
         "Say something":
-            $ reputation.add_point(Reputations.BRO)
+            $ reputation.add_point(RepComponent.BRO)
 
             u "You should just get it over with and tell her what's up."
 

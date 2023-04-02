@@ -57,7 +57,7 @@ label v10_avoid_fight:
 
             menu:
                 "Apologize":
-                    $ reputation.add_point(Reputations.BRO)
+                    $ reputation.add_point(RepComponent.BRO)
                     scene v10frr3b # FPP. same camera as v10frr3, Show Chris, mouth closed, serious look.
                     with dissolve
                     u "*Sighs* What was I thinking? I shouldn't have let you guys down just because-"

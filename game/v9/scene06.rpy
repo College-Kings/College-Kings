@@ -288,7 +288,7 @@ label drive_to_lake:
 
     menu:
         "Flirt":
-            $ reputation.add_point(Reputations.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             jump dtl_f
 
         "Serious":

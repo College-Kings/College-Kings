@@ -114,7 +114,7 @@ label v9_hc_demo:
             u "Yes, much better than the last one."
 
         "Don't recognize the King":
-            $ reputation.add_point(Reputations.TROUBLEMAKER)
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
             u "Hark, who goes there?"
 
             scene v9demo8b # FPP. Same camera as v9demo8, Penelope whispering in Cameron's ear, Cameron looks uninterested. Penelope mouth open.
@@ -154,7 +154,7 @@ label v9_hc_demo:
 
     menu:
         "Discuss War":
-            $ reputation.add_point(Reputations.BRO)
+            $ reputation.add_point(RepComponent.BRO)
 
             u "We have conquered the enemies to the East and South. Much is left to pillage to the West. It's good you've returned to us now. We will need your expert guidance."
 

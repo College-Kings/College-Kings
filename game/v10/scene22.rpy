@@ -159,7 +159,7 @@ label v10_cafe_w_jenny:
 
         menu:
             "Reassure her":
-                $ reputation.add_point(Reputations.BOYFRIEND)
+                $ reputation.add_point(RepComponent.BOYFRIEND)
                 $ jenny.points += 1
 
                 u "Penelope always puts others before herself, even if you knew and tried to stop her, she probably still would've done it."
@@ -204,7 +204,7 @@ label v10_cafe_w_jenny:
 
         menu:
             "Flirt":
-                $ reputation.add_point(Reputations.BOYFRIEND)
+                $ reputation.add_point(RepComponent.BOYFRIEND)
                 if reputation() == Reputations.POPULAR:
                     $ jenny.points += 1
 
@@ -285,7 +285,7 @@ label v10_cafe_w_jenny:
 
         menu:
             "Be helpful":
-                $ reputation.add_point(Reputations.BRO)
+                $ reputation.add_point(RepComponent.BRO)
 
                 scene v10scwj11
                 with dissolve
@@ -302,7 +302,7 @@ label v10_cafe_w_jenny:
                 u "And if they don't then I'll just rob a bank for you."
 
             "Be supportive":
-                $ reputation.add_point(Reputations.BOYFRIEND)
+                $ reputation.add_point(RepComponent.BOYFRIEND)
                 $ penelope.points += 1
 
                 scene v10scwj11

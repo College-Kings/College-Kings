@@ -111,7 +111,7 @@ label v11_wolves_seb_prank:
 
     menu:
         "Not for me":
-            $ reputation.add_point(Reputations.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
 
             scene v11wsp8a
             with dissolve
@@ -226,7 +226,7 @@ label v11_wolves_seb_prank:
             guyd "I honestly kinda feel bad."
 
         "Sure":
-            $ reputation.add_point(Reputations.TROUBLEMAKER)
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             scene v11wsp4
             with dissolve

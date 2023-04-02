@@ -242,14 +242,14 @@ label v12_chloe_cafe:
 
         menu:
             "It'd be nice":
-                $ reputation.add_point(Reputations.BOYFRIEND)
+                $ reputation.add_point(RepComponent.BOYFRIEND)
                 scene v12chc5c
                 with dissolve
 
                 u "Mmm, yeah... It'd be nice. *Chuckles*"
 
             "Not really":
-                $ reputation.add_point(Reputations.BRO)
+                $ reputation.add_point(RepComponent.BRO)
                 scene v12chc5c
                 with dissolve
 
@@ -375,7 +375,7 @@ label v12_chloe_cafe:
 
     menu:
         "Tell her about Lindsey":
-            $ reputation.add_point(Reputations.TROUBLEMAKER)
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
             $ v12_told_chloe = True
 
             u "(I can't keep this from her.) *Sighs* There's something I need to tell you."

@@ -149,7 +149,7 @@ label phn_penelope6_done:
 
     menu:
         "Stay to console her":
-            $ reputation.add_point(Reputations.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             $ consoledRose = True
 
             u "(This is important. There are enough Wolves to move boxes quickly.)"
@@ -200,7 +200,7 @@ label phn_penelope6_done:
             ro "Awww, this was from before the accident. Before everything... How did this happen?"
 
         "Focus on moving the boxes":
-            $ reputation.add_point(Reputations.BRO)
+            $ reputation.add_point(RepComponent.BRO)
 
             u "Don't worry. We'll be out of here in no time."
             u "I'll uh... go and get more boxes."

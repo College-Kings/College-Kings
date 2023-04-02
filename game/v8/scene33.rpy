@@ -63,7 +63,7 @@ label cont_nora_hall:
 
     menu:
         "Act excited":
-            $ reputation.add_point(Reputations.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             jump nora_trip_exc
 
         "Act nervous":
@@ -151,7 +151,7 @@ label cont_nora_hall_2:
 
     menu:
         "Accept invitation":
-            $ reputation.add_point(Reputations.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             jump nora_hall_eu_go
         "Consider it":
             jump nora_hall_eu_no
@@ -193,7 +193,7 @@ label cont_nora_hall_3:
 
     menu:
         "Help Nora":
-            $ reputation.add_point(Reputations.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             $ helpedNora = True
             jump hallway_help_nora
         

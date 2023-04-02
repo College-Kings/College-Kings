@@ -166,10 +166,10 @@ label sun_aft_apes_house:
 
     menu:
         "Side with Grayson":
-            $ reputation.add_point(Reputations.TROUBLEMAKER)
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
             jump sun_aft_grayson
         "Side with Cameron":
-            $ reputation.add_point(Reputations.BRO)
+            $ reputation.add_point(RepComponent.BRO)
             $ sideWithCameron = True
             jump sun_aft_cameron
 
