@@ -61,8 +61,6 @@ label after_load:
         ### renpy.music.stop(channel=u'music')
         ### If using dummy files, don't need to stop music anymore
 
-        # Phone
-        phone = Phone()
 
         ## PLAYABLE CHARACTERS
         if isinstance(mc, FightCharacter) or isinstance(mc, MainCharacter):
@@ -350,8 +348,11 @@ label after_load:
             locked_reputation = locked_kct
         except NameError: pass
 
-        ## PHONE
-        phone.base_image = "images/phone/phone-icon.webp"
+        #region Phone
+        phone = Phone()
+        if simplr_app not in phone.applications:
+            phone.applications.append(simplr_app)
+        #endregion Phone
 
         ### APPLICATIONS
         messenger.name = "Messenger"
