@@ -75,17 +75,17 @@ init python:
         PB_LOYAL = PathBuilderItem(
             PBC_REPUTATION,
             "Loyal",
-            actions=SetField(reputation, "components", {Reputations.BRO: 20, Reputations.BOYFRIEND: 20, Reputations.TROUBLEMAKER: 10})
+            actions=SetField(reputation, "components", {RepComponent.BRO: 20, RepComponent.BOYFRIEND: 20, RepComponent.TROUBLEMAKER: 10})
         )
         PB_POPULAR = PathBuilderItem(
             PBC_REPUTATION,
             "Popular",
-            actions=SetField(reputation, "components", {Reputations.BRO: 20, Reputations.BOYFRIEND: 10, Reputations.TROUBLEMAKER: 20})
+            actions=SetField(reputation, "components", {RepComponent.BRO: 20, RepComponent.BOYFRIEND: 10, RepComponent.TROUBLEMAKER: 20})
         )
         PB_CONFIDENT = PathBuilderItem(
             PBC_REPUTATION,
             "Confident",
-            actions=SetField(reputation, "components", {Reputations.BRO: 10, Reputations.BOYFRIEND: 20, Reputations.TROUBLEMAKER: 20})
+            actions=SetField(reputation, "components", {RepComponent.BRO: 10, RepComponent.BOYFRIEND: 20, RepComponent.TROUBLEMAKER: 20})
         )
 
         PB_CHLOE = PathBuilderGirl(

@@ -4409,7 +4409,7 @@ label aftercall:
     menu:
         "Kiss her back":
             if lauren.relationship >= Relationship.GIRLFRIEND:
-                $ reputation.add_point(Reputations.TROUBLEMAKER, 2)
+                $ reputation.add_point(RepComponent.TROUBLEMAKER, 2)
             else:
                 $ reputation.add_point(RepComponent.TROUBLEMAKER)
                 $ reputation.add_point(RepComponent.BOYFRIEND)
