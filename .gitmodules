@@ -16,3 +16,6 @@
 [submodule "game/characters"]
 	path = game/characters
 	url = https://github.com/College-Kings/college-kings-characters.git
+[submodule "game/reputation"]
+	path = game/reputation
+	url = https://github.com/College-Kings/college-kings-reputation.git
