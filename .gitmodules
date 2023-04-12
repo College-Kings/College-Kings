@@ -13,3 +13,6 @@
 [submodule "game/whats_new"]
 	path = game/whats_new
 	url = https://github.com/College-Kings/college-kings-whats-new.git
+[submodule "game/characters"]
+	path = game/characters
+	url = https://github.com/College-Kings/college-kings-characters.git
