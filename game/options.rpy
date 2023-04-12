@@ -25,20 +25,14 @@ define gui.show_name = False
 
 ### Moved to script.rpy ###
 
-## Text that is placed on the game's about screen. Place the text between the
-## triple-quotes, and leave a blank line between paragraphs.
-
-define gui.about = _p("""
-""")
-
 
 ## A short name for the game used for executables and directories in the built
 ## distribution. This must be ASCII-only, and must not contain spaces, colons,
 ## or semicolons.
 
 define build.name = "CollegeKings"
-define build.directory_name = "CollegeKings{}".format("" if config.enable_steam else ("-" + config.version.split(" ")[0]))
-define build.destination = "{directory_name}-dists"
+define build.directory_name = "CollegeKings{}".format("" if config.enable_steam else '.'.join(str(x) for x in config.version))
+define build.destination = "{}-{}-dists".format(build.name, "Steam" if config.enable_steam else "Patreon")
 
 ## Sounds and music ############################################################
 
@@ -61,7 +55,7 @@ define config.has_voice = True
 ## the player is at the main menu. This file will continue playing into the
 ## game, until it is stopped or another file is played.
 
-define config.main_menu_music = "music/teenage2.mp3"
+define config.main_menu_music = None
 
 
 ## Transitions #################################################################
@@ -185,10 +179,11 @@ init python:
     build.classify('**/.**', None)
     build.classify('**/#**', None)
     build.classify('**/thumbs.db', None)
+    build.classify("README.md", None)
 
     ## To archive files, classify them as 'archive'.
 
-    build.classify('game/**.rpy', "arhive")
+    build.classify('game/**.rpy', "archive")
     build.classify("game/**.rpyc", "archive")
 
     ## Files matching documentation patterns are duplicated in a mac app build,
