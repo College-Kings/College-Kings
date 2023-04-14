@@ -34,7 +34,7 @@ label v11_aubrey_plane_sex:
                 $ sceneList.add("v11_aubrey")
                 if lauren.relationship >= Relationship.GIRLFRIEND:
                     $ v11_lauren_caught_aubrey = True
-                    $ lauren.relationship = Relationship.MAD
+                    $ CharacterService.set_relationship(lauren, Relationship.MAD, mc)
 
                 scene v11aub4
                 with dissolve

@@ -1152,7 +1152,7 @@ label v4start:
                     jump autumnsita
 
                 else:
-                    $ autumn.relationship = Relationship.MAD
+                    $ CharacterService.set_relationship(autumn, Relationship.MAD, mc)
                     scene s334b
                     with dissolve
 
@@ -1168,7 +1168,7 @@ label v4start:
                     jump readmontagea
 
             "Sit somewhere else":
-                $ autumn.relationship = Relationship.MAD
+                $ CharacterService.set_relationship(autumn, Relationship.MAD, mc)
 
                 jump ea_b
 
@@ -1206,7 +1206,7 @@ label v4start:
                 if reputation() == Reputations.LOYAL:
                     call screen reputation_popup
 
-                    $ autumn.relationship = Relationship.FRIEND
+                    $ CharacterService.set_relationship(autumn, Relationship.FRIEND, mc)
                     scene s334d # autumn emphatic
                     with dissolve
 
@@ -1239,7 +1239,7 @@ label v4start:
                     jump autumnsita
 
                 else:
-                    $ autumn.relationship = Relationship.MAD
+                    $ CharacterService.set_relationship(autumn, Relationship.MAD, mc)
                     
                     scene s334b
                     with dissolve
@@ -1256,7 +1256,7 @@ label v4start:
                     jump readmontagea
 
             "Sit somewhere else":
-                $ autumn.relationship = Relationship.MAD
+                $ CharacterService.set_relationship(autumn, Relationship.MAD, mc)
 
                 jump ea_b
 
@@ -1333,7 +1333,7 @@ label v4start:
         jump autumnsita
 
 label ea_b:
-    $ autumn.relationship = Relationship.MAD
+    $ CharacterService.set_relationship(autumn, Relationship.MAD, mc)
     scene s334c
     with dissolve
 
@@ -2680,7 +2680,7 @@ label continueab:
             menu:
                 "Kiss her":
                     $ reputation.add_point(RepComponent.TROUBLEMAKER)
-                    $ amber.relationship = Relationship.KISS
+                    $ CharacterService.set_relationship(amber, Relationship.KISS, mc)
 
                     play sound "sounds/spit.mp3"
 
@@ -2872,7 +2872,7 @@ label continueab:
     with dissolve
     cl "Well there you have it! Grayson put him up to this, just to fuck with me! I didn't do anything shady!"
 
-    $ chloe.relationship = Relationship.MAD
+    $ CharacterService.set_relationship(chloe, Relationship.MAD, mc)
 
     menu:
         "Accuse her of lying":

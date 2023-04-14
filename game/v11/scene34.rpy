@@ -444,7 +444,7 @@ label v11_cardealership:
                         u "So with all that said, can we make it official? Will you be my girl?"
 
                         if chloe.relationship >= Relationship.GIRLFRIEND or (meetchloe and hcGirl == "chloe" and ending == "chloe"): #chloe gf in case of seeing this scene via pathbuilder
-                            $ chloe.relationship = Relationship.GIRLFRIEND
+                            $ CharacterService.set_relationship(chloe, Relationship.GIRLFRIEND, mc)
                             scene v11cd33d # FPP, sanme as 33c, chloe looking excited, mouth opened
                             with dissolve
 

@@ -85,7 +85,7 @@ label v12_ms_rose_sex: #can only get here if joinwolves
                 $ reputation.add_point(RepComponent.TROUBLEMAKER)
                 
                 $ sceneList.add("v12_rose")
-                $ ms_rose.relationship = Relationship.FWB
+                $ CharacterService.set_relationship(ms_rose, Relationship.FWB, mc)
 
                 label v12_ms_rose_sex_sg:
 

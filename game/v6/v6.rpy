@@ -730,7 +730,7 @@ label imrecond: # Meet Chloe
 
             menu:
                 "Stay and listen":
-                    $ chloe.relationship = Relationship.MAD
+                    $ CharacterService.set_relationship(chloe, Relationship.MAD, mc)
                     $ chloecaught = True
                     $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
@@ -1046,7 +1046,7 @@ label continuebd:
     with Fade (1,0,1)
 
     if (laurentoofar or toldlauren) and not apologize:
-        $ lauren.relationship = Relationship.MAD
+        $ CharacterService.set_relationship(lauren, Relationship.MAD, mc)
 
     pause 0.5
 
@@ -2033,7 +2033,7 @@ label continuebd:
 
             "It'll be a nice dinner":
                 $ reputation.add_point(RepComponent.BOYFRIEND)
-                $ evelyn.relationship = Relationship.DATE
+                $ CharacterService.set_relationship(evelyn, Relationship.DATE, mc)
 
                 scene s524e
                 with dissolve
@@ -2533,7 +2533,7 @@ label fz_a:
 
     menu:
         "Kiss her back":
-            $ emily.relationship = Relationship.FWB
+            $ CharacterService.set_relationship(emily, Relationship.FWB, mc)
             $ forgiveemily = True
 
             jump emsex_a
@@ -2639,7 +2639,7 @@ label fz_b:
 
     menu:
         "Kiss her back":
-            $ emily.relationship = Relationship.FWB
+            $ CharacterService.set_relationship(emily, Relationship.FWB, mc)
             $ forgiveemily = True
 
             jump emsex_c
@@ -2990,7 +2990,7 @@ label fy_bd: # not gone to Emily's
     play music "music/mfunk.mp3"
 
     if imreforgives:
-        $ imre.relationship = Relationship.FRIEND
+        $ CharacterService.set_relationship(imre, Relationship.FRIEND, mc)
 
     pause 1.0
 
@@ -3463,7 +3463,7 @@ label fy_bd: # not gone to Emily's
 
             "Ask about her dreams":
                 $ reputation.add_point(RepComponent.BOYFRIEND)
-                $ evelyn.relationship = Relationship.LIKES
+                $ CharacterService.set_relationship(evelyn, Relationship.LIKES, mc)
 
                 scene s558d
                 with dissolve
@@ -3607,7 +3607,7 @@ label fy_bd: # not gone to Emily's
 
             menu:
                 "Kiss her":
-                    $ evelyn.relationship = Relationship.KISS
+                    $ CharacterService.set_relationship(evelyn, Relationship.KISS, mc)
                     if lauren.relationship >= Relationship.GIRLFRIEND:
                         $ reputation.add_point(RepComponent.TROUBLEMAKER)
                     else:
@@ -3969,7 +3969,7 @@ label fy_bd: # not gone to Emily's
 
 
 label aubreysexb: # aubreysex scene
-    $ aubrey.relationship = Relationship.FWB
+    $ CharacterService.set_relationship(aubrey, Relationship.FWB, mc)
     $ sceneList.add("v6_aubrey")
 
     stop music fadeout 3
@@ -4368,7 +4368,7 @@ label naubclimax:
     jump wayhome
 
 label aubreytalk:
-    $ aubrey.relationship = Relationship.FRIEND
+    $ CharacterService.set_relationship(aubrey, Relationship.FRIEND, mc)
 
     u "So uhm... how's third year treating you?"
 
@@ -8919,7 +8919,7 @@ label v6_fr3nora1:
 
     menu:
         "Defend Chloe":
-            $ nora.relationship = Relationship.MAD
+            $ CharacterService.set_relationship(nora, Relationship.MAD, mc)
             $ reputation.add_point(RepComponent.BOYFRIEND)
 
             u "Chloe's not manipulative. She's just being bad mouthed because people like you see her as a threat."
@@ -9100,7 +9100,7 @@ label v6_fr3chloe1:
 
             cl "*Sniff* Okay..."
 
-            $ chloe.relationship = Relationship.FRIEND
+            $ CharacterService.set_relationship(chloe, Relationship.FRIEND, mc)
 
         else:
             cl "Please, just leave me alone, [name]."
@@ -9124,7 +9124,7 @@ label v6_fr3chloe1:
 
         cl "*Sniff* Okay..."
 
-        $ chloe.relationship = Relationship.FRIEND
+        $ CharacterService.set_relationship(chloe, Relationship.FRIEND, mc)
 
     # unlock sound
 
@@ -9171,7 +9171,7 @@ label v6_fr3chloe1:
     menu:
         "Maybe you should step down":
             $ reputation.add_point(RepComponent.BOYFRIEND)
-            $ chloe.relationship = Relationship.MAD
+            $ CharacterService.set_relationship(chloe, Relationship.MAD, mc)
 
             u "You ever think, maybe you should step down?"
 
@@ -10109,7 +10109,7 @@ label upstairsaubrey:
             "I kinda get what he means":
                 $ reputation.add_point(RepComponent.BOYFRIEND)
                 $ simp = True
-                $ aubrey.relationship = Relationship.FRIEND
+                $ CharacterService.set_relationship(aubrey, Relationship.FRIEND, mc)
 
                 scene sufr3au2c
                 with dissolve

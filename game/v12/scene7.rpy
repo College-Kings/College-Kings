@@ -5339,7 +5339,7 @@ label v12s7_nora1:
                     
                 "I'd choose you":
                     $ reputation.add_point(RepComponent.BOYFRIEND)
-                    $ nora.relationship = Relationship.LIKES
+                    $ CharacterService.set_relationship(nora, Relationship.LIKES, mc)
 
                     scene v12fernor1
                     with dissolve
@@ -5813,7 +5813,7 @@ label v12s7_josh1:
     menu:
         "Really care about cats, huh?":
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
-            $ josh.relationship = Relationship.MAD
+            $ CharacterService.set_relationship(josh, Relationship.MAD, mc)
             scene v12ferjo1
             with dissolve
 

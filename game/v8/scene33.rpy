@@ -16,7 +16,7 @@ label hallway_w_nora:
     with dissolve
 
     if nora.relationship <= Relationship.MAD:
-        $ nora.relationship = Relationship.FRIEND
+        $ CharacterService.set_relationship(nora, Relationship.FRIEND, mc)
         scene v8shal3 # FPP. Close up Nora, Nora neutral expression, mouth open.
         with dissolve
         no "Hey, [name]... uh... got a sec?"
@@ -48,7 +48,7 @@ label hallway_w_nora:
         with dissolve
         u "Sure! What's up?"
 
-        $ nora.relationship = Relationship.LIKES
+        $ CharacterService.set_relationship(nora, Relationship.LIKES, mc)
 
         jump cont_nora_hall
 

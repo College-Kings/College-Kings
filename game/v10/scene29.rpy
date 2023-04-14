@@ -127,7 +127,7 @@ label v10_chloe_hallway:
                             menu:
                                 "Have a Rematch":
                                     $ reputation.add_point(RepComponent.BOYFRIEND)
-                                    $ chloe.relationship = Relationship.FRIEND
+                                    $ CharacterService.set_relationship(chloe, Relationship.FRIEND, mc)
                                     
                                     $ grant_achievement("on_the_court")
 

@@ -207,7 +207,7 @@ label v10_lauren_room:
     if lauren.relationship >= Relationship.KISS:
         label v10_lauren_room_sg:
             if _in_replay:
-                $ lauren.relationship = Relationship.GIRLFRIEND
+                $ CharacterService.set_relationship(lauren, Relationship.GIRLFRIEND, mc)
 
     if lauren.relationship >= Relationship.KISS: # If dating or have made out        
         scene v10lar3g # FPP Same angle as v10lar3, Lauren looking seductive, mouth open
@@ -297,7 +297,7 @@ label v10_lauren_room:
 
                 if lauren.relationship >= Relationship.GIRLFRIEND or (lauren.relationship >= Relationship.KISS and reputation() == Reputations.LOYAL):
                     if lauren.relationship < Relationship.GIRLFRIEND:
-                        $ lauren.relationship = Relationship.GIRLFRIEND
+                        $ CharacterService.set_relationship(lauren, Relationship.GIRLFRIEND, mc)
                         call screen reputation_popup
                         
                     image v10lauts = Movie(play="images/v10/Scene 24/v10lauts.webm", loop=True, image="images/v10/Scene 24/v10lautsStart.webp", start_image="images/v10/Scene 24/v10lautsStart.webp") # TPP MC's arms around Lauren's waist while he sucks on her nipple, Lauren eyes rolled back in pleasure

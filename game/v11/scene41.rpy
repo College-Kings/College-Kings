@@ -240,7 +240,7 @@ label v11_chloe_bathroom:
                     call screen reputation_popup
 
                 if chloe.relationship < Relationship.FWB:
-                    $ chloe.relationship = Relationship.FWB
+                    $ CharacterService.set_relationship(chloe, Relationship.FWB, mc)
 
                 stop music fadeout 3
                 jump v11_chloe_sex_scene

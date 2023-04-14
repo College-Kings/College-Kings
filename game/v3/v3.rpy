@@ -2082,7 +2082,7 @@ label conl:
         "Kiss her":
             label continuem:
         
-            $ aubrey.relationship = Relationship.FWB
+            $ CharacterService.set_relationship(aubrey, Relationship.FWB, mc)
             $ sceneList.add("v3_aubrey")
 
             stop music fadeout 3
@@ -3069,7 +3069,7 @@ label continueq:
 
             menu:
                 "Kiss her":
-                    $ riley.relationship = Relationship.MOVE
+                    $ CharacterService.set_relationship(riley, Relationship.MOVE, mc)
                     $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
                     show rikiss2
@@ -3189,7 +3189,7 @@ label continueq:
                 "Tell her what happened":
                     $ toldlauren = True
                     $ reputation.add_point(RepComponent.BOYFRIEND)
-                    $ lauren.relationship = Relationship.MAD
+                    $ CharacterService.set_relationship(lauren, Relationship.MAD, mc)
 
                     u "(Lauren values honesty and we're not in a relationship yet, so she'll probably be understanding as long as I tell her the truth.)"
 
@@ -3352,7 +3352,7 @@ label continueq:
                             "Keep going":
                                 $ reputation.add_point(RepComponent.TROUBLEMAKER)
                                 $ laurentoofar = True
-                                $ lauren.relationship = Relationship.MAD
+                                $ CharacterService.set_relationship(lauren, Relationship.MAD, mc)
 
                                 scene s291b # your hand moves further up
                                 with dissolve

@@ -5,7 +5,7 @@
 
 label v13s9:
     if chloe.relationship < Relationship.FRIEND:
-        $ chloe.relationship = Relationship.FRIEND
+        $ CharacterService.set_relationship(chloe, Relationship.FRIEND, mc)
 
     scene v13s9_1 # TPP. Hotel hallway. MC walking down the hallway, back to camera, angled to where hotel room doors are visible on MC's right.
     with dissolve

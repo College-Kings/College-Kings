@@ -1205,7 +1205,7 @@ label meet_lauren2:
                 if lauren.relationship < Relationship.KISS:
                     call screen reputation_popup
 
-                $ lauren.relationship = Relationship.GIRLFRIEND
+                $ CharacterService.set_relationship(lauren, Relationship.GIRLFRIEND, mc)
 
                 scene s131 ### Lauren grabbing your hand on the table
                 with dissolve
@@ -4068,7 +4068,7 @@ label eve1:
 
     menu:
         "Make a move":
-            $ evelyn.relationship = Relationship.MOVE
+            $ CharacterService.set_relationship(evelyn, Relationship.MOVE, mc)
             $ reputation.add_point(RepComponent.BRO)
 
             scene s188d

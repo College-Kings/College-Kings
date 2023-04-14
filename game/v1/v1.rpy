@@ -638,7 +638,7 @@ label starta: #for compatibility only
 
             u "Wow Elijah, way to start the fun."
 
-            $ elijah.relationship = Relationship.MAKEFUN
+            $ CharacterService.set_relationship(nora, Relationship.MAKEFUN, mc)
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             scene s46b
@@ -1202,7 +1202,7 @@ label starta: #for compatibility only
         menu:
             "Flirt":
                 $ reputation.add_point(RepComponent.TROUBLEMAKER)
-                $ nora.relationship = Relationship.MOVE
+                $ CharacterService.set_relationship(nora, Relationship.MOVE, mc)
 
                 scene s56no1a
                 with dissolve
@@ -2895,10 +2895,10 @@ label aw_bd:
 
     menu:
         "Kiss her":
-            $ lauren.relationship = Relationship.MOVE
+            $ CharacterService.set_relationship(lauren, Relationship.MOVE, mc)
 
             if v1_laurenPoints == 2:
-                $ lauren.relationship = Relationship.KISS                
+                $ CharacterService.set_relationship(lauren, Relationship.KISS, mc)                 
 
                 scene s90
                 with dissolve # kiss

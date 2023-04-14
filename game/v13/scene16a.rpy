@@ -5,7 +5,7 @@
 
 label v13s16a:
     $ sceneList.add("v13_riley")
-    $ riley.relationship = Relationship.FWB
+    $ CharacterService.set_relationship(riley, Relationship.FWB, mc)
 
     scene v13s16a_1 # FPP Show Riley in bed, MC on top of her and very close to her face. Riley with a sexy smile, mouth open
     with dissolve

@@ -357,7 +357,7 @@ label jorepb:
             jump newchloec
 
         "You're lying":
-            $ chloe.relationship = Relationship.MAD
+            $ CharacterService.set_relationship(chloe, Relationship.MAD, mc)
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             scene s370a
@@ -1812,7 +1812,7 @@ label continueaf:
             jump gotest
 
         else:
-            $ lauren.relationship = Relationship.MAD
+            $ CharacterService.set_relationship(lauren, Relationship.MAD, mc)
 
             la "When you continued pushing your hand up my thigh after I told you I didn't want it, you... you made me feel disgusting."
 
@@ -1906,7 +1906,7 @@ label continueaf:
         if reputation() == Reputations.LOYAL:
             call screen reputation_popup
 
-            $ lauren.relationship = Relationship.GIRLFRIEND
+            $ CharacterService.set_relationship(lauren, Relationship.GIRLFRIEND, mc)
 
             scene s380b
             with dissolve
@@ -2010,7 +2010,7 @@ label continueaf:
             jump gotest
 
     else:
-        $ lauren.relationship = Relationship.GIRLFRIEND
+        $ CharacterService.set_relationship(lauren, Relationship.GIRLFRIEND, mc)
 
         scene s380b
         with dissolve
@@ -3991,7 +3991,7 @@ label findimre:
     with dissolve
 
     if fightadam and winadam :
-        $ imre.relationship = Relationship.MAD
+        $ CharacterService.set_relationship(imre, Relationship.MAD, mc)
         u "Actually, I uhm... I found Adam."
 
         scene s439b # Imre surprised but still a bit mad
@@ -4121,7 +4121,7 @@ label findimre:
         u "Alright. Good luck, man."
 
     elif tellschool:
-        $ imre.relationship = Relationship.MAD
+        $ CharacterService.set_relationship(imre, Relationship.MAD, mc)
         u "Actually, I uhm... I found Adam."
 
         scene s439b # Imre surprised but still a bit mad

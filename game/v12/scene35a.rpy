@@ -264,7 +264,7 @@ label v12_nora_room:
 
             "Kiss her":
                 $ sceneList.add("v12_nora")
-                $ nora.relationship = Relationship.FWB
+                $ CharacterService.set_relationship(nora, Relationship.FWB, mc)
 
                 stop music fadeout 3
                 play music "music/v12/Track Scene 35a_1.mp3" fadein 2

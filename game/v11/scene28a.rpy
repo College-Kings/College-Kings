@@ -713,7 +713,7 @@ label v11s28a_galleryScene:
 
     menu:
         "Massage her boob":
-            $ samantha.relationship = Relationship.MOVE
+            $ CharacterService.set_relationship(samantha, Relationship.MOVE, mc)
             $ sceneList.add("v11_samantha")
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
