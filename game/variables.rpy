@@ -1,14 +1,15 @@
 # Init
+define is_CK2 = False
 define flash = Fade(.25, 0, .75, color="#fff")
 define config.default_music_volume = 1
 define config.default_sfx_volume = 1
 default menu_set = set()
 
+default is_censored = False
 default name = _("Alex")
 default real_life_mode = False
 default showkct = True
 default checklist = Checklist()
-define is_CK2 = False
 
 # Recap 
 default recap_first_run = True # used by the ending scene for each girl narraitive to determine if to return to the recap_girl_summary or to continue to the next girl. Jenny's last scene changes this to false.
