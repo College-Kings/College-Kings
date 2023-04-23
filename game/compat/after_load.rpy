@@ -1,5 +1,5 @@
 python early:
-    old_files = {
+    old_files = (
         "bugTesting/bugTesting_Overwrite.rpy",
         "bugTesting/bugTesting_typoNotes.rpy",
         "bugTesting/bugTesting_cheats.rpy",
@@ -27,7 +27,8 @@ python early:
         "after_load.rpy",
         "items.rpy",
         "kct.rpy",
-    }
+        "setup.rpy",
+    )
 
     restart_game = False # NEVER CHANGE
 
@@ -156,9 +157,6 @@ label after_load:
             cameron = NonPlayableCharacter("Cameron", "Cameroon")
         if isinstance(josh, CustomCharacter):
             josh = NonPlayableCharacter("Josh", "Josh80085")
-
-        for character in NonPlayableCharacter.characters.values():
-            character.__after_load__()
 
         ## Relationship types
         try:
@@ -316,18 +314,12 @@ label after_load:
         autumn.username = "Its_Fall"
         sebastian.username = "Big Seb"
         grayson.username = "G-rayson"
-        adam.username = "A.D.A.M."
         mason.username = "Mason_Mas"
         elijah.username = "Elijah_Woods"
-        kim.username = "KimPlausible"
         caleb.username = "Aleb"
-        kai.username = "KaiCriesWith2Ply"
         aaron.username = "DoubleARon"
         naomi.username = "NaomiXMarie"
         samantha.username = "SamFromSpaceJam"
-
-        if chloe.relationship == 4:
-            chloe.relationship = Relationship.MAD
 
         try:
             bro = reputation.components[Reputations.BRO]
@@ -348,12 +340,6 @@ label after_load:
             locked_reputation = locked_kct
         except NameError: pass
 
-        #region Phone
-        phone = Phone()
-        if simplr_app not in phone.applications:
-            phone.applications.append(simplr_app)
-        #endregion Phone
-
         ### APPLICATIONS
         messenger.name = "Messenger"
 
@@ -373,10 +359,6 @@ label after_load:
             
         if not isinstance(kiwii, Application):
             kiwii = Application("kiwii")
-
-        for app in phone.applications.copy():
-            if not isinstance(app, Application):
-                phone.applications.remove(app)
 
         for app in phone.applications:
             app.home_screen = "{}_home".format(app.name.lower())
@@ -477,23 +459,6 @@ label after_load:
             try: contact.user
             except AttributeError:
                 contact.user = getattr(store, contact.name.lower().replace(' ', '_'))
-
-        # Correct image paths
-        message = josh.messenger.find_message("images/text1.webp")
-        try:
-            message.image = "images/v4/text1.webp"
-        except AttributeError: pass
-
-        message = amber.messenger.find_message("images/text2.webp")
-        try:
-            message.image = "images/v6/text2.webp"
-        except AttributeError: pass
-
-        message = aubrey.messenger.find_message("images/text3.webp")
-        try:
-            message.image = "images/v6/text3.webp"
-        except AttributeError: pass
-        del message
 
         ### KIWII
         #### KIWII POSTS
@@ -1047,8 +1012,6 @@ label after_load:
         except NameError: v13_aubrey_vote = "na"
         try: v14_ryan_satin
         except NameError: v14_ryan_satin = False
-
-        setup()
 
     hide screen reply
     hide screen simplr_reply
