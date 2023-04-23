@@ -5,7 +5,7 @@ define config.default_sfx_volume = 1
 default menu_set = set()
 
 default name = _("Alex")
-default realmode = False
+default real_life_mode = False
 default showkct = True
 default checklist = Checklist()
 define is_CK2 = False

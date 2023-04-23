@@ -797,6 +797,12 @@ label after_load:
         feather.insensitive_image = "images/v13/Scene 35/sex_shop/feather_insensitive.webp"
 
         # Variables
+        try: 
+            real_life_mode = realmode
+            del realmode
+        except NameError:
+            pass
+
         try:
             if chlorers: chloers = True
         except NameError: pass
