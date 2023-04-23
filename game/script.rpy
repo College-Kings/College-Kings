@@ -22,6 +22,7 @@ label path_builder():
 
 # The game starts here.
 label start:
-    $ setup()
+    if config.developer:
+        show screen debug_overlay
 
     call screen real_life_mode
