@@ -369,7 +369,7 @@ label v10_call_with_lauren1:
 
                     u "You know, playing the harmonica requires quite a lot of tongue coordination, usually girls like that."
 
-                    if lauren.relationship >= Relationship.KISSED: # maybe another variable for having madeout with lauren?
+                    if CharacterService.is_kissed(lauren) or CharacterService.is_girlfriend(lauren):
                         if joinwolves:
                             scene v10scwl2
                         else:

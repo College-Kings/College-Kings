@@ -1201,6 +1201,7 @@ label meet_lauren2:
 
             if CharacterService.is_kissed(lauren) or reputation() == Reputations.LOYAL:
                 $ laawk = False
+                $ CharacterService.reset_mood(lauren)
 
                 if not CharacterService.is_kissed(lauren):
                     call screen reputation_popup

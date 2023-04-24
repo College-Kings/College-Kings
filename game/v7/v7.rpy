@@ -46,16 +46,16 @@ init python:
         riley.messenger.newMessage(_("Oh oki"))
 
     def kiwii_firstTimeMessages():
-        if emily.relationship >= Relationship.FWB:
+        if CharacterService.is_fwb(emily):
             riley.messenger.addReply(_("We're not back together"))
             riley.messenger.newMessage(_("Okay... just looked like it"))
             riley.messenger.addReply(_("Well we're not."))
             riley.messenger.newMessage(_("k"))
-        if bowling and emily.relationship >= Relationship.FWB:
+        if bowling and CharacterService.is_fwb(emily):
             penelope.messenger.newMessage(_("I didn't know you and Emily were a thing..."), force_send=True)
             penelope.messenger.addReply(_("We're not a thing"), v7_msgReply1)
             penelope.messenger.addReply(_("It was a one time thing"), v7_msgReply2)
-        if emily.relationship >= Relationship.FWB and CharacterService.is_girlfriend(lauren):
+        if CharacterService.is_fwb(emily) and CharacterService.is_girlfriend(lauren):
             lauren.messenger.newMessage(_("I saw what Emily posted. I really thought you liked me..."), force_send=True)
             lauren.messenger.newMessage(_("I guess we're done now, so please just delete my number."), force_send=True)
             lauren.messenger.addReply(_("Lauren can we please just talk about it? I can explain"))
@@ -849,7 +849,7 @@ label hd_bd:
 
             no "Cheated on someone."
 
-            if (CharacterService.is_girlfriend(lauren) and CharacterService.is_fwb(aubrey)) or (CharacterService.is_girlfriend(lauren) and emily.relationship >= Relationship.FWB):
+            if (CharacterService.is_girlfriend(lauren) and CharacterService.is_fwb(aubrey)) or (CharacterService.is_girlfriend(lauren) and CharacterService.is_fwb(emily)):
                 scene s703 # showing mc drinking
                 with dissolve
 
@@ -1191,7 +1191,7 @@ label hd_ad:
 
     menu:
         "Yeah, I'd like that":
-            if CharacterService.is_girlfriend(lauren) or emily.relationship >= Relationship.FWB:
+            if CharacterService.is_girlfriend(lauren) or CharacterService.is_fwb(emily):
                 $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             $ reputation.add_point(RepComponent.BRO)
@@ -1301,7 +1301,7 @@ label hd_ad:
             pause 0.5
 
         "Uhm... I shouldn't":
-            if CharacterService.is_girlfriend(lauren) or emily.relationship >= Relationship.FWB:
+            if CharacterService.is_girlfriend(lauren) or CharacterService.is_fwb(emily):
                 $ reputation.add_point(RepComponent.BOYFRIEND)
 
             u "Uhm... I probably shouldn't. It's quite late."
@@ -1363,7 +1363,7 @@ label conyourdorm:
     $ v7_kiwiiPost3.newComment(chloe, _("Most beautiful girl in the world <3"), 6)
     $ v7_kiwiiPost3.addReply(_("I'd destroy you in Air hockey!"), v7_kiwiiReply5, mentions=[aubrey], number_likes=renpy.random.randint(15, 25))
 
-    if emily.relationship >= Relationship.FWB: # first riley texts, then once you've opened the app you get 2 more messages.
+    if CharacterService.is_fwb(emily): # first riley texts, then once you've opened the app you get 2 more messages.
         $ v7_kiwiiPost4 = KiwiiPost(emily, "phone/kiwii/Posts/v7/empost1.webp", _("Finally fate brings us back together. What doesn't kill us only makes us stronger."), number_likes=82)
         $ v7_kiwiiPost4.newComment(riley, _("You guys are so cute"), 5)
         $ v7_kiwiiPost4.newComment(aubrey, _("GORGEOUS"), 8)
@@ -1383,7 +1383,7 @@ label conyourdorm:
         u "(What the hell?)"
 
         label phoneam:
-            if bowling and emily.relationship >= Relationship.FWB:
+            if bowling and CharacterService.is_fwb(emily):
                 $ v7_emily_bowling = True
         
             if riley.messenger.replies:
@@ -2588,7 +2588,7 @@ label thisbewalk:
 
             pause 0.5
 
-            if emily.relationship >= Relationship.FWB:
+            if CharacterService.is_fwb(emily):
                 scene s733a #mc turns his head to look at the door
                 with dissolve
 
@@ -3091,7 +3091,7 @@ label beachlauren:
 
         la "Anything new with you lately?"
 
-        if emily.relationship >= Relationship.FWB:
+        if CharacterService.is_fwb(emily):
             scene s742a
             with dissolve
 
@@ -3423,7 +3423,7 @@ label beachlauren:
 
 ########## SCENE 12: MC BACK AT DORM WEDNESDAY EVENING
     label rightafterbeach: #for compatibility only
-    if emily.relationship >= Relationship.FWB:
+    if CharacterService.is_fwb(emily):
         play sound "sounds/dooropen.mp3"
         scene s753 # mc opens his dorm door and looks on the ground, there's a letter
         with dissolve
@@ -4152,7 +4152,7 @@ label aftercall:
 
     ch "And last but not least, [name]."
 
-    if (CharacterService.is_girlfriend(lauren) and CharacterService.is_fwb(aubrey)) or (CharacterService.is_girlfriend(lauren) and emily.relationship >= Relationship.FWB):
+    if (CharacterService.is_girlfriend(lauren) and CharacterService.is_fwb(aubrey)) or (CharacterService.is_girlfriend(lauren) and CharacterService.is_fwb(emily)):
         ch "Is it true that you recently cheated on the girl you're currently dating?"
 
         scene s786c # chris looking directly at you mouth closed
@@ -5416,7 +5416,7 @@ label after_pledges:
     scene s861a # MC walking home at night through the town, different shot
     with dissolve
 
-    if emily.relationship >= Relationship.FWB: # Please confirm this is the right condition for her to send an apology letter to the MC
+    if CharacterService.is_fwb(emily): # Please confirm this is the right condition for her to send an apology letter to the MC
         u "(Oh my god, I completely forgot about Emily. Wonder if she's still up.)"
 
         menu:
@@ -7076,7 +7076,7 @@ label hc_asking_penelope:
 
     u "Will you go to homecoming with me?"
 
-    if emily.relationship >= Relationship.FWB or not bowling:
+    if CharacterService.is_fwb(emily) or not bowling:
         scene s957 # fpp close up penelope unsure smili ng
         with dissolve
 
