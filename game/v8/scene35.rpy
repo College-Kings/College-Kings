@@ -437,8 +437,9 @@ label steak_w_chloe_cont_2:
     if CharacterService.is_fwb(chloe):
         menu:
             "Say a dirty joke":
-                jump steak_w_chloe_dirty
                 $ reputation.add_point(RepComponent.TROUBLEMAKER)
+                jump steak_w_chloe_dirty
+                
             "Don't say a joke":
                 jump steak_w_chloe_dirty_no
 
