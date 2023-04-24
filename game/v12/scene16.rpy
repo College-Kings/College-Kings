@@ -682,7 +682,7 @@ label v12_valentine:
 
     no "And standing here now, I feel like I'm exactly where I'm supposed to be... I uh, I love you. *Chuckles*"
 
-    if chloe.relationship >= Relationship.GIRLFRIEND:
+    if CharacterService.is_girlfriend(chloe):
         scene v12val32 # FPP. Same positioning as v12val27, MC looking at Chloe, Chloe looking at Lindsey, Chloe slight smile, mouth open (Only Chloe in shot)
         with dissolve
 
@@ -762,7 +762,7 @@ label v12_valentine:
             
             u "I never saw myself settling down or living the straight and narrow life, but at this point I can't imagine what my life would be like without you... You've become the brightest light in my world. And, I love you."
 
-            if chloe.relationship >= Relationship.GIRLFRIEND:
+            if CharacterService.is_girlfriend(chloe):
                 scene v12val32a # FPP. Same as v12val32, Chloe looking at MC, Chloe slight smile, mouth open
                 with dissolve
 
@@ -808,7 +808,7 @@ label v12_valentine:
 
     bishop "As I was saying, this is normally the moment of the kiss."
 
-    if chloe.relationship >= Relationship.GIRLFRIEND:
+    if CharacterService.is_girlfriend(chloe):
         scene v12val30i
         with dissolve
 
@@ -960,7 +960,7 @@ label v12_valentine:
 
     pause 0.75
 
-    if chloe.relationship >= Relationship.GIRLFRIEND and lauren.relationship < Relationship.GIRLFRIEND:
+    if CharacterService.is_girlfriend(chloe) and not CharacterService.is_girlfriend(lauren):
         scene v12val43 # FPP. Charli next to MC on the sidewalk, not walking, Charli and MC looking at each other, Charli slightly annoyed, mouth open
         with dissolve
 
@@ -981,7 +981,7 @@ label v12_valentine:
 
         u "(Fucking weirdo.)"
 
-    elif chloe.relationship >= Relationship.GIRLFRIEND:
+    elif CharacterService.is_girlfriend(chloe):
         scene v12val43
         with dissolve
 

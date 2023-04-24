@@ -8,7 +8,7 @@ image splashscreen_1 = "gui/splashscreen/1.webp"
 image splashscreen_2 = "gui/splashscreen/2.webp"
 image splashscreen_3 = "gui/splashscreen/3.webp"
 
-# GUI
+#region GUI
 ## Alert
 image alert_background = Frame("gui/alert/background.webp", 8, 8)
 
@@ -21,6 +21,15 @@ image transparent_bar = Frame("#0000")
 ## Choice
 image choice_button_idle = Frame("gui/choice/button_idle.webp", 40, 8)
 image choice_button_hover = Frame("gui/choice/button_hover.webp", 40, 8)
+
+#region Main Menu
+image main_menu_background = "gui/main_menu/background.webp"
+image main_menu_patreon_idle = "gui/main_menu/patreon_idle.webp"
+image main_menu_patreon_hover = Transform("gui/main_menu/patreon_hover.webp", pos=(-18, -14))
+image main_menu_discord_idle = "gui/main_menu/discord_idle.webp"
+image main_menu_discord_hover = "gui/main_menu/discord_hover.webp"
+
+#endregion Main Menu
 
 ## End Screen
 # image save_now = ""
@@ -48,6 +57,7 @@ image tutorial_right_button_idle = "gui/tutorial/right_button_idle.webp"
 
 ## Warning
 image warning_background_blue = Frame("gui/warning/background_blue.webp", 42, 8, 8, 8)
+#endregion GUI
 
 # Transitions
 image sleep_transition_fast = Movie(play="images/v15/sleep_transition_fast.webm", loop=False)

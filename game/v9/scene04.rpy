@@ -305,7 +305,7 @@ hide glitch
 
 scene v9dream13b # Same as v9dream13 but this time it's Lauren looking disappointed, mouth open
 with dissolve
-if lauren.relationship >= Relationship.GIRLFRIEND:
+if CharacterService.is_girlfriend(lauren):
     la "You risked our relationship to join a fighting frat and you aren't even GOOD at it? What the hell?"
 else:
     la "I'm so glad I didn't waste my time on you."
@@ -551,7 +551,7 @@ hide glitch
 
 scene v9dream13b
 with dissolve
-if lauren.relationship >= Relationship.GIRLFRIEND:
+if CharacterService.is_girlfriend(lauren):
     la "You risked our relationship to join a fighting frat and you aren't even GOOD at it? What the hell?"
 else:
     la "I'm so glad I didn't waste my time on you."

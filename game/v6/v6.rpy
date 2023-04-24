@@ -48,7 +48,7 @@ init python:
 
 label script06: #for compatibility only
 label v6start:
-    if imre.relationship <= Relationship.MAD and chloe.relationship <= Relationship.MAD:
+    if CharacterService.is_mad(imre) and CharacterService.is_mad(chloe):
         menu:
             "Find Imre":
                 $ reputation.add_point(RepComponent.BRO)
@@ -62,7 +62,7 @@ label v6start:
 
                 jump imreconc
 
-    elif imre.relationship <= Relationship.MAD:
+    elif CharacterService.is_mad(imre):
         menu:
             "Find Imre":
                 $ reputation.add_point(RepComponent.BRO)
@@ -78,7 +78,7 @@ label v6start:
                 jump imrecond
 
 
-    elif chloe.relationship <= Relationship.MAD:
+    elif CharacterService.is_mad(chloe):
         menu:
             "Help Imre":
                 $ reputation.add_point(RepComponent.BRO)
@@ -730,7 +730,7 @@ label imrecond: # Meet Chloe
 
             menu:
                 "Stay and listen":
-                    $ CharacterService.set_relationship(chloe, Relationship.MAD, mc)
+                    $ CharacterService.set_mood(chloe, Moods.MAD)
                     $ chloecaught = True
                     $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
@@ -865,7 +865,7 @@ label fs_bd:
 
     pause 1.0
 
-    if imre.relationship <= Relationship.MAD:
+    if CharacterService.is_mad(imre):
         scene s477 # FIRST PERSON you look at Imre's bed, all his stuff is gone, you find a note on his bed
         with dissolve
 
@@ -976,7 +976,7 @@ label continuebb:
     # amber texts if chloe not mad
     # if you chose imre chloe and amber both text you depending on chloe mad that you msised out etc.
 
-    if chooseimre and chloe.relationship <= Relationship.MAD: # Amber texts why you never got back to her
+    if chooseimre and CharacterService.is_mad(chloe): # Amber texts why you never got back to her
         play sound "sounds/vibrate.mp3"
         
         $ amber.messenger.newMessage(_("I guess you didn't want my surprise :/"), force_send=True)
@@ -999,7 +999,7 @@ label continuebb:
         $ chloe.messenger.addReply(_("Sorry, something really important came up. Definitely another time"))
         $ chloe.messenger.newMessage(_("Okay"))
 
-    elif chloe.relationship <= Relationship.MAD and not chloecaught:
+    elif CharacterService.is_mad(chloe) and not chloecaught:
         jump continuebd
             
     play sound "sounds/vibrate.mp3"
@@ -1046,11 +1046,11 @@ label continuebd:
     with Fade (1,0,1)
 
     if (laurentoofar or toldlauren) and not apologize:
-        $ CharacterService.set_relationship(lauren, Relationship.MAD, mc)
+        $ CharacterService.set_mood(lauren, Moods.MAD)
 
     pause 0.5
 
-    if lauren.relationship >= Relationship.GIRLFRIEND:
+    if CharacterService.is_girlfriend(lauren):
         scene s486 #You stnad in between  riley and Lauren sitting in the back, seat in between them is emmpty, seat next to Lauren's right is also empty ALWAYS SHOW CLASSROOM STUFF FROM THE FRONT if it's last row so you don't have to show 50 students sitting but instead jsut the back wall
         with dissolve
 
@@ -1229,7 +1229,7 @@ label continuebd:
 
             u "*Grins* Whatever."
 
-    elif lauren.relationship <= Relationship.MAD:
+    elif CharacterService.is_mad(lauren):
             scene s486e # you standing next to riley who's alone in the backrow, lauren's sitting somewhere else
             with dissolve
 
@@ -1431,7 +1431,7 @@ label continuebd:
 
         ri "So, how are things with Chloe?"
 
-        if chloe.relationship <= Relationship.MAD:
+        if CharacterService.is_mad(chloe):
             scene s492e
             with dissolve
 
@@ -1761,7 +1761,7 @@ label continuebd:
 
     show flyer
 
-    if lauren.relationship >= Relationship.GIRLFRIEND:
+    if CharacterService.is_girlfriend(lauren):
         u "(Homecoming. Hm. Lauren would probably be pissed if I didn't ask her...)"
 
     else:
@@ -1772,7 +1772,7 @@ label continuebd:
 
     pause 0.5
 
-    if imre.relationship <= Relationship.MAD and not imreforgives:
+    if CharacterService.is_mad(imre) and not imreforgives:
         scene s512 # mc lays back on bed
         with dissolve
 
@@ -2155,7 +2155,7 @@ label continuebd:
         scene s529 # showing blue volleyball on your desk
         with dissolve
 
-        if chloe.relationship <= Relationship.MAD:
+        if CharacterService.is_mad(chloe):
             u "(I really need to patch things up with Chloe. It was going so great until-)"
 
             u "(Until I messed things up.)"
@@ -2994,7 +2994,7 @@ label fy_bd: # not gone to Emily's
 
     pause 1.0
 
-    if imre.relationship <= Relationship.MAD:
+    if CharacterService.is_mad(imre):
         scene s540a # your head moves to look at your door
         with dissolve
 
@@ -3607,8 +3607,9 @@ label fy_bd: # not gone to Emily's
 
             menu:
                 "Kiss her":
-                    $ CharacterService.set_relationship(evelyn, Relationship.KISS, mc)
-                    if lauren.relationship >= Relationship.GIRLFRIEND:
+                    $ CharacterService.set_relationship(evelyn, Relationship.KISSED)
+                    
+                    if CharacterService.is_girlfriend(lauren):
                         $ reputation.add_point(RepComponent.TROUBLEMAKER)
                     else:
                         $ reputation.add_point(RepComponent.BOYFRIEND)
@@ -3630,7 +3631,7 @@ label fy_bd: # not gone to Emily's
                     pause 0.75
 
                 "Don't kiss her":
-                    if lauren.relationship >= Relationship.GIRLFRIEND:
+                    if CharacterService.is_girlfriend(lauren):
                         $ reputation.add_point(RepComponent.BOYFRIEND)
                     else:
                         $ reputation.add_point(RepComponent.BRO)
@@ -3792,7 +3793,7 @@ label fy_bd: # not gone to Emily's
     scene s570f # Aubrye curious smile
     with dissolve
 
-    if chloe.relationship <= Relationship.MAD:
+    if CharacterService.is_mad(chloe):
         au "So, who have you been seducing lately? Certainly not Chloe. *laughs*"
 
         scene s570g
@@ -5097,7 +5098,7 @@ label wakeupa:
 
     queue music ["music/mfunk.mp3"]
 
-    if imre.relationship <= Relationship.MAD:
+    if CharacterService.is_mad(imre):
         scene s604 # Mc wakes up in bed,
         with Fade (2,0,2)
 
@@ -6541,7 +6542,7 @@ label wakeupa:
 
         menu:
             "Kiss her":
-                if lauren.relationship >= Relationship.GIRLFRIEND:
+                if CharacterService.is_girlfriend(lauren):
                     $ reputation.add_point(RepComponent.TROUBLEMAKER)
                     $ reputation.add_point(RepComponent.BRO)
                 else:
@@ -6582,7 +6583,7 @@ label wakeupa:
                 with dissolve
 
             "Say Goodbye":
-                if lauren.relationship >= Relationship.GIRLFRIEND:
+                if CharacterService.is_girlfriend(lauren):
                     $ reputation.add_point(RepComponent.BOYFRIEND)
 
         u "I gotta go now and get ready for the Wolves' party, but I'll see you soon, okay?"
@@ -6602,7 +6603,7 @@ label wakeupa:
     stop music fadeout 3
     play music "music/m6punk.mp3"
 
-    if imre.relationship <= Relationship.MAD:
+    if CharacterService.is_mad(imre):
         scene s660 # Mc getting ready for the party by himself
         with Fade (1,0,1)
 
@@ -8919,7 +8920,7 @@ label v6_fr3nora1:
 
     menu:
         "Defend Chloe":
-            $ CharacterService.set_relationship(nora, Relationship.MAD, mc)
+            $ CharacterService.set_mood(nora, Moods.MAD)
             $ reputation.add_point(RepComponent.BOYFRIEND)
 
             u "Chloe's not manipulative. She's just being bad mouthed because people like you see her as a threat."
@@ -9078,7 +9079,7 @@ label v6_fr3chloe1:
 
     u "Chloe? It's me, [name]."
 
-    if chloe.relationship <= Relationship.MAD:
+    if CharacterService.is_mad(chloe):
         cl "*Sniff* Leave me alone."
 
         u "No, you're crying. I'm not just going to walk away. What happened?"
@@ -9171,7 +9172,7 @@ label v6_fr3chloe1:
     menu:
         "Maybe you should step down":
             $ reputation.add_point(RepComponent.BOYFRIEND)
-            $ CharacterService.set_relationship(chloe, Relationship.MAD, mc)
+            $ CharacterService.set_mood(chloe, Moods.MAD)
 
             u "You ever think, maybe you should step down?"
 

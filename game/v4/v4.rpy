@@ -387,7 +387,7 @@ label v4start:
 
     ri "Uhm... no, I don't think so. I like Imre, but he can be a bit gross, haha."
 
-    if riley.relationship >= Relationship.MOVE:
+    if CharacterService.is_kissed(riley):
         scene s303e
         with dissolve
 
@@ -1152,7 +1152,7 @@ label v4start:
                     jump autumnsita
 
                 else:
-                    $ CharacterService.set_relationship(autumn, Relationship.MAD, mc)
+                    $ CharacterService.set_mood(autumn, Moods.MAD)
                     scene s334b
                     with dissolve
 
@@ -1168,7 +1168,7 @@ label v4start:
                     jump readmontagea
 
             "Sit somewhere else":
-                $ CharacterService.set_relationship(autumn, Relationship.MAD, mc)
+                $ CharacterService.set_mood(autumn, Moods.MAD)
 
                 jump ea_b
 
@@ -1206,7 +1206,8 @@ label v4start:
                 if reputation() == Reputations.LOYAL:
                     call screen reputation_popup
 
-                    $ CharacterService.set_relationship(autumn, Relationship.FRIEND, mc)
+                    $ CharacterService.set_relationship(autumn, Relationship.FRIEND)
+
                     scene s334d # autumn emphatic
                     with dissolve
 
@@ -1239,7 +1240,7 @@ label v4start:
                     jump autumnsita
 
                 else:
-                    $ CharacterService.set_relationship(autumn, Relationship.MAD, mc)
+                    $ CharacterService.set_mood(autumn, Moods.MAD)
                     
                     scene s334b
                     with dissolve
@@ -1256,11 +1257,11 @@ label v4start:
                     jump readmontagea
 
             "Sit somewhere else":
-                $ CharacterService.set_relationship(autumn, Relationship.MAD, mc)
+                $ CharacterService.set_mood(autumn, Moods.MAD)
 
                 jump ea_b
 
-    elif lauren.relationship < Relationship.GIRLFRIEND: #if not a girlfriend, but not because messed up date
+    elif not CharacterService.is_girlfriend(lauren): #if not a girlfriend, but not because messed up date
         $ reputation.add_point(RepComponent.BOYFRIEND)
         scene s334
         with dissolve
@@ -1333,7 +1334,8 @@ label v4start:
         jump autumnsita
 
 label ea_b:
-    $ CharacterService.set_relationship(autumn, Relationship.MAD, mc)
+    $ CharacterService.set_mood(autumn, Moods.MAD)
+
     scene s334c
     with dissolve
 
@@ -2872,7 +2874,7 @@ label continueab:
     with dissolve
     cl "Well there you have it! Grayson put him up to this, just to fuck with me! I didn't do anything shady!"
 
-    $ CharacterService.set_relationship(chloe, Relationship.MAD, mc)
+    $ CharacterService.set_mood(chloe, Moods.MAD)
 
     menu:
         "Accuse her of lying":

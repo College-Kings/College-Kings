@@ -1,26 +1,37 @@
-# Init
+#region Init
+define is_CK2 = False
 define flash = Fade(.25, 0, .75, color="#fff")
 define config.default_music_volume = 1
 define config.default_sfx_volume = 1
 default menu_set = set()
 
+default is_censored = False
+default label_history = []
 default name = _("Alex")
-default realmode = False
+default real_life_mode = False
 default showkct = True
 default checklist = Checklist()
-define is_CK2 = False
 
 # Recap 
 default recap_first_run = True # used by the ending scene for each girl narraitive to determine if to return to the recap_girl_summary or to continue to the next girl. Jenny's last scene changes this to false.
 default girl_info = {} # Empty
 default recap_choose_threesome = False # True = During Aubrey or Riley intereview, player choose to have 3 some/ Falase == Player decided not to have threesome or has yet to decide 
 
-# Phone
-define contacts_file_path = os.path.join(config.basedir, "game", "images", "nonplayable_characters")
+#region Phone
+default messenger = Messenger()
+default achievement_app = Application(_("Achievements"))
+default kiwii = Kiwii()
+default simplr_app = Simplr()
+default relationship_app = Application(_("Relationships"))
+default tracker = Application(_("Tracker"))
+default reputation_app = Application(_("Reputation"))
+default calendar = Application(_("Calendar"))
 
-    ## Kiwii Vars
+#region Kiwii
 default kiwii_first_time = False
 default kiwii_posts = []
+#endregion Kiwii
+#endregion Phone
 
     ## Fight Vars
 default fight_tutorial = False
@@ -57,6 +68,55 @@ default sex_overlay_options = []
 
 # Splashscreen
 default persistent.confirm_18 = False
+
+#region NonPlayableCharacters
+default aaron = NonPlayableCharacter("Aaron", "DoubleARon")
+default amber = NonPlayableCharacter("Amber", "Amber_xx")
+default anon = NonPlayableCharacter("Anon", "concerned1")
+default aubrey = NonPlayableCharacter("Aubrey", "Aubs123")
+default autumn = NonPlayableCharacter("Autumn", "Its_Fall")
+default beth = NonPlayableCharacter("Beth")
+default buyer = NonPlayableCharacter("Buyer")
+default caleb = NonPlayableCharacter("Caleb", "Aleb")
+default cameron = NonPlayableCharacter("Cameron", "Cameroon") # Relationship progression: FRIEND, BRO
+default charli = NonPlayableCharacter("Charli", "CharliAndTheCockFactory")
+default chloe = NonPlayableCharacter("Chloe", "Chloe101")
+default chris = NonPlayableCharacter("Chris", "Chriscuit")
+default dean = NonPlayableCharacter("Dean")
+default elijah = NonPlayableCharacter("Elijah", "Elijah_Woods") # Relationship progression: MAKEFUN, FRIEND
+default emily = NonPlayableCharacter("Emily", "emilyyyy")
+default emmy = NonPlayableCharacter("Emmy") # Relationship progression: FRIEND, LIKES, FWB (in CK1)
+default grayson = NonPlayableCharacter("Grayson", "G-rayson")
+default imre = NonPlayableCharacter("Imre", "BadBoyImre")
+default iris = NonPlayableCharacter("Iris")
+default jenny = NonPlayableCharacter("Jenny")
+default josh = NonPlayableCharacter("Josh", "Josh80085")
+default lauren = NonPlayableCharacter("Lauren", "LoLoLauren")
+default lews_official = NonPlayableCharacter("Lews Official", "LewsOfficial")
+default lindsey = NonPlayableCharacter("Lindsey", "LindsLou")
+default mason = NonPlayableCharacter("Mason", "Mason_Mas")
+default mr_lee = NonPlayableCharacter("Mr Lee")
+default ms_rose = NonPlayableCharacter("Ms Rose")
+default naomi = NonPlayableCharacter("Naomi", "NaomiXMarie")
+default nora = NonPlayableCharacter("Nora", "Nora_12")
+default parker = NonPlayableCharacter("Parker")
+default perry = NonPlayableCharacter("Perry")
+default penelope = NonPlayableCharacter("Penelope", "Penelopeeps")
+default polly = NonPlayableCharacter("Polly")
+default riley = NonPlayableCharacter("Riley", "RileyReads")
+default ryan = NonPlayableCharacter("Ryan", "Ryanator")
+default samantha = NonPlayableCharacter("Samantha", "SamFromSpaceJam")
+default sebastian = NonPlayableCharacter("Sebastian", "Big Seb")
+default tom = NonPlayableCharacter("Tom")
+default trainer = NonPlayableCharacter("Trainer")
+default wolf = NonPlayableCharacter("Wolf")
+#endregion NonPlayableCharacters
+
+#region PlayableCharacters
+default mc = PlayableCharacter()
+#endregion PlayableCharacters
+
+#endregion Init
 
 # 1.0 - 6.0
 # Relationship Screen
@@ -138,6 +198,10 @@ default upstairs = _("nobody")
 default v1_laurenPoints = 0
 default v2_outfits = 0
 default volleyball = False
+
+#region v2.0
+default v2_made_a_move_on_evelyn = False
+#endregion v2.0
 
 # 7.0
 default apesVids = 0

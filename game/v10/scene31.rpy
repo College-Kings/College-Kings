@@ -205,8 +205,9 @@ label v10_late_alley:
                 jo "Trust me, I hear you. I'm gonna get out of here man."
 
             else:
-                $ CharacterService.set_relationship(josh, Relationship.MAD, mc)
+                $ CharacterService.set_mood(josh, Moods.MAD)
                 $ josh_europe = False
+                
                 scene v10all3a
                 with dissolve
                 u "I get that this isn't supposed to be a permanent thing for you and you have an out plan, but I still don't support what you're doing. There's other ways to get money. You're gonna end up fucking up your life."

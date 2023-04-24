@@ -562,7 +562,7 @@ label v13s37_nora:
 label v13s37_chris:
     $ freeroam11.add("chris")
 
-    if chris.relationship <= Relationship.MAD:
+    if CharacterService.is_mad(chris):
         scene v13s37ch_1 # TPP. Show MC walking over to Chris, Chris slightly angry, mouth closed, MC slight smile, mouth closed
         #with dissolve
 

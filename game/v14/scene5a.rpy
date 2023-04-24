@@ -245,7 +245,7 @@ label v14s05a:
 
         menu: 
             "Help Chloe":
-                if chloe.relationship >= Relationship.GIRLFRIEND:
+                if CharacterService.is_girlfriend(chloe):
                     $ reputation.add_point(RepComponent.BOYFRIEND)
                 elif lindsey.relationship >= Relationship.FWB:
                     $ reputation.add_point(RepComponent.TROUBLEMAKER)
@@ -257,7 +257,7 @@ label v14s05a:
             "Help Lindsey":
                 if lindsey.relationship >= Relationship.FWB:
                     $ reputation.add_point(RepComponent.BOYFRIEND)
-                elif chloe.relationship >= Relationship.GIRLFRIEND:
+                elif CharacterService.is_girlfriend(chloe):
                     $ reputation.add_point(RepComponent.TROUBLEMAKER)
                 scene v14s05a_13
                 with dissolve

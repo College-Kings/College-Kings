@@ -748,7 +748,7 @@ label v10s33_deergirl11:
     menu:
         "Hot":
             $ reputation.add_point(RepComponent.BOYFRIEND)
-            if lauren.relationship >= Relationship.GIRLFRIEND:
+            if CharacterService.is_girlfriend(lauren):
                 u "Hot, obviously."
 
                 scene v10cfrau4
@@ -931,7 +931,7 @@ label v10s33_deergirl11:
 
 label v10s33_chloe1:
     $ freeroam6.add("chloe")
-    if chloe.relationship <= Relationship.MAD:
+    if CharacterService.is_mad(chloe):
         scene v10cfrcl1 # FPP. Show Chloe, mouth closed
         
         u "I think Chloe's still mad at me, I'd rather not talk to her."
@@ -1411,7 +1411,7 @@ label v10s33_deergirl21:
     label v10s33_laurenbake1:
     $ freeroam6.add("lauren")
 
-    if lauren.relationship >= Relationship.GIRLFRIEND:
+    if CharacterService.is_girlfriend(lauren):
         scene v10cfrla1 #FPP Show Lauren, Looking at mc, happy smile, mouth open
         la "Hey babe!"
 
@@ -1444,7 +1444,7 @@ label v10s33_deergirl21:
 
     la "Haha, to answer your question, bad. Sales are going bad. I only sold one and that was to my mother when she stopped by earlier."
 
-    if lauren.relationship >= Relationship.GIRLFRIEND:
+    if CharacterService.is_girlfriend(lauren):
         scene v10cfrla1
         with dissolve
 
@@ -1566,7 +1566,7 @@ label v10s33_deergirl21:
 
     u "I'm sure you people are gonna get hungry at some point."
 
-    if lauren.relationship >= Relationship.GIRLFRIEND:
+    if CharacterService.is_girlfriend(lauren):
         u "I know, I'd love some of... Lauren's Moist Muffins."
 
         scene v10cfrla1d
@@ -1644,7 +1644,7 @@ label v10s33_deergirl21:
 
     u "What a beautiful statue."
 
-    if lauren.relationship >= Relationship.GIRLFRIEND:
+    if CharacterService.is_girlfriend(lauren):
         scene v10cfrla4 #TPP shows mc leaning in for the kiss, but lauren holds him back, lauren mouth open, neutral face
         with dissolve
 
@@ -1778,7 +1778,7 @@ label v10s33_deergirl21:
 
     u "So committed, we love to see it."
 
-    if lauren.relationship >= Relationship.GIRLFRIEND:
+    if CharacterService.is_girlfriend(lauren):
         u "Oh I wanted to ask, I'm planning on going on this year's Europe trip. Would you want to go?"
 
         scene v10cfrla3d

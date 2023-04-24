@@ -19,7 +19,7 @@ label v9_lau_dorm:
 
     pause 0.8
 
-    if lauren.relationship >= Relationship.GIRLFRIEND:
+    if CharacterService.is_girlfriend(lauren):
         scene v9lau3 # FPP. Show Lauren who has just opened the door, Lauren smile, mouth closed.
         with dissolve
 
@@ -512,7 +512,7 @@ label v9_lau_dorm:
         scene v9lau16a # FPP. Same camera as v9lau16, Lauren smile, mouth closed.
         with dissolve
 
-        if lauren.relationship >= Relationship.GIRLFRIEND:
+        if CharacterService.is_girlfriend(lauren):
             menu:
                 "Flirt":
                     $ reputation.add_point(RepComponent.BOYFRIEND)
@@ -565,7 +565,7 @@ label v9_lau_dorm:
         scene v9lau16a
         with dissolve
 
-        if lauren.relationship < Relationship.GIRLFRIEND and reputation() == Reputations.LOYAL:
+        if not CharacterService.is_girlfriend(lauren) and reputation() == Reputations.LOYAL:
             if reputation() == Reputations.LOYAL:
                 call screen reputation_popup
 
@@ -578,7 +578,7 @@ label v9_lau_dorm:
                 "Leave":
                     jump v9_lau_dorm_no_kiss
                 
-        elif lauren.relationship >= Relationship.GIRLFRIEND:
+        elif CharacterService.is_girlfriend(lauren):
             jump v9_lau_dorm_kiss
 
         else:

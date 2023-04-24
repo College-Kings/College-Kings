@@ -11,7 +11,7 @@ label s26:
     play music "music/mindie4.mp3" fadein 2
     queue music "music/mchill2.mp3"
 
-    if lauren.relationship >= Relationship.GIRLFRIEND:
+    if CharacterService.is_girlfriend(lauren):
         u "(Ahhh, there's Aubrey and Riley')"
 
     else:

@@ -77,13 +77,13 @@ label v13s39a:
 
         u "That would be the most awkward date, Ryan."
 
-        if chloe.relationship >= Relationship.GIRLFRIEND:  
+        if CharacterService.is_girlfriend(chloe):  
             scene v13s39a_5a # FPP. same as v13s39a_5 a dreamlike image of chloe is shown on the screen
             with dissolve
 
             u "I definitely wouldn't want to bring my girl."   
 
-        elif lauren.relationship >= Relationship.GIRLFRIEND and not v11_lauren_caught_aubrey: #second part of check only for compatibility purposes
+        elif CharacterService.is_girlfriend(lauren) and not v11_lauren_caught_aubrey: #second part of check only for compatibility purposes
             scene v13s39a_5 # FPP. a dreamlike image of lauren is shown on the screen
             with dissolve
 

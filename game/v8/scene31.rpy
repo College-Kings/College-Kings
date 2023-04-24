@@ -185,7 +185,7 @@ label tec_cont:
 
     pause 0.5
 
-    if lauren.relationship >= Relationship.GIRLFRIEND:
+    if CharacterService.is_girlfriend(lauren):
         scene v8stec8 # FPP. Show Lauren, Lauren looking at camera, Lauren smile, mouth open.
         with dissolve
 

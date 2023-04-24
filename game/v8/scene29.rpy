@@ -620,8 +620,9 @@ label after_drugs:
         menu:
             "Go with her":
                 $ sceneList.add("v8_amber2")
-                $ CharacterService.set_relationship(amber, Relationship.FWB, mc)
-                if lauren.relationship >= Relationship.GIRLFRIEND:
+                $ CharacterService.set_relationship(amber, Relationship.FWB)
+                
+                if CharacterService.is_girlfriend(lauren):
                     $ reputation.add_point(RepComponent.TROUBLEMAKER)
                 else:
                     $ reputation.add_point(RepComponent.BOYFRIEND)
@@ -631,8 +632,9 @@ label after_drugs:
                 jump amber_sex_at_joshs
 
             "Reject her advances":
-                $ CharacterService.set_relationship(amber, Relationship.FRIEND, mc)
-                if lauren.relationship >= Relationship.GIRLFRIEND:
+                $ CharacterService.set_relationship(amber, Relationship.FRIEND)
+                
+                if CharacterService.is_girlfriend(lauren):
                     $ reputation.add_point(RepComponent.BOYFRIEND)
 
                 u "*Whispers* Sorry Amber, I'm not feeling it tonight."

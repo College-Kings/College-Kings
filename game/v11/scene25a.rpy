@@ -38,16 +38,16 @@ label v11_hotel_charlie_bar:
 
     charli "You can't comprehend being nice without an agenda, because you yourself aren't nice without an agenda."
 
-    if chloe.relationship >= Relationship.FWB and lauren.relationship >= Relationship.GIRLFRIEND and aubrey.relationship >= Relationship.FWB:
+    if chloe.relationship >= Relationship.FWB and CharacterService.is_girlfriend(lauren) and aubrey.relationship >= Relationship.FWB:
         charli "How many girls have you messed with on this trip alone? Chloe, Aubrey, Lauren?"
 
-    elif lauren.relationship >= Relationship.GIRLFRIEND and aubrey.relationship >= Relationship.FWB:
+    elif CharacterService.is_girlfriend(lauren) and aubrey.relationship >= Relationship.FWB:
         charli "How many girls have you messed with on this trip alone? Aubrey, Lauren, who else?"
 
     elif aubrey.relationship >= Relationship.FWB and chloe.relationship >= Relationship.FWB:
         charli "How many girls have you messed with on this trip alone? Aubrey, Chloe, who else?"
 
-    elif lauren.relationship >= Relationship.GIRLFRIEND and chloe.relationship >= Relationship.FWB:
+    elif CharacterService.is_girlfriend(lauren) and chloe.relationship >= Relationship.FWB:
         charli "How many girls have you messed with on this trip alone? Chloe, Lauren, who else?"
         
     scene v11cmb2a

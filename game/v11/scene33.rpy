@@ -48,7 +48,7 @@ label v11_bar_chloe_and_aubrey:
     scene v11caa4b # FPP. same as 4a, mouth closed
     with dissolve
 
-    if chloe.relationship <= Relationship.MAD:
+    if CharacterService.is_mad(chloe):
         scene v11caa5 # FPP. Looking at chloe, she is starring away from mc, mouth closed
         with dissolve
 
@@ -134,7 +134,7 @@ label v11_bar_chloe_and_aubrey:
 
     u "Maybe he's just really passionate."
 
-    if chloe.relationship <= Relationship.MAD:
+    if CharacterService.is_mad(chloe):
         scene v11caa9b
         with dissolve
 
@@ -190,7 +190,7 @@ label v11_bar_chloe_and_aubrey:
 
     u "Haha, later Aubrey."
 
-    if chloe.relationship <= Relationship.MAD:
+    if CharacterService.is_mad(chloe):
         scene v11caa12 # FPP. Looking at chloe, mouth closed
         with dissolve
 

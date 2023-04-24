@@ -145,7 +145,7 @@ label v13s47:
 
     u "Okay."
 
-    if lauren.relationship >= Relationship.GIRLFRIEND:
+    if CharacterService.is_girlfriend(lauren):
         scene v13s47_3
         with dissolve
 

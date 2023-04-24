@@ -16,7 +16,7 @@ label v10_lauren_room:
 
     la "Heyyyy."
 
-    if lauren.relationship >= Relationship.GIRLFRIEND: # If in a relationship with Lauren
+    if CharacterService.is_girlfriend(lauren): # If in a relationship with Lauren
         scene v10lar1a # TPP Same angle as v10lar1: MC and Lauren kiss at her door
         with dissolve
 
@@ -91,8 +91,8 @@ label v10_lauren_room:
 
             u "I really do."
 
-            if lauren.relationship >= Relationship.GIRLFRIEND or reputation() == Reputations.LOYAL:
-                if lauren.relationship < Relationship.GIRLFRIEND:
+            if CharacterService.is_girlfriend(lauren) or reputation() == Reputations.LOYAL:
+                if not CharacterService.is_girlfriend(lauren):
                     call screen reputation_popup
                 $ v10s33_laurenBakeSale = False
 
@@ -295,9 +295,9 @@ label v10_lauren_room:
                 with dissolve
                 pause
 
-                if lauren.relationship >= Relationship.GIRLFRIEND or (lauren.relationship >= Relationship.KISS and reputation() == Reputations.LOYAL):
-                    if lauren.relationship < Relationship.GIRLFRIEND:
-                        $ CharacterService.set_relationship(lauren, Relationship.GIRLFRIEND, mc)
+                if CharacterService.is_girlfriend(lauren) or (lauren.relationship >= Relationship.KISS and reputation() == Reputations.LOYAL):
+                    if not CharacterService.is_girlfriend(lauren):
+                        $ CharacterService.set_relationship(lauren, Relationship.GIRLFRIEND)
                         call screen reputation_popup
                         
                     image v10lauts = Movie(play="images/v10/Scene 24/v10lauts.webm", loop=True, image="images/v10/Scene 24/v10lautsStart.webp", start_image="images/v10/Scene 24/v10lautsStart.webp") # TPP MC's arms around Lauren's waist while he sucks on her nipple, Lauren eyes rolled back in pleasure
@@ -598,7 +598,7 @@ label v10_lauren_room:
 
     u "Of course."
 
-    if lauren.relationship >= Relationship.GIRLFRIEND: # lauren and mc kiss goodbye at her door
+    if CharacterService.is_girlfriend(lauren): # lauren and mc kiss goodbye at her door
         scene v10lar1a
         with fade
 

@@ -1172,16 +1172,16 @@ label meet_lauren2:
         "There was something there":
             $ reputation.add_point(RepComponent.BOYFRIEND)
             
-            if lauren.relationship >= Relationship.KISS:
-                    scene s130c
-                    with dissolve
-                    u "I know you stopped kissing me after about a second..."
+            if CharacterService.is_kissed(lauren):
+                scene s130c
+                with dissolve
+                u "I know you stopped kissing me after about a second..."
 
-                    u "But that second was amazing."
+                u "But that second was amazing."
 
-                    u "There was something real there and you know it."
+                u "There was something real there and you know it."
 
-            elif lauren.relationship >= Relationship.MOVE:
+            elif Moods.AWKWARD in lauren.mood:
                 scene s130c
                 with dissolve
 
@@ -1199,13 +1199,13 @@ label meet_lauren2:
 
                 u "And I should have. There was something real there. Between us."
 
-            if lauren.relationship >= Relationship.KISS or reputation() == Reputations.LOYAL:
+            if CharacterService.is_kissed(lauren) or reputation() == Reputations.LOYAL:
                 $ laawk = False
 
-                if lauren.relationship < Relationship.KISS:
+                if not CharacterService.is_kissed(lauren):
                     call screen reputation_popup
 
-                $ CharacterService.set_relationship(lauren, Relationship.GIRLFRIEND, mc)
+                $ CharacterService.set_relationship(lauren, Relationship.GIRLFRIEND)
 
                 scene s131 ### Lauren grabbing your hand on the table
                 with dissolve
@@ -1311,7 +1311,7 @@ label meet_lauren2:
             scene s130a
             with dissolve
 
-            if lauren.relationship >= Relationship.MOVE:
+            if Moods.AWKWARD in lauren.mood:
                 u "That was uhm... nothing."
 
                 u "Let's just forget that ever happened."
@@ -1715,7 +1715,7 @@ label history2:
 
     no "Looks like he got beaten up."
 
-    if nora.relationship >= Relationship.MOVE:
+    if Moods.AWKWARD in nora.mood:
         scene s142a # both mouths shut
         with dissolve
 
@@ -4068,7 +4068,7 @@ label eve1:
 
     menu:
         "Make a move":
-            $ CharacterService.set_relationship(evelyn, Relationship.MOVE, mc)
+            $ v2_made_a_move_on_evelyn = True
             $ reputation.add_point(RepComponent.BRO)
 
             scene s188d

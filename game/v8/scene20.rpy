@@ -801,7 +801,7 @@ label em_arcade_1:
 
     menu:
         "Kiss her":
-            if lauren.relationship >= Relationship.GIRLFRIEND:
+            if CharacterService.is_girlfriend(lauren):
                 $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             else:
@@ -851,7 +851,7 @@ label em_arcade_1:
             jump mon_morning_room
 
         "Good night":
-            if lauren.relationship >= Relationship.GIRLFRIEND:
+            if CharacterService.is_girlfriend(lauren):
                 $ reputation.add_point(RepComponent.BOYFRIEND)
 
             scene v8arcade23a
@@ -1256,7 +1256,7 @@ label v8s20_nsfwSkipLabel1:
 
     menu:
         "Kiss her":
-            if lauren.relationship >= Relationship.GIRLFRIEND:
+            if CharacterService.is_girlfriend(lauren):
                 $ reputation.add_point(RepComponent.TROUBLEMAKER)
             else:
                 $ reputation.add_point(RepComponent.BOYFRIEND)
@@ -1305,7 +1305,7 @@ label v8s20_nsfwSkipLabel1:
             jump mon_morning_room
 
         "Good night":
-            if lauren.relationship >= Relationship.GIRLFRIEND:
+            if CharacterService.is_girlfriend(lauren):
                 $ reputation.add_point(RepComponent.BOYFRIEND)
 
             scene v8arcade23a

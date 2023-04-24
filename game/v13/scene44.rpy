@@ -50,7 +50,7 @@ label v13s44:
 
         la "*Sighs* Yes, I'm sure. Now, look..."
 
-    elif lauren.relationship >= Relationship.GIRLFRIEND:
+    elif CharacterService.is_girlfriend(lauren):
         la "Hey babe!"
 
         scene v13s44_2 # TPP. Show Lauren kissing MC.

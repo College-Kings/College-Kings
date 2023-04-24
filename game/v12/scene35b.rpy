@@ -43,7 +43,7 @@ label v12_game_roommate:
 
         u "Definitely does not look fun... I'll say that."
 
-        if chloe.relationship >= Relationship.GIRLFRIEND:
+        if CharacterService.is_girlfriend(chloe):
             scene v12grm2
             with dissolve
 
@@ -179,7 +179,7 @@ label v12_game_roommate:
 
         u "Married!?"
 
-        if chloe.relationship >= Relationship.GIRLFRIEND:
+        if CharacterService.is_girlfriend(chloe):
             scene v12grm2e
             with dissolve
 

@@ -5,7 +5,7 @@
 
 label v11_chloe_hotel_room_amber_call:
     play music "music/v10/Track Scene 40_2.mp3" fadein 2
-    if chloe.relationship <= Relationship.MAD and not v11_riley_roomate:
+    if CharacterService.is_mad(chloe) and not v11_riley_roomate:
         scene v11hrc1 # TPP. MC is inside his hotel room, next to the door, mouth closed
         with fade
         
@@ -180,7 +180,7 @@ label v11_chloe_hotel_room_amber_call:
 
     cl "Yep."
 
-    if chloe.relationship < Relationship.FWB and chloe.relationship > Relationship.MAD: #if car dealership (===chloe not mad) but chloe not rs either
+    if chloe.relationship < Relationship.FWB and not CharacterService.is_mad(chloe): #if car dealership (===chloe not mad) but chloe not rs either
         scene v11hrc11a
         with dissolve
 
@@ -360,7 +360,7 @@ label v11_chloe_hotel_room_amber_call:
 
         cl "C'mon, get up. Mr. Lee has something planned tonight. I'm not sure what it is, but if there's anything else you wanna do today, you should get to it now."
 
-    elif chloe.relationship > Relationship.MAD:
+    elif not CharacterService.is_mad(chloe):
         scene v11hrc9b # FPP. same as 9, chloe is smiling
         with fade
 

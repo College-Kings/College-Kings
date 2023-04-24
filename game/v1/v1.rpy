@@ -633,13 +633,13 @@ label starta: #for compatibility only
 
     menu:
         "Make fun of Elijah":
+            $ CharacterService.set_mood(elijah, Moods.HURT)
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
+
             scene s46a
             with dissolve
 
             u "Wow Elijah, way to start the fun."
-
-            $ CharacterService.set_relationship(nora, Relationship.MAKEFUN, mc)
-            $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             scene s46b
             with dissolve
@@ -1034,7 +1034,7 @@ label starta: #for compatibility only
         scene s50el
         u "Hey, you're Elijah right?"
 
-        if elijah.relationship <= Relationship.MAKEFUN:
+        if Moods.HURT in elijah.mood:
             scene s50el1
             with dissolve
 
@@ -1202,7 +1202,7 @@ label starta: #for compatibility only
         menu:
             "Flirt":
                 $ reputation.add_point(RepComponent.TROUBLEMAKER)
-                $ CharacterService.set_relationship(nora, Relationship.MOVE, mc)
+                $ CharacterService.set_mood(nora, Moods.AWKWARD)
 
                 scene s56no1a
                 with dissolve
@@ -1228,7 +1228,7 @@ label starta: #for compatibility only
         scene s56no1a
         
         u "Uhm..."
-        if nora.relationship >= Relationship.MOVE:
+        if Moods.AWKWARD in nora.mood:
             scene s56no1
             with dissolve
 
@@ -2895,10 +2895,8 @@ label aw_bd:
 
     menu:
         "Kiss her":
-            $ CharacterService.set_relationship(lauren, Relationship.MOVE, mc)
-
             if v1_laurenPoints == 2:
-                $ CharacterService.set_relationship(lauren, Relationship.KISS, mc)                 
+                $ CharacterService.set_relationship(lauren, Relationship.KISSED)
 
                 scene s90
                 with dissolve # kiss
@@ -2913,6 +2911,8 @@ label aw_bd:
                 pause
 
             else:
+                $ CharacterService.set_mood(lauren, Moods.AWKWARD)
+
                 scene s90a
                 with dissolve
 
@@ -2945,7 +2945,7 @@ label aw_bd:
     scene s92 # you head in hands
     with dissolve
 
-    if lauren.relationship >= Relationship.MOVE:
+    if CharacterService.is_kissed(lauren) or Moods.AWKWARD in lauren.mood:
         u "(Fuck... why did I try to kiss her?! That just made everything weird.)"
     else:
         u "(Fuck... should I have kissed her? Now it's just weird between us.)"
@@ -2988,7 +2988,7 @@ label aw_bd:
 
     imre "I take it your date didn't go as planned?"
 
-    if lauren.relationship >= Relationship.KISS:
+    if CharacterService.is_kissed(lauren):
         scene s96a
         with dissolve
 
@@ -3000,7 +3000,7 @@ label aw_bd:
 
         u "And now it's all just super weird."
 
-    elif lauren.relationship >= Relationship.MOVE:
+    elif Moods.AWKWARD in lauren.mood:
         scene s96a
         with dissolve
 
