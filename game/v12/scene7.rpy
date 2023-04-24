@@ -3644,7 +3644,7 @@ label v12s7_penelope1:
 
             pe "I am."
 
-            if penelope.relationship >= Relationship.LIKES:
+            if CharacterService.is_dating(penelope):
                 scene v12ferpen1
                 with dissolve
 

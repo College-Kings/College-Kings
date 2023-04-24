@@ -1158,7 +1158,7 @@ label v11_case_verdict:
 
         u "*Whisper* You're welcome."
 
-        if penelope.relationship >= Relationship.LIKES or bowling or hcGirl == "penelope":
+        if CharacterService.is_dating(penelope) or bowling or hcGirl == "penelope":
             scene v11coc24e # FPP. Same as 24c, but Penelope's mouth is open
             with dissolve
 
@@ -1211,7 +1211,7 @@ label v11_case_verdict:
 
         pe "I have to get going as well, thankfully I still have a class to get to."
 
-        if penelope.relationship >= Relationship.LIKES or bowling or hcGirl == "penelope":
+        if CharacterService.is_dating(penelope) or bowling or hcGirl == "penelope":
             scene v11coc25b # TPP. Same cam as 25, but Penelope is kissing MC on the cheek
             with dissolve
 

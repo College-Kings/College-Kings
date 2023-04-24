@@ -37,7 +37,7 @@ label v14_start:
             $ v13s48_canoeing_as_date = True
             $ v13s48_get_aubrey_chocolate = True
 
-        if penelope.relationship >= Relationship.LOYAL:
+        if CharacterService.is_girlfriend(penelope): # TODO: Check if GF is obtainable
             $ v11_pen_goes_europe = True
 
         if CharacterService.is_fwb(samantha):

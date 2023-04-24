@@ -729,7 +729,7 @@ label v11s23_penelope1:
 
     pe "No no, it's not that. I'm just not used to it. You literally go out of your way to help me."
 
-    if penelope.relationship >= Relationship.LIKES:
+    if CharacterService.is_dating(penelope):
         menu:
             "Flirt":
                 $ v11s23_penelope_date = True
