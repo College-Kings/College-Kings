@@ -7,7 +7,7 @@ label v9_apes_pre_fight:
     scene v9apf1 # TPP. Show MC on his bed in his Apes room.
     with fade
     
-    if lindsey.relationship >= Relationship.KISS:
+    if lindsey.relationship >= Relationship.KISSED:
         u "(What a day!)"
 
         scene v9apf1a # TPP. Same camera as v9apf1a, MC smile.

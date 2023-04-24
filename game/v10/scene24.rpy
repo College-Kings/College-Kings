@@ -204,12 +204,12 @@ label v10_lauren_room:
 
     u "You never know until you try."
 
-    if lauren.relationship >= Relationship.KISS:
+    if lauren.relationship >= Relationship.KISSED:
         label v10_lauren_room_sg:
             if _in_replay:
                 $ CharacterService.set_relationship(lauren, Relationship.GIRLFRIEND, mc)
 
-    if lauren.relationship >= Relationship.KISS: # If dating or have made out        
+    if lauren.relationship >= Relationship.KISSED: # If dating or have made out        
         scene v10lar3g # FPP Same angle as v10lar3, Lauren looking seductive, mouth open
         with dissolve
 
@@ -295,7 +295,7 @@ label v10_lauren_room:
                 with dissolve
                 pause
 
-                if CharacterService.is_girlfriend(lauren) or (lauren.relationship >= Relationship.KISS and reputation() == Reputations.LOYAL):
+                if CharacterService.is_girlfriend(lauren) or (lauren.relationship >= Relationship.KISSED and reputation() == Reputations.LOYAL):
                     if not CharacterService.is_girlfriend(lauren):
                         $ CharacterService.set_relationship(lauren, Relationship.GIRLFRIEND)
                         call screen reputation_popup

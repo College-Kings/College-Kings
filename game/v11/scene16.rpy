@@ -201,7 +201,7 @@ label v11_lauren_airport_convo:
 
         u "Like?"
 
-        if lauren.relationship >= Relationship.KISS:
+        if lauren.relationship >= Relationship.KISSED:
             scene v11laac2g # FPP. Same as v11laac2e, Lauren has a slightly seductive look, mouth open
             with dissolve
 
@@ -259,7 +259,7 @@ label v11_lauren_airport_convo:
 
         la "Time to go."
 
-    elif lauren.relationship >= Relationship.KISS: #and not plane sex scene
+    elif lauren.relationship >= Relationship.KISSED: #and not plane sex scene
         scene v11laac1c 
         with dissolve
 

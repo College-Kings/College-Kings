@@ -1334,7 +1334,7 @@ label v11_quiz_bonus:
 
     u "Wouldn't have missed it for the world."
 
-    if (CharacterService.is_girlfriend(lauren) or (reputation() == Reputations.LOYAL and lauren.relationship >= Relationship.KISS)) and not "v11_aubrey" in sceneList:
+    if (CharacterService.is_girlfriend(lauren) or (reputation() == Reputations.LOYAL and lauren.relationship >= Relationship.KISSED)) and not "v11_aubrey" in sceneList:
         if not CharacterService.is_girlfriend(lauren):
             call screen reputation_popup
 

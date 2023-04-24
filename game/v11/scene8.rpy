@@ -191,7 +191,7 @@ label v11_chicks_house:
 
     menu:
         "You should run":
-            if lindsey.relationship >= Relationship.KISS:
+            if lindsey.relationship >= Relationship.KISSED:
                 $ reputation.add_point(RepComponent.BOYFRIEND)
             elif chloe.relationship >= Relationship.FWB:
                 $ reputation.add_point(RepComponent.TROUBLEMAKER)

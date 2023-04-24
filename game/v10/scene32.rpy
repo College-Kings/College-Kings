@@ -14,7 +14,7 @@ label v10_tues_room_night:
         scene v10strn2 # TPP. Show MC now lying on his back, looking tired.
         with dissolve
 
-        if lauren.relationship >= Relationship.KISS:
+        if lauren.relationship >= Relationship.KISSED:
             pause 0.75
 
             scene v10strn2a # TPP. Same as 2, MC now browsing his phone.
@@ -76,7 +76,7 @@ label v10_tues_room_night:
         scene v10strn7 # TPP. Show MC now lying on his back, looking tired.
         with dissolve
 
-        if lauren.relationship >= Relationship.KISS:
+        if lauren.relationship >= Relationship.KISSED:
             pause 0.75
 
             scene v10strn7a # TPP. Same as 2, MC now browsing his phone.

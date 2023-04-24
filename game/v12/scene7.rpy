@@ -3144,7 +3144,7 @@ label v12s7_lindsey2:
     scene v12ferli3b
     with dissolve
 
-    if lindsey.relationship >= Relationship.KISS:
+    if lindsey.relationship >= Relationship.KISSED:
         scene v12ferli5 # TPP. Show mc and lindsey kissing
         with dissolve
 

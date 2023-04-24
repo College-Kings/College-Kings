@@ -30,7 +30,7 @@ label v9_lau_dorm:
 
         la "Aww, I missed you, too. Come in."
 
-    elif lauren.relationship >= Relationship.KISS:
+    elif lauren.relationship >= Relationship.KISSED:
         scene v9lau3
         with dissolve
 
@@ -95,7 +95,7 @@ label v9_lau_dorm:
     scene v9lau6a
     with dissolve
 
-    if lauren.relationship >= Relationship.KISS:
+    if lauren.relationship >= Relationship.KISSED:
         menu:
             "Offer Lauren a back rub":
                 $ reputation.add_point(RepComponent.BOYFRIEND)
@@ -254,7 +254,7 @@ label v9_lau_dorm:
             scene v9lau6c
             with dissolve
 
-    if lauren.relationship >= Relationship.KISS:
+    if lauren.relationship >= Relationship.KISSED:
         u "How about a hand job booth?"
 
         scene v9lau6e # FPP. Same camera as v9lau6, Lauren looks shocked, mouth closed.
@@ -422,7 +422,7 @@ label v9_lau_dorm:
     scene v9lau11 # FPP. Show Lauren (Who is now stood up in her room), Lauren looks stressed, mouth closed.
     with dissolve
 
-    if lauren.relationship >= Relationship.KISS:
+    if lauren.relationship >= Relationship.KISSED:
         u "Whatever you choose, I'll be there with you."
 
         scene v9lau11a # FPP. Same camera as v9lau11, Lauren smile, mouth open.
@@ -506,7 +506,7 @@ label v9_lau_dorm:
     scene v9lau16 # FPP. Show Lauren, now stood near the door of her dorm, smile, mouth open.
     with dissolve
 
-    if lauren.relationship >= Relationship.KISS:
+    if lauren.relationship >= Relationship.KISSED:
         la "You were a lifesaver."
 
         scene v9lau16a # FPP. Same camera as v9lau16, Lauren smile, mouth closed.

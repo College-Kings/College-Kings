@@ -1067,7 +1067,7 @@ label v12_lauren_sex:
                 scene v12las66 # FPP. MC and Lauren lieing down next to each other, looking at each other, Lauren smiling, mouth open, make her body a bit sweaty if possible
                 with dissolve
 
-                if CharacterService.is_girlfriend(lauren) and (amber.relationship < Relationship.FWB) and (aubrey.relationship < Relationship.FWB) and (candy.relationship < Relationship.FWB) and (chloe.relationship < Relationship.FWB) and (emily.relationship < Relationship.FWB) and (evelyn.relationship < Relationship.LIKES) and (lindsey.relationship < Relationship.KISS) and (ms_rose.relationship < Relationship.FWB) and (penelope.relationship < Relationship.LIKES) and (riley.relationship < Relationship.FWB) and (samantha.relationship < Relationship.MOVE):
+                if CharacterService.is_girlfriend(lauren) and (amber.relationship < Relationship.FWB) and (aubrey.relationship < Relationship.FWB) and (candy.relationship < Relationship.FWB) and (chloe.relationship < Relationship.FWB) and (emily.relationship < Relationship.FWB) and (evelyn.relationship < Relationship.LIKES) and (lindsey.relationship < Relationship.KISSED) and (ms_rose.relationship < Relationship.FWB) and (penelope.relationship < Relationship.LIKES) and (riley.relationship < Relationship.FWB) and (samantha.relationship < Relationship.MOVE):
                     $ grant_achievement("worth_the_wait")
 
                 if not CharacterService.is_girlfriend(lauren) and CharacterService.is_girlfriend(chloe):
