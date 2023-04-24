@@ -20,7 +20,7 @@ label v14_start:
         if CharacterService.is_girlfriend(lauren):
             $ sceneList.add("v12_lauren")
             
-        if nora.relationship >= Relationship.FWB:
+        if CharacterService.is_fwb(nora):
             $ sceneList.add("v12_nora")
             
         if CharacterService.is_girlfriend(chloe):

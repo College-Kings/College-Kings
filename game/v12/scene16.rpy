@@ -671,7 +671,7 @@ label v12_valentine:
 
     no "You've been all of those things, and more. And still, to this day, I don't know why you do the things you do for me, but I'm so appreciative. You're like a dream..."
 
-    if nora.relationship >= Relationship.LIKES:
+    if v8_nora_likes_mc:
         scene v12val30g # FPP. Same as v12val30c, Nora eyes tearing up (not crying, just tearing up), slight smile, mouth closed
         with dissolve
 

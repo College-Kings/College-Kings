@@ -41,6 +41,8 @@ label hallway_w_nora:
         jump cont_nora_hall
 
     else:
+        $ v8_nora_likes_mc = True
+
         scene v8shal3d # FPP. Same camera as v8shal3, Nora smile, mouth open.
         with dissolve
         no "Hey! [name] I'd like to speak with you."
@@ -49,7 +51,6 @@ label hallway_w_nora:
         with dissolve
         u "Sure! What's up?"
 
-        $ CharacterService.set_relationship(nora, Relationship.LIKES, mc)
 
         jump cont_nora_hall
 

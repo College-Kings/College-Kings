@@ -5339,7 +5339,7 @@ label v12s7_nora1:
                     
                 "I'd choose you":
                     $ reputation.add_point(RepComponent.BOYFRIEND)
-                    $ CharacterService.set_relationship(nora, Relationship.LIKES, mc)
+                    $ v8_nora_likes_mc = True
 
                     scene v12fernor1
                     with dissolve
@@ -5414,7 +5414,7 @@ label v12s7_nora_kill:
 
     pause 0.75
 
-    if nora.relationship >= Relationship.LIKES:
+    if v8_nora_likes_mc:
         scene v12fernor5a # FPP. Show nora, slight smile mouth open
         with dissolve
 

@@ -229,7 +229,7 @@ default v7_visited_shelter = False
 default walkedRileyHome = False
 default wolvesTasks = set()
 
-# 8.0
+#region v8.0
 default amberSexOfferAtJoshs = False
 default chloeSteakHouse = False
 default climbwseb = False
@@ -244,6 +244,8 @@ default sideWithCameron = False
 default simLarsFight = False
 default v8_dodged_pipe = False
 default musicstop = False
+default v8_nora_likes_mc = False
+#endregion v8.0
 
 # 9.0
 default dreamFightChoice = _("na")
