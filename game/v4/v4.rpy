@@ -387,7 +387,7 @@ label v4start:
 
     ri "Uhm... no, I don't think so. I like Imre, but he can be a bit gross, haha."
 
-    if riley.relationship >= Relationship.MOVE:
+    if CharacterService.is_kissed(riley):
         scene s303e
         with dissolve
 
@@ -1206,7 +1206,8 @@ label v4start:
                 if reputation() == Reputations.LOYAL:
                     call screen reputation_popup
 
-                    $ autumn.relationship = Relationship.FRIEND
+                    $ CharacterService.set_relationship(autumn, Relationship.FRIEND)
+
                     scene s334d # autumn emphatic
                     with dissolve
 
@@ -1260,7 +1261,7 @@ label v4start:
 
                 jump ea_b
 
-    elif lauren.relationship < Relationship.GIRLFRIEND: #if not a girlfriend, but not because messed up date
+    elif not CharacterService.is_girlfriend(lauren): #if not a girlfriend, but not because messed up date
         $ reputation.add_point(RepComponent.BOYFRIEND)
         scene s334
         with dissolve
