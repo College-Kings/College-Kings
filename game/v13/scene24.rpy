@@ -425,7 +425,7 @@ label v13s24:
             $ v13_emmy_points += 2
             
             if v13_emmy_points == 3:
-                $ emmy.relationship = Relationship.LIKES
+                $ CharacterService.set_relationship(emmy, Relationship.LIKES, mc)
             
             scene v13s24_16b
             with dissolve
@@ -566,7 +566,7 @@ label v13s24:
     menu:
         "Yes, I'm a romantic":
             $ reputation.add_point(RepComponent.BOYFRIEND)
-            $ kourtney.relationship = Relationship.LIKES
+            $ CharacterService.set_relationship(kourtney, Relationship.LIKES, mc)
             
             scene v13s24_16h
             with dissolve
@@ -689,7 +689,7 @@ label v13s24:
     menu:
         "Work":
             $ reputation.add_point(RepComponent.BOYFRIEND)
-            $ aryssa.relationship = Relationship.LIKES
+            $ CharacterService.set_relationship(aryssa, Relationship.LIKES, mc)
             
             scene v13s24_16l
             with dissolve

@@ -216,7 +216,7 @@ label v10_ms_rose_fight:
 
     menu:
         "Make a move":
-            $ ms_rose.relationship = Relationship.KISS
+            $ CharacterService.set_relationship(ms_rose, Relationship.KISS, mc)
             $ reputation.add_point(RepComponent.BOYFRIEND)
             scene v10msf5a # TPP. same camera as v10msf5, Show MS rose. Touching MC on the cheek, smiling,MC hand on Ms Rose Waist.
             with dissolve

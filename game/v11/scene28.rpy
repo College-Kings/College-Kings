@@ -5,7 +5,7 @@
 
 label v11_ms_rose_sex:
     $ sceneList.add("v11_rose")
-    $ ms_rose.relationship = Relationship.FWB
+    $ CharacterService.set_relationship(ms_rose, Relationship.FWB, mc)
 
     scene v11ros1 # TPP. Show MC walking thourgh the corridor, he is slightly nervous, mouth closed
     with fade

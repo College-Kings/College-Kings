@@ -1195,7 +1195,7 @@ label hd_ad:
                 $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             $ reputation.add_point(RepComponent.BRO)
-            $ riley.relationship = Relationship.LIKES
+            $ CharacterService.set_relationship(riley, Relationship.LIKES, mc)
 
             u "Yeah, I'd like that."
 
@@ -1679,7 +1679,8 @@ label apologylauren:
         u "Listen, I know you said you needed more time, but it's been a few days and I just really want to be friends again... I know I messed up."
 
     if not CharacterService.is_mad(autumn):
-        $ lauren.relationship = Relationship.FRIEND
+        $ CharacterService.set_relationship(lauren, Relationship.FRIEND)
+        
         scene s717
         with dissolve
 
@@ -1737,7 +1738,7 @@ label apologylauren:
         jump thisbewalk
 
     elif reputation() == Reputations.LOYAL:
-        $ lauren.relationship = Relationship.FRIEND
+        $ CharacterService.set_relationship(lauren, Relationship.FRIEND, mc)
         call screen reputation_popup
 
         scene s717
@@ -1798,6 +1799,7 @@ label apologylauren:
 
     else:
         $ CharacterService.set_mood(lauren, Moods.MAD)
+        
         scene s717
         with dissolve
 
@@ -1928,7 +1930,7 @@ label thisbelauren:
                     if reputation() == Reputations.LOYAL:
                         call screen reputation_popup
 
-                        $ lauren.relationship = Relationship.FRIEND
+                        $ CharacterService.set_relationship(lauren, Relationship.FRIEND)
                         $ CharacterService.set_mood(autumn, Moods.MAD)
 
                         scene s717
@@ -2072,7 +2074,7 @@ label thisbelauren:
         "Deny the cheating":
             $ reputation.add_point(RepComponent.BRO)
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
-            $ lauren.relationship = Relationship.GIRLFRIEND
+            $ CharacterService.set_relationship(lauren, Relationship.GIRLFRIEND, mc)
 
             u "I know how this looks."
 
@@ -6597,7 +6599,7 @@ label hc_asking_amber:
             "Alright, I'm in":
                 $ reputation.add_point(RepComponent.TROUBLEMAKER)
                 $ hcGirl = "amber"
-                $ amber.relationship = Relationship.FWB
+                $ CharacterService.set_relationship(amber, Relationship.FWB, mc)
 
                 scene s919e
                 with dissolve
@@ -6984,7 +6986,7 @@ label hc_asking_lauren:
         if not beachfirstkiss:
             call screen reputation_popup
 
-        $ lauren.relationship = Relationship.GIRLFRIEND
+        $ CharacterService.set_relationship(lauren, Relationship.GIRLFRIEND, mc)
 
         scene s967b # lauren laughing
         with dissolve
@@ -8914,7 +8916,7 @@ label rileytext:
 #### RIley Sex Scene, if riley rs = True, you get a message in your dorm from Riley telling you that her roommate isnt home and if you wanna come over. Since you already did stuff, you say yes.
 # It's thurday night
 label rileysexscene:
-    $ riley.relationship = Relationship.FWB
+    $ CharacterService.set_relationship(riley, Relationship.FWB, mc)
     $ sceneList.add("v7_riley")
 
     if joinwolves:
@@ -13026,7 +13028,7 @@ label fr4emilydate:
 
         "Get upset":
             $ forgiveemily = False
-            $ emily.relationship = Relationship.FRIEND
+            $ CharacterService.set_relationship(emily, Relationship.FRIEND, mc)
 
             u "I told you to stop drinking Emily. You never fucking listen!"
 
@@ -15341,7 +15343,7 @@ label fr4chloe1:
 
     menu:
         "Defend Chloe":
-            $ chloe.relationship = Relationship.FRIEND
+            $ CharacterService.set_relationship(chloe, Relationship.FRIEND, mc)
             $ reputation.add_point(RepComponent.BOYFRIEND)
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
 

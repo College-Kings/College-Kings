@@ -69,7 +69,7 @@ label v10s35_nsfwSkipLabel1:
 
                 menu:
                     "Make a joke":
-                        $ chloe.relationship = Relationship.FRIEND
+                        $ CharacterService.set_relationship(chloe, Relationship.FRIEND, mc)
                         scene v10cvn9
                         with dissolve
                         u "I know you're a bit mad at me, but I just hope you never unleash your fury on me like that, haha."

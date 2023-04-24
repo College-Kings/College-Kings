@@ -15,7 +15,7 @@ label v13s44:
     with dissolve
     
     if v11_lauren_caught_aubrey:
-        $ lauren.relationship = Relationship.FRIEND
+        $ CharacterService.set_relationship(lauren, Relationship.FRIEND, mc)
         la "[name]?"
 
         scene v13s44_3 # FPP. MC looking at Lauren, Lauren looking at MC, neutral expression, mouth closed

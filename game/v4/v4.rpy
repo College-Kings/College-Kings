@@ -2682,7 +2682,7 @@ label continueab:
             menu:
                 "Kiss her":
                     $ reputation.add_point(RepComponent.TROUBLEMAKER)
-                    $ amber.relationship = Relationship.KISS
+                    $ CharacterService.set_relationship(amber, Relationship.KISS, mc)
 
                     play sound "sounds/spit.mp3"
 

@@ -1906,7 +1906,7 @@ label continueaf:
         if reputation() == Reputations.LOYAL:
             call screen reputation_popup
 
-            $ lauren.relationship = Relationship.GIRLFRIEND
+            $ CharacterService.set_relationship(lauren, Relationship.GIRLFRIEND, mc)
 
             scene s380b
             with dissolve
@@ -2010,7 +2010,7 @@ label continueaf:
             jump gotest
 
     else:
-        $ lauren.relationship = Relationship.GIRLFRIEND
+        $ CharacterService.set_relationship(lauren, Relationship.GIRLFRIEND, mc)
 
         scene s380b
         with dissolve
@@ -3992,6 +3992,7 @@ label findimre:
 
     if fightadam and winadam:
         $ CharacterService.set_mood(imre, Moods.MAD)
+        
         u "Actually, I uhm... I found Adam."
 
         scene s439b # Imre surprised but still a bit mad
@@ -4122,6 +4123,7 @@ label findimre:
 
     elif tellschool:
         $ CharacterService.set_mood(imre, Moods.MAD)
+        
         u "Actually, I uhm... I found Adam."
 
         scene s439b # Imre surprised but still a bit mad

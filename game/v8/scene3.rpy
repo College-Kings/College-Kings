@@ -4,7 +4,7 @@ label v8_ri_start:
     stop music fadeout 3
 
     $ sceneList.add("v8_riley")
-    $ riley.relationship = Relationship.FWB
+    $ CharacterService.set_relationship(riley, Relationship.FWB, mc)
 
     scene v8s25 # Same as sfr4ri55 (from v7) but MC talking now
     with dissolve

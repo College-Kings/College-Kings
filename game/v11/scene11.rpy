@@ -239,7 +239,7 @@ label v11_Amber_Penelope:
 
         menu:
             "Kiss her":
-                $ penelope.relationship = Relationship.LIKES
+                $ CharacterService.set_relationship(penelope, Relationship.LIKES, mc)
                 $ reputation.add_point(RepComponent.BOYFRIEND)
 
                 play sound "sounds/kiss.mp3"

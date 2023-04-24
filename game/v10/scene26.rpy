@@ -368,7 +368,7 @@ label v10_amber_skatepark:
         label v10_amber_skatepark_sg:
         
         if _in_replay:
-            $ amber.relationship = Relationship.FWB
+            $ CharacterService.set_relationship(amber, Relationship.FWB, mc)
 
     if amber.relationship >= Relationship.FWB:
         scene v10sasp5b # FPP. Same camera as v10sasp5. Show Amber leaning in to whisper into MC's ear, smiling, mouth open.
@@ -717,7 +717,7 @@ label v10_amber_skatepark:
                     with dissolve
                     menu:
                         "Let her":
-                            $ amber.relationship = Relationship.FWB
+                            $ CharacterService.set_relationship(amber, Relationship.FWB, mc)
                             $ sceneList.add("v10_amber")
 
                             if config_censored:

@@ -2,7 +2,7 @@
 label v8start:
 
     if lauren.relationship < Relationship.FRIEND: #reset lauren mad to friend
-        $ lauren.relationship = Relationship.FRIEND
+        $ CharacterService.set_relationship(lauren, Relationship.FRIEND, mc)
     
     if ending == "lauren":
         jump v8_la_start
