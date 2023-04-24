@@ -180,12 +180,10 @@ label v13s55:
         scene v13s55_5 # TPP. Show MC holding his phone sitting down, slight smile, mouth closed.
         with dissolve
 
-        label v13s49_PhoneContinueRyan:
-            if MessengerService.has_replies(ryan):
-                call screen phone
+        while MessengerService.has_replies(ryan):
+            call screen phone
             if MessengerService.has_replies(ryan):
                 u "(I should check my phone.)"
-                jump v13s49_PhoneContinueRyan 
        
         u "(Poor guy...)"
 

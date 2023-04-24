@@ -119,12 +119,10 @@ label v13s15:
 
         pause 1
 
-        label v13s15_PhoneContinueLauren:
-            if MessengerService.has_replies(lauren):
-                call screen phone
+        while MessengerService.has_replies(lauren):
+            call screen phone
             if MessengerService.has_replies(lauren):
                 u "(I should check my phone.)"
-                jump v13s15_PhoneContinueLauren
         
         if v13_cuddle_lauren:
             scene v13s15_12 # TPP. Show MC standing in same position as v13s15_6, slight smirk, mouth closed, looking at the door

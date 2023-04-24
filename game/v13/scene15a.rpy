@@ -101,12 +101,10 @@ label v13s15a:
 
         pause 0.75
 
-        label v13s15a_PhoneContinueLauren:
-            if MessengerService.has_replies(lauren):
-                call screen phone
+        while MessengerService.has_replies(lauren):
+            call screen phone
             if MessengerService.has_replies(lauren):
                 u "(I should check my phone.)"
-                jump v13s15a_PhoneContinueLauren
 
     if v13_cuddle_lauren_text:
         scene v13s15a_6b

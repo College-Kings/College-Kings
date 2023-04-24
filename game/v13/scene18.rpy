@@ -161,12 +161,10 @@ label v13s18:
             $ MessengerService.new_message(nora, _("I know it's odd, but I'm trying to figure things out. Pls just... Let me handle it?"))
             $ MessengerService.add_reply(nora, _("Okay..."))
             
-            label v13s18_PhoneContinueNora:
-                if MessengerService.has_replies(nora):
-                    call screen phone
+            while MessengerService.has_replies(nora):
+                call screen phone
                 if MessengerService.has_replies(nora):
                     u "(I should text Nora.)"
-                    jump v13s18_PhoneContinueNora
                     
             scene v13s18_4b # TPP. Show MC putting his phone away.
             with dissolve

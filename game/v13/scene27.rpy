@@ -25,12 +25,10 @@ label v13s27:
     scene v13s27_1b # TPP. Same as v13s27_1, MC slight smile, looking at his phone, mouth closed
     with dissolve
 
-    label v13s27_PhoneContinueAmber:
-        if MessengerService.has_replies(amber):
-            call screen phone
+    while MessengerService.has_replies(amber):
+        call screen phone
         if MessengerService.has_replies(amber):
             u "(I should check my phone.)"
-            jump v13s27_PhoneContinueAmber
 
     scene v13s27_1c # TPP. Same as v13s27_1, MC suspicious, mouth closed
     with dissolve
