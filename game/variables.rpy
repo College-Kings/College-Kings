@@ -362,7 +362,6 @@ default v13_penelope_concert = False
 default v13_concert_backstage = False
 default v13_perfume = False
 default v13_smoke_weed = False
-default v13_emmy_points = 0
 default v13s16_lauren_points = 0
 default v13s20_bleach_suitcase = False
 default v13s41_lindsey_points = 0

@@ -872,8 +872,6 @@ label after_load:
         except NameError: v13s48_canoeing_as_date = False
         try: v13_help_chloe
         except NameError: v13_help_chloe = False
-        try: v13_emmy_points
-        except NameError: v13_emmy_points = 0
         try: v13_imre_disloyal
         except NameError: v13_imre_disloyal = False
         try: v13_perfume

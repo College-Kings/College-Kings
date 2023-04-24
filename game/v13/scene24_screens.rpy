@@ -1,16 +1,16 @@
 screen v13s24_girl():
 
-    if not emmy.relationship >= Relationship.LIKES and not kourtney.relationship >= Relationship.LIKES and not aryssa.relationship >= Relationship.LIKES:
+    if emmy.points != 3 and not kourtney.relationship >= Relationship.LIKES and not aryssa.relationship >= Relationship.LIKES:
         add Transform("images/v13/Scene 24/v13s24_20a.webp", blur=15)
-    elif emmy.relationship >= Relationship.LIKES and kourtney.relationship >= Relationship.LIKES and aryssa.relationship >= Relationship.LIKES:
+    elif emmy.points == 3 and kourtney.relationship >= Relationship.LIKES and aryssa.relationship >= Relationship.LIKES:
         add Transform("images/v13/Scene 24/v13s24_20b.webp", blur=15)
-    elif emmy.relationship >= Relationship.LIKES and kourtney.relationship >= Relationship.LIKES:
+    elif emmy.points == 3 and kourtney.relationship >= Relationship.LIKES:
         add Transform("images/v13/Scene 24/v13s24_20c.webp", blur=15)
-    elif emmy.relationship >= Relationship.LIKES and aryssa.relationship >= Relationship.LIKES:
+    elif emmy.points == 3 and aryssa.relationship >= Relationship.LIKES:
         add Transform("images/v13/Scene 24/v13s24_20d.webp", blur=15)
     elif kourtney.relationship >= Relationship.LIKES and aryssa.relationship >= Relationship.LIKES:
         add Transform("images/v13/Scene 24/v13s24_20e.webp", blur=15)
-    elif emmy.relationship >= Relationship.LIKES:
+    elif emmy.points == 3:
         add Transform("images/v13/Scene 24/v13s24_20f.webp", blur=15)
     elif kourtney.relationship >= Relationship.LIKES:
         add Transform("images/v13/Scene 24/v13s24_20g.webp", blur=15)
@@ -22,12 +22,12 @@ screen v13s24_girl():
         spacing 20
 
         button:
-            if emmy.relationship >= Relationship.LIKES:
+            if emmy.points == 3:
                 action Jump("v13s24_emmy_date")
 
             fixed:
                 xysize (269, 74)
-                if emmy.relationship >= Relationship.LIKES:
+                if emmy.points == 3:
                     add "gui/common/button_gray.webp"
                 else:
                     add "gui/common/button_light_gray.webp"
@@ -69,7 +69,7 @@ screen v13s24_girl():
         python:
             actions = []
 
-            if emmy.relationship >= Relationship.LIKES:
+            if emmy.points == 3:
                 actions.append(Jump("v13s24_emmy_date"))
 
             if kourtney.relationship >= Relationship.LIKES:
