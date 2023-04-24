@@ -222,7 +222,7 @@ label v11wakeupa:
 
             cl "Stop, you're embarrassing me."
 
-            if chloe.relationship >= Relationship.FWB:
+            if CharacterService.is_fwb(chloe) or CharacterService.is_girlfriend(chloe):
                 scene v11hr3h # FPP. Same cam as v11hr3, Show MC grabbing Chloe's chin, she's slightly embarrassed, mouth closed, looking at MC
                 with dissolve
 

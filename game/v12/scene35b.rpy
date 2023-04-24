@@ -449,7 +449,7 @@ label v12_game_roommate:
 
         cl "OH MY GOD! *Chuckles* STOP IT! [name]! PLEASE... PLEASE STOP! *Laughs*"
 
-        if chloe.relationship >= Relationship.FWB:
+        if CharacterService.is_fwb(chloe) or CharacterService.is_girlfriend(chloe):
             #scene v12grm2a
             scene v12grm5
             with dissolve

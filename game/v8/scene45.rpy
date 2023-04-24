@@ -44,7 +44,7 @@ label tue_night_in_room:
 
         u "(Let's just see what Chloe's up to.)"
 
-        if chloe.relationship >= Relationship.FWB:
+        if CharacterService.is_fwb(chloe):
             $ chloe.messenger.addReply(_("I'm thinking about you..."))
             $ chloe.messenger.newMessage(_("Really?"))
             $ chloe.messenger.addReply(_("Well, about the thing you do best, really."))
@@ -116,7 +116,7 @@ label tue_night_in_room:
 
         u "(Let's just see what Chloe's up to.)"
 
-        if chloe.relationship >= Relationship.FWB:
+        if CharacterService.is_fwb(chloe):
             $ chloe.messenger.addReply(_("I'm thinking about you..."))
             $ chloe.messenger.newMessage(_("Really?"))
             $ chloe.messenger.addReply(_("Well, about the thing you do best, really."))

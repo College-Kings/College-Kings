@@ -586,7 +586,7 @@ label v11_nora_chloe_hallway:
                         pause 0.75
 
             else:
-                if chloe.relationship >= Relationship.FWB:
+                if CharacterService.is_fwb(chloe) or CharacterService.is_girlfriend(chloe):
                     scene v11clhall1f
                     with dissolve
 
@@ -598,7 +598,7 @@ label v11_nora_chloe_hallway:
 
                     u "Hey Chloe."
 
-                if chloe.relationship >= Relationship.FWB:
+                if CharacterService.is_fwb(chloe) or CharacterService.is_girlfriend(chloe):
                     scene v11clhall1e
                     with dissolve
 
@@ -767,7 +767,7 @@ label v11_nora_chloe_hallway:
 
                         u "Haha, well I won't be good company if I'm not there so I'm gonna go get packing."
 
-                        if chloe.relationship >= Relationship.FWB:
+                        if CharacterService.is_fwb(chloe) or CharacterService.is_girlfriend(chloe):
                             scene v11clb1
                             with dissolve
 
@@ -779,7 +779,7 @@ label v11_nora_chloe_hallway:
 
                             cl "Alright, it was good talking to you."
 
-                        if chloe.relationship >= Relationship.FWB:
+                        if CharacterService.is_fwb(chloe) or CharacterService.is_girlfriend(chloe):
                             scene v11clb1a
                             with dissolve
 

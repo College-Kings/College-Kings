@@ -183,7 +183,7 @@ label v11_chloe_bathroom:
 
             cl "You really have been there for me whenever I needed you, [name]. Thank you."
 
-            if chloe.relationship >= Relationship.FWB:
+            if CharacterService.is_fwb(chloe) or CharacterService.is_girlfriend(chloe):
                 scene v11chb12b # TPP. Same as v11chb12a, MC and Chloe kissing (just a peck on the lips)
                 with dissolve
                 play sound "sounds/kiss.mp3"
@@ -233,14 +233,13 @@ label v11_chloe_bathroom:
 
             cl "*Moans*"
 
-            if chloe.relationship >= Relationship.FWB or reputation() == Reputations.POPULAR:
+            if CharacterService.is_fwb(chloe) or CharacterService.is_girlfriend(chloe) or reputation() == Reputations.POPULAR:
                 $ sceneList.add("v11_chloe")
 
-                if chloe.relationship < Relationship.FWB:
+                if CharacterService.is_friend(chloe):
+                    $ CharacterService.set_relationship(chloe, Relationship.FWB)
+                    
                     call screen reputation_popup
-
-                if chloe.relationship < Relationship.FWB:
-                    $ CharacterService.set_relationship(chloe, Relationship.FWB, mc)
 
                 stop music fadeout 3
                 jump v11_chloe_sex_scene

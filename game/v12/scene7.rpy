@@ -1050,7 +1050,7 @@ label v12s7_riley1:
 
             u "Haha, alright. I'll catch up with you later."
 
-            if chloe.relationship >= Relationship.FWB:
+            if CharacterService.is_fwb(chloe) or CharacterService.is_girlfriend(chloe):
                 scene v12ferri6 # TPP. Show MC kissing chloe
                 with dissolve
                 play sound "sounds/kiss.mp3"
@@ -1280,7 +1280,7 @@ label v12s7_chloe1:
 
     cl "That's actually a good point... Okay, now I'm not so sure about you being the killer. *Chuckles*"
 
-    if chloe.relationship >= Relationship.FWB:
+    if CharacterService.is_fwb(chloe) or CharacterService.is_girlfriend(chloe):
         scene v12ferch3 # TPP. Show chloe, hand on mc's chest, chloe mouth open
         with dissolve
 

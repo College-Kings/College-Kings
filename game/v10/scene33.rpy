@@ -1026,7 +1026,7 @@ label v10s33_chloe1:
     menu:
         "Date with Chloe":
             $ chloe.points += 1
-            if chloe.relationship >= Relationship.FWB:
+            if CharacterService.is_fwb(chloe):
                 scene v10cfrcl1
                 with dissolve
 
@@ -1185,7 +1185,7 @@ label v10s33_chloe1:
                                     scene v10cfrcl1a
                                     with dissolve
 
-                                    if reputation() == Reputations.POPULAR or chloe.relationship >= Relationship.FWB:
+                                    if reputation() == Reputations.POPULAR or CharacterService.is_fwb(chloe):
                                         scene v10cfrcl1a
                                         with dissolve
 

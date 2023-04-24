@@ -122,7 +122,7 @@ label v12_room_chloe_riley:
 
         pause 0.75
 
-        if chloe.relationship < Relationship.FWB:
+        if CharacterService.is_friend(chloe):
             scene v12crm6 # FPP. MC now laying on his bed, lights off, looking at chloe on her bed, mouth opened
             with dissolve
 

@@ -147,7 +147,7 @@ label v9_hang_w_linds:
 
     menu:
         "Let Lindsey grab your hand":
-            if chloe.relationship >= Relationship.FWB:
+            if CharacterService.is_fwb(chloe):
                 $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             else:
@@ -200,7 +200,7 @@ label v9_hang_w_linds:
 
             menu:
                 "Make out with Lindsey":
-                    if chloe.relationship >= Relationship.FWB:
+                    if CharacterService.is_fwb(chloe):
                         $ reputation.add_point(RepComponent.TROUBLEMAKER)
                     
                     else:
@@ -313,7 +313,7 @@ label v9_hang_w_linds:
                     $ renpy.end_replay()
 
                 "Pull away":
-                    if chloe.relationship >= Relationship.FWB:
+                    if CharacterService.is_fwb(chloe):
                         $ reputation.add_point(RepComponent.BOYFRIEND)
                         
                     scene v9hwl7b # TPP. Same camera as v9hwl7, Show MC pulling away from Lindsey who is trying to kiss him.
