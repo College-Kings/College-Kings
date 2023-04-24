@@ -1160,14 +1160,6 @@ label meet_lauren2:
 
     la "About yesterday in the park..."
 
-    show screen tutorial([
-        "Your decisions strongly influence the way the story progresses and how other characters perceive you.",
-        "With each choice you'll either gain Bro, Boyfriend or Troublemaker points.",
-        "Bros put the squad first, boyfriends show strong affinity towards a few selected individuals and troublemakers seek thrills and take risks.",
-        "These points are then used to identify your reputation (rep). Each reputation will unlock different possibilities and choices, but you can only have one active at a time.",
-        "You can read more about each individual rep in the Stats app on your phone.",
-    ])
-
     menu:
         "There was something there":
             $ reputation.add_point(RepComponent.BOYFRIEND)
@@ -1349,8 +1341,6 @@ label meet_lauren2:
                 with dissolve
 
                 u "(I should probably wash the blood off my face in the restroom before I go.)"
-
-    hide screen tutorial
     
     scene s133
     with Fade (1,0,1)
@@ -3049,19 +3039,10 @@ label v2_nsfwSkipLabel3:
 
     au "This costume is literally just historic lingerie."
 
-    show screen tutorial([
-        "Your decisions strongly influence the way the story progresses and how other characters perceive you.",
-        "With each choice you'll either gain Bro, Boyfriend or Troublemaker points.",
-        "Bros put the squad first, boyfriends show strong affinity towards a few selected individuals and troublemakers seek thrills and take risks.",
-        "These points are then used to identify your reputation (rep). Each reputation will unlock different possibilities and choices, but you can only have one active at a time.",
-        "You can read more about each individual rep in the Stats app on your phone.",
-    ])
-
     au "I'm not showing you this, haha."
 
     menu:
         "Oh come on":
-            hide screen tutorial
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             u "Oh come on, Aubrey. I wanna see."
@@ -3109,7 +3090,6 @@ label v2_nsfwSkipLabel3:
             call screen costumes
 
         "Fine":
-            hide screen tutorial
             $ reputation.add_point(RepComponent.BOYFRIEND)
 
             u "Alright, fine."
@@ -3792,19 +3772,10 @@ label v1_caughtContinue_pen:
     scene s186 # closeup pen outside in regular clothes upset
     with Fade (1,0,1)
 
-    show screen tutorial([
-        "Your decisions strongly influence the way the story progresses and how other characters perceive you.",
-        "With each choice you'll either gain Bro, Boyfriend or Troublemaker points.",
-        "Bros put the squad first, boyfriends show strong affinity towards a few selected individuals and troublemakers seek thrills and take risks.",
-        "These points are then used to identify your reputation (rep). Each reputation will unlock different possibilities and choices, but you can only have one active at a time.",
-        "You can read more about each individual rep in the Stats app on your phone.",
-    ])
-
     pe "[name]! What were you thinking?!"
 
     menu:
         "Apologize":
-            hide screen tutorial
             $ reputation.add_point(RepComponent.BOYFRIEND)
 
             scene s186a
@@ -3829,7 +3800,6 @@ label v1_caughtContinue_pen:
             u "(And I still need to buy a costume...)"
 
         "Deny it":
-            hide screen tutorial
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             scene s186

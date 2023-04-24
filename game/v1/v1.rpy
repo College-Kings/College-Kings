@@ -1,16 +1,4 @@
 init python:
-    # Emily's messages
-    def v1_reply1():
-        grant_achievement("no_hard_feelings")
-
-        emily.messenger.newMessage(_("Cool :)"))
-
-    def v1_reply2():
-        grant_achievement("open_wound")
-
-        reputation.add_point(RepComponent.TROUBLEMAKER)
-        emily.messenger.newMessage(_("Ugh :/"))
-
     # Julia messages
     def v1_reply3():
         reputation.add_point(RepComponent.BOYFRIEND)
@@ -168,19 +156,24 @@ label starta: #for compatibility only
     u "(Huh?)"
     
     # Emily's messages
-    $ emily.messenger.newMessage(_("Hey...\nI know we haven't talked much after we broke up, but I just wanted to let you know that I didn't get into Stanford, so I'll be going to San Vallejo as well.\nGuess I'll see you there. :)"))
-    $ emily.messenger.addReply(_("Yeah... I'll see you there."), v1_reply1)
-    $ emily.messenger.addReply(_("You cheated on me.\nGo to hell!"), v1_reply2)
+    python:
+        v1_reply1 = MessageBuilder(emily)
+        v1_reply1.add_function(grant_achievement, "no_hard_feelings")
+        v1_reply1.new_message(_("Cool :)"))
 
-    show screen tutorial([
-        "This is the phone screen. You can access your phone whenever the phone icon in the top right corner appears.",
-        "Blue dots show notifications. New notifications are usually accommpanied by a buzz sound. Currently you have a new message waiting for you.",
-        "How you reply to messages matters just as much as any other decision.",
-        "Over the course of the game you will also unlock all kinds of new apps, such as statistics or social media platforms.",
-        "Lastly, if you ever need to get to the homescreen, just click the bottom border of the phone, or the phone icon.",
-    ])
+        v1_reply2 = MessageBuilder(emily)
+        v1_reply2.add_function(grant_achievement, "open_wound")
+        v1_reply2.add_function(reputation.add_point, RepComponent.TROUBLEMAKER)
+        v1_reply2.new_message(_("Ugh :/"))
+
+        MessengerService.new_message(emily, _("Hey...\nI know we haven't talked much after we broke up, but I just wanted to let you know that I didn't get into Stanford, so I'll be going to San Vallejo as well.\nGuess I'll see you there. :)"))
+
+        MessengerService.add_replies(emily,
+            Reply(_("Yeah... I'll see you there."), v1_reply1),
+            Reply(_("You cheated on me.\nGo to hell!"), v1_reply2)
+        )
+
     call screen phone
-    hide screen tutorial
     
     stop music fadeout 3
     scene s11
@@ -208,14 +201,6 @@ label starta: #for compatibility only
     with dissolve
 
     ju "You're not planning on joining one of those, are you?"
-
-    show screen tutorial([
-        "Your decisions strongly influence the way the story progresses and how other characters perceive you.",
-        "With each choice you'll either gain Bro, Boyfriend or Troublemaker points.",
-        "Bros put the squad first, boyfriends show strong affinity towards a few selected individuals and troublemakers seek thrills and take risks.",
-        "These points are then used to identify your reputation (rep). Each reputation will unlock different possibilities and choices, but you can only have one active at a time.",
-        "You can read more about each individual rep in the Stats app on your phone.",
-    ])
     
     menu:
         "Could be fun":
@@ -233,8 +218,6 @@ label starta: #for compatibility only
             $ reputation.add_point(RepComponent.BOYFRIEND)
 
             u "No, I don't think so, Julia."
-
-    hide screen tutorial
 
     label aa_db: #for compatibility only
     hide s14a
@@ -909,12 +892,6 @@ label starta: #for compatibility only
 
     play sound "sounds/vibrate.mp3"
     
-    # Enter free roam
-    show screen tutorial([
-        "At certain parts of the game, you'll unlock free roam.",
-        "During free roam, you choose where you go and who you want to talk to next.",
-        "You will also be able to use your phone and you might just find some hidden content."
-    ], position=(1050, 700))
     call screen v1_freeRoam1_1
     with dissolve
     label fr1a2: #for compatibility only
