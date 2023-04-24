@@ -1,26 +1,3 @@
-init python:
-    # Julia messages
-    def v1_reply3():
-        reputation.add_point(RepComponent.BOYFRIEND)
-
-    def v1_reply4():
-        reputation.add_point(RepComponent.BRO)
-
-    # Lauren messages
-    def v1_reply5():
-        reputation.add_point(RepComponent.BOYFRIEND)
-
-    # Lauren messages
-    def v1_reply6():
-        reputation.add_point(RepComponent.BOYFRIEND)
-        lauren.messenger.newMessage(_("Cool :)"))
-
-    def v1_reply7():
-        reputation.add_point(RepComponent.TROUBLEMAKER)
-        lauren.messenger.newMessage(_("Idk, it's just feels kinda weird now. Can we please just talk tomorrow?"))
-        lauren.messenger.addReply(_("Fine"))
-        lauren.messenger.newMessage(_(":)"))
-
 label v1_start:
 label starta: #for compatibility only
     if config.developer:
@@ -886,9 +863,15 @@ label starta: #for compatibility only
     scene s50 # freeroam
     with dissolve
 
-    $ julia.messenger.newMessage(_("Hey honey,\nenjoy your time in college.\nStay safe and don't forget to visit me.\nLove you"), force_send=True)
-    $ julia.messenger.addReply(_("Love you too."), v1_reply3)
-    $ julia.messenger.addReply(_("Thanks, Julia :)"), v1_reply4)
+    python:
+        v1_reply3 = MessageBuilder(julia).add_function(reputation.add_point, RepComponent.BOYFRIEND)
+        v1_reply4 = MessageBuilder(julia).add_function(reputation.add_point, RepComponent.BRO)
+
+        MessengerService.new_message(julia, _("Hey honey,\nenjoy your time in college.\nStay safe and don't forget to visit me.\nLove you"))
+        MessengerService.add_replies(julia,
+            Reply(_("Love you too."), v1_reply3), 
+            Reply(_("Thanks, Julia :)"), v1_reply4)
+        )
 
     play sound "sounds/vibrate.mp3"
     
@@ -1222,7 +1205,7 @@ label starta: #for compatibility only
     label v1_freeRoam1_aubrey:
         $ freeroam1.add("aubrey")
     
-        if config_censored:
+        if is_censored:
             call screen censored_popup("v1_freeRoam1_aubrey2")
 
         scene adamaubrey36
@@ -1476,17 +1459,22 @@ label efra:
     scene s61a
     with dissolve
 
-    $ lauren.messenger.addReply(_("Hey Lauren, would you want to hang out with me and my friends tonight?"))
-    $ lauren.messenger.newMessage(_("Yeah sounds good :) Where do you wanna meet?"))
-    $ lauren.messenger.addReply(_("Just come to dorm 109 at 8"))
-    $ lauren.messenger.newMessage(_("Okay, will do"))
-    $ lauren.messenger.addReply(_("See you later, cutie"), v1_reply5)
-    $ lauren.messenger.addReply(_("Cool"))
+    python:      
+        v1_reply5 = MessageBuilder(lauren).add_function(reputation.add_point, RepComponent.BOYFRIEND)
 
-    label v1_phoneCheck1:
-        if lauren.messenger.replies:
-            call screen phone
-        if lauren.messenger.replies:
+        MessengerService.add_reply(lauren, _("Hey Lauren, would you want to hang out with me and my friends tonight?"))
+        MessengerService.new_message(lauren, _("Yeah sounds good :) Where do you wanna meet?"))
+        MessengerService.add_reply(lauren, _("Just come to dorm 109 at 8"))
+        MessengerService.new_message(lauren, _("Okay, will do"))
+        MessengerService.add_replies(lauren,
+            Reply(_("See you later, cutie"), v1_reply5),
+            Reply(_("Cool"))
+        ) 
+
+    while MessengerService.has_replies(lauren):
+        call screen phone
+
+        if MessengerService.has_replies(lauren):
             u "(I should reply to Lauren.)"
 
             scene s61
@@ -1494,19 +1482,14 @@ label efra:
 
             imre "Did you ask?"
 
-            scene s61
-            with dissolve
-
             u "Oops I forgot."
 
-            jump v1_phoneCheck1
 
-    label v1_phoneCheck2:
-        if julia.messenger.replies:
-            call screen phone
-        if julia.messenger.replies:
+    while MessengerService.has_replies(julia):
+        call screen phone
+
+        if MessengerService.has_replies(julia):
             u "(I should reply to Julia as well, by the way.)"
-            jump v1_phoneCheck2
 
     scene s61a
     with dissolve
@@ -2108,10 +2091,10 @@ label at_bd:
     play music "music/msexy.mp3"
 
     if not _in_replay:
-        if not config_censored:
+        if not is_censored:
             call screen nsfw_Toggle
 
-        if config_censored:
+        if is_censored:
             call screen censored_popup("v1_nsfwSkipLabel1")
 
     scene sda2
@@ -3029,18 +3012,17 @@ label aw_bd:
     stop music fadeout 3
     play sound "sounds/vibrate.mp3"
 
-    $ ryan.messenger.newMessage(_("Hey man, it's Ryan.\nThe Apes' rush party is tonight at 9. You're coming, right???"), force_send=True)
-    $ ryan.messenger.addReply(_("Alright, but I'll only stay for a few hours."))
-    $ ryan.messenger.newMessage(_("Haha, trust me, you're not gonna want to leave once you see all the hot chicks there."))
-    $ ryan.messenger.newMessage(_("Just meet me in front of the Apes' frat house at 9."))
-    $ ryan.messenger.addReply(_("Okay, will do."))
+    $ MessengerService.new_message(ryan, _("Hey man, it's Ryan.\nThe Apes' rush party is tonight at 9. You're coming, right???"))
+    $ MessengerService.add_reply(ryan, _("Alright, but I'll only stay for a few hours."))
+    $ MessengerService.new_message(ryan, _("Haha, trust me, you're not gonna want to leave once you see all the hot chicks there."))
+    $ MessengerService.new_message(ryan, _("Just meet me in front of the Apes' frat house at 9."))
+    $ MessengerService.add_reply(ryan, _("Okay, will do."))
 
-    label repeata:
-        if ryan.messenger.replies:
-            call screen phone
-        if ryan.messenger.replies:
+    while MessengerService.has_replies(ryan):
+        call screen phone
+        
+        if MessengerService.has_replies(ryan):
             u "(I should really check who texted me.)"
-            jump repeata
 
     play music "music/m3punk.mp3"
 
@@ -3586,12 +3568,25 @@ label v1_freeRoam2_camp:
         call screen v1_freeRoam2_2
 
     else:
-        play sound "sounds/vibrate.mp3"
+        if MessengerService.find_message(lauren, _("Hey :)\nSorry about today.\n\nCan we talk tomorrow?")):
+            play sound "sounds/vibrate.mp3"
 
-        if not lauren.messenger.find_message("Hey :)\nSorry about today.\n\nCan we talk tomorrow?"):
-            $ lauren.messenger.newMessage(_("Hey :)\nSorry about today.\n\nCan we talk tomorrow?"), force_send=True)
-            $ lauren.messenger.addReply(_("Yeah, sure."), v1_reply6)
-            $ lauren.messenger.addReply(_("What is there to talk about?"), v1_reply7)
+            python:
+                v1_reply6 = MessageBuilder(lauren)
+                v1_reply6.add_function(reputation.add_point, RepComponent.BOYFRIEND)
+                v1_reply6.new_message(_("Cool :)"))
+
+                v1_reply7 = MessageBuilder(lauren)
+                v1_reply7.add_function(reputation.add_point, RepComponent.TROUBLEMAKER)
+                v1_reply7.new_message(_("Idk, it's just feels kinda weird now. Can we please just talk tomorrow?"))
+                v1_reply7.add_reply(_("Fine"))
+                v1_reply7.new_message(_(":)"))
+
+                MessengerService.new_message(lauren, _("Hey :)\nSorry about today.\n\nCan we talk tomorrow?"))
+                MessengerService.add_replies(lauren,
+                    Reply(_("Yeah, sure."), v1_reply6),
+                    Reply(_("What is there to talk about?"), v1_reply7)
+                )
 
         call screen v1_freeRoam2_4
 
