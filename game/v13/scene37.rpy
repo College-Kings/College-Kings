@@ -66,7 +66,7 @@ label v13s37:
 
     li "*Chuckles* Not like that, fuckboy."
 
-    if lindsey.relationship >= Relationship.FWB:
+    if CharacterService.is_fwb(lindsey):
         li "And don't call me Linds... Only the girls and [name] get to call me that. *Laughs*"
 
     scene v13s37_5

@@ -38,7 +38,7 @@ label v11_rose_underground:
 
     u "Yeah. The quiet moments."
 
-    if ms_rose.relationship >= Relationship.FWB and joinwolves: #sanitizing pathbuilder input
+    if CharacterService.is_fwb(ms_rose) and joinwolves: #sanitizing pathbuilder input
         scene v11sub2
         with dissolve
 

@@ -99,7 +99,7 @@ label v9_warehouse_lindsey:
 
                 u "(You really screwed that one up. But you gotta get your head in the game.)"
 
-    elif lindsey.relationship >= Relationship.KISSED:
+    elif CharacterService.is_kissed(lindsey):
         u "Oh, shit! Hey! Are you alright?"
 
         scene v9wwl3b

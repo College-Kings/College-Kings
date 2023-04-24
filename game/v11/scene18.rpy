@@ -16,7 +16,7 @@ label v11_msrose_convo:
 
     menu:
         "Kiss her":
-            $ CharacterService.set_relationship(ms_rose, Relationship.FWB, mc)
+            $ CharacterService.set_relationship(ms_rose, Relationship.FWB)
 
             scene v11roc2 # TPP. MC gets very close to Ms Rose, Ms Rose's back is now on the wall, she is slightly smiling, mouth closed, looking at MC
             with dissolve
