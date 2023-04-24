@@ -10,27 +10,27 @@ label v14_start:
     
         $ v11_lindsey_slogan = 1
     
-        if CharacterService.is_fwb(emily, mc)
+        if CharacterService.is_fwb(emily):
             $ sceneList.add("v13_emily")
 
-        if CharacterService.is_fwb(ms_rose, mc)
+        if CharacterService.is_fwb(ms_rose):
             $ sceneList.add("v12_rose")
             $ v13_perfume = True
 
-        if CharacterService.is_girlfriend(lauren, mc)
+        if CharacterService.is_girlfriend(lauren):
             $ sceneList.add("v12_lauren")
             
         if nora.relationship >= Relationship.FWB:
             $ sceneList.add("v12_nora")
             
-        if CharacterService.is_girlfriend(chloe, mc)
+        if CharacterService.is_girlfriend(chloe):
             $ sceneList.add("v13_chloe")
             
-        if CharacterService.is_fwb(lindsey, mc)
+        if CharacterService.is_fwb(lindsey):
             $ sceneList.add("v12_lindsey")
 
-        if CharacterService.is_friend(lauren, mc)
-            $ CharacterService.set_relationship(lauren, Relationship.KISS, mc)
+        if CharacterService.is_friend(lauren):
+            $ CharacterService.set_relationship(lauren, Relationship.KISSED)
 
         if aubrey.relationship >= Relationship.FWB:
             $ s12v32_get_aubrey_flowers = True
@@ -40,8 +40,8 @@ label v14_start:
         if penelope.relationship >= Relationship.LOYAL:
             $ v11_pen_goes_europe = True
 
-        if CharacterService.is_fwb(samantha, mc)
-            $ CharacterService.set_relationship(cameron, Relationship.BRO, mc)
+        if CharacterService.is_fwb(samantha):
+            $ CharacterService.set_relationship(cameron, Relationship.BRO)
     
     #if emmy.simplr.pending_messages: #for compatibility with v12 players where emmy replies were not forced to be seen
         #$ emmy.simplr.pending_messages = []
