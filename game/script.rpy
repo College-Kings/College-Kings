@@ -14,8 +14,8 @@ define _quit_slot = "99-1"
 
 
 label path_builder():
-    $ setup()
     $ quick_menu = False
+    
     call screen path_builder_starting_location
     return
 
