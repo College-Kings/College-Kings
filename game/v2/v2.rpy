@@ -2714,7 +2714,7 @@ label try1new:
 
             menu:
                 "Risk it":
-                    if config_censored:
+                    if is_censored:
                         call screen censored_popup("v2_nsfwSkipLabel1")
 
                     $ v2_caughtpeeking = renpy.random.choice([True, False])
@@ -2853,7 +2853,7 @@ label try2new:
 
             menu:
                 "Risk it":
-                    if config_censored:
+                    if is_censored:
                         call screen censored_popup("v2_nsfwSkipLabel2")
 
                     $ v2_caughtpeeking = renpy.random.choice([True, False])
@@ -3005,7 +3005,7 @@ label try3new:
 
             menu:
                 "Risk it":
-                    if config_censored:
+                    if is_censored:
                         call screen censored_popup("v2_nsfwSkipLabel3")
 
                     $ v2_caughtpeeking = renpy.random.choice([True, False])
@@ -3238,7 +3238,7 @@ label try4new:
 
             menu:
                 "Risk it":
-                    if config_censored:
+                    if is_censored:
                         call screen censored_popup("v2_nsfwSkipLabel4")
 
                     $ v2_caughtpeeking = renpy.random.choice([True, False])
@@ -3383,7 +3383,7 @@ label try5new:
 
             menu:
                 "Risk it":
-                    if config_censored:
+                    if is_censored:
                         call screen censored_popup("v2_nsfwSkipLabel5")
 
                     $ v2_caughtpeeking = renpy.random.choice([True, False])
@@ -3520,7 +3520,7 @@ label try6new:
 
             menu:
                 "Risk it":
-                    if config_censored:
+                    if is_censored:
                         call screen censored_popup("v2_nsfwSkipLabel6")
 
                     $ v2_caughtpeeking = renpy.random.choice([True, False])

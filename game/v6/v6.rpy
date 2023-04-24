@@ -2726,7 +2726,7 @@ label emsex_a:
 
     pause 0.5
 
-    if config_censored:
+    if is_censored:
         call screen censored_popup("v6_nsfwSkipLabel1")
 
     scene em6
@@ -3989,7 +3989,7 @@ label aubreysexb: # aubreysex scene
 
     au "*Quiet moan*"
 
-    if config_censored:
+    if is_censored:
         call screen censored_popup("wayhome")
 
     scene naub1a
@@ -4409,7 +4409,7 @@ label afteraubrey:
     if CharacterService.is_fwb(aubrey):
         play sound "sounds/vibrate.mp3"
 
-        if config_censored:
+        if is_censored:
             $ aubrey.messenger.newImgMessage("gui/censoredPopup/censoredBackground.webp", force_send=True)
         else:
             $ aubrey.messenger.newImgMessage("images/v6/text3.webp", force_send=True)

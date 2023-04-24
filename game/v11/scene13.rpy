@@ -51,7 +51,7 @@ label v11_aubrey_plane_sex:
 
                 pause 0.75
 
-                if config_censored:
+                if is_censored:
                     call screen censored_popup("v11s13_nsfwSkipLabel1")
 
                 stop music fadeout 3

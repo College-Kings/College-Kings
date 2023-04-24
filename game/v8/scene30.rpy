@@ -16,7 +16,7 @@ label amber_sex_at_joshs:
     with dissolve
     pause
 
-    if config_censored:
+    if is_censored:
         call screen censored_popup("v8s30_nsfwSkipLabel1")
 
     scene v8amber4 # TPP. Amber and MC standing in front of the bed (with MC towards the bed), making out passionately with Amber holding MC's head

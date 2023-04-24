@@ -300,7 +300,7 @@ label v10_aubrey_house:
 
                         u "How about we start with your top?"
 
-                        if config_censored:
+                        if is_censored:
                             call screen censored_popup("v10s17_nsfwSkipLabel1")
 
                         scene v10auh5b # FPP Same angle as v10auh5, Aubrey removing top with bottoms still on while smiling, mouth open
@@ -334,7 +334,7 @@ label v10_aubrey_house:
                         
                         u "Let's start with the bottoms."
 
-                        if config_censored:
+                        if is_censored:
                             call screen censored_popup("v10s17_nsfwSkipLabel1")
 
                         scene v10auh5f # FPP Same angle as v10auh5, Aubrey removing bottoms while top still on, smiling, mouth open

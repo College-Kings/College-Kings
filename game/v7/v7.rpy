@@ -6426,7 +6426,7 @@ label after_history:
             $ apesVids += 1
             stop sound
 
-            if config_censored:
+            if is_censored:
                 call screen censored_popup("v7_nsfwSkipLabel2")
 
             scene s905a # Same as s905 but Lee's pants down showing his naked ass and he is startled. (Lee is still facing the board)
@@ -7634,7 +7634,7 @@ label cameron_thurs_tasks:
 
                     u "Here we go!"
 
-                    if config_censored:
+                    if is_censored:
                         call screen censored_popup("v7_nsfwSkipLabel3")
 
                     scene scc32 # FPP. Show the girls screaming and removing their tops. Cameron laughing whilst filming on his phone in bushes.
@@ -7824,7 +7824,7 @@ label cameron_thurs_tasks:
     pause 0.5
     play music "music/mhorror.mp3"
 
-    if config_censored:
+    if is_censored:
         call screen censored_popup("v7_nsfwSkipLabel4")
 
     scene scc63 # FPP. Show Cameron's sister sat in a chair tying a belt around her arm while the girl holds a syringe in her hand.
@@ -8954,7 +8954,7 @@ label rileysexscene:
     with dissolve
     ri "Come on!"
 
-    if config_censored:
+    if is_censored:
         call screen censored_popup("v7_nsfwSkipLabel1")
 
     scene ridrm4 # Riley close up in her dorm, talking mouth open, single slightly raise brow (first person)
@@ -9771,7 +9771,7 @@ label amberhocodate:
 
     pause 0.5
 
-    if config_censored:
+    if is_censored:
         call screen censored_popup("v7_nsfwSkipLabel5")
 
     scene sfr4am6 #First person Close up Amber pulls out 2 pills. a bit flirty and happy
@@ -15164,7 +15164,7 @@ label fr4aubrey1:
 
                 u "Yeah, alright. Let's go."
 
-                if config_censored:
+                if is_censored:
                     call screen censored_popup("labelfr4hallwaybathroom")
 
                 scene sfr4ri41 # tppAubrey and MC walk towards the bathroom.
@@ -17242,7 +17242,7 @@ label fr4chloeending:
     # towel drop sound #check - add towel.mp3 sound file
     play sound "sounds/towel.mp3"
 
-    if config_censored:
+    if is_censored:
         call screen censored_popup("v8s2_nsfwSkipLabel1")
 
     scene sfr4cl62 #Chloe steps out of the bathroom. We see her feet and a bathrobe drop to the floor.

@@ -123,7 +123,7 @@ screen censored_popup(continueLabel):
         xalign 0.5
         xsize 1050
 
-        if config_censored:
+        if is_censored:
             text _("TO VIEW THIS SCENE YOU MUST HAVE NSFW ENABLED"):
                 size 35
                 color "#FFFFFF"
@@ -160,7 +160,7 @@ screen censored_popup(continueLabel):
     imagebutton:
         xalign 0.5
         ypos 555
-        if config_censored:
+        if is_censored:
             idle Transform("gui/censoredPopup/censoredSettings.webp", zoom=0.65)
             hover Transform("gui/censoredPopup/censoredSettingsHover.webp", zoom=0.65)
             action ShowMenu("preferences")

@@ -108,7 +108,7 @@ label v11_ms_rose_sex_sg:
 
     pause 1.25
 
-    if config_censored:
+    if is_censored:
         call screen censored_popup("v11s28_nsfwSkipLabel1")
 
     scene v11ros5 # TPP. Show Ms Rose removing MC's pants, show her ass appearing from under the bathrobe while she's bending over to remove his pants

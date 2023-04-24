@@ -401,7 +401,7 @@ label v10_amber_skatepark:
                 $ sceneList.add("v10_amber")
                 show screen v10s26_amberSexOverlay
 
-                if config_censored:
+                if is_censored:
                     call screen censored_popup("v10s26_nsfwSkipLabel1")
 
                 stop music fadeout 3
@@ -718,7 +718,7 @@ label v10_amber_skatepark:
                             $ CharacterService.set_relationship(amber, Relationship.FWB, mc)
                             $ sceneList.add("v10_amber")
 
-                            if config_censored:
+                            if is_censored:
                                 call screen censored_popup("v10s26_nsfwSkipLabel1")
                                 
                             scene v10ambbj

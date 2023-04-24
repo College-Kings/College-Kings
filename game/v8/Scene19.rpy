@@ -9,7 +9,7 @@ init python:
         grant_achievement("text_with_an_s")
 
         amber.messenger.newMessage(_("It's only fair, right? Make us even"))
-        if config_censored:
+        if is_censored:
             amber.messenger.addImgReply("gui/censoredPopup/censoredBackground.webp")
 
         elif joinwolves:
@@ -25,7 +25,7 @@ init python:
         amber.messenger.newMessage(_("So do something about it"))
         amber.messenger.addReply(_("Now? What about you?"))
         
-        if config_censored:
+        if is_censored:
             amber.messenger.newImgMessage("gui/censoredPopup/censoredBackground.webp")
 
         else:

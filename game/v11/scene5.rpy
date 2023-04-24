@@ -846,7 +846,7 @@ label v11s5_galleryScene:
     $ grant_achievement("candy_crusher")
     u "Candy it is."
 
-    if config_censored:
+    if is_censored:
         call screen censored_popup("v11s5_nsfwSkipLabel1")
 
     scene v11swc21a # TPP Same angle as v11swc21, Candy removing her clothing
@@ -1046,7 +1046,7 @@ label v11s5_galleryScene:
 
             pause 0.75
 
-            if not config_censored:
+            if not is_censored:
                 scene v11swc29 # FPP MC's view while on the bedroom floor
                 with dissolve
     

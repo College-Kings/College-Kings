@@ -825,7 +825,7 @@ label v12_lauren_sex:
 
                 pause
 
-                if config_censored:
+                if is_censored:
                     call screen censored_popup("v12s29_nsfwSkipLabel1")
 
                 show screen v12s29_lauren_sex_overlay
