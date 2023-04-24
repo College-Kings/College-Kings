@@ -1073,7 +1073,7 @@ label v12_lauren_sex:
                 if not CharacterService.is_girlfriend(lauren) and CharacterService.is_girlfriend(chloe):
                     $ grant_achievement("two_timer")
 
-                $ lauren.relationship = Relationship.GIRLFRIEND
+                $ CharacterService.set_relationship(lauren, Relationship.GIRLFRIEND)
 
                 la "Phew! Haha... That was absolutely perfect."
 

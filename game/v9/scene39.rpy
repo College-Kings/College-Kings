@@ -206,7 +206,7 @@ label v9_hang_w_linds:
                     else:
                         $ reputation.add_point(RepComponent.BOYFRIEND)
 
-                    $ lindsey.relationship = Relationship.KISS
+                    $ CharacterService.set_relationship(lindsey, Relationship.KISSED)
                     $ sceneList.add("v9_lindsey")
                     
                     scene v9links # Animations pls ignore
