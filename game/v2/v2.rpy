@@ -1199,13 +1199,13 @@ label meet_lauren2:
 
                 u "And I should have. There was something real there. Between us."
 
-            if lauren.relationship >= Relationship.KISS or reputation() == Reputations.LOYAL:
+            if CharacterService.is_kissed(lauren) or reputation() == Reputations.LOYAL:
                 $ laawk = False
 
-                if lauren.relationship < Relationship.KISS:
+                if not CharacterService.is_kissed(lauren):
                     call screen reputation_popup
 
-                $ lauren.relationship = Relationship.GIRLFRIEND
+                $ CharacterService.set_relationship(lauren, Relationship.GIRLFRIEND)
 
                 scene s131 ### Lauren grabbing your hand on the table
                 with dissolve
@@ -4068,7 +4068,7 @@ label eve1:
 
     menu:
         "Make a move":
-            $ evelyn.relationship = Relationship.MOVE
+            $ v2_made_a_move_on_evelyn = True
             $ reputation.add_point(RepComponent.BRO)
 
             scene s188d

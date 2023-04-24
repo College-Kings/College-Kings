@@ -199,6 +199,10 @@ default v1_laurenPoints = 0
 default v2_outfits = 0
 default volleyball = False
 
+#region v2.0
+default v2_made_a_move_on_evelyn = False
+#endregion v2.0
+
 # 7.0
 default apesVids = 0
 default beachfirstkiss = False
