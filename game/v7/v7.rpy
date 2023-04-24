@@ -1159,8 +1159,8 @@ label hd_ad:
 
             u "No worries, it was a nice walk."
 
-            if reputation() == Reputations.CONFIDENT or riley.relationship >= Relationship.MOVE:
-                if riley.relationship < Relationship.MOVE:
+            if reputation() == Reputations.CONFIDENT or CharacterService.is_kissed(riley):
+                if CharacterService.is_friend(riley):
                     call screen reputation_popup
 
             else:
@@ -1195,7 +1195,7 @@ label hd_ad:
                 $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             $ reputation.add_point(RepComponent.BRO)
-            $ CharacterService.set_relationship(riley, Relationship.LIKES, mc)
+            $ CharacterService.set_mood(riley, Moods.TEASED)
 
             u "Yeah, I'd like that."
 
@@ -1294,7 +1294,6 @@ label hd_ad:
             with dissolve
 
             ri "*Whispers* Yeah, sounds good. Good night."
-
 
             scene s709 # you walking through the dorm hallways to his dorm
             with fade
@@ -7139,8 +7138,8 @@ label hc_asking_riley:
 
     u "Will you be my Cinderella for homecoming?"
 
-    if riley.relationship >= Relationship.LIKES or reputation() == Reputations.CONFIDENT:
-        if riley.relationship < Relationship.LIKES:
+    if Moods.TEASED in riley.mood or reputation() == Reputations.CONFIDENT:
+        if Moods.TEASED not in riley.mood:
             call screen reputation_popup
 
         $ hcGirl = "riley"
@@ -8880,7 +8879,7 @@ label wolves_ceremony:
 ############# RILEY TEXT
 
 label rileytext:
-    if riley.relationship >= Relationship.LIKES:
+    if Moods.TEASED in riley.mood:
         play sound "sounds/vibrate.mp3"
 
         $ riley.messenger.newMessage(_("Wanna come over? ;)"), force_send=True)
@@ -14718,7 +14717,7 @@ label fr4riley2:
     ri "Well we've been here for a few hours now and it's getting kinda boring."
     $ freeroam4.add("crowning")
 
-    if riley.relationship >= Relationship.LIKES and hcGirl == "alone":
+    if (Moods.TEASED in riley.mood or CharacterService.is_fwb(riley)) and hcGirl == "alone":
         scene sfr4ri51b
         with dissolve
 
@@ -14731,7 +14730,7 @@ label fr4riley2:
 
         jump fr4rileyending
 
-    elif riley.relationship >= Relationship.LIKES:
+    elif (Moods.TEASED in riley.mood or CharacterService.is_fwb(riley)):
         scene sfr4ri51b
         with dissolve
 
@@ -17045,7 +17044,7 @@ label fr4rileyending:
 
     queue music [ "music/mchill1.mp3", "music/m7punk.mp3" ]
 
-    if riley.relationship >= Relationship.LIKES:
+    if (Moods.TEASED in riley.mood or CharacterService.is_fwb(riley)):
         ri "Sooo homecoming was pretty fun... but I bet the night could get even better."
 
         scene sfr4ri52a # mc turns his face towards her
@@ -17098,7 +17097,7 @@ label fr4rileyending2:
 
     u "So, what's up?"
 
-    if riley.relationship >= Relationship.LIKES:
+    if (Moods.TEASED in riley.mood or CharacterService.is_fwb(riley)):
         scene sfr4ri55  #tpp close up riley whispers into your ear
         with dissolve
 

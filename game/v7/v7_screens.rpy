@@ -64,9 +64,7 @@ screen hc_select():
         _("Riley"): {
             "label": "hc_asking_riley",
             "condition": ("riley" not in hcAsked) and not CharacterService.is_girlfriend(lauren),
-            "tooltip": (_("Riley and I are good friends. She might say yes if I ask her.")
-                if riley.relationship < Relationship.LIKES else
-                _("Riley and I are good friends. She might say yes if I ask her."))
+            "tooltip": (_("Riley and I are good friends. She might say yes if I ask her."))
         }
     }
 

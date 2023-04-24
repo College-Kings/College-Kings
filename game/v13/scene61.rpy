@@ -105,7 +105,7 @@ label v13s61:
 
     stop music fadeout 3
 
-    if CharacterService.is_fwb(aubrey) and riley.relationship >= Relationship.FWB:
+    if CharacterService.is_fwb(aubrey) and CharacterService.is_fwb(riley):
         jump v13s62
 
     else:

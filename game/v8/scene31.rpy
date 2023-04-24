@@ -54,7 +54,7 @@ label v8_tues_eco_class:
     scene v8stec5
     with dissolve
 
-    if riley.relationship >= Relationship.FWB:
+    if CharacterService.is_fwb(riley):
         u "It's too bad, though."
 
         scene v8stec5b # FPP. Same camera as v8stec5, Riley confused, mouth open.

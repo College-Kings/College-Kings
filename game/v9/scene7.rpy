@@ -429,7 +429,7 @@ label fr5riley1:
 
     scene v9slake2 #FPP Close up as if sitting next to Riley, you look at her from the side, Riley is sitting on the pier, with her legs hanging over the ledge, Riley looking at the lake. -
 
-    if riley.relationship >= Relationship.FWB:
+    if CharacterService.is_fwb(riley):
         u "What's a pretty lady doing all by herself?"
 
         scene v9slake2b #same as 2, but Riley now looking at you, flirting, mouth open
@@ -547,7 +547,7 @@ label fr5riley1:
 
         ri "Okay."
 
-    if riley.relationship < Relationship.FWB:
+    if CharacterService.is_friend(riley):
         u "And I thought I was gonna find you close to the water. Wanna take a dip?"
 
         scene v9slake2f

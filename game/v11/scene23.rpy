@@ -392,7 +392,7 @@ label v11s23_riley1:
 
             u "Yeah, just a little bit of excitement..."
 
-            if riley.relationship < Relationship.FWB:
+            if CharacterService.is_friend(riley):
                 scene v11frmri3b # FPP Same angle as v11frmri3, Riley raising her eyebrow and smiling, mouth open
                 with dissolve
 
@@ -445,7 +445,7 @@ label v11s23_riley1:
 
             u "What's the reason then?"
 
-            if riley.relationship < Relationship.FWB:
+            if CharacterService.is_friend(riley):
                 scene v11frmri3b
                 with dissolve
 

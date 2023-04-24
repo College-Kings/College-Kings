@@ -412,7 +412,7 @@ label v11_roommate:
 
         pause 0.75
 
-        if riley.relationship < Relationship.FWB:
+        if CharacterService.is_friend(riley):
             scene v11rm14 # FPP. MC is now in talking distance to Riley, Riley is now looking at MC, Riley is smiling, mouth closed (make sure counter is in backrgound)
             with dissolve
 

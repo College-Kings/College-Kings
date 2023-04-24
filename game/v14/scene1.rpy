@@ -47,7 +47,7 @@ label v14_start:
         #$ emmy.simplr.pending_messages = []
         #$ emmy.simplr.sent_messages[-1].replies = []
 
-    if CharacterService.is_fwb(aubrey) and riley.relationship >= Relationship.FWB:
+    if CharacterService.is_fwb(aubrey) and CharacterService.is_fwb(riley):
         $ v13_threesomeending = True
         jump v14s01
 

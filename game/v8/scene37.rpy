@@ -40,7 +40,7 @@ label v8_tues_evening:
                 u "I should reply to Lauren."
                 jump v8s37_phoneContinue1
 
-        if riley.relationship >= Relationship.FWB:
+        if CharacterService.is_fwb(riley):
             $ riley.messenger.addReply(_("If your legs were lies, you could call me a liar. For I would be gladly spreading them."))
             $ riley.messenger.newMessage(_("That was the most corny, idiotic joke I've ever heard, Mr. Liar. :)"))
             $ riley.messenger.addReply(_("Thinking of you makes it harder to study. And in some other places as well..."))
@@ -108,7 +108,7 @@ label v8_tues_evening:
                 u "I should reply to Lauren."
                 jump v8s37_phoneContinue3
 
-        if riley.relationship >= Relationship.FWB:
+        if CharacterService.is_fwb(riley):
             $ riley.messenger.addReply(_("If your legs were lies, you could call me a liar. For I would be gladly spreading them."))
             $ riley.messenger.newMessage(_("That was the most corny, idiotic joke I've ever heard, Mr. Liar. :)"))
             $ riley.messenger.addReply(_("Thinking of you makes it harder to study. And in some other places as well..."))

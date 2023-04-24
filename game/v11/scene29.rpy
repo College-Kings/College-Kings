@@ -391,7 +391,7 @@ label v11wakeupa:
 
         u "And I didn't get an invite? Wow..."
 
-        if riley.relationship >= Relationship.FWB:
+        if CharacterService.is_fwb(riley):
             scene v11hr11d # FPP. Same as v11hr11, Riley seductive look, mouth open
             with dissolve
 

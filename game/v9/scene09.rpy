@@ -23,7 +23,7 @@ label room_wed_night:
         if CharacterService.is_fwb(aubrey):
             u "(Well I can't really decide on my favorite moment of the day, but dude, Aubrey...)"
 
-        elif riley.relationship >= Relationship.FWB:
+        elif CharacterService.is_fwb(riley):
             u "(Well I can't really decide on my favorite moment of the day, but dude, Riley...)"
 
         else: 
@@ -85,7 +85,7 @@ label room_wed_night:
         if CharacterService.is_fwb(aubrey):
             u "(Well I can't really decide on my favorite moment of the day, but dude, Aubrey...)"
 
-        elif riley.relationship >= Relationship.FWB:
+        elif CharacterService.is_fwb(riley):
             u "(Well I can't really decide on my favorite moment of the day, but dude, Riley...)"
 
         else: 

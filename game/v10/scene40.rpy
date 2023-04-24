@@ -46,7 +46,7 @@ label v10_riley_sex:
 
     u "(Okay, she should be coming out soon.)"
 
-    if riley.relationship >= Relationship.FWB or reputation() == Reputations.CONFIDENT:
+    if CharacterService.is_fwb(riley)or reputation() == Reputations.CONFIDENT:
         label v10s40_galleryScene:
             if _in_replay:
                 $ CharacterService.set_relationship(riley, Relationship.FWB, mc)
@@ -66,7 +66,7 @@ label v10_riley_sex:
 
     ri "*Chuckles* I forgot a change of clothes."
 
-    if riley.relationship >= Relationship.FWB: # mc in a relationship with riley
+    if CharacterService.is_fwb(riley): # mc in a relationship with riley
         scene v10srds1f # TPP. Same camera as v10srds1. Show MC standing up from Riley's bed, smiling, mouth closed.
         with fade
 

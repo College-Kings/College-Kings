@@ -266,7 +266,7 @@ label v13s51_emily_fight:
             if CharacterService.is_girlfriend(chloe):
                 jump v13s52
 
-            elif riley.relationship >= Relationship.FWB:
+            elif CharacterService.is_fwb(riley):
                 jump v13s53
                             
             else:

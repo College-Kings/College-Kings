@@ -255,7 +255,7 @@ label v13s50a:
     if CharacterService.is_girlfriend(chloe) and not v11_riley_roomate:
         jump v13s52
     
-    elif riley.relationship >= Relationship.FWB and v11_riley_roomate:
+    elif CharacterService.is_fwb(riley) and v11_riley_roomate:
         jump v13s53
     
     else: 
