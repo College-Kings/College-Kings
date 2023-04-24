@@ -22,6 +22,30 @@ image transparent_bar = Frame("#0000")
 image choice_button_idle = Frame("gui/choice/button_idle.webp", 40, 8)
 image choice_button_hover = Frame("gui/choice/button_hover.webp", 40, 8)
 
+#region End Screen
+image end_screen_background:
+    "gui/end_screen/end_01.webp" with dissolve
+    pause 5.0
+    
+    "gui/end_screen/end_02.webp" with dissolve
+    pause 5.0
+
+    "gui/end_screen/end_03.webp" with dissolve
+    pause 5.0
+
+    "gui/end_screen/end_04.webp" with dissolve
+    pause 5.0
+
+    "gui/end_screen/end_05a.webp" with dissolve
+    pause 5.0
+
+    repeat
+
+image end_screen_text = "gui/end_screen/end_text.webp"
+
+image patreon_credits = Movie(play="gui/end_screen/patreon_credits.webm")
+#endregion End Screen
+
 #region Main Menu
 image main_menu_background = "gui/main_menu/background.webp"
 image main_menu_patreon_idle = "gui/main_menu/patreon_idle.webp"
@@ -30,10 +54,6 @@ image main_menu_discord_idle = "gui/main_menu/discord_idle.webp"
 image main_menu_discord_hover = "gui/main_menu/discord_hover.webp"
 
 #endregion Main Menu
-
-## End Screen
-# image save_now = ""
-image patreon_credits = Movie(channel="movie", play="gui/end_screen/patreon_credits.webm")
 
 ## KCT Choice Hint
 image kct_choice_hint_background = Frame("gui/kct/background.webp", 44, 6, 44, 0) 
