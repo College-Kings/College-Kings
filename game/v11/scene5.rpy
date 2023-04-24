@@ -584,7 +584,7 @@ label v11s4_PhoneContinueJosh1:
 
     u "That's smart, actually. Probably makes it harder for the creeps at the bar to stalk you on Kiwii."
 
-    if candyLike < 3 and not reputation() == Reputations.POPULAR:
+    if candyLike != 3 and not reputation() == Reputations.POPULAR:
         if not reputation() == Reputations.POPULAR:
             call screen reputation_popup(required_reputation="popular")
     
@@ -630,10 +630,7 @@ label v11s4_PhoneContinueJosh1:
 
         jump v11_thurs_night_room
 
-    # If made Candy smile 3 or more times
-    $ CharacterService.set_relationship(candy, Relationship.LIKES, mc)
-
-    if candyLike < 3:
+    if candyLike != 3:
         call screen reputation_popup
 
     scene v11swc6l
@@ -770,8 +767,10 @@ label v11s4_PhoneContinueJosh1:
         "Act like family":
             $ sceneList.add("v11_candy")
             $ CharacterService.set_relationship(candy, Relationship.FWB, mc)
+
             scene v11swc16e # TPP Same angle and characters as v11swc16, MC puts one hand on his waist, stands in a faminine way, and holds his other hand up, wrist limp
             with dissolve
+            
             u "She's my cousin, dude."
 
     scene v11swc3i # FPP Show Dennis looking confused, mouth closed

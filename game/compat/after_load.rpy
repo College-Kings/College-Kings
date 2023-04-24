@@ -812,8 +812,6 @@ label after_load:
         except NameError: v11_invite_sam_europe = False
         try: v11_josh_nightclub
         except NameError: v11_josh_nightclub = False
-        try: candyLike
-        except NameError: candyLike = 0
         try: v11_tease_amber
         except NameError: v11_tease_amber = 0
         try: v11_manhunt_winner
