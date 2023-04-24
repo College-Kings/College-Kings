@@ -1738,6 +1738,7 @@ label apologylauren:
 
     elif reputation() == Reputations.LOYAL:
         $ CharacterService.set_relationship(lauren, Relationship.FRIEND, mc)
+        $ CharacterService.remove_mood(lauren, Moods.MAD)
         call screen reputation_popup
 
         scene s717
