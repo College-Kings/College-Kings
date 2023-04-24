@@ -59,10 +59,6 @@ label after_load:
         # Disable skip transitions
         preferences.transitions = 2
 
-        ### renpy.music.stop(channel=u'music')
-        ### If using dummy files, don't need to stop music anymore
-
-
         ## PLAYABLE CHARACTERS
         if isinstance(mc, FightCharacter) or isinstance(mc, MainCharacter):
             mc = PlayableCharacter()
@@ -71,13 +67,10 @@ label after_load:
         except AttributeError: mc.username = name
 
         try: mc.relationships
-        except AttributeError: mc.relationships = set()
-
-        try: mc.girlfriends
-        except AttributeError: mc.girlfriends = set()
+        except AttributeError: mc.relationships = {}
 
 
-        # NonPlayable Character
+#region NonPlayable Character
         try: chloe
         except NameError: chloe = NonPlayableCharacter("Chloe", "Chloe101")
         try: amber
@@ -158,144 +151,7 @@ label after_load:
         if isinstance(josh, CustomCharacter):
             josh = NonPlayableCharacter("Josh", "Josh80085")
 
-        ## Relationship types
-        try:
-            if kissamber: amber.relationship = Relationship.KISS
-            del kissamber
-        except NameError: pass
-        try:
-            if amberrs: amber.relationship = Relationship.FWB
-            del amberrs
-        except NameError: pass
-        try:
-            if aryssars: aryssa.relationship = Relationship.LIKES
-            del aryssars
-        except NameError: pass
-        try:
-            if aubreyrs: aubrey.relationship = Relationship.FWB
-            del aubreyrs
-        except NameError: pass
-        try:
-            if cameronBro: cameron.relationship = Relationship.BRO
-            del cameronBro
-        except NameError: pass
-        try:
-            if chloemad: chloe.relationship = Relationship.MAD
-            del chloemad
-        except NameError: pass
-        try:
-            if chloers: chloe.relationship = Relationship.FWB
-            del chloers
-        except NameError: pass
-        try:
-            if chloegf: chloe.relationship = Relationship.GIRLFRIEND
-            del chloegf
-        except NameError: pass
-        try:
-            if chrismad: chris.relationship = Relationship.MAD
-            del chrismad
-        except NameError: pass
-        try:
-            if emmyrs: emmy.relationship = Relationship.LIKES
-            del emmyrs
-        except NameError: pass
-        try:
-            if "v13_emmy" in sceneList: emmy.relationship = Relationship.FWB
-        except NameError: pass
-        try:
-            if evelyndate: evelyn.relationship = Relationship.DATE
-            del evelyndate
-        except NameError: pass
-        try:
-            if evelynrs: evelyn.relationship = Relationship.LIKES
-            del evelynrs
-        except NameError: pass
-        try:
-            if imremad: imre.relationship = Relationship.MAD
-            del imremad
-        except NameError: pass
-        try:
-            if jennyawkward: jenny.relationship = Relationship.AWKWARD
-            del jennyawkward
-        except NameError: pass
-        try:
-            if jennyrs: jenny.relationship = Relationship.FWB
-            del jennyrs
-        except NameError: pass
-        try:
-            if joshmad or joshmadfr: josh.relationship = Relationship.MAD
-            del joshmad
-            del joshmadfr
-        except NameError: pass
-        try:
-            if kourtneyrs: kourtney.relationship = Relationship.LIKES
-            del kourtneyrs
-        except NameError: pass
-        try:
-            if laurenmad: lauren.relationship = Relationship.MAD
-            del laurenmad
-        except NameError: pass
-        try:
-            if laurenrs: lauren.relationship = Relationship.GIRLFRIEND
-            del laurenrs
-        except NameError: pass
-        try:
-            if laurenrs_v11aubrey and (v11_aubrey_sex or "v11_aubrey" in sceneList): v11_lauren_caught_aubrey = True
-            del laurenrs_v11aubrey
-        except NameError: pass
-        try:
-            if lindseyfirstkiss: lindsey.relationship = Relationship.KISS
-            del lindseyfirstkiss
-        except NameError: pass
-        try:
-            if lindseyrs: lindsey.relationship = Relationship.FWB
-            del lindseyrs
-        except NameError: pass
-        try:
-            if v10_ms_r_kiss: ms_rose.relationship = Relationship.KISS
-            del v10_ms_r_kiss
-        except NameError: pass
-        try:
-            if msrosers: ms_rose.relationship = Relationship.FWB
-            del msrosers
-        except NameError: pass
-        try:
-            if noralikes: nora.relationship = Relationship.LIKES
-            del noralikes
-        except NameError: pass
-        try:
-            if norars: nora.relationship = Relationship.FWB
-            del norars
-        except NameError: pass
-        try:
-            if penelopers: penelope.relationship = Relationship.LIKES
-            del penelopers
-        except NameError: pass
-        try:
-            if penelopeloyal: penelope.relationship = Relationship.LOYAL
-            del penelopeloyal
-        except NameError: pass
-        try:
-            if rileykiss: riley.relationship = Relationship.MOVE
-            del rileykiss
-        except NameError: pass
-        try:
-            if rileyrs: riley.relationship = Relationship.FWB
-            del rileyrs
-        except NameError: pass
-        try:
-            if v11_samantha_spa: sceneList.add("v11_samantha")
-        except NameError: pass
-        try:
-            if v11_samantha_spa: samantha.relationship = Relationship.MOVE
-            del v11_samantha_spa
-        except NameError: pass
-        try:
-            if "v14_samantha" in sceneList: samantha.relationship = Relationship.FWB
-        except NameError: pass
-
         ms_rose.name = "Ms Rose"
-
         chloe.username = "Chloe101"
         amber.username = "Amber_xx"
         penelope.username = "Penelopeeps"
@@ -321,6 +177,12 @@ label after_load:
         naomi.username = "NaomiXMarie"
         samantha.username = "SamFromSpaceJam"
 
+        try:
+            if elijah.relationship == Relationship.MAKEFUN:
+                CharacterService.set_mood(elijah, Mood.HURT)
+        except AttributeError: pass
+
+#endregion NonPlayableCharacters
         try:
             bro = reputation.components[Reputations.BRO]
             boyfriend = reputation.components[Reputations.BOYFRIEND]

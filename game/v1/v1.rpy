@@ -633,13 +633,13 @@ label starta: #for compatibility only
 
     menu:
         "Make fun of Elijah":
+            $ CharacterService.set_mood(elijah, Moods.HURT)
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
+
             scene s46a
             with dissolve
 
             u "Wow Elijah, way to start the fun."
-
-            $ elijah.relationship = Relationship.MAKEFUN
-            $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             scene s46b
             with dissolve
@@ -1034,7 +1034,7 @@ label starta: #for compatibility only
         scene s50el
         u "Hey, you're Elijah right?"
 
-        if elijah.relationship <= Relationship.MAKEFUN:
+        if Moods.HURT in elijah.mood:
             scene s50el1
             with dissolve
 
@@ -1202,7 +1202,7 @@ label starta: #for compatibility only
         menu:
             "Flirt":
                 $ reputation.add_point(RepComponent.TROUBLEMAKER)
-                $ nora.relationship = Relationship.MOVE
+                $ CharacterService.set_relationship(nora, Relationship.MOVE)
 
                 scene s56no1a
                 with dissolve
@@ -2895,7 +2895,7 @@ label aw_bd:
 
     menu:
         "Kiss her":
-            $ lauren.relationship = Relationship.MOVE
+            $ CharacterService.set_relationship(lauren, Relationship.MOVE)
 
             if v1_laurenPoints == 2:
                 $ lauren.relationship = Relationship.KISS                
