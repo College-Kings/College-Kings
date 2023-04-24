@@ -1,4 +1,4 @@
-screen end_screen(support_link="https://store.steampowered.com/app/1924480/College_Kings_2__Episode_1/"):
+screen end_screen(support_link=""):
     tag end_screen
     modal True
     style_prefix "end_screen"
@@ -7,7 +7,7 @@ screen end_screen(support_link="https://store.steampowered.com/app/1924480/Colle
 
     if config.enable_steam:
         add image_path + "end_screen_background_steam.webp"
-        default support_link = "https://store.steampowered.com/app/1924480/College_Kings_2__Act_I/"
+        default support_link = "https://store.steampowered.com/app/1924480/College_Kings_2__Episode_1/"
 
     else:
         add image_path + "end_screen_background.webp"
