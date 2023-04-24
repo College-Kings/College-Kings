@@ -6,6 +6,7 @@ define config.default_sfx_volume = 1
 default menu_set = set()
 
 default is_censored = False
+default label_history = []
 default name = _("Alex")
 default real_life_mode = False
 default showkct = True
