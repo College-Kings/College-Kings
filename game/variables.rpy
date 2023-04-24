@@ -9,7 +9,6 @@ default is_censored = False
 default label_history = []
 default name = _("Alex")
 default real_life_mode = False
-default showkct = True
 default checklist = Checklist()
 
 # Recap 
@@ -78,14 +77,14 @@ default autumn = NonPlayableCharacter("Autumn", "Its_Fall")
 default beth = NonPlayableCharacter("Beth")
 default buyer = NonPlayableCharacter("Buyer")
 default caleb = NonPlayableCharacter("Caleb", "Aleb")
-default cameron = NonPlayableCharacter("Cameron", "Cameroon") # Relationship progression: FRIEND, BRO
+default cameron = NonPlayableCharacter("Cameron", "Cameroon")
 default charli = NonPlayableCharacter("Charli", "CharliAndTheCockFactory")
 default chloe = NonPlayableCharacter("Chloe", "Chloe101")
 default chris = NonPlayableCharacter("Chris", "Chriscuit")
 default dean = NonPlayableCharacter("Dean")
-default elijah = NonPlayableCharacter("Elijah", "Elijah_Woods") # Relationship progression: MAKEFUN, FRIEND
+default elijah = NonPlayableCharacter("Elijah", "Elijah_Woods")
 default emily = NonPlayableCharacter("Emily", "emilyyyy")
-default emmy = NonPlayableCharacter("Emmy") # Relationship progression: FRIEND, LIKES, FWB (in CK1)
+default emmy = NonPlayableCharacter("Emmy")
 default grayson = NonPlayableCharacter("Grayson", "G-rayson")
 default imre = NonPlayableCharacter("Imre", "BadBoyImre")
 default iris = NonPlayableCharacter("Iris")
