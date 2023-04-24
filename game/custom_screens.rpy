@@ -79,7 +79,7 @@ screen real_life_mode():
         button:
             idle_background "blue_button_idle"
             hover_background "blue_button_hover"
-            action [SetVariable("real_life_mode", True), SetVariable("config.rollback_enabled", False), SetVariable("showkct", False), Show("phone_icon"), Jump("v1_start")]
+            action [SetVariable("real_life_mode", True), SetVariable("config.rollback_enabled", False), SetVariable("show_reputation", False), Show("phone_icon"), Jump("v1_start")]
             xysize (215, 55)
 
             text _("ENABLE") align (0.5, 0.5)
@@ -87,13 +87,13 @@ screen real_life_mode():
         button:
             idle_background "blue_button_idle"
             hover_background "blue_button_hover"
-            action [SetVariable("real_life_mode", False), SetVariable("config.rollback_enabled", True), SetVariable("showkct", True), Show("phone_icon"), Jump("v1_start")]
+            action [SetVariable("real_life_mode", False), SetVariable("config.rollback_enabled", True), SetVariable("show_reputation", True), Show("phone_icon"), Jump("v1_start")]
             xysize (215, 55)
 
             text _("DISABLE") align (0.5, 0.5)
 
     if config_debug:
-        timer 0.1 action [SetVariable("real_life_mode", False), SetVariable("config.rollback_enabled", True), SetVariable("showkct", True), Show("phone_icon"), Jump("v1_start")]
+        timer 0.1 action [SetVariable("real_life_mode", False), SetVariable("config.rollback_enabled", True), SetVariable("show_reputation", True), Show("phone_icon"), Jump("v1_start")]
 
 screen fantasyOverlay():
     add "images/fantasyoverlay.webp"
