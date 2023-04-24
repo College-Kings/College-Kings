@@ -173,7 +173,7 @@ label v13s55:
         $ MessengerService.add_replies(ryan,
             Reply(_("Yeah man, it was nice. Thanks again for setting it up.")),
             Reply(_("For sure dude, I had a really fun night."))
-            )
+        )
         $ MessengerService.new_message(ryan, _("We'll have to do it again soon."))
         $ MessengerService.add_reply(ryan, _("Sure man."))
 
