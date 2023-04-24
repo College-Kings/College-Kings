@@ -25,3 +25,6 @@
 [submodule "game/screens"]
 	path = game/screens
 	url = https://github.com/College-Kings/college-kings-screens.git
+[submodule "game/tutorials"]
+	path = game/tutorials
+	url = https://github.com/College-Kings/college-kings-tutorials.git
