@@ -187,7 +187,6 @@ default is_censored = False
 default label_history = []
 default name = _("Alex")
 default real_life_mode = False
-default checklist = Checklist()
 
 # Recap 
 default recap_first_run = True # used by the ending scene for each girl narraitive to determine if to return to the recap_girl_summary or to continue to the next girl. Jenny's last scene changes this to false.
