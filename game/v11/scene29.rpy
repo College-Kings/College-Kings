@@ -140,7 +140,7 @@ label v11wakeupa:
 
         u "Probably because you brought a house's worth of stuff. Here, let me help you."
 
-        if chloe.relationship <= Relationship.MAD:
+        if CharacterService.is_mad(chloe):
             scene v11hr3a # FPP. Same as v11hr3, Chloe slight smile, mouth open
             with dissolve
 

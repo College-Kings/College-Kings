@@ -12,7 +12,7 @@ screen v12_girls():
         },
         "Chloe": {
             "label": "v12_jc_chloe",
-            "condition": chloe.relationship > Relationship.MAD
+            "condition": not CharacterService.is_mad(chloe)
         },
         "Lauren": {
             "label": "v12_jc_lauren",

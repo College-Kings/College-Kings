@@ -15,7 +15,7 @@ label hallway_w_nora:
     scene v8shal2 # TPP. Show MC continuing to walk down the hallway, MC notices Nora and Nora notices MC.
     with dissolve
 
-    if nora.relationship <= Relationship.MAD:
+    if CharacterService.is_mad(nora):
         $ nora.relationship = Relationship.FRIEND
         scene v8shal3 # FPP. Close up Nora, Nora neutral expression, mouth open.
         with dissolve

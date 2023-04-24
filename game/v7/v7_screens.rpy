@@ -26,16 +26,16 @@ screen hc_select():
         },
         _("Autumn"): {
             "label": "hc_asking_autumn",
-            "condition": ("autumn" not in hcAsked) and (not autumn.relationship <= Relationship.MAD) and (lauren.relationship < Relationship.GIRLFRIEND),
+            "condition": ("autumn" not in hcAsked) and (not CharacterService.is_mad(autumn)) and (lauren.relationship < Relationship.GIRLFRIEND),
             "tooltip": (_("Autumn and I aren't really close, but I'll never know if she'd say yes if I don't try.")
-                if autumn.relationship > Relationship.MAD else
+                if not CharacterService.is_mad(autumn) else
                 _("I think Autumn might be mad at me, so I probably shouldn't ask her."))
         },
         _("Chloe"): {
             "label": "hc_asking_chloe",
-            "condition": ("chloe" not in hcAsked) and (chloe.relationship > Relationship.MAD) and (lauren.relationship < Relationship.GIRLFRIEND),
+            "condition": ("chloe" not in hcAsked) and not CharacterService.is_mad(chloe) and (lauren.relationship < Relationship.GIRLFRIEND),
             "tooltip": (_("Chloe and I have been getting closer recently. Who knows, I might have a shot.")
-                if chloe.relationship > Relationship.MAD else
+                if not CharacterService.is_mad(chloe) else
                 _("I think Chloe is mad at me, so I probably shouldn't ask her."))
         },
         _("Emily"): {
@@ -47,9 +47,9 @@ screen hc_select():
         },
         _("Lauren"): {
             "label": "hc_asking_lauren",
-            "condition": ("lauren" not in hcAsked) and (lauren.relationship > Relationship.MAD),
+            "condition": ("lauren" not in hcAsked) and not CharacterService.is_mad(lauren),
             "tooltip": (_("I'm not sure Lauren sees me as more than a friend, but we have been getting closer.")
-                if lauren.relationship > Relationship.MAD else
+                if not CharacterService.is_mad(lauren) else
                 _("It's kinda weird between Lauren and me, I probably should ask someone else."))
         },
         _("Penelope"): {

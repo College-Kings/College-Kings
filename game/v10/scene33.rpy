@@ -931,7 +931,7 @@ label v10s33_deergirl11:
 
 label v10s33_chloe1:
     $ freeroam6.add("chloe")
-    if chloe.relationship <= Relationship.MAD:
+    if CharacterService.is_mad(chloe):
         scene v10cfrcl1 # FPP. Show Chloe, mouth closed
         
         u "I think Chloe's still mad at me, I'd rather not talk to her."

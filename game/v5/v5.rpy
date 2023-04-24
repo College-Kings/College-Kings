@@ -357,7 +357,7 @@ label jorepb:
             jump newchloec
 
         "You're lying":
-            $ chloe.relationship = Relationship.MAD
+            $ CharacterService.set_mood(chloe, Moods.MAD)
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             scene s370a
@@ -1645,7 +1645,7 @@ label continueaf:
 
             u "(I should go apologize.)"
 
-            if autumn.relationship > Relationship.MAD:
+            if not CharacterService.is_mad(autumn):
                 u "(Hopefully Autumn has already put in a good word for me.)"
 
             scene s393 #you infront of Laurens dorm
@@ -1717,7 +1717,7 @@ label continueaf:
 
             u "(Maybe I should give her a bit more time.)"
 
-            if autumn.relationship > Relationship.MAD:
+            if not CharacterService.is_mad(autumn):
                 u "(Afterall, Autumn said she'd talk to her.)"
 
             u "(It's probably time to go pick up Imre with Riley anyways.)"
@@ -1752,7 +1752,7 @@ label continueaf:
     scene s380b
     with dissolve
 
-    if laurentoofar and autumn.relationship <= Relationship.MAD:
+    if laurentoofar and CharacterService.is_mad(autumn):
         la "[name], what are you doing here?"
 
         scene s380c
@@ -1812,7 +1812,7 @@ label continueaf:
             jump gotest
 
         else:
-            $ lauren.relationship = Relationship.MAD
+            $ CharacterService.set_mood(lauren, Moods.MAD)
 
             la "When you continued pushing your hand up my thigh after I told you I didn't want it, you... you made me feel disgusting."
 
@@ -1893,7 +1893,7 @@ label continueaf:
 
         jump gotest
 
-    elif autumn.relationship <= Relationship.MAD:
+    elif CharacterService.is_mad(autumn):
         la "[name], what are you doing here?"
 
         scene s380c
@@ -3990,8 +3990,8 @@ label findimre:
     scene s439a
     with dissolve
 
-    if fightadam and winadam :
-        $ imre.relationship = Relationship.MAD
+    if fightadam and winadam:
+        $ CharacterService.set_mood(imre, Moods.MAD)
         u "Actually, I uhm... I found Adam."
 
         scene s439b # Imre surprised but still a bit mad
@@ -4121,7 +4121,7 @@ label findimre:
         u "Alright. Good luck, man."
 
     elif tellschool:
-        $ imre.relationship = Relationship.MAD
+        $ CharacterService.set_mood(imre, Moods.MAD)
         u "Actually, I uhm... I found Adam."
 
         scene s439b # Imre surprised but still a bit mad
@@ -4249,7 +4249,7 @@ label findimre:
 
     queue music [ "music/mindie2.mp3", "music/mindie3.mp3" ]
 
-    if imre.relationship <= Relationship.MAD:
+    if CharacterService.is_mad(imre):
         u "(How the fuck did everything go so wrong??)"
         u "(A couple hours ago Imre was so happy to see me and now he probably hates me...)"
 
@@ -4269,7 +4269,7 @@ label findimre:
 
     u "(Maybe that's Imre...)"
 
-    if chloe.relationship <= Relationship.MAD:
+    if CharacterService.is_mad(chloe):
         $ amber.messenger.newMessage(_("Hey, you alone? xx"), force_send=True)
         $ amber.messenger.addReply(_("I'm at the park, but I'm by myself."))
         $ amber.messenger.newMessage(_("Go somewhere where you're completely alone xx"))
@@ -4281,7 +4281,7 @@ label findimre:
 
         u "(Fuck, I don't have time for Amber right now, but I really wanna find out what surprise she has.)"
 
-        if imre.relationship <= Relationship.MAD:
+        if CharacterService.is_mad(imre):
             u "(I gotta make a decision. Should I find Imre, or keep talking to Amber?)"
         else:
             u "(I gotta make a decision. Should I help Imre, or keep talking to Amber?)"
@@ -4298,7 +4298,7 @@ label findimre:
 
         u "(Fuck, I don't have time for this right now, but going swimming with Chloe sounds like the best possible way to get closer to her.)"
 
-        if imre.relationship <= Relationship.MAD:
+        if CharacterService.is_mad(imre):
             u "(I gotta make a decision. Should I find Imre, or meet Chloe?)"
         else:
             u "(I gotta make a decision. Should I help Imre, or meet Chloe?)"

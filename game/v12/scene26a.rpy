@@ -129,7 +129,7 @@ label v12_follow_chris:
         "She wasn't overreacting":
             $ reputation.add_point(RepComponent.BOYFRIEND)
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
-            $ chris.relationship = Relationship.MAD
+            $ CharacterService.set_mood(chris, Moods.MAD)
 
             scene v12chf4a
             with dissolve

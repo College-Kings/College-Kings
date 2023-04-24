@@ -20,7 +20,7 @@ label v11_roommate:
 
         pause 0.75
 
-        if chloe.relationship <= Relationship.MAD:
+        if CharacterService.is_mad(chloe):
             scene v11rm4 # FPP. MC is now in talking distance to Chloe, Chloe is now looking at MC, Chloe is slightly annoyed, mouth closed (make sure counter is in backrgound)
             with dissolve
 

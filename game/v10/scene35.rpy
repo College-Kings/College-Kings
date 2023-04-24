@@ -62,7 +62,7 @@ label v10s35_nsfwSkipLabel1:
 
             u "Hey! Good job."
 
-            if chloe.relationship <= Relationship.MAD:
+            if CharacterService.is_mad(chloe):
                 scene v10cvn9a
                 with dissolve
                 cl "Uhm thanks, [name]."

@@ -205,7 +205,7 @@ label v10_late_alley:
                 jo "Trust me, I hear you. I'm gonna get out of here man."
 
             else:
-                $ josh.relationship = Relationship.MAD
+                $ CharacterService.set_mood(josh, Moods.MAD)
                 $ josh_europe = False
                 scene v10all3a
                 with dissolve

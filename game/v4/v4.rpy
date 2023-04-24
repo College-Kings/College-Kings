@@ -1152,7 +1152,7 @@ label v4start:
                     jump autumnsita
 
                 else:
-                    $ autumn.relationship = Relationship.MAD
+                    $ CharacterService.set_mood(autumn, Moods.MAD)
                     scene s334b
                     with dissolve
 
@@ -1168,7 +1168,7 @@ label v4start:
                     jump readmontagea
 
             "Sit somewhere else":
-                $ autumn.relationship = Relationship.MAD
+                $ CharacterService.set_mood(autumn, Moods.MAD)
 
                 jump ea_b
 
@@ -1239,7 +1239,7 @@ label v4start:
                     jump autumnsita
 
                 else:
-                    $ autumn.relationship = Relationship.MAD
+                    $ CharacterService.set_mood(autumn, Moods.MAD)
                     
                     scene s334b
                     with dissolve
@@ -1256,7 +1256,7 @@ label v4start:
                     jump readmontagea
 
             "Sit somewhere else":
-                $ autumn.relationship = Relationship.MAD
+                $ CharacterService.set_mood(autumn, Moods.MAD)
 
                 jump ea_b
 
@@ -1333,7 +1333,8 @@ label v4start:
         jump autumnsita
 
 label ea_b:
-    $ autumn.relationship = Relationship.MAD
+    $ CharacterService.set_mood(autumn, Moods.MAD)
+
     scene s334c
     with dissolve
 
@@ -2872,7 +2873,7 @@ label continueab:
     with dissolve
     cl "Well there you have it! Grayson put him up to this, just to fuck with me! I didn't do anything shady!"
 
-    $ chloe.relationship = Relationship.MAD
+    $ CharacterService.set_mood(chloe, Moods.MAD)
 
     menu:
         "Accuse her of lying":

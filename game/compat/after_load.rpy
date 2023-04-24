@@ -182,6 +182,17 @@ label after_load:
                 CharacterService.set_mood(elijah, Mood.HURT)
         except AttributeError: pass
 
+        try:
+            if evelyn.relationship == Relationship.MOVE:
+                v2_made_a_move_on_evelyn = True
+        except AttributeError: pass
+
+        for character in (josh, lauren, chris, autumn, chloe, imre, nora):
+            try:
+                if character.relationship == Relationship.MAD:
+                    CharacterService.set_mood(character, Mood.MAD)
+            except AttributeError: pass
+
 #endregion NonPlayableCharacters
         try:
             bro = reputation.components[Reputations.BRO]

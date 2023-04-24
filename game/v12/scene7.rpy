@@ -5813,7 +5813,7 @@ label v12s7_josh1:
     menu:
         "Really care about cats, huh?":
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
-            $ josh.relationship = Relationship.MAD
+            $ CharacterService.set_mood(josh, Moods.MAD)
             scene v12ferjo1
             with dissolve
 

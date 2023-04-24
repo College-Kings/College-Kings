@@ -349,7 +349,7 @@ label v11_nora_chloe_hallway:
                 u "(I need to get home and pack.)"
 
         "Say something":
-            if chloe.relationship <= Relationship.MAD:
+            if CharacterService.is_mad(chloe):
                 scene v11clhall1c # FPP. Same as clhall1a, Chloe and MC are now looking at each other, Chloe's mouth is closed, she is annoyed
                 with dissolve
 
