@@ -98,7 +98,7 @@ label v13s4:
 
         u "*Chuckles* Right behind you."
 
-        if chloe.relationship >= Relationship.GIRLFRIEND:
+        if CharacterService.is_girlfriend(chloe, Relationship.GIRLFRIEND):
             scene v13s4_5b # TPP. Same as v13s4_5a, but MC carrying Chloe's luggage as well
             with dissolve
 

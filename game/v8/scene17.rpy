@@ -294,7 +294,7 @@ label phn_penelope6_done:
     with dissolve
     u "Listen, I'm in the middle of something..."
 
-    if lauren.relationship >= Relationship.GIRLFRIEND:
+    if CharacterService.is_girlfriend(lauren, Relationship.GIRLFRIEND):
         scene v8rose15
         with dissolve
         la "Whatcha doooin?"

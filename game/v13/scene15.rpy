@@ -98,7 +98,7 @@ label v13s15:
 
     pause 0.75
 
-    if lauren.relationship >= Relationship.GIRLFRIEND and not v11_lauren_caught_aubrey: #if healthy lauren relationship
+    if CharacterService.is_girlfriend(lauren, Relationship.GIRLFRIEND) and not v11_lauren_caught_aubrey: #if healthy lauren relationship
         play sound "sounds/vibrate.mp3"
 
         scene v13s15_10 # TPP. MC looking down at his phone, he is standing in same place as v13s15_6, slightly surprised, mouth closed
@@ -130,7 +130,7 @@ label v13s15:
 
             u "(A night with the baby.)"
 
-            if chloe.relationship >= Relationship.GIRLFRIEND:
+            if CharacterService.is_girlfriend(chloe, Relationship.GIRLFRIEND):
                 scene v13s15_14 # TPP. Show MC walking towards the door, startled, mouth closed
                 with vpunch
 
@@ -215,7 +215,7 @@ label v13s15:
 
             pause 0.75
 
-            if chloe.relationship >= Relationship.GIRLFRIEND:
+            if CharacterService.is_girlfriend(chloe, Relationship.GIRLFRIEND):
                 scene v13s15_98
                 with dissolve
 
@@ -251,7 +251,7 @@ label v13s15:
 
         pause 0.75
 
-        if chloe.relationship >= Relationship.GIRLFRIEND:
+        if CharacterService.is_girlfriend(chloe, Relationship.GIRLFRIEND):
             scene v13s15_98
             with dissolve
 

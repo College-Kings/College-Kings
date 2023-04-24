@@ -23,7 +23,7 @@ label v10_econ_class:
     with dissolve
 
 
-    if lauren.relationship >= Relationship.GIRLFRIEND:
+    if CharacterService.is_girlfriend(lauren, Relationship.GIRLFRIEND):
         scene v10eco4 # FPP. Show Lauren, Slight smile, mouth open
         with dissolve
 
@@ -57,7 +57,7 @@ label v10_econ_class:
 
         ry "Wait, you were out having fun and didn't invite your main brother?"
 
-    if lauren.relationship >= Relationship.GIRLFRIEND:
+    if CharacterService.is_girlfriend(lauren, Relationship.GIRLFRIEND):
         scene v10eco4
         with dissolve
 

@@ -34,7 +34,7 @@ label v10_call_with_lauren1:
 
     u "Hello?"
 
-    if lauren.relationship >= Relationship.GIRLFRIEND: # RCS - MC is a relationship with Lauren
+    if CharacterService.is_girlfriend(lauren, Relationship.GIRLFRIEND): # RCS - MC is a relationship with Lauren
         scene v10scwl1a # IGNORE, RENDER FROM SCENE 18
         with dissolve
         
@@ -329,7 +329,7 @@ label v10_call_with_lauren1:
 
                     u "I guess it wouldn't hurt to give a little performance sometime."
 
-                    if lauren.relationship >= Relationship.GIRLFRIEND: # MC is in a relationship with Lauren
+                    if CharacterService.is_girlfriend(lauren, Relationship.GIRLFRIEND): # MC is in a relationship with Lauren
                         scene v10scwl1a
                         with dissolve
                         
@@ -457,7 +457,7 @@ label v10_call_with_lauren1:
             
             u "I just name a topic, say my favorite thing in that topic and then you answer your favorite. Then the game continues, but switched."
 
-            if lauren.relationship >= Relationship.GIRLFRIEND: # RCS - MC is in a relationship with Lauren
+            if CharacterService.is_girlfriend(lauren, Relationship.GIRLFRIEND): # RCS - MC is in a relationship with Lauren
                 if joinwolves:
                     scene v10scwl2
                 else:

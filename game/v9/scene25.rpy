@@ -17,7 +17,7 @@ label v9_room_fri_eve:
 
         u "(I'm so bored.)"
 
-        if lauren.relationship >= Relationship.GIRLFRIEND:
+        if CharacterService.is_girlfriend(lauren, Relationship.GIRLFRIEND):
             scene v9rfe1b # TPP. Same camera as v9rfe1, show MC on his phone.
             with dissolve    
 
@@ -61,7 +61,7 @@ label v9_room_fri_eve:
 
         u "(I'm so bored.)"
 
-        if lauren.relationship >= Relationship.GIRLFRIEND:
+        if CharacterService.is_girlfriend(lauren, Relationship.GIRLFRIEND):
             scene v9rfe3b # TPP. Same camera as v9rfe3, show MC on his phone.
             with dissolve               
 

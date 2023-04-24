@@ -1155,7 +1155,7 @@ label conl:
 
     u "(Why do people come here so early in the morning just to work out?)"
 
-    if evelyn.relationship < Relationship.MOVE: #if haven't made a move yet
+    if not v2_made_a_move_on_evelyn: #if haven't made a move yet
         scene s243 # evelyn working out
         with dissolve
 
@@ -2081,114 +2081,113 @@ label conl:
     menu:
         "Kiss her":
             label continuem:
-        
-            $ aubrey.relationship = Relationship.FWB
-            $ sceneList.add("v3_aubrey")
+                $ CharacterService.set_relationship(aubrey, Relationship.FWB)
+                $ sceneList.add("v3_aubrey")
 
-            stop music fadeout 3
-            play music "music/msexy.mp3"
+                stop music fadeout 3
+                play music "music/msexy.mp3"
 
-            scene aub1
-            pause 1.0
+                scene aub1
+                pause 1.0
 
-            scene aub2
+                scene aub2
 
-            " "
+                " "
 
-            scene anew1 # aubrey after kiss laughingly
-            with dissolve
+                scene anew1 # aubrey after kiss laughingly
+                with dissolve
 
-            au "Is this such a good idea?"
+                au "Is this such a good idea?"
 
-            scene anew1a
-            with dissolve
+                scene anew1a
+                with dissolve
 
-            u "What's the worst that could happen?"
+                u "What's the worst that could happen?"
 
-            scene anew2 # right hand in her pants
-            with dissolve
+                scene anew2 # right hand in her pants
+                with dissolve
 
-            pause 0.5
+                pause 0.5
 
-            scene anew3 # close up of her face aroused
-            with dissolve
+                scene anew3 # close up of her face aroused
+                with dissolve
 
-            au "*Quiet moan* Ohhh okay... definitely a good idea."
+                au "*Quiet moan* Ohhh okay... definitely a good idea."
 
-            scene anew4 # left hand on her boobs
-            with dissolve
+                scene anew4 # left hand on her boobs
+                with dissolve
 
-            pause 0.5
+                pause 0.5
 
-            scene anew4a # her hands lift her bra up
-            with dissolve
+                scene anew4a # her hands lift her bra up
+                with dissolve
 
-            pause 0.5
+                pause 0.5
 
-            scene anew4b # her no bra
-            with dissolve
+                scene anew4b # her no bra
+                with dissolve
 
-            u "Wow..."
+                u "Wow..."
 
-            scene anew2
-            with dissolve
+                scene anew2
+                with dissolve
 
-            au "*Moans*"
+                au "*Moans*"
 
-            scene asexnew1
+                scene asexnew1
 
-            au "Oh, [name]!"
+                au "Oh, [name]!"
 
-            au "Fuck..."
+                au "Fuck..."
 
-            scene anew5 # you grab her pants
-            with dissolve
+                scene anew5 # you grab her pants
+                with dissolve
 
-            pause 0.5
+                pause 0.5
 
-            scene anew5a # her pants down
-            with dissolve
+                scene anew5a # her pants down
+                with dissolve
 
-            pause 0.5
+                pause 0.5
 
-            scene anew5b # your hand on her panties
-            with dissolve
+                scene anew5b # your hand on her panties
+                with dissolve
 
-            au "Wait."
+                au "Wait."
 
-            scene anew3a
-            with dissolve
+                scene anew3a
+                with dissolve
 
-            au "Now it's my turn."
+                au "Now it's my turn."
 
-            scene s257c # aubrey underwear
-            with dissolve
+                scene s257c # aubrey underwear
+                with dissolve
 
-            " "
+                " "
 
-            scene aub3
+                scene aub3
 
-            pause 1.5
+                pause 1.5
 
-            scene anew6
-            with dissolve
+                scene anew6
+                with dissolve
 
-            au "You have a nice cock, I could get used to this."
+                au "You have a nice cock, I could get used to this."
 
-            scene anew6b
-            with dissolve
+                scene anew6b
+                with dissolve
 
-            au "*Kiss*"
+                au "*Kiss*"
 
-            scene anew6c
-            with dissolve
+                scene anew6c
+                with dissolve
 
-            au "*Kiss*"
+                au "*Kiss*"
 
-            scene anew6d
-            with dissolve
+                scene anew6d
+                with dissolve
 
-            au "*Kiss*"
+                au "*Kiss*"
 
         "Stop it":
             scene s254c
@@ -2447,7 +2446,7 @@ label acream:
 
     u "(I can't believe I just had sex with Aubrey... that was amazing.)"
 
-    if lauren.relationship >= Relationship.GIRLFRIEND:
+    if CharacterService.is_girlfriend(lauren, Relationship.GIRLFRIEND):
         u "(I wonder if Lauren would be upset if she knew. I guess I'll have to decide how honest I wanna be on our date tonight.)"
 
 label aubsexad:
@@ -2459,7 +2458,7 @@ label aubsexad:
 
 
 ### Meet Lauren
-    if lauren.relationship >= Relationship.GIRLFRIEND:
+    if CharacterService.is_girlfriend(lauren, Relationship.GIRLFRIEND):
         jump continueq
 
     else: # you're not dating Lauren
@@ -3127,7 +3126,7 @@ label continueq:
 
     stop music fadeout 3
 
-    if lauren.relationship >= Relationship.GIRLFRIEND: #LAUREN MOVIES
+    if CharacterService.is_girlfriend(lauren, Relationship.GIRLFRIEND): #LAUREN MOVIES
         play music "music/mindie2.mp3"
 
         scene s282  ## later that day transition pic

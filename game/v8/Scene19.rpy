@@ -71,7 +71,7 @@ label sun_eve_room:
         scene v8sser1 # TPP. Show MC lying on his Wolves bed on his phone.
         with fade
 
-        if lauren.relationship >= Relationship.GIRLFRIEND:
+        if CharacterService.is_girlfriend(lauren, Relationship.GIRLFRIEND):
             # -MC's phone buzzes-
             $ lauren.messenger.newMessage(_("Hey, Sweetie, what are you up to?"), force_send=True)
             $ lauren.messenger.addReply(_("Nothing, just catching up on some homework. You having a good night?"))
@@ -141,7 +141,7 @@ label sun_eve_room:
         scene v8sser4 # TPP. Show MC sat on his Apes bed on his phone.
         with fade
 
-        if lauren.relationship >= Relationship.GIRLFRIEND:
+        if CharacterService.is_girlfriend(lauren, Relationship.GIRLFRIEND):
             # -MC's phone buzzes-
             $ lauren.messenger.newMessage(_("Hey, Sweetie, what are you up to?"), force_send=True)
             $ lauren.messenger.addReply(_("Nothing, just catching up on some homework. You having a good night?"))

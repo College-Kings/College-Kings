@@ -55,7 +55,7 @@ init python:
             penelope.messenger.newMessage(_("I didn't know you and Emily were a thing..."), force_send=True)
             penelope.messenger.addReply(_("We're not a thing"), v7_msgReply1)
             penelope.messenger.addReply(_("It was a one time thing"), v7_msgReply2)
-        if emily.relationship >= Relationship.FWB and lauren.relationship >= Relationship.GIRLFRIEND:
+        if emily.relationship >= Relationship.FWB and CharacterService.is_girlfriend(lauren, Relationship.GIRLFRIEND):
             lauren.messenger.newMessage(_("I saw what Emily posted. I really thought you liked me..."), force_send=True)
             lauren.messenger.newMessage(_("I guess we're done now, so please just delete my number."), force_send=True)
             lauren.messenger.addReply(_("Lauren can we please just talk about it? I can explain"))
@@ -849,7 +849,7 @@ label hd_bd:
 
             no "Cheated on someone."
 
-            if (lauren.relationship >= Relationship.GIRLFRIEND and aubrey.relationship >= Relationship.FWB) or (lauren.relationship >= Relationship.GIRLFRIEND and emily.relationship >= Relationship.FWB):
+            if (CharacterService.is_girlfriend(lauren, Relationship.GIRLFRIEND) and aubrey.relationship >= Relationship.FWB) or (CharacterService.is_girlfriend(lauren, Relationship.GIRLFRIEND) and emily.relationship >= Relationship.FWB):
                 scene s703 # showing mc drinking
                 with dissolve
 
@@ -1007,7 +1007,7 @@ label hd_ad:
 
     menu:
         "Keep it friendly":
-            if lauren.relationship >= Relationship.GIRLFRIEND:
+            if CharacterService.is_girlfriend(lauren, Relationship.GIRLFRIEND):
                 $ reputation.add_point(RepComponent.BOYFRIEND)
 
             u "I'm glad. A lot of the Wolves seem really cool. How's classes going? Finish the econ assignment yet?"
@@ -1082,7 +1082,7 @@ label hd_ad:
             jump conyourdorm
 
         "Start flirting":
-            if lauren.relationship >= Relationship.GIRLFRIEND :
+            if CharacterService.is_girlfriend(lauren, Relationship.GIRLFRIEND) :
                 $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             $ reputation.add_point(RepComponent.BRO)
@@ -1191,7 +1191,7 @@ label hd_ad:
 
     menu:
         "Yeah, I'd like that":
-            if lauren.relationship >= Relationship.GIRLFRIEND or emily.relationship >= Relationship.FWB:
+            if CharacterService.is_girlfriend(lauren, Relationship.GIRLFRIEND) or emily.relationship >= Relationship.FWB:
                 $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             $ reputation.add_point(RepComponent.BRO)
@@ -1302,7 +1302,7 @@ label hd_ad:
             pause 0.5
 
         "Uhm... I shouldn't":
-            if lauren.relationship >= Relationship.GIRLFRIEND or emily.relationship >= Relationship.FWB:
+            if CharacterService.is_girlfriend(lauren, Relationship.GIRLFRIEND) or emily.relationship >= Relationship.FWB:
                 $ reputation.add_point(RepComponent.BOYFRIEND)
 
             u "Uhm... I probably shouldn't. It's quite late."
@@ -1521,7 +1521,7 @@ label conyourdorm:
 
                 $ v7_kiwiiPost4.remove_post()
 
-                if lauren.relationship >= Relationship.GIRLFRIEND:
+                if CharacterService.is_girlfriend(lauren, Relationship.GIRLFRIEND):
                     u "(Time to make things right with Lauren.)"
                     jump thisbelauren
 
@@ -1600,7 +1600,7 @@ label conyourdorm:
 
                 $ v7_kiwiiPost4.remove_post()
 
-                if lauren.relationship >= Relationship.GIRLFRIEND:
+                if CharacterService.is_girlfriend(lauren, Relationship.GIRLFRIEND):
                     u "(Time to make things right with Lauren.)"
                     jump thisbelauren
 
@@ -2236,7 +2236,7 @@ label thisbewalk:
 
         menu:
             "Almost as cute as you":
-                if lauren.relationship >= Relationship.GIRLFRIEND:
+                if CharacterService.is_girlfriend(lauren, Relationship.GIRLFRIEND):
                     $ reputation.add_point(RepComponent.TROUBLEMAKER)
                 else:
                     $ reputation.add_point(RepComponent.BOYFRIEND)
@@ -2535,7 +2535,7 @@ label thisbewalk:
     if lauren.relationship > Relationship.MAD and not nobeach:
         play sound "sounds/vibrate.mp3"
 
-        if seenlauren and lauren.relationship >= Relationship.GIRLFRIEND:
+        if seenlauren and CharacterService.is_girlfriend(lauren, Relationship.GIRLFRIEND):
             $ lauren.messenger.newMessage(_("Wanna go now babe?"), force_send=True)
             $ lauren.messenger.addReply(_("Sure, I'll come pick you up"))
             $ lauren.messenger.newMessage(_("Great :)"))
@@ -2548,7 +2548,7 @@ label thisbewalk:
         else:
             $ lauren.messenger.newMessage(_("Hey :)"), force_send=True)
 
-            if lauren.relationship >= Relationship.GIRLFRIEND:
+            if CharacterService.is_girlfriend(lauren, Relationship.GIRLFRIEND):
                 $ lauren.messenger.newMessage(_("You wanna go to the beach today?"), force_send=True)
                 $ lauren.messenger.addReply(_("Sounds good, when were you thinking?"))
                 $ lauren.messenger.newMessage(_("How about now?"))
@@ -2642,7 +2642,7 @@ label beachlauren:
 
     play sound "sounds/dooropen.mp3"
 
-    if lauren.relationship >= Relationship.GIRLFRIEND:
+    if CharacterService.is_girlfriend(lauren, Relationship.GIRLFRIEND):
         play music "music/mlove2.mp3"
         queue music [ "music/mlove.mp3", "music/mlove1.mp3" ]
 
@@ -3356,7 +3356,7 @@ label beachlauren:
 
         pause 0.5
 
-        if lauren.relationship >= Relationship.GIRLFRIEND or beachfirstkiss:
+        if CharacterService.is_girlfriend(lauren, Relationship.GIRLFRIEND) or beachfirstkiss:
             scene s749b
             with dissolve
 
@@ -4151,7 +4151,7 @@ label aftercall:
 
     ch "And last but not least, [name]."
 
-    if (lauren.relationship >= Relationship.GIRLFRIEND and aubrey.relationship >= Relationship.FWB) or (lauren.relationship >= Relationship.GIRLFRIEND and emily.relationship >= Relationship.FWB):
+    if (CharacterService.is_girlfriend(lauren, Relationship.GIRLFRIEND) and aubrey.relationship >= Relationship.FWB) or (CharacterService.is_girlfriend(lauren, Relationship.GIRLFRIEND) and emily.relationship >= Relationship.FWB):
         ch "Is it true that you recently cheated on the girl you're currently dating?"
 
         scene s786c # chris looking directly at you mouth closed
@@ -4408,7 +4408,7 @@ label aftercall:
 
     menu:
         "Kiss her back":
-            if lauren.relationship >= Relationship.GIRLFRIEND:
+            if CharacterService.is_girlfriend(lauren, Relationship.GIRLFRIEND):
                 $ reputation.add_point(RepComponent.TROUBLEMAKER, 2)
             else:
                 $ reputation.add_point(RepComponent.TROUBLEMAKER)
@@ -4458,7 +4458,7 @@ label aftercall:
         "Pull away":
             $ wolvesTasks.add("task4")
             $ reputation.add_point(RepComponent.BRO)
-            if lauren.relationship >= Relationship.GIRLFRIEND:
+            if CharacterService.is_girlfriend(lauren, Relationship.GIRLFRIEND):
                 $ reputation.add_point(RepComponent.BOYFRIEND)
 
             scene s793f # MC tilts back when Nora is tilting towards him. MC talking, Nora mouth closed
@@ -6931,7 +6931,7 @@ label hc_asking_emily:
 label hc_asking_lauren:
     $ hcAsked.append("lauren")
 
-    if lauren.relationship >= Relationship.GIRLFRIEND:
+    if CharacterService.is_girlfriend(lauren, Relationship.GIRLFRIEND):
         u "(Of course I'm gonna ask Lauren.)"
     else:
         u "(Wonder if Lauren would wanna go with me...)"
@@ -6956,7 +6956,7 @@ label hc_asking_lauren:
 
     u "Will you go to Homecoming with me?"
 
-    if lauren.relationship >= Relationship.GIRLFRIEND:
+    if CharacterService.is_girlfriend(lauren, Relationship.GIRLFRIEND):
         $ hcGirl = "lauren"
 
         scene s967b # lauren laughing
@@ -11144,7 +11144,7 @@ label laurenhocodate:
 
     la "Oh, get in here."
 
-    if lauren.relationship >= Relationship.GIRLFRIEND:
+    if CharacterService.is_girlfriend(lauren, Relationship.GIRLFRIEND):
         scene sfr4la2 # showing lauren and mc kissing
         with dissolve
 

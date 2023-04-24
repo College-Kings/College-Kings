@@ -621,7 +621,7 @@ label after_drugs:
             "Go with her":
                 $ sceneList.add("v8_amber2")
                 $ amber.relationship = Relationship.FWB
-                if lauren.relationship >= Relationship.GIRLFRIEND:
+                if CharacterService.is_girlfriend(lauren, Relationship.GIRLFRIEND):
                     $ reputation.add_point(RepComponent.TROUBLEMAKER)
                 else:
                     $ reputation.add_point(RepComponent.BOYFRIEND)
@@ -632,7 +632,7 @@ label after_drugs:
 
             "Reject her advances":
                 $ amber.relationship = Relationship.FRIEND
-                if lauren.relationship >= Relationship.GIRLFRIEND:
+                if CharacterService.is_girlfriend(lauren, Relationship.GIRLFRIEND):
                     $ reputation.add_point(RepComponent.BOYFRIEND)
 
                 u "*Whispers* Sorry Amber, I'm not feeling it tonight."

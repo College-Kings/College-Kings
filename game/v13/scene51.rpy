@@ -263,7 +263,7 @@ label v13s51_emily_fight:
 
             stop music fadeout 3
 
-            if chloe.relationship >= Relationship.GIRLFRIEND:
+            if CharacterService.is_girlfriend(chloe, Relationship.GIRLFRIEND):
                 jump v13s52
 
             elif riley.relationship >= Relationship.FWB:

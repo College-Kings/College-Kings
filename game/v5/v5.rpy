@@ -704,7 +704,7 @@ label continuez:
 
     # Kiss in public
 
-    if lauren.relationship >= Relationship.GIRLFRIEND:
+    if CharacterService.is_girlfriend(lauren, Relationship.GIRLFRIEND):
         scene s379a # lauren kisses you
         with dissolve
         play sound "sounds/kiss.mp3"
@@ -936,7 +936,7 @@ label gokissb:
 
             u "I definitely do."
 
-            if lauren.relationship >= Relationship.GIRLFRIEND:
+            if CharacterService.is_girlfriend(lauren, Relationship.GIRLFRIEND):
                 scene s382d # Lauren cheeky flirty smile
                 with dissolve
 
@@ -1006,7 +1006,7 @@ label gokissb:
 
             u "Not really, sooo... disagree."
 
-            if lauren.relationship >= Relationship.GIRLFRIEND:
+            if CharacterService.is_girlfriend(lauren, Relationship.GIRLFRIEND):
                 $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
                 scene s382f # Lauren passive agressive
