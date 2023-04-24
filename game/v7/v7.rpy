@@ -15345,6 +15345,7 @@ label fr4chloe1:
     menu:
         "Defend Chloe":
             $ CharacterService.set_relationship(chloe, Relationship.FRIEND, mc)
+            $ CharacterService.remove_mood(chloe, Moods.MAD)
             $ reputation.add_point(RepComponent.BOYFRIEND)
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
 

@@ -9100,6 +9100,7 @@ label v6_fr3chloe1:
 
             cl "*Sniff* Okay..."
 
+            $ CharacterService.remove_mood(chloe, Moods.MAD)
             $ CharacterService.set_relationship(chloe, Relationship.FRIEND, mc)
 
         else:
