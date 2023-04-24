@@ -362,7 +362,6 @@ default muffin = False
 default notcool = False
 default penelopekiss = False
 default perform = 0
-default relics = 0
 default save = 0
 default simp = False
 default statsPage = 0
@@ -381,6 +380,12 @@ default v2_made_a_move_on_evelyn = False
 
 #region v6.0
 default v6_evelyn_successful_date = False
+default v6_relics = {
+    V6_Relics.PICTURE: False,
+    V6_Relics.TROPHIES: False,
+    V6_Relics.CERTIFICATE: False,
+    V6_Relics.RELICS: False
+}
 #endregion v6.0
 
 # 7.0
