@@ -9,7 +9,7 @@ label v11_aubrey_plane_sex:
     play music "music/v11/Track Scene 13_1.mp3" fadein 2
     pause 0.75
 
-    if aubrey.relationship < Relationship.FWB:
+    if CharacterService.is_friend(aubrey):
         jump v11_nora_chris_plane
 
     else:

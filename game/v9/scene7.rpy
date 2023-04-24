@@ -757,7 +757,7 @@ label fr5aubrey1:
 
             u "For one living in the moment, I wouldn't say you expect much at all. Well, maybe you don't expect much, but you surely know how to seize the moment."
 
-            if aubrey.relationship >= Relationship.FWB:
+            if CharacterService.is_fwb(aubrey):
                 label v9_aubrey_scene_lake:
                     $ sceneList.add("v9_aubrey")
 

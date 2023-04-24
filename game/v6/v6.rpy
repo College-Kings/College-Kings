@@ -3823,7 +3823,7 @@ label fy_bd: # not gone to Emily's
 
             u "You know, a few different girls."
 
-            if aubrey.relationship >= Relationship.FWB:
+            if CharacterService.is_fwb(aubrey):
                 u "It's kinda crazy how you're so cool with it."
 
                 scene s571a
@@ -3887,7 +3887,7 @@ label fy_bd: # not gone to Emily's
 
             u "No one, really."
 
-            if aubrey.relationship >= Relationship.FWB:
+            if CharacterService.is_fwb(aubrey):
                 scene s571a
                 with dissolve
 
@@ -3969,7 +3969,7 @@ label fy_bd: # not gone to Emily's
 
 
 label aubreysexb: # aubreysex scene
-    $ CharacterService.set_relationship(aubrey, Relationship.FWB, mc)
+    $ CharacterService.set_relationship(aubrey, Relationship.FWB)
     $ sceneList.add("v6_aubrey")
 
     stop music fadeout 3
@@ -4368,7 +4368,7 @@ label naubclimax:
     jump wayhome
 
 label aubreytalk:
-    $ CharacterService.set_relationship(aubrey, Relationship.FRIEND, mc)
+    $ CharacterService.set_relationship(aubrey, Relationship.FRIEND)
 
     u "So uhm... how's third year treating you?"
 
@@ -4406,7 +4406,7 @@ label afteraubrey:
     scene s573 # mc in his dorm in bed exhausted with his hand on his pocket
     with fade
 
-    if aubrey.relationship >= Relationship.FWB:
+    if CharacterService.is_fwb(aubrey):
         play sound "sounds/vibrate.mp3"
 
         if config_censored:
@@ -7325,7 +7325,7 @@ label v6_fr3aubrey1:
 
     scene sfr3au1 # Opening : EMily and aubrey standing with beer bottle, Aubrey mouth open curious smile
 
-    if not forgiveemily and aubrey.relationship < Relationship.FWB: #If you didn't forgive Emily and didn't have sex with Aubrey:
+    if not forgiveemily and CharacterService.is_friend(aubrey): #If you didn't forgive Emily and didn't have sex with Aubrey:
         au "Really?"
 
         scene sfr3au2 # Emily close up smiling
@@ -7428,7 +7428,7 @@ label v6_fr3aubrey1:
 
         u "Nah, it's cool. Just saying hi, I'll go talk to some of the other people here."
 
-    elif aubrey.relationship < Relationship.FWB: #If you slept with Emily and didn't sleep with Aubrey:
+    elif CharacterService.is_friend(aubrey): #If you slept with Emily and didn't sleep with Aubrey:
         au "Really?"
 
         scene sfr3au2
@@ -9454,7 +9454,7 @@ label v6_fr3aubrey3:
 
                 u "You wanna go upstairs and check out the Wolves' office?"
 
-                if aubrey.relationship >= Relationship.FWB:
+                if CharacterService.is_fwb(aubrey):
                     $ upstairs = "aubrey"
 
                     scene sfr3au3d
@@ -9736,7 +9736,7 @@ label v6_fr3riley3:
     ## OFFICE SCENES
 
 label upstairsaubrey:
-    if aubrey.relationship < Relationship.FWB:
+    if CharacterService.is_friend(aubrey):
         scene sufr3au1 # opening aubrey and you sitting on a couch in the office
         with fade
 
@@ -10109,7 +10109,7 @@ label upstairsaubrey:
             "I kinda get what he means":
                 $ reputation.add_point(RepComponent.BOYFRIEND)
                 $ simp = True
-                $ CharacterService.set_relationship(aubrey, Relationship.FRIEND, mc)
+                $ CharacterService.set_relationship(aubrey, Relationship.FRIEND)
 
                 scene sufr3au2c
                 with dissolve

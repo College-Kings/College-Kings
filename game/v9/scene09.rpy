@@ -20,7 +20,7 @@ label room_wed_night:
         scene v9wnr2a # TPP. Same camera as v9wnr2, MC turns to his side and grabs his phone.
         with dissolve
 
-        if aubrey.relationship >= Relationship.FWB:
+        if CharacterService.is_fwb(aubrey):
             u "(Well I can't really decide on my favorite moment of the day, but dude, Aubrey...)"
 
         elif riley.relationship >= Relationship.FWB:
@@ -82,7 +82,7 @@ label room_wed_night:
         scene v9wnr9a # TPP. Same camera as v9wnr2, MC turns to his side and grabs his phone.
         with dissolve
 
-        if aubrey.relationship >= Relationship.FWB:
+        if CharacterService.is_fwb(aubrey):
             u "(Well I can't really decide on my favorite moment of the day, but dude, Aubrey...)"
 
         elif riley.relationship >= Relationship.FWB:

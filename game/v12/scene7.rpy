@@ -554,7 +554,7 @@ label v12s7_aubrey1:
 
             au "Oh, sweetie. If I didn't take a look at this I wouldn't be able to call myself a nurse. Please come by my office so I can get you fixed up."
 
-            if aubrey.relationship >= Relationship.FWB:
+            if CharacterService.is_fwb(aubrey):
                 au "I'll need some privacy to give the best treatment possible."
 
                 scene v12ferau2 # TPP. Show Aubrey wispering in mc's ear

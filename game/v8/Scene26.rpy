@@ -44,7 +44,7 @@ label s26:
     scene v8sopt2c # FPP. Same camera as v8sopt2, Aubrey and Riley now looking back at camera, still wearing their glasses, mouths closed.
     with dissolve
 
-    if riley.relationship >= Relationship.FWB and aubrey.relationship >= Relationship.FWB:
+    if riley.relationship >= Relationship.FWB and CharacterService.is_fwb(aubrey):
         u "Hot! You both look amazing."
 
     else:
@@ -321,7 +321,7 @@ label after_glasses_choice:
 
     ri "Last pair it is!"
 
-    if riley.relationship >= Relationship.FWB or aubrey.relationship >= Relationship.FWB:
+    if riley.relationship >= Relationship.FWB or CharacterService.is_fwb(aubrey):
         scene v8sopt24d # FPP. Same camera as v8sopt24, Riley curious expression, Aubrey neutral expression, Riley mouth open.
         with dissolve
 

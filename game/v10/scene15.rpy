@@ -753,7 +753,7 @@ label v10_call_with_lauren1:
 
     au "That must have been the wind. I'm just on my way home from the gym."
 
-    if aubrey.relationship >= Relationship.FWB: # RCS - MC is in a relationship with Aubrey
+    if CharacterService.is_fwb(aubrey): # RCS - MC is in a relationship with Aubrey
         au "I'm gonna have the house all to myself since none of the girls are home. You wanna come over?"
 
         scene v10saow5

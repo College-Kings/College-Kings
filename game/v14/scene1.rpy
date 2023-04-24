@@ -32,7 +32,7 @@ label v14_start:
         if CharacterService.is_friend(lauren):
             $ CharacterService.set_relationship(lauren, Relationship.KISSED)
 
-        if aubrey.relationship >= Relationship.FWB:
+        if CharacterService.is_fwb(aubrey):
             $ s12v32_get_aubrey_flowers = True
             $ v13s48_canoeing_as_date = True
             $ v13s48_get_aubrey_chocolate = True
@@ -47,7 +47,7 @@ label v14_start:
         #$ emmy.simplr.pending_messages = []
         #$ emmy.simplr.sent_messages[-1].replies = []
 
-    if aubrey.relationship >= Relationship.FWB and riley.relationship >= Relationship.FWB:
+    if CharacterService.is_fwb(aubrey) and riley.relationship >= Relationship.FWB:
         $ v13_threesomeending = True
         jump v14s01
 

@@ -849,7 +849,7 @@ label hd_bd:
 
             no "Cheated on someone."
 
-            if (CharacterService.is_girlfriend(lauren) and aubrey.relationship >= Relationship.FWB) or (CharacterService.is_girlfriend(lauren) and emily.relationship >= Relationship.FWB):
+            if (CharacterService.is_girlfriend(lauren) and CharacterService.is_fwb(aubrey)) or (CharacterService.is_girlfriend(lauren) and emily.relationship >= Relationship.FWB):
                 scene s703 # showing mc drinking
                 with dissolve
 
@@ -4153,7 +4153,7 @@ label aftercall:
 
     ch "And last but not least, [name]."
 
-    if (CharacterService.is_girlfriend(lauren) and aubrey.relationship >= Relationship.FWB) or (CharacterService.is_girlfriend(lauren) and emily.relationship >= Relationship.FWB):
+    if (CharacterService.is_girlfriend(lauren) and CharacterService.is_fwb(aubrey)) or (CharacterService.is_girlfriend(lauren) and emily.relationship >= Relationship.FWB):
         ch "Is it true that you recently cheated on the girl you're currently dating?"
 
         scene s786c # chris looking directly at you mouth closed
@@ -6678,7 +6678,7 @@ label hc_asking_aubrey:
     with dissolve
     au "I'm pretty sure, I told you I'm not the romance type, haha."
 
-    if aubrey.relationship >= Relationship.FWB:
+    if CharacterService.is_fwb(aubrey):
         au "And I also like the secrecy of our relationship."
 
     scene s976a
@@ -6697,7 +6697,7 @@ label hc_asking_aubrey:
     with dissolve
     au "It's really nice that you asked though."
 
-    if aubrey.relationship >= Relationship.FWB and not simp:
+    if CharacterService.is_fwb(aubrey) and not simp:
         scene s976b # aubrey flirty
         with dissolve
 
@@ -15133,7 +15133,7 @@ label fr4aubrey1:
 
     u "Well, enjoy taking some more pictures. You better tag me on Kiwii, haha."
 
-    if aubrey.relationship < Relationship.FWB:
+    if CharacterService.is_friend(aubrey):
         scene sfr4ri39
         with dissolve
 

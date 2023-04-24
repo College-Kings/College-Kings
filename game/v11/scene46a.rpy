@@ -129,7 +129,7 @@ label v11_dinner_with_aubrey:
     scene v11dwa1
     with dissolve
 
-    if aubrey.relationship < Relationship.FWB:
+    if CharacterService.is_friend(aubrey):
         scene v11dwa1e # FPP. Same 1, different pose, neutral look, mouth open
         with dissolve
         au "I'm surprised you're not like all the other guys."
