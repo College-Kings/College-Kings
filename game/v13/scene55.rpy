@@ -169,19 +169,21 @@ label v13s55:
 
         u "One sec, let me check this."
 
-        $ ryan.messenger.newMessage(_("Hey man, had a chat with Emily. The date went great!"), force_send=True)
-        $ ryan.messenger.addReply(_("Yeah man, it was nice. Thanks again for setting it up."), func=None)
-        $ ryan.messenger.addReply(_("For sure dude, I had a really fun night."), func=None) 
-        $ ryan.messenger.newMessage(_("We'll have to do it again soon."))
-        $ ryan.messenger.addReply(_("Sure man."), func=None)
+        $ MessengerService.new_message(ryan, _("Hey man, had a chat with Emily. The date went great!"))
+        $ MessengerService.add_replies(ryan,
+        Reply(_("Yeah man, it was nice. Thanks again for setting it up.")),
+        Reply(_("For sure dude, I had a really fun night."))
+        )
+        $ MessengerService.new_message(ryan, _("We'll have to do it again soon."))
+        $ MessengerService.add_reply(ryan, _("Sure man."))
 
         scene v13s55_5 # TPP. Show MC holding his phone sitting down, slight smile, mouth closed.
         with dissolve
 
         label v13s49_PhoneContinueRyan:
-            if ryan.messenger.replies:
+            if MessengerService.has_replies(ryan):
                 call screen phone
-            if ryan.messenger.replies:
+            if MessengerService.has_replies(ryan):
                 u "(I should check my phone.)"
                 jump v13s49_PhoneContinueRyan 
        

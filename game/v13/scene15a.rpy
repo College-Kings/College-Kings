@@ -3,16 +3,6 @@
 # Characters: MC (Outfit: 2), RILEY (Outfit: NAKED)
 # Time: Night
 
-init python:
-    def v13s15a_Reply1():
-        setattr(store, "v13_cuddle_lauren_text", True)
-        lauren.messenger.newMessage("Yayy :)")
-
-    def v13s15a_Reply2():
-        lauren.messenger.newMessage("Aww okay, it's cool")
-        lauren.messenger.addReply("Sorry babe, I'm just so tired.")
-        lauren.messenger.newMessage("It's okay.")
-
 label v13s15a:
     scene v13s15a_1 # TPP. Show MC walking into the room, it's dark inside, MC neutral expression, mouth closed
     with dissolve
@@ -81,6 +71,16 @@ label v13s15a:
     u "I hear you."
 
     if CharacterService.is_girlfriend(lauren) and not v11_lauren_caught_aubrey: #if healthy lauren relationship
+        python:
+            v13s15a_Reply1 = MessageBuilder(lauren)
+            v13s15a_Reply1.set_variable(“v13_cuddle_lauren”, True)
+            v13s15a_Reply1.new_message("Yayy :)")
+
+            v13s15a_Reply2 = MessageBuilder(lauren)
+            v13s15a_Reply2.new_message("Aww okay, it's cool")
+            v13s15a_Reply2.add_reply("Sorry babe, I'm just so tired.")
+            v13s15a_Reply2.new_message("It's okay, night.")
+        
         play sound "sounds/vibrate.mp3"
 
         scene v13s15a_7 # TPP. MC looking down at his phone, he is standing in same place as v13s15a_6, slightly surprised, mouth closed
@@ -88,11 +88,13 @@ label v13s15a:
 
         u "(Kinda late for a text.)"
 
-        $ lauren.messenger.newMessage("You up?", force_send=True)
-        $ lauren.messenger.addReply("Yeah, wassup?")
-        $ lauren.messenger.newMessage("Come cuddle with me? ;)")
-        $ lauren.messenger.addReply("You don't have to ask me twice, omw", v13s15a_Reply1)
-        $ lauren.messenger.addReply("I'm already asleep...", v13s15a_Reply2)
+        $ MessengerService.new_message(lauren, "You up?")
+        $ MessengerService.add_reply(lauren, "Yeah, wassup?")
+        $ MessengerService.new_message(lauren, "Come cuddle with me? ;)")
+        $ MessengerService.add_replies(lauren,
+            Reply("You don't have to ask me twice, omw", v13s15a_Reply1),
+            Reply("I'm already halfway asleep...", v13s15a_Reply2)
+        )
 
         scene v13s15a_8 # FPP. MC looking down at his phone, he is standing in same place as v13s15a_6
         with dissolve
@@ -100,9 +102,9 @@ label v13s15a:
         pause 0.75
 
         label v13s15a_PhoneContinueLauren:
-            if lauren.messenger.replies:
+            if MessengerService.has_replies(lauren):
                 call screen phone
-            if lauren.messenger.replies:
+            if MessengerService.has_replies(lauren):
                 u "(I should check my phone.)"
                 jump v13s15a_PhoneContinueLauren
 
