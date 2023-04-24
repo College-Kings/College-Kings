@@ -134,7 +134,7 @@ label v14s05:
 
     cl "I have some campaign things I want to go over, I'll be back in a bit."
 
-    if CharacterService.is_girlfriend(chloe, Relationship.GIRLFRIEND):
+    if CharacterService.is_girlfriend(chloe):
         scene v14s05_6 # TPP. Chloe, smiling, mouth closed, getting up from her bed.
         with dissolve
 

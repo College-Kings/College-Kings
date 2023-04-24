@@ -80,7 +80,7 @@ label v13s15a:
 
     u "I hear you."
 
-    if CharacterService.is_girlfriend(lauren, Relationship.GIRLFRIEND) and not v11_lauren_caught_aubrey: #if healthy lauren relationship
+    if CharacterService.is_girlfriend(lauren) and not v11_lauren_caught_aubrey: #if healthy lauren relationship
         play sound "sounds/vibrate.mp3"
 
         scene v13s15a_7 # TPP. MC looking down at his phone, he is standing in same place as v13s15a_6, slightly surprised, mouth closed

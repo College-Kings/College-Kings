@@ -211,7 +211,7 @@ label v10_call_with_lauren2:
 
         la "So uhm... rapid change of topics, do you want kids someday?"
 
-        if CharacterService.is_girlfriend(lauren, Relationship.GIRLFRIEND): # RCS - if MC is in a relationship with Lauren
+        if CharacterService.is_girlfriend(lauren): # RCS - if MC is in a relationship with Lauren
             scene v10scwl1
             with dissolve
 
@@ -241,7 +241,7 @@ label v10_call_with_lauren2:
 
                 la "I do too, well, family woman. The chance to create a person and then just be able to give that person the most amazing life possible just sounds too good to pass up on."
 
-                if CharacterService.is_girlfriend(lauren, Relationship.GIRLFRIEND): # RCS - MC is in a relationship with Lauren
+                if CharacterService.is_girlfriend(lauren): # RCS - MC is in a relationship with Lauren
                     scene v10scwl1a
                     with dissolve
                     
@@ -566,7 +566,7 @@ label v10_call_with_lauren2:
 
         la "So uhm... rapid change of topics, do you want kids someday?"
 
-        if CharacterService.is_girlfriend(lauren, Relationship.GIRLFRIEND): # RCS - if MC is in a relationship with Lauren
+        if CharacterService.is_girlfriend(lauren): # RCS - if MC is in a relationship with Lauren
             scene v10scwl1
             with dissolve
 
@@ -596,7 +596,7 @@ label v10_call_with_lauren2:
 
                 la "I do too, well, family woman. The chance to create a person and then just be able to give that person the most amazing life possible just sounds too good to pass up on."
 
-                if CharacterService.is_girlfriend(lauren, Relationship.GIRLFRIEND): # RCS - MC is in a relationship with Lauren
+                if CharacterService.is_girlfriend(lauren): # RCS - MC is in a relationship with Lauren
                     scene v10scwl1a
                     with dissolve
                     

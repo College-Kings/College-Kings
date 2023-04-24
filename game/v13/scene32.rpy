@@ -22,7 +22,7 @@ label v13s32:
 
         la "I'm not here for your games Amber, but I am going to bed. *Chuckles*"
 
-        if CharacterService.is_girlfriend(lauren, Relationship.GIRLFRIEND):
+        if CharacterService.is_girlfriend(lauren):
             play sound "sounds/kiss.mp3"
             scene v13s32_4 # TPP. Show Lauren kissing MC
             with dissolve

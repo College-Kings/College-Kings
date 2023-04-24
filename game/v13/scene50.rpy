@@ -413,7 +413,7 @@ label v13s50:
 
     stop music fadeout 3
 
-    if CharacterService.is_girlfriend(chloe, Relationship.GIRLFRIEND) and not v11_riley_roomate:
+    if CharacterService.is_girlfriend(chloe) and not v11_riley_roomate:
         jump v13s52
     
     elif riley.relationship >= Relationship.FWB and v11_riley_roomate:

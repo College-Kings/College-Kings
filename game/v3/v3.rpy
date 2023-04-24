@@ -2446,7 +2446,7 @@ label acream:
 
     u "(I can't believe I just had sex with Aubrey... that was amazing.)"
 
-    if CharacterService.is_girlfriend(lauren, Relationship.GIRLFRIEND):
+    if CharacterService.is_girlfriend(lauren):
         u "(I wonder if Lauren would be upset if she knew. I guess I'll have to decide how honest I wanna be on our date tonight.)"
 
 label aubsexad:
@@ -2458,7 +2458,7 @@ label aubsexad:
 
 
 ### Meet Lauren
-    if CharacterService.is_girlfriend(lauren, Relationship.GIRLFRIEND):
+    if CharacterService.is_girlfriend(lauren):
         jump continueq
 
     else: # you're not dating Lauren
@@ -3126,7 +3126,7 @@ label continueq:
 
     stop music fadeout 3
 
-    if CharacterService.is_girlfriend(lauren, Relationship.GIRLFRIEND): #LAUREN MOVIES
+    if CharacterService.is_girlfriend(lauren): #LAUREN MOVIES
         play music "music/mindie2.mp3"
 
         scene s282  ## later that day transition pic

@@ -24,7 +24,7 @@ label v13s9:
 
     pause 0.75
 
-    if CharacterService.is_girlfriend(chloe, Relationship.GIRLFRIEND):
+    if CharacterService.is_girlfriend(chloe):
         scene v13s9_2 # FPP. Chloe full face smile, happy suprised, mouth open looking at MC.
         with dissolve
 
@@ -295,7 +295,7 @@ label v13s9:
 
             cl "I knew I could count on you."
 
-            if CharacterService.is_girlfriend(chloe, Relationship.GIRLFRIEND): # -If Chloegirlfriend (extra dialog)
+            if CharacterService.is_girlfriend(chloe): # -If Chloegirlfriend (extra dialog)
                 $ reputation.add_point(RepComponent.BOYFRIEND)
 
                 play sound "sounds/kiss.mp3"
@@ -343,7 +343,7 @@ label v13s9:
 
             u "Chloe, it's not like that. I'm her friend and she came to me in confidence for my help. I'd be wrong to turn her away."
 
-            if CharacterService.is_girlfriend(chloe, Relationship.GIRLFRIEND): # -If Chloegirlfriend (extra dialog)
+            if CharacterService.is_girlfriend(chloe): # -If Chloegirlfriend (extra dialog)
                 $ chloe.points -= 1 
                 
                 $ reputation.add_point(RepComponent.TROUBLEMAKER)

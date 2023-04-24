@@ -157,7 +157,7 @@ label v11_lobby_mrlee:
         stop music fadeout 3
         jump v11_dinner_with_aubrey
 
-    elif CharacterService.is_girlfriend(lauren, Relationship.GIRLFRIEND):
+    elif CharacterService.is_girlfriend(lauren):
         scene v11lob18 # FPP. Show Lauren sat alone, slight sad look
         with dissolve
 

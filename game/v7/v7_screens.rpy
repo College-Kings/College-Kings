@@ -101,7 +101,7 @@ screen hc_select():
 
     $ tooltip = GetTooltip()
     
-    if CharacterService.is_girlfriend(lauren, Relationship.GIRLFRIEND):
+    if CharacterService.is_girlfriend(lauren):
         $ message = _("Lauren would kill me if I asked someone other than her.")
     elif tooltip:
         $ message = tooltip

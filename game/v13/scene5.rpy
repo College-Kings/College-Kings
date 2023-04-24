@@ -33,7 +33,7 @@ label v13s5:
 
     u "(That didn't last long. *Chuckles*)"
 
-    if CharacterService.is_girlfriend(chloe, Relationship.GIRLFRIEND):
+    if CharacterService.is_girlfriend(chloe):
         scene v13s5_6 # TPP. Show MC tucking Chloe in to sleep
         with dissolve
 

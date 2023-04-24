@@ -16,7 +16,7 @@ label v10_lauren_room:
 
     la "Heyyyy."
 
-    if CharacterService.is_girlfriend(lauren, Relationship.GIRLFRIEND): # If in a relationship with Lauren
+    if CharacterService.is_girlfriend(lauren): # If in a relationship with Lauren
         scene v10lar1a # TPP Same angle as v10lar1: MC and Lauren kiss at her door
         with dissolve
 
@@ -91,7 +91,7 @@ label v10_lauren_room:
 
             u "I really do."
 
-            if CharacterService.is_girlfriend(lauren, Relationship.GIRLFRIEND) or reputation() == Reputations.LOYAL:
+            if CharacterService.is_girlfriend(lauren) or reputation() == Reputations.LOYAL:
                 if not CharacterService.is_girlfriend(lauren):
                     call screen reputation_popup
                 $ v10s33_laurenBakeSale = False
@@ -295,7 +295,7 @@ label v10_lauren_room:
                 with dissolve
                 pause
 
-                if CharacterService.is_girlfriend(lauren, Relationship.GIRLFRIEND) or (lauren.relationship >= Relationship.KISS and reputation() == Reputations.LOYAL):
+                if CharacterService.is_girlfriend(lauren) or (lauren.relationship >= Relationship.KISS and reputation() == Reputations.LOYAL):
                     if not CharacterService.is_girlfriend(lauren):
                         $ lauren.relationship = Relationship.GIRLFRIEND
                         call screen reputation_popup
@@ -598,7 +598,7 @@ label v10_lauren_room:
 
     u "Of course."
 
-    if CharacterService.is_girlfriend(lauren, Relationship.GIRLFRIEND): # lauren and mc kiss goodbye at her door
+    if CharacterService.is_girlfriend(lauren): # lauren and mc kiss goodbye at her door
         scene v10lar1a
         with fade
 

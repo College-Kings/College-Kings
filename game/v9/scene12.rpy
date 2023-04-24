@@ -10,7 +10,7 @@ label v9_hallway:
 
     u "(Well that was really something, I guess. Who would have thought Mr. Lee's class could be anything more than a huge snorefest?)"
 
-    if CharacterService.is_girlfriend(lauren, Relationship.GIRLFRIEND):
+    if CharacterService.is_girlfriend(lauren):
         scene v9hlw2 # TPP. Show MC looking down as he continues to walk.
         with dissolve
 

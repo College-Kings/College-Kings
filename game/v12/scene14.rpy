@@ -195,7 +195,7 @@ label v12_chloe_cafe:
 
     fwait "So, what can I get for the gorgeous couple?"
 
-    if CharacterService.is_girlfriend(chloe, Relationship.GIRLFRIEND):
+    if CharacterService.is_girlfriend(chloe):
         scene v12chc5i # FPP. Same as v12chc5, Show Chloe blushing, slight smile, avoiding eye contact, putting her hair behind her ear, mouth closed
         with dissolve
 

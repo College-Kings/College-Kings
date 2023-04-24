@@ -97,7 +97,7 @@ label v13s24:
 
         "Fuck yeah, let's mingle":
             $ reputation.add_point(RepComponent.BRO)
-            if CharacterService.is_girlfriend(chloe, Relationship.GIRLFRIEND) or CharacterService.is_girlfriend(lauren, Relationship.GIRLFRIEND):
+            if CharacterService.is_girlfriend(chloe) or CharacterService.is_girlfriend(lauren):
                 $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             scene v13s24_3a

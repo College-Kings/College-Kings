@@ -14,7 +14,7 @@ label v8_tues_evening:
         scene v8ster2 # TPP. Show MC still sat at his desk but now on his phone.
         with dissolve
 
-        if CharacterService.is_girlfriend(lauren, Relationship.GIRLFRIEND):
+        if CharacterService.is_girlfriend(lauren):
             $ lauren.messenger.addReply(_("Still fine with drinking instead of making out with me?"))
             $ lauren.messenger.newMessage(_("Of course, that drink was just my cup of tea. :)"))
             $ lauren.messenger.addReply(_("Oh haha, is that so? I think it at least poured a bit of courage in there."))
@@ -82,7 +82,7 @@ label v8_tues_evening:
         scene v8ster5 # TPP. Show MC still sat at his desk but now on his phone.
         with dissolve
 
-        if CharacterService.is_girlfriend(lauren, Relationship.GIRLFRIEND):
+        if CharacterService.is_girlfriend(lauren):
             $ lauren.messenger.addReply(_("Still fine with drinking instead of making out with me?"))
             $ lauren.messenger.newMessage(_("Of course, that drink was just my cup of tea. :)"))
             $ lauren.messenger.addReply(_("Oh haha, is that so? I think it at least poured a bit of courage in there."))
