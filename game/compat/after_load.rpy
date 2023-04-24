@@ -179,7 +179,7 @@ label after_load:
 
         try:
             if elijah.relationship == Relationship.MAKEFUN:
-                CharacterService.set_mood(elijah, Mood.HURT)
+                CharacterService.set_mood(elijah, Moods.HURT)
         except AttributeError: pass
 
         try:
@@ -190,7 +190,7 @@ label after_load:
         for character in (josh, lauren, chris, autumn, chloe, imre, nora):
             try:
                 if character.relationship == Relationship.MAD:
-                    CharacterService.set_mood(character, Mood.MAD)
+                    CharacterService.set_mood(character, Moods.MAD)
             except AttributeError: pass
 
         try:

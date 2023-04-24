@@ -16,7 +16,7 @@ label hallway_w_nora:
     with dissolve
 
     if CharacterService.is_mad(nora):
-        $ CharacterService.set_relationship(nora, Relationship.FRIEND)
+        $ CharacterService.remove_mood(nora, Moods.MAD)
         
         scene v8shal3 # FPP. Close up Nora, Nora neutral expression, mouth open.
         with dissolve

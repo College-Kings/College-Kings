@@ -1206,7 +1206,7 @@ label v4start:
                 if reputation() == Reputations.LOYAL:
                     call screen reputation_popup
 
-                    $ CharacterService.set_relationship(autumn, Relationship.FRIEND)
+                    $ CharacterService.remove_mood(autumn, Moods.MAD)
 
                     scene s334d # autumn emphatic
                     with dissolve

@@ -1200,8 +1200,7 @@ label meet_lauren2:
                 u "And I should have. There was something real there. Between us."
 
             if CharacterService.is_kissed(lauren) or reputation() == Reputations.LOYAL:
-                $ laawk = False
-                $ CharacterService.reset_mood(lauren)
+                $ CharacterService.remove_mood(lauren, Moods.AWKWARD)
 
                 if not CharacterService.is_kissed(lauren):
                     call screen reputation_popup
@@ -1307,7 +1306,6 @@ label meet_lauren2:
 
         "Let's forget about it":
             $ reputation.add_point(RepComponent.BRO)
-            $ laawk = False
 
             scene s130a
             with dissolve
@@ -1343,6 +1341,8 @@ label meet_lauren2:
             with dissolve
 
             la "Yeah, sounds great."
+
+            $ CharacterService.remove_mood(lauren, Moods.AWKWARD)
 
             if fighttom and not wintom:
                 scene s130j

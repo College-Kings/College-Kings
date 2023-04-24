@@ -1,6 +1,6 @@
 ### v8 beginning. Variable definitions here
 label v8start:
-    $ CharacterService.remove_mood(Moods.MAD)
+    $ CharacterService.remove_mood(lauren, Moods.MAD)
     
     if ending == "lauren":
         jump v8_la_start

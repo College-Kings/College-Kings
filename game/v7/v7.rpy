@@ -1678,7 +1678,7 @@ label apologylauren:
         u "Listen, I know you said you needed more time, but it's been a few days and I just really want to be friends again... I know I messed up."
 
     if not CharacterService.is_mad(autumn):
-        $ CharacterService.set_relationship(lauren, Relationship.FRIEND)
+        $ CharacterService.remove_mood(lauren, Moods.MAD)
         
         scene s717
         with dissolve

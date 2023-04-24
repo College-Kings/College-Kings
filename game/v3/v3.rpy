@@ -2467,7 +2467,7 @@ label aubsexad:
 
         u "Lauren? What are you doing here?"
 
-        if meetlauren and laawk: # you've met lauren in the cafe
+        if meetlauren and Moods.AWKWARD in lauren.mood: # you've met lauren in the cafe
             scene s266 # Lauren closeup awkward
             with dissolve
 

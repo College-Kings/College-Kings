@@ -173,7 +173,6 @@ default freeroam3asked = set()
 default girl = ""
 default imreforgives = False
 default joinapes = False
-default laawk = True
 default laurenpublic = False
 default laurentest = set()
 default laurentoofar = False
