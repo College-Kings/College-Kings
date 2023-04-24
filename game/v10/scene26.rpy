@@ -75,7 +75,7 @@ label v10_amber_skatepark:
 
         am "I'm just kidding. *Chuckles*"
             
-        if amber.relationship >= Relationship.FWB:
+        if CharacterService.is_fwb(amber):
             scene v10sasp1c
             with dissolve
 
@@ -364,13 +364,11 @@ label v10_amber_skatepark:
 
     u "*Laughs*"
 
-    if amber.relationship >= Relationship.FWB or reputation() == Reputations.POPULAR:
+    if CharacterService.is_fwb(amber):
         label v10_amber_skatepark_sg:
-        
-        if _in_replay:
-            $ CharacterService.set_relationship(amber, Relationship.FWB, mc)
+            if _in_replay:
+                $ CharacterService.set_relationship(amber, Relationship.FWB, mc)
 
-    if amber.relationship >= Relationship.FWB:
         scene v10sasp5b # FPP. Same camera as v10sasp5. Show Amber leaning in to whisper into MC's ear, smiling, mouth open.
         with fade
 

@@ -86,7 +86,7 @@ label sun_eve_room:
 
             call screen phone
 
-        elif amber.relationship >= Relationship.FWB:
+        elif CharacterService.is_fwb(amber):
             play sound "sounds/vibrate.mp3"
             $ amber.messenger.newMessage(_("Hey u up?"), force_send=True)
             $ amber.messenger.addReply(_("Always for you ;)"))
@@ -156,7 +156,7 @@ label sun_eve_room:
 
             call screen phone
 
-        elif amber.relationship >= Relationship.FWB:
+        elif CharacterService.is_fwb(amber):
             play sound "sounds/vibrate.mp3"
             $ amber.messenger.newMessage(_("Hey u up?"), force_send=True)
             $ amber.messenger.addReply(_("Always for you ;)"))

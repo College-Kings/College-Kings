@@ -1892,8 +1892,8 @@ label v12s18_bet: # END OF FREE ROAM
 
             u "Something like that."
 
-            if amber.relationship >= Relationship.FWB or reputation() == Reputations.POPULAR:
-                if amber.relationship < Relationship.FWB:
+            if CharacterService.is_fwb(amber) or reputation() == Reputations.POPULAR:
+                if not CharacterService.is_fwb(amber):
                     call screen reputation_popup
                 
                 scene v12slpbet17
