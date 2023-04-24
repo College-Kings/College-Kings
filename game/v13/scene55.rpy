@@ -171,9 +171,9 @@ label v13s55:
 
         $ MessengerService.new_message(ryan, _("Hey man, had a chat with Emily. The date went great!"))
         $ MessengerService.add_replies(ryan,
-        Reply(_("Yeah man, it was nice. Thanks again for setting it up.")),
-        Reply(_("For sure dude, I had a really fun night."))
-        )
+            Reply(_("Yeah man, it was nice. Thanks again for setting it up.")),
+            Reply(_("For sure dude, I had a really fun night."))
+            )
         $ MessengerService.new_message(ryan, _("We'll have to do it again soon."))
         $ MessengerService.add_reply(ryan, _("Sure man."))
 
