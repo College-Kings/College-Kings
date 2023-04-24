@@ -3068,7 +3068,7 @@ label continueq:
 
             menu:
                 "Kiss her":
-                    $ riley.relationship = Relationship.MOVE
+                    $ CharacterService.set_relationship(riley, Relationship.KISSED)
                     $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
                     show rikiss2
