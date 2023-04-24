@@ -632,7 +632,7 @@ label newchloec:
 
     #################
 
-    if amber.relationship >= Relationship.KISSED:
+    if CharacterService.is_kissed(amber):
         $ amber.messenger.newMessage(_("Hey, it's Amber"), force_send=True)
         $ amber.messenger.newMessage(_("Josh gave me your number"), force_send=True)
         $ amber.messenger.newMessage(_("You know, you never came back, I thought we were having a good time xx"), force_send=True)

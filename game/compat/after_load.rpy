@@ -193,6 +193,11 @@ label after_load:
                     CharacterService.set_mood(character, Mood.MAD)
             except AttributeError: pass
 
+        try:
+            if evelyn.relationship == Relationship.LIKES:
+                v6_evelyn_successful_date = True
+        except AttributeError: pass
+
 #endregion NonPlayableCharacters
         try:
             bro = reputation.components[Reputations.BRO]

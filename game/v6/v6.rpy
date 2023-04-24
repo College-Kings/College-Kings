@@ -2033,7 +2033,7 @@ label continuebd:
 
             "It'll be a nice dinner":
                 $ reputation.add_point(RepComponent.BOYFRIEND)
-                $ CharacterService.set_relationship(evelyn, Relationship.DATE, mc)
+                $ CharacterService.set_relationship(evelyn, Relationship.DATING)
 
                 scene s524e
                 with dissolve
@@ -3113,9 +3113,8 @@ label fy_bd: # not gone to Emily's
 
     pause 0.5
 
-    if evelyn.relationship >= Relationship.DATE:
+    if CharacterService.is_dating(evelyn):
         play music "music/mlove1.mp3"
-
         queue music ["music/mlove2.mp3"]
 
         scene s546a # phone close up, it's 7:30
@@ -3463,7 +3462,7 @@ label fy_bd: # not gone to Emily's
 
             "Ask about her dreams":
                 $ reputation.add_point(RepComponent.BOYFRIEND)
-                $ CharacterService.set_relationship(evelyn, Relationship.LIKES, mc)
+                $ v6_evelyn_successful_date = True
 
                 scene s558d
                 with dissolve
@@ -3567,7 +3566,7 @@ label fy_bd: # not gone to Emily's
 
         ev "I've already called an Uber."
 
-        if evelyn.relationship >= Relationship.LIKES:
+        if v6_evelyn_successful_date:
             ev "Are you just gonna walk back? We can share the Uber if you want."
 
             scene s560a
@@ -3586,7 +3585,7 @@ label fy_bd: # not gone to Emily's
 
         ev "There it is."
 
-        if evelyn.relationship >= Relationship.LIKES:
+        if v6_evelyn_successful_date:
             scene s562 # Close up evelyn smiling at you, standing in front of you, about to enter the uber
             with dissolve
 
@@ -3650,7 +3649,7 @@ label fy_bd: # not gone to Emily's
         scene s564 # you walking back to your dorm at night
         with fade
 
-        if evelyn.relationship >= Relationship.LIKES:
+        if v6_evelyn_successful_date:
             u "(That went way better than expected. Once she started talking about her dreams, it's like she turned into this completely different person.)"
 
         else:

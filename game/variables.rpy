@@ -203,6 +203,10 @@ default volleyball = False
 default v2_made_a_move_on_evelyn = False
 #endregion v2.0
 
+#region v6.0
+default v6_evelyn_successful_date = False
+#endregion v6.0
+
 # 7.0
 default apesVids = 0
 default beachfirstkiss = False

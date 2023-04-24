@@ -36,7 +36,7 @@ label v9_sat_hit_gym:
 
     pause 1
 
-    if evelyn.relationship >= Relationship.LIKES:
+    if v6_evelyn_successful_date:
         scene v9atg3 # FPP. Show Evelyn sat on a weight bench inside the gym (now infront of MC), mouth closed
         with dissolve
         u "Hey, you seem to handle that bench pretty easy."
