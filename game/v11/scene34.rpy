@@ -831,11 +831,10 @@ label v11_cardealership:
 
         lee "[name], I don't believe that's your room."
 
-        if CharacterService.is_fwb(chloe) or CharacterService.is_girlfriend(chloe):
-            scene v11cd48a # FPP. same as 47, mouth closed
-            with dissolve
+        scene v11cd48a # FPP. same as 47, mouth closed
+        with dissolve
 
-            u "(What a fucking cock-block.)"
+        u "(What a fucking cock-block.)"
 
         scene v11cd49 # FPP. Looking at chloe, mouth closed
         with dissolve
@@ -847,10 +846,9 @@ label v11_cardealership:
 
         cl "You better."
 
-        if CharacterService.is_fwb(chloe) or CharacterService.is_girlfriend(chloe):
-            scene v11cd50 # TPP. Mc heads to his room, disapointed face, mouth closed
-            with dissolve
+        scene v11cd50 # TPP. Mc heads to his room, disapointed face, mouth closed
+        with dissolve
 
-            pause 0.75
+        pause 0.75
 
         jump v11_riley_sex

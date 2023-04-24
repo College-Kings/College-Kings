@@ -1950,6 +1950,7 @@ label thisbelauren:
                         u "(I could really use a walk to clear my head.)"
 
                     else:
+                        $ CharacterService.set_relationship(lauren, Relationship.FRIEND)
                         $ CharacterService.set_mood(lauren, Moods.MAD)
                         $ CharacterService.set_mood(autumn, Moods.MAD)
 
@@ -2026,6 +2027,7 @@ label thisbelauren:
                 "Open relationship?":
                     $ reputation.add_point(RepComponent.BRO)
                     $ reputation.add_point(RepComponent.TROUBLEMAKER)
+                    $ CharacterService.set_relationship(lauren, Relationship.FRIEND)
                     $ CharacterService.set_mood(lauren, Moods.MAD)
                     $ CharacterService.set_mood(autumn, Moods.MAD)
 
