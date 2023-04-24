@@ -14,33 +14,33 @@ screen hc_select():
     $ girl_labels = {
         _("Amber"): {
             "label": "hc_asking_amber",
-            "condition": ("amber" not in hcAsked) and (lauren.relationship < Relationship.GIRLFRIEND),
+            "condition": ("amber" not in hcAsked) and not CharacterService.is_girlfriend(lauren),
             "tooltip": _("I'm not that close with Amber but she does seem quite flirty around me")
         },
         _("Aubrey"): {
             "label": "hc_asking_aubrey",
-            "condition": ("aubrey" not in hcAsked) and (lauren.relationship < Relationship.GIRLFRIEND),
+            "condition": ("aubrey" not in hcAsked) and not CharacterService.is_girlfriend(lauren),
             "tooltip": (_("Aubrey and I get along well, she might be down to go with me.")
                 if aubrey.relationship < Relationship.FWB else
                 _("I'm pretty sure that Aubrey would go with me and that would probably lead to a pretty hot night afterwards..."))
         },
         _("Autumn"): {
             "label": "hc_asking_autumn",
-            "condition": ("autumn" not in hcAsked) and (not CharacterService.is_mad(autumn)) and (lauren.relationship < Relationship.GIRLFRIEND),
+            "condition": ("autumn" not in hcAsked) and (not CharacterService.is_mad(autumn)) and not CharacterService.is_girlfriend(lauren),
             "tooltip": (_("Autumn and I aren't really close, but I'll never know if she'd say yes if I don't try.")
                 if not CharacterService.is_mad(autumn) else
                 _("I think Autumn might be mad at me, so I probably shouldn't ask her."))
         },
         _("Chloe"): {
             "label": "hc_asking_chloe",
-            "condition": ("chloe" not in hcAsked) and not CharacterService.is_mad(chloe) and (lauren.relationship < Relationship.GIRLFRIEND),
+            "condition": ("chloe" not in hcAsked) and not CharacterService.is_mad(chloe) and not CharacterService.is_girlfriend(lauren),
             "tooltip": (_("Chloe and I have been getting closer recently. Who knows, I might have a shot.")
                 if not CharacterService.is_mad(chloe) else
                 _("I think Chloe is mad at me, so I probably shouldn't ask her."))
         },
         _("Emily"): {
             "label": "hc_asking_emily",
-            "condition": ("emily" not in hcAsked) and (forgiveemily) and (lauren.relationship < Relationship.GIRLFRIEND),
+            "condition": ("emily" not in hcAsked) and (forgiveemily) and not CharacterService.is_girlfriend(lauren),
             "tooltip": (_("I could take Emily. She definitely still has a thing for me.")
                 if forgiveemily else
                 _("I don't think asking Emily is the right call."))
@@ -54,7 +54,7 @@ screen hc_select():
         },
         _("Penelope"): {
             "label": "hc_asking_penelope",
-            "condition": ("penelope" not in hcAsked) and (not v7_emily_bowling) and (lauren.relationship < Relationship.GIRLFRIEND),
+            "condition": ("penelope" not in hcAsked) and (not v7_emily_bowling) and not CharacterService.is_girlfriend(lauren),
             "tooltip": (_("Penelope didn't seem too eager to talk to me today, I better ask someone else.")
                 if v7_emily_bowling else
                 _("Penelope and I got along really well when we went bowling together, I think she could say yes.")
@@ -63,7 +63,7 @@ screen hc_select():
         },
         _("Riley"): {
             "label": "hc_asking_riley",
-            "condition": ("riley" not in hcAsked) and (lauren.relationship < Relationship.GIRLFRIEND),
+            "condition": ("riley" not in hcAsked) and not CharacterService.is_girlfriend(lauren),
             "tooltip": (_("Riley and I are good friends. She might say yes if I ask her.")
                 if riley.relationship < Relationship.LIKES else
                 _("Riley and I are good friends. She might say yes if I ask her."))

@@ -565,7 +565,7 @@ label v9_lau_dorm:
         scene v9lau16a
         with dissolve
 
-        if lauren.relationship < Relationship.GIRLFRIEND and reputation() == Reputations.LOYAL:
+        if not CharacterService.is_girlfriend(lauren) and reputation() == Reputations.LOYAL:
             if reputation() == Reputations.LOYAL:
                 call screen reputation_popup
 

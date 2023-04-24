@@ -92,7 +92,7 @@ label v10_lauren_room:
             u "I really do."
 
             if CharacterService.is_girlfriend(lauren, Relationship.GIRLFRIEND) or reputation() == Reputations.LOYAL:
-                if lauren.relationship < Relationship.GIRLFRIEND:
+                if not CharacterService.is_girlfriend(lauren):
                     call screen reputation_popup
                 $ v10s33_laurenBakeSale = False
 
@@ -296,7 +296,7 @@ label v10_lauren_room:
                 pause
 
                 if CharacterService.is_girlfriend(lauren, Relationship.GIRLFRIEND) or (lauren.relationship >= Relationship.KISS and reputation() == Reputations.LOYAL):
-                    if lauren.relationship < Relationship.GIRLFRIEND:
+                    if not CharacterService.is_girlfriend(lauren):
                         $ lauren.relationship = Relationship.GIRLFRIEND
                         call screen reputation_popup
                         

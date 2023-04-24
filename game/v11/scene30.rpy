@@ -1335,7 +1335,7 @@ label v11_quiz_bonus:
     u "Wouldn't have missed it for the world."
 
     if (CharacterService.is_girlfriend(lauren, Relationship.GIRLFRIEND) or (reputation() == Reputations.LOYAL and lauren.relationship >= Relationship.KISS)) and not "v11_aubrey" in sceneList:
-        if lauren.relationship < Relationship.GIRLFRIEND:
+        if not CharacterService.is_girlfriend(lauren):
             call screen reputation_popup
 
         scene v11las44f # FPP. Lauren has her hands around MC's neck, she is looking into his eyes, she is nervous, mouth open

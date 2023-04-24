@@ -960,7 +960,7 @@ label v12_valentine:
 
     pause 0.75
 
-    if CharacterService.is_girlfriend(chloe, Relationship.GIRLFRIEND) and lauren.relationship < Relationship.GIRLFRIEND:
+    if CharacterService.is_girlfriend(chloe) and not CharacterService.is_girlfriend(lauren):
         scene v12val43 # FPP. Charli next to MC on the sidewalk, not walking, Charli and MC looking at each other, Charli slightly annoyed, mouth open
         with dissolve
 
@@ -981,7 +981,7 @@ label v12_valentine:
 
         u "(Fucking weirdo.)"
 
-    elif CharacterService.is_girlfriend(chloe, Relationship.GIRLFRIEND):
+    elif CharacterService.is_girlfriend(chloe):
         scene v12val43
         with dissolve
 
