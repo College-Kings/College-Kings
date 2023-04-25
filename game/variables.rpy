@@ -6,7 +6,7 @@ define config.default_music_volume = 1
 define config.default_sfx_volume = 1
 
 #region Path Builder
-define pb_starting_locations = (("act_1_start", "start"), ("act_2_start", "v7_homecoming"), ("act_3_start", "v11_start"))
+define pb_starting_locations = (("Act 1 Start", "start"), ("Act 2 Start", "v7_homecoming"), ("Act 3 Start", "v11_start"))
 #endregion Path Builder
 
 #region Scene Gallery
