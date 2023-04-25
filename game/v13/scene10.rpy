@@ -132,7 +132,8 @@ label v13s10:
     
             while MessengerService.has_replies(aubrey):
                 call screen phone
-                if MessengerService.has_replies(aubrey)
+                
+                if MessengerService.has_replies(aubrey):
                     u "(I should check my phone.)"
     
         elif v13_penelope_concert: # If invited Penelope/Penelope invited MC    

@@ -73,7 +73,7 @@ label v13s15a:
     if CharacterService.is_girlfriend(lauren) and not v11_lauren_caught_aubrey: #if healthy lauren relationship
         python:
             v13s15a_Reply1 = MessageBuilder(lauren)
-            v13s15a_Reply1.set_variable(“v13_cuddle_lauren”, True)
+            v13s15a_Reply1.set_variable("v13_cuddle_lauren", True)
             v13s15a_Reply1.new_message("Yayy :)")
 
             v13s15a_Reply2 = MessageBuilder(lauren)
