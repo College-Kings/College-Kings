@@ -12,8 +12,8 @@ label v12_penelope_roof:
 
     play music "music/v12/Track Scene 3_1.mp3" fadein 2
 
-    $ penelope.messenger.newMessage("Hey, are you up still?", force_send=True)
-    $ penelope.messenger.newMessage("If you are, can you meet me in the hallway?", force_send=True)
+    $ MessengerService.new_message(penelope, "Hey, are you up still?")
+    $ MessengerService.new_message(penelope, "If you are, can you meet me in the hallway?")
 
     u "(It's Penelope.)"
 
@@ -24,14 +24,12 @@ label v12_penelope_roof:
             if CharacterService.is_dating(penelope):
                 $ reputation.add_point(RepComponent.BOYFRIEND)
 
-            $ penelope.messenger.addReply("Yeah, one sec", func=None)
+            $ MessengerService.add_reply(penelope, "Yeah, one sec")
 
-            label v12_penelope_roof_text:
-                if penelope.messenger.replies:
-                    call screen phone
-                if penelope.messenger.replies:
+            while MessengerService.has_replies(penelope):
+                call screen phone
+                if MessengerService.has_replies(penelope):
                     u "(I should probably reply.)"
-                    jump v12_penelope_roof_text
 
             scene v12penr2 # TPP Show MC leaving his hotel room
             with dissolve
