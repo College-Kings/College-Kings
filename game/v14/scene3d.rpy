@@ -56,7 +56,7 @@ label v14s03d:
 
     pause 0.75
 
-    if config_censored:
+    if is_censored:
         call screen censored_popup("v14s03d_nsfwSkipLabel1")
 
     scene v14s03d_4 # FPP Show Satin removing her clothes

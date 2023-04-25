@@ -4,7 +4,7 @@
 # Time: Night
 label v11_chloe_sex_scene:
 
-    if config_censored:
+    if is_censored:
         call screen censored_popup("v11s41b_nsfwSkipLabel1")
 
     scene v11css1 # TPP. Mc and chloe removing their clothes

@@ -430,11 +430,11 @@ screen nsfw_Toggle():
             textbutton _("Enable"):
                 text_size 40
                 selected False
-                action [SetVariable("config_censored", False), Return()]
+                action [SetVariable("is_censored", False), Return()]
             textbutton _("Disable"):
                 text_size 40
                 selected False
-                action [SetVariable("config_censored", True), Return()]
+                action [SetVariable("is_censored", True), Return()]
 
     if config_debug:
-        timer 0.1 action [SetVariable("config_censored", False), Return()]
+        timer 0.1 action [SetVariable("is_censored", False), Return()]

@@ -467,7 +467,7 @@ label v11_riley_sex:
 
                 ri "Then I guess I'll say it again..."
 
-                if config_censored:
+                if is_censored:
                     call screen censored_popup("v11s35_nsfwSkipLabel1")
 
                 scene v11ris12d # FPP. Same as v11ris12, Riley no longer under the blanket, smiling seductively, mouth open

@@ -27,10 +27,16 @@ label v14s10:
     pause 1.5
 
     scene v14s10_5 # TPP. Show the plane landing
-    with Fade(1,0.5,1)
+    with Fade(1, 0.5, 1)
 
     pause 1.5
 
     stop music fadeout 3
 
-    jump game_end
+label v14_end:
+    show end_screen_background
+    show end_screen_text
+
+    pause
+
+    call screen end_screen

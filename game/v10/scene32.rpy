@@ -23,7 +23,7 @@ label v10_tues_room_night:
             u "(And it continues.)"
 
             python:
-                if config_censored:
+                if is_censored:
                     lauren.messenger.newImgMessage("gui/censoredPopup/censoredBackground.webp", force_send=True)
                 else:
                     lauren.messenger.newImgMessage("images/v10/scene 32/v9lauText.webp", force_send=True)
@@ -85,7 +85,7 @@ label v10_tues_room_night:
             u "(And it continues.)"
 
             python:
-                if config_censored:
+                if is_censored:
                     lauren.messenger.newImgMessage("gui/censoredPopup/censoredBackground.webp", force_send=True)
                 else:
                     lauren.messenger.newImgMessage("images/v10/scene 32/v9lauText.webp", force_send=True)

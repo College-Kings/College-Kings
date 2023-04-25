@@ -13,7 +13,7 @@ label v13s50a:
 
         pause 1
 
-    if config_censored:
+    if is_censored:
         call screen censored_popup("v13s50a_nsfwSkipLabel1")
 
     play music "music/v13/Track Scene 50a.mp3" fadein 2

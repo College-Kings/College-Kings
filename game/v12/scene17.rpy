@@ -1026,7 +1026,7 @@ label v12_lindsey_sex:
 
     pause
 
-    if config_censored:
+    if is_censored:
         call screen censored_popup("v12s17_nsfwSkipLabel1")
 
     show screen v12s17_lindsey_sex_overlay

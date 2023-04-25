@@ -41,7 +41,7 @@ label v13s62a:
     scene v13s62a_6 # TPP. Show Lindsey taking off her top, sexy expression, mouth closed
     with dissolve
 
-    if config_censored:
+    if is_censored:
         call screen censored_popup("v14s01a_nsfwSkipLabel1")
 
     pause

@@ -24,7 +24,7 @@ label v11_walking_back:
 
     play sound "sounds/vibrate.mp3"
 
-    if config_censored:
+    if is_censored:
         $ jenny.messenger.newImgMessage("gui/censoredPopup/censoredBackground.webp", force_send=True)
     else:
         $ jenny.messenger.newImgMessage("images/v11/Scene 47/jennynude.webp", force_send=True) # Jenny nude pic (selfie or pic in a mirror)

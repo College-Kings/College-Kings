@@ -2726,7 +2726,7 @@ label emsex_a:
 
     pause 0.5
 
-    if config_censored:
+    if is_censored:
         call screen censored_popup("v6_nsfwSkipLabel1")
 
     scene em6
@@ -3989,7 +3989,7 @@ label aubreysexb: # aubreysex scene
 
     au "*Quiet moan*"
 
-    if config_censored:
+    if is_censored:
         call screen censored_popup("wayhome")
 
     scene naub1a
@@ -4409,7 +4409,7 @@ label afteraubrey:
     if CharacterService.is_fwb(aubrey):
         play sound "sounds/vibrate.mp3"
 
-        if config_censored:
+        if is_censored:
             $ aubrey.messenger.newImgMessage("gui/censoredPopup/censoredBackground.webp", force_send=True)
         else:
             $ aubrey.messenger.newImgMessage("images/v6/text3.webp", force_send=True)
@@ -9343,14 +9343,14 @@ label v6_fr3office:
 
     $ freeroam3.add("office")
     
-    if relics == 4:
+    if sum(v6_relics.values()) == 4:
         jump fr3relics
     else:
         call screen v6_fr3office
 
 
 label v6_fr3picture:
-    $ relics += 1
+    $ v6_relics[V6_Relics.PICTURE] = True
 
     #*If you click on a photo on the wall*
     #MC sees an old picture of the wolves.
@@ -9360,14 +9360,14 @@ label v6_fr3picture:
 
     u "That must be Imre's older brother. They do look alike."
 
-    if relics == 4:
+    if sum(v6_relics.values()) == 4:
         jump fr3relics
     else:
         call screen v6_fr3office
 
 
 label v6_fr3trophies:
-    $ relics += 1
+    $ v6_relics[V6_Relics.TROPHIES] = True
 
     scene sfr3trophies # close up of 7 trophies
 
@@ -9377,7 +9377,7 @@ label v6_fr3trophies:
 
     u "(That's crazy...)"
 
-    if relics == 4:
+    if sum(v6_relics.values()) == 4:
         jump fr3relics
     else:
         call screen v6_fr3office
@@ -9386,13 +9386,13 @@ label v6_fr3trophies:
 #*If you click on the certificate on the wall*
 #MC looks at the certificate on the wall. It reads: Wolves Fraternity 1976.
 label v6_fr3certificate:
-    $ relics += 1
+    $ v6_relics[V6_Relics.CERTIFICATE] = True
 
     scene sfr3certificate # close up of ceritifcate
 
     u "Wow. This frat has been around for decades."
 
-    if relics == 4:
+    if sum(v6_relics.values()) == 4:
         jump fr3relics
     else:
         call screen v6_fr3office
@@ -9400,20 +9400,21 @@ label v6_fr3certificate:
 #*If you click on the book shelf*
 #MC walks to the book shelf and looks at the row of books.
 label v6_fr3books:
-    $ relics += 1
+    $ v6_relics[V6_Relics.BOOKS] = True
 
     scene sfr3books # close up of bookshelf
 
     u "I doubt any of these guys actually read any of these. Haha."
 
-    if relics == 4:
+    if sum(v6_relics.values()) == 4:
         jump fr3relics
     else:
         call screen v6_fr3office
 
 
 label fr3relics:
-    $ relics += 1
+    $ v6_relics[V6_Relics.RELICS] = True
+    
     scene fr3office
 
     u "(Empty room... All alone. This'd be the perfect place for some alone time with a girl... I should ask someone. Haha.)"
