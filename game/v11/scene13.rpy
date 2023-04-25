@@ -35,6 +35,7 @@ label v11_aubrey_plane_sex:
                 if CharacterService.is_girlfriend(lauren):
                     $ CharacterService.set_mood(lauren, Moods.MAD)
                     $ v11_lauren_caught_aubrey = True
+                    $ CharacterService.set_relationship(lauren, Relationship.FRIEND)
 
                 scene v11aub4
                 with dissolve

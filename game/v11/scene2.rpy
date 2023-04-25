@@ -366,6 +366,7 @@ label v11_nora_chloe_hallway:
                 menu:
                     "Apologize":
                         $ CharacterService.set_relationship(chloe, Relationship.FRIEND, mc)
+                        $ CharacterService.remove_mood(chloe, Moods.MAD)
                         $ reputation.add_point(RepComponent.BOYFRIEND)
 
                         scene v11clhall1c

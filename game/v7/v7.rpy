@@ -1738,6 +1738,7 @@ label apologylauren:
 
     elif reputation() == Reputations.LOYAL:
         $ CharacterService.set_relationship(lauren, Relationship.FRIEND, mc)
+        $ CharacterService.remove_mood(lauren, Moods.MAD)
         call screen reputation_popup
 
         scene s717
@@ -1950,6 +1951,7 @@ label thisbelauren:
                         u "(I could really use a walk to clear my head.)"
 
                     else:
+                        $ CharacterService.set_relationship(lauren, Relationship.FRIEND)
                         $ CharacterService.set_mood(lauren, Moods.MAD)
                         $ CharacterService.set_mood(autumn, Moods.MAD)
 
@@ -2026,6 +2028,7 @@ label thisbelauren:
                 "Open relationship?":
                     $ reputation.add_point(RepComponent.BRO)
                     $ reputation.add_point(RepComponent.TROUBLEMAKER)
+                    $ CharacterService.set_relationship(lauren, Relationship.FRIEND)
                     $ CharacterService.set_mood(lauren, Moods.MAD)
                     $ CharacterService.set_mood(autumn, Moods.MAD)
 
@@ -15343,6 +15346,7 @@ label fr4chloe1:
     menu:
         "Defend Chloe":
             $ CharacterService.set_relationship(chloe, Relationship.FRIEND, mc)
+            $ CharacterService.remove_mood(chloe, Moods.MAD)
             $ reputation.add_point(RepComponent.BOYFRIEND)
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
 

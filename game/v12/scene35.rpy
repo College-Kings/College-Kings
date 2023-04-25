@@ -98,7 +98,7 @@ label v12_chris_nora_room:
 
             u "Nora..."
 
-            if v8_nora_likes_mc or v11_kiss_nora: # if Nora likes she lets him in after a bit. If not Nora likes he has to convince her and can fail. If mc made a move on Nora before, she is not letting him in.
+            if not v8_nora_likes_mc or v11_kiss_nora: # if Nora likes she lets him in after a bit. If not Nora likes he has to convince her and can fail. If mc made a move on Nora before, she is not letting him in.
                 scene v12cnr13
                 with dissolve
 

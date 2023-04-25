@@ -3189,6 +3189,7 @@ label continueq:
                     $ toldlauren = True
                     $ reputation.add_point(RepComponent.BOYFRIEND)
                     $ CharacterService.set_mood(lauren, Moods.MAD)
+                    $ CharacterService.set_relationship(lauren, Relationship.FRIEND)
 
                     u "(Lauren values honesty and we're not in a relationship yet, so she'll probably be understanding as long as I tell her the truth.)"
 
@@ -3352,6 +3353,7 @@ label continueq:
                                 $ reputation.add_point(RepComponent.TROUBLEMAKER)
                                 $ laurentoofar = True
                                 $ CharacterService.set_mood(lauren, Moods.MAD)
+                                $ CharacterService.set_relationship(lauren, Relationship.FRIEND)
 
                                 scene s291b # your hand moves further up
                                 with dissolve
