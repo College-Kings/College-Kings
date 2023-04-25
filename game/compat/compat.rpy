@@ -1,4 +1,7 @@
-init 100 python:
+init 999 python:
+    class Contact:
+        pass
+
     class CheatItem:
         pass
 
