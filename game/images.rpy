@@ -79,6 +79,12 @@ image tutorial_right_button_idle = "gui/tutorial/right_button_idle.webp"
 image warning_background_blue = Frame("gui/warning/background_blue.webp", 42, 8, 8, 8)
 #endregion GUI
 
+#region Path Builder
+image path_builder_act_1_start = "screens/path_builder/images/episode_1_start.webp"
+image path_builder_act_2_start = "screens/path_builder/images/episode_2_start.webp"
+image path_builder_act_3_start = "screens/path_builder/images/episode_3_start.webp"
+#endregion Path Builder
+
 # Transitions
 image sleep_transition_fast = Movie(play="images/v15/sleep_transition_fast.webm", loop=False)
 
