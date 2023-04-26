@@ -1,81 +1,3 @@
-init python:
-
-    # Ryan messages
-    def v2_reply1():
-        reputation.add_point(RepComponent.BRO)
-        ryan.messenger.newMessage(_("Look, I know what Grayson did was a dick move, but he was just being overprotective of Chloe"))
-        ryan.messenger.addReply(_("Whatever"), v2_reply2)
-        ryan.messenger.addReply(_("Don't you dare defend that guy"), v2_reply3)
-
-    def v2_reply2():
-        reputation.add_point(RepComponent.BRO)
-
-    def v2_reply3():
-        reputation.add_point(RepComponent.TROUBLEMAKER)
-        ryan.messenger.newMessage(_("Sorry..."))
-
-    def v2_reply4():
-        reputation.add_point(RepComponent.TROUBLEMAKER)
-        ryan.messenger.newMessage(_("Look, I know what Grayson did was a dick move, but he was just being overprotective of Chloe"))
-        ryan.messenger.addReply(_("Whatever"), v2_reply2)
-        ryan.messenger.addReply(_("Don't you dare defend that guy"), v2_reply3)
-
-    # Lauren messages
-    def v2_reply5():
-        setattr(store, "meetlauren", True)
-        reputation.add_point(RepComponent.BOYFRIEND)
-        lauren.messenger.newMessage(_("Great, I'll see you then :)"))
-
-    def v2_reply6():
-        grant_achievement("mixed_feelings")
-
-    # Josh messages
-    def v2_reply7():
-        reputation.add_point(RepComponent.BRO)
-        josh.messenger.newMessage(_("It's fine, you go get her."))
-
-    def v2_reply8():
-        reputation.add_point(RepComponent.BOYFRIEND)
-        josh.messenger.newMessage(_("Nah, you don't want a bitch like her."))
-        josh.messenger.addReply(_("Yeah, I guess you're right."), v2_reply9)
-        josh.messenger.addReply(_("Dude, what the fuck?!"), v2_reply10)
-
-    def v2_reply9():
-        reputation.add_point(RepComponent.BRO)
-        josh.messenger.newMessage(_("Hahaha, I'm just kidding, yo."))
-        josh.messenger.newMessage(_("Of course I gave her your number."))
-        josh.messenger.addReply(_("Damn, you got me."))
-
-    def v2_reply10():
-        reputation.add_point(RepComponent.TROUBLEMAKER)
-        josh.messenger.newMessage(_("Hahaha, I'm just kidding, yo."))
-        josh.messenger.newMessage(_("Of course I gave her your number."))
-        josh.messenger.addReply(_("Damn, you got me."))
-
-    # Aubrey messages
-    def v2_reply11():
-        reputation.add_point(RepComponent.BRO)
-        aubrey.messenger.newMessage(_("Yeah, I mean they had a thing a while ago but she broke it off 'cause he lied about some shit."))
-        aubrey.messenger.newMessage(_("So... tomorrow?"))
-        aubrey.messenger.addReply(_("My day tomorrow is quite full, but how about today?\n\nI need to buy a costume."), v2_reply12)
-
-    def v2_reply12():
-        reputation.add_point(RepComponent.BOYFRIEND)
-        aubrey.messenger.newMessage(_("I've got dance practice tonight \n:("))
-        aubrey.messenger.addReply(_("I'm not talking tonight, I can pick you up right now."))
-        aubrey.messenger.newMessage(_("Oh wow, that's spontaneous, I like it haha.\n\nI guess come to the Chicks' house whenever you're ready and then we can go costume shopping."))
-        aubrey.messenger.addReply(_("Cool, I'll be 20 mins."))
-
-    def v2_reply13():
-        setattr(store, "costumeaubrey", True)
-        reputation.add_point(RepComponent.BOYFRIEND)
-        aubrey.messenger.newMessage(_("Good :)"))
-
-    def v2_reply14():
-        setattr(store, "costumeaubrey", False)
-        reputation.add_point(RepComponent.TROUBLEMAKER)
-        aubrey.messenger.newMessage(_("Oh, okay. Guess we'll have to postpone the costume buying."))
-
 label v2start:
     play music "music/muffledparty.mp3"
     scene black
@@ -194,35 +116,84 @@ label v2start:
     play sound "sounds/vibrate.mp3"
     queue sound "sounds/vibrate.mp3"
 
-    $ ryan.messenger.newMessage(_("You okay?"), force_send=True)
-    $ ryan.messenger.addReply(_("I'm fine"), v2_reply1)
-    $ ryan.messenger.addReply(_("No, wtf was that?! Fuck Grayson and fuck the Apes"), v2_reply4)
+    python:
+        v2_reply1 = MessageBuilder(ryan)
+        v2_reply1.add_function(reputation.add_point, RepComponent.BRO)
+        v2_reply1.new_message(_("Look, I know what Grayson did was a dick move, but he was just being overprotective of Chloe"))
 
-    $ reputation.add_point(RepComponent.TROUBLEMAKER)
-    $ lauren.messenger.newMessage(_("Is everything okay?"))
-    $ lauren.messenger.addReply(_("Yeah, I'm fine."))
-    $ lauren.messenger.newMessage(_("Okay..."))
+        v2_reply2 = MessageBuilder(ryan).add_function(reputation.add_point, RepComponent.BRO)
 
-    if lauren.messenger.replies:
-        $ lauren.messenger.newMessage(_("Hello?? Can we please talk today?"), force_send=True)
-        $ lauren.messenger.addReply(_("Yeah, SV cafe in 20 mins?"), v2_reply5)
-        $ lauren.messenger.addReply(_("Sorry, I can't"), v2_reply6)
-    else:
-        $ lauren.messenger.newMessage(_("Are we still on for today? :)"), force_send=True)
-        $ lauren.messenger.addReply(_("Yeah, SV cafe in 20 mins?"), v2_reply5)
-        $ lauren.messenger.addReply(_("Sorry, I can't"), v2_reply6)
+        v2_reply3 = MessageBuilder(ryan)
+        v2_reply3.add_function(reputation.add_point, RepComponent.TROUBLEMAKER)
+        v2_reply3.new_message(_("Sorry..."))
+
+        v2_reply1.add_replies(ryan,
+            Reply(_("Whatever"), v2_reply2),
+            Reply(_("Don't you dare defend that guy"), v2_reply3)
+        )
+
+        v2_reply4 = MessageBuilder(ryan)
+        v2_reply4.add_function(reputation.add_point, RepComponent.TROUBLEMAKER)
+        v2_reply4.new_message(_("Look, I know what Grayson did was a dick move, but he was just being overprotective of Chloe"))
+        v2_reply4.add_replies(ryan,
+            Reply(_("Whatever"), v2_reply2),
+            Reply(_("Don't you dare defend that guy"), v2_reply3)
+        )
+
+        MessengerService.new_message(ryan, _("You okay?"))
+        MessengerService.add_replies(ryan, 
+            Reply(_("I'm fine"), v2_reply1),
+            Reply(_("No, wtf was that?! Fuck Grayson and fuck the Apes"), v2_reply4)
+        )
+
+        MessengerService.add_function(reputation.add_point, RepComponent.TROUBLEMAKER)
+        MessengerService.new_message(lauren, _("Is everything okay?"))
+        MessengerService.add_reply(lauren, _("Yeah, I'm fine."))
+        MessengerService.new_message(lauren, _("Okay..."))
+
+        if MessengerService.has_replies(lauren):
+
+            v2_reply5 = MessageBuilder(lauren)
+            v2_reply5.set_variable("meetlauren", True)
+            v2_reply5.add_function(reputation.add_point, RepComponent.BOYFRIEND)
+            v2_reply5.new_message(_("Great, I'll see you then :)"))
+
+            v2_reply6 = MessageBuilder(lauren)
+            v2_reply6.add_function(grant_achievement, "mixed_feelings")
+
+            MessengerService.new_message(lauren, _("Hello?? Can we please talk today?"))
+            MessengerService.add_replies(lauren, 
+                Reply(_("Yeah, SV cafe in 20 mins?"), v2_reply5),
+                Reply(_("Sorry, I can't"), v2_reply6)
+            )
+
+        else:
+
+            v2_reply5 = MessageBuilder(lauren)
+            v2_reply5.set_variable("meetlauren", True)
+            v2_reply5.add_function(reputation.add_point, RepComponent.BOYFRIEND)
+            v2_reply5.new_message(_("Great, I'll see you then :)"))
+
+            v2_reply6 = MessageBuilder(lauren)
+            v2_reply6.add_function(grant_achievement, "mixed_feelings")
+
+            MessengerService.new_message(lauren, _("Are we still on for today? :)"))
+            MessengerService.add_replies(lauren,
+                Reply(_("Yeah, SV cafe in 20 mins?"), v2_reply5)
+                Reply(_("Sorry, I can't"), v2_reply6)
+            )
 
     " "
 
     scene s96g
     with dissolve
 
-    label repeatb:
-        if lauren.messenger.replies or ryan.messenger.replies:
+    while MessengerService.has_replies(lauren): or MessengerService.has_replies(ryan):
             call screen phone
-        if lauren.messenger.replies or ryan.messenger.replies:
+
+        if MessengerService.has_replies(lauren): or MessengerService.has_replies(ryan):
             u "(Damn, my phone's blowing up. I should probably check my messages.)"
-            jump repeatb
+
 
     if meetlauren:
         u "(Well, time to head to the cafe to meet Lauren.)"
@@ -1360,11 +1331,40 @@ label historye: #for compatibility only
 label history2:
     play sound "sounds/vibrate.mp3"
 
-    $ josh.messenger.newMessage(_("Dude, I talked to this Aubrey chick the entire night and guess who's number she wanted..."), force_send=True)
-    $ josh.messenger.newMessage(_("YOURS"), force_send=True)
-    $ josh.messenger.newMessage(_("What a bitch..."), force_send=True)
-    $ josh.messenger.addReply(_("Sorry, man. She doesn't know what she's missing."), v2_reply7)
-    $ josh.messenger.addReply(_("Sooo, did you give it to her?"), v2_reply8)
+    python:
+        v2_reply7 = MessageBuilder(josh)
+        v2_reply7.add_function(reputation.add_point, RepComponent.BRO)
+        v2_reply7.new_message(_("It's fine, you go get her."))
+
+        v2_reply8 = MessageBuilder(josh)
+        v2_reply8.add_function(reputation.add_point, RepComponent.BOYFRIEND)
+        v2_reply8.new_message(_("Nah, you don't want a bitch like her."))
+
+        MessengerService.new_message(josh, _("Dude, I talked to this Aubrey chick the entire night and guess who's number she wanted..."))
+        MessengerService.new_message(josh, _("YOURS"))
+        MessengerService.new_message(josh, _("What a bitch..."))
+        MessengerService.add_replies(josh,
+            Reply(_("Sorry, man. She doesn't know what she's missing."), v2_reply7),
+            Reply(_("Sooo, did you give it to her?"), v2_reply8)
+        )
+
+        v2_reply9 = MessageBuilder(josh)
+        v2_reply9.add_function(reputation.add_point, RepComponent.BRO)
+        v2_reply9.new_message(_("Hahaha, I'm just kidding, yo."))
+        v2_reply9.new_message(_("Of course I gave her your number."))
+        v2_reply9.add_reply(_("Damn, you got me."))
+
+        v2_reply10 = MessageBuilder(josh)
+        v2_reply10.add_function(reputation.add_point, RepComponent.TROUBLEMAKER)
+        v2_reply10.new_message(_("Hahaha, I'm just kidding, yo."))
+        v2_reply10.new_message(_("Of course I gave her your number."))
+        v2_reply10.add_reply(_("Damn, you got me."))
+
+        v2_reply8.add_replies(josh,
+            Reply(_("Yeah, I guess you're right."), v2_reply9),
+            Reply(_("Dude, what the fuck?!"), v2_reply10)
+        )
+
 
     scene s133
     with dissolve
@@ -2327,19 +2327,35 @@ label bo_bd:
     # text from aubrey
     play sound "sounds/vibrate.mp3"
 
-    $ aubrey.messenger.newMessage(_("Hey,\nJosh gave me your number\n\nI hope your face is feeling better after the shit that Grayson pulled..."), force_send=True)
-    $ aubrey.messenger.newMessage(_("He's not even dating Chloe and you guys didn't even do anything so I don't know what he was thinking.\n\nAnyway, do you wanna like... hang out tomorrow?"), force_send=True)
-    $ aubrey.messenger.addReply(_("Wait they're not dating?"), v2_reply11)
-    $ aubrey.messenger.addReply(_("My day tomorrow is quite full, but how about today?\n\nI need to buy a costume."), v2_reply12)
+    python:
+
+        v2_reply11 = MessageBuilder(aubrey)
+        v2_reply11.add_function(reputation.add_point, RepComponent.BRO)
+        v2_reply11.new_message(_("Yeah, I mean they had a thing a while ago but she broke it off 'cause he lied about some shit."))
+        v2_reply11.new_message(_("So... tomorrow?"))        
+
+        v2_reply12 = MessageBuilder(aubrey)
+        v2_reply12.add_function(reputation.add_point, RepComponent.BOYFRIEND)
+        v2_reply12.new_message(_("I've got dance practice tonight \n:("))
+        v2_reply12.add_reply(_("I'm not talking tonight, I can pick you up right now."))
+        v2_reply12.new_message(_("Oh wow, that's spontaneous, I like it haha.\n\nI guess come to the Chicks' house whenever you're ready and then we can go costume shopping."))
+        v2_reply12.add_reply(_("Cool, I'll be 20 mins."))
+
+        v2_reply11.add_reply(_("My day tomorrow is quite full, but how about today?\n\nI need to buy a costume."), v2_reply12)
+
+        MessengerService.new_message(aubrey, _("Hey,\nJosh gave me your number\n\nI hope your face is feeling better after the shit that Grayson pulled..."))
+        MessengerService.new_message(aubrey, _("He's not even dating Chloe and you guys didn't even do anything so I don't know what he was thinking.\n\nAnyway, do you wanna like... hang out tomorrow?"))
+        MessengerService.add_replies(aubrey, 
+            Reply(_("Wait they're not dating?"), v2_reply11),
+            Reply(_("My day tomorrow is quite full, but how about today?\n\nI need to buy a costume."), v2_reply12)
+        )
 
     u "(Oh, I just got a message.)"
 
-    label repeatc:
-        if aubrey.messenger.replies:
+    while MessengerService.has_replies(aubrey):
             call screen phone
-        if aubrey.messenger.replies:
+        if MessengerService.has_replies(aubrey):
             u "(I should check my messages.)"
-            jump repeatc
     
     play music "music/mlove.mp3"
 
@@ -2497,18 +2513,29 @@ label bo_bd:
 
     play sound "sounds/vibrate.mp3"
 
-    $ aubrey.messenger.newMessage(_("Hey, are you nearby?"), force_send=True)
-    $ aubrey.messenger.addReply(_("Yeah, I'm just on my way, I'll be right there."), v2_reply13)
-    $ aubrey.messenger.addReply(_("Sorry, something came up and I can't make it."), v2_reply14)
+    python:
+        v2_reply13 = MessageBuilder(aubrey)
+        v2_reply13.set_variable("costumeaubrey", True)
+        v2_reply13.add_function(reputation.add_point, RepComponent.BOYFRIEND)
+        v2_reply13.new_message(_("Good :)"))
+
+        v2_reply14 = MessageBuilder(aubrey)
+        v2_reply14.set_variable("costumeaubrey", False)
+        v2_reply14.add_function(reputation.add_point, RepComponent.TROUBLEMAKER)
+        v2_reply14.new_message(_("Oh, okay. Guess we'll have to postpone the costume buying."))
+        
+        MessengerService.new_message(aubrey, _("Hey, are you nearby?"))
+        MessengerService.add_replies(aubrey,
+            Reply(_("Yeah, I'm just on my way, I'll be right there."), v2_reply13),
+            Reply(_("Sorry, something came up and I can't make it."), v2_reply14)
+        )
 
     u "(Fuck, I totally forgot about Aubrey. I guess it's time to make a decision.)"
 
-    label repeatg:
-        if aubrey.messenger.replies:
+    while MessengerService.has_replies(aubrey):
             call screen phone
-        if aubrey.messenger.replies:
+        if MessengerService.has_replies(aubrey):
             u "(Aubrey's waiting for me, I need to let her know whether I'm coming or not.)"
-            jump repeatg
 
     if costumeaubrey:
         u "Penelope, I'm really sorry, but I have to go and meet my friend. It was nice seeing you."
