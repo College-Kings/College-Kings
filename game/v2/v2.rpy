@@ -2328,12 +2328,6 @@ label bo_bd:
     play sound "sounds/vibrate.mp3"
 
     python:
-
-        v2_reply11 = MessageBuilder(aubrey)
-        v2_reply11.add_function(reputation.add_point, RepComponent.BRO)
-        v2_reply11.new_message(_("Yeah, I mean they had a thing a while ago but she broke it off 'cause he lied about some shit."))
-        v2_reply11.new_message(_("So... tomorrow?"))        
-
         v2_reply12 = MessageBuilder(aubrey)
         v2_reply12.add_function(reputation.add_point, RepComponent.BOYFRIEND)
         v2_reply12.new_message(_("I've got dance practice tonight \n:("))
@@ -2341,6 +2335,10 @@ label bo_bd:
         v2_reply12.new_message(_("Oh wow, that's spontaneous, I like it haha.\n\nI guess come to the Chicks' house whenever you're ready and then we can go costume shopping."))
         v2_reply12.add_reply(_("Cool, I'll be 20 mins."))
 
+        v2_reply11 = MessageBuilder(aubrey)
+        v2_reply11.add_function(reputation.add_point, RepComponent.BRO)
+        v2_reply11.new_message(_("Yeah, I mean they had a thing a while ago but she broke it off 'cause he lied about some shit."))
+        v2_reply11.new_message(_("So... tomorrow?"))        
         v2_reply11.add_reply(_("My day tomorrow is quite full, but how about today?\n\nI need to buy a costume."), v2_reply12)
 
         MessengerService.new_message(aubrey, _("Hey,\nJosh gave me your number\n\nI hope your face is feeling better after the shit that Grayson pulled..."))
