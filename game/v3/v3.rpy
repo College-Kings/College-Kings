@@ -1392,7 +1392,7 @@ label conl:
                     MessengerService.add_reply(aubrey, _("Uhm... sure."))
 
                     while MessengerService.has_replies(aubrey):
-                            call screen phone
+                        call screen phone
                         if MessengerService.has_replies(aubrey):
                             u "(I should probably check my phone.)"
 
@@ -1589,7 +1589,7 @@ label conl:
                     call screen phone
 
                     while MessengerService.has_replies(aubrey):
-                            call screen phone
+                        call screen phone
                         if MessengerService.has_replies(aubrey)::
                             u "(I should probably check my phone.)"
 
@@ -1845,7 +1845,7 @@ label conl:
             MessengerService.add_reply(aubrey, _("Uhm... sure."))
 
             while MessengerService.has_replies(aubrey):
-                    call screen phone
+                call screen phone
                 if MessengerService.has_replies(aubrey):
                     u "(I should probably check my phone.)"
 
