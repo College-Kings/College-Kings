@@ -1382,19 +1382,19 @@ label conl:
                 jump talkedout
 
             else: # caught and she's mad
-                $ aubrey.messenger.newMessage(_("I wanna talk about what happened yesterday."), force_send=True)
-                $ aubrey.messenger.newMessage(_("Any chance that you could come over now?"))
-                $ aubrey.messenger.addReply(_("Yeah, I can."))
-                $ aubrey.messenger.newMessage(_("My room has a window facing the backyard. Can you climb in through there? I'll leave it open."))
-                $ aubrey.messenger.newMessage(_("I'd prefer if none of the girls saw you."))
-                $ aubrey.messenger.addReply(_("Uhm... sure."))
 
-                label repeatk:
-                    if aubrey.messenger.replies:
-                        call screen phone
-                    if aubrey.messenger.replies:
-                        u "(I should probably check my phone.)"
-                        jump repeatk
+                python:
+                    MessengerService.new_message(aubrey, _("I wanna talk about what happened yesterday."))
+                    MessengerService.new_message(aubrey, _("Any chance that you could come over now?"))
+                    MessengerService.add_reply(aubrey, _("Yeah, I can."))
+                    MessengerService.new_message(aubrey, _("My room has a window facing the backyard. Can you climb in through there? I'll leave it open."))
+                    MessengerService.new_message(aubrey, _("I'd prefer if none of the girls saw you."))
+                    MessengerService.add_reply(aubrey, _("Uhm... sure."))
+
+                    while MessengerService.has_replies(aubrey):
+                            call screen phone
+                        if MessengerService.has_replies(aubrey):
+                            u "(I should probably check my phone.)"
 
                 u "Sorry Imre, something came up. You're gonna have to go back by yourself, I gotta go."
 
@@ -1576,22 +1576,22 @@ label conl:
 
         else: # not caught peeking but met
             label talkedout:
-                $ aubrey.messenger.newMessage(_("Hey, I really need your help."), force_send=True)
-                $ aubrey.messenger.newMessage(_("Any chance that you could come over now?"), force_send=True)
-                $ aubrey.messenger.addReply(_("Yeah, I'll be right there.."))
-                $ aubrey.messenger.newMessage(_("My room has a window facing the backyard. Can you climb in through there instead of using the front door?"))
-                $ aubrey.messenger.newMessage(_("I'll leave it open."))
-                $ aubrey.messenger.addReply(_("Uhm... sure."))
+                python:
+                    MessengerService.new_message(aubrey, _("Hey, I really need your help."))
+                    MessengerService.new_message(aubrey, _("Any chance that you could come over now?"))
+                    MessengerService.add_reply(aubrey, _("Yeah, I'll be right there.."))
+                    MessengerService.new_message(aubrey, _("My room has a window facing the backyard. Can you climb in through there instead of using the front door?"))
+                    MessengerService.new_message(aubrey, _("I'll leave it open."))
+                    MessengerService.add_reply(aubrey, _("Uhm... sure."))
 
-                " "
+                    " "
 
-                call screen phone
-                label repeatl:
-                    if aubrey.messenger.replies:
-                        call screen phone
-                    if aubrey.messenger.replies:
-                        u "(I should probably check my phone.)"
-                        jump repeatl
+                    call screen phone
+
+                    while MessengerService.has_replies(aubrey):
+                            call screen phone
+                        if MessengerService.has_replies(aubrey)::
+                            u "(I should probably check my phone.)"
 
                 u "Sorry Imre, something came up. You're gonna have to go back by yourself, I gotta go."
 
@@ -1836,19 +1836,18 @@ label conl:
                 au "Yeah..."
 
     else: # you didn't meet aubrey
-        $ aubrey.messenger.newMessage(_("Hey, you know how you had to cancel on me yesterday and you really want to make it up to me?"), force_send=True)
-        $ aubrey.messenger.newMessage(_("Wanna come over now?"), force_send=True)
-        $ aubrey.messenger.addReply(_("Uhh... okay."))
-        $ aubrey.messenger.newMessage(_("My room has a window facing the backyard. Can you climb in through there instead of using the front door?"))
-        $ aubrey.messenger.newMessage(_("I'll leave it open."))
-        $ aubrey.messenger.addReply(_("Uhm... sure."))
+        python:
+            MessengerService.new_message(aubrey, _("Hey, you know how you had to cancel on me yesterday and you really want to make it up to me?"))
+            MessengerService.new_message(aubrey, _("Wanna come over now?"))
+            MessengerService.add_reply(aubrey, _("Uhh... okay."))
+            MessengerService.new_message(aubrey, _("My room has a window facing the backyard. Can you climb in through there instead of using the front door?"))
+            MessengerService.new_message(aubrey, _("I'll leave it open."))
+            MessengerService.add_reply(aubrey, _("Uhm... sure."))
 
-        label repeatm:
-            if aubrey.messenger.replies:
-                call screen phone
-            if aubrey.messenger.replies:
-                u "(I should probably check my phone.)"
-                jump repeatm
+            while MessengerService.has_replies(aubrey):
+                    call screen phone
+                if MessengerService.has_replies(aubrey):
+                    u "(I should probably check my phone.)"
 
         u "Sorry Imre, something came up. You're gonna have to go back by yourself, I gotta go."
 
