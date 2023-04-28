@@ -5879,7 +5879,9 @@ label v12s7_josh1:
 
 label v12s7_josh2:
     $ freeroam9.add("josh2")
-    $ v12s7_seenList = []
+    $ v12s7_seenList = [aubrey]
+    if v12s7_aubrey_moved:
+        $ v12s7_seenList = []
 
     show screen murder_button_overlay(josh)
 
