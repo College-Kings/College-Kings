@@ -27,8 +27,8 @@ def create_pb_option_variables() -> None:
     )
 
     store.pb_advanced_options = (
-        ("Invite Emily to Europe",
-        ToggleVariable("emily_europe"))
+        ("Invite Emily to Europe", ToggleVariable("emily_europe")),
+        ("Invite Emily to Europe", ToggleVariable("emily_europe")),
     )
 
 
