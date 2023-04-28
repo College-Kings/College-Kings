@@ -3,12 +3,6 @@
 # Characters: MC (Underwear)
 # Time: Sunday Morning
 
-python:
-    v10s10_reply1 = MessageBuilder(lindsey)
-    v10s10_reply1.set_variable("v10s10_hangWLinds", True)
-    v10s10_reply1.new_message("Really? Thank you xx")
-    v10s10_reply1.add_reply("On my way")
-
 label v10_sun_morn:
     play music "music/v10/Track Scene 10.mp3" fadein 2
     if joinwolves:
@@ -70,6 +64,12 @@ label v10_sun_morn:
                 u "(I should check my phone.)"
 
         play sound "sounds/vibrate.mp3"
+
+        python:
+            v10s10_reply1 = MessageBuilder(lindsey)
+            v10s10_reply1.set_variable("v10s10_hangWLinds", True)
+            v10s10_reply1.new_message("Really? Thank you xx")
+            v10s10_reply1.add_reply("On my way")
 
         if v10_ryan_win:
             $ MessengerService.new_message(lindsey, "Hey, [name]... congrats on the win.")
@@ -163,6 +163,12 @@ label v10_sun_morn:
                 u "(I should check my phone.)"
 
         play sound "sounds/vibrate.mp3"
+
+        python:
+            v10s10_reply1 = MessageBuilder(lindsey)
+            v10s10_reply1.set_variable("v10s10_hangWLinds", True)
+            v10s10_reply1.new_message("Really? Thank you xx")
+            v10s10_reply1.add_reply("On my way")
 
         if v10_imre_win:
             $ MessengerService.new_message(lindsey, "Hey, [name]... congrats on the win.")

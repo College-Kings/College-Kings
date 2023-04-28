@@ -3,18 +3,6 @@
 # Characters: MC (Outfit 1)
 # Time: Monday Night
 
-python:
-    v10s20_reply1 = MessageBuilder(josh)
-    v10s20_reply1.set_variable("v10_simplr_known", True)
-    v10s20_reply1.new_message("Then why are you acting clueless? Any good matches?")
-    v10s20_reply1.add_reply("I haven't used it yet.", v10s20_reply2)
-
-    v10s20_reply2 = MessageBuilder(josh)
-    v10s20_reply2.new_message("WHAT! I've been talking to so many hot chicks. What are you waiting for?")
-    v10s20_reply2.new_message("Hop on it.")
-    v10s20_reply2.new_message("You been under a rock? Get it and check it out. You probably won't get as many girls as me, but tell me how it goes.")
-    v10s20_reply2.add_reply("Haha, okay.")
-
 label v10_room_mon_night:
     play music "music/v10/Track Scene 20.mp3" fadein 2
     if joinwolves:
@@ -27,6 +15,18 @@ label v10_room_mon_night:
 
         if simplr_app not in phone.applications:
             $ phone.applications.append(simplr_app)
+
+        python:
+            v10s20_reply1 = MessageBuilder(josh)
+            v10s20_reply1.set_variable("v10_simplr_known", True)
+            v10s20_reply1.new_message("Then why are you acting clueless? Any good matches?")
+            v10s20_reply1.add_reply("I haven't used it yet.", v10s20_reply2)
+
+            v10s20_reply2 = MessageBuilder(josh)
+            v10s20_reply2.new_message("WHAT! I've been talking to so many hot chicks. What are you waiting for?")
+            v10s20_reply2.new_message("Hop on it.")
+            v10s20_reply2.new_message("You been under a rock? Get it and check it out. You probably won't get as many girls as me, but tell me how it goes.")
+            v10s20_reply2.add_reply("Haha, okay.")
         
         $ MessengerService.new_message(josh, "So what do think!? Any good ones for you?")
         $ MessengerService.add_reply(josh, "What are you talking about?")
@@ -82,6 +82,18 @@ label v10_room_mon_night:
         pause 0.75
 
         play sound "sounds/vibrate.mp3"
+
+        python:
+            v10s20_reply1 = MessageBuilder(josh)
+            v10s20_reply1.set_variable("v10_simplr_known", True)
+            v10s20_reply1.new_message("Then why are you acting clueless? Any good matches?")
+            v10s20_reply1.add_reply("I haven't used it yet.", v10s20_reply2)
+
+            v10s20_reply2 = MessageBuilder(josh)
+            v10s20_reply2.new_message("WHAT! I've been talking to so many hot chicks. What are you waiting for?")
+            v10s20_reply2.new_message("Hop on it.")
+            v10s20_reply2.new_message("You been under a rock? Get it and check it out. You probably won't get as many girls as me, but tell me how it goes.")
+            v10s20_reply2.add_reply("Haha, okay.")
 
         $ MessengerService.new_message(josh, "So what do think!? Any good ones for you?")
         $ MessengerService.add_reply(josh, "What are you talking about?")
