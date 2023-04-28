@@ -1,4 +1,7 @@
 init 999 python:
+    class SimplrContact:
+        pass
+
     class ImageMessage:
         pass
 
