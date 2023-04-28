@@ -1584,10 +1584,6 @@ label conl:
                     MessengerService.new_message(aubrey, _("I'll leave it open."))
                     MessengerService.add_reply(aubrey, _("Uhm... sure."))
 
-                    " "
-
-                    call screen phone
-
                 while MessengerService.has_replies(aubrey):
                     call screen phone
                     if MessengerService.has_replies(aubrey)::
