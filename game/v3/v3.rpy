@@ -1586,7 +1586,7 @@ label conl:
 
                 while MessengerService.has_replies(aubrey):
                     call screen phone
-                    if MessengerService.has_replies(aubrey)::
+                    if MessengerService.has_replies(aubrey):
                         u "(I should probably check my phone.)"
 
                 u "Sorry Imre, something came up. You're gonna have to go back by yourself, I gotta go."
