@@ -20,8 +20,7 @@ init 999 python:
     class PathBuilderCatagories:
         pass
 
-    def v1_reply1():
-        pass
+    v1_reply1 = None
 
     def v7_msgReply9():
         pass
