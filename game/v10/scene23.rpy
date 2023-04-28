@@ -282,17 +282,14 @@ label v10_aft_walk_home:
 
     play sound "sounds/vibrate.mp3"
 
-    python:
-        lauren.messenger.newMessage("Hey, wanna hang out? I have some free time in between study sessions.", force_send=True)
-        lauren.messenger.addReply("Sure, on my way")
-        lauren.messenger.newMessage(":)")
+    $ MessengerService.new_message(lauren, "Hey, wanna hang out? I have some free time in between study sessions.")
+    $ MessengerService.add_reply(lauren, "Sure, on my way")
+    $ MessengerService.new_message(lauren, ":)")
 
-    label v10s23_phoneCheckLau:
-        if lauren.messenger.replies:
-            call screen phone
-        if lauren.messenger.replies:
-            u "(I should reply to Lauren)"
-            jump v10s23_phoneCheckLau
+    while MessengerService.has_replies(lauren):
+        call screen phone
+        if MessengerService.has_replies(lauren):
+            u "(I should reply to Lauren.)"
 
     scene v10smwh1d # TPP. Same camera as v10smwh1. MC is looking at his phone.
     with dissolve

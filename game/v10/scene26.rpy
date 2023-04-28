@@ -3,13 +3,6 @@
 # Characters: MC (Outfit 9), Amber (Outfit 1), Riley (Outfit 1)
 # Time: Night
 
-init python:
-    def v10s26_reply1():
-        setattr(store, "v10_amber_condoms", True)
-        reputation.add_point(RepComponent.BOYFRIEND)
-        amber.messenger.newMessage("Beer, obviously")
-
-
 label v10_amber_skatepark:
     play music "music/v10/Track Scene 26_1.mp3" fadein 2
 
@@ -18,10 +11,17 @@ label v10_amber_skatepark:
 
     u "(I should get that.)"
 
-    $ amber.messenger.newMessage("Skatepark behind SVC, 10pm, bring a six pack.", force_send=True)
-    $ amber.messenger.addReply("Condoms or beer?", v10s26_reply1)
-    $ amber.messenger.addReply("Alright sure")
+    python:
+        v10s26_reply1 = MessageBuilder(amber)
+        v10s26_reply1.set_variable("v10_amber_condoms", True)
+        v10s26_reply1.add_function(reputation.add_point, RepComponent.BOYFRIEND)
+        v10s26_reply1.new_message("Beer, obviously")
 
+    $ MessengerService.new_message(amber, "Skatepark behind SVC, 10pm, bring a six pack.")
+    $ MessengerService.add_replies(amber,
+        Reply("Condoms or beer?", v10s26_reply1),
+        Reply("Alright sure")
+    )
     call screen phone
 
     scene v10sasp1 # FPP. Show Amber, smiling, mouth closed.
