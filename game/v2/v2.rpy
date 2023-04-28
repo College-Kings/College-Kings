@@ -189,7 +189,7 @@ label v2start:
     with dissolve
 
     while MessengerService.has_replies(lauren): or MessengerService.has_replies(ryan):
-            call screen phone
+        call screen phone
 
         if MessengerService.has_replies(lauren): or MessengerService.has_replies(ryan):
             u "(Damn, my phone's blowing up. I should probably check my messages.)"
@@ -2342,7 +2342,7 @@ label bo_bd:
     u "(Oh, I just got a message.)"
 
     while MessengerService.has_replies(aubrey):
-            call screen phone
+        call screen phone
         if MessengerService.has_replies(aubrey):
             u "(I should check my messages.)"
     
@@ -2522,7 +2522,7 @@ label bo_bd:
     u "(Fuck, I totally forgot about Aubrey. I guess it's time to make a decision.)"
 
     while MessengerService.has_replies(aubrey):
-            call screen phone
+        call screen phone
         if MessengerService.has_replies(aubrey):
             u "(Aubrey's waiting for me, I need to let her know whether I'm coming or not.)"
 
