@@ -36,7 +36,7 @@ label v11_nightclub_with_josh:
     $ MessengerService.add_reply(josh, "Josh, we can't even get in.")
     $ MessengerService.new_message(josh, "With these fake IDs we can...")
     $ MessengerService.add_replies(josh,
-        Reply("I can't be staying up anyway, I still have a ton of stuff to do tonight.", v11s5_reply1)
+        Reply("I can't be staying up anyway, I still have a ton of stuff to do tonight.", v11s5_reply1),
         Reply("LET'S FUCKING GOOOOO! OMW NOW!", v11s5_reply2)
     )
 
