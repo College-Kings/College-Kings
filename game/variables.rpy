@@ -557,18 +557,6 @@ default v13s48_ryan_double_date = False
 default v13s9_go_to_concert = False
 
 # 14.0
-## Chloe Planing Board
-default chloe_board = PlanningBoard("images/v14/chicks_presidency_race/planning_boards/chloe_background.webp", money=1500)
-default v14_chloe_wolves = False ##APPROACH A (v14_chloe_apes = v14_help_chloe and not v14_chloe_wolves)
-default v14_realwolf = False ##TASK A2A (v14_plushwolf = v14_chloe_wolves and not v14_realwolf)
-default v14_chloe_cameron = False ##TASK B2B (v14_chloe_grayson = (v14_help_chloe and not v14_chloe_wolves) and not v14_chloe_cameron)
-
-## Lindsey Planing Board
-default lindsey_board = PlanningBoard("images/v14/chicks_presidency_race/planning_boards/lindsey_background.webp", money=200, style="lindsey_board")
-default v14_lindsey_sell = False ##APPROACH A (v14_lindsey_steal = v14_help_lindsey and not v14_lindsey_sell)
-default v14_pics_with_linds = False ##TASK A1B (v14_pics_no_linds = v14_lindsey_sell and not v14_pics_with_linds)
-default v14_date_distraction = False ###APPROACH B1B (v14_concert_distraction = (v14_help_lindsey and not v14_lindsey_sell) and not v14_date_distraction)
-
 # Animated Bar
 default animated_value_percent = 0
 
