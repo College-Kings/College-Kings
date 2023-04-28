@@ -7,8 +7,6 @@ define config.default_sfx_volume = 1
 
 #region Path Builder
 define pb_starting_locations = (("Act 1 Start", "start"), ("Act 2 Start", "v7_homecoming"), ("Act 3 Start", "v11_start"))
-
-define pb_extra_options = ()
 #endregion Path Builder
 
 #region Scene Gallery
