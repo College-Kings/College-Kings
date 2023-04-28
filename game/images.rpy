@@ -80,9 +80,9 @@ image warning_background_blue = Frame("gui/warning/background_blue.webp", 42, 8,
 #endregion GUI
 
 #region Path Builder
-image path_builder_act_1_start = "screens/path_builder/images/episode_1_start.webp"
-image path_builder_act_2_start = "screens/path_builder/images/episode_2_start.webp"
-image path_builder_act_3_start = "screens/path_builder/images/episode_3_start.webp"
+image path_builder_act_1_start = "gui/path_builder/act_1_start.webp"
+image path_builder_act_2_start = "gui/path_builder/act_2_start.webp"
+image path_builder_act_3_start = "gui/path_builder/act_3_start.webp"
 #endregion Path Builder
 
 # Transitions
