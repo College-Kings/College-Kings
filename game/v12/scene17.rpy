@@ -930,7 +930,7 @@ label v12_lindsey_kiss_or_not:
 
 label v12_lindsey_sex:
     $ sceneList.add("v12_lindsey")
-    $ CharacterService.set_relationship(lindsey, Relationship.FWB, mc)
+    $ CharacterService.set_relationship(lindsey, Relationship.FWB)
 
     scene v12esr29g # FPP. Same as v12esr29c, Lindsey eyes open, slight smile, mouth open, face close to MC
     with dissolve

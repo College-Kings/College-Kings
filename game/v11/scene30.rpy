@@ -1358,7 +1358,7 @@ label v11_quiz_bonus:
 
         menu:
             "I love you too":
-                $ CharacterService.set_relationship(lauren, Relationship.GIRLFRIEND, mc)
+                $ CharacterService.set_relationship(lauren, Relationship.GIRLFRIEND)
                 $ reputation.add_point(RepComponent.BOYFRIEND)
                 $ lauren.points += 2
 

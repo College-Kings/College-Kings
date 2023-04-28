@@ -1906,7 +1906,7 @@ label continueaf:
         if reputation() == Reputations.LOYAL:
             call screen reputation_popup
 
-            $ CharacterService.set_relationship(lauren, Relationship.GIRLFRIEND, mc)
+            $ CharacterService.set_relationship(lauren, Relationship.GIRLFRIEND)
 
             scene s380b
             with dissolve
@@ -2010,7 +2010,7 @@ label continueaf:
             jump gotest
 
     else:
-        $ CharacterService.set_relationship(lauren, Relationship.GIRLFRIEND, mc)
+        $ CharacterService.set_relationship(lauren, Relationship.GIRLFRIEND)
 
         scene s380b
         with dissolve
