@@ -151,7 +151,7 @@ label starta: #for compatibility only
         )
 
     call screen phone
-    
+
     stop music fadeout 3
     scene s11
     with dissolve
@@ -4293,6 +4293,6 @@ label fr2end: #for compatibility only
     stop music
     #####punch
     scene black
-    $ renpy.movie_cutscene("v1/punchdemo.webm", loops=0)
+    $ renpy.movie_cutscene("images/v1/punchdemo.webm", loops=0)
 
 jump v2start
