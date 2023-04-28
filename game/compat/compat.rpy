@@ -1,4 +1,7 @@
 init 999 python:
+    class ImageMessage:
+        pass
+
     class Contact:
         pass
 
