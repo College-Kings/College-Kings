@@ -1,45 +1,4 @@
-screen end_screen(support_link=""):
-    tag end_screen
-    modal True
-    style_prefix "end_screen"
 
-    default image_path = "gui/end_screen/"
-
-    if config.enable_steam:
-        add image_path + "end_screen_background_steam.webp"
-        default support_link = "https://store.steampowered.com/app/1924480/College_Kings_2__Episode_1/"
-
-    else:
-        add image_path + "end_screen_background.webp"
-        default support_link = "https://www.patreon.com/collegekings"
-
-    hbox:
-        xalign 0.5
-        ypos 800
-        spacing 50
-
-        imagebutton:
-            idle image_path + "menu_idle.webp"
-            hover image_path + "menu_hover.webp"
-            action MainMenu()
-            yalign 0.5
-
-        imagebutton:
-            idle image_path + "get_access_idle.webp"
-            hover image_path + "get_access_hover.webp"
-            action OpenURL(support_link)
-            yalign 0.5
-
-        imagebutton:
-            idle "gui/common/credits_idle.webp"
-            hover "gui/common/credits_hover.webp"
-            action Show("patreon_credits", None, support_link)
-            yalign 0.5
-
-    on "show" action Hide("phone_icon")
-    on "hide" action Show("phone_icon")
-    on "replace" action Hide("phone_icon")
-    on "replaced" action Show("phone_icon")
 
 
 screen team_credits():
