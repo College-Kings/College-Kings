@@ -179,7 +179,7 @@ label v2start:
 
             MessengerService.new_message(lauren, _("Are we still on for today? :)"))
             MessengerService.add_replies(lauren,
-                Reply(_("Yeah, SV cafe in 20 mins?"), v2_reply5)
+                Reply(_("Yeah, SV cafe in 20 mins?"), v2_reply5),
                 Reply(_("Sorry, I can't"), v2_reply6)
             )
 
@@ -188,10 +188,10 @@ label v2start:
     scene s96g
     with dissolve
 
-    while MessengerService.has_replies(lauren): or MessengerService.has_replies(ryan):
-            call screen phone
+    while MessengerService.has_replies(lauren) or MessengerService.has_replies(ryan):
+        call screen phone
 
-        if MessengerService.has_replies(lauren): or MessengerService.has_replies(ryan):
+        if MessengerService.has_replies(lauren) or MessengerService.has_replies(ryan):
             u "(Damn, my phone's blowing up. I should probably check my messages.)"
 
 
@@ -2342,7 +2342,7 @@ label bo_bd:
     u "(Oh, I just got a message.)"
 
     while MessengerService.has_replies(aubrey):
-            call screen phone
+        call screen phone
         if MessengerService.has_replies(aubrey):
             u "(I should check my messages.)"
     
@@ -2522,7 +2522,7 @@ label bo_bd:
     u "(Fuck, I totally forgot about Aubrey. I guess it's time to make a decision.)"
 
     while MessengerService.has_replies(aubrey):
-            call screen phone
+        call screen phone
         if MessengerService.has_replies(aubrey):
             u "(Aubrey's waiting for me, I need to let her know whether I'm coming or not.)"
 
