@@ -125,6 +125,7 @@ label v2start:
 
         v2_reply1 = MessageBuilder(ryan)
         v2_reply1.add_function(reputation.add_point, RepComponent.BRO)
+        v2_reply1.new_message(_("Look, I know what Grayson did was a dick move, but he was just being overprotective of Chloe"))
         v2_reply1.add_replies(
             Reply(_("Whatever"), v2_reply2),
             Reply(_("Don't you dare defend that guy"), v2_reply3)
@@ -144,18 +145,17 @@ label v2start:
             Reply(_("No, wtf was that?! Fuck Grayson and fuck the Apes"), v2_reply4)
         )
 
-        reputation.add_point(RepComponent.TROUBLEMAKER)
-        MessengerService.new_message(lauren, _("Is everything okay?"))
-        MessengerService.add_reply(lauren, _("Yeah, I'm fine."))
-        MessengerService.new_message(lauren, _("Okay..."))
-
-
         v2_reply5 = MessageBuilder(lauren)
         v2_reply5.set_variable("meetlauren", True)
         v2_reply5.add_function(reputation.add_point, RepComponent.BOYFRIEND)
         v2_reply5.new_message(_("Great, I'll see you then :)"))
 
-        v2_reply6 = MessageBuilder(lauren).add_function(grant_achievement, "mixed_feelings")
+        v2_reply6 = MessageBuilder(lauren)
+        v2_reply6.add_function(grant_achievement, "mixed_feelings")
+        v2_reply6.add_function(reputation.add_point, RepComponent.TROUBLEMAKER)
+        v2_reply6.new_message(_("Is everything okay?"))
+        v2_reply6.add_reply(_("Yeah, I'm fine."))
+        v2_reply6.new_message(_("Okay..."))
 
         if MessengerService.has_replies(lauren):
             MessengerService.new_message(lauren, _("Hello?? Can we please talk today?"))
