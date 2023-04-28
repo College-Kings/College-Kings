@@ -179,7 +179,7 @@ label v2start:
 
             MessengerService.new_message(lauren, _("Are we still on for today? :)"))
             MessengerService.add_replies(lauren,
-                Reply(_("Yeah, SV cafe in 20 mins?"), v2_reply5)
+                Reply(_("Yeah, SV cafe in 20 mins?"), v2_reply5),
                 Reply(_("Sorry, I can't"), v2_reply6)
             )
 
