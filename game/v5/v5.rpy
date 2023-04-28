@@ -2331,7 +2331,7 @@ label hospitala:
 
     play sound "sounds/swoosh.mp3"
 
-    show screen fantasyOverlay
+    show fantasyoverlay onlayer foreground
 
     scene s409 #MC and Emily are in a park, eating ice cream. Emily puts some on MC's nose. MC chases her as she runs away laughing.
     with flash
@@ -2404,7 +2404,7 @@ label hospitala:
 
     pause 0.5
     play sound "sounds/swoosh.mp3"
-    hide screen fantasyOverlay
+    hide fantasyoverlay onlayer foreground
 
     scene s408a
     with flash

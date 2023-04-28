@@ -2106,7 +2106,7 @@ label continuebd:
 
         play sound "sounds/swoosh.mp3"
 
-        show screen fantasyOverlay
+        show fantasyoverlay onlayer foreground
 
         scene s387a # even closer, dog on the left side
         with flash
@@ -2126,7 +2126,7 @@ label continuebd:
 
         pause 1.0
 
-        hide screen fantasyOverlay
+        hide fantasyoverlay onlayer foreground
         play sound "sounds/swoosh.mp3"
         scene s525
         with flash
@@ -4785,7 +4785,7 @@ label afteraubrey:
             play sound "sounds/swoosh.mp3"
             scene s63d
             with flash
-            show screen fantasyOverlay
+            show fantasyoverlay onlayer foreground
 
             imre "Exactly, which is also why I'm joining the Wolves."
 
@@ -4810,7 +4810,7 @@ label afteraubrey:
 
             imre "It is, but my brother used to be a Wolf and he told me about all the shady shit that the Apes would do."
 
-            hide screen fantasyOverlay
+            hide fantasyoverlay onlayer foreground
             play sound "sounds/swoosh.mp3"
             scene s581g
             with flash
@@ -5087,7 +5087,7 @@ label timera:
 
 label wakeupa:
     stop sound
-    hide screen fantasyOverlay
+    hide fantasyoverlay onlayer foreground
     play sound "sounds/swoosh.mp3"
     scene s586b # you wake up in disstress
     with flash

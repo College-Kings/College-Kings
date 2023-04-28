@@ -15,7 +15,7 @@ label v11_bar_chloe_and_aubrey:
     play sound "sounds/swoosh.mp3"
     pause 0.75
 
-    show screen fantasyOverlay
+    show fantasyoverlay onlayer foreground
 
     scene v11caa2a # FPP. same as 2,MC is approaching chloe and aubrey but charli steps in the middle of the way, mouth opened
     with dissolve
@@ -27,7 +27,7 @@ label v11_bar_chloe_and_aubrey:
     play sound "sounds/swoosh.mp3"
 
     pause 0.75
-    hide screen fantasyOverlay
+    hide fantasyoverlay onlayer foreground
 
     scene v11caa3 # TPP. MC murmors with a mad face, mouth opened
     with dissolve

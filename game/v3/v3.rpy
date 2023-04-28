@@ -773,7 +773,7 @@ label conl:
     play sound "sounds/swoosh.mp3"
     pause 0.5
 
-    show screen fantasyOverlay
+    show fantasyoverlay onlayer foreground
 
     play music "music/mhorror.mp3"
     scene s226 # Dream with emily, fighting over a stuffed animal in bed
@@ -894,7 +894,7 @@ label conl:
 
     scene s225a # you open your eyes
     with flash
-    hide screen fantasyOverlay
+    hide fantasyoverlay onlayer foreground
 
     u "*Breathing heavily*"
 

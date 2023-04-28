@@ -3,7 +3,7 @@ label starta: #for compatibility only
     if config.developer:
         show screen bug_testing_overlay
 
-    show screen fantasyOverlay
+    show fantasyoverlay onlayer foreground
 
     play music "music/msexy.mp3"
     
@@ -19,7 +19,7 @@ label starta: #for compatibility only
 
     em "Anything."
 
-    hide screen fantasyOverlay
+    hide fantasyoverlay onlayer foreground
     stop music fadeout 3
 
     scene s1
@@ -2057,7 +2057,7 @@ label at_bd:
 
     ### Sex dream
     label sexdream1: #for compatibility only
-    show screen fantasyOverlay
+    show fantasyoverlay onlayer foreground
     scene sda1  ### close to the kitchen counter
     with Fade (1,0,1)
 
@@ -2309,7 +2309,7 @@ label at_bd:
             pass
             
 label v1_nsfwSkipLabel1:
-    hide screen fantasyOverlay
+    hide fantasyoverlay onlayer foreground
 
     stop music fadeout 3
     $ renpy.end_replay()

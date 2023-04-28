@@ -466,7 +466,7 @@ label v4start:
     pause 0.5
     play music "music/mhorror.mp3"
 
-    show screen fantasyOverlay
+    show fantasyoverlay onlayer foreground
 
     scene s305 # Chloe closeup, she looks cute moutth clsoed, background should be wishy washy
     with flash
@@ -517,7 +517,7 @@ label v4start:
 
     scene s225a # already in the game, no need to render again
     with flash
-    hide screen fantasyOverlay
+    hide fantasyoverlay onlayer foreground
 
     u "*Breathing heavily*"
 

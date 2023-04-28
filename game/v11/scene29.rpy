@@ -110,7 +110,7 @@ label v11timera:
 
 label v11wakeupa:
     stop sound
-    hide screen fantasyOverlay
+    hide fantasyoverlay onlayer foreground
     play sound "sounds/swoosh.mp3"
 
     if not v11_riley_roomate:
