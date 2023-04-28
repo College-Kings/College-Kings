@@ -155,7 +155,7 @@ label v2start:
         v2_reply5.add_function(reputation.add_point, RepComponent.BOYFRIEND)
         v2_reply5.new_message(_("Great, I'll see you then :)"))
 
-        v2_reply6 = MessageBuilder.add_function(grant_achievement, "mixed_feelings")
+        v2_reply6 = MessageBuilder(lauren).add_function(grant_achievement, "mixed_feelings")
 
         if MessengerService.has_replies(lauren):
             MessengerService.new_message(lauren, _("Hello?? Can we please talk today?"))
