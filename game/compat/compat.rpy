@@ -21,6 +21,7 @@ init 999 python:
         pass
 
     v1_reply1 = None
+    v11s4_reply1 = None
 
     def v7_msgReply9():
         pass
