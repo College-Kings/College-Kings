@@ -33,7 +33,7 @@ label v11_carriage_ride:
     with dissolve
 
     lee "Exactly like a princess. *Chuckles* And yes, horses too. You'll be in groups of four, as these are historical carriages that replicate earlier London times."
-    
+
     lee "Use this opportunity to converse, enjoy the sights, and have fun. Now, if a few of you would please come up and find out what your groups are, we can get started."
 
     scene v11car3a # FPP. Show Lindsey running towards Mr Lee, she is very excited, mouth closed
@@ -90,7 +90,7 @@ label v11_carriage_ride:
     with dissolve
 
     li "I KNOW! I'm so fucking excited! Mr. Lee mentioned that we were doing something I'd really enjoy, but I had no idea it was this... We literally had like, one conversation about horses I think."
-    
+
     li "*Chuckles* I'm pretty sure all I said to him was that I want a horse and carriage at my wedding. I don't know how he remembered that."
 
     scene v11car4j # FPP. Same as v11car4i, Lindsey huge smile, mouth closed
@@ -194,7 +194,7 @@ label v11_carriage_ride:
             with dissolve
 
             u "Don't worry, I wouldn't do that to you. *Chuckles* That'd be like me having to ride with Charli, Imre and Ryan."
-            
+
             u "There's no telling what would happen on that ride, but it's most likely not gonna end well."
 
             scene v11car4f
@@ -369,12 +369,12 @@ label v11_carriage_ride:
 
     scene v11car15c
     with dissolve
-    
+
     li "*Chuckles* Speaking of gifts, that reminds me that there's something I wanted to bring up with you Chloe, cause you'd make the final call."
 
     scene v11car15d
     with dissolve
-    
+
     li "But it'd be good for you to hear this too Nora. I already spoke to Aubrey and she loved my idea."
 
     scene v11car11c
@@ -409,12 +409,12 @@ label v11_carriage_ride:
 
     scene v11car15c
     with dissolve
-    
+
     li "Okay, so as you two know, when we're recruited into the Chicks we're told that though we are sisters, and always have this in common, we still must celebrate our individual differences."
 
     scene v11car15d
     with dissolve
-    
+
     li "I want to take that belief and go deeper. I studied a bit with Ms. Rose, who come to find out, was also in a sorority during college, and she said they all had nicknames."
 
     scene v11car14c
@@ -431,7 +431,7 @@ label v11_carriage_ride:
     with dissolve
 
     li "I spoke to some of the frat heads too and they think it'd be a fun idea for the guys as well."
-    
+
     li "It's a good way to not only see how your brothers or sisters feel about you, but it also adds that element of individuality. You know what I mean?"
 
     scene v11car14d # FPP. Same as v11car14c, different pose
@@ -468,7 +468,7 @@ label v11_carriage_ride:
     with dissolve
 
     li "They have, actually, I guess I should've led with the fact that this wasn't exactly an original idea, but instead a discovered tradition."
-    
+
     li "They've been doing this since the beginning of the Chicks, but one year a President didn't give the pledges any nicknames and after a few years of that, the whole thing disappeared."
 
     scene v11car11e
@@ -556,7 +556,7 @@ label v11_carriage_ride:
 
     scene v11car14f
     with dissolve
-    
+
     no "As President, you could've at least told her it was great that she tried to improve the sorority, before you completely rejected the idea..."
 
     scene v11car15g
@@ -571,7 +571,7 @@ label v11_carriage_ride:
 
     scene v11car11j # FPP. Same as v11car11g, different pose
     with dissolve
-    
+
     cl "So go ahead Nora, what's the big picture?"
 
     scene v11car14e
@@ -596,12 +596,12 @@ label v11_carriage_ride:
 
     scene v11car14f
     with dissolve
-    
+
     no "You know the last President only cared about what the Chicks looked like. Will guys think we're hot, will we be good enough for parties, etc."
 
     scene v11car14e
     with dissolve
-    
+
     no "You were the perfect poster child, and you never should've been chosen. Everything the Chicks stand for, or are supposed to stand for, just isn't true with us. Because you don't lead."
 
     scene v11car11g
@@ -621,14 +621,14 @@ label v11_carriage_ride:
 
     scene v11car11j
     with dissolve
-    
+
     cl "Your horrible, backstabbing and truly hurtful comments that undermine every fucking thing I do!"
-    
+
     cl "You're the reason we're stagnating, because I can't even think about leading a sorority if you constantly try to rally the girls against me and I have to spend my time fighting stupid accusations!"
-    
+
     scene v11car11g
     with dissolve
-    
+
     cl "How do you not understand that?"
 
     scene v11car14e
@@ -638,7 +638,7 @@ label v11_carriage_ride:
 
     scene v11car14f
     with dissolve
-    
+
     no "You only cared about the way you as President looked from day one. It was never about the Chicks!"
 
     scene v11car12c
@@ -653,7 +653,7 @@ label v11_carriage_ride:
 
     scene v11car11h
     with dissolve
-    
+
     u "Not only that, but Mr. Lee is the one that submitted it to the museum. *Chuckles*"
 
     scene v11car11k # FPP. Same as v11car11h, Chloe mouth open, annoyed
@@ -663,19 +663,19 @@ label v11_carriage_ride:
 
     scene v11car11j
     with dissolve
-    
+
     cl "I have been taking the fall for everything bad the Chicks are being accused of since the day I became President, you really think I'm the one that posted that picture of Sarah to embarrass her?"
-    
+
     cl "That I'm the one that sabotaged the Deers car washing event cause they were earning more than us???"
 
     scene v11car11g
     with dissolve
-    
+
     cl "Fuck no, I took the fall for everything, because some Chick fucks up and I'm not gonna let them ruin their college life over one mistake. I can take the hit, cause that's what I always do."
 
     scene v11car11j
     with dissolve
-    
+
     cl "If you really think that I'm doing all this shit for myself, you really don't know me at all."
 
     scene v11car14f
@@ -685,7 +685,7 @@ label v11_carriage_ride:
 
     scene v11car14e
     with dissolve
-    
+
     no "What about the time you told a Chick to leave campus cause she was wearing the same dress as you?!"
 
     scene v11car11j
@@ -701,11 +701,11 @@ label v11_carriage_ride:
     scene v11car11g
     with dissolve
 
-    cl "Fuck off, Nora. All you do is steer shit, and then act like you don't fucking enjoy the drama you're causing! Guess what? I'm not the one that picked this fight."
+    cl "Fuck off, Nora. All you do is stir shit, and then act like you don't fucking enjoy the drama you're causing! Guess what? I'm not the one that picked this fight."
 
     scene v11car11j
     with dissolve
-    
+
     cl "I'm not the one that's been in a toxic relationship for over a year, you're the fucking common denominator. Take some responsibility."
 
     scene v11car11l # FPP. Same as v11car11, Chloe looking away from everybody, towards the window, mouth slightly open, angry, different pose
@@ -776,7 +776,7 @@ label v11_carriage_ride:
 
     pause 0.75
 
-    scene v11car19a # FPP. Same as v11car19, Mr Lee now in talking distance, Mr Lee concerned and worried, mouth open, looking down at Nora and Chloe (they're out of shot) 
+    scene v11car19a # FPP. Same as v11car19, Mr Lee now in talking distance, Mr Lee concerned and worried, mouth open, looking down at Nora and Chloe (they're out of shot)
     with dissolve
 
     lee "What's going on? Are you two alright?"
@@ -949,7 +949,7 @@ label v11_carriage_ride:
                     with dissolve
 
                     pause 0.75
-            
+
         "Don't tell her about Lindsey":
             scene v11car22g
             with dissolve
@@ -963,7 +963,7 @@ label v11_carriage_ride:
 
             scene v11car22f
             with dissolve
-            
+
             au "*Chuckles* I'm gonna head to my room. Goodnight."
 
             scene v11car22e
@@ -975,7 +975,7 @@ label v11_carriage_ride:
             with dissolve
 
             pause 0.75
-    
+
     scene v11car26 # TPP. Show MC walking in the hotel lobby, slightly concerned, mouth closed
     with dissolve
 
