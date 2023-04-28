@@ -188,10 +188,10 @@ label v2start:
     scene s96g
     with dissolve
 
-    while MessengerService.has_replies(lauren): or MessengerService.has_replies(ryan):
+    while MessengerService.has_replies(lauren) or MessengerService.has_replies(ryan):
         call screen phone
 
-        if MessengerService.has_replies(lauren): or MessengerService.has_replies(ryan):
+        if MessengerService.has_replies(lauren) or MessengerService.has_replies(ryan):
             u "(Damn, my phone's blowing up. I should probably check my messages.)"
 
 
