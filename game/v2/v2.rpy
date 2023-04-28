@@ -127,7 +127,7 @@ label v2start:
         v2_reply3.add_function(reputation.add_point, RepComponent.TROUBLEMAKER)
         v2_reply3.new_message(_("Sorry..."))
 
-        v2_reply1.add_replies(ryan,
+        v2_reply1.add_replies(
             Reply(_("Whatever"), v2_reply2),
             Reply(_("Don't you dare defend that guy"), v2_reply3)
         )
@@ -135,13 +135,13 @@ label v2start:
         v2_reply4 = MessageBuilder(ryan)
         v2_reply4.add_function(reputation.add_point, RepComponent.TROUBLEMAKER)
         v2_reply4.new_message(_("Look, I know what Grayson did was a dick move, but he was just being overprotective of Chloe"))
-        v2_reply4.add_replies(ryan,
+        v2_reply4.add_replies(
             Reply(_("Whatever"), v2_reply2),
             Reply(_("Don't you dare defend that guy"), v2_reply3)
         )
 
         MessengerService.new_message(ryan, _("You okay?"))
-        MessengerService.add_replies(ryan, 
+        MessengerService.add_replies( 
             Reply(_("I'm fine"), v2_reply1),
             Reply(_("No, wtf was that?! Fuck Grayson and fuck the Apes"), v2_reply4)
         )
