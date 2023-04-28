@@ -1391,10 +1391,10 @@ label conl:
                     MessengerService.new_message(aubrey, _("I'd prefer if none of the girls saw you."))
                     MessengerService.add_reply(aubrey, _("Uhm... sure."))
 
-                    while MessengerService.has_replies(aubrey):
-                        call screen phone
-                        if MessengerService.has_replies(aubrey):
-                            u "(I should probably check my phone.)"
+                while MessengerService.has_replies(aubrey):
+                    call screen phone
+                    if MessengerService.has_replies(aubrey):
+                        u "(I should probably check my phone.)"
 
                 u "Sorry Imre, something came up. You're gonna have to go back by yourself, I gotta go."
 
@@ -1588,10 +1588,10 @@ label conl:
 
                     call screen phone
 
-                    while MessengerService.has_replies(aubrey):
-                        call screen phone
-                        if MessengerService.has_replies(aubrey)::
-                            u "(I should probably check my phone.)"
+                while MessengerService.has_replies(aubrey):
+                    call screen phone
+                    if MessengerService.has_replies(aubrey)::
+                        u "(I should probably check my phone.)"
 
                 u "Sorry Imre, something came up. You're gonna have to go back by yourself, I gotta go."
 
@@ -1844,10 +1844,10 @@ label conl:
             MessengerService.new_message(aubrey, _("I'll leave it open."))
             MessengerService.add_reply(aubrey, _("Uhm... sure."))
 
-            while MessengerService.has_replies(aubrey):
-                call screen phone
-                if MessengerService.has_replies(aubrey):
-                    u "(I should probably check my phone.)"
+        while MessengerService.has_replies(aubrey):
+            call screen phone
+            if MessengerService.has_replies(aubrey):
+                u "(I should probably check my phone.)"
 
         u "Sorry Imre, something came up. You're gonna have to go back by yourself, I gotta go."
 
