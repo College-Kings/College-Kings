@@ -13,17 +13,17 @@ label v9_dream_wakeup:
         with dissolve
         u "(God I hate dreams. Most of the time, they're good. But sometimes... they really suck.)"
 
-        $ riley.messenger.newMessage(_("Hey, [name]. You awake?"), force_send=True)
-        $ riley.messenger.addReply(_("Hey Riley, yeah I'm up, is everything okay?"))
-        $ riley.messenger.newMessage(_("A couple of us wanted to go to the lake. Wanna join us?"))
-        $ riley.messenger.addReply(_("I dunno, feeling kind of crappy."))
-        $ riley.messenger.newMessage(_("Oh, c'mon, it's gonna be fun! :)"))
-        $ riley.messenger.addReply(_("Who's gonna be there?"))
-        $ riley.messenger.newMessage(_("Ryan and Aubrey."))
-        $ riley.messenger.addReply(_("I guess I could go. Could use some fresh air."))
-        $ riley.messenger.newMessage(_("You'll love it! Meet you in 30 minutes?"))
-        $ riley.messenger.addReply(_("Yeah, see ya soon."))
-        $ riley.messenger.newMessage(_("See you!"))
+        $ MessengerService.new_message(riley, _("Hey, [name]. You awake?"))
+        $ MessengerService.add_reply(riley, _("Hey Riley, yeah I'm up, is everything okay?"))
+        $ MessengerService.new_message(riley, _("A couple of us wanted to go to the lake. Wanna join us?"))
+        $ MessengerService.add_reply(riley, _("I dunno, feeling kind of crappy."))
+        $ MessengerService.new_message(riley, _("Oh, c'mon, it's gonna be fun! :)"))
+        $ MessengerService.add_reply(riley, _("Who's gonna be there?"))
+        $ MessengerService.new_message(riley, _("Ryan and Aubrey."))
+        $ MessengerService.add_reply(riley, _("I guess I could go. Could use some fresh air."))
+        $ MessengerService.new_message(riley, _("You'll love it! Meet you in 30 minutes?"))
+        $ MessengerService.add_reply(riley, _("Yeah, see ya soon."))
+        $ MessengerService.new_message(riley, _("See you!"))
 
         play sound "sounds/vibrate.mp3"
         u "(Hmm?)"
@@ -40,17 +40,17 @@ label v9_dream_wakeup:
         with dissolve
         u "(God I hate dreams. Most of the time, they're good. But sometimes... they really suck.)"
 
-        $ riley.messenger.newMessage(_("Hey, [name]. You awake?"), force_send=True)
-        $ riley.messenger.addReply(_("Hey Riley, yeah I'm up, is everything okay?"))
-        $ riley.messenger.newMessage(_("A couple of us wanted to go to the lake. Wanna join us?"))
-        $ riley.messenger.addReply(_("I dunno, feeling kind of crappy."))
-        $ riley.messenger.newMessage(_("Oh, c'mon, it's gonna be fun! :)"))
-        $ riley.messenger.addReply(_("Who's gonna be there?"))
-        $ riley.messenger.newMessage(_("Ryan and Aubrey."))
-        $ riley.messenger.addReply(_("I guess I could go. Could use some fresh air."))
-        $ riley.messenger.newMessage(_("You'll love it! Meet you in 30 minutes?"))
-        $ riley.messenger.addReply(_("Yeah, see ya soon."))
-        $ riley.messenger.newMessage(_("See you!"))
+        $ MessengerService.new_message(riley, _("Hey, [name]. You awake?"))
+        $ MessengerService.add_reply(riley, _("Hey Riley, yeah I'm up, is everything okay?"))
+        $ MessengerService.new_message(riley, _("A couple of us wanted to go to the lake. Wanna join us?"))
+        $ MessengerService.add_reply(riley, _("I dunno, feeling kind of crappy."))
+        $ MessengerService.new_message(riley, _("Oh, c'mon, it's gonna be fun! :)"))
+        $ MessengerService.add_reply(riley, _("Who's gonna be there?"))
+        $ MessengerService.new_message(riley, _("Ryan and Aubrey."))
+        $ MessengerService.add_reply(riley, _("I guess I could go. Could use some fresh air."))
+        $ MessengerService.new_message(riley, _("You'll love it! Meet you in 30 minutes?"))
+        $ MessengerService.add_reply(riley, _("Yeah, see ya soon."))
+        $ MessengerService.new_message(riley, _("See you!"))
 
         play sound "sounds/vibrate.mp3"
         u "(Hmm?)"
@@ -58,12 +58,10 @@ label v9_dream_wakeup:
         scene v9dream23b # Same as v9dream20b but in MC's room in Apes house
         with dissolve
 
-    label v9_phn_riley1:
-        if riley.messenger.replies:
-            call screen phone
-        if riley.messenger.replies:
+    while MessengerService.has_replies(riley):
+        call screen phone
+        if MessengerService.has_replies(riley):
             u "(I should talk to Riley.)"
-            jump v9_phn_riley1
 
     jump v9_phn_riley1_done
 

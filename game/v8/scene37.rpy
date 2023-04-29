@@ -15,54 +15,50 @@ label v8_tues_evening:
         with dissolve
 
         if CharacterService.is_girlfriend(lauren):
-            $ lauren.messenger.addReply(_("Still fine with drinking instead of making out with me?"))
-            $ lauren.messenger.newMessage(_("Of course, that drink was just my cup of tea. :)"))
-            $ lauren.messenger.addReply(_("Oh haha, is that so? I think it at least poured a bit of courage in there."))
-            $ lauren.messenger.newMessage(_("Don't flatter yourself, witty cowboy. :)"))
-            $ lauren.messenger.addReply(_("You flatter me, ma'am."))
-            $ lauren.messenger.newMessage(_("Miss you."))
-            $ lauren.messenger.addReply(_("Kiss you*:)"))
-            $ lauren.messenger.newMessage(_(":)"))
+            $ MessengerService.add_reply(lauren, _("Still fine with drinking instead of making out with me?"))
+            $ MessengerService.new_message(lauren, _("Of course, that drink was just my cup of tea. :)"))
+            $ MessengerService.add_reply(lauren, _("Oh haha, is that so? I think it at least poured a bit of courage in there."))
+            $ MessengerService.new_message(lauren, _("Don't flatter yourself, witty cowboy. :)"))
+            $ MessengerService.add_reply(lauren, _("You flatter me, ma'am."))
+            $ MessengerService.new_message(lauren, _("Miss you."))
+            $ MessengerService.add_reply(lauren, _("Kiss you*:)"))
+            $ MessengerService.new_message(lauren, _(":)"))
 
         else:
-            $ lauren.messenger.addReply(_("Hey there, could you help me with studying?"))
-            $ lauren.messenger.newMessage(_("Umm, sure?"))
-            $ lauren.messenger.addReply(_("I'm puzzled just as much as I was back on that bench..."))
-            $ lauren.messenger.newMessage(_("You texted me just to make that reference, right?"))
-            $ lauren.messenger.addReply(_("Maybe?"))
-            $ lauren.messenger.newMessage(_("Seriously [name], I have things to do!"))
-            $ lauren.messenger.addReply(_("Later then."))
+            $ MessengerService.add_reply(lauren, _("Hey there, could you help me with studying?"))
+            $ MessengerService.new_message(lauren, _("Umm, sure?"))
+            $ MessengerService.add_reply(lauren, _("I'm puzzled just as much as I was back on that bench..."))
+            $ MessengerService.new_message(lauren, _("You texted me just to make that reference, right?"))
+            $ MessengerService.add_reply(lauren, _("Maybe?"))
+            $ MessengerService.new_message(lauren, _("Seriously [name], I have things to do!"))
+            $ MessengerService.add_reply(lauren, _("Later then."))
 
-        label v8s37_phoneContinue1:
-            if lauren.messenger.replies:
-                call screen phone
-            if lauren.messenger.replies:
+        while MessengerService.has_replies(lauren):
+            call screen phone
+            if MessengerService.has_replies(lauren):
                 u "I should reply to Lauren."
-                jump v8s37_phoneContinue1
 
         if riley.relationship >= Relationship.FWB:
-            $ riley.messenger.addReply(_("If your legs were lies, you could call me a liar. For I would be gladly spreading them."))
-            $ riley.messenger.newMessage(_("That was the most corny, idiotic joke I've ever heard, Mr. Liar. :)"))
-            $ riley.messenger.addReply(_("Thinking of you makes it harder to study. And in some other places as well..."))
-            $ riley.messenger.newMessage(_("I'll be the judge of that. :)"))
-            $ riley.messenger.addReply(_("Can't wait. :)"))
+            $ MessengerService.add_reply(riley, _("If your legs were lies, you could call me a liar. For I would be gladly spreading them."))
+            $ MessengerService.new_message(riley, _("That was the most corny, idiotic joke I've ever heard, Mr. Liar. :)"))
+            $ MessengerService.add_reply(riley, _("Thinking of you makes it harder to study. And in some other places as well..."))
+            $ MessengerService.new_message(riley, _("I'll be the judge of that. :)"))
+            $ MessengerService.add_reply(riley, _("Can't wait. :)"))
 
         else:
-            $ riley.messenger.addReply(_("I have a serious question to ask you."))
-            $ riley.messenger.newMessage(_("What is it?"))
-            $ riley.messenger.addReply(_("You get to chose between options A and B."))
-            $ riley.messenger.newMessage(_("OK?"))
-            $ riley.messenger.addReply(_("Option A is to make out with Mr. Lee."))
-            $ riley.messenger.newMessage(_("B. I choose B. Option B."))
-            $ riley.messenger.addReply(_("Haha"))
-            $ riley.messenger.newMessage(_("*yuck*"))
+            $ MessengerService.add_reply(riley, _("I have a serious question to ask you."))
+            $ MessengerService.new_message(riley, _("What is it?"))
+            $ MessengerService.add_reply(riley, _("You get to chose between options A and B."))
+            $ MessengerService.new_message(riley, _("OK?"))
+            $ MessengerService.add_reply(riley, _("Option A is to make out with Mr. Lee."))
+            $ MessengerService.new_message(riley, _("B. I choose B. Option B."))
+            $ MessengerService.add_reply(riley, _("Haha"))
+            $ MessengerService.new_message(riley, _("*yuck*"))
 
-        label v8s37_phoneContinue2:
-            if riley.messenger.replies:
-                call screen phone
-            if riley.messenger.replies:
+        while MessengerService.has_replies(riley):
+            call screen phone
+            if MessengerService.has_replies(riley):
                 u "I should reply to Riley."
-                jump v8s37_phoneContinue2
 
         u "(I guess this is just not my day for studying. Great job, [name]!)"
 
@@ -83,54 +79,50 @@ label v8_tues_evening:
         with dissolve
 
         if CharacterService.is_girlfriend(lauren):
-            $ lauren.messenger.addReply(_("Still fine with drinking instead of making out with me?"))
-            $ lauren.messenger.newMessage(_("Of course, that drink was just my cup of tea. :)"))
-            $ lauren.messenger.addReply(_("Oh haha, is that so? I think it at least poured a bit of courage in there."))
-            $ lauren.messenger.newMessage(_("Don't flatter yourself, witty cowboy. :)"))
-            $ lauren.messenger.addReply(_("You flatter me, ma'am."))
-            $ lauren.messenger.newMessage(_("Miss you."))
-            $ lauren.messenger.addReply(_("Kiss you*:)"))
-            $ lauren.messenger.newMessage(_(":)"))
+            $ MessengerService.add_reply(lauren, _("Still fine with drinking instead of making out with me?"))
+            $ MessengerService.new_message(lauren, _("Of course, that drink was just my cup of tea. :)"))
+            $ MessengerService.add_reply(lauren, _("Oh haha, is that so? I think it at least poured a bit of courage in there."))
+            $ MessengerService.new_message(lauren, _("Don't flatter yourself, witty cowboy. :)"))
+            $ MessengerService.add_reply(lauren, _("You flatter me, ma'am."))
+            $ MessengerService.new_message(lauren, _("Miss you."))
+            $ MessengerService.add_reply(lauren, _("Kiss you*:)"))
+            $ MessengerService.new_message(lauren, _(":)"))
 
         else:
-            $ lauren.messenger.addReply(_("Hey there, could you help me with studying?"))
-            $ lauren.messenger.newMessage(_("Umm, sure?"))
-            $ lauren.messenger.addReply(_("I'm puzzled just as much as I was back on that bench..."))
-            $ lauren.messenger.newMessage(_("You texted me just to make that reference, right?"))
-            $ lauren.messenger.addReply(_("Maybe?"))
-            $ lauren.messenger.newMessage(_("Seriously [name], I have things to do!"))
-            $ lauren.messenger.addReply(_("Later then."))
+            $ MessengerService.add_reply(lauren, _("Hey there, could you help me with studying?"))
+            $ MessengerService.new_message(lauren, _("Umm, sure?"))
+            $ MessengerService.add_reply(lauren, _("I'm puzzled just as much as I was back on that bench..."))
+            $ MessengerService.new_message(lauren, _("You texted me just to make that reference, right?"))
+            $ MessengerService.add_reply(lauren, _("Maybe?"))
+            $ MessengerService.new_message(lauren, _("Seriously [name], I have things to do!"))
+            $ MessengerService.add_reply(lauren, _("Later then."))
 
-        label v8s37_phoneContinue3:
-            if lauren.messenger.replies:
-                call screen phone
-            if lauren.messenger.replies:
+        while MessengerService.has_replies(lauren):
+            call screen phone
+            if MessengerService.has_replies(lauren):
                 u "I should reply to Lauren."
-                jump v8s37_phoneContinue3
 
         if riley.relationship >= Relationship.FWB:
-            $ riley.messenger.addReply(_("If your legs were lies, you could call me a liar. For I would be gladly spreading them."))
-            $ riley.messenger.newMessage(_("That was the most corny, idiotic joke I've ever heard, Mr. Liar. :)"))
-            $ riley.messenger.addReply(_("Thinking of you makes it harder to study. And in some other places as well..."))
-            $ riley.messenger.newMessage(_("I'll be the judge of that. :)"))
-            $ riley.messenger.addReply(_("Can't wait. :)"))
+            $ MessengerService.add_reply(riley, _("If your legs were lies, you could call me a liar. For I would be gladly spreading them."))
+            $ MessengerService.new_message(riley, _("That was the most corny, idiotic joke I've ever heard, Mr. Liar. :)"))
+            $ MessengerService.add_reply(riley, _("Thinking of you makes it harder to study. And in some other places as well..."))
+            $ MessengerService.new_message(riley, _("I'll be the judge of that. :)"))
+            $ MessengerService.add_reply(riley, _("Can't wait. :)"))
 
         else:
-            $ riley.messenger.addReply(_("I have a serious question to ask you."))
-            $ riley.messenger.newMessage(_("What is it?"))
-            $ riley.messenger.addReply(_("You get to chose between options A and B."))
-            $ riley.messenger.newMessage(_("OK?"))
-            $ riley.messenger.addReply(_("Option A is to make out with Mr. Lee."))
-            $ riley.messenger.newMessage(_("B. I choose B. Option B."))
-            $ riley.messenger.addReply(_("Haha"))
-            $ riley.messenger.newMessage(_("*yuck*"))
+            $ MessengerService.add_reply(riley, _("I have a serious question to ask you."))
+            $ MessengerService.new_message(riley, _("What is it?"))
+            $ MessengerService.add_reply(riley, _("You get to chose between options A and B."))
+            $ MessengerService.new_message(riley, _("OK?"))
+            $ MessengerService.add_reply(riley, _("Option A is to make out with Mr. Lee."))
+            $ MessengerService.new_message(riley, _("B. I choose B. Option B."))
+            $ MessengerService.add_reply(riley, _("Haha"))
+            $ MessengerService.new_message(riley, _("*yuck*"))
 
-        label v8s37_phoneContinue4:
-            if riley.messenger.replies:
-                call screen phone
-            if riley.messenger.replies:
+        while MessengerService.has_replies(riley):
+            call screen phone
+            if MessengerService.has_replies(riley):
                 u "I should reply to my phone."
-                jump v8s37_phoneContinue4
             
         u "(I guess this is just not my day for studying. Great job, [name]!)"
 

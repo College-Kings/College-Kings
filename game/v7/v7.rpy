@@ -24,47 +24,28 @@ init python:
 
     def v7_msgReply1():
         reputation.add_point(RepComponent.BRO)
-        penelope.messenger.newMessage(_("Okay..."))
+        penelope.messenger.new_message(_("Okay..."))
 
     def v7_msgReply2():
-        penelope.messenger.newMessage(_("Okay..."))
-
-    def v7_msgReply3():
-        lauren.messenger.newMessage(_("How about now?"))
-        lauren.messenger.addReply(_("Sure, I'll come pick you up"))
-        lauren.messenger.newMessage(_("Great :)"))
-
-    def v7_msgReply4():
-        setattr(store, "nobeach", True)
-        lauren.messenger.newMessage(_("Oh okay, another time then."))
-
-    def v7_msgReply5():
-        setattr(store, "rileysex", True)
-        riley.messenger.newMessage(_("Yayyy"))
-
-    def v7_msgReply6():
-        riley.messenger.newMessage(_("Oh oki"))
+        penelope.messenger.new_message(_("Okay..."))
 
     def kiwii_firstTimeMessages():
         if emily.relationship >= Relationship.FWB:
-            riley.messenger.addReply(_("We're not back together"))
-            riley.messenger.newMessage(_("Okay... just looked like it"))
-            riley.messenger.addReply(_("Well we're not."))
-            riley.messenger.newMessage(_("k"))
+            riley.messenger.add_reply(_("We're not back together"))
+            riley.messenger.new_message(_("Okay... just looked like it"))
+            riley.messenger.add_reply(_("Well we're not."))
+            riley.messenger.new_message(_("k"))
         if bowling and emily.relationship >= Relationship.FWB:
-            penelope.messenger.newMessage(_("I didn't know you and Emily were a thing..."), force_send=True)
-            penelope.messenger.addReply(_("We're not a thing"), v7_msgReply1)
-            penelope.messenger.addReply(_("It was a one time thing"), v7_msgReply2)
+            penelope.messenger.new_message(_("I didn't know you and Emily were a thing..."), force_send=True)
+            penelope.messenger.add_reply(_("We're not a thing"), v7_msgReply1)
+            penelope.messenger.add_reply(_("It was a one time thing"), v7_msgReply2)
         if emily.relationship >= Relationship.FWB and CharacterService.is_girlfriend(lauren):
-            lauren.messenger.newMessage(_("I saw what Emily posted. I really thought you liked me..."), force_send=True)
-            lauren.messenger.newMessage(_("I guess we're done now, so please just delete my number."), force_send=True)
-            lauren.messenger.addReply(_("Lauren can we please just talk about it? I can explain"))
-            lauren.messenger.newMessage(_("What is there to talk about? How could you betray me like that?!"))
-            lauren.messenger.addReply(_("Please, it's just a big misunderstanding"))
-            lauren.messenger.newMessage(_("Fine. I'm in my dorm, we can talk now."))
-
-    def v7_msgReply7():
-        setattr(store, "kiwii_first_time", True)
+            lauren.messenger.new_message(_("I saw what Emily posted. I really thought you liked me..."), force_send=True)
+            lauren.messenger.new_message(_("I guess we're done now, so please just delete my number."), force_send=True)
+            lauren.messenger.add_reply(_("Lauren can we please just talk about it? I can explain"))
+            lauren.messenger.new_message(_("What is there to talk about? How could you betray me like that?!"))
+            lauren.messenger.add_reply(_("Please, it's just a big misunderstanding"))
+            lauren.messenger.new_message(_("Fine. I'm in my dorm, we can talk now."))
 
 label start7: #for compatibility only
 label v7start:
@@ -1372,9 +1353,13 @@ label conyourdorm:
         $ v7_kiwiiPost4.addReply(_("No, we're not."), v7_kiwiiReply6, mentions=[josh], number_likes=renpy.random.randint(5, 15))
 
         play sound "sounds/vibrate.mp3"
-        $ riley.messenger.newMessage(_("Are you and Emily back together?"), force_send=True)
-        $ riley.messenger.addReply(_("What are you talking about???"), v7_msgReply7)
-        $ riley.messenger.newMessage(_("Check Kiwii..."))
+
+        $ v7_msgReply7 = MessageBuilder(riley)
+        $ v7_msgReply7.set_variable("kiwii_first_time", True)
+
+        $ MessengerService.new_message(riley, _("Are you and Emily back together?"))
+        $ MessengerService.add_reply(riley, _("What are you talking about???"), v7_msgReply7)
+        $ MessengerService.new_message(riley, _("Check Kiwii..."))
 
         pause 0.5
 
@@ -1383,27 +1368,26 @@ label conyourdorm:
 
         u "(What the hell?)"
 
-        label phoneam:
             if bowling and emily.relationship >= Relationship.FWB:
                 $ v7_emily_bowling = True
         
-            if riley.messenger.replies:
-                call screen messager(riley.messenger)
-            if riley.messenger.replies:
-                u "(I need to respond to some of these messages.)"
-                jump phoneam
+            while MessengerService.has_replies(riley):
+                call screen phone
+                if MessengerService.has_replies(riley):
+                    u "(I need to respond to some of these messages.)"
 
             if kiwii_first_time:
                 u "(I should check out what Emily posted on Kiwii.)"
-                jump phoneam
 
-            if penelope.messenger.replies:
-                u "(I should answer Penelope.)"
-                jump phoneam
+            while MessengerService.has_replies(penelope):
+                call screen phone
+                if MessengerService.has_replies(penelope):
+                    u "(I should answer Penelope.)"
 
-            if lauren.messenger.replies:
-                u "(I should respond to Lauren.)"
-                jump phoneam
+            while MessengerService.has_replies(lauren):
+                call screen phone
+                if MessengerService.has_replies(lauren):
+                    u "(I should respond to Lauren.)"
 
         label continueee: #for compatibility only
         scene s714a # mc calm mouth closed
@@ -1610,10 +1594,14 @@ label conyourdorm:
 
     else:
         play sound "sounds/vibrate.mp3"
-        $ riley.messenger.newMessage(_("Hey, how come you're not on Kiwii?"), force_send=True)
-        $ riley.messenger.addReply(_("What's that?"))
-        $ riley.messenger.newMessage(_("It's a new social media app, you should give it a try"))
-        $ riley.messenger.addReply(_("Okay, I'll have a look"), v7_msgReply7)
+
+        $ v7_msgReply7 = MessageBuilder(riley)
+        $ v7_msgReply7.set_variable("kiwii_first_time", True)
+
+        $ MessengerService.new_message(riley, _("Hey, how come you're not on Kiwii?"))
+        $ MessengerService.add_reply(riley, _("What's that?"))
+        $ MessengerService.new_message(riley, _("It's a new social media app, you should give it a try"))
+        $ MessengerService.add_reply(riley, _("Okay, I'll have a look"), v7_msgReply7)
 
         pause 0.5
 
@@ -1622,12 +1610,10 @@ label conyourdorm:
 
         u "(Huh? What did Riley text me?)"
 
-        label phonean:
-            if riley.messenger.replies:
-                call screen messager(riley.messenger)
-            if riley.messenger.replies:
+        while MessengerService.has_replies(riley):
+            call screen phone
+            if MessengerService.has_replies(riley):
                 u "(I should respond to Riley.)"
-                jump phonean
             
         scene s713b2 # mc looks up to the window in the same position of 713b
         with dissolve
@@ -2538,38 +2524,45 @@ label thisbewalk:
         play sound "sounds/vibrate.mp3"
 
         if seenlauren and CharacterService.is_girlfriend(lauren):
-            $ lauren.messenger.newMessage(_("Wanna go now babe?"), force_send=True)
-            $ lauren.messenger.addReply(_("Sure, I'll come pick you up"))
-            $ lauren.messenger.newMessage(_("Great :)"))
+            $ MessengerService.new_message(lauren, _("Wanna go now babe?"))
+            $ MessengerService.add_reply(lauren, _("Sure, I'll come pick you up"))
+            $ MessengerService.new_message(lauren, _("Great :)"))
 
         elif seenlauren:
-            $ lauren.messenger.newMessage(_("Wanna go now?"), force_send=True)
-            $ lauren.messenger.addReply(_("Sure, I'll come pick you up"))
-            $ lauren.messenger.newMessage(_("Great :)"))
+            $ MessengerService.new_message(lauren, _("Wanna go now?"))
+            $ MessengerService.add_reply(lauren, _("Sure, I'll come pick you up"))
+            $ MessengerService.new_message(lauren, _("Great :)"))
 
         else:
-            $ lauren.messenger.newMessage(_("Hey :)"), force_send=True)
+            $ MessengerService.new_message(lauren, _("Hey :)"))
 
             if CharacterService.is_girlfriend(lauren):
-                $ lauren.messenger.newMessage(_("You wanna go to the beach today?"), force_send=True)
-                $ lauren.messenger.addReply(_("Sounds good, when were you thinking?"))
-                $ lauren.messenger.newMessage(_("How about now?"))
-                $ lauren.messenger.addReply(_("Sure, I'll come pick you up"))
-                $ lauren.messenger.newMessage(_("Great :)"))
+                $ MessengerService.new_message(lauren, _("You wanna go to the beach today?"))
+                $ MessengerService.add_reply(lauren, _("Sounds good, when were you thinking?"))
+                $ MessengerService.new_message(lauren, _("How about now?"))
+                $ MessengerService.add_reply(lauren, _("Sure, I'll come pick you up"))
+                $ MessengerService.new_message(lauren, _("Great :)"))
 
             else:
-                $ lauren.messenger.newMessage(_("You wanna go to the beach today?"), force_send=True)
-                $ lauren.messenger.addReply(_("Sounds good, when were you thinking?"), v7_msgReply3)
-                $ lauren.messenger.addReply(_("Sorry, I can't I'm really busy today"), v7_msgReply4)
+                $ v7_msgReply3 = MessageBuilder(lauren)
+                $ v7_msgReply3.new_message(_("How about now?"))
+                $ v7_msgReply3.add_reply(_("Sure, I'll come pick you up"))
+                $ v7_msgReply3.new_message(_("Great :)"))
 
-        " "
+                $ v7_msgReply4 = MessageBuilder(lauren)
+                $ v7_msgReply4.set_variable("nobeach", True)
+                $ v7_msgReply4.new_message(_("Oh okay, another time then."))
 
-        label phoneao:
-            if lauren.messenger.replies:
-                call screen phone
-            if lauren.messenger.replies:
+                $ MessengerService.new_message(lauren, _("You wanna go to the beach today?"))
+                $ MessengerService.add_replies(lauren, 
+                    Reply(_("Sounds good, when were you thinking?"), v7_msgReply3),
+                    Reply(_("Sorry, I can't I'm really busy today"), v7_msgReply4)
+                )
+
+        while MessengerService.has_replies(lauren):
+            call screen phone
+            if MessengerService.has_replies(lauren):
                 u "(I should probably reply.)"
-                jump phoneao
 
         if nobeach:
             u "(Time to finish my history assignment...)"
@@ -5425,14 +5418,12 @@ label after_pledges:
                 $ emilyText = True
                 $ reputation.add_point(RepComponent.BOYFRIEND)
 
-                $ emily.messenger.addReply(_("Hey, sorry I lost track of time. You up?"))
+                $ MessengerService.add_reply(emily, _("Hey, sorry I lost track of time. You up?"))
 
-                label phonebb:
-                    if emily.messenger.replies:
-                        call screen phone
-                    if emily.messenger.replies:
+                while MessengerService.has_replies(emily):
+                    call screen phone
+                    if MessengerService.has_replies(emily):
                         u "(I should text Emily that I lost track of time.)"
-                        jump phonebb
 
                 u "(I guess she's asleep.)"
 
@@ -5464,10 +5455,8 @@ label after_pledges:
     if emilyText:
         play sound "sounds/vibrate.mp3"
         
-        $ emily.messenger.newMessage(_("It's okay. You'll get the surprise another time..."), force_send=True)
-        $ emily.messenger.addReply(_("Exciting :)"))
-
-    " "
+        $ MessengerService.new_message(emily, _("It's okay. You'll get the surprise another time..."))
+        $ MessengerService.add_reply(emily, _("Exciting :)"))
 
     play music "music/mindie2.mp3"
     queue music [ "music/m16punk.mp3", "music/mindie1.mp3" ]
@@ -8883,18 +8872,23 @@ label rileytext:
     if riley.relationship >= Relationship.LIKES:
         play sound "sounds/vibrate.mp3"
 
-        $ riley.messenger.newMessage(_("Wanna come over? ;)"), force_send=True)
-        $ riley.messenger.addReply(_("Sure, on my way :)"), v7_msgReply5)
-        $ riley.messenger.addReply(_("Sorry I'm really exhausted. Another time"), v7_msgReply6)
-        
-        " "
+        v7_msgReply5 = MessageBuilder(riley)
+        v7_msgReply5.set_variable("rileysex", True)
+        v7_msgReply5.new_message(_("Yayyy"))
 
-        label rtnow:
-            if riley.messenger.replies:
-                call screen phone
-            if riley.messenger.replies:
+        v7_msgReply6 = MessageBuilder(riley)
+        v7_msgReply6.new_message(_("Oh oki"))
+
+        $ MessengerService.new_message(_("Wanna come over? ;)"))
+        $ MessengerService.add_replies(riley, 
+            Reply(_("Sure, on my way :)"), v7_msgReply5),
+            Reply(_("Sorry I'm really exhausted. Another time"), v7_msgReply6)
+        )
+
+        while MessengerService.has_replies(riley):
+            call screen phone
+            if MessengerService.has_replies(riley):
                 u "(I should check my messages.)"
-                jump rtnow
 
     if rileysex:
         u "(Guess I'm not going to sleep yet.)"
@@ -9231,23 +9225,19 @@ label v7_nsfwSkipLabel1:
 
 ########## SCENE 36 MAKING SIGNS W/ AUTUMN
 label signs_with_autumn:
-    $ autumn.messenger.newMessage(_("Hey, it's Autumn."), force_send=True)
-    $ autumn.messenger.newMessage(_("I'm just about to start making signs. Do you still want to join?"), force_send=True)
-    $ autumn.messenger.addReply(_("Yes, of course. I'd love to."))
-    $ autumn.messenger.newMessage(_("Great. I'm at the Deer's House. Do you know how to get there?"))
-    $ autumn.messenger.addReply(_("Yeah, I think I do. On my way."))
-    $ autumn.messenger.newMessage(_("Alright, see you soon."))
+    $ MessengerService.new_message(autumn, _("Hey, it's Autumn."))
+    $ MessengerService.new_message(autumn, _("I'm just about to start making signs. Do you still want to join?"))
+    $ MessengerService.add_reply(autumn, _("Yes, of course. I'd love to."))
+    $ MessengerService.new_message(autumn, _("Great. I'm at the Deer's House. Do you know how to get there?"))
+    $ MessengerService.add_reply(autumn, _("Yeah, I think I do. On my way."))
+    $ MessengerService.new_message(autumn, _("Alright, see you soon."))
 
     play sound "sounds/vibrate.mp3"
 
-    " "
-
-    label phoneba:
-        if autumn.messenger.replies:
-            call screen phone
-        if autumn.messenger.replies:
+    while MessengerService.has_replies(autumn):
+        call screen phone
+        if MessengerService.has_replies(autumn):
             u "(I should probably check my messages.)"
-            jump phoneba
 
     u "(Alright, let's get going to Autumn's.)"
     

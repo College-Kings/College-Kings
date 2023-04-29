@@ -44,16 +44,14 @@ label v9_room_fri_morn:
 
         play sound "sounds/vibrate.mp3"
 
-        $ lauren.messenger.newMessage(_("Hey, would yould you like to come over to my dorm and help me? I need help with my Deer initiation. They want me to help with the annual charity day event they have."), force_send=True)
-        $ lauren.messenger.addReply(_("Sure, OMW!"))
-        $ lauren.messenger.newMessage(_("Ok :) See you soon!"))
+        $ MessengerService.new_message(lauren, _("Hey, would yould you like to come over to my dorm and help me? I need help with my Deer initiation. They want me to help with the annual charity day event they have."))
+        $ MessengerService.add_reply(lauren, _("Sure, OMW!"))
+        $ MessengerService.new_message(lauren, _("Ok :) See you soon!"))
         
-        label s17_PhoneContinueW:
-            if lauren.messenger.replies:
-                call screen phone
-            if lauren.messenger.replies:
+        while MessengerService.has_replies(lauren):
+            call screen phone
+            if MessengerService.has_replies(lauren):
                 u "(I should text Lauren.)"
-                jump s17_PhoneContinueW
 
         u "(I better get ready and head over there. Hope it's not too much work.)"
 
@@ -85,16 +83,14 @@ label v9_room_fri_morn:
 
         play sound "sounds/vibrate.mp3"
 
-        $ lauren.messenger.newMessage(_("Hey, would yould you like to come over to my dorm and help me? I need help with my Deer initiation. They want me to help with the annual charity day event they have."), force_send=True)
-        $ lauren.messenger.addReply(_("Sure, OMW!"))
-        $ lauren.messenger.newMessage(_("Ok :) See you soon!"))
+        $ MessengerService.new_message(lauren, _("Hey, would yould you like to come over to my dorm and help me? I need help with my Deer initiation. They want me to help with the annual charity day event they have."))
+        $ MessengerService.add_reply(lauren, _("Sure, OMW!"))
+        $ MessengerService.new_message(lauren, _("Ok :) See you soon!"))
         
-        label s17_PhoneContinueA:
-            if lauren.messenger.replies:
-                call screen phone
-            if lauren.messenger.replies:
+        while MessengerService.has_replies(lauren):
+            call screen phone
+            if MessengerService.has_replies(lauren):
                 u "(I should text Lauren.)"
-                jump s17_PhoneContinueA
 
         u "(I better get ready and head over there. Hope it's not too much work.)"
 

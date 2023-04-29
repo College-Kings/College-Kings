@@ -4,19 +4,6 @@
 # Characters needed: MC (outfit 3), Grayson (outfit 3), Chloe (outfit 2 or put together some other revealing outfit), Caleb (outfit 1), Cameron (outfit 3), Ryan (outfit 1), Sam (outfit 2), Mason (outfit 1), Some other random chick in a revealing outfit
 # Time: Saturday evening to night
 
-init python:
-    def v8s13_reply1(): # phn_chloe11_a
-        chloe.messenger.newMessage(_("Guess you'll have to wait and see ;)"))
-        chloe.messenger.addReply(_("I'm moving my stuff now. How about we get started tonight?"))
-        chloe.messenger.newMessage(_("You're such a flirt. Have a good night!"))
-
-    def v8s13_reply2(): # phn_chloe11_b
-        chloe.messenger.newMessage(_("Aww, I like talking to you too. You're sweet."))
-        chloe.messenger.addReply(_("Sweet? Not hot? Or sexy? Or... anything but sweet?"))
-        chloe.messenger.newMessage(_("Sweet and cute ;)"))
-        chloe.messenger.addReply(_("I'll take it. For now. Talk to you when I get settled."))
-        chloe.messenger.newMessage(_("Good night."))
-
 # SCENE 13: MOVING INTO THE APES
 label after_apes_ceremony:
     scene v8apes21 # TPP. MC in his dorm packing his bag (finished it), smiling and mouth closed
@@ -45,21 +32,34 @@ label after_apes_ceremony:
     $ v8s13_kiwiiPost.newComment(amber, _("Congrats people!!!"), mentions=[mc, ryan, caleb], number_likes=renpy.random.randint(50, 60))
     $ v8s13_kiwiiPost.newComment(caleb, _("Thanks everyone!"), number_likes=renpy.random.randint(20, 30))
 
-    $ chloe.messenger.newMessage(_("Congrats on getting in. Looks like we'll be seeing a lot of each other."), force_send=True)
-    $ chloe.messenger.addReply(_("Exactly how much is a lot? ;)"), v8s13_reply1)
-    $ chloe.messenger.addReply(_("Hope so. I like talking to you."), v8s13_reply2)
+    python:
+        v8s13_reply1 = MessageBuilder # phn_chloe11_a
+        v8s13_reply1.new_message(_("Guess you'll have to wait and see ;)"))
+        v8s13_reply1.add_reply(_("I'm moving my stuff now. How about we get started tonight?"))
+        v8s13_reply1.new_message(_("You're such a flirt. Have a good night!"))
+
+        v8s13_reply2 = MessageBuilder # phn_chloe11_b
+        v8s13_reply2.new_message(_("Aww, I like talking to you too. You're sweet."))
+        v8s13_reply2.add_reply(_("Sweet? Not hot? Or sexy? Or... anything but sweet?"))
+        v8s13_reply2.new_message(_("Sweet and cute ;)"))
+        v8s13_reply2.add_reply(_("I'll take it. For now. Talk to you when I get settled."))
+        v8s13_reply2.new_message(_("Good night."))
+
+        MessengerService.new_message(chloe, _("Congrats on getting in. Looks like we'll be seeing a lot of each other."))
+        MessengerService.add_replies(chloe, 
+            Reply(_("Exactly how much is a lot? ;)"), v8s13_reply1),
+            Reply(_("Hope so. I like talking to you."), v8s13_reply2)
+        )
 
     play sound "sounds/vibrate.mp3"
 
     scene v8apes21a # MC looking at his phone, mouth closed
     with dissolve
 
-    label phn_chloe11:
-        if chloe.messenger.replies:
-            call screen phone
-        if chloe.messenger.replies:
+    while MessengerService.has_replies(chloe):
+        call screen phone
+        if MessengerService.has_replies(chloe):
             u "(I should probably reply.)"
-            jump phn_chloe11
 
         u "(Gotta get going.)"
         jump phn_chloe11_done

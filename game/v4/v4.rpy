@@ -1,32 +1,3 @@
-init python:
-    # Josh messages
-    def v4_reply1():
-        reputation.add_point(RepComponent.BRO)
-        josh.messenger.newMessage(_("Dope"))
-        josh.messenger.newMessage(_("Come by 995 Sereno Drive at 8, it's my friends house."))
-
-    def v4_reply2():
-        josh.messenger.newMessage(_("Aww, come on. You'll be back by 11."))
-        josh.messenger.newImgMessage("images/v4/text1.webp")
-        josh.messenger.newMessage(_("I told my friend Amber about you and she really wants to meet you."))
-        josh.messenger.addReply(_("Alright, I'll come."), v4_reply1)
-        josh.messenger.addReply(_("Josh, I don't know, man. I don't wanna be late."), v4_reply3)
-
-    def v4_reply3():
-        josh.messenger.newMessage(_("Remember how you told me in high school that you felt like you always missed out on all the crazy stories?"))
-        josh.messenger.newMessage(_("Don't miss out now."))
-        josh.messenger.addReply(_("Fine, I'll come. But I need to go before 11."), v4_reply4)
-        josh.messenger.addReply(_("I can't, sorry."), v4_reply5)
-
-    def v4_reply4():
-        josh.messenger.newMessage(_("Dope"))
-        josh.messenger.newMessage(_("Come by 995 Sereno Drive at 8, it's my friends house."))
-
-    def v4_reply5():
-        setattr(store, "v4_skip_josh_party", True)
-        reputation.add_point(RepComponent.BOYFRIEND)
-        josh.messenger.newMessage(_("This guy"))
-
 label v4start:
     play music "music/m4punk.mp3"
 
@@ -1044,19 +1015,17 @@ label v4start:
 
     u "(I should text Chloe and see if she wants to meet up... I need to find out if there's any truth in what Ryan said.)"
 
-    $ chloe.messenger.addReply(_("Hey Chloe, any chance you can meet up in a bit?"))
-    $ chloe.messenger.newMessage(_("I'm really busy today, but I could do tonight after 11 or so."))
-    $ chloe.messenger.addReply(_("Alright, cool. I'll be at yours for 11"))
-    $ chloe.messenger.newMessage(_("Sounds good :)"))
+    $ MessengerService.add_reply(chloe, _("Hey Chloe, any chance you can meet up in a bit?"))
+    $ MessengerService.new_message(chloe, _("I'm really busy today, but I could do tonight after 11 or so."))
+    $ MessengerService.add_reply(chloe, _("Alright, cool. I'll be at yours for 11"))
+    $ MessengerService.new_message(chloe, _("Sounds good :)"))
 
     play music "music/mindie4.mp3"
 
-    label phonev:
-        if chloe.messenger.replies:
-            call screen phone
-        if chloe.messenger.replies:
+    while MessengerService.has_replies(chloe):
+        call screen phone
+        if MessengerService.has_replies(chloe):
             u "(I should message Chloe about meeting up later.)"
-            jump phonev
     
     scene s330a # same as 330 but you looking up
     with dissolve
@@ -2161,16 +2130,49 @@ label continueab:
 
     play music "music/m9punk.mp3"
 
-    $ josh.messenger.newMessage(_("Hey man, you wanna hang out with me and some friends tonight?"), force_send=True)
-    $ josh.messenger.addReply(_("Uhh, sure."), v4_reply1)
-    $ josh.messenger.addReply(_("I'm meeting a friend at 11, so I can't really."), v4_reply2)
+    python:
 
-    label phonew:
-        if josh.messenger.replies:
-            call screen phone
-        if josh.messenger.replies:
+        v4_reply1 = MessageBuilder(josh)
+        v4_reply1.add_function(reputation.add_point, RepComponent.BRO)
+        v4_reply1.new_message(_("Dope"))
+        v4_reply1.new_message(_("Come by 995 Sereno Drive at 8, it's my friends house."))
+
+        v4_reply4 = MessageBuilder(josh)
+        v4_reply4.new_message(_("Dope"))
+        v4_reply4.new_message(_("Come by 995 Sereno Drive at 8, it's my friends house."))
+
+        v4_reply5 = MessageBuilder(josh)
+        v4_reply5.set_variable("v4_skip_josh_party", True)
+        v4_reply5.add_function(reputation.add_point, RepComponent.BOYFRIEND)
+        v4_reply5.new_message(_("This guy"))
+
+        v4_reply3  = MessageBuilder(josh)
+        v4_reply3.new_message(_("Remember how you told me in high school that you felt like you always missed out on all the crazy stories?"))
+        v4_reply3.new_message(_("Don't miss out now."))
+        v4_reply3.add_replies(josh,
+            Reply(_("Fine, I'll come. But I need to go before 11."), v4_reply4),
+            Reply(_("I can't, sorry."), v4_reply5)
+        )
+
+        v4_reply2 = MessageBuilder(josh)
+        v4_reply2.new_message(_("Aww, come on. You'll be back by 11."))
+        v4_reply2.new_message("images/v4/text1.webp")
+        v4_reply2.new_message(_("I told my friend Amber about you and she really wants to meet you."))
+        v4_reply2.add_replies(josh, 
+            Reply(_("Alright, I'll come."), v4_reply1),
+            Reply(_("Josh, I don't know, man. I don't wanna be late."), v4_reply3)
+        )
+
+        MessengerService.newMessage(josh, _("Hey man, you wanna hang out with me and some friends tonight?"))
+        MessengerService.add_replies(josh, 
+            Reply(_("Uhh, sure."), v4_reply1),
+            Reply(_("I'm meeting a friend at 11, so I can't really."), v4_reply2)
+        )
+
+    while MessengerService.has_replies(josh):
+        call screen phone
+        if MessengerService.has_replies(josh):
             u "(I should probably reply to my messages.)"
-            jump phonew
 
     if v4_skip_josh_party:
         u "(Fucking hell, I forgot how persistent Josh could be...)"

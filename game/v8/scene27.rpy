@@ -14,15 +14,13 @@ label mon_eve_room_josh:
         u "(Let's see who this is.)"
 
         if helpJosh:
-            $ josh.messenger.newMessage(_("Hey bro! It's time! Meet me at mine, okay?"), force_send=True)
-            $ josh.messenger.addReply(_("Okay, I'm on my way."))
+            $ MessengerService.new_message(josh, _("Hey bro! It's time! Meet me at mine, okay?"), force_send=True)
+            $ MessengerService.add_reply(josh, _("Okay, I'm on my way."))
 
-            label v8s27_phoneContinue1:
-                if josh.messenger.replies:
-                    call screen phone
-                if josh.messenger.replies:
+            while MessengerService.has_replies(josh):
+                call screen phone
+                if MessengerService.has_replies(josh):
                     u "I should really check my phone."
-                    jump v8s27_phoneContinue1
 
             scene v8spd2 # TPP. Show MC getting up from his desk.
             with dissolve
@@ -88,17 +86,15 @@ label mon_eve_room_josh:
 
         else:
 
-            $ josh.messenger.newMessage(_("Hey bro, I got robbed and my ass kicked bad! Really wish you came with me, man."), force_send=True)
-            $ josh.messenger.addReply(_("Fuck! Are you ok??"))
-            $ josh.messenger.newMessage(_("No, man! I hurt everywhere! Plus my shit is gone!"))
-            $ josh.messenger.addReply(_("Hold on, I'll be right over"))
+            $ MessengerService.new_message(josh, _("Hey bro, I got robbed and my ass kicked bad! Really wish you came with me, man."))
+            $ MessengerService.add_reply(josh, _("Fuck! Are you ok??"))
+            $ MessengerService.new_message(josh, _("No, man! I hurt everywhere! Plus my shit is gone!"))
+            $ MessengerService.add_reply(josh, _("Hold on, I'll be right over"))
 
-            label v8s27_phoneContinue2:
-                if josh.messenger.replies:
-                    call screen phone
-                if josh.messenger.replies:
+            while MessengerService.has_replies(josh):
+                call screen phone
+                if MessengerService.has_replies(josh):
                     u "I should really check my phone."
-                    jump v8s27_phoneContinue2
                     
             scene v8spd2
             with dissolve
@@ -123,17 +119,14 @@ label mon_eve_room_josh:
 
         if helpJosh:
 
-            $ josh.messenger.newMessage(_("Hey bro! It's time! Meet me at mine, okay?"), force_send=True)
-            $ josh.messenger.addReply(_("Okay, I'm on my way."))
+            $ MessengerService.new_message(josh, _("Hey bro! It's time! Meet me at mine, okay?"), force_send=True)
+            $ MessengerService.add_reply(josh, _("Okay, I'm on my way."))
 
-            label v8s27_phoneContinue3:
-                if josh.messenger.replies:
-                    call screen phone
-                if josh.messenger.replies:
+            while MessengerService.has_replies(josh):
+                call screen phone
+                if MessengerService.has_replies(josh):
                     u "I should really check my phone."
-                    jump v8s27_phoneContinue3
                 
-
             scene v8spd9 # TPP. Show MC getting up from his desk. (Apes)
             with dissolve
 
@@ -197,18 +190,15 @@ label mon_eve_room_josh:
             jump drug_deal_w_josh
 
         else:
-            $ josh.messenger.newMessage(_("Hey bro, I got robbed and my ass kicked bad! Really wish you came with me, man."), force_send=True)
-            $ josh.messenger.addReply(_("Fuck! Are you ok??"))
-            $ josh.messenger.newMessage(_("No, man! I hurt everywhere! Plus my shit is gone!"))
-            $ josh.messenger.addReply(_("Hold on, I'll be right over"))
+            $ MessengerService.new_message(josh, _("Hey bro, I got robbed and my ass kicked bad! Really wish you came with me, man."))
+            $ MessengerService.add_reply(josh, _("Fuck! Are you ok??"))
+            $ MessengerService.new_message(josh, _("No, man! I hurt everywhere! Plus my shit is gone!"))
+            $ MessengerService.add_reply(josh, _("Hold on, I'll be right over"))
 
-            label v8s27_phoneContinue4:
-
-                if josh.messenger.replies:
-                    call screen phone
-                if josh.messenger.replies:
+            while MessengerService.has_replies(josh):
+                call screen phone
+                if MessengerService.has_replies(josh):
                     u "I should really check my phone."
-                    jump v8s27_phoneContinue4
                 
             scene v8spd9
             with dissolve
