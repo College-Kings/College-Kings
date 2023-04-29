@@ -367,7 +367,7 @@ label v10_amber_skatepark:
     if CharacterService.is_fwb(amber):
         label v10_amber_skatepark_sg:
             if _in_replay:
-                $ CharacterService.set_relationship(amber, Relationship.FWB, mc)
+                $ CharacterService.set_relationship(amber, Relationship.FWB)
 
         scene v10sasp5b # FPP. Same camera as v10sasp5. Show Amber leaning in to whisper into MC's ear, smiling, mouth open.
         with fade
@@ -715,7 +715,7 @@ label v10_amber_skatepark:
                     with dissolve
                     menu:
                         "Let her":
-                            $ CharacterService.set_relationship(amber, Relationship.FWB, mc)
+                            $ CharacterService.set_relationship(amber, Relationship.FWB)
                             $ sceneList.add("v10_amber")
 
                             if is_censored:

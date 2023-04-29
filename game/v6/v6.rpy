@@ -2533,7 +2533,7 @@ label fz_a:
 
     menu:
         "Kiss her back":
-            $ CharacterService.set_relationship(emily, Relationship.FWB, mc)
+            $ CharacterService.set_relationship(emily, Relationship.FWB)
             $ forgiveemily = True
 
             jump emsex_a
@@ -2639,7 +2639,7 @@ label fz_b:
 
     menu:
         "Kiss her back":
-            $ CharacterService.set_relationship(emily, Relationship.FWB, mc)
+            $ CharacterService.set_relationship(emily, Relationship.FWB)
             $ forgiveemily = True
 
             jump emsex_c
