@@ -1,3 +1,31 @@
+init python:
+    def v12s7_kill(char_obj: NonPlayableCharacter):
+        # Check Competitive stat
+        if char_obj.stats["Competitive"] and len(v12s7_killList) < 3:
+            char_obj.points -= 1
+        elif not char_obj.stats["Competitive"] and len(v12s7_killList) < 3:
+            char_obj.points += 1
+
+        # Check Vindictive stat
+        for character in char_obj.stats["Vindictive"]:
+            if character in v12s7_killList:
+                char_obj.points += 1
+            else:
+                char_obj.points -= 1
+
+        # Check Talkative stat
+        if char_obj.stats["Talkative"] and char_obj in v12s7_endtalkList:
+            char_obj.points += 1
+        elif char_obj.stats["Talkative"]:
+            char_obj.points -= 1
+        elif not char_obj.stats["Talkative"] and char_obj in v12s7_endtalkList:
+            char_obj.points -= 1
+
+        # Add character to kill list
+        if char_obj != cameron:  # Except Cameron, because he's not playing
+            v12s7_killList.add(char_obj)
+
+
 screen murder_button_overlay(character):
     tag free_roam
 
@@ -21,17 +49,17 @@ screen murder_button_overlay(character):
             action Jump("v12s7_mc_caught")
         else:
             if char_name == "riley" and "riley2" in freeroam9 and not "riley3" in freeroam9:
-                action [ Function(character.kill), Jump("v12s7_{}_kill2".format(char_name)) ]
+                action [Function(v12s7_kill, character), Jump("v12s7_{}_kill2".format(char_name)) ]
             else:
-                action [ Function(character.kill), Jump("v12s7_{}_kill".format(char_name)) ]
+                action [Function(v12s7_kill, character), Jump("v12s7_{}_kill".format(char_name)) ]
 
     if config_debug:
         timer 0.1 repeat True:
             if not v12s7_seenList:
                 if char_name == "riley" and "riley2" in freeroam9 and not "riley3" in freeroam9:
-                    action [ Function(character.kill), Jump("v12s7_{}_kill2".format(char_name)) ]
+                    action [Function(v12s7_kill, character), Jump("v12s7_{}_kill2".format(char_name)) ]
                 else:
-                    action [ Function(character.kill), Jump("v12s7_{}_kill".format(char_name)) ]
+                    action [Function(v12s7_kill, character), Jump("v12s7_{}_kill".format(char_name)) ]
 
 
 screen v12s7_minimap(location):

@@ -70,6 +70,8 @@ def set_dict_values(dict_: dict[Any], value: Any = True) -> None:
 inf_adj = ui.adjustment()  # type: ignore
 inf_adj.value = float("inf")
 
+renpy.add_layer("foreground", above="master")
+
 """renpy
 init 100 python:
 """

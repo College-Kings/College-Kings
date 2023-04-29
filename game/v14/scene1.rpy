@@ -10,44 +10,44 @@ label v14_start:
     
         $ v11_lindsey_slogan = 1
     
-        if CharacterService.is_fwb(emily, mc)
+        if CharacterService.is_fwb(emily):
             $ sceneList.add("v13_emily")
 
-        if CharacterService.is_fwb(ms_rose, mc)
+        if CharacterService.is_fwb(ms_rose):
             $ sceneList.add("v12_rose")
             $ v13_perfume = True
 
-        if CharacterService.is_girlfriend(lauren, mc)
+        if CharacterService.is_girlfriend(lauren):
             $ sceneList.add("v12_lauren")
             
-        if nora.relationship >= Relationship.FWB:
+        if CharacterService.is_fwb(nora):
             $ sceneList.add("v12_nora")
             
-        if CharacterService.is_girlfriend(chloe, mc)
+        if CharacterService.is_girlfriend(chloe):
             $ sceneList.add("v13_chloe")
             
-        if CharacterService.is_fwb(lindsey, mc)
+        if CharacterService.is_fwb(lindsey):
             $ sceneList.add("v12_lindsey")
 
-        if CharacterService.is_friend(lauren, mc)
-            $ CharacterService.set_relationship(lauren, Relationship.KISS, mc)
+        if CharacterService.is_friend(lauren):
+            $ CharacterService.set_relationship(lauren, Relationship.KISSED)
 
-        if aubrey.relationship >= Relationship.FWB:
+        if CharacterService.is_fwb(aubrey):
             $ s12v32_get_aubrey_flowers = True
             $ v13s48_canoeing_as_date = True
             $ v13s48_get_aubrey_chocolate = True
 
-        if penelope.relationship >= Relationship.LOYAL:
+        if CharacterService.is_girlfriend(penelope): # TODO: Check if GF is obtainable
             $ v11_pen_goes_europe = True
 
-        if CharacterService.is_fwb(samantha, mc)
-            $ CharacterService.set_relationship(cameron, Relationship.BRO, mc)
+        if CharacterService.is_fwb(samantha):
+            $ CharacterService.set_relationship(cameron, Relationship.BRO)
     
     #if emmy.simplr.pending_messages: #for compatibility with v12 players where emmy replies were not forced to be seen
         #$ emmy.simplr.pending_messages = []
         #$ emmy.simplr.sent_messages[-1].replies = []
 
-    if aubrey.relationship >= Relationship.FWB and riley.relationship >= Relationship.FWB:
+    if CharacterService.is_fwb(aubrey) and CharacterService.is_fwb(riley):
         $ v13_threesomeending = True
         jump v14s01
 
@@ -71,7 +71,7 @@ label v14s01:
 
     u "(Oh, shit. This is happening.)"
 
-    if config_censored:
+    if is_censored:
         call screen censored_popup("v14s01_nsfwSkipLabel1")
 
     scene v14s01_1b # FPP. Same as v14s01_1a, Riley and Aubrey topless, looking at MC seductively, both mouths closed

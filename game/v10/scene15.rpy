@@ -369,7 +369,7 @@ label v10_call_with_lauren1:
 
                     u "You know, playing the harmonica requires quite a lot of tongue coordination, usually girls like that."
 
-                    if lauren.relationship >= Relationship.KISS: # maybe another variable for having madeout with lauren?
+                    if CharacterService.is_kissed(lauren) or CharacterService.is_girlfriend(lauren):
                         if joinwolves:
                             scene v10scwl2
                         else:
@@ -753,7 +753,7 @@ label v10_call_with_lauren1:
 
     au "That must have been the wind. I'm just on my way home from the gym."
 
-    if aubrey.relationship >= Relationship.FWB: # RCS - MC is in a relationship with Aubrey
+    if CharacterService.is_fwb(aubrey): # RCS - MC is in a relationship with Aubrey
         au "I'm gonna have the house all to myself since none of the girls are home. You wanna come over?"
 
         scene v10saow5

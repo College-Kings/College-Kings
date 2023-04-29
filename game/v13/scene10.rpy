@@ -127,15 +127,14 @@ label v13s10:
 
             play sound "sounds/vibrate.mp3"
 
-            $ aubrey.messenger.newMessage("Still getting ready, meet you in about an hour? We still have plenty of time.", force_send=True)
-            $ aubrey.messenger.addReply("Haha, OK ", func=None)
+            $ MessengerService.new_message(aubrey, "Still getting ready, meet you in about an hour? We still have plenty of time.")
+            $ MessengerService.add_reply(aubrey, "Haha, OK ")
     
-            label v13s9_PhoneContinueAubrey:
-                if aubrey.messenger.replies:
-                    call screen phone
-                if aubrey.messenger.replies:
+            while MessengerService.has_replies(aubrey):
+                call screen phone
+                
+                if MessengerService.has_replies(aubrey):
                     u "(I should check my phone.)"
-                    jump v13s9_PhoneContinueAubrey
     
         elif v13_penelope_concert: # If invited Penelope/Penelope invited MC    
             scene v13s10_10
@@ -145,15 +144,13 @@ label v13s10:
 
             play sound "sounds/vibrate.mp3"
 
-            $ penelope.messenger.newMessage("Trying to finish some things for Ms. Rose, give me about an hour?", force_send=True)
-            $ penelope.messenger.addReply("No worries, we have time.", func=None)
+            $ MessengerService.new_message(penelope, "Trying to finish some things for Ms. Rose, give me about an hour?")
+            $ MessengerService.add_reply(penelope, "No worries, we have time.")
 
-            label v13s9_PhoneContinuePenelope:
-                if penelope.messenger.replies:
-                    call screen phone
-                if penelope.messenger.replies:
+            while MessengerService.has_replies(penelope):
+                call screen phone
+                if MessengerService.has_replies(penelope):
                     u "(I should check my phone.)"
-                    jump v13s9_PhoneContinuePenelope
 
         # SINCE IT IS POSSIBLE TO NOT GET CONCERT TICKETS AT ALL, I ADDED THIS LINE. IF THIS SCENE DOESN'T OCCUR IF MC DOESN'T GET THE TICKETS, REMOVE "ELSE" STATEMENT AND INDENT
         else: # If neither Penelope or Aubrey, then never got tickets

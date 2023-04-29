@@ -179,7 +179,7 @@ label after_load:
 
         try:
             if elijah.relationship == Relationship.MAKEFUN:
-                CharacterService.set_mood(elijah, Mood.HURT)
+                CharacterService.set_mood(elijah, Moods.HURT)
         except AttributeError: pass
 
         try:
@@ -190,8 +190,13 @@ label after_load:
         for character in (josh, lauren, chris, autumn, chloe, imre, nora):
             try:
                 if character.relationship == Relationship.MAD:
-                    CharacterService.set_mood(character, Mood.MAD)
+                    CharacterService.set_mood(character, Moods.MAD)
             except AttributeError: pass
+
+        try:
+            if evelyn.relationship == Relationship.LIKES:
+                v6_evelyn_successful_date = True
+        except AttributeError: pass
 
 #endregion NonPlayableCharacters
         try:
@@ -241,77 +246,6 @@ label after_load:
         kiwii.home_screen = "{}_home".format(kiwii.name.lower())
         simplr_app.home_screen = "{}_home".format(simplr_app.name.lower())
         relationship_app.home_screen = "{}_home".format(relationship_app.name.lower())
-
-        #### MESSENGER CONTRACTS
-        # Transfer Contact object to NonPlayableCharacter class
-        try:
-            emily.messenger = contact_Emily
-            del contact_Emily
-        except NameError: pass
-        try:
-            lauren.messenger = contact_Lauren
-            del contact_Lauren
-        except NameError: pass
-        try:
-            julia.messenger = contact_Julia
-            del contact_Julia
-        except NameError: pass
-        try:
-            ryan.messenger = contact_Ryan
-            del contact_Ryan
-        except NameError: pass
-        try:
-            josh.messenger = contact_Josh
-            del contact_Josh
-        except NameError: pass
-        try:
-            aubrey.messenger = contact_Aubrey
-            del contact_Aubrey
-        except NameError: pass
-        try:
-            chloe.messenger = contact_Chloe
-            del contact_Chloe
-        except NameError: pass
-        try:
-            amber.messenger = contact_Amber
-            del contact_Amber
-        except NameError: pass
-        try:
-            penelope.messenger = contact_Penelope
-            del contact_Penelope
-        except NameError: pass
-        try:
-            riley.messenger = contact_Riley
-            del contact_Riley
-        except NameError: pass
-        try:
-            autumn.messenger = contact_Autumn
-            del contact_Autumn
-        except NameError: pass
-        try:
-            imre.messenger = contact_Imre
-            del contact_Imre
-        except NameError: pass
-        try:
-            sebastian.messenger = contact_Sebastian
-            del contact_Sebastian
-        except NameError: pass
-        try:
-            grayson.messenger = contact_Grayson
-            del contact_Grayson
-        except NameError: pass
-        try:
-            lindsey.messenger = contact_Lindsey
-            del contact_Lindsey
-        except NameError: pass
-        try:
-            jenny.messenger = contact_Jenny
-            del contact_Jenny
-        except NameError: pass
-        try:
-            nora.messenger = contact_Nora
-            del contact_Nora
-        except NameError: pass
 
         for contact in messenger.contacts:
             try: contact.sent_messages
@@ -807,8 +741,6 @@ label after_load:
         except NameError: v11_invite_sam_europe = False
         try: v11_josh_nightclub
         except NameError: v11_josh_nightclub = False
-        try: candyLike
-        except NameError: candyLike = 0
         try: v11_tease_amber
         except NameError: v11_tease_amber = 0
         try: v11_manhunt_winner
@@ -867,8 +799,6 @@ label after_load:
         except NameError: v13s48_canoeing_as_date = False
         try: v13_help_chloe
         except NameError: v13_help_chloe = False
-        try: v13_emmy_points
-        except NameError: v13_emmy_points = 0
         try: v13_imre_disloyal
         except NameError: v13_imre_disloyal = False
         try: v13_perfume

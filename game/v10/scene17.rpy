@@ -10,7 +10,7 @@ label v10_aubrey_house:
 
     u "Look at me, walking you home, out of the kindness of my heart."
 
-    if aubrey.relationship >= Relationship.FWB: # If in relationship with Aubrey
+    if CharacterService.is_fwb(aubrey): # If in relationship with Aubrey
         scene v10auh1a # FPP Same angle as v10auh1, Aubrey with slight smile and eyebrow raised, mouth open
         with dissolve
         
@@ -217,7 +217,7 @@ label v10_aubrey_house:
 
             u "How's that going for you?"
 
-            if aubrey.relationship >= Relationship.FWB: # If in a relationship with Aubrey
+            if CharacterService.is_fwb(aubrey): # If in a relationship with Aubrey
                 scene v10auh1a
                 with dissolve
 
@@ -258,7 +258,7 @@ label v10_aubrey_house:
     menu:
         "Ask to watch":
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
-            if aubrey.relationship >= Relationship.FWB: # Aubrey relationship check
+            if CharacterService.is_fwb(aubrey): # Aubrey relationship check
                 label v10s17_galleryScene:
                 $ sceneList.add("v10_aubrey")
                 
@@ -300,7 +300,7 @@ label v10_aubrey_house:
 
                         u "How about we start with your top?"
 
-                        if config_censored:
+                        if is_censored:
                             call screen censored_popup("v10s17_nsfwSkipLabel1")
 
                         scene v10auh5b # FPP Same angle as v10auh5, Aubrey removing top with bottoms still on while smiling, mouth open
@@ -334,7 +334,7 @@ label v10_aubrey_house:
                         
                         u "Let's start with the bottoms."
 
-                        if config_censored:
+                        if is_censored:
                             call screen censored_popup("v10s17_nsfwSkipLabel1")
 
                         scene v10auh5f # FPP Same angle as v10auh5, Aubrey removing bottoms while top still on, smiling, mouth open
@@ -623,7 +623,7 @@ label v10_aubrey_house:
 
             u "Alright, I'll wait out here."
 
-            if aubrey.relationship >= Relationship.FWB: # Aubrey relationship check
+            if CharacterService.is_fwb(aubrey): # Aubrey relationship check
                 scene v10auh2f
                 with dissolve
 

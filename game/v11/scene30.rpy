@@ -1334,8 +1334,8 @@ label v11_quiz_bonus:
 
     u "Wouldn't have missed it for the world."
 
-    if (CharacterService.is_girlfriend(lauren) or (reputation() == Reputations.LOYAL and lauren.relationship >= Relationship.KISS)) and not "v11_aubrey" in sceneList:
-        if not CharacterService.is_girlfriend(lauren):
+    if (CharacterService.is_girlfriend(lauren) or (CharacterService.is_kissed(lauren) and reputation() == Reputations.LOYAL)) and not "v11_aubrey" in sceneList:
+        if CharacterService.is_kissed(lauren):
             call screen reputation_popup
 
         scene v11las44f # FPP. Lauren has her hands around MC's neck, she is looking into his eyes, she is nervous, mouth open
@@ -1429,17 +1429,15 @@ label v11_quiz_bonus:
 
         u "(Probably our pictures.)"
 
-        $ lauren.messenger.newImgMessage("images/v11/Scene 30/Laurentxtimg1.webp", force_send=True)
-        $ lauren.messenger.newImgMessage("images/v11/Scene 30/Laurentxtimg2.webp") # Lauren and MC picture together kissing (check v11las45 for the pose)
-        $ lauren.messenger.addReply("Some good looking people.")
-        $ lauren.messenger.newMessage("Sure are.")
+        $ MessengerService.new_message(lauren, "images/v11/Scene 30/Laurentxtimg1.webp")
+        $ MessengerService.new_message(lauren, "images/v11/Scene 30/Laurentxtimg2.webp") # Lauren and MC picture together kissing (check v11las45 for the pose)
+        $ MessengerService.add_reply(lauren, "Some good looking people.")
+        $ MessengerService.new_message(lauren, "Sure are.")
 
-        label v11s30_PhoneContinuelauren2:
-            if lauren.messenger.replies:
-                call screen phone
-            if lauren.messenger.replies:
+        while MessengerService.has_replies(lauren):
+            call screen phone
+            if MessengerService.has_replies(lauren):
                 u "(I should check my phone.)"
-                jump v11s30_PhoneContinuelauren2
 
     else:
         scene v11las49 # TPP. Show MC standing in the aisle, looking at where Lauren was walking away from, he is slightly smiling, mouth closed
@@ -1451,16 +1449,14 @@ label v11_quiz_bonus:
 
         u "(Probably our picture.)"
 
-        $ lauren.messenger.newImgMessage("images/v11/Scene 30/Laurentxtimg1.webp", force_send=True) # Lauren and MC picture together holding wands (check v11las45a for the pose)
-        $ lauren.messenger.addReply("Some good looking people.")
-        $ lauren.messenger.newMessage("Sure are.")
+        $ MessengerService.new_message(lauren, "images/v11/Scene 30/Laurentxtimg1.webp") # Lauren and MC picture together holding wands (check v11las45a for the pose)
+        $ MessengerService.add_reply(lauren, "Some good looking people.")
+        $ MessengerService.new_message(lauren, "Sure are.")
 
-        label v11s30_PhoneContinuelauren1:
-            if lauren.messenger.replies:
-                call screen phone
-            if lauren.messenger.replies:
+        while MessengerService.has_replies(lauren):
+            call screen phone
+            if MessengerService.has_replies(lauren):
                 u "(I should reply to Lauren.)"
-                jump v11s30_PhoneContinuelauren1
 
     scene v11las49
     with dissolve

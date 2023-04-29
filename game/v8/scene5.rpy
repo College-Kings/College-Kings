@@ -5,7 +5,7 @@
 label hoco_amb_night:
     $ sceneList.add("v8_amber")
     stop music fadeout 3
-    if config_censored:
+    if is_censored:
         call screen censored_popup("v8s5_nsfwSkipLabel1")
 
     show screen v8s5_amberSexOverlay

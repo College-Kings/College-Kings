@@ -316,15 +316,13 @@ label v12_lindsey_lobby:
 
     pause 2
 
-    $ riley.messenger.newMessage("Hey, I saw you were having breakfast with Lindsey, can you come to the cafe down the road when you're done? I have something to talk to you about in private.", force_send=True)
-    $ riley.messenger.addReply("Sure, on my way", func=None)
+    $ MessengerService.new_message(riley, "Hey, I saw you were having breakfast with Lindsey, can you come to the cafe down the road when you're done? I have something to talk to you about in private.", force_send=True)
+    $ MessengerService.add_reply(riley, "Sure, on my way")
 
-    label v12s36_riley_text:
-        if riley.messenger.replies:
-            call screen phone
-        if riley.messenger.replies:
+    while MessengerService.has_replies(riley):
+        call screen phone
+        if MessengerService.has_replies(riley):
             u "(I should probably reply.)"
-            jump v12s36_riley_text
 
     stop music fadeout 3
 

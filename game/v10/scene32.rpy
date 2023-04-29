@@ -14,7 +14,7 @@ label v10_tues_room_night:
         scene v10strn2 # TPP. Show MC now lying on his back, looking tired.
         with dissolve
 
-        if lauren.relationship >= Relationship.KISS:
+        if CharacterService.is_kissed(lauren) or CharacterService.is_girlfriend(lauren):
             pause 0.75
 
             scene v10strn2a # TPP. Same as 2, MC now browsing his phone.
@@ -22,20 +22,17 @@ label v10_tues_room_night:
 
             u "(And it continues.)"
 
-            python:
-                if config_censored:
-                    lauren.messenger.newImgMessage("gui/censoredPopup/censoredBackground.webp", force_send=True)
-                else:
-                    lauren.messenger.newImgMessage("images/v10/scene 32/v9lauText.webp", force_send=True)
-                lauren.messenger.newMessage("Sweet Dreams ;)", force_send=True)
-                lauren.messenger.addReply("They will be now.")
+            if is_censored:
+                $ MessengerService.new_message(lauren, "gui/censoredPopup/censoredBackground.webp")
+            else:
+                $ MessengerService.new_message(lauren, "images/v10/scene 32/v9lauText.webp")
+            $ MessengerService.new_message(lauren, "Sweet Dreams ;)")
+            $ MessengerService.add_reply(lauren, "They will be now.")
 
-            label v10s32_phoneCheckW:
-                if lauren.messenger.replies:
-                    call screen phone
-                if lauren.messenger.replies:
+            while MessengerService.has_replies(lauren):
+                call screen phone
+                if MessengerService.has_replies(lauren):
                     u "(I should reply to Lauren)"
-                    jump v10s32_phoneCheckW
 
             scene v10strn2b # TPP. Same as 2, MC no longer on his phone, subtle smile.
             with dissolve
@@ -76,7 +73,7 @@ label v10_tues_room_night:
         scene v10strn7 # TPP. Show MC now lying on his back, looking tired.
         with dissolve
 
-        if lauren.relationship >= Relationship.KISS:
+        if CharacterService.is_kissed(lauren) or CharacterService.is_girlfriend(lauren):
             pause 0.75
 
             scene v10strn7a # TPP. Same as 2, MC now browsing his phone.
@@ -84,20 +81,17 @@ label v10_tues_room_night:
 
             u "(And it continues.)"
 
-            python:
-                if config_censored:
-                    lauren.messenger.newImgMessage("gui/censoredPopup/censoredBackground.webp", force_send=True)
-                else:
-                    lauren.messenger.newImgMessage("images/v10/scene 32/v9lauText.webp", force_send=True)
-                lauren.messenger.newMessage("Sweet Dreams ;)", force_send=True)
-                lauren.messenger.addReply("They will be now.")
+            if is_censored:
+                $ MessengerService.new_message(lauren, "gui/censoredPopup/censoredBackground.webp")
+            else:
+                $ MessengerService.new_message(lauren, "images/v10/scene 32/v9lauText.webp")
+            $ MessengerService.new_message(lauren, "Sweet Dreams ;)")
+            $ MessengerService.add_reply(lauren, "They will be now.")
 
-            label v10s32_phoneCheckA:
-                if lauren.messenger.replies:
-                    call screen phone
-                if lauren.messenger.replies:
+            while MessengerService.has_replies(lauren):
+                call screen phone
+                if MessengerService.has_replies(lauren):
                     u "(I should reply to Lauren)"
-                    jump v10s32_phoneCheckA
 
             scene v10strn7b # TPP. Same as 2, MC no longer on his phone, subtle smile.
             with dissolve

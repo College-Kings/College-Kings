@@ -25,7 +25,7 @@ label s26:
     scene v8sopt2a # FPP. Same camera as v8sopt2, Riley and Aubrey both smiling, mouth closed.
     with dissolve
 
-    if riley.relationship >= Relationship.FWB:
+    if CharacterService.is_fwb(riley):
         u "Gorgeous!"
 
     else:
@@ -44,7 +44,7 @@ label s26:
     scene v8sopt2c # FPP. Same camera as v8sopt2, Aubrey and Riley now looking back at camera, still wearing their glasses, mouths closed.
     with dissolve
 
-    if riley.relationship >= Relationship.FWB and aubrey.relationship >= Relationship.FWB:
+    if CharacterService.is_fwb(riley) and CharacterService.is_fwb(aubrey):
         u "Hot! You both look amazing."
 
     else:
@@ -261,7 +261,7 @@ label after_glasses_choice:
     scene v8sopt22 # FPP. Show Aubrey looking at Riley, Riley wearing RW ASG Rectangle Thin Frame glasses, Aubrey smile, Riley smile, both mouths closed.
     with dissolve
 
-    if riley.relationship >= Relationship.FWB:
+    if CharacterService.is_fwb(riley):
         u "(She looks so kissable)"
 
     else:
@@ -305,7 +305,7 @@ label after_glasses_choice:
     scene v8sopt24b # FPP. Same camera as v8sopt24, Riley and Aubrey smiling, both mouths closed.
     with dissolve
 
-    if riley.relationship >= Relationship.FWB:
+    if CharacterService.is_fwb(riley):
         u "Those look really hot, but I still think the last pair matches your hair, like Aubrey said."
 
     else:
@@ -321,7 +321,7 @@ label after_glasses_choice:
 
     ri "Last pair it is!"
 
-    if riley.relationship >= Relationship.FWB or aubrey.relationship >= Relationship.FWB:
+    if CharacterService.is_fwb(riley) or CharacterService.is_fwb(aubrey):
         scene v8sopt24d # FPP. Same camera as v8sopt24, Riley curious expression, Aubrey neutral expression, Riley mouth open.
         with dissolve
 

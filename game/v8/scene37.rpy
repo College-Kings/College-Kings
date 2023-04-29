@@ -38,7 +38,7 @@ label v8_tues_evening:
             if MessengerService.has_replies(lauren):
                 u "I should reply to Lauren."
 
-        if riley.relationship >= Relationship.FWB:
+        if CharacterService.is_fwb(riley):
             $ MessengerService.add_reply(riley, _("If your legs were lies, you could call me a liar. For I would be gladly spreading them."))
             $ MessengerService.new_message(riley, _("That was the most corny, idiotic joke I've ever heard, Mr. Liar. :)"))
             $ MessengerService.add_reply(riley, _("Thinking of you makes it harder to study. And in some other places as well..."))
@@ -102,7 +102,7 @@ label v8_tues_evening:
             if MessengerService.has_replies(lauren):
                 u "I should reply to Lauren."
 
-        if riley.relationship >= Relationship.FWB:
+        if CharacterService.is_fwb(riley):
             $ MessengerService.add_reply(riley, _("If your legs were lies, you could call me a liar. For I would be gladly spreading them."))
             $ MessengerService.new_message(riley, _("That was the most corny, idiotic joke I've ever heard, Mr. Liar. :)"))
             $ MessengerService.add_reply(riley, _("Thinking of you makes it harder to study. And in some other places as well..."))

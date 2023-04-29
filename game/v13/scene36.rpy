@@ -29,7 +29,7 @@ label v13_walk_garden:
 
     li "He finished up with all of his frat planning with Sebastian and now for the last few days of our little vacay, he wants to be the perfect boyfriend. *Chuckles*"
 
-    if nora.relationship >= Relationship.FWB:
+    if CharacterService.is_fwb(nora):
         #scene v13s36_2 
         scene v13s36_3a
         with dissolve

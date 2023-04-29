@@ -13,7 +13,7 @@ screen v6_fr3garden():
             if not "josh" in freeroam3:
                 action Jump("v6_fr3josh1")
 
-            elif relics >= 5 and upstairs == "nobody" and not "kim" in freeroam3asked: # Asking people for upstairs
+            elif all(v6_relics.values()) and upstairs == "nobody" and not "kim" in freeroam3asked: # Asking people for upstairs
                 action Jump("v6_fr3josh3")
             else:
                 action Jump("v6_fr3josh2")
@@ -34,7 +34,7 @@ screen v6_fr3garden():
 
             if not "josh" in freeroam3:
                 actions.append(Jump("v6_fr3josh1"))
-            elif relics >= 5 and upstairs == "nobody" and not "kim" in freeroam3asked: # Asking people for upstairs
+            elif all(v6_relics.values()) and upstairs == "nobody" and not "kim" in freeroam3asked: # Asking people for upstairs
                 actions.append(Jump("v6_fr3josh3"))
 
             actions.append(Show("v6_fr3downstairs"))
@@ -99,7 +99,7 @@ screen v6_fr3livingroom():
 
         if not "aubrey" in freeroam3:
             action Jump("v6_fr3aubrey1")
-        elif relics >= 5 and upstairs == "nobody": # Asking people for upstairs
+        elif all(v6_relics.values()) and upstairs == "nobody": # Asking people for upstairs
             action Jump("v6_fr3aubrey3")
         else:
             action Jump("v6_fr3aubrey2")
@@ -129,7 +129,7 @@ screen v6_fr3livingroom():
 
             if not "aubrey" in freeroam3:
                 actions.append(Jump("v6_fr3aubrey1"))
-            elif relics >= 5 and upstairs == "nobody": # Asking people for upstairs
+            elif all(v6_relics.values()) and upstairs == "nobody": # Asking people for upstairs
                 actions.append(Jump("v6_fr3aubrey3"))
 
             actions.append(Show("v6_fr3downstairs"))
@@ -183,7 +183,7 @@ screen v6_fr3kitchen():
 
         if not "riley" in freeroam3:
             action Jump("v6_fr3riley1")
-        elif relics >= 5 and upstairs == "nobody" and not "riley" in freeroam3asked: # Asking people for upstairs
+        elif all(v6_relics.values()) and upstairs == "nobody" and not "riley" in freeroam3asked: # Asking people for upstairs
             action Jump("v6_fr3riley3")
         else:
             action Jump("v6_fr3riley2")
@@ -206,7 +206,7 @@ screen v6_fr3kitchen():
 
             if not "riley" in freeroam3:
                 actions.append(Jump("v6_fr3riley1"))
-            elif relics >= 5 and upstairs == "nobody" and not "riley" in freeroam3asked: # Asking people for upstairs
+            elif all(v6_relics.values()) and upstairs == "nobody" and not "riley" in freeroam3asked: # Asking people for upstairs
                 actions.append(Jump("v6_fr3riley3"))
 
         timer 0.1 action renpy.random.choice(actions)
@@ -285,7 +285,7 @@ screen v6_fr3garage():
             if not "amber" in freeroam3:
                 action Jump("v6_fr3amber1")
 
-            elif relics >= 5 and upstairs == "nobody" and not "amber" in freeroam3asked: #Asking people for upstairs
+            elif all(v6_relics.values()) and upstairs == "nobody" and not "amber" in freeroam3asked: #Asking people for upstairs
                 action Jump("v6_fr3amber3")
             else:
                 action Jump("v6_fr3amber2")
@@ -319,7 +319,7 @@ screen v6_fr3garage():
                 if not "amber" in freeroam3:
                     actions.append(Jump("v6_fr3amber1"))
 
-                elif relics >= 5 and upstairs == "nobody" and not "amber" in freeroam3asked: #Asking people for upstairs
+                elif all(v6_relics.values()) and upstairs == "nobody" and not "amber" in freeroam3asked: #Asking people for upstairs
                     actions.append(Jump("v6_fr3amber3"))
 
 

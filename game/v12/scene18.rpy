@@ -849,7 +849,7 @@ label v12s18_bottlespin:
 
     u "Oh, uhh-"
 
-    if nora.relationship >= Relationship.LIKES:
+    if v8_nora_likes_mc:
         scene v12slpbs16 # TPP. Show Nora grabbing MC's face and kissing him (try and make this a bit passionate)
         with dissolve
         play sound "sounds/kiss.mp3"
@@ -1344,7 +1344,7 @@ label v12s18_fmk:
 
     u "*Laughs* Alright Nora, your turn."
 
-    if nora.relationship >= Relationship.LIKES:
+    if v8_nora_likes_mc:
         scene v12slpfmk5g
         with dissolve
 
@@ -1892,8 +1892,8 @@ label v12s18_bet: # END OF FREE ROAM
 
             u "Something like that."
 
-            if amber.relationship >= Relationship.FWB or reputation() == Reputations.POPULAR:
-                if amber.relationship < Relationship.FWB:
+            if CharacterService.is_fwb(amber) or reputation() == Reputations.POPULAR:
+                if not CharacterService.is_fwb(amber):
                     call screen reputation_popup
                 
                 scene v12slpbet17

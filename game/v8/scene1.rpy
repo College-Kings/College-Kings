@@ -1,14 +1,12 @@
 ### v8 beginning. Variable definitions here
 label v8start:
-
-    if lauren.relationship < Relationship.FRIEND: #reset lauren mad to friend
-        $ CharacterService.set_relationship(lauren, Relationship.FRIEND, mc)
+    $ CharacterService.remove_mood(lauren, Moods.MAD)
     
     if ending == "lauren":
         jump v8_la_start
     elif ending == "chloe":
         jump v8_cl_start
-    elif ending == "riley" and riley.relationship >= Relationship.LIKES:
+    elif ending == "riley" and (Moods.TEASED in riley.mood or CharacterService.is_fwb(riley)):
         jump v8_ri_start
     elif ending == "riley":
         jump v8_ri_start_fr

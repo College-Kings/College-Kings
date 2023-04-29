@@ -7,7 +7,7 @@ label v12_morning_london:
     play music "music/v12/Track Scene 5.mp3" fadein 2
 
     if not v11_riley_roomate:
-        if chloe.relationship >= Relationship.FWB:
+        if CharacterService.is_fwb(chloe) or CharacterService.is_girlfriend(chloe):
             scene v12mol1 # TPP. Show MC waking up, Chloe sleeping next to him in MC's bed
             with fade
 
@@ -264,7 +264,7 @@ label v12_morning_london:
 
         pause 0.75
 
-        if chloe.relationship >= Relationship.FWB:
+        if CharacterService.is_fwb(chloe) or CharacterService.is_girlfriend(chloe):
             scene v12mol15 # TPP. Show MC giving Chloe a kiss, MC holding his bag
             with dissolve
 

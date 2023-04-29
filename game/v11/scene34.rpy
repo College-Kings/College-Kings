@@ -86,7 +86,7 @@ label v11_cardealership:
 
     cl "What? *Chuckles* I just thought we could have a little fun."
 
-    if chloe.relationship >= Relationship.FWB:
+    if CharacterService.is_fwb(chloe) or CharacterService.is_girlfriend(chloe):
         scene v11cd7 # TPP. chloe whispers in MCs ear, MC looks surprised, MCs mouth closed chloe's mouth opened
         with dissolve
         
@@ -185,7 +185,7 @@ label v11_cardealership:
 
     pause 0.75
 
-    if chloe.relationship >= Relationship.FWB:
+    if CharacterService.is_fwb(chloe) or CharacterService.is_girlfriend(chloe):
         scene v11cd16 #FPP. Inside of the car, mc looking at chloe in passenger sit, mouth closed
         with dissolve
         
@@ -287,7 +287,7 @@ label v11_cardealership:
 
     cl "Haha, [name], this is amazing."
 
-    if chloe.relationship >= Relationship.FWB:
+    if CharacterService.is_fwb(chloe) or CharacterService.is_girlfriend(chloe):
         menu:
             "Talk about \"us\"": 
                 scene v11cd22a # FPP. looking at chloe, mouth closed
@@ -385,7 +385,7 @@ label v11_cardealership:
 
     label v11s34_c1:
 
-    if chloe.relationship >= Relationship.FWB:
+    if CharacterService.is_fwb(chloe) or CharacterService.is_girlfriend(chloe):
         menu:
             "Kiss her":
                 scene v11cd30 # TPP. MC sits on the hood of the car, chloe is nearby
@@ -831,11 +831,10 @@ label v11_cardealership:
 
         lee "[name], I don't believe that's your room."
 
-        if chloe.relationship >= Relationship.FWB:
-            scene v11cd48a # FPP. same as 47, mouth closed
-            with dissolve
+        scene v11cd48a # FPP. same as 47, mouth closed
+        with dissolve
 
-            u "(What a fucking cock-block.)"
+        u "(What a fucking cock-block.)"
 
         scene v11cd49 # FPP. Looking at chloe, mouth closed
         with dissolve
@@ -847,10 +846,9 @@ label v11_cardealership:
 
         cl "You better."
 
-        if chloe.relationship >= Relationship.FWB:
-            scene v11cd50 # TPP. Mc heads to his room, disapointed face, mouth closed
-            with dissolve
+        scene v11cd50 # TPP. Mc heads to his room, disapointed face, mouth closed
+        with dissolve
 
-            pause 0.75
+        pause 0.75
 
         jump v11_riley_sex

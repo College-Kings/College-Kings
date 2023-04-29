@@ -554,7 +554,7 @@ label v12s7_aubrey1:
 
             au "Oh, sweetie. If I didn't take a look at this I wouldn't be able to call myself a nurse. Please come by my office so I can get you fixed up."
 
-            if aubrey.relationship >= Relationship.FWB:
+            if CharacterService.is_fwb(aubrey):
                 au "I'll need some privacy to give the best treatment possible."
 
                 scene v12ferau2 # TPP. Show Aubrey wispering in mc's ear
@@ -1050,7 +1050,7 @@ label v12s7_riley1:
 
             u "Haha, alright. I'll catch up with you later."
 
-            if chloe.relationship >= Relationship.FWB:
+            if CharacterService.is_fwb(chloe) or CharacterService.is_girlfriend(chloe):
                 scene v12ferri6 # TPP. Show MC kissing chloe
                 with dissolve
                 play sound "sounds/kiss.mp3"
@@ -1280,7 +1280,7 @@ label v12s7_chloe1:
 
     cl "That's actually a good point... Okay, now I'm not so sure about you being the killer. *Chuckles*"
 
-    if chloe.relationship >= Relationship.FWB:
+    if CharacterService.is_fwb(chloe) or CharacterService.is_girlfriend(chloe):
         scene v12ferch3 # TPP. Show chloe, hand on mc's chest, chloe mouth open
         with dissolve
 
@@ -3144,7 +3144,7 @@ label v12s7_lindsey2:
     scene v12ferli3b
     with dissolve
 
-    if lindsey.relationship >= Relationship.KISS:
+    if CharacterService.is_kissed(lindsey):
         scene v12ferli5 # TPP. Show mc and lindsey kissing
         with dissolve
 
@@ -3644,7 +3644,7 @@ label v12s7_penelope1:
 
             pe "I am."
 
-            if penelope.relationship >= Relationship.LIKES:
+            if CharacterService.is_dating(penelope):
                 scene v12ferpen1
                 with dissolve
 
@@ -5339,7 +5339,7 @@ label v12s7_nora1:
                     
                 "I'd choose you":
                     $ reputation.add_point(RepComponent.BOYFRIEND)
-                    $ CharacterService.set_relationship(nora, Relationship.LIKES, mc)
+                    $ v8_nora_likes_mc = True
 
                     scene v12fernor1
                     with dissolve
@@ -5414,7 +5414,7 @@ label v12s7_nora_kill:
 
     pause 0.75
 
-    if nora.relationship >= Relationship.LIKES:
+    if v8_nora_likes_mc:
         scene v12fernor5a # FPP. Show nora, slight smile mouth open
         with dissolve
 
@@ -5879,7 +5879,9 @@ label v12s7_josh1:
 
 label v12s7_josh2:
     $ freeroam9.add("josh2")
-    $ v12s7_seenList = []
+    $ v12s7_seenList = [aubrey]
+    if v12s7_aubrey_moved:
+        $ v12s7_seenList = []
 
     show screen murder_button_overlay(josh)
 

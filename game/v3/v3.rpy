@@ -773,7 +773,7 @@ label conl:
     play sound "sounds/swoosh.mp3"
     pause 0.5
 
-    show screen fantasyOverlay
+    show fantasyoverlay onlayer foreground
 
     play music "music/mhorror.mp3"
     scene s226 # Dream with emily, fighting over a stuffed animal in bed
@@ -894,7 +894,7 @@ label conl:
 
     scene s225a # you open your eyes
     with flash
-    hide screen fantasyOverlay
+    hide fantasyoverlay onlayer foreground
 
     u "*Breathing heavily*"
 
@@ -1747,7 +1747,7 @@ label conl:
 
                         u "Touch both your elbows in front of your chest."
 
-                        if config_censored:
+                        if is_censored:
                             call screen censored_popup("v3_nsfwSkipLabel1")
 
                         scene s254p
@@ -1808,7 +1808,7 @@ label conl:
 
                 au "Yeah, you can. See?"
 
-                if config_censored:
+                if is_censored:
                     call screen censored_popup("aubsexad")
 
                 scene s254aa ## aubrey and you standing
@@ -2047,7 +2047,7 @@ label conl:
 
         au "Yeah, you can. See?"
 
-        if config_censored:
+        if is_censored:
             call screen censored_popup("aubsexad")
 
         scene s254aa ## aubrey and you standing
@@ -2462,7 +2462,7 @@ label aubsexad:
 
         u "Lauren? What are you doing here?"
 
-        if meetlauren and laawk: # you've met lauren in the cafe
+        if meetlauren and Moods.AWKWARD in lauren.mood: # you've met lauren in the cafe
             scene s266 # Lauren closeup awkward
             with dissolve
 
@@ -3184,6 +3184,7 @@ label continueq:
                     $ toldlauren = True
                     $ reputation.add_point(RepComponent.BOYFRIEND)
                     $ CharacterService.set_mood(lauren, Moods.MAD)
+                    $ CharacterService.set_relationship(lauren, Relationship.FRIEND)
 
                     u "(Lauren values honesty and we're not in a relationship yet, so she'll probably be understanding as long as I tell her the truth.)"
 
@@ -3347,6 +3348,7 @@ label continueq:
                                 $ reputation.add_point(RepComponent.TROUBLEMAKER)
                                 $ laurentoofar = True
                                 $ CharacterService.set_mood(lauren, Moods.MAD)
+                                $ CharacterService.set_relationship(lauren, Relationship.FRIEND)
 
                                 scene s291b # your hand moves further up
                                 with dissolve

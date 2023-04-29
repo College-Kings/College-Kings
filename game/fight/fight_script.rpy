@@ -1,12 +1,15 @@
 init python:
-    class FightStance(SmartEnum):
-        AGGRESSIVE = 1
-        FORWARD = 2
-        SOLID = 3
-        DEFENSIVE = 4
+    class FightStance(IntEnum):
+        AGGRESSIVE = enum.auto()
+        FORWARD = enum.auto()
+        SOLID = enum.auto()
+        DEFENSIVE = enum.auto()
+
+        @classmethod
+        def _missing_(cls, value):
+            return cls.AGGRESSIVE
 
 
-init python:
     class BasePlayer:
         MAX_GUARD = FightStance.DEFENSIVE.value + 1  # Turtle stance bonus
 

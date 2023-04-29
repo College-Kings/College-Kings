@@ -208,7 +208,7 @@ label v12_murder_mystery_reveal:
 
         "Hurry to help her":
             $ reputation.add_point(RepComponent.BOYFRIEND)
-            $ CharacterService.set_relationship(nora, Relationship.LIKES, mc)
+            $ v8_nora_likes_mc = True
             
             scene v12mmr9 # TPP. Show MC rushing to Nora, MC worried, mouth closed, Nora feeling sick, mouth closed
             with dissolve

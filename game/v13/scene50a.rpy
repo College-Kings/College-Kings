@@ -13,7 +13,7 @@ label v13s50a:
 
         pause 1
 
-    if config_censored:
+    if is_censored:
         call screen censored_popup("v13s50a_nsfwSkipLabel1")
 
     play music "music/v13/Track Scene 50a.mp3" fadein 2
@@ -255,7 +255,7 @@ label v13s50a:
     if CharacterService.is_girlfriend(chloe) and not v11_riley_roomate:
         jump v13s52
     
-    elif riley.relationship >= Relationship.FWB and v11_riley_roomate:
+    elif CharacterService.is_fwb(riley) and v11_riley_roomate:
         jump v13s53
     
     else: 

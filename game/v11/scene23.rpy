@@ -392,7 +392,7 @@ label v11s23_riley1:
 
             u "Yeah, just a little bit of excitement..."
 
-            if riley.relationship < Relationship.FWB:
+            if CharacterService.is_friend(riley):
                 scene v11frmri3b # FPP Same angle as v11frmri3, Riley raising her eyebrow and smiling, mouth open
                 with dissolve
 
@@ -445,7 +445,7 @@ label v11s23_riley1:
 
             u "What's the reason then?"
 
-            if riley.relationship < Relationship.FWB:
+            if CharacterService.is_friend(riley):
                 scene v11frmri3b
                 with dissolve
 
@@ -729,7 +729,7 @@ label v11s23_penelope1:
 
     pe "No no, it's not that. I'm just not used to it. You literally go out of your way to help me."
 
-    if penelope.relationship >= Relationship.LIKES:
+    if CharacterService.is_dating(penelope):
         menu:
             "Flirt":
                 $ v11s23_penelope_date = True

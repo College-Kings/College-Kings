@@ -128,7 +128,7 @@ label v10_chloe_hallway:
                                 "Have a Rematch":
                                     $ reputation.add_point(RepComponent.BOYFRIEND)
                                     $ CharacterService.set_relationship(chloe, Relationship.FRIEND, mc)
-                                    
+                                    $ CharacterService.remove_mood(chloe, Moods.MAD)
                                     $ grant_achievement("on_the_court")
 
                                     u "Yeah let's go."

@@ -9,7 +9,7 @@ label v11_aubrey_plane_sex:
     play music "music/v11/Track Scene 13_1.mp3" fadein 2
     pause 0.75
 
-    if aubrey.relationship < Relationship.FWB:
+    if CharacterService.is_friend(aubrey):
         jump v11_nora_chris_plane
 
     else:
@@ -35,6 +35,7 @@ label v11_aubrey_plane_sex:
                 if CharacterService.is_girlfriend(lauren):
                     $ CharacterService.set_mood(lauren, Moods.MAD)
                     $ v11_lauren_caught_aubrey = True
+                    $ CharacterService.set_relationship(lauren, Relationship.FRIEND)
 
                 scene v11aub4
                 with dissolve
@@ -51,7 +52,7 @@ label v11_aubrey_plane_sex:
 
                 pause 0.75
 
-                if config_censored:
+                if is_censored:
                     call screen censored_popup("v11s13_nsfwSkipLabel1")
 
                 stop music fadeout 3

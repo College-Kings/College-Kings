@@ -93,7 +93,7 @@ label v10_riley_walk:
     
     ri "Now Aubrey on the other hand, she knows how to dance so I can only imagine. You know?"
 
-    if aubrey.relationship >= Relationship.FWB: # -If MC slept with aubrey
+    if CharacterService.is_fwb(aubrey): # -If MC slept with aubrey
         scene v10srwh3a
         with dissolve
 
@@ -172,7 +172,7 @@ label v10_riley_walk:
 
     ri "No for real for real. I get along with other girls, but as far as guys go there aren't many that I really feel that close with. But I do feel pretty close with you."
 
-    if riley.relationship >= Relationship.FWB: # if MC and Riley had sex
+    if CharacterService.is_fwb(riley): # if MC and Riley had sex
         scene v10srwh3a
         with dissolve
 
@@ -194,7 +194,7 @@ label v10_riley_walk:
 
     u "You're welcome."
 
-    if riley.relationship >= Relationship.FWB:
+    if CharacterService.is_fwb(riley):
         scene v10srwh3b # FPP. Same camera as v10srwh3. Show Riley as though she's walking next to MC, with more of a mischevious smile, mouth open.
         with dissolve
 

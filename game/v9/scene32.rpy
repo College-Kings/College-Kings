@@ -36,7 +36,7 @@ label v9_sat_hit_gym:
 
     pause 1
 
-    if evelyn.relationship >= Relationship.LIKES:
+    if v6_evelyn_successful_date:
         scene v9atg3 # FPP. Show Evelyn sat on a weight bench inside the gym (now infront of MC), mouth closed
         with dissolve
         u "Hey, you seem to handle that bench pretty easy."
@@ -148,7 +148,7 @@ label v9_sat_hit_gym_train:
 label v9_sat_skip_gym:
     u "(Best that I don't push it.)"
 
-    if riley.relationship >= Relationship.FWB:
+    if CharacterService.is_fwb(riley):
         scene v9atg1a # TPP. Same camera as v9atg1, Show MC checking his phone.
         with dissolve
 

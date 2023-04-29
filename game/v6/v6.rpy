@@ -2046,7 +2046,7 @@ label continuebd:
 
             "It'll be a nice dinner":
                 $ reputation.add_point(RepComponent.BOYFRIEND)
-                $ CharacterService.set_relationship(evelyn, Relationship.DATE, mc)
+                $ CharacterService.set_relationship(evelyn, Relationship.DATING)
 
                 scene s524e
                 with dissolve
@@ -2119,7 +2119,7 @@ label continuebd:
 
         play sound "sounds/swoosh.mp3"
 
-        show screen fantasyOverlay
+        show fantasyoverlay onlayer foreground
 
         scene s387a # even closer, dog on the left side
         with flash
@@ -2139,7 +2139,7 @@ label continuebd:
 
         pause 1.0
 
-        hide screen fantasyOverlay
+        hide fantasyoverlay onlayer foreground
         play sound "sounds/swoosh.mp3"
         scene s525
         with flash
@@ -2739,7 +2739,7 @@ label emsex_a:
 
     pause 0.5
 
-    if config_censored:
+    if is_censored:
         call screen censored_popup("v6_nsfwSkipLabel1")
 
     scene em6
@@ -3126,9 +3126,8 @@ label fy_bd: # not gone to Emily's
 
     pause 0.5
 
-    if evelyn.relationship >= Relationship.DATE:
+    if CharacterService.is_dating(evelyn):
         play music "music/mlove1.mp3"
-
         queue music ["music/mlove2.mp3"]
 
         scene s546a # phone close up, it's 7:30
@@ -3476,7 +3475,7 @@ label fy_bd: # not gone to Emily's
 
             "Ask about her dreams":
                 $ reputation.add_point(RepComponent.BOYFRIEND)
-                $ CharacterService.set_relationship(evelyn, Relationship.LIKES, mc)
+                $ v6_evelyn_successful_date = True
 
                 scene s558d
                 with dissolve
@@ -3580,7 +3579,7 @@ label fy_bd: # not gone to Emily's
 
         ev "I've already called an Uber."
 
-        if evelyn.relationship >= Relationship.LIKES:
+        if v6_evelyn_successful_date:
             ev "Are you just gonna walk back? We can share the Uber if you want."
 
             scene s560a
@@ -3599,7 +3598,7 @@ label fy_bd: # not gone to Emily's
 
         ev "There it is."
 
-        if evelyn.relationship >= Relationship.LIKES:
+        if v6_evelyn_successful_date:
             scene s562 # Close up evelyn smiling at you, standing in front of you, about to enter the uber
             with dissolve
 
@@ -3663,7 +3662,7 @@ label fy_bd: # not gone to Emily's
         scene s564 # you walking back to your dorm at night
         with fade
 
-        if evelyn.relationship >= Relationship.LIKES:
+        if v6_evelyn_successful_date:
             u "(That went way better than expected. Once she started talking about her dreams, it's like she turned into this completely different person.)"
 
         else:
@@ -3855,7 +3854,7 @@ label fy_bd: # not gone to Emily's
 
             u "You know, a few different girls."
 
-            if aubrey.relationship >= Relationship.FWB:
+            if CharacterService.is_fwb(aubrey):
                 u "It's kinda crazy how you're so cool with it."
 
                 scene s571a
@@ -3919,7 +3918,7 @@ label fy_bd: # not gone to Emily's
 
             u "No one, really."
 
-            if aubrey.relationship >= Relationship.FWB:
+            if CharacterService.is_fwb(aubrey):
                 scene s571a
                 with dissolve
 
@@ -4001,7 +4000,7 @@ label fy_bd: # not gone to Emily's
 
 
 label aubreysexb: # aubreysex scene
-    $ CharacterService.set_relationship(aubrey, Relationship.FWB, mc)
+    $ CharacterService.set_relationship(aubrey, Relationship.FWB)
     $ sceneList.add("v6_aubrey")
 
     stop music fadeout 3
@@ -4021,7 +4020,7 @@ label aubreysexb: # aubreysex scene
 
     au "*Quiet moan*"
 
-    if config_censored:
+    if is_censored:
         call screen censored_popup("wayhome")
 
     scene naub1a
@@ -4400,7 +4399,7 @@ label naubclimax:
     jump wayhome
 
 label aubreytalk:
-    $ CharacterService.set_relationship(aubrey, Relationship.FRIEND, mc)
+    $ CharacterService.set_relationship(aubrey, Relationship.FRIEND)
 
     u "So uhm... how's third year treating you?"
 
@@ -4438,10 +4437,10 @@ label afteraubrey:
     scene s573 # mc in his dorm in bed exhausted with his hand on his pocket
     with fade
 
-    if aubrey.relationship >= Relationship.FWB:
+    if CharacterService.is_fwb(aubrey):
         play sound "sounds/vibrate.mp3"
 
-        if config_censored:
+        if is_censored:
             $ MessengerService.new_message(aubrey, "gui/censoredPopup/censoredBackground.webp")
         else:
             $ MessengerService.new_message(aubrey, "images/v6/text3.webp")
@@ -4817,7 +4816,7 @@ label afteraubrey:
             play sound "sounds/swoosh.mp3"
             scene s63d
             with flash
-            show screen fantasyOverlay
+            show fantasyoverlay onlayer foreground
 
             imre "Exactly, which is also why I'm joining the Wolves."
 
@@ -4842,7 +4841,7 @@ label afteraubrey:
 
             imre "It is, but my brother used to be a Wolf and he told me about all the shady shit that the Apes would do."
 
-            hide screen fantasyOverlay
+            hide fantasyoverlay onlayer foreground
             play sound "sounds/swoosh.mp3"
             scene s581g
             with flash
@@ -5119,7 +5118,7 @@ label timera:
 
 label wakeupa:
     stop sound
-    hide screen fantasyOverlay
+    hide fantasyoverlay onlayer foreground
     play sound "sounds/swoosh.mp3"
     scene s586b # you wake up in disstress
     with flash
@@ -7367,7 +7366,7 @@ label v6_fr3aubrey1:
 
     scene sfr3au1 # Opening : EMily and aubrey standing with beer bottle, Aubrey mouth open curious smile
 
-    if not forgiveemily and aubrey.relationship < Relationship.FWB: #If you didn't forgive Emily and didn't have sex with Aubrey:
+    if not forgiveemily and CharacterService.is_friend(aubrey): #If you didn't forgive Emily and didn't have sex with Aubrey:
         au "Really?"
 
         scene sfr3au2 # Emily close up smiling
@@ -7470,7 +7469,7 @@ label v6_fr3aubrey1:
 
         u "Nah, it's cool. Just saying hi, I'll go talk to some of the other people here."
 
-    elif aubrey.relationship < Relationship.FWB: #If you slept with Emily and didn't sleep with Aubrey:
+    elif CharacterService.is_friend(aubrey): #If you slept with Emily and didn't sleep with Aubrey:
         au "Really?"
 
         scene sfr3au2
@@ -9142,6 +9141,7 @@ label v6_fr3chloe1:
 
             cl "*Sniff* Okay..."
 
+            $ CharacterService.remove_mood(chloe, Moods.MAD)
             $ CharacterService.set_relationship(chloe, Relationship.FRIEND, mc)
 
         else:
@@ -9384,14 +9384,14 @@ label v6_fr3office:
 
     $ freeroam3.add("office")
     
-    if relics == 4:
+    if sum(v6_relics.values()) == 4:
         jump fr3relics
     else:
         call screen v6_fr3office
 
 
 label v6_fr3picture:
-    $ relics += 1
+    $ v6_relics[V6_Relics.PICTURE] = True
 
     #*If you click on a photo on the wall*
     #MC sees an old picture of the wolves.
@@ -9401,14 +9401,14 @@ label v6_fr3picture:
 
     u "That must be Imre's older brother. They do look alike."
 
-    if relics == 4:
+    if sum(v6_relics.values()) == 4:
         jump fr3relics
     else:
         call screen v6_fr3office
 
 
 label v6_fr3trophies:
-    $ relics += 1
+    $ v6_relics[V6_Relics.TROPHIES] = True
 
     scene sfr3trophies # close up of 7 trophies
 
@@ -9418,7 +9418,7 @@ label v6_fr3trophies:
 
     u "(That's crazy...)"
 
-    if relics == 4:
+    if sum(v6_relics.values()) == 4:
         jump fr3relics
     else:
         call screen v6_fr3office
@@ -9427,13 +9427,13 @@ label v6_fr3trophies:
 #*If you click on the certificate on the wall*
 #MC looks at the certificate on the wall. It reads: Wolves Fraternity 1976.
 label v6_fr3certificate:
-    $ relics += 1
+    $ v6_relics[V6_Relics.CERTIFICATE] = True
 
     scene sfr3certificate # close up of ceritifcate
 
     u "Wow. This frat has been around for decades."
 
-    if relics == 4:
+    if sum(v6_relics.values()) == 4:
         jump fr3relics
     else:
         call screen v6_fr3office
@@ -9441,20 +9441,21 @@ label v6_fr3certificate:
 #*If you click on the book shelf*
 #MC walks to the book shelf and looks at the row of books.
 label v6_fr3books:
-    $ relics += 1
+    $ v6_relics[V6_Relics.BOOKS] = True
 
     scene sfr3books # close up of bookshelf
 
     u "I doubt any of these guys actually read any of these. Haha."
 
-    if relics == 4:
+    if sum(v6_relics.values()) == 4:
         jump fr3relics
     else:
         call screen v6_fr3office
 
 
 label fr3relics:
-    $ relics += 1
+    $ v6_relics[V6_Relics.RELICS] = True
+    
     scene fr3office
 
     u "(Empty room... All alone. This'd be the perfect place for some alone time with a girl... I should ask someone. Haha.)"
@@ -9496,7 +9497,7 @@ label v6_fr3aubrey3:
 
                 u "You wanna go upstairs and check out the Wolves' office?"
 
-                if aubrey.relationship >= Relationship.FWB:
+                if CharacterService.is_fwb(aubrey):
                     $ upstairs = "aubrey"
 
                     scene sfr3au3d
@@ -9778,7 +9779,7 @@ label v6_fr3riley3:
     ## OFFICE SCENES
 
 label upstairsaubrey:
-    if aubrey.relationship < Relationship.FWB:
+    if CharacterService.is_friend(aubrey):
         scene sufr3au1 # opening aubrey and you sitting on a couch in the office
         with fade
 
@@ -10151,7 +10152,7 @@ label upstairsaubrey:
             "I kinda get what he means":
                 $ reputation.add_point(RepComponent.BOYFRIEND)
                 $ simp = True
-                $ CharacterService.set_relationship(aubrey, Relationship.FRIEND, mc)
+                $ CharacterService.set_relationship(aubrey, Relationship.FRIEND)
 
                 scene sufr3au2c
                 with dissolve

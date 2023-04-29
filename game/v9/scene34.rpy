@@ -82,7 +82,7 @@ label v9_ri_sex:
 
     u "Can't help it. You're so fucking hot."
 
-    if config_censored:
+    if is_censored:
         call screen censored_popup("v9s34_nsfwSkipLabel1")
 
     scene v9ris6a # FPP. Same camera as v9ris6, seductive, mouth open.

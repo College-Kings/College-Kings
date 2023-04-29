@@ -37,7 +37,7 @@ label v12_roomate_talk:
                        
                 u "Haha no, I was just curious. I know you can take care of yourself."
 
-        if chloe.relationship >= Relationship.FWB:
+        if CharacterService.is_fwb(chloe) or CharacterService.is_girlfriend(chloe):
             scene v12rcr3 # TPP. Chloe gives MC a kiss
             with dissolve
 
@@ -218,7 +218,7 @@ label v12_roomate_talk:
 
         u "Haha, same."
 
-        if chloe.relationship >= Relationship.FWB:
+        if CharacterService.is_fwb(chloe) or CharacterService.is_girlfriend(chloe):
             scene v12rcr6 # TPP. Chloe gets off her bed 
             with dissolve
 

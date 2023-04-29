@@ -894,8 +894,8 @@ label v12_lindsey_kiss_or_not:
 
             pause 1.5
 
-            if lindsey.relationship >= Relationship.KISS or reputation() == Reputations.POPULAR or len(v12s7_killList) >= 5:
-                if lindsey.relationship < Relationship.KISS and not len(v12s7_killList) >= 5:
+            if CharacterService.is_kissed(lindsey) or reputation() == Reputations.POPULAR or len(v12s7_killList) >= 5:
+                if CharacterService.is_friend(lindesy) and not len(v12s7_killList) >= 5:
                     call screen reputation_popup
                 jump v12_lindsey_sex
             
@@ -1026,7 +1026,7 @@ label v12_lindsey_sex:
 
     pause
 
-    if config_censored:
+    if is_censored:
         call screen censored_popup("v12s17_nsfwSkipLabel1")
 
     show screen v12s17_lindsey_sex_overlay

@@ -4,13 +4,14 @@ label v8_ri_start:
     stop music fadeout 3
 
     $ sceneList.add("v8_riley")
-    $ CharacterService.set_relationship(riley, Relationship.FWB, mc)
+    $ CharacterService.set_relationship(riley, Relationship.FWB)
+    $ CharacterService.remove_mood(riley, Moods.TEASED)
 
     scene v8s25 # Same as sfr4ri55 (from v7) but MC talking now
     with dissolve
     u "Mhm... Tell me more."
 
-    if config_censored:
+    if is_censored:
         call screen censored_popup("v8s3_nsfwSkipLabel1")
 
     scene v8s26 # FPP (MC still sitting on the bed). Riley stands up and is looking into the camera and talking seductively, about to take her dress off. She should be visible at least down until her knees

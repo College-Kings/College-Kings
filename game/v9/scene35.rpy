@@ -95,7 +95,7 @@ label v9_room_sat_aft:
             $ MessengerService.new_message(chloe, _("Hey [name], what you up to?"))
             $ MessengerService.add_reply(chloe, _("Nothing much. Just relaxing. I'm kind of tired."))
             $ MessengerService.new_message(chloe, _("Awwww. Long day?"))
-            if chloe.relationship >= Relationship.FWB:
+            if CharacterService.is_fwb(chloe):
                 $ MessengerService.add_reply(chloe, _("Yeah haha, I feel wiped."), v9s35_reply1)
             else:
                 $ MessengerService.add_reply(chloe, _("Yeah haha, I feel wiped."), v9s35_reply8)
@@ -145,7 +145,7 @@ label v9_room_sat_aft:
             $ MessengerService.new_message(chloe, _("Hey [name], what you up to?"))
             $ MessengerService.add_reply(chloe, _("Nothing much. Just relaxing. I'm kind of tired."))
             $ MessengerService.new_message(chloe, _("Awwww. Long day?"))
-            if chloe.relationship >= Relationship.FWB:
+            if CharacterService.is_fwb(chloe):
                 $ MessengerService.add_reply(chloe, _("Yeah haha, I feel wiped."), v9s35_reply1)
             else:
                 $ MessengerService.add_reply(chloe, _("Yeah haha, I feel wiped."), v9s35_reply8)

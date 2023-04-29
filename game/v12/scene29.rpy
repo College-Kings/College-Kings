@@ -825,7 +825,7 @@ label v12_lauren_sex:
 
                 pause
 
-                if config_censored:
+                if is_censored:
                     call screen censored_popup("v12s29_nsfwSkipLabel1")
 
                 show screen v12s29_lauren_sex_overlay
@@ -1067,13 +1067,13 @@ label v12_lauren_sex:
                 scene v12las66 # FPP. MC and Lauren lieing down next to each other, looking at each other, Lauren smiling, mouth open, make her body a bit sweaty if possible
                 with dissolve
 
-                if CharacterService.is_girlfriend(lauren) and (amber.relationship < Relationship.FWB) and (aubrey.relationship < Relationship.FWB) and (candy.relationship < Relationship.FWB) and (chloe.relationship < Relationship.FWB) and (emily.relationship < Relationship.FWB) and (evelyn.relationship < Relationship.LIKES) and (lindsey.relationship < Relationship.KISS) and (ms_rose.relationship < Relationship.FWB) and (penelope.relationship < Relationship.LIKES) and (riley.relationship < Relationship.FWB) and (samantha.relationship < Relationship.MOVE):
+                if CharacterService.is_girlfriend(lauren) and (not CharacterService.is_fwb(amber)) and CharacterService.is_friend(aubrey) and CharacterService.is_friend(candy) and CharacterService.is_friend(chloe) and CharacterService.is_friend(emily) and (not v6_evelyn_successful_date) and CharacterService.is_friend(lindesy) and (not CharacterService.is_fwb(ms_rose)) and CharacterService.is_friend(penelope) and CharacterService.is_friend(riley) and CharacterService.is_friend(samantha):
                     $ grant_achievement("worth_the_wait")
 
                 if not CharacterService.is_girlfriend(lauren) and CharacterService.is_girlfriend(chloe):
                     $ grant_achievement("two_timer")
 
-                $ lauren.relationship = Relationship.GIRLFRIEND
+                $ CharacterService.set_relationship(lauren, Relationship.GIRLFRIEND)
 
                 la "Phew! Haha... That was absolutely perfect."
 

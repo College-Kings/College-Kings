@@ -20,11 +20,10 @@ label v10_waking_up_end:
         scene v10end2a # TPP. Same as 2, MC grabs his phone, panicked expression.
         with dissolve
 
-        python:
-            penelope.messenger.newMessage("Hey, do you mind coming by before the hearing starts?", force_send=True)
-            penelope.messenger.newMessage("Hey! Where are you, the hearing is in two hours.", force_send=True)
-            penelope.messenger.newMessage("WHERE ARE YOU THE HEARING IS IN 15 MINUTES!?", force_send=True)
-            penelope.messenger.newMessage("OMG, WE'RE STARTING! WHERE ARE YOU?", force_send=True)
+        $ MessengerService.new_message(penelope, "Hey, do you mind coming by before the hearing starts?")
+        $ MessengerService.new_message(penelope, "Hey! Where are you, the hearing is in two hours.")
+        $ MessengerService.new_message(penelope, "WHERE ARE YOU THE HEARING IS IN 15 MINUTES!?")
+        $ MessengerService.new_message(penelope, "OMG, WE'RE STARTING! WHERE ARE YOU?")
 
         u "(Oh shit, Penelope has been blowing me up.)"
         
@@ -58,11 +57,10 @@ label v10_waking_up_end:
         scene v10end5a # TPP. Same as 2, MC grabs his phone, panicked expression.
         with dissolve
 
-        python:
-            penelope.messenger.newMessage("Hey, do you mind coming by before the hearing starts?", force_send=True)
-            penelope.messenger.newMessage("Hey! Where are you, the hearing is in two hours.", force_send=True)
-            penelope.messenger.newMessage("WHERE ARE YOU THE HEARING IS IN 15 MINUTES!?", force_send=True)
-            penelope.messenger.newMessage("OMG, WE'RE STARTING! WHERE ARE YOU?", force_send=True)
+        $ MessengerService.new_message(penelope, "Hey, do you mind coming by before the hearing starts?")
+        $ MessengerService.new_message(penelope, "Hey! Where are you, the hearing is in two hours.")
+        $ MessengerService.new_message(penelope, "WHERE ARE YOU THE HEARING IS IN 15 MINUTES!?")
+        $ MessengerService.new_message(penelope, "OMG, WE'RE STARTING! WHERE ARE YOU?")
 
         u "(Oh shit, Penelope has been blowing me up.)"
 

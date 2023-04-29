@@ -66,7 +66,7 @@ label v13s37:
 
     li "*Chuckles* Not like that, fuckboy."
 
-    if lindsey.relationship >= Relationship.FWB:
+    if CharacterService.is_fwb(lindsey):
         li "And don't call me Linds... Only the girls and [name] get to call me that. *Laughs*"
 
     scene v13s37_5
@@ -275,7 +275,7 @@ label v13s37_nora:
 
     no "You and I both..."
 
-    if nora.relationship < Relationship.FWB:
+    if CharacterService.is_fwb(nora):
         scene v13s37no_4a
         with dissolve
 
@@ -604,7 +604,7 @@ label v13s37_chris:
         pause 0.75
     
     else:
-        if nora.relationship < Relationship.FWB:
+        if CharacterService.is_friend(nora):
             scene v13s37ch_1a # TPP. Same as v13s37ch_1, Chris slightly sad, MC slight smile
             #with dissolve
 

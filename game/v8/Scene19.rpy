@@ -9,7 +9,7 @@ label sun_eve_room:
         v8s19_reply1 = MessageBuilder(amber)
         v8s19_reply1.add_function(grant_achievement, "text_with_an_s")
         v8s19_reply1.new_message(_("It's only fair, right? Make us even"))
-        if config_censored:
+        if is_censored:
             v8s19_reply1.add_reply("gui/censoredPopup/censoredBackground.webp")
 
         elif joinwolves:
@@ -25,7 +25,7 @@ label sun_eve_room:
         v8s19_reply1.new_message(_("So do something about it"))
         v8s19_reply1.add_reply(_("Now? What about you?"))
                 
-        if config_censored:
+        if is_censored:
             v8s19_reply1.new_message("gui/censoredPopup/censoredBackground.webp")
 
         else:
@@ -83,7 +83,7 @@ label sun_eve_room:
             $ MessengerService.add_reply(lauren, _("Goodnight"))
 
 
-        elif amber.relationship >= Relationship.FWB:
+        elif CharacterService.is_fwb(amber):
             play sound "sounds/vibrate.mp3"
 
             python:
@@ -154,7 +154,7 @@ label sun_eve_room:
             $ MessengerService.add_reply(lauren, _("Goodnight"))
 
 
-        elif amber.relationship >= Relationship.FWB:
+        elif CharacterService.is_fwb(amber):
             play sound "sounds/vibrate.mp3"
             $ MessengerService.new_message(amber, _("Hey u up?"))
             $ MessengerService.add_reply(amber, _("Always for you ;)"))

@@ -4,7 +4,7 @@
 # Time: Night
 
 label v14s01a:
-    if config_censored:
+    if is_censored:
         jump v14s01a_nsfwSkipLabel1
 
     play music "music/v12/Track Scene 29_2.mp3" fadein 2

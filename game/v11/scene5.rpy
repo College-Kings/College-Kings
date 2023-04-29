@@ -3,20 +3,6 @@
 # Characters: MC smart outfit from scene 1, Josh (Outfit 1)
 # Time: Night time
 
-init python:
-    def v11s5_reply1():
-        josh.messenger.newMessage("Really bro, that's lame.")
-        josh.messenger.addReply("No for real, I have to pack for the trip.")
-
-        if josh_europe:
-            josh.messenger.newMessage("Fuck, me too.")
-        else:
-            josh.messenger.newMessage("Whatever man!")
-
-    def v11s5_reply2():
-        setattr(store, "v11_josh_nightclub", True)
-        josh.messenger.newMessage("Let's party!")
-
 label v11_nightclub_with_josh:
     #scene v11seap4e # FPP. Show the Park, Show Emily just leaving
     #with fade
@@ -29,22 +15,35 @@ label v11_nightclub_with_josh:
 
     u "(Let's see who this is.)"
 
-    $ josh.messenger.newMessage("WE GETTIN FUCKED UP TONIGHT!", force_send=True)
-    $ josh.messenger.addReply("Who?")
-    $ josh.messenger.newMessage("You and me, meet me at the bar on Stevenson.")
-    $ josh.messenger.addReply("There's a lot of bars on Stevenson.")
-    $ josh.messenger.newMessage("The Hive duh!")
-    $ josh.messenger.addReply("Josh, we can't even get in.")
-    $ josh.messenger.newMessage("With these fake IDs we can...")
-    $ josh.messenger.addReply("I can't be staying up anyway, I still have a ton of stuff to do tonight.", v11s5_reply1)
-    $ josh.messenger.addReply("LET'S FUCKING GOOOOO! OMW NOW!", v11s5_reply2)
+    python:
+        v11s5_reply1 = MessageBuilder(josh)
+        v11s5_reply1.new_message("Really bro, that's lame.")
+        v11s5_reply1.add_reply("No for real, I have to pack for the trip.")
+        if josh_europe:
+            v11s5_reply1.new_message("Fuck, me too.")
+        else:
+            v11s5_reply1.new_message("Whatever man!")
 
-label v11s4_PhoneContinueJosh1:
-    if josh.messenger.replies:
+        v11s5_reply2 = MessageBuilder(josh)
+        v11s5_reply2.set_variable("v11_josh_nightclub", True)
+        v11s5_reply2.new_message("Let's party!")
+
+    $ MessengerService.new_message(josh, "WE GETTIN FUCKED UP TONIGHT!")
+    $ MessengerService.add_reply(josh, "Who?")
+    $ MessengerService.new_message(josh, "You and me, meet me at the bar on Stevenson.")
+    $ MessengerService.add_reply(josh, "There's a lot of bars on Stevenson.")
+    $ MessengerService.new_message(josh, "The Hive duh!")
+    $ MessengerService.add_reply(josh, "Josh, we can't even get in.")
+    $ MessengerService.new_message(josh, "With these fake IDs we can...")
+    $ MessengerService.add_replies(josh,
+        Reply("I can't be staying up anyway, I still have a ton of stuff to do tonight.", v11s5_reply1),
+        Reply("LET'S FUCKING GOOOOO! OMW NOW!", v11s5_reply2)
+    )
+
+    while MessengerService.has_replies(josh):
         call screen phone
-    if josh.messenger.replies:
-        u "(I should check my phone.)"
-        jump v11s4_PhoneContinueJosh1
+        if MessengerService.has_replies(josh):
+            u "(I should check my phone.)"
 
     if not v11_josh_nightclub:
 
@@ -584,7 +583,7 @@ label v11s4_PhoneContinueJosh1:
 
     u "That's smart, actually. Probably makes it harder for the creeps at the bar to stalk you on Kiwii."
 
-    if candyLike < 3 and not reputation() == Reputations.POPULAR:
+    if candyLike != 3 and not reputation() == Reputations.POPULAR:
         if not reputation() == Reputations.POPULAR:
             call screen reputation_popup(required_reputation="popular")
     
@@ -630,10 +629,7 @@ label v11s4_PhoneContinueJosh1:
 
         jump v11_thurs_night_room
 
-    # If made Candy smile 3 or more times
-    $ CharacterService.set_relationship(candy, Relationship.LIKES, mc)
-
-    if candyLike < 3:
+    if candyLike != 3:
         call screen reputation_popup
 
     scene v11swc6l
@@ -770,8 +766,10 @@ label v11s4_PhoneContinueJosh1:
         "Act like family":
             $ sceneList.add("v11_candy")
             $ CharacterService.set_relationship(candy, Relationship.FWB, mc)
+
             scene v11swc16e # TPP Same angle and characters as v11swc16, MC puts one hand on his waist, stands in a faminine way, and holds his other hand up, wrist limp
             with dissolve
+            
             u "She's my cousin, dude."
 
     scene v11swc3i # FPP Show Dennis looking confused, mouth closed
@@ -847,7 +845,7 @@ label v11s5_galleryScene:
     $ grant_achievement("candy_crusher")
     u "Candy it is."
 
-    if config_censored:
+    if is_censored:
         call screen censored_popup("v11s5_nsfwSkipLabel1")
 
     scene v11swc21a # TPP Same angle as v11swc21, Candy removing her clothing
@@ -1047,7 +1045,7 @@ label v11s5_galleryScene:
 
             pause 0.75
 
-            if not config_censored:
+            if not is_censored:
                 scene v11swc29 # FPP MC's view while on the bedroom floor
                 with dissolve
     

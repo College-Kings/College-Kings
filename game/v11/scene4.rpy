@@ -3,17 +3,6 @@
 # Characters: MC (smart outfit from scene 1), Emily (Outfit 2)
 # Time: No clue bruv
 
-init python:
-    def v11s4_reply1():
-        emily.messenger.newMessage("This is important, we need to talk now.")
-        emily.messenger.addReply("What's up?")
-        emily.messenger.newMessage("Meet me at the park.")
-        emily.messenger.addReply("Okay.")
-
-    def v11s4_reply2():
-        emily.messenger.newMessage("Meet me at the park.")
-        emily.messenger.addReply("Okay.")
-
 label v11_emily_park:
     play music "music/v11/Track Scene 4_1.mp3" fadein 2
     if joinwolves: # MC is a Wolf
@@ -40,16 +29,27 @@ label v11_emily_park:
 
         pause 0.75
 
-    $ emily.messenger.newMessage("Hey, we need to talk.", force_send=True)
-    $ emily.messenger.addReply("I'm pretty busy right now.", v11s4_reply1)
-    $ emily.messenger.addReply("What's up?", v11s4_reply2)
+    python:
+        v11s4_reply1 = MessageBuilder(emily)
+        v11s4_reply1.new_message("This is important, we need to talk now.")
+        v11s4_reply1.add_reply("What's up?")
+        v11s4_reply1.new_message("Meet me at the park.")
+        v11s4_reply1.add_reply("Okay.")
 
-    label v11s4_PhoneContinueEmily1:
-        if emily.messenger.replies:
-            call screen phone
-        if emily.messenger.replies:
+        v11s4_reply2 = MessageBuilder(emily)
+        v11s4_reply2.new_message("Meet me at the park.")
+        v11s4_reply2.add_reply("Okay.")
+
+    $ MessengerService.new_message(emily, "Hey, we need to talk.")
+    $ MessengerService.add_replies(emily,
+        Reply("I'm pretty busy right now.", v11s4_reply1),
+        Reply("What's up?", v11s4_reply2)
+    )
+
+    while MessengerService.has_replies(emily):
+        call screen phone
+        if MessengerService.has_replies(emily):
             u "(I should check my phone.)"
-            jump v11s4_PhoneContinueEmily1
 
     if joinwolves: # MC is a Wolf
         scene v11seap1b # TPP. Same camera as v11seap1. Show MC sitting on his bed in WOLVES room, putting his phone away. Normal expression, mouth closed.

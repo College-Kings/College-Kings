@@ -3,13 +3,6 @@
 # Characters: MC (Outfit 9), Amber (Outfit 1), Riley (Outfit 1)
 # Time: Night
 
-init python:
-    def v10s26_reply1():
-        setattr(store, "v10_amber_condoms", True)
-        reputation.add_point(RepComponent.BOYFRIEND)
-        amber.messenger.newMessage("Beer, obviously")
-
-
 label v10_amber_skatepark:
     play music "music/v10/Track Scene 26_1.mp3" fadein 2
 
@@ -18,10 +11,17 @@ label v10_amber_skatepark:
 
     u "(I should get that.)"
 
-    $ amber.messenger.newMessage("Skatepark behind SVC, 10pm, bring a six pack.", force_send=True)
-    $ amber.messenger.addReply("Condoms or beer?", v10s26_reply1)
-    $ amber.messenger.addReply("Alright sure")
+    python:
+        v10s26_reply1 = MessageBuilder(amber)
+        v10s26_reply1.set_variable("v10_amber_condoms", True)
+        v10s26_reply1.add_function(reputation.add_point, RepComponent.BOYFRIEND)
+        v10s26_reply1.new_message("Beer, obviously")
 
+    $ MessengerService.new_message(amber, "Skatepark behind SVC, 10pm, bring a six pack.")
+    $ MessengerService.add_replies(amber,
+        Reply("Condoms or beer?", v10s26_reply1),
+        Reply("Alright sure")
+    )
     call screen phone
 
     scene v10sasp1 # FPP. Show Amber, smiling, mouth closed.
@@ -75,7 +75,7 @@ label v10_amber_skatepark:
 
         am "I'm just kidding. *Chuckles*"
             
-        if amber.relationship >= Relationship.FWB:
+        if CharacterService.is_fwb(amber):
             scene v10sasp1c
             with dissolve
 
@@ -364,13 +364,11 @@ label v10_amber_skatepark:
 
     u "*Laughs*"
 
-    if amber.relationship >= Relationship.FWB or reputation() == Reputations.POPULAR:
+    if CharacterService.is_fwb(amber):
         label v10_amber_skatepark_sg:
-        
-        if _in_replay:
-            $ CharacterService.set_relationship(amber, Relationship.FWB, mc)
+            if _in_replay:
+                $ CharacterService.set_relationship(amber, Relationship.FWB, mc)
 
-    if amber.relationship >= Relationship.FWB:
         scene v10sasp5b # FPP. Same camera as v10sasp5. Show Amber leaning in to whisper into MC's ear, smiling, mouth open.
         with fade
 
@@ -403,7 +401,7 @@ label v10_amber_skatepark:
                 $ sceneList.add("v10_amber")
                 show screen v10s26_amberSexOverlay
 
-                if config_censored:
+                if is_censored:
                     call screen censored_popup("v10s26_nsfwSkipLabel1")
 
                 stop music fadeout 3
@@ -720,7 +718,7 @@ label v10_amber_skatepark:
                             $ CharacterService.set_relationship(amber, Relationship.FWB, mc)
                             $ sceneList.add("v10_amber")
 
-                            if config_censored:
+                            if is_censored:
                                 call screen censored_popup("v10s26_nsfwSkipLabel1")
                                 
                             scene v10ambbj

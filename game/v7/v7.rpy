@@ -30,16 +30,16 @@ init python:
         penelope.messenger.new_message(_("Okay..."))
 
     def kiwii_firstTimeMessages():
-        if emily.relationship >= Relationship.FWB:
+        if CharacterService.is_fwb(emily):
             riley.messenger.add_reply(_("We're not back together"))
             riley.messenger.new_message(_("Okay... just looked like it"))
             riley.messenger.add_reply(_("Well we're not."))
             riley.messenger.new_message(_("k"))
-        if bowling and emily.relationship >= Relationship.FWB:
+        if bowling and CharacterService.is_fwb(emily):
             penelope.messenger.new_message(_("I didn't know you and Emily were a thing..."), force_send=True)
             penelope.messenger.add_reply(_("We're not a thing"), v7_msgReply1)
             penelope.messenger.add_reply(_("It was a one time thing"), v7_msgReply2)
-        if emily.relationship >= Relationship.FWB and CharacterService.is_girlfriend(lauren):
+        if CharacterService.is_fwb(emily) and CharacterService.is_girlfriend(lauren):
             lauren.messenger.new_message(_("I saw what Emily posted. I really thought you liked me..."), force_send=True)
             lauren.messenger.new_message(_("I guess we're done now, so please just delete my number."), force_send=True)
             lauren.messenger.add_reply(_("Lauren can we please just talk about it? I can explain"))
@@ -830,7 +830,7 @@ label hd_bd:
 
             no "Cheated on someone."
 
-            if (CharacterService.is_girlfriend(lauren) and aubrey.relationship >= Relationship.FWB) or (CharacterService.is_girlfriend(lauren) and emily.relationship >= Relationship.FWB):
+            if (CharacterService.is_girlfriend(lauren) and CharacterService.is_fwb(aubrey)) or (CharacterService.is_girlfriend(lauren) and CharacterService.is_fwb(emily)):
                 scene s703 # showing mc drinking
                 with dissolve
 
@@ -1140,8 +1140,8 @@ label hd_ad:
 
             u "No worries, it was a nice walk."
 
-            if reputation() == Reputations.CONFIDENT or riley.relationship >= Relationship.MOVE:
-                if riley.relationship < Relationship.MOVE:
+            if reputation() == Reputations.CONFIDENT or CharacterService.is_kissed(riley):
+                if CharacterService.is_friend(riley):
                     call screen reputation_popup
 
             else:
@@ -1172,11 +1172,11 @@ label hd_ad:
 
     menu:
         "Yeah, I'd like that":
-            if CharacterService.is_girlfriend(lauren) or emily.relationship >= Relationship.FWB:
+            if CharacterService.is_girlfriend(lauren) or CharacterService.is_fwb(emily):
                 $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             $ reputation.add_point(RepComponent.BRO)
-            $ CharacterService.set_relationship(riley, Relationship.LIKES, mc)
+            $ CharacterService.set_mood(riley, Moods.TEASED)
 
             u "Yeah, I'd like that."
 
@@ -1276,14 +1276,13 @@ label hd_ad:
 
             ri "*Whispers* Yeah, sounds good. Good night."
 
-
             scene s709 # you walking through the dorm hallways to his dorm
             with fade
 
             pause 0.5
 
         "Uhm... I shouldn't":
-            if CharacterService.is_girlfriend(lauren) or emily.relationship >= Relationship.FWB:
+            if CharacterService.is_girlfriend(lauren) or CharacterService.is_fwb(emily):
                 $ reputation.add_point(RepComponent.BOYFRIEND)
 
             u "Uhm... I probably shouldn't. It's quite late."
@@ -1345,7 +1344,7 @@ label conyourdorm:
     $ v7_kiwiiPost3.newComment(chloe, _("Most beautiful girl in the world <3"), 6)
     $ v7_kiwiiPost3.addReply(_("I'd destroy you in Air hockey!"), v7_kiwiiReply5, mentions=[aubrey], number_likes=renpy.random.randint(15, 25))
 
-    if emily.relationship >= Relationship.FWB: # first riley texts, then once you've opened the app you get 2 more messages.
+    if CharacterService.is_fwb(emily): # first riley texts, then once you've opened the app you get 2 more messages.
         $ v7_kiwiiPost4 = KiwiiPost(emily, "phone/kiwii/Posts/v7/empost1.webp", _("Finally fate brings us back together. What doesn't kill us only makes us stronger."), number_likes=82)
         $ v7_kiwiiPost4.newComment(riley, _("You guys are so cute"), 5)
         $ v7_kiwiiPost4.newComment(aubrey, _("GORGEOUS"), 8)
@@ -1368,7 +1367,7 @@ label conyourdorm:
 
         u "(What the hell?)"
 
-            if bowling and emily.relationship >= Relationship.FWB:
+            if bowling and CharacterService.is_fwb(emily):
                 $ v7_emily_bowling = True
         
             while MessengerService.has_replies(riley):
@@ -1665,7 +1664,7 @@ label apologylauren:
         u "Listen, I know you said you needed more time, but it's been a few days and I just really want to be friends again... I know I messed up."
 
     if not CharacterService.is_mad(autumn):
-        $ CharacterService.set_relationship(lauren, Relationship.FRIEND)
+        $ CharacterService.remove_mood(lauren, Moods.MAD)
         
         scene s717
         with dissolve
@@ -1725,6 +1724,7 @@ label apologylauren:
 
     elif reputation() == Reputations.LOYAL:
         $ CharacterService.set_relationship(lauren, Relationship.FRIEND, mc)
+        $ CharacterService.remove_mood(lauren, Moods.MAD)
         call screen reputation_popup
 
         scene s717
@@ -1937,6 +1937,7 @@ label thisbelauren:
                         u "(I could really use a walk to clear my head.)"
 
                     else:
+                        $ CharacterService.set_relationship(lauren, Relationship.FRIEND)
                         $ CharacterService.set_mood(lauren, Moods.MAD)
                         $ CharacterService.set_mood(autumn, Moods.MAD)
 
@@ -2013,6 +2014,7 @@ label thisbelauren:
                 "Open relationship?":
                     $ reputation.add_point(RepComponent.BRO)
                     $ reputation.add_point(RepComponent.TROUBLEMAKER)
+                    $ CharacterService.set_relationship(lauren, Relationship.FRIEND)
                     $ CharacterService.set_mood(lauren, Moods.MAD)
                     $ CharacterService.set_mood(autumn, Moods.MAD)
 
@@ -2582,7 +2584,7 @@ label thisbewalk:
 
             pause 0.5
 
-            if emily.relationship >= Relationship.FWB:
+            if CharacterService.is_fwb(emily):
                 scene s733a #mc turns his head to look at the door
                 with dissolve
 
@@ -3085,7 +3087,7 @@ label beachlauren:
 
         la "Anything new with you lately?"
 
-        if emily.relationship >= Relationship.FWB:
+        if CharacterService.is_fwb(emily):
             scene s742a
             with dissolve
 
@@ -3417,7 +3419,7 @@ label beachlauren:
 
 ########## SCENE 12: MC BACK AT DORM WEDNESDAY EVENING
     label rightafterbeach: #for compatibility only
-    if emily.relationship >= Relationship.FWB:
+    if CharacterService.is_fwb(emily):
         play sound "sounds/dooropen.mp3"
         scene s753 # mc opens his dorm door and looks on the ground, there's a letter
         with dissolve
@@ -4146,7 +4148,7 @@ label aftercall:
 
     ch "And last but not least, [name]."
 
-    if (CharacterService.is_girlfriend(lauren) and aubrey.relationship >= Relationship.FWB) or (CharacterService.is_girlfriend(lauren) and emily.relationship >= Relationship.FWB):
+    if (CharacterService.is_girlfriend(lauren) and CharacterService.is_fwb(aubrey)) or (CharacterService.is_girlfriend(lauren) and CharacterService.is_fwb(emily)):
         ch "Is it true that you recently cheated on the girl you're currently dating?"
 
         scene s786c # chris looking directly at you mouth closed
@@ -5410,7 +5412,7 @@ label after_pledges:
     scene s861a # MC walking home at night through the town, different shot
     with dissolve
 
-    if emily.relationship >= Relationship.FWB: # Please confirm this is the right condition for her to send an apology letter to the MC
+    if CharacterService.is_fwb(emily): # Please confirm this is the right condition for her to send an apology letter to the MC
         u "(Oh my god, I completely forgot about Emily. Wonder if she's still up.)"
 
         menu:
@@ -6416,7 +6418,7 @@ label after_history:
             $ apesVids += 1
             stop sound
 
-            if config_censored:
+            if is_censored:
                 call screen censored_popup("v7_nsfwSkipLabel2")
 
             scene s905a # Same as s905 but Lee's pants down showing his naked ass and he is startled. (Lee is still facing the board)
@@ -6667,7 +6669,7 @@ label hc_asking_aubrey:
     with dissolve
     au "I'm pretty sure, I told you I'm not the romance type, haha."
 
-    if aubrey.relationship >= Relationship.FWB:
+    if CharacterService.is_fwb(aubrey):
         au "And I also like the secrecy of our relationship."
 
     scene s976a
@@ -6686,7 +6688,7 @@ label hc_asking_aubrey:
     with dissolve
     au "It's really nice that you asked though."
 
-    if aubrey.relationship >= Relationship.FWB and not simp:
+    if CharacterService.is_fwb(aubrey) and not simp:
         scene s976b # aubrey flirty
         with dissolve
 
@@ -7066,7 +7068,7 @@ label hc_asking_penelope:
 
     u "Will you go to homecoming with me?"
 
-    if emily.relationship >= Relationship.FWB or not bowling:
+    if CharacterService.is_fwb(emily) or not bowling:
         scene s957 # fpp close up penelope unsure smili ng
         with dissolve
 
@@ -7128,8 +7130,8 @@ label hc_asking_riley:
 
     u "Will you be my Cinderella for homecoming?"
 
-    if riley.relationship >= Relationship.LIKES or reputation() == Reputations.CONFIDENT:
-        if riley.relationship < Relationship.LIKES:
+    if Moods.TEASED in riley.mood or reputation() == Reputations.CONFIDENT:
+        if Moods.TEASED not in riley.mood:
             call screen reputation_popup
 
         $ hcGirl = "riley"
@@ -7624,7 +7626,7 @@ label cameron_thurs_tasks:
 
                     u "Here we go!"
 
-                    if config_censored:
+                    if is_censored:
                         call screen censored_popup("v7_nsfwSkipLabel3")
 
                     scene scc32 # FPP. Show the girls screaming and removing their tops. Cameron laughing whilst filming on his phone in bushes.
@@ -7814,7 +7816,7 @@ label cameron_thurs_tasks:
     pause 0.5
     play music "music/mhorror.mp3"
 
-    if config_censored:
+    if is_censored:
         call screen censored_popup("v7_nsfwSkipLabel4")
 
     scene scc63 # FPP. Show Cameron's sister sat in a chair tying a belt around her arm while the girl holds a syringe in her hand.
@@ -8869,7 +8871,7 @@ label wolves_ceremony:
 ############# RILEY TEXT
 
 label rileytext:
-    if riley.relationship >= Relationship.LIKES:
+    if Moods.TEASED in riley.mood:
         play sound "sounds/vibrate.mp3"
 
         v7_msgReply5 = MessageBuilder(riley)
@@ -8949,7 +8951,7 @@ label rileysexscene:
     with dissolve
     ri "Come on!"
 
-    if config_censored:
+    if is_censored:
         call screen censored_popup("v7_nsfwSkipLabel1")
 
     scene ridrm4 # Riley close up in her dorm, talking mouth open, single slightly raise brow (first person)
@@ -9762,7 +9764,7 @@ label amberhocodate:
 
     pause 0.5
 
-    if config_censored:
+    if is_censored:
         call screen censored_popup("v7_nsfwSkipLabel5")
 
     scene sfr4am6 #First person Close up Amber pulls out 2 pills. a bit flirty and happy
@@ -14708,7 +14710,7 @@ label fr4riley2:
     ri "Well we've been here for a few hours now and it's getting kinda boring."
     $ freeroam4.add("crowning")
 
-    if riley.relationship >= Relationship.LIKES and hcGirl == "alone":
+    if (Moods.TEASED in riley.mood or CharacterService.is_fwb(riley)) and hcGirl == "alone":
         scene sfr4ri51b
         with dissolve
 
@@ -14721,7 +14723,7 @@ label fr4riley2:
 
         jump fr4rileyending
 
-    elif riley.relationship >= Relationship.LIKES:
+    elif (Moods.TEASED in riley.mood or CharacterService.is_fwb(riley)):
         scene sfr4ri51b
         with dissolve
 
@@ -15123,7 +15125,7 @@ label fr4aubrey1:
 
     u "Well, enjoy taking some more pictures. You better tag me on Kiwii, haha."
 
-    if aubrey.relationship < Relationship.FWB:
+    if CharacterService.is_friend(aubrey):
         scene sfr4ri39
         with dissolve
 
@@ -15155,7 +15157,7 @@ label fr4aubrey1:
 
                 u "Yeah, alright. Let's go."
 
-                if config_censored:
+                if is_censored:
                     call screen censored_popup("labelfr4hallwaybathroom")
 
                 scene sfr4ri41 # tppAubrey and MC walk towards the bathroom.
@@ -15334,6 +15336,7 @@ label fr4chloe1:
     menu:
         "Defend Chloe":
             $ CharacterService.set_relationship(chloe, Relationship.FRIEND, mc)
+            $ CharacterService.remove_mood(chloe, Moods.MAD)
             $ reputation.add_point(RepComponent.BOYFRIEND)
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
@@ -17035,7 +17038,7 @@ label fr4rileyending:
 
     queue music [ "music/mchill1.mp3", "music/m7punk.mp3" ]
 
-    if riley.relationship >= Relationship.LIKES:
+    if (Moods.TEASED in riley.mood or CharacterService.is_fwb(riley)):
         ri "Sooo homecoming was pretty fun... but I bet the night could get even better."
 
         scene sfr4ri52a # mc turns his face towards her
@@ -17088,7 +17091,7 @@ label fr4rileyending2:
 
     u "So, what's up?"
 
-    if riley.relationship >= Relationship.LIKES:
+    if (Moods.TEASED in riley.mood or CharacterService.is_fwb(riley)):
         scene sfr4ri55  #tpp close up riley whispers into your ear
         with dissolve
 
@@ -17233,7 +17236,7 @@ label fr4chloeending:
     # towel drop sound #check - add towel.mp3 sound file
     play sound "sounds/towel.mp3"
 
-    if config_censored:
+    if is_censored:
         call screen censored_popup("v8s2_nsfwSkipLabel1")
 
     scene sfr4cl62 #Chloe steps out of the bathroom. We see her feet and a bathrobe drop to the floor.

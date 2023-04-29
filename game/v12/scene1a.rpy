@@ -526,8 +526,8 @@ label v12_chase_robber:
     $ v12s1a_kiwiiPost1.newComment(charli, _("If you want a man Imre I can take you to a few bars... All you had to do was ask."), number_likes=14)
     $ v12s1a_kiwiiPost1.newComment(ryan, _("LMAO"), number_likes=1, mentions=[imre])
 
-    $ imre.messenger.newMessage("Check Kiwii... you're welcome. :)", force_send=True)
-    $ imre.messenger.addReply("Haha okay", func=None)
+    $ MessengerService.new_message(imre, "Check Kiwii... you're welcome. :)")
+    $ MessengerService.add_reply(imre, "Haha okay")
 
     call screen phone
 
@@ -536,12 +536,12 @@ label v12_chase_robber:
     # There's a comment from Charli that says "If you want a man Imre I can take you to a few bars, all you had to do was ask."
     
     # MC replies back to Imre-
-    $ imre.messenger.addReply("Boosting me huh?", func=None)
-    $ imre.messenger.newMessage("You deserved it")
-    $ imre.messenger.addReply("You see Charli's comment?", func=None)
-    $ imre.messenger.newMessage("No, one sec")
-    $ imre.messenger.newMessage("I'm gonna beat his ass")
-    $ imre.messenger.addReply("Haha", func=None)
+    $ MessengerService.add_reply(imre, "Boosting me huh?")
+    $ MessengerService.new_message(imre, "You deserved it")
+    $ MessengerService.add_reply(imre, "You see Charli's comment?")
+    $ MessengerService.new_message(imre, "No, one sec")
+    $ MessengerService.new_message(imre, "I'm gonna beat his ass")
+    $ MessengerService.add_reply(imre, "Haha")
 
     scene v12car30a
     with dissolve

@@ -22,7 +22,7 @@ label v12_ms_rose_sex: #can only get here if joinwolves
 
     u "I've been around..."
 
-    if ms_rose.relationship >= Relationship.FWB:
+    if CharacterService.is_fwb(ms_rose):
         scene v12msr2d # FPP. Same as v12msr2, Ms. Rose, slight smile, mouth open, caressing MC's cheek
         with dissolve
 
@@ -192,7 +192,7 @@ label v12_ms_rose_sex: #can only get here if joinwolves
 
                 u "Good... Fucking... God."
 
-                if config_censored:
+                if is_censored:
                     call screen censored_popup("v12s23_nsfwSkipLabel1")
 
                 scene v12msr15a # FPP. Same as v12msr15, Ms. Rose topless, seductive look, mouth open

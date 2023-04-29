@@ -1026,7 +1026,7 @@ label v10s33_chloe1:
     menu:
         "Date with Chloe":
             $ chloe.points += 1
-            if chloe.relationship >= Relationship.FWB:
+            if CharacterService.is_fwb(chloe):
                 scene v10cfrcl1
                 with dissolve
 
@@ -1185,7 +1185,7 @@ label v10s33_chloe1:
                                     scene v10cfrcl1a
                                     with dissolve
 
-                                    if reputation() == Reputations.POPULAR or chloe.relationship >= Relationship.FWB:
+                                    if reputation() == Reputations.POPULAR or CharacterService.is_fwb(chloe):
                                         scene v10cfrcl1a
                                         with dissolve
 
@@ -3692,7 +3692,7 @@ label v10s33_emily1:
     label v10s33_evelyn1:
     $ freeroam6.add("evelyn")
 
-    if evelyn.relationship >= Relationship.LIKES: #If Date successful
+    if v6_evelyn_successful_date: #If Date successful
         scene v10cfrev1a
 
         u "Out of everyone here, I'm most surprised to see you."
@@ -3761,7 +3761,7 @@ label v10s33_emily1:
 
         call screen v10s33_toilet
 
-    elif evelyn.relationship >= Relationship.DATE: #if Date but unsuccessful
+    elif not v6_evelyn_successful_date: #if Date but unsuccessful
         if not "ryan" in freeroam6:
             scene fr6toilet # toilet screen
         else:

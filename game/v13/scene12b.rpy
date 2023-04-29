@@ -227,7 +227,7 @@ label v13s12b:
 
     pe "You're sweet."
 
-    if penelope.relationship >= Relationship.LIKES:
+    if CharacterService.is_dating(penelope):
         scene v13s12b_6j # TPP. Same as v13s12b_6b, Penelope kissing MC on the lips
         with dissolve
         play sound "sounds/kiss.mp3"

@@ -117,17 +117,16 @@ label v2start:
     queue sound "sounds/vibrate.mp3"
 
     python:
-        v2_reply1 = MessageBuilder(ryan)
-        v2_reply1.add_function(reputation.add_point, RepComponent.BRO)
-        v2_reply1.new_message(_("Look, I know what Grayson did was a dick move, but he was just being overprotective of Chloe"))
-
         v2_reply2 = MessageBuilder(ryan).add_function(reputation.add_point, RepComponent.BRO)
 
         v2_reply3 = MessageBuilder(ryan)
         v2_reply3.add_function(reputation.add_point, RepComponent.TROUBLEMAKER)
         v2_reply3.new_message(_("Sorry..."))
 
-        v2_reply1.add_replies(ryan,
+        v2_reply1 = MessageBuilder(ryan)
+        v2_reply1.add_function(reputation.add_point, RepComponent.BRO)
+        v2_reply1.new_message(_("Look, I know what Grayson did was a dick move, but he was just being overprotective of Chloe"))
+        v2_reply1.add_replies(
             Reply(_("Whatever"), v2_reply2),
             Reply(_("Don't you dare defend that guy"), v2_reply3)
         )
@@ -135,51 +134,39 @@ label v2start:
         v2_reply4 = MessageBuilder(ryan)
         v2_reply4.add_function(reputation.add_point, RepComponent.TROUBLEMAKER)
         v2_reply4.new_message(_("Look, I know what Grayson did was a dick move, but he was just being overprotective of Chloe"))
-        v2_reply4.add_replies(ryan,
+        v2_reply4.add_replies(
             Reply(_("Whatever"), v2_reply2),
             Reply(_("Don't you dare defend that guy"), v2_reply3)
         )
 
         MessengerService.new_message(ryan, _("You okay?"))
-        MessengerService.add_replies(ryan, 
+        MessengerService.add_replies(ryan,
             Reply(_("I'm fine"), v2_reply1),
             Reply(_("No, wtf was that?! Fuck Grayson and fuck the Apes"), v2_reply4)
         )
 
-        MessengerService.add_function(reputation.add_point, RepComponent.TROUBLEMAKER)
-        MessengerService.new_message(lauren, _("Is everything okay?"))
-        MessengerService.add_reply(lauren, _("Yeah, I'm fine."))
-        MessengerService.new_message(lauren, _("Okay..."))
+        v2_reply5 = MessageBuilder(lauren)
+        v2_reply5.set_variable("meetlauren", True)
+        v2_reply5.add_function(reputation.add_point, RepComponent.BOYFRIEND)
+        v2_reply5.new_message(_("Great, I'll see you then :)"))
+
+        v2_reply6 = MessageBuilder(lauren)
+        v2_reply6.add_function(grant_achievement, "mixed_feelings")
+        v2_reply6.add_function(reputation.add_point, RepComponent.TROUBLEMAKER)
+        v2_reply6.new_message(_("Is everything okay?"))
+        v2_reply6.add_reply(_("Yeah, I'm fine."))
+        v2_reply6.new_message(_("Okay..."))
 
         if MessengerService.has_replies(lauren):
-
-            v2_reply5 = MessageBuilder(lauren)
-            v2_reply5.set_variable("meetlauren", True)
-            v2_reply5.add_function(reputation.add_point, RepComponent.BOYFRIEND)
-            v2_reply5.new_message(_("Great, I'll see you then :)"))
-
-            v2_reply6 = MessageBuilder(lauren)
-            v2_reply6.add_function(grant_achievement, "mixed_feelings")
-
             MessengerService.new_message(lauren, _("Hello?? Can we please talk today?"))
-            MessengerService.add_replies(lauren, 
+            MessengerService.add_replies(lauren,
                 Reply(_("Yeah, SV cafe in 20 mins?"), v2_reply5),
                 Reply(_("Sorry, I can't"), v2_reply6)
             )
-
         else:
-
-            v2_reply5 = MessageBuilder(lauren)
-            v2_reply5.set_variable("meetlauren", True)
-            v2_reply5.add_function(reputation.add_point, RepComponent.BOYFRIEND)
-            v2_reply5.new_message(_("Great, I'll see you then :)"))
-
-            v2_reply6 = MessageBuilder(lauren)
-            v2_reply6.add_function(grant_achievement, "mixed_feelings")
-
             MessengerService.new_message(lauren, _("Are we still on for today? :)"))
             MessengerService.add_replies(lauren,
-                Reply(_("Yeah, SV cafe in 20 mins?"), v2_reply5)
+                Reply(_("Yeah, SV cafe in 20 mins?"), v2_reply5),
                 Reply(_("Sorry, I can't"), v2_reply6)
             )
 
@@ -188,10 +175,10 @@ label v2start:
     scene s96g
     with dissolve
 
-    while MessengerService.has_replies(lauren): or MessengerService.has_replies(ryan):
-            call screen phone
+    while MessengerService.has_replies(lauren) or MessengerService.has_replies(ryan):
+        call screen phone
 
-        if MessengerService.has_replies(lauren): or MessengerService.has_replies(ryan):
+        if MessengerService.has_replies(lauren) or MessengerService.has_replies(ryan):
             u "(Damn, my phone's blowing up. I should probably check my messages.)"
 
 
@@ -1131,14 +1118,6 @@ label meet_lauren2:
 
     la "About yesterday in the park..."
 
-    show screen tutorial([
-        "Your decisions strongly influence the way the story progresses and how other characters perceive you.",
-        "With each choice you'll either gain Bro, Boyfriend or Troublemaker points.",
-        "Bros put the squad first, boyfriends show strong affinity towards a few selected individuals and troublemakers seek thrills and take risks.",
-        "These points are then used to identify your reputation (rep). Each reputation will unlock different possibilities and choices, but you can only have one active at a time.",
-        "You can read more about each individual rep in the Stats app on your phone.",
-    ])
-
     menu:
         "There was something there":
             $ reputation.add_point(RepComponent.BOYFRIEND)
@@ -1171,7 +1150,7 @@ label meet_lauren2:
                 u "And I should have. There was something real there. Between us."
 
             if CharacterService.is_kissed(lauren) or reputation() == Reputations.LOYAL:
-                $ laawk = False
+                $ CharacterService.remove_mood(lauren, Moods.AWKWARD)
 
                 if not CharacterService.is_kissed(lauren):
                     call screen reputation_popup
@@ -1277,7 +1256,6 @@ label meet_lauren2:
 
         "Let's forget about it":
             $ reputation.add_point(RepComponent.BRO)
-            $ laawk = False
 
             scene s130a
             with dissolve
@@ -1314,13 +1292,13 @@ label meet_lauren2:
 
             la "Yeah, sounds great."
 
+            $ CharacterService.remove_mood(lauren, Moods.AWKWARD)
+
             if fighttom and not wintom:
                 scene s130j
                 with dissolve
 
                 u "(I should probably wash the blood off my face in the restroom before I go.)"
-
-    hide screen tutorial
     
     scene s133
     with Fade (1,0,1)
@@ -2351,7 +2329,7 @@ label bo_bd:
     u "(Oh, I just got a message.)"
 
     while MessengerService.has_replies(aubrey):
-            call screen phone
+        call screen phone
         if MessengerService.has_replies(aubrey):
             u "(I should check my messages.)"
     
@@ -2531,7 +2509,7 @@ label bo_bd:
     u "(Fuck, I totally forgot about Aubrey. I guess it's time to make a decision.)"
 
     while MessengerService.has_replies(aubrey):
-            call screen phone
+        call screen phone
         if MessengerService.has_replies(aubrey):
             u "(Aubrey's waiting for me, I need to let her know whether I'm coming or not.)"
 
@@ -2748,7 +2726,7 @@ label try1new:
 
             menu:
                 "Risk it":
-                    if config_censored:
+                    if is_censored:
                         call screen censored_popup("v2_nsfwSkipLabel1")
 
                     $ v2_caughtpeeking = renpy.random.choice([True, False])
@@ -2887,7 +2865,7 @@ label try2new:
 
             menu:
                 "Risk it":
-                    if config_censored:
+                    if is_censored:
                         call screen censored_popup("v2_nsfwSkipLabel2")
 
                     $ v2_caughtpeeking = renpy.random.choice([True, False])
@@ -3039,7 +3017,7 @@ label try3new:
 
             menu:
                 "Risk it":
-                    if config_censored:
+                    if is_censored:
                         call screen censored_popup("v2_nsfwSkipLabel3")
 
                     $ v2_caughtpeeking = renpy.random.choice([True, False])
@@ -3073,19 +3051,10 @@ label v2_nsfwSkipLabel3:
 
     au "This costume is literally just historic lingerie."
 
-    show screen tutorial([
-        "Your decisions strongly influence the way the story progresses and how other characters perceive you.",
-        "With each choice you'll either gain Bro, Boyfriend or Troublemaker points.",
-        "Bros put the squad first, boyfriends show strong affinity towards a few selected individuals and troublemakers seek thrills and take risks.",
-        "These points are then used to identify your reputation (rep). Each reputation will unlock different possibilities and choices, but you can only have one active at a time.",
-        "You can read more about each individual rep in the Stats app on your phone.",
-    ])
-
     au "I'm not showing you this, haha."
 
     menu:
         "Oh come on":
-            hide screen tutorial
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             u "Oh come on, Aubrey. I wanna see."
@@ -3133,7 +3102,6 @@ label v2_nsfwSkipLabel3:
             call screen costumes
 
         "Fine":
-            hide screen tutorial
             $ reputation.add_point(RepComponent.BOYFRIEND)
 
             u "Alright, fine."
@@ -3282,7 +3250,7 @@ label try4new:
 
             menu:
                 "Risk it":
-                    if config_censored:
+                    if is_censored:
                         call screen censored_popup("v2_nsfwSkipLabel4")
 
                     $ v2_caughtpeeking = renpy.random.choice([True, False])
@@ -3427,7 +3395,7 @@ label try5new:
 
             menu:
                 "Risk it":
-                    if config_censored:
+                    if is_censored:
                         call screen censored_popup("v2_nsfwSkipLabel5")
 
                     $ v2_caughtpeeking = renpy.random.choice([True, False])
@@ -3564,7 +3532,7 @@ label try6new:
 
             menu:
                 "Risk it":
-                    if config_censored:
+                    if is_censored:
                         call screen censored_popup("v2_nsfwSkipLabel6")
 
                     $ v2_caughtpeeking = renpy.random.choice([True, False])
@@ -3816,19 +3784,10 @@ label v1_caughtContinue_pen:
     scene s186 # closeup pen outside in regular clothes upset
     with Fade (1,0,1)
 
-    show screen tutorial([
-        "Your decisions strongly influence the way the story progresses and how other characters perceive you.",
-        "With each choice you'll either gain Bro, Boyfriend or Troublemaker points.",
-        "Bros put the squad first, boyfriends show strong affinity towards a few selected individuals and troublemakers seek thrills and take risks.",
-        "These points are then used to identify your reputation (rep). Each reputation will unlock different possibilities and choices, but you can only have one active at a time.",
-        "You can read more about each individual rep in the Stats app on your phone.",
-    ])
-
     pe "[name]! What were you thinking?!"
 
     menu:
         "Apologize":
-            hide screen tutorial
             $ reputation.add_point(RepComponent.BOYFRIEND)
 
             scene s186a
@@ -3853,7 +3812,6 @@ label v1_caughtContinue_pen:
             u "(And I still need to buy a costume...)"
 
         "Deny it":
-            hide screen tutorial
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             scene s186

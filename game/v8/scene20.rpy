@@ -18,7 +18,7 @@ label emily_arcade:
     play ambience "sounds/arcade_amb.mp3" fadein 2
     pause 1
 
-    if emily.relationship >= Relationship.FWB:
+    if CharacterService.is_fwb(emily):
         scene v8arcade2 # FPP. (after MC walks up to Emily). Emily cheerful, mouth open
         with dissolve
         em "Hey, sexy!"
@@ -1119,7 +1119,7 @@ label em_arcade_4:
     with dissolve
     pause 0.5
 
-    if config_censored:
+    if is_censored:
         call screen censored_popup("v8s20_nsfwSkipLabel1")
 
     scene v8arcade27c # Same as v8arcade27b but she pulled her top up completely

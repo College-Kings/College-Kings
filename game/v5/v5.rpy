@@ -577,8 +577,7 @@ label newchloec:
     #################
 
     python:
-        if amber.relationship >= Relationship.KISS:
-
+        if CharacterService.is_kissed(amber):
             v5_reply2 = MessageBuilder(amber)
             v5_reply2.add_function(reputation.add_point, RepComponent.TROUBLEMAKER)
             v5_reply2.new_message(_("That does sound enticing ;)"))
@@ -2341,7 +2340,7 @@ label hospitala:
 
     play sound "sounds/swoosh.mp3"
 
-    show screen fantasyOverlay
+    show fantasyoverlay onlayer foreground
 
     scene s409 #MC and Emily are in a park, eating ice cream. Emily puts some on MC's nose. MC chases her as she runs away laughing.
     with flash
@@ -2414,7 +2413,7 @@ label hospitala:
 
     pause 0.5
     play sound "sounds/swoosh.mp3"
-    hide screen fantasyOverlay
+    hide fantasyoverlay onlayer foreground
 
     scene s408a
     with flash

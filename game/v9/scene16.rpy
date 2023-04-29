@@ -12,7 +12,7 @@ label v9_room_thur_night:
 
         u "(Whew, glad to be alone... finally)"
 
-        if emily.relationship >= Relationship.FWB:
+        if CharacterService.is_fwb(emily):
             scene v9emi1a # TPP. Same camera as v9emi1, MC now on his phone on his bed.
             with dissolve
 
@@ -53,7 +53,7 @@ label v9_room_thur_night:
 
         u "(Whew, glad to be alone... finally)"
 
-        if emily.relationship >= Relationship.FWB:
+        if CharacterService.is_fwb(emily):
             scene v9emi4a # TPP. Same camera as v9emi4, MC now on his phone on his bed.
             with dissolve
 
@@ -485,7 +485,7 @@ label v9_emily_dorm:
     image v9emian = Movie(play="images/v9/Scene 16/v9emian.webm", loop=True, image="images/v9/Scene 16/v9emianStart.webp", start_image="images/v9/Scene 16/v9emianStart.webp") # TPP. MC and Emily, doggy style Anal show as much action as possible.
     image v9emianf = Movie(play="images/v9/Scene 16/v9emianf.webm", loop=True, image="images/v9/Scene 16/v9emianStart.webp", start_image="images/v9/Scene 16/v9emianStart.webp")
 
-    if config_censored:
+    if is_censored:
         call screen censored_popup("v9s16_nsfwSkipLabel1")
 
     show screen v9s16_emilySexOverlay

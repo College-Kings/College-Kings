@@ -395,7 +395,7 @@ label v12_nora_sex:
 
         no "[name]..."
         
-        if config_censored:
+        if is_censored:
             call screen censored_popup("v12s35a_nsfwSkipLabel1")
 
         scene v12nos19 # TPP. Show MC and Nora taking off their shirts

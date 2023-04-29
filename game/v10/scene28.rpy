@@ -53,7 +53,7 @@ label v10_talk_nora:
     scene v10hal1a
     with dissolve
 
-    if nora.relationship >= Relationship.LIKES:
+    if v8_nora_likes_mc:
         scene v10hal1a
         with dissolve
 
@@ -100,7 +100,7 @@ label v10_talk_nora:
 
                     u "(I'll leave it alone as they'd rather keep it private.)"
 
-    elif not joinwolves and nora.relationship < Relationship.LIKES:
+    elif not joinwolves and not v8_nora_likes_mc:
         scene v10hal1a
         with dissolve
 
@@ -120,6 +120,7 @@ label v10_talk_nora:
         with dissolve
 
         u "I get that..."
+        
     menu:
         "Help Nora":
             $ v10_help_nora_freeroam = True

@@ -41,7 +41,7 @@ label v13s56:
 
     u "I definitely feel that. *Chuckles*"
 
-    if nora.relationship >= Relationship.FWB:
+    if CharacterService.is_fwb(nora):
         scene v13s56_2
         with dissolve
 
@@ -128,7 +128,7 @@ label v13s56:
 
             u "I said my bad. *Chuckles*"
 
-            if nora.relationship >= Relationship.FWB:
+            if CharacterService.is_fwb(nora):
                 scene v13s56_5f # FPP. same as v13s56_5d nora slight smile
                 with dissolve
 

@@ -88,7 +88,7 @@ label v13s35:
     scene v13s35_4a # TPP. Same as v13s35_4, Show Aubrey walking away from mc.
     with dissolve
 
-    if chloe.relationship >= Relationship.FWB:
+    if CharacterService.is_fwb(chloe) or CharacterService.is_girlfriend(chloe):
         u "(Guess I could look around a bit...)"
         
         menu:

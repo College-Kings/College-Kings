@@ -4,8 +4,7 @@
 # Time: Afternoon
 
 label v13s9:
-    if chloe.relationship < Relationship.FRIEND:
-        $ CharacterService.set_relationship(chloe, Relationship.FRIEND, mc)
+    $ CharacterService.remove_mood(chloe, Moods.MAD)
 
     scene v13s9_1 # TPP. Hotel hallway. MC walking down the hallway, back to camera, angled to where hotel room doors are visible on MC's right.
     with dissolve
@@ -476,7 +475,7 @@ label v13s9:
 
     u "Oh... Well... That's spicy. *Laughs*"
 
-    if chloe.relationship >= Relationship.FWB:
+    if CharacterService.is_fwb(chloe) or CharacterService.is_girlfriend(chloe):
         scene v13s9_12q # FPP. Chloe facing MC (not leaning), flirting/seductive, smiling, mouth open.
         with dissolve
 

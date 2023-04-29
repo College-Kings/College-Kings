@@ -633,7 +633,7 @@ label v13s48:
 
     au "Sounds kinda romantic don't you think?"
 
-    if aubrey.relationship >= Relationship.FWB:
+    if CharacterService.is_fwb(aubrey):
         au "I know we're fucking, but..."
 
         scene v13s48_8

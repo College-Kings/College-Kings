@@ -91,7 +91,7 @@ label v11_roommate:
 
             cl "[name], it's late."
 
-        elif chloe.relationship >= Relationship.FWB:
+        elif CharacterService.is_fwb(chloe) or CharacterService.is_girlfriend(chloe):
             scene v11rm4f
             with dissolve
 
@@ -377,7 +377,7 @@ label v11_roommate:
 
         ri "Ready to go check out this treasure hunt?"
 
-        if chloe.relationship >= Relationship.FWB:
+        if CharacterService.is_fwb(chloe) or CharacterService.is_girlfriend(chloe):
             scene v11rm12 # FPP. MC still standing by the door, he looks back at Chloe who is still sleeping, show some of her boobs slipping out from her outfit (Day)
             with dissolve
 
@@ -412,7 +412,7 @@ label v11_roommate:
 
         pause 0.75
 
-        if riley.relationship < Relationship.FWB:
+        if CharacterService.is_friend(riley):
             scene v11rm14 # FPP. MC is now in talking distance to Riley, Riley is now looking at MC, Riley is smiling, mouth closed (make sure counter is in backrgound)
             with dissolve
 
