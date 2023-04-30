@@ -192,7 +192,7 @@ label imrecona: # Find Imre
 
     u "Come on Imre, you're overreacting!"
 
-    play sound "sounds/slam.mp3"
+    play sound sound.slam
 
     scene s450c # Imre gone
     with vpunch
@@ -446,7 +446,7 @@ label imrecond: # Meet Chloe
 
     u "Hey, you're gonna-"
 
-    play sound "sounds/splash.mp3"
+    play sound sound.splash
 
     scene s456 # they fall into the water
     with vpunch
@@ -509,7 +509,7 @@ label imrecond: # Meet Chloe
 
     pause 0.5
 
-    play sound "sounds/ring.mp3"
+    play sound sound.ring
 
     "*Phone rings*"
 
@@ -660,7 +660,7 @@ label imrecond: # Meet Chloe
 
     scene s465d # chloe kisses you on your cheek
     with dissolve
-    play sound "sounds/kiss.mp3"
+    play sound sound.kiss
     pause 1.0
 
     scene s465b # same as s465b but your mouth open adn chloes closed
@@ -879,7 +879,7 @@ label fs_bd:
         scene s481 # you calling Imre scared
         with dissolve
 
-        play sound "sounds/calling.mp3"
+        play sound sound.calling
 
         pause 0.5
 
@@ -953,28 +953,24 @@ label continuebb:
     # if you chose imre chloe and amber both text you depending on chloe mad that you msised out etc.
 
     if chooseimre and CharacterService.is_mad(chloe): # Amber texts why you never got back to her
-        play sound "sounds/vibrate.mp3"
-        
-        python:
+        play sound sound.vibrate
 
-            v6_reply5 = MessageBuiler(amber)
+        python:
+            v6_reply5 = MessageBuilder(amber)
             v6_reply5.add_function(reputation.add_point, RepComponent.TROUBLEMAKER)
             v6_reply5.add_function(reputation.add_point, RepComponent.BRO)
             v6_reply5.new_message(_("Moment's passed..."))
 
-            v6_reply6 = MessageBuiler(amber)
+            v6_reply6 = MessageBuilder(amber)
             v6_reply6.add_function(reputation.add_point, RepComponent.BOYFRIEND)
             v6_reply6.new_message(_("You better xx"))
 
-            v6_reply11 = MessageBuiler(amber)
-            v6_reply11.add_replies(amber, 
+            MessengerService.new_message(amber, _("I guess you didn't want my surprise :/"))
+            MessengerService.add_reply(amber, _("Sorry something important came up and I didn't have time."))
+            MessengerService.add_replies(amber,
                 Reply(_("I'm alone now, if the surprise is still on ;)"), v6_reply5),
                 Reply(_("I'll make it up to you tho"), v6_reply6)
             )
-
-            MessengerService.new_message(amber, _("I guess you didn't want my surprise :/"))
-            MessengerService.add_reply(amber, _("Sorry something important came up and I didn't have time."), v6_reply11)
-
 
         while MessengerService.has_replies(amber):
             call screen phone
@@ -984,7 +980,7 @@ label continuebb:
         jump continuebd
 
     elif chooseimre: # Amber texts you about the pic, chloe texts you about you not responding
-        play sound "sounds/vibrate.mp3"
+        play sound sound.vibrate
         $ MessengerService.new_message(chloe, _("I guess we'll do it another time..."))
         $ MessengerService.add_reply(chloe, _("Sorry, something really important came up. Definitely another time"))
         $ MessengerService.new_message(chloe, _("Okay"))
@@ -992,7 +988,7 @@ label continuebb:
     elif CharacterService.is_mad(chloe) and not chloecaught:
         jump continuebd
             
-    play sound "sounds/vibrate.mp3"
+    play sound sound.vibrate
     
     python:
         v6_reply2 = MessageBuilder(amber)
@@ -1006,7 +1002,7 @@ label continuebb:
         v6_reply1 = MessageBuilder(amber)
         v6_reply1.add_function(reputation.add_point, RepComponent.BRO)
         v6_reply1.new_message(_("I'm playing drink or dare and got dared to send an underwear pic to a guy."))
-        v6_reply1.add_replies(amber, 
+        v6_reply1.add_replies( 
             Reply(_("And you chose me, huh?"), v6_reply2),
             Reply(_("Feel free to do so anytime :)"), v6_reply3)
         )
@@ -1024,8 +1020,6 @@ label continuebb:
             Reply(_("Woah, what was that for?"), v6_reply1),
             Reply(_("Oh wow, you're so fucking hot"), v6_reply4)
         )
-
-        " "
 
     while MessengerService.has_replies(amber):
         call screen phone
@@ -1078,7 +1072,7 @@ label continuebd:
             scene s486b # You bend down, you and Lauren kiss
             with dissolve
 
-            play sound "sounds/kiss.mp3"
+            play sound sound.kiss
 
             pause 1.5
 
@@ -1138,7 +1132,7 @@ label continuebd:
             scene s491 # (Showing you and Lauren standing at your desks after classs) Lauren kisses you goodbye
             with fade
 
-            play sound "sounds/kiss.mp3"
+            play sound sound.kiss
 
             pause 1.5
 
@@ -1950,7 +1944,7 @@ label continuebd:
 
         scene s524 # you on the phone
         with dissolve
-        play sound "sounds/calling.mp3"
+        play sound sound.calling
 
         pause 0.5
         stop sound
@@ -2117,7 +2111,7 @@ label continuebd:
 
         pause 1.0
 
-        play sound "sounds/swoosh.mp3"
+        play sound sound.swoosh
 
         show fantasyoverlay onlayer foreground
 
@@ -2125,7 +2119,7 @@ label continuebd:
         with flash
 
         pause 0.5
-        play sound "sounds/swoosh.mp3"
+        play sound sound.swoosh
         scene s388e #you press lever
         with flash
         play sound "sounds/lever.mp3"
@@ -2140,7 +2134,7 @@ label continuebd:
         pause 1.0
 
         hide fantasyoverlay onlayer foreground
-        play sound "sounds/swoosh.mp3"
+        play sound sound.swoosh
         scene s525
         with flash
 
@@ -2192,7 +2186,7 @@ label continuebd:
     label fw_a: #for compatibility only
     stop music fadeout 3
 
-    play sound "sounds/call.mp3"
+    play sound sound.call
 
     u "(Huh?)"
 
@@ -2394,7 +2388,7 @@ label continuebd:
                 scene s532
                 with fade
 
-                play sound "sounds/knock.mp3"
+                play sound sound.knock
 
                 "*Knock knock knock*"
 
@@ -3013,13 +3007,13 @@ label fy_bd: # not gone to Emily's
 
         pause 0.5
 
-        play sound "sounds/swoosh.mp3"
+        play sound sound.swoosh
 
         scene s205a # old render, no need to do
         with flash
 
         pause 0.5
-        play sound "sounds/swoosh.mp3"
+        play sound sound.swoosh
         scene s541 # looking at door closed
         with flash
 
@@ -3633,7 +3627,7 @@ label fy_bd: # not gone to Emily's
 
                     scene s563a # Showing you and Evelyn kissing
                     with dissolve
-                    play sound "sounds/kiss.mp3"
+                    play sound sound.kiss
 
                     pause 1.5
 
@@ -3668,7 +3662,7 @@ label fy_bd: # not gone to Emily's
         else:
             u "(We never really clicked. That probably means I missed my shot with her...)"
 
-        play sound "sounds/vibrate.mp3"
+        play sound sound.vibrate
 
         python:
             v6_reply7 = MessageBuilder(aubrey)
@@ -3700,7 +3694,7 @@ label fy_bd: # not gone to Emily's
             jump afteraubrey
 
     else:
-        play sound "sounds/vibrate.mp3"
+        play sound sound.vibrate
         scene s546 # phone close up, it's 10:30 pm, message from Aubrey
         with dissolve
 
@@ -3743,7 +3737,7 @@ label fy_bd: # not gone to Emily's
     scene s566 # you knock on aubrey's door
     with Fade(1,0,1)
 
-    play sound "sounds/knock.mp3"
+    play sound sound.knock
 
     "*Knock knock knock*"
 
@@ -4438,7 +4432,7 @@ label afteraubrey:
     with fade
 
     if CharacterService.is_fwb(aubrey):
-        play sound "sounds/vibrate.mp3"
+        play sound sound.vibrate
 
         if is_censored:
             $ MessengerService.new_message(aubrey, "gui/censoredPopup/censoredBackground.webp")
@@ -4813,7 +4807,7 @@ label afteraubrey:
 
             u "Uhm..."
 
-            play sound "sounds/swoosh.mp3"
+            play sound sound.swoosh
             scene s63d
             with flash
             show fantasyoverlay onlayer foreground
@@ -4842,7 +4836,7 @@ label afteraubrey:
             imre "It is, but my brother used to be a Wolf and he told me about all the shady shit that the Apes would do."
 
             hide fantasyoverlay onlayer foreground
-            play sound "sounds/swoosh.mp3"
+            play sound sound.swoosh
             scene s581g
             with flash
 
@@ -5022,7 +5016,7 @@ label afteraubrey:
     pause 0.5
     #### Nightmare
     play music "music/mhorror.mp3"
-    play sound "sounds/swoosh.mp3"
+    play sound sound.swoosh
     scene s587 # Showing you, lauren and Riley running through the forest terrified like someone's after them
     with flash
 
@@ -5069,7 +5063,7 @@ label afteraubrey:
             scene s593 # Mc and Lauren on the ground terrified
             with vpunch
 
-            play sound "sounds/gun.mp3"
+            play sound sound.gun
             pause 0.5
 
             scene s593a # mc looks back and screams
@@ -5092,7 +5086,7 @@ label afteraubrey:
             scene s595 # Mc and Riley on the ground terrified
             with vpunch
 
-            play sound "sounds/gun.mp3"
+            play sound sound.gun
             pause 0.5
 
             scene s595a # mc looks back and screams
@@ -5109,7 +5103,7 @@ label timera:
     with dissolve
 
     unknown "1..."
-    play sound "sounds/gun.mp3"
+    play sound sound.gun
 
     scene s596a # Mc screaming terrified
     with vpunch
@@ -5119,7 +5113,7 @@ label timera:
 label wakeupa:
     stop sound
     hide fantasyoverlay onlayer foreground
-    play sound "sounds/swoosh.mp3"
+    play sound sound.swoosh
     scene s586b # you wake up in disstress
     with flash
 
@@ -5477,7 +5471,7 @@ label wakeupa:
 
     pause 1.0
 
-    play sound "sounds/call.mp3"
+    play sound sound.call
 
     "*Phone rings*"
 
@@ -6593,7 +6587,7 @@ label wakeupa:
 
                 pause 0.5
 
-                play sound "sounds/kiss.mp3"
+                play sound sound.kiss
 
                 scene s658l
                 with dissolve
@@ -6656,7 +6650,7 @@ label wakeupa:
         pause 0.5
 
         if joinapes:
-            play sound "sounds/swoosh.mp3"
+            play sound sound.swoosh
             scene s581g
             with flash
 
@@ -6679,7 +6673,7 @@ label wakeupa:
             gr "That's what I'm talking about!"
 
         elif meetgrayson:
-            play sound "sounds/swoosh.mp3"
+            play sound sound.swoosh
             scene s581g
             with flash
 
@@ -6703,7 +6697,7 @@ label wakeupa:
         else:
             jump wolvesfr
 
-        play sound "sounds/swoosh.mp3"
+        play sound sound.swoosh
         scene s661 # Mc walking to party by himself
         with flash
 
@@ -6763,7 +6757,7 @@ label wakeupa:
         pause 0.5
 
         if meetgrayson and joinapes:
-            play sound "sounds/swoosh.mp3"
+            play sound sound.swoosh
             scene s581g
             with flash
 
@@ -6786,7 +6780,7 @@ label wakeupa:
             gr "That's what I'm talking about!"
 
         elif meetgrayson:
-            play sound "sounds/swoosh.mp3"
+            play sound sound.swoosh
             scene s581g
             with flash
 
@@ -6808,7 +6802,7 @@ label wakeupa:
             gr "What? What do you mean you don't wanna be an Ape?!"
 
         else:
-            play sound "sounds/swoosh.mp3"
+            play sound sound.swoosh
             scene s501d
             with flash
 
@@ -6828,7 +6822,7 @@ label wakeupa:
             with dissolve
             u "(Fuck Grayson, I'm not meeting him.)"
 
-        play sound "sounds/swoosh.mp3"
+        play sound sound.swoosh
         scene s664
         with flash
 
@@ -8228,24 +8222,24 @@ label v6_fr3riley1: #If you click on Riley and finn*
     ri "Oh, hey [name]. How's your night?"
 
     if save == 0:
-        play sound "sounds/swoosh.mp3"
+        play sound sound.swoosh
         scene s596a # Mc tackles Lauren out of the guns aim
         with flash
         pause 0.5
 
     elif save == 1:
-        play sound "sounds/swoosh.mp3"
+        play sound sound.swoosh
         scene s592
         with flash
         pause 0.5
 
     elif save == 2:
-        play sound "sounds/swoosh.mp3"
+        play sound sound.swoosh
         scene s594
         with flash
         pause 0.5
 
-    play sound "sounds/swoosh.mp3"
+    play sound sound.swoosh
     scene sfr3ri2 # riley close up smiling
     with flash
 
@@ -9313,7 +9307,7 @@ label v6_fr3chloe1:
 
             pause 0.5
 
-            play sound "sounds/kiss.mp3"
+            play sound sound.kiss
 
             scene sfr3cl4a # chloe gives you a quick kiss
             with dissolve
@@ -10089,7 +10083,7 @@ label upstairsaubrey:
 
                 pause 0.5
 
-                play sound "sounds/kiss.mp3"
+                play sound sound.kiss
                 scene sufr3au4a ## kiss
                 with dissolve
 
@@ -10301,7 +10295,7 @@ label upstairsemily:
     scene sufr3em1a # kiss
     with dissolve
 
-    play sound "sounds/kiss.mp3"
+    play sound sound.kiss
 
     pause 1.0
 
@@ -10406,7 +10400,7 @@ label upstairsamber: # upstairs with amber
     scene sufr3am2e
     with dissolve
 
-    play sound "sounds/call.mp3"
+    play sound sound.call
 
     "*Amber's phone rings*"
 
