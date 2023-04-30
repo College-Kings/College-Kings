@@ -303,7 +303,7 @@ label v14s03c:
     menu:
         "Go with her":
             $ sceneList.add("v14_satin")
-            $ CharacterService.set_relationship(satin, Relationship.FWB, mc)
+            $ CharacterService.set_relationship(satin, Relationship.FWB)
             label v14s03c_sg:
                    
             $ reputation.add_point(RepComponent.TROUBLEMAKER)

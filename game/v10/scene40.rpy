@@ -49,7 +49,7 @@ label v10_riley_sex:
     if CharacterService.is_fwb(riley)or reputation() == Reputations.CONFIDENT:
         label v10s40_galleryScene:
             if _in_replay:
-                $ CharacterService.set_relationship(riley, Relationship.FWB, mc)
+                $ CharacterService.set_relationship(riley, Relationship.FWB)
 
     scene v10srds3 # FPP. Show Riley walking into her dorm room, wrapped in a towel, her hair down and still wet. She has a little smile, mouth open.
     with fade
@@ -227,7 +227,7 @@ label v10_riley_sex:
                         jump v10_mc_pen_call # -Transition to Scene 41-
 
                     "Peek":
-                        $ CharacterService.set_relationship(riley, Relationship.FWB, mc)
+                        $ CharacterService.set_relationship(riley, Relationship.FWB)
                         $ sceneList.add("v10_riley")
 
                         scene v10srds1f
@@ -331,7 +331,7 @@ label v10_riley_sex:
 
                         u "It was."
             "Make a move":
-                $ CharacterService.set_relationship(riley, Relationship.FWB, mc)
+                $ CharacterService.set_relationship(riley, Relationship.FWB)
                 $ sceneList.add("v10_riley")
 
                 scene v10srds4a # TPP. Same camera as v10srds4. Show MC and Riley. Both smiling, mouths closed. MC puts his hand on Riley's towel and drops it to the floor.
@@ -570,7 +570,7 @@ label v10_riley_sex:
         with dissolve
         menu:
             "Make a move":
-                $ CharacterService.set_relationship(riley, Relationship.FWB, mc)
+                $ CharacterService.set_relationship(riley, Relationship.FWB)
                 $ sceneList.add("v10_riley")
 
                 scene v10srds1f
@@ -821,7 +821,7 @@ label v10_riley_sex:
                         jump v10_mc_pen_call # -Transition to Scene 41-
                     
                     "Peek":
-                        $ CharacterService.set_relationship(riley, Relationship.FWB, mc)
+                        $ CharacterService.set_relationship(riley, Relationship.FWB)
                         $ sceneList.add("v10_riley")
 
                         scene v10srds1f

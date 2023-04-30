@@ -835,7 +835,7 @@ label v9s16_emilyDoggy:
     
     $ sceneList.add("v9_emily")
 
-    $ CharacterService.set_relationship(emily, Relationship.FWB, mc)
+    $ CharacterService.set_relationship(emily, Relationship.FWB)
     
     if joinwolves:
         jump v9_thur_night_aft_em_w

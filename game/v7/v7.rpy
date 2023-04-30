@@ -2076,7 +2076,7 @@ label thisbelauren:
         "Deny the cheating":
             $ reputation.add_point(RepComponent.BRO)
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
-            $ CharacterService.set_relationship(lauren, Relationship.GIRLFRIEND, mc)
+            $ CharacterService.set_relationship(lauren, Relationship.GIRLFRIEND)
 
             u "I know how this looks."
 
@@ -6601,7 +6601,7 @@ label hc_asking_amber:
             "Alright, I'm in":
                 $ reputation.add_point(RepComponent.TROUBLEMAKER)
                 $ hcGirl = "amber"
-                $ CharacterService.set_relationship(amber, Relationship.FWB, mc)
+                $ CharacterService.set_relationship(amber, Relationship.FWB)
 
                 scene s919e
                 with dissolve
@@ -6988,7 +6988,7 @@ label hc_asking_lauren:
         if not beachfirstkiss:
             call screen reputation_popup
 
-        $ CharacterService.set_relationship(lauren, Relationship.GIRLFRIEND, mc)
+        $ CharacterService.set_relationship(lauren, Relationship.GIRLFRIEND)
 
         scene s967b # lauren laughing
         with dissolve
@@ -8918,7 +8918,7 @@ label rileytext:
 #### RIley Sex Scene, if riley rs = True, you get a message in your dorm from Riley telling you that her roommate isnt home and if you wanna come over. Since you already did stuff, you say yes.
 # It's thurday night
 label rileysexscene:
-    $ CharacterService.set_relationship(riley, Relationship.FWB, mc)
+    $ CharacterService.set_relationship(riley, Relationship.FWB)
     $ sceneList.add("v7_riley")
 
     if joinwolves:
