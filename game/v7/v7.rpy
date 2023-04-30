@@ -8874,14 +8874,14 @@ label rileytext:
     if Moods.TEASED in riley.mood:
         play sound sound.vibrate
 
-        v7_msgReply5 = MessageBuilder(riley)
-        v7_msgReply5.set_variable("rileysex", True)
-        v7_msgReply5.new_message(_("Yayyy"))
+        $ v7_msgReply5 = MessageBuilder(riley)
+        $ v7_msgReply5.set_variable("rileysex", True)
+        $ v7_msgReply5.new_message(_("Yayyy"))
 
-        v7_msgReply6 = MessageBuilder(riley)
-        v7_msgReply6.new_message(_("Oh oki"))
+        $ v7_msgReply6 = MessageBuilder(riley)
+        $ v7_msgReply6.new_message(_("Oh oki"))
 
-        $ MessengerService.new_message(_("Wanna come over? ;)"))
+        $ MessengerService.new_message(riley_("Wanna come over? ;)"))
         $ MessengerService.add_replies(riley, 
             Reply(_("Sure, on my way :)"), v7_msgReply5),
             Reply(_("Sorry I'm really exhausted. Another time"), v7_msgReply6)
