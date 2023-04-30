@@ -183,7 +183,7 @@ label jorepb:
     scene s368 # knocking on Chloes door
     with Fade (1,0,1)
 
-    play sound "sounds/knock.mp3"
+    play sound sound.knock
 
     "*Knock knock knock*"
 
@@ -362,7 +362,7 @@ label jorepb:
 
             u "Chloe!"
 
-            play sound "sounds/slam.mp3"
+            play sound sound.slam
 
             scene s371a
             with hpunch #scene door slam
@@ -572,7 +572,7 @@ label newchloec:
     with dissolve
 
     #### Amber text
-    play sound "sounds/vibrate.mp3"
+    play sound sound.vibrate
 
     #################
 
@@ -667,7 +667,7 @@ label newchloec:
             )
 
     if not toldlauren and not laurentoofar:
-        play sound "sounds/vibrate.mp3"
+        play sound sound.vibrate
 
         $ MessengerService.new_message(lauren, _("Hey"))
         $ MessengerService.new_message(lauren, _("Wanna do the personality tests today at noon?"))
@@ -683,11 +683,11 @@ label newchloec:
                 
             u "(Time to get ready.)"
 
-        else:
-            while MessengerService.has_replies(amber):
-                call screen phone
-                if MessengerService.has_replies(amber):
-                    u "(Maybe it's Lauren and she wants to talk about what happened? I should definitely check.)"
+    else:
+        while MessengerService.has_replies(amber):
+            call screen phone
+            if MessengerService.has_replies(amber):
+                u "(Maybe it's Lauren and she wants to talk about what happened? I should definitely check.)"
 
             jump continueaf
 
@@ -716,7 +716,7 @@ label continuez:
     if CharacterService.is_girlfriend(lauren):
         scene s379a # lauren kisses you
         with dissolve
-        play sound "sounds/kiss.mp3"
+        play sound sound.kiss
         pause 0.5
 
         scene s380a
@@ -1504,7 +1504,7 @@ label continueao:
                 pause 0.5
 
                 scene s392a # kiss
-                play sound "sounds/kiss.mp3"
+                play sound sound.kiss
 
                 pause 0.5
 
@@ -1624,7 +1624,7 @@ label fb_b:
         pause 0.5
 
         scene s392a # kiss
-        play sound "sounds/kiss.mp3"
+        play sound sound.kiss
 
         pause 0.5
 
@@ -1664,7 +1664,7 @@ label continueaf:
 
             scene s393a # you knock
             with dissolve
-            play sound "sounds/knock.mp3"
+            play sound sound.knock
 
             "*Knock knock knock*"
 
@@ -1969,7 +1969,7 @@ label continueaf:
             scene s379a
             with dissolve
 
-            play sound "sounds/kiss.mp3"
+            play sound sound.kiss
 
             pause 0.5
 
@@ -2073,7 +2073,7 @@ label continueaf:
         scene s379a
         with dissolve
 
-        play sound "sounds/kiss.mp3"
+        play sound sound.kiss
 
         pause 0.5
 
@@ -2269,7 +2269,7 @@ label hospitala:
     scene s405 # Imre hand hug thing with u,
     with dissolve
 
-    play sound "sounds/slap.mp3"
+    play sound sound.slap
     pause 0.5
 
     scene s405a # pull in for the hug
@@ -2338,7 +2338,7 @@ label hospitala:
 
     u "(Is that Emily?)"
 
-    play sound "sounds/swoosh.mp3"
+    play sound sound.swoosh
 
     show fantasyoverlay onlayer foreground
 
@@ -2357,7 +2357,7 @@ label hospitala:
 
     u "*Laughs* Hey!"
 
-    play sound "sounds/swoosh.mp3"
+    play sound sound.swoosh
 
     scene s410 #MC and Emily are dancing in the moonlight. MC presses his face into her hair as he holds her.
     with flash
@@ -2368,7 +2368,7 @@ label hospitala:
     with dissolve
 
     pause 1.0
-    play sound "sounds/swoosh.mp3"
+    play sound sound.swoosh
     scene s411 #MC and Emily are sitting on the couch watching a movie. Emily has her head on his shoulder.
     with flash
 
@@ -2409,10 +2409,10 @@ label hospitala:
     scene s411d #kiss
     with dissolve
 
-    play sound "sounds/kiss.mp3"
+    play sound sound.kiss
 
     pause 0.5
-    play sound "sounds/swoosh.mp3"
+    play sound sound.swoosh
     hide fantasyoverlay onlayer foreground
 
     scene s408a
@@ -2579,7 +2579,7 @@ label hospitala:
     scene s419e # phone to head
     with dissolve
 
-    play sound "sounds/calling.mp3"
+    play sound sound.calling
 
     pause 0.5
 
@@ -2714,7 +2714,7 @@ label hospitala:
             scene s397
             with dissolve
 
-            play sound "sounds/knock.mp3"
+            play sound sound.knock
 
             "*Knock knock knock*"
 
@@ -2772,7 +2772,7 @@ label hospitala:
 
                             ad "Now fuck off."
 
-                            play sound "sounds/slam.mp3"
+                            play sound sound.slam
 
                             scene s398c
                             with vpunch
@@ -4276,7 +4276,7 @@ label findimre:
     scene s442a # you stand up
     with dissolve
 
-    play sound "sounds/vibrate.mp3"
+    play sound sound.vibrate
 
     u "(Maybe that's Imre...)"
 

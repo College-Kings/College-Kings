@@ -16,7 +16,7 @@ label v9_room_thur_night:
             scene v9emi1a # TPP. Same camera as v9emi1, MC now on his phone on his bed.
             with dissolve
 
-            play sound "sounds/vibrate.mp3"
+            play sound sound.vibrate
 
             u "(Ugh, now what.)"
 
@@ -57,7 +57,7 @@ label v9_room_thur_night:
             scene v9emi4a # TPP. Same camera as v9emi4, MC now on his phone on his bed.
             with dissolve
 
-            play sound "sounds/vibrate.mp3"
+            play sound sound.vibrate
 
             u "(Ugh, now what.)"
 
@@ -92,7 +92,7 @@ label v9_emily_dorm:
     scene v9emi7 # TPP. Show MC knocking on Emily's dorm door.
     with fade
 
-    play sound "sounds/knock.mp3"
+    play sound sound.knock
 
     pause 0.8
 
@@ -253,7 +253,7 @@ label v9_emily_dorm:
     scene v9emi12 # TPP. Show MC and Emily kissing.
     with dissolve
 
-    play sound "sounds/kiss.mp3"
+    play sound sound.kiss
 
     u "Mmmm."
 
@@ -273,7 +273,7 @@ label v9_emily_dorm:
 
         em "Good. More where that came from. Gotta get some while I can. You're very popular... Rocky."
 
-        play sound "sounds/kiss.mp3"
+        play sound sound.kiss
 
         scene v9emi12
         with dissolve
@@ -888,7 +888,7 @@ label v9_thur_night_aft_em_w:
     scene v9emi3b # TPP. Same camera as v9emi3, MC lies down on his side and starts to go sleep.
     with dissolve
 
-    pause 1"(I should reply to Lindsey.)"
+    pause 1
 
     scene black
     with dissolve
