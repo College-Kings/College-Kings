@@ -585,10 +585,10 @@ label newchloec:
             v5_reply3 = MessageBuilder(amber)
             v5_reply3.new_message(_("Deal xx"))
 
-            v5_reply1 = MessageBuilder(amber) 
+            v5_reply1 = MessageBuilder(amber)
             v5_reply1.add_function(reputation.add_point, RepComponent.BRO)
             v5_reply1.new_message(_("Oh really? How are you gonna do that?"))
-            v5_reply1.add_replies(amber, 
+            v5_reply1.add_replies(
                 Reply(_("I give some world-class massages"), v5_reply2),
                 Reply(_("I'll stay longer next time"), v5_reply3)
             )
@@ -601,12 +601,12 @@ label newchloec:
             MessengerService.new_message(amber, _("Hey, it's Amber"))
             MessengerService.new_message(amber, _("Josh gave me your number"))
             MessengerService.new_message(amber, _("You know, you never came back, I thought we were having a good time xx"))
-            MessengerService.add_replies(amber, 
+            MessengerService.add_replies(amber,
                 Reply(_("We did, I'll make it up to you."), v5_reply1),
                 Reply(_("Sorry, something came up."), v5_reply4)
             )
 
-        elif len(josh.messenger.sent_messages) >= 2 and josh.messenger.sent_messages[-2].reply and josh.messenger.sent_messages[-2].reply.message == "I can't, sorry.":
+        elif MessengerService.find_message(josh, "I can't, sorry."):
 
             v5_reply6 = MessageBuilder(amber)
             v5_reply6.add_function(reputation.add_point, RepComponent.TROUBLEMAKER)
@@ -618,7 +618,7 @@ label newchloec:
             v5_reply5 = MessageBuilder(amber)
             v5_reply5.add_function(reputation.add_point, RepComponent.BRO)
             v5_reply5.new_message(_("Oh wow, I was just checking. :P"))
-            v5_reply5.add_replies(amber, 
+            v5_reply5.add_replies(
                 Reply(_("Don't worry, you'll see me soon."), v5_reply6),
                 Reply(_("Haha, I'm fine."), v5_reply7)
             )
@@ -631,7 +631,7 @@ label newchloec:
             MessengerService.new_message(amber, _("Hey, it's Amber"))
             MessengerService.new_message(amber, _("Josh gave me your number"))
             MessengerService.new_message(amber, _("How come you didn't show up yesterday? Everything okay? xx"))
-            MessengerService.add_replies(amber, 
+            MessengerService.add_replies(amber,
                 Reply(_("Wow, you really wanted to see me, huh?"), v5_reply5),
                 Reply(_("Sorry, something came up."), v5_reply8)
             )
@@ -648,7 +648,7 @@ label newchloec:
             v5_reply9 = MessageBuilder(amber)
             v5_reply9.add_function(reputation.add_point, RepComponent.BRO)
             v5_reply9.new_message(_("Oh shut up, I was just checking in"))
-            v5_reply9.add_replies(amber,
+            v5_reply9.add_replies(
                 Reply(_("Don't worry, you'll see me again"), v5_reply10),
                 Reply(_("Haha, I'm fine"), v5_reply11)
             )
@@ -661,7 +661,7 @@ label newchloec:
             MessengerService.new_message(amber, _("Hey, it's Amber"))
             MessengerService.new_message(amber, _("Josh gave me your number"))
             MessengerService.new_message(amber, _("You know, you never came back, everything okay?"))
-            MessengerService.add_replies(amber, 
+            MessengerService.add_replies(amber,
                 Reply(_("Wow, you really missed me that much, huh?"), v5_reply9),
                 Reply(_("Sorry, something came up."), v5_reply12)
             )
@@ -681,7 +681,7 @@ label newchloec:
             if MessengerService.has_replies(lauren):
                 u "(I should probably reply to some of them.)"
                 
-            u "(Time to get ready.)"
+        u "(Time to get ready.)"
 
     else:
         while MessengerService.has_replies(amber):
@@ -689,7 +689,7 @@ label newchloec:
             if MessengerService.has_replies(amber):
                 u "(Maybe it's Lauren and she wants to talk about what happened? I should definitely check.)"
 
-            jump continueaf
+        jump continueaf
 
     ############### Lauren personality tests
 
