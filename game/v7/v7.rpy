@@ -4691,7 +4691,7 @@ label aftercall:
 
 ######## SCENE 14 APES
 label pledgeapes:
-    $ reputation.add_point(Reputations.TROUBLEMAKER, 3) # I think more TM points for joining the Apes makes sense
+    $ reputation.add_point(RepComponent.TROUBLEMAKER, 3) # I think more TM points for joining the Apes makes sense
     $ joinwolves = False
 
     scene s756 # Not a new render
