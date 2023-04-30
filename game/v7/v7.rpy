@@ -1353,12 +1353,10 @@ label conyourdorm:
 
         play sound sound.vibrate
 
-        $ v7_msgReply7 = MessageBuilder(riley)
-        $ v7_msgReply7.set_variable("kiwii_first_time", True)
-
         $ MessengerService.new_message(riley, _("Are you and Emily back together?"))
-        $ MessengerService.add_reply(riley, _("What are you talking about???"), v7_msgReply7)
+        $ MessengerService.add_reply(riley, _("What are you talking about???"))
         $ MessengerService.new_message(riley, _("Check Kiwii..."))
+        $ kiwii_first_time = True
 
         pause 0.5
 
@@ -1594,13 +1592,11 @@ label conyourdorm:
     else:
         play sound sound.vibrate
 
-        $ v7_msgReply7 = MessageBuilder(riley)
-        $ v7_msgReply7.set_variable("kiwii_first_time", True)
-
         $ MessengerService.new_message(riley, _("Hey, how come you're not on Kiwii?"))
         $ MessengerService.add_reply(riley, _("What's that?"))
         $ MessengerService.new_message(riley, _("It's a new social media app, you should give it a try"))
-        $ MessengerService.add_reply(riley, _("Okay, I'll have a look"), v7_msgReply7)
+        $ MessengerService.add_reply(riley, _("Okay, I'll have a look"))
+        $ kiwii_first_time = True
 
         pause 0.5
 
