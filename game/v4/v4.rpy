@@ -182,7 +182,7 @@ label v4start:
     scene s299b # you on the phone mouth closed
     with dissolve
 
-    play sound "sounds/calling.mp3"
+    play sound sound.calling
 
     "*Phone calling*"
 
@@ -234,7 +234,7 @@ label v4start:
     scene s300 # you in your dorm waiting for Riley to come
     with Fade (1,0,1)
 
-    play sound "sounds/knock.mp3"
+    play sound sound.knock
 
     "*Knock knock knock*"
 
@@ -809,7 +809,7 @@ label v4start:
 
             pause 0.5
 
-            play sound "sounds/knock.mp3"
+            play sound sound.knock
 
             "*Knock knock knock*"
 
@@ -2126,12 +2126,11 @@ label el_ad:
 label continueab:
     stop music fadeout 3
 
-    play sound "sounds/vibrate.mp3"
+    play sound sound.vibrate
 
     play music "music/m9punk.mp3"
 
     python:
-
         v4_reply1 = MessageBuilder(josh)
         v4_reply1.add_function(reputation.add_point, RepComponent.BRO)
         v4_reply1.new_message(_("Dope"))
@@ -2146,10 +2145,10 @@ label continueab:
         v4_reply5.add_function(reputation.add_point, RepComponent.BOYFRIEND)
         v4_reply5.new_message(_("This guy"))
 
-        v4_reply3  = MessageBuilder(josh)
+        v4_reply3 = MessageBuilder(josh)
         v4_reply3.new_message(_("Remember how you told me in high school that you felt like you always missed out on all the crazy stories?"))
         v4_reply3.new_message(_("Don't miss out now."))
-        v4_reply3.add_replies(josh,
+        v4_reply3.add_replies(
             Reply(_("Fine, I'll come. But I need to go before 11."), v4_reply4),
             Reply(_("I can't, sorry."), v4_reply5)
         )
@@ -2158,13 +2157,13 @@ label continueab:
         v4_reply2.new_message(_("Aww, come on. You'll be back by 11."))
         v4_reply2.new_message("images/v4/text1.webp")
         v4_reply2.new_message(_("I told my friend Amber about you and she really wants to meet you."))
-        v4_reply2.add_replies(josh, 
+        v4_reply2.add_replies(
             Reply(_("Alright, I'll come."), v4_reply1),
             Reply(_("Josh, I don't know, man. I don't wanna be late."), v4_reply3)
         )
 
-        MessengerService.newMessage(josh, _("Hey man, you wanna hang out with me and some friends tonight?"))
-        MessengerService.add_replies(josh, 
+        MessengerService.new_message(josh, _("Hey man, you wanna hang out with me and some friends tonight?"))
+        MessengerService.add_replies(josh,
             Reply(_("Uhh, sure."), v4_reply1),
             Reply(_("I'm meeting a friend at 11, so I can't really."), v4_reply2)
         )
@@ -2195,7 +2194,7 @@ label continueab:
     scene s353 # knocking on josh door
     with fade
 
-    play sound "sounds/knock.mp3"
+    play sound sound.knock
 
     pause 0.5
 
@@ -2206,7 +2205,7 @@ label continueab:
 
     jo "What's up, bro?"
 
-    if josh.messenger.sent_messages[-2].reply and josh.messenger.sent_messages[-2].reply.message == "Alright, I'll come.":
+    if MessengerService.find_message(josh, "Alright, I'll come."):
         jo "Picture of Amber did it, eh?"
 
         scene s353b
@@ -2533,7 +2532,7 @@ label continueab:
 
     pause 0.5
 
-    play sound "sounds/kiss.mp3"
+    play sound sound.kiss
 
     scene jomon6b # kiss
     with dissolve
@@ -2819,7 +2818,7 @@ label continueab:
     scene s368 # knocking on Chloes door
     with Fade (1,0,1)
 
-    play sound "sounds/knock.mp3"
+    play sound sound.knock
 
     "*Knock knock knock*"
 
@@ -2942,7 +2941,7 @@ label continueab:
 
     u "*Drunk* Chloe!"
 
-    play sound "sounds/slam.mp3"
+    play sound sound.slam
 
     scene s371a
     with hpunch #scene door slam
