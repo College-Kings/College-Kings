@@ -90,7 +90,7 @@ label sun_eve_room:
                 MessengerService.new_message(amber, _("You're pretty hot yourself and I'm... thinking about things"))
                 MessengerService.add_reply(amber, _("What kind of things? Same things I'm thinking? ;)"))
                 MessengerService.new_message(amber, _("I think so"))
-                MessengerService.add_replies(amber, 
+                MessengerService.add_replies(amber,
                     Reply(_("Wanna see what thinking about you has done to me?"), v8s19_reply1),
                     Reply(_("I look at your pic all the time...when I'm thinking about things"), v8s19_reply2)
                 )
@@ -103,12 +103,11 @@ label sun_eve_room:
             $ MessengerService.new_message(emily, _("Wanna meet up at the arcade?"))
 
             if hcGirl == "emily":
-            
                 $ MessengerService.new_message(emily, _("I feel so bad about homecoming and want to make it up to you. My treat!"))
-                $ MessengerService.add_replies(emily,
-                    Reply(_("Sure! Sounds like fun. I can be there in a few minutes"), v8s19_reply3),
-                    Reply(_("I would but it's getting late and I haven't even started Mr. Lee's project"), v8s19_reply4)
-                )
+            $ MessengerService.add_replies(emily,
+                Reply(_("Sure! Sounds like fun. I can be there in a few minutes"), v8s19_reply3),
+                Reply(_("I would but it's getting late and I haven't even started Mr. Lee's project"), v8s19_reply4)
+            )
 
             while MessengerService.has_replies(emily):
                 call screen phone
@@ -174,12 +173,11 @@ label sun_eve_room:
             $ MessengerService.new_message(emily, _("Wanna meet up at the arcade?"))
 
             if hcGirl == "emily":
-
                 $ MessengerService.new_message(emily, _("I feel so bad about homecoming and want to make it up to you. My treat!"))
-                $ MessengerService.add_replies(emily,
-                    Reply(_("Sure! Sounds like fun. I can be there in a few minutes"), v8s19_reply3),
-                    Reply(_("I would but it's getting late and I haven't even started Mr. Lee's project"), v8s19_reply4)
-                )
+            $ MessengerService.add_replies(emily,
+                Reply(_("Sure! Sounds like fun. I can be there in a few minutes"), v8s19_reply3),
+                Reply(_("I would but it's getting late and I haven't even started Mr. Lee's project"), v8s19_reply4)
+            )
 
             while MessengerService.has_replies(emily):
                 call screen phone
