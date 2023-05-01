@@ -31,7 +31,7 @@ init python:
 
         if bowling and CharacterService.is_fwb(emily):
             v7_msgReply1 = MessageBuilder(penelope)
-            v7_msgReply1.add_function(reputation.add_pointRepComponent.BRO)
+            v7_msgReply1.add_function(reputation.add_point, RepComponent.BRO)
             v7_msgReply1.new_message(_("Okay..."))
 
             v7_msgReply2 = MessageBuilder(penelope)
