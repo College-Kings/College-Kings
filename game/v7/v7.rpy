@@ -1377,7 +1377,7 @@ label conyourdorm:
         while kiwii_first_time:
             call screen phone
             if kiwii_first_time:
-                u "I should check out what emily posted on kiwii"
+                u "(I should check out what Emily posted on Kiwii.)"
 
         while MessengerService.has_replies(penelope):
             call screen phone
@@ -8883,7 +8883,7 @@ label rileytext:
         $ v7_msgReply6 = MessageBuilder(riley)
         $ v7_msgReply6.new_message(_("Oh oki"))
 
-        $ MessengerService.new_message(riley _("Wanna come over? ;)"))
+        $ MessengerService.new_message(riley, _("Wanna come over? ;)"))
         $ MessengerService.add_replies(riley,
             Reply(_("Sure, on my way :)"), v7_msgReply5),
             Reply(_("Sorry I'm really exhausted. Another time"), v7_msgReply6)
