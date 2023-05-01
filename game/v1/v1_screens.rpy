@@ -402,8 +402,6 @@ screen v1_freeRoam2_5():
 
 
 screen nsfw_Toggle():
-    
-
     add "gui/frame.webp":
         align (0.5,0.5)
         ysize 350
