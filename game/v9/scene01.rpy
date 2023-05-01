@@ -17,7 +17,7 @@ label v9_start_wolves:
     scene v9wpost1 # TPP. MC outside Chris' room, knocking the door, confused, mouth closed
     with fade
 
-    play sound "sounds/knock.mp3"
+    play sound sound.knock
     pause 0.5
     ch "Come in."
 
@@ -211,7 +211,7 @@ label v9_start_wolves:
 
         MessengerService.add_reply(imre, _("You here yet?"))
         MessengerService.new_message(imre, _("Yeah, you ready?"))
-        MessengerService.add_replies(imre, 
+        MessengerService.add_replies(imre,
             Reply(_("Hell no! But we need to get ready!"), v9s1_reply1),
             Reply(_("I think so, actually. You and Sebastian really helped"), v9s1_reply2)
         )

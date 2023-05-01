@@ -39,7 +39,7 @@ label v8_ending:
         scene v8send3a # TPP. Same camera as v8send3, MC checking his phone, looking confused.
         with dissolve
 
-        $ MessengerService.new_message(imre, _("Dude, you see this shit on Kiwii?"), force_send=True)
+        $ MessengerService.new_message(imre, _("Dude, you see this shit on Kiwii?"))
         $ MessengerService.add_reply(imre, _("No, what?"))
         $ MessengerService.new_message(imre, _("IDK, it's crazy"))
 
@@ -91,9 +91,8 @@ label v8_ending:
 
         scene v8send7a # TPP. Same camera as v8send7, MC checking his phone, looking confused.
         with dissolve
-        
 
-        $ MessengerService.new_message(ryan, _("What the hell's happening on Kiwii?"), force_send=True)
+        $ MessengerService.new_message(ryan, _("What the hell's happening on Kiwii?"))
         $ MessengerService.add_reply(ryan, _("I don't know. What is it?"))
         $ MessengerService.new_message(ryan, _("Fuckin check it out man. Crazy shit"))
 

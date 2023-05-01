@@ -45,7 +45,7 @@ label phn_riley11_setup:
     $ MessengerService.new_message(riley, _("Just down the road from the gym on the right hand side of the road"))
     $ MessengerService.add_reply(riley, _("Cool will meet you both there"))
     $ MessengerService.new_message(riley, _("Great!"))
-    play sound "sounds/vibrate.mp3"
+    play sound sound.vibrate
 
     while MessengerService.has_replies(riley):
         call screen phone

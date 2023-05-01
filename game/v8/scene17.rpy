@@ -28,7 +28,7 @@ label phn_penelope6_done:
 
     scene v8rose1a # MC looking towards his room door (not visible in the shot) and talking
     with dissolve
-    play sound "sounds/knock.mp3"
+    play sound sound.knock
 
     pause 1.5
 
@@ -272,7 +272,7 @@ label phn_penelope6_done:
     with dissolve
     u "And it's still not an excuse for..."
 
-    play sound "sounds/ring.mp3"
+    play sound sound.ring
 
     scene v8rose5e
     with vpunch

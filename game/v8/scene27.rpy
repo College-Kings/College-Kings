@@ -9,12 +9,12 @@ label mon_eve_room_josh:
         with Fade(0.75, 0.25, 0.75)
         pause 0.5
 
-        play sound "sounds/vibrate.mp3"
+        play sound sound.vibrate
         
         u "(Let's see who this is.)"
 
         if helpJosh:
-            $ MessengerService.new_message(josh, _("Hey bro! It's time! Meet me at mine, okay?"), force_send=True)
+            $ MessengerService.new_message(josh, _("Hey bro! It's time! Meet me at mine, okay?"))
             $ MessengerService.add_reply(josh, _("Okay, I'm on my way."))
 
             while MessengerService.has_replies(josh):
@@ -85,7 +85,6 @@ label mon_eve_room_josh:
             jump drug_deal_w_josh
 
         else:
-
             $ MessengerService.new_message(josh, _("Hey bro, I got robbed and my ass kicked bad! Really wish you came with me, man."))
             $ MessengerService.add_reply(josh, _("Fuck! Are you ok??"))
             $ MessengerService.new_message(josh, _("No, man! I hurt everywhere! Plus my shit is gone!"))
@@ -113,13 +112,12 @@ label mon_eve_room_josh:
         with Fade(0.75, 0.25, 0.75)
         pause 0.5
 
-        play sound "sounds/vibrate.mp3"
+        play sound sound.vibrate
         
         u "(Let's see who this is.)"
 
         if helpJosh:
-
-            $ MessengerService.new_message(josh, _("Hey bro! It's time! Meet me at mine, okay?"), force_send=True)
+            $ MessengerService.new_message(josh, _("Hey bro! It's time! Meet me at mine, okay?"))
             $ MessengerService.add_reply(josh, _("Okay, I'm on my way."))
 
             while MessengerService.has_replies(josh):

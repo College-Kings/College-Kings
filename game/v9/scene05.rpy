@@ -25,7 +25,7 @@ label v9_dream_wakeup:
         $ MessengerService.add_reply(riley, _("Yeah, see ya soon."))
         $ MessengerService.new_message(riley, _("See you!"))
 
-        play sound "sounds/vibrate.mp3"
+        play sound sound.vibrate
         u "(Hmm?)"
 
         scene v9dream20b # MC lying on bed looking at his phone, neutral expression, mouth closed
@@ -52,7 +52,7 @@ label v9_dream_wakeup:
         $ MessengerService.add_reply(riley, _("Yeah, see ya soon."))
         $ MessengerService.new_message(riley, _("See you!"))
 
-        play sound "sounds/vibrate.mp3"
+        play sound sound.vibrate
         u "(Hmm?)"
 
         scene v9dream23b # Same as v9dream20b but in MC's room in Apes house

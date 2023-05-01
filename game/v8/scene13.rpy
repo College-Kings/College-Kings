@@ -33,12 +33,12 @@ label after_apes_ceremony:
     $ v8s13_kiwiiPost.newComment(caleb, _("Thanks everyone!"), number_likes=renpy.random.randint(20, 30))
 
     python:
-        v8s13_reply1 = MessageBuilder # phn_chloe11_a
+        v8s13_reply1 = MessageBuilder(chloe) # phn_chloe11_a
         v8s13_reply1.new_message(_("Guess you'll have to wait and see ;)"))
         v8s13_reply1.add_reply(_("I'm moving my stuff now. How about we get started tonight?"))
         v8s13_reply1.new_message(_("You're such a flirt. Have a good night!"))
 
-        v8s13_reply2 = MessageBuilder # phn_chloe11_b
+        v8s13_reply2 = MessageBuilder(chloe) # phn_chloe11_b
         v8s13_reply2.new_message(_("Aww, I like talking to you too. You're sweet."))
         v8s13_reply2.add_reply(_("Sweet? Not hot? Or sexy? Or... anything but sweet?"))
         v8s13_reply2.new_message(_("Sweet and cute ;)"))
@@ -51,7 +51,7 @@ label after_apes_ceremony:
             Reply(_("Hope so. I like talking to you."), v8s13_reply2)
         )
 
-    play sound "sounds/vibrate.mp3"
+    play sound sound.vibrate
 
     scene v8apes21a # MC looking at his phone, mouth closed
     with dissolve
@@ -78,7 +78,7 @@ label phn_chloe11_done:
     with dissolve
     u "(This room is miles better than the dorm I was in.)"
 
-    play sound "sounds/knock.mp3"
+    play sound sound.knock
     "*Knock knock knock*"
 
     scene v8apes25 # FPP. Shot of the door in his room closed

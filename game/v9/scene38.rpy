@@ -16,7 +16,7 @@ label v9_walk_li_txt:
     scene v9wlt1a # TPP. Same camera as v9wlt1, MC checking his phone.
     with dissolve
     
-    play sound "sounds/vibrate.mp3"
+    play sound sound.vibrate
 
     u "(Please no more drama)"
 
@@ -36,7 +36,7 @@ label v9_walk_li_txt:
         MessengerService.new_message(lindsey, _("I've decided to allow the nickname under one condition"))
         MessengerService.add_reply(lindsey, _("Really? And what's that?"))
         MessengerService.new_message(lindsey, _("Come hang out with me"))
-        MessengerService.add_replies(lindsey, 
+        MessengerService.add_replies(lindsey,
             Reply(_("Hell yeah! Be right there, Linds!"), v9s38_reply1),
             Reply(_("Aww, I wish I could, but I gotta get ready for the brawl"), v9s38_reply2)
         )

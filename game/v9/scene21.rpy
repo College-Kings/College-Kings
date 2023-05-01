@@ -14,7 +14,7 @@ label v9_room_w_chris:
     scene v9rwc2 # TPP. Show MC's wolves door.
     with dissolve
 
-    play sound "sounds/knock.mp3"
+    play sound sound.knock
 
     "*Knock* *knock*"
 

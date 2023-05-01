@@ -12,7 +12,7 @@ label v9_start_apes:
     scene v9apost1 # TPP. MC outside Cameron's room, knocking the door, confused, mouth closed
     with fade
 
-    play sound "sounds/knock.mp3"
+    play sound sound.knock
     pause 2
 
     scene v9apost2 # FPP. Cameron opens the door slightly and peeks through the opening, slightly annoyed, mouth open
@@ -246,7 +246,7 @@ label v9_start_apes:
 
         MessengerService.add_reply(ryan, _("You here yet?"))
         MessengerService.new_message(ryan, _("Yeah, you ready?"))
-        MessengerService.add_reply(ryan, 
+        MessengerService.add_replies(ryan,
             Reply(_("Hell no! But we need to get ready!"), v9s2_reply1),
             Reply(_("I think so, actually. You and Cameron really helped"), v9s2_reply2)
         )

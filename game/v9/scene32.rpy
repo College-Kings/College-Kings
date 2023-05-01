@@ -2,21 +2,6 @@
 # Locations: Outside the gym, inside the gym
 # Characters: MC (Outfit 3when outside gym,Outfit 4 when inside gym ), Evelyn (Outfit 4)
 # Time: Saturday Morning
-
-init python:
-    def v9s32_reply1():
-        MessengerService.new_message(_("So you're coming?"))
-        MessengerService.add_reply(_("I hope so ;)"))
-        MessengerService.new_message(_("See you in a few!"))
-        setattr(store, "v9_sex_with_riley", True)
-
-    def v9s32_reply2():
-        MessengerService.new_message(_("But? :o"))
-        MessengerService.add_reply(_("But I have to stay focused on the Brawl. There's a lot riding on my fight."))
-        MessengerService.new_message(_("Seriously?"))
-        MessengerService.add_reply(_("I'm so sorry. You know I would any other day. Really."))
-        MessengerService.new_message(_("Ok well, your loss."))
-
 label v9_sat_gym:
     scene v9atg1 # TPP. Show MC outside the Gym, neutral face, mouth closed
     with fade
@@ -152,10 +137,10 @@ label v9_sat_skip_gym:
         scene v9atg1a # TPP. Same camera as v9atg1, Show MC checking his phone.
         with dissolve
 
-        play sound "sounds/vibrate.mp3"
+        play sound sound.vibrate
 
         u "(Oh, who's that?)"
-
+        
         python:
             v9s32_reply1 = MessageBuilder(riley)
             v9s32_reply1.new_message(_("So you're coming?"))
@@ -173,7 +158,7 @@ label v9_sat_skip_gym:
             MessengerService.new_message(riley,_("Hey, what's up? Wanna come over?"))
             MessengerService.add_reply(riley,_("I really shouldn't. Big day tomorrow. Stressed out"))
             MessengerService.new_message(riley,_("Duh, that's why I'm asking ;)"))
-            MessengerService.add_replies(riley, 
+            MessengerService.add_replies(riley,
                 Reply(_("Well you shoulda led with that!"), v9s32_reply1),
                 Reply(_("Man, I'd really love to but..."), v9s32_reply2)
             )

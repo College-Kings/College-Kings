@@ -22,7 +22,7 @@ label v9_room_fri_eve:
             with dissolve    
 
             u "(Wonder how Lauren's doing with the Deers charity.)"
-
+            
             $ MessengerService.add_reply(lauren, _("How's it going? You still doing our statue idea?"))
             $ MessengerService.new_message(lauren, _("Of course. I'm glad you talked me into it."))
             $ MessengerService.add_reply(lauren, _("Me too. I don't think anyone's tried something like this before. You'll be the talk of the school!"))
@@ -38,7 +38,7 @@ label v9_room_fri_eve:
         scene v9rfe2 # TPP. Show MC's door.
         with dissolve
 
-        play sound "sounds/knock.mp3"
+        play sound sound.knock
 
         "*Knock* *knock*"
 
@@ -81,7 +81,7 @@ label v9_room_fri_eve:
         scene v9rfe4 # TPP. Show MC's door.
         with dissolve
 
-        play sound "sounds/knock.mp3"
+        play sound sound.knock
 
         "*Knock* *knock*"
 

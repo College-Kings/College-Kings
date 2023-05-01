@@ -27,9 +27,9 @@ label v9_room_thur_night:
                 v9s16_reply5.new_message(_("See you soon!"))
 
                 MessengerService.new_message(emily, _("I'm bored. Come hang out."))
-                MessengerService.add_replies(emily, 
-                Reply(_("Sure! Gimme a sec.")),
-                Reply(_("It's kinda late"), v9s16_reply5)
+                MessengerService.add_replies(emily,
+                    Reply(_("Sure! Gimme a sec.")),
+                    Reply(_("It's kinda late"), v9s16_reply5)
                 )
 
             while MessengerService.has_replies(emily):
@@ -67,9 +67,9 @@ label v9_room_thur_night:
                 v9s16_reply6.add_reply(_("Be right there!"))
 
                 MessengerService.new_message(emily, _("I'm bored. Come hang out."))
-                MessengerService.add_replies(emily, 
-                Reply(_("Sure! Gimme a sec.")),
-                Reply(_("It's kinda late"), v9s16_reply6)
+                MessengerService.add_replies(emily,
+                    Reply(_("Sure! Gimme a sec.")),
+                    Reply(_("It's kinda late"), v9s16_reply6)
                 )
 
             while MessengerService.has_replies(emily):
@@ -841,7 +841,7 @@ label v9_thur_night_aft_em_w:
             v9s16_reply2.new_message(_("Fingers crossed. Goodnight!"))
 
             MessengerService.new_message(lindsey, _("How are you doing tonight?"))
-            MessengerService.add_replies(lindsey, 
+            MessengerService.add_replies(lindsey,
                 Reply(_("Better now that I'm talking to you"), v9s16_reply1),
                 Reply(_("Super. You getting ready for bed?"), v9s16_reply2)
             )
@@ -870,7 +870,7 @@ label v9_thur_night_aft_em_w:
             v9s16_reply4.add_reply(_("Goodnight"))
 
             MessengerService.new_message(lindsey, _("Hey, how you feeling?"))
-            MessengerService.add_replies(lindsey, 
+            MessengerService.add_replies(lindsey,
                 Reply(_("Better now that I'm talking to you"), v9s16_reply3),
                 Reply(_("I'm ok, it's really not that bad"), v9s16_reply4)
             )
@@ -930,7 +930,7 @@ label v9_thur_night_aft_em_a:
             v9s16_reply2.new_message(_("Fingers crossed. Goodnight!"))
 
             MessengerService.new_message(lindsey, _("How are you doing tonight?"))
-            MessengerService.add_replies(lindsey, 
+            MessengerService.add_replies(lindsey,
                 Reply(_("Better now that I'm talking to you"), v9s16_reply1),
                 Reply(_("Super. You getting ready for bed?"), v9s16_reply2)
             )
@@ -959,7 +959,7 @@ label v9_thur_night_aft_em_a:
             v9s16_reply4.add_reply(_("Goodnight"))
 
             MessengerService.new_message(lindsey, _("Hey, how you feeling?"))
-            MessengerService.add_replies(lindsey, 
+            MessengerService.add_replies(lindsey,
                 Reply(_("Better now that I'm talking to you"), v9s16_reply3),
                 Reply(_("I'm ok, it's really not that bad"), v9s16_reply4)
             )
