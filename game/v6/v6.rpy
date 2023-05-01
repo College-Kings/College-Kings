@@ -1,4 +1,3 @@
-
 label script06: #for compatibility only
 label v6start:
     if CharacterService.is_mad(imre) and CharacterService.is_mad(chloe):
@@ -299,7 +298,6 @@ label imreconc: # Keep talking to Amber
     with fade
 
     python:
-
         v6_reply2 = MessageBuilder(amber)
         v6_reply2.add_function(reputation.add_point, RepComponent.BRO)
         v6_reply2.new_message(_("Maybe I picked someone at random ;)"))
@@ -311,7 +309,7 @@ label imreconc: # Keep talking to Amber
         v6_reply1 = MessageBuilder(amber)
         v6_reply1.add_function(reputation.add_point, RepComponent.BRO)
         v6_reply1.new_message(_("I'm playing drink or dare and got dared to send an underwear pic to a guy."))
-        v6_reply1.add_replies(amber, 
+        v6_reply1.add_replies(amber,
             Reply(_("And you chose me, huh?"), v6_reply2),
             Reply(_("Feel free to do so anytime :)"), v6_reply3)
         )
@@ -319,12 +317,12 @@ label imreconc: # Keep talking to Amber
         v6_reply4 = MessageBuilder(amber)
         v6_reply4.add_function(reputation.add_point, RepComponent.BOYFRIEND)
         v6_reply4.new_message(_("I'm glad you like it xx"))
-        v6_reply4.add_reply(_( "I hope there's more of that in the future :P"))
+        v6_reply4.add_reply(_("I hope there's more of that in the future :P"))
         v6_reply4.new_message(_("Maybe if you're lucky xx"))
 
         MessengerService.add_reply(amber, _("I'm all by myself now."))
         MessengerService.new_message(amber, "images/v6/text2.webp")
-        MessengerService.add_replies(amber,
+        MessengerService.add_replies(
             Reply(_("Woah, what was that for?"), v6_reply1),
             Reply(_("Oh wow, you're so fucking hot"), v6_reply4)
         )
@@ -351,7 +349,7 @@ label imrecond: # Meet Chloe
     $ MessengerService.add_reply(chloe, _("Cool, see you there"))
 
 
-    if MessengerService.has_replies(chloe):
+    while MessengerService.has_replies(chloe):
         call screen phone
         if MessengerService.has_replies(chloe):
             u "(I should reply to Chloe.)"
@@ -1002,7 +1000,7 @@ label continuebb:
         v6_reply1 = MessageBuilder(amber)
         v6_reply1.add_function(reputation.add_point, RepComponent.BRO)
         v6_reply1.new_message(_("I'm playing drink or dare and got dared to send an underwear pic to a guy."))
-        v6_reply1.add_replies( 
+        v6_reply1.add_replies(
             Reply(_("And you chose me, huh?"), v6_reply2),
             Reply(_("Feel free to do so anytime :)"), v6_reply3)
         )
@@ -1010,13 +1008,13 @@ label continuebb:
         v6_reply4 = MessageBuilder(amber)
         v6_reply4.add_function(reputation.add_point, RepComponent.BOYFRIEND)
         v6_reply4.new_message(_("I'm glad you like it xx"))
-        v6_reply4.add_reply(_( "I hope there's more of that in the future :P"))
+        v6_reply4.add_reply(_("I hope there's more of that in the future :P"))
         v6_reply4.new_message(_("Maybe if you're lucky xx"))
 
         MessengerService.new_message(amber, _("Hey, you alone? xx"))
         MessengerService.add_reply(amber, _("Yeah, I'm in my dorm, why?"))
         MessengerService.new_message(amber, "images/v6/text2.webp")
-        MessengerService.add_replies(amber, 
+        MessengerService.add_replies(amber,
             Reply(_("Woah, what was that for?"), v6_reply1),
             Reply(_("Oh wow, you're so fucking hot"), v6_reply4)
         )
@@ -3673,9 +3671,9 @@ label fy_bd: # not gone to Emily's
             v6_reply8.new_message(_("Oh, okay"))
 
             MessengerService.new_message(aubrey, _("Hey, I know it's late... but wanna come over?"))
-            MessengerService.add_replies(aubrey, 
+            MessengerService.add_replies(aubrey,
                 Reply(_("Yeah, sure."), v6_reply7),
-                reply(_("Sorry, I can't tonight."), v6_reply8)
+                Reply(_("Sorry, I can't tonight."), v6_reply8)
             )
 
         stop music fadeout 3
@@ -3707,7 +3705,7 @@ label fy_bd: # not gone to Emily's
             v6_reply8.new_message(_("Oh, okay"))
 
             MessengerService.new_message(aubrey, _("Hey, I know it's late... but wanna come over?"))
-            MessengerService.add_replies(aubrey, 
+            MessengerService.add_replies(aubrey,
                 Reply(_("Yeah, sure."), v6_reply7),
                 Reply(_("Sorry, I can't tonight."), v6_reply8)
             )
@@ -5422,21 +5420,19 @@ label wakeupa:
     with fade
     
     python:
-
         v6_reply9 = MessageBuilder(amber)
         v6_reply9.new_message(_("Yeah maybe we should xx"))
 
         v6_reply10 = MessageBuilder(amber)
         v6_reply10.add_function(reputation.add_point, RepComponent.BOYFRIEND)
-        v6_reply10.set_variable("homrworkout", False)
 
-        MessengerService.new_message(amber, _("Heyy, what are you up to? xx"), force_send=True)
+        MessengerService.new_message(amber, _("Heyy, what are you up to? xx"))
         MessengerService.add_reply(amber, _("Just walking back from the gym wbu?"))
         MessengerService.new_message(amber, _("Going to my next lecture x_x"))
         MessengerService.new_message(amber, _("Which gym do you go to? Maybe we can go together at some point"))
         MessengerService.add_reply(amber, _("Sports X and you?"))
         MessengerService.new_message(amber, _("Awww I'm SV Fitness :("))
-        MessengerService.add_replies(amber, 
+        MessengerService.add_replies(amber,
             Reply(_("Maybe we should do a home workout together sometime ;)"), v6_reply9),
             Reply(_("Yeah, that's too bad :/"), v6_reply10)
         )
@@ -5449,8 +5445,6 @@ label wakeupa:
         $ MessengerService.add_reply(penelope, _("Yesss, see you there"))
 
         u "(I should ask Penelope whether she wants to do bowling this afternoon.)"
-
-        call screen phone
 
         while MessengerService.has_replies(penelope):
             call screen phone
