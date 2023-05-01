@@ -309,7 +309,7 @@ label imreconc: # Keep talking to Amber
         v6_reply1 = MessageBuilder(amber)
         v6_reply1.add_function(reputation.add_point, RepComponent.BRO)
         v6_reply1.new_message(_("I'm playing drink or dare and got dared to send an underwear pic to a guy."))
-        v6_reply1.add_replies(amber,
+        v6_reply1.add_replies(
             Reply(_("And you chose me, huh?"), v6_reply2),
             Reply(_("Feel free to do so anytime :)"), v6_reply3)
         )
@@ -322,7 +322,7 @@ label imreconc: # Keep talking to Amber
 
         MessengerService.add_reply(amber, _("I'm all by myself now."))
         MessengerService.new_message(amber, "images/v6/text2.webp")
-        MessengerService.add_replies(
+        MessengerService.add_replies(amber,
             Reply(_("Woah, what was that for?"), v6_reply1),
             Reply(_("Oh wow, you're so fucking hot"), v6_reply4)
         )
