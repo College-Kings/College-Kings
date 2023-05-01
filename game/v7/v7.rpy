@@ -19,7 +19,7 @@ init python:
         v7_kiwiiPost3.newComment(aubrey, _("Bring it on!"), mentions=[mc], number_likes=renpy.random.randint(15, 35))
 
     def v7_kiwiiReply6():
-        v7_kiwiiReply6.add_function(reputation.add_pointRepComponent.TROUBLEMAKER)
+        reputation.add_point(RepComponent.TROUBLEMAKER)
         v7_kiwiiPost4.newComment(josh, _("lol"), mentions=[mc], number_likes=renpy.random.randint(3, 7))
 
     def kiwii_firstTimeMessages():
