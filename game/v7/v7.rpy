@@ -19,33 +19,37 @@ init python:
         v7_kiwiiPost3.newComment(aubrey, _("Bring it on!"), mentions=[mc], number_likes=renpy.random.randint(15, 35))
 
     def v7_kiwiiReply6():
-        reputation.add_point(RepComponent.TROUBLEMAKER)
+        v7_kiwiiReply6.add_function(reputation.add_pointRepComponent.TROUBLEMAKER)
         v7_kiwiiPost4.newComment(josh, _("lol"), mentions=[mc], number_likes=renpy.random.randint(3, 7))
-
-    def v7_msgReply1():
-        reputation.add_point(RepComponent.BRO)
-        penelope.messenger.new_message(_("Okay..."))
-
-    def v7_msgReply2():
-        penelope.messenger.new_message(_("Okay..."))
 
     def kiwii_firstTimeMessages():
         if CharacterService.is_fwb(emily):
-            riley.messenger.add_reply(_("We're not back together"))
-            riley.messenger.new_message(_("Okay... just looked like it"))
-            riley.messenger.add_reply(_("Well we're not."))
-            riley.messenger.new_message(_("k"))
+            MessengerService.add_reply(riley, _("We're not back together"))
+            MessengerService.new_message(riley, _("Okay... just looked like it"))
+            MessengerService.add_reply(riley, _("Well we're not."))
+            MessengerService.new_message(riley, _("k"))
+
         if bowling and CharacterService.is_fwb(emily):
-            penelope.messenger.new_message(_("I didn't know you and Emily were a thing..."), force_send=True)
-            penelope.messenger.add_reply(_("We're not a thing"), v7_msgReply1)
-            penelope.messenger.add_reply(_("It was a one time thing"), v7_msgReply2)
+            v7_msgReply1 = MessageBuilder(penelope)
+            v7_msgReply1.add_function(reputation.add_pointRepComponent.BRO)
+            v7_msgReply1.new_message(_("Okay..."))
+
+            v7_msgReply2 = MessageBuilder(penelope)
+            v7_msgReply2.new_message(_("Okay..."))
+
+            MessengerService.new_message(penelope, _("I didn't know you and Emily were a thing..."))
+            MessengerService.add_replies(penelope,
+                Reply(_("We're not a thing"), v7_msgReply1),
+                Reply(_("It was a one time thing"), v7_msgReply2)
+            )
+
         if CharacterService.is_fwb(emily) and CharacterService.is_girlfriend(lauren):
-            lauren.messenger.new_message(_("I saw what Emily posted. I really thought you liked me..."), force_send=True)
-            lauren.messenger.new_message(_("I guess we're done now, so please just delete my number."), force_send=True)
-            lauren.messenger.add_reply(_("Lauren can we please just talk about it? I can explain"))
-            lauren.messenger.new_message(_("What is there to talk about? How could you betray me like that?!"))
-            lauren.messenger.add_reply(_("Please, it's just a big misunderstanding"))
-            lauren.messenger.new_message(_("Fine. I'm in my dorm, we can talk now."))
+            MessengerService.new_message(lauren, _("I saw what Emily posted. I really thought you liked me..."))
+            MessengerService.new_message(lauren, _("I guess we're done now, so please just delete my number."))
+            MessengerService.add_reply(lauren, _("Lauren can we please just talk about it? I can explain"))
+            MessengerService.new_message(lauren, _("What is there to talk about? How could you betray me like that?!"))
+            MessengerService.add_reply(lauren, _("Please, it's just a big misunderstanding"))
+            MessengerService.new_message(lauren, _("Fine. I'm in my dorm, we can talk now."))
 
 label start7: #for compatibility only
 label v7start:
@@ -1364,17 +1368,16 @@ label conyourdorm:
         with dissolve
 
         u "(What the hell?)"
-
-        if bowling and CharacterService.is_fwb(emily):
-            $ v7_emily_bowling = True
         
         while MessengerService.has_replies(riley):
             call screen phone
             if MessengerService.has_replies(riley):
                 u "(I need to respond to some of these messages.)"
 
-        if kiwii_first_time:
-            u "(I should check out what Emily posted on Kiwii.)"
+        while kiwii_first_time:
+            call screen phone
+            if kiwii_first_time:
+                u "I should check out what emily posted on kiwii"
 
         while MessengerService.has_replies(penelope):
             call screen phone
@@ -1385,6 +1388,9 @@ label conyourdorm:
             call screen phone
             if MessengerService.has_replies(lauren):
                 u "(I should respond to Lauren.)"
+
+        if bowling and CharacterService.is_fwb(emily):
+            $ v7_emily_bowling = True
 
         label continueee: #for compatibility only
         scene s714a # mc calm mouth closed
@@ -2552,7 +2558,7 @@ label thisbewalk:
                 $ v7_msgReply4.new_message(_("Oh okay, another time then."))
 
                 $ MessengerService.new_message(lauren, _("You wanna go to the beach today?"))
-                $ MessengerService.add_replies(lauren, 
+                $ MessengerService.add_replies(lauren,
                     Reply(_("Sounds good, when were you thinking?"), v7_msgReply3),
                     Reply(_("Sorry, I can't I'm really busy today"), v7_msgReply4)
                 )
@@ -8877,8 +8883,8 @@ label rileytext:
         $ v7_msgReply6 = MessageBuilder(riley)
         $ v7_msgReply6.new_message(_("Oh oki"))
 
-        $ MessengerService.new_message(riley_("Wanna come over? ;)"))
-        $ MessengerService.add_replies(riley, 
+        $ MessengerService.new_message(riley _("Wanna come over? ;)"))
+        $ MessengerService.add_replies(riley,
             Reply(_("Sure, on my way :)"), v7_msgReply5),
             Reply(_("Sorry I'm really exhausted. Another time"), v7_msgReply6)
         )
