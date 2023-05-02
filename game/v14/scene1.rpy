@@ -41,7 +41,7 @@ label v14_start:
             $ v11_pen_goes_europe = True
 
         if CharacterService.is_fwb(samantha):
-            $ CharacterService.set_relationship(cameron, Relationship.BRO)
+            $ v13_cameron_and_mc_friends = True
     
     #if emmy.simplr.pending_messages: #for compatibility with v12 players where emmy replies were not forced to be seen
         #$ emmy.simplr.pending_messages = []

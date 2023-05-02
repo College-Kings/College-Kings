@@ -99,7 +99,7 @@ label v13s31:
     u "(Damn, this is crazy.)"
 
     if v11_invite_sam_europe and not v13_invite_samantha: #placeholder
-        $ CharacterService.set_relationship(cameron, Relationship.BRO, mc)
+        $ v13_cameron_and_mc_friends = True
 
         scene v13s31_100 # TPP. Show Cameron running towwards MC, angry, mouth closed
         with fade
