@@ -1314,18 +1314,6 @@ label history2:
         v2_reply7.add_function(reputation.add_point, RepComponent.BRO)
         v2_reply7.new_message(_("It's fine, you go get her."))
 
-        v2_reply8 = MessageBuilder(josh)
-        v2_reply8.add_function(reputation.add_point, RepComponent.BOYFRIEND)
-        v2_reply8.new_message(_("Nah, you don't want a bitch like her."))
-
-        MessengerService.new_message(josh, _("Dude, I talked to this Aubrey chick the entire night and guess who's number she wanted..."))
-        MessengerService.new_message(josh, _("YOURS"))
-        MessengerService.new_message(josh, _("What a bitch..."))
-        MessengerService.add_replies(josh,
-            Reply(_("Sorry, man. She doesn't know what she's missing."), v2_reply7),
-            Reply(_("Sooo, did you give it to her?"), v2_reply8)
-        )
-
         v2_reply9 = MessageBuilder(josh)
         v2_reply9.add_function(reputation.add_point, RepComponent.BRO)
         v2_reply9.new_message(_("Hahaha, I'm just kidding, yo."))
@@ -1338,11 +1326,22 @@ label history2:
         v2_reply10.new_message(_("Of course I gave her your number."))
         v2_reply10.add_reply(_("Damn, you got me."))
 
-        v2_reply8.add_replies(josh,
+
+        v2_reply8 = MessageBuilder(josh)
+        v2_reply8.add_function(reputation.add_point, RepComponent.BOYFRIEND)
+        v2_reply8.new_message(_("Nah, you don't want a bitch like her."))
+        v2_reply8.add_replies(
             Reply(_("Yeah, I guess you're right."), v2_reply9),
             Reply(_("Dude, what the fuck?!"), v2_reply10)
         )
 
+        MessengerService.new_message(josh, _("Dude, I talked to this Aubrey chick the entire night and guess who's number she wanted..."))
+        MessengerService.new_message(josh, _("YOURS"))
+        MessengerService.new_message(josh, _("What a bitch..."))
+        MessengerService.add_replies(josh,
+            Reply(_("Sorry, man. She doesn't know what she's missing."), v2_reply7),
+            Reply(_("Sooo, did you give it to her?"), v2_reply8)
+        )
 
     scene s133
     with dissolve
