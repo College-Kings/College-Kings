@@ -35,86 +35,100 @@ def create_pb_variables() -> None:
         ("Invite Emily to Europe", ToggleVariable("emily_europe")),
     )
 
-    store.pb_girls = (
-        (
-            store.amber,
-            None,
-            Reputations.POPULAR,
-            (Relationship.FRIEND, Relationship.KISSED, Relationship.FWB),
-        ),
-        (
-            store.aubrey,
-            None,
-            Reputations.POPULAR,
-            (Relationship.FRIEND, Relationship.FWB),
-        ),
-        (
-            store.chloe,
-            None,
-            Reputations.POPULAR,
-            (
+    store.pb_girls = {
+        store.amber: {
+            "frat_requirement": None,
+            "preferred_reputation": Reputations.POPULAR,
+            "possible_relationships": (
+                Relationship.FRIEND,
+                Relationship.KISSED,
+                Relationship.FWB,
+            ),
+        },
+        store.aubrey: {
+            "frat_requirement": None,
+            "preferred_reputation": Reputations.POPULAR,
+            "possible_relationships": (Relationship.FRIEND, Relationship.FWB),
+        },
+        store.chloe: {
+            "frat_requirement": None,
+            "preferred_reputation": Reputations.POPULAR,
+            "possible_relationships": (
                 Relationship.FRIEND,
                 Relationship.FWB,
                 Relationship.GIRLFRIEND,
             ),
-        ),
-        (store.emily, None, Reputations.LOYAL, (Relationship.FRIEND, Relationship.FWB)),
-        (
-            store.lauren,
-            None,
-            Reputations.LOYAL,
-            (
+        },
+        store.emily: {
+            "frat_requirement": None,
+            "preferred_reputation": Reputations.LOYAL,
+            "possible_relationships": (Relationship.FRIEND, Relationship.FWB),
+        },
+        store.lauren: {
+            "frat_requirement": None,
+            "preferred_reputation": Reputations.LOYAL,
+            "possible_relationships": (
                 Relationship.FRIEND,
                 Relationship.KISSED,
                 Relationship.GIRLFRIEND,
             ),
-        ),
-        (
-            store.lindsey,
-            None,
-            Reputations.POPULAR,
-            (Relationship.FRIEND, Relationship.KISSED, Relationship.FWB),
-        ),
-        (
-            store.ms_rose,
-            Frat.WOLVES,
-            Reputations.CONFIDENT,
-            (Relationship.FRIEND, Relationship.KISSED, Relationship.FWB),
-        ),
-        (
-            store.nora,
-            None,
-            Reputations.CONFIDENT,
-            (
+        },
+        store.lindsey: {
+            "frat_requirement": None,
+            "preferred_reputation": Reputations.POPULAR,
+            "possible_relationships": (
+                Relationship.FRIEND,
+                Relationship.KISSED,
+                Relationship.FWB,
+            ),
+        },
+        store.ms_rose: {
+            "frat_requirement": Frat.WOLVES,
+            "preferred_reputation": Reputations.CONFIDENT,
+            "possible_relationships": (
+                Relationship.FRIEND,
+                Relationship.KISSED,
+                Relationship.FWB,
+            ),
+        },
+        store.nora: {
+            "frat_requirement": None,
+            "preferred_reputation": Reputations.CONFIDENT,
+            "possible_relationships": (
                 Relationship.FRIEND,
                 Relationship.FWB,
             ),
-        ),
-        (
-            store.penelope,
-            None,
-            Reputations.CONFIDENT,
-            (
+        },
+        store.penelope: {
+            "frat_requirement": None,
+            "preferred_reputation": Reputations.CONFIDENT,
+            "possible_relationships": (
                 Relationship.FRIEND,
                 Relationship.DATING,
             ),
-        ),
-        (
-            store.riley,
-            None,
-            Reputations.CONFIDENT,
-            (Relationship.FRIEND, Relationship.KISSED, Relationship.FWB),
-        ),
-        (
-            store.samantha,
-            Frat.APES,
-            Reputations.LOYAL,
-            (Relationship.FRIEND, Relationship.KISSED, Relationship.FWB),
-        ),
-    )
+        },
+        store.riley: {
+            "frat_requirement": None,
+            "preferred_reputation": Reputations.CONFIDENT,
+            "possible_relationships": (
+                Relationship.FRIEND,
+                Relationship.KISSED,
+                Relationship.FWB,
+            ),
+        },
+        store.samantha: {
+            "frat_requirement": Frat.APES,
+            "preferred_reputation": Reputations.LOYAL,
+            "possible_relationships": (
+                Relationship.FRIEND,
+                Relationship.KISSED,
+                Relationship.FWB,
+            ),
+        },
+    }
 
 
-store.pb_girls = ()
+store.pb_girls = {}
 store.pb_extra_options = ()
 store.pb_advanced_options = ()
 
