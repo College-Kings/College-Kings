@@ -3,17 +3,6 @@
 # Characters: MC (outfit 2), Cameron (Outfit 1 boxers only, no shirt, no shoes)
 # Time: Tuesday night
 
-init python:
-    def v9s2_reply1():
-        ryan.messenger.newMessage(_("Damn right! You heading to the gym?"))
-        ryan.messenger.addReply(_("Naw, I'm spent. But I have a feeling I'll be spending a lot of my time in there"))
-        ryan.messenger.newMessage(_("Me too. See ya there!"))
-
-    def v9s2_reply2():
-        ryan.messenger.newMessage(_("Lucky we did, huh? I think we got a hand up on those baby apes"))
-        ryan.messenger.addReply(_("Damn right! We got this! We need to hit the gym soon... after I get some sleep. I'm bout to pass out"))
-        ryan.messenger.newMessage(_("Same! Talk soon"))
-
 label v9_start_apes:
 
     play music "music/v9/Track Scene 1.mp3" fadein 2
@@ -23,7 +12,7 @@ label v9_start_apes:
     scene v9apost1 # TPP. MC outside Cameron's room, knocking the door, confused, mouth closed
     with fade
 
-    play sound "sounds/knock.mp3"
+    play sound sound.knock
     pause 2
 
     scene v9apost2 # FPP. Cameron opens the door slightly and peeks through the opening, slightly annoyed, mouth open
@@ -244,17 +233,28 @@ label v9_start_apes:
     with dissolve
     pause 0.5
 
-    $ ryan.messenger.addReply(_("You here yet?"))
-    $ ryan.messenger.newMessage(_("Yeah, you ready?"))
-    $ ryan.messenger.addReply(_("Hell no! But we need to get ready!"), v9s2_reply1)
-    $ ryan.messenger.addReply(_("I think so, actually. You and Cameron really helped"), v9s2_reply2)
+    python:
+        v9s2_reply1 = MessageBuilder(ryan)
+        v9s2_reply1.new_message(_("Damn right! You heading to the gym?"))
+        v9s2_reply1.add_reply(_("Naw, I'm spent. But I have a feeling I'll be spending a lot of my time in there"))
+        v9s2_reply1.new_message(_("Me too. See ya there!"))
 
-    label v9_phn_ryan1:
-        if ryan.messenger.replies:
-            call screen phone
-        if ryan.messenger.replies:
+        v9s2_reply2 = MessageBuilder(ryan)
+        v9s2_reply2.new_message(_("Lucky we did, huh? I think we got a hand up on those baby apes"))
+        v9s2_reply2.add_reply(_("Damn right! We got this! We need to hit the gym soon... after I get some sleep. I'm bout to pass out"))
+        v9s2_reply2.new_message(_("Same! Talk soon"))
+
+        MessengerService.add_reply(ryan, _("You here yet?"))
+        MessengerService.new_message(ryan, _("Yeah, you ready?"))
+        MessengerService.add_replies(ryan,
+            Reply(_("Hell no! But we need to get ready!"), v9s2_reply1),
+            Reply(_("I think so, actually. You and Cameron really helped"), v9s2_reply2)
+        )
+
+    while MessengerService.has_replies(ryan):
+        call screen phone
+        if MessengerService.has_replies(ryan):
             u "(I should talk to Ryan.)"
-            jump v9_phn_ryan1
 
     scene v9apost7a # MC places his phone down on his bed, and is just lying on it now, thinking, mouth closed
     with dissolve

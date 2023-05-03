@@ -22,25 +22,23 @@ label v9_room_fri_eve:
             with dissolve    
 
             u "(Wonder how Lauren's doing with the Deers charity.)"
+            
+            $ MessengerService.add_reply(lauren, _("How's it going? You still doing our statue idea?"))
+            $ MessengerService.new_message(lauren, _("Of course. I'm glad you talked me into it."))
+            $ MessengerService.add_reply(lauren, _("Me too. I don't think anyone's tried something like this before. You'll be the talk of the school!"))
+            $ MessengerService.new_message(lauren, _("No, WE will. I couldn't have done it without your help."))
+            $ MessengerService.add_reply(lauren, _("Don't mention it, talk soon?"))
+            $ MessengerService.new_message(lauren, _("Sure!"))
 
-            $ lauren.messenger.addReply(_("How's it going? You still doing our statue idea?"))
-            $ lauren.messenger.newMessage(_("Of course. I'm glad you talked me into it."))
-            $ lauren.messenger.addReply(_("Me too. I don't think anyone's tried something like this before. You'll be the talk of the school!"))
-            $ lauren.messenger.newMessage(_("No, WE will. I couldn't have done it without your help."))
-            $ lauren.messenger.addReply(_("Don't mention it, talk soon?"))
-            $ lauren.messenger.newMessage(_("Sure!"))
-
-            label s25_ContinueW:
-                if lauren.messenger.replies:
-                    call screen phone
-                if lauren.messenger.replies:
+            while MessengerService.has_replies(lauren):
+                call screen phone
+                if MessengerService.has_replies(lauren):
                     u "(I should text Lauren.)"
-                    jump s25_ContinueW
 
         scene v9rfe2 # TPP. Show MC's door.
         with dissolve
 
-        play sound "sounds/knock.mp3"
+        play sound sound.knock
 
         "*Knock* *knock*"
 
@@ -67,24 +65,22 @@ label v9_room_fri_eve:
 
             u "(Wonder how Lauren's doing with the Deers charity.)"
 
-            $ lauren.messenger.addReply(_("How's it going? You still doing our statue idea?"))
-            $ lauren.messenger.newMessage(_("Of course. I'm glad you talked me into it."))
-            $ lauren.messenger.addReply(_("Me too. I don't think anyone's tried something like this before. You'll be the talk of the school!"))
-            $ lauren.messenger.newMessage(_("No, WE will. I couldn't have done it without your help."))
-            $ lauren.messenger.addReply(_("Don't mention it, talk soon?"))
-            $ lauren.messenger.newMessage(_("Sure!"))
-            
-            label s25_ContinueA:
-                if lauren.messenger.replies:
-                    call screen phone
-                if lauren.messenger.replies:
+            $ MessengerService.add_reply(lauren, _("How's it going? You still doing our statue idea?"))
+            $ MessengerService.new_message(lauren, _("Of course. I'm glad you talked me into it."))
+            $ MessengerService.add_reply(lauren, _("Me too. I don't think anyone's tried something like this before. You'll be the talk of the school!"))
+            $ MessengerService.new_message(lauren, _("No, WE will. I couldn't have done it without your help."))
+            $ MessengerService.add_reply(lauren, _("Don't mention it, talk soon?"))
+            $ MessengerService.new_message(lauren, _("Sure!"))
+
+            while MessengerService.has_replies(lauren):
+                call screen phone
+                if MessengerService.has_replies(lauren):
                     u "(I should text Lauren.)"
-                    jump s25_ContinueA
 
         scene v9rfe4 # TPP. Show MC's door.
         with dissolve
 
-        play sound "sounds/knock.mp3"
+        play sound sound.knock
 
         "*Knock* *knock*"
 

@@ -22,49 +22,34 @@ init python:
         reputation.add_point(RepComponent.TROUBLEMAKER)
         v7_kiwiiPost4.newComment(josh, _("lol"), mentions=[mc], number_likes=renpy.random.randint(3, 7))
 
-    def v7_msgReply1():
-        reputation.add_point(RepComponent.BRO)
-        penelope.messenger.newMessage(_("Okay..."))
-
-    def v7_msgReply2():
-        penelope.messenger.newMessage(_("Okay..."))
-
-    def v7_msgReply3():
-        lauren.messenger.newMessage(_("How about now?"))
-        lauren.messenger.addReply(_("Sure, I'll come pick you up"))
-        lauren.messenger.newMessage(_("Great :)"))
-
-    def v7_msgReply4():
-        setattr(store, "nobeach", True)
-        lauren.messenger.newMessage(_("Oh okay, another time then."))
-
-    def v7_msgReply5():
-        setattr(store, "rileysex", True)
-        riley.messenger.newMessage(_("Yayyy"))
-
-    def v7_msgReply6():
-        riley.messenger.newMessage(_("Oh oki"))
-
     def kiwii_firstTimeMessages():
         if CharacterService.is_fwb(emily):
-            riley.messenger.addReply(_("We're not back together"))
-            riley.messenger.newMessage(_("Okay... just looked like it"))
-            riley.messenger.addReply(_("Well we're not."))
-            riley.messenger.newMessage(_("k"))
-        if bowling and CharacterService.is_fwb(emily):
-            penelope.messenger.newMessage(_("I didn't know you and Emily were a thing..."), force_send=True)
-            penelope.messenger.addReply(_("We're not a thing"), v7_msgReply1)
-            penelope.messenger.addReply(_("It was a one time thing"), v7_msgReply2)
-        if CharacterService.is_fwb(emily) and CharacterService.is_girlfriend(lauren):
-            lauren.messenger.newMessage(_("I saw what Emily posted. I really thought you liked me..."), force_send=True)
-            lauren.messenger.newMessage(_("I guess we're done now, so please just delete my number."), force_send=True)
-            lauren.messenger.addReply(_("Lauren can we please just talk about it? I can explain"))
-            lauren.messenger.newMessage(_("What is there to talk about? How could you betray me like that?!"))
-            lauren.messenger.addReply(_("Please, it's just a big misunderstanding"))
-            lauren.messenger.newMessage(_("Fine. I'm in my dorm, we can talk now."))
+            MessengerService.add_reply(riley, _("We're not back together"))
+            MessengerService.new_message(riley, _("Okay... just looked like it"))
+            MessengerService.add_reply(riley, _("Well we're not."))
+            MessengerService.new_message(riley, _("k"))
 
-    def v7_msgReply7():
-        setattr(store, "kiwii_first_time", True)
+        if bowling and CharacterService.is_fwb(emily):
+            v7_msgReply1 = MessageBuilder(penelope)
+            v7_msgReply1.add_function(reputation.add_point, RepComponent.BRO)
+            v7_msgReply1.new_message(_("Okay..."))
+
+            v7_msgReply2 = MessageBuilder(penelope)
+            v7_msgReply2.new_message(_("Okay..."))
+
+            MessengerService.new_message(penelope, _("I didn't know you and Emily were a thing..."))
+            MessengerService.add_replies(penelope,
+                Reply(_("We're not a thing"), v7_msgReply1),
+                Reply(_("It was a one time thing"), v7_msgReply2)
+            )
+
+        if CharacterService.is_fwb(emily) and CharacterService.is_girlfriend(lauren):
+            MessengerService.new_message(lauren, _("I saw what Emily posted. I really thought you liked me..."))
+            MessengerService.new_message(lauren, _("I guess we're done now, so please just delete my number."))
+            MessengerService.add_reply(lauren, _("Lauren can we please just talk about it? I can explain"))
+            MessengerService.new_message(lauren, _("What is there to talk about? How could you betray me like that?!"))
+            MessengerService.add_reply(lauren, _("Please, it's just a big misunderstanding"))
+            MessengerService.new_message(lauren, _("Fine. I'm in my dorm, we can talk now."))
 
 label start7: #for compatibility only
 label v7start:
@@ -1370,10 +1355,12 @@ label conyourdorm:
         $ v7_kiwiiPost4.newComment(josh, _("Woah, you guys back together??"), 3)
         $ v7_kiwiiPost4.addReply(_("No, we're not."), v7_kiwiiReply6, mentions=[josh], number_likes=renpy.random.randint(5, 15))
 
-        play sound "sounds/vibrate.mp3"
-        $ riley.messenger.newMessage(_("Are you and Emily back together?"), force_send=True)
-        $ riley.messenger.addReply(_("What are you talking about???"), v7_msgReply7)
-        $ riley.messenger.newMessage(_("Check Kiwii..."))
+        play sound sound.vibrate
+
+        $ MessengerService.new_message(riley, _("Are you and Emily back together?"))
+        $ MessengerService.add_reply(riley, _("What are you talking about???"))
+        $ MessengerService.new_message(riley, _("Check Kiwii..."))
+        $ kiwii_first_time = True
 
         pause 0.5
 
@@ -1381,34 +1368,35 @@ label conyourdorm:
         with dissolve
 
         u "(What the hell?)"
-
-        label phoneam:
-            if bowling and CharacterService.is_fwb(emily):
-                $ v7_emily_bowling = True
         
-            if riley.messenger.replies:
-                call screen messager(riley.messenger)
-            if riley.messenger.replies:
+        while MessengerService.has_replies(riley):
+            call screen phone
+            if MessengerService.has_replies(riley):
                 u "(I need to respond to some of these messages.)"
-                jump phoneam
 
+        while kiwii_first_time:
+            call screen phone
             if kiwii_first_time:
                 u "(I should check out what Emily posted on Kiwii.)"
-                jump phoneam
 
-            if penelope.messenger.replies:
+        while MessengerService.has_replies(penelope):
+            call screen phone
+            if MessengerService.has_replies(penelope):
                 u "(I should answer Penelope.)"
-                jump phoneam
 
-            if lauren.messenger.replies:
+        while MessengerService.has_replies(lauren):
+            call screen phone
+            if MessengerService.has_replies(lauren):
                 u "(I should respond to Lauren.)"
-                jump phoneam
+
+        if bowling and CharacterService.is_fwb(emily):
+            $ v7_emily_bowling = True
 
         label continueee: #for compatibility only
         scene s714a # mc calm mouth closed
         with dissolve # mc sitting on his bed shirtless with his phone to his head, like he's on the phone
 
-        play sound "sounds/calling.mp3"
+        play sound sound.calling
 
         u "(Okay... I need to call Emily right now.)"
 
@@ -1608,11 +1596,13 @@ label conyourdorm:
                     jump thisbewalk
 
     else:
-        play sound "sounds/vibrate.mp3"
-        $ riley.messenger.newMessage(_("Hey, how come you're not on Kiwii?"), force_send=True)
-        $ riley.messenger.addReply(_("What's that?"))
-        $ riley.messenger.newMessage(_("It's a new social media app, you should give it a try"))
-        $ riley.messenger.addReply(_("Okay, I'll have a look"), v7_msgReply7)
+        play sound sound.vibrate
+
+        $ MessengerService.new_message(riley, _("Hey, how come you're not on Kiwii?"))
+        $ MessengerService.add_reply(riley, _("What's that?"))
+        $ MessengerService.new_message(riley, _("It's a new social media app, you should give it a try"))
+        $ MessengerService.add_reply(riley, _("Okay, I'll have a look"))
+        $ kiwii_first_time = True
 
         pause 0.5
 
@@ -1621,12 +1611,10 @@ label conyourdorm:
 
         u "(Huh? What did Riley text me?)"
 
-        label phonean:
-            if riley.messenger.replies:
-                call screen messager(riley.messenger)
-            if riley.messenger.replies:
+        while MessengerService.has_replies(riley):
+            call screen phone
+            if MessengerService.has_replies(riley):
                 u "(I should respond to Riley.)"
-                jump phonean
             
         scene s713b2 # mc looks up to the window in the same position of 713b
         with dissolve
@@ -1652,7 +1640,7 @@ label apologylauren:
     scene s716 #mc knocks on lauren's door
     with dissolve
 
-    play sound "sounds/knock.mp3"
+    play sound sound.knock
 
     pause 1.5
 
@@ -1843,7 +1831,7 @@ label thisbelauren:
     scene s716 #mc knocks on lauren's door
     with dissolve
 
-    play sound "sounds/knock.mp3"
+    play sound sound.knock
 
     pause 1.5
 
@@ -2537,41 +2525,48 @@ label thisbewalk:
     pause 0.5
 
     if not CharacterService.is_mad(lauren) and not nobeach:
-        play sound "sounds/vibrate.mp3"
+        play sound sound.vibrate
 
         if seenlauren and CharacterService.is_girlfriend(lauren):
-            $ lauren.messenger.newMessage(_("Wanna go now babe?"), force_send=True)
-            $ lauren.messenger.addReply(_("Sure, I'll come pick you up"))
-            $ lauren.messenger.newMessage(_("Great :)"))
+            $ MessengerService.new_message(lauren, _("Wanna go now babe?"))
+            $ MessengerService.add_reply(lauren, _("Sure, I'll come pick you up"))
+            $ MessengerService.new_message(lauren, _("Great :)"))
 
         elif seenlauren:
-            $ lauren.messenger.newMessage(_("Wanna go now?"), force_send=True)
-            $ lauren.messenger.addReply(_("Sure, I'll come pick you up"))
-            $ lauren.messenger.newMessage(_("Great :)"))
+            $ MessengerService.new_message(lauren, _("Wanna go now?"))
+            $ MessengerService.add_reply(lauren, _("Sure, I'll come pick you up"))
+            $ MessengerService.new_message(lauren, _("Great :)"))
 
         else:
-            $ lauren.messenger.newMessage(_("Hey :)"), force_send=True)
+            $ MessengerService.new_message(lauren, _("Hey :)"))
 
             if CharacterService.is_girlfriend(lauren):
-                $ lauren.messenger.newMessage(_("You wanna go to the beach today?"), force_send=True)
-                $ lauren.messenger.addReply(_("Sounds good, when were you thinking?"))
-                $ lauren.messenger.newMessage(_("How about now?"))
-                $ lauren.messenger.addReply(_("Sure, I'll come pick you up"))
-                $ lauren.messenger.newMessage(_("Great :)"))
+                $ MessengerService.new_message(lauren, _("You wanna go to the beach today?"))
+                $ MessengerService.add_reply(lauren, _("Sounds good, when were you thinking?"))
+                $ MessengerService.new_message(lauren, _("How about now?"))
+                $ MessengerService.add_reply(lauren, _("Sure, I'll come pick you up"))
+                $ MessengerService.new_message(lauren, _("Great :)"))
 
             else:
-                $ lauren.messenger.newMessage(_("You wanna go to the beach today?"), force_send=True)
-                $ lauren.messenger.addReply(_("Sounds good, when were you thinking?"), v7_msgReply3)
-                $ lauren.messenger.addReply(_("Sorry, I can't I'm really busy today"), v7_msgReply4)
+                $ v7_msgReply3 = MessageBuilder(lauren)
+                $ v7_msgReply3.new_message(_("How about now?"))
+                $ v7_msgReply3.add_reply(_("Sure, I'll come pick you up"))
+                $ v7_msgReply3.new_message(_("Great :)"))
 
-        " "
+                $ v7_msgReply4 = MessageBuilder(lauren)
+                $ v7_msgReply4.set_variable("nobeach", True)
+                $ v7_msgReply4.new_message(_("Oh okay, another time then."))
 
-        label phoneao:
-            if lauren.messenger.replies:
-                call screen phone
-            if lauren.messenger.replies:
+                $ MessengerService.new_message(lauren, _("You wanna go to the beach today?"))
+                $ MessengerService.add_replies(lauren,
+                    Reply(_("Sounds good, when were you thinking?"), v7_msgReply3),
+                    Reply(_("Sorry, I can't I'm really busy today"), v7_msgReply4)
+                )
+
+        while MessengerService.has_replies(lauren):
+            call screen phone
+            if MessengerService.has_replies(lauren):
                 u "(I should probably reply.)"
-                jump phoneao
 
         if nobeach:
             u "(Time to finish my history assignment...)"
@@ -2640,7 +2635,7 @@ label beachlauren:
     scene s735 #mc knocks on lauren's door
     with dissolve
 
-    play sound "sounds/knock.mp3"
+    play sound sound.knock
 
     pause 1.5
 
@@ -2658,7 +2653,7 @@ label beachlauren:
         scene s736a # lauren passionately kisses mc
         with dissolve
 
-        play sound "sounds/kiss.mp3"
+        play sound sound.kiss
 
         pause 1.0
 
@@ -3009,7 +3004,7 @@ label beachlauren:
         scene s748a #lauren and mc kiss
         with dissolve
 
-        play sound "sounds/kiss.mp3"
+        play sound sound.kiss
         pause 0.5
 
         scene s748
@@ -3274,7 +3269,7 @@ label beachlauren:
                         "Kiss her":
                             $ beachfirstkiss = True
 
-                            play sound "sounds/kiss.mp3"
+                            play sound sound.kiss
                             scene s743e # you kiss Lauren
                             with dissolve
 
@@ -3379,7 +3374,7 @@ label beachlauren:
             scene s748a #lauren and mc kiss
             with dissolve
 
-            play sound "sounds/kiss.mp3"
+            play sound sound.kiss
             pause 0.5
 
             scene s748
@@ -3793,7 +3788,7 @@ label pledgewolves:
     with dissolve
 
     if not "task1" in wolvesTasks:
-        play sound "sounds/swoosh.mp3"
+        play sound sound.swoosh
         u "(What the fuck!?)"
         
     else:
@@ -3874,7 +3869,7 @@ label pledgewolves:
     pause
     u "(Fuck. This is too cold. I'm losing sensation of my body.)"
 
-    play sound "sounds/ring.mp3"
+    play sound sound.ring
 
     scene s776 # Close up of MC's phone on a desk ringing. Chloe is the caller.
     with vpunch
@@ -5327,7 +5322,7 @@ label ep7_cam_picture:
     scene snew860a # close up mc on the phone mouth closed a bit nervous
     with dissolve
 
-    play sound "sounds/calling.mp3"
+    play sound sound.calling
     pause 2
     stop sound
 
@@ -5427,14 +5422,12 @@ label after_pledges:
                 $ emilyText = True
                 $ reputation.add_point(RepComponent.BOYFRIEND)
 
-                $ emily.messenger.addReply(_("Hey, sorry I lost track of time. You up?"))
+                $ MessengerService.add_reply(emily, _("Hey, sorry I lost track of time. You up?"))
 
-                label phonebb:
-                    if emily.messenger.replies:
-                        call screen phone
-                    if emily.messenger.replies:
+                while MessengerService.has_replies(emily):
+                    call screen phone
+                    if MessengerService.has_replies(emily):
                         u "(I should text Emily that I lost track of time.)"
-                        jump phonebb
 
                 u "(I guess she's asleep.)"
 
@@ -5464,12 +5457,10 @@ label after_pledges:
         $ v7_kiwiiPost5.newComment(aubrey, _("Woohoo!"), 35)
 
     if emilyText:
-        play sound "sounds/vibrate.mp3"
+        play sound sound.vibrate
         
-        $ emily.messenger.newMessage(_("It's okay. You'll get the surprise another time..."), force_send=True)
-        $ emily.messenger.addReply(_("Exciting :)"))
-
-    " "
+        $ MessengerService.new_message(emily, _("It's okay. You'll get the surprise another time..."))
+        $ MessengerService.add_reply(emily, _("Exciting :)"))
 
     play music "music/mindie2.mp3"
     queue music [ "music/m16punk.mp3", "music/mindie1.mp3" ]
@@ -6540,7 +6531,7 @@ label hc_asking_amber:
 
     scene s918 # Camera - TPP. mc with something romantic under his arm knocking on ambers door
     with fade
-    play sound "sounds/knock.mp3"
+    play sound sound.knock
 
     pause 1.5
 
@@ -7125,7 +7116,7 @@ label hc_asking_riley:
     scene s958 #mc knocks on riley's dorm door, glass slipper in on hand
     with fade
 
-    play sound "sounds/knock.mp3"
+    play sound sound.knock
 
     pause 1.5
 
@@ -7287,7 +7278,7 @@ label cameron_thurs_tasks:
 
     pause 0.5
 
-    play sound "sounds/knock.mp3"
+    play sound sound.knock
     scene scc1a # TPP. As above but MC turns his head to look at door.
     with dissolve
 
@@ -7725,7 +7716,7 @@ label cameron_thurs_tasks:
     with dissolve
 
     ca "This next one's gonn-"
-    play sound "sounds/ring.mp3"
+    play sound sound.ring
 
     ca "Hold on."
 
@@ -8883,20 +8874,25 @@ label wolves_ceremony:
 
 label rileytext:
     if Moods.TEASED in riley.mood:
-        play sound "sounds/vibrate.mp3"
+        play sound sound.vibrate
 
-        $ riley.messenger.newMessage(_("Wanna come over? ;)"), force_send=True)
-        $ riley.messenger.addReply(_("Sure, on my way :)"), v7_msgReply5)
-        $ riley.messenger.addReply(_("Sorry I'm really exhausted. Another time"), v7_msgReply6)
-        
-        " "
+        $ v7_msgReply5 = MessageBuilder(riley)
+        $ v7_msgReply5.set_variable("rileysex", True)
+        $ v7_msgReply5.new_message(_("Yayyy"))
 
-        label rtnow:
-            if riley.messenger.replies:
-                call screen phone
-            if riley.messenger.replies:
+        $ v7_msgReply6 = MessageBuilder(riley)
+        $ v7_msgReply6.new_message(_("Oh oki"))
+
+        $ MessengerService.new_message(riley, _("Wanna come over? ;)"))
+        $ MessengerService.add_replies(riley,
+            Reply(_("Sure, on my way :)"), v7_msgReply5),
+            Reply(_("Sorry I'm really exhausted. Another time"), v7_msgReply6)
+        )
+
+        while MessengerService.has_replies(riley):
+            call screen phone
+            if MessengerService.has_replies(riley):
                 u "(I should check my messages.)"
-                jump rtnow
 
     if rileysex:
         u "(Guess I'm not going to sleep yet.)"
@@ -9233,23 +9229,19 @@ label v7_nsfwSkipLabel1:
 
 ########## SCENE 36 MAKING SIGNS W/ AUTUMN
 label signs_with_autumn:
-    $ autumn.messenger.newMessage(_("Hey, it's Autumn."), force_send=True)
-    $ autumn.messenger.newMessage(_("I'm just about to start making signs. Do you still want to join?"), force_send=True)
-    $ autumn.messenger.addReply(_("Yes, of course. I'd love to."))
-    $ autumn.messenger.newMessage(_("Great. I'm at the Deer's House. Do you know how to get there?"))
-    $ autumn.messenger.addReply(_("Yeah, I think I do. On my way."))
-    $ autumn.messenger.newMessage(_("Alright, see you soon."))
+    $ MessengerService.new_message(autumn, _("Hey, it's Autumn."))
+    $ MessengerService.new_message(autumn, _("I'm just about to start making signs. Do you still want to join?"))
+    $ MessengerService.add_reply(autumn, _("Yes, of course. I'd love to."))
+    $ MessengerService.new_message(autumn, _("Great. I'm at the Deer's House. Do you know how to get there?"))
+    $ MessengerService.add_reply(autumn, _("Yeah, I think I do. On my way."))
+    $ MessengerService.new_message(autumn, _("Alright, see you soon."))
 
-    play sound "sounds/vibrate.mp3"
+    play sound sound.vibrate
 
-    " "
-
-    label phoneba:
-        if autumn.messenger.replies:
-            call screen phone
-        if autumn.messenger.replies:
+    while MessengerService.has_replies(autumn):
+        call screen phone
+        if MessengerService.has_replies(autumn):
             u "(I should probably check my messages.)"
-            jump phoneba
 
     u "(Alright, let's get going to Autumn's.)"
     
@@ -9257,7 +9249,7 @@ label signs_with_autumn:
     stop music fadeout 3
     scene sas2 # TPP. Show MC knocking on the door of the Deer's house.
     with fade
-    play sound "sounds/knock.mp3"
+    play sound sound.knock
 
     pause 1.5
 
@@ -9744,7 +9736,7 @@ label amberhocodate:
 
     scene sfr4am2 #MC arrives at Amber's dorm step. He knocks
     with fade
-    play sound "sounds/knock.mp3"
+    play sound sound.knock
     
     pause 1.5
 
@@ -10128,7 +10120,7 @@ label chloehocodate:
     scene sfr4cl2 #mc knocking on chick's door
     with fade
 
-    play sound "sounds/knock.mp3"
+    play sound sound.knock
 
     pause 1.5
 
@@ -10186,7 +10178,7 @@ label chloehocodate:
 
     pause 0.5
 
-    play sound "sounds/capture.mp3"
+    play sound sound.capture
     scene sfr4cl8
     with flash
 
@@ -10501,7 +10493,7 @@ label chloehocodate:
             with dissolve
 
     # honk sound #check - add honk.mp3 sound file
-    play sound "sounds/honk.mp3"
+    play sound sound.honk
     "*Honk*"
 
     scene sfr4cl23 # chloe turned around looking at the door
@@ -10603,7 +10595,7 @@ label chloehocodate:
 
     pause 0.5
 
-    play sound "sounds/capture.mp3"
+    play sound sound.capture
     scene sfr4cl28 # pose 1
     with flash
 
@@ -10614,7 +10606,7 @@ label chloehocodate:
 
     pause 0.5
 
-    play sound "sounds/capture.mp3"
+    play sound sound.capture
     scene sfr4cl28a # pose 2
     with flash
 
@@ -10625,7 +10617,7 @@ label chloehocodate:
 
     pause 0.5
 
-    play sound "sounds/capture.mp3"
+    play sound sound.capture
     scene sfr4cl28b # pose 3
     with flash
 
@@ -10679,7 +10671,7 @@ label emilyhocodate:
     scene sfr4em2 #mc knocking on emily's dorm
     with dissolve
 
-    play sound "sounds/knock.mp3"
+    play sound sound.knock
 
     pause 1.5
 
@@ -10793,7 +10785,7 @@ label emilyhocodate:
 
     scene sfr4em8a # showing emily bending forward to kiss him
     with dissolve
-    play sound "sounds/kiss.mp3"
+    play sound sound.kiss
 
     pause 1.0
 
@@ -10985,7 +10977,7 @@ label emilyhocodate:
 
     pause 0.5
 
-    play sound "sounds/capture.mp3"
+    play sound sound.capture
     scene sfr4em15 # you and emily posing for pictures pose 1
     with flash
 
@@ -10996,7 +10988,7 @@ label emilyhocodate:
 
     pause 0.5
 
-    play sound "sounds/capture.mp3"
+    play sound sound.capture
     scene sfr4em15a # you and emily posing for pictures pose 2
     with flash
 
@@ -11007,7 +10999,7 @@ label emilyhocodate:
 
     pause 0.5
 
-    play sound "sounds/capture.mp3"
+    play sound sound.capture
     scene sfr4em15b # you and emily posing for pictures pose 3
     with flash
 
@@ -11118,7 +11110,7 @@ label laurenhocodate:
     scene sfr4em2
     with dissolve
 
-    play sound "sounds/knock.mp3"
+    play sound sound.knock
 
     pause 1.5
 
@@ -11152,7 +11144,7 @@ label laurenhocodate:
         scene sfr4la2 # showing lauren and mc kissing
         with dissolve
 
-        play sound "sounds/kiss.mp3"
+        play sound sound.kiss
 
         pause 1.0
 
@@ -11335,7 +11327,7 @@ label laurenhocodate:
 
     pause 0.5
 
-    play sound "sounds/capture.mp3"
+    play sound sound.capture
     scene sfr4la12 # you and la posing for pictures pose 1
     with flash
 
@@ -11346,7 +11338,7 @@ label laurenhocodate:
 
     pause 0.5
 
-    play sound "sounds/capture.mp3"
+    play sound sound.capture
     scene sfr4la12a # you and la posing for pictures pose 2
     with flash
 
@@ -11357,7 +11349,7 @@ label laurenhocodate:
 
     pause 0.5
 
-    play sound "sounds/capture.mp3"
+    play sound sound.capture
     scene sfr4la12b # you and la posing for pictures pose 3
     with flash
 
@@ -11492,7 +11484,7 @@ label penelopehocodate:
     with dissolve
     # loud musics playing
 
-    play sound "sounds/knock.mp3"
+    play sound sound.knock
 
     pause 1.5
 
@@ -11548,7 +11540,7 @@ label penelopehocodate:
             scene sfr4pe1 #you knocking on penelopes door
             with dissolve
 
-            play sound "sounds/knock.mp3"
+            play sound sound.knock
 
             pause 1.5
 
@@ -11973,7 +11965,7 @@ label rileyhocodate:
     with dissolve
     # loud musics playing
 
-    play sound "sounds/knock.mp3"
+    play sound sound.knock
 
     pause 1.5
 
@@ -15035,7 +15027,7 @@ label fr4riley1:
 
     pause 0.5
 
-    play sound "sounds/capture.mp3"
+    play sound sound.capture
     scene sfr4ri37 # mc in the middle photo pose 1 (friendly)
     with flash
 
@@ -15046,7 +15038,7 @@ label fr4riley1:
 
     pause 0.5
 
-    play sound "sounds/capture.mp3"
+    play sound sound.capture
     scene sfr4ri37a  # mc in the middle photo pose 2 (arms around aubrey and rileys hips they come close)
     with flash
 
@@ -15057,7 +15049,7 @@ label fr4riley1:
 
     pause 0.5
 
-    play sound "sounds/capture.mp3"
+    play sound sound.capture
     scene sfr4ri37b
     with flash
 
@@ -15189,7 +15181,7 @@ label fr4aubrey1:
                     scene sfr4ri42b # penis kissing / licking 1
                     with dissolve
 
-                    play sound "sounds/kiss.mp3"
+                    play sound sound.kiss
 
                     pause 0.5
 
@@ -17000,7 +16992,7 @@ label fr4laurenending:
 
     scene sfr4la30c # lauren and mc kiss
     with dissolve
-    play sound "sounds/kiss.mp3"
+    play sound sound.kiss
 
     pause 0.5
 
@@ -17016,7 +17008,7 @@ label fr4laurenending:
 
     scene sfr4la30c # lauren and mc kiss
     with dissolve
-    play sound "sounds/kiss.mp3"
+    play sound sound.kiss
 
     pause 0.5
 

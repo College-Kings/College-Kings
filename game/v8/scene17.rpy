@@ -6,10 +6,10 @@
 # Please look at the rpy file along with the render table to get a good idea of the scene's dynamics
 
 label msrose_moving:
-    $ penelope.messenger.addReply(_("Hey, how you holding up?"))
-    $ penelope.messenger.newMessage(_("Better, thanks to you"))
-    $ penelope.messenger.addReply(_("No problem. I'm here for you. Let me know if you need anything else."))
-    $ penelope.messenger.newMessage(_("Thank you! :)"))
+    $ MessengerService.add_reply(penelope, _("Hey, how you holding up?"))
+    $ MessengerService.new_message(penelope, _("Better, thanks to you"))
+    $ MessengerService.add_reply(penelope, _("No problem. I'm here for you. Let me know if you need anything else."))
+    $ MessengerService.new_message(penelope, _("Thank you! :)"))
 
     scene v8smcrm99
     with dissolve
@@ -19,18 +19,16 @@ label msrose_moving:
     with dissolve
     u "(Should I check how Penelope's doing?)"
 
-    label phn_penelope6:
-        if penelope.messenger.replies:
-            call screen phone
-        if penelope.messenger.replies:
+    while MessengerService.has_replies(penelope):
+        call screen phone
+        if MessengerService.has_replies(penelope):
             u "(I should talk to Penelope.)"
-            jump phn_penelope6
 
 label phn_penelope6_done:
 
     scene v8rose1a # MC looking towards his room door (not visible in the shot) and talking
     with dissolve
-    play sound "sounds/knock.mp3"
+    play sound sound.knock
 
     pause 1.5
 
@@ -274,7 +272,7 @@ label phn_penelope6_done:
     with dissolve
     u "And it's still not an excuse for..."
 
-    play sound "sounds/ring.mp3"
+    play sound sound.ring
 
     scene v8rose5e
     with vpunch

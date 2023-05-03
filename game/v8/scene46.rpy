@@ -39,9 +39,9 @@ label v8_ending:
         scene v8send3a # TPP. Same camera as v8send3, MC checking his phone, looking confused.
         with dissolve
 
-        $ imre.messenger.newMessage(_("Dude, you see this shit on Kiwii?"), force_send=True)
-        $ imre.messenger.addReply(_("No, what?"))
-        $ imre.messenger.newMessage(_("IDK, it's crazy"))
+        $ MessengerService.new_message(imre, _("Dude, you see this shit on Kiwii?"))
+        $ MessengerService.add_reply(imre, _("No, what?"))
+        $ MessengerService.new_message(imre, _("IDK, it's crazy"))
 
         $ newKiwiiPost = KiwiiPost(chris, "phone/kiwii/Posts/v8/red_square.webp", "", number_likes=renpy.random.randint(100, 200))
         $ newKiwiiPost = KiwiiPost(grayson, "phone/kiwii/Posts/v8/red_square.webp", "", number_likes=renpy.random.randint(100, 200))
@@ -91,11 +91,10 @@ label v8_ending:
 
         scene v8send7a # TPP. Same camera as v8send7, MC checking his phone, looking confused.
         with dissolve
-        
 
-        $ ryan.messenger.newMessage(_("What the hell's happening on Kiwii?"), force_send=True)
-        $ ryan.messenger.addReply(_("I don't know. What is it?"))
-        $ ryan.messenger.newMessage(_("Fuckin check it out man. Crazy shit"))
+        $ MessengerService.new_message(ryan, _("What the hell's happening on Kiwii?"))
+        $ MessengerService.add_reply(ryan, _("I don't know. What is it?"))
+        $ MessengerService.new_message(ryan, _("Fuckin check it out man. Crazy shit"))
 
         $ newKiwiiPost = KiwiiPost(chris, "phone/kiwii/Posts/v8/red_square.webp", "", number_likes=renpy.random.randint(100, 200))
         $ newKiwiiPost = KiwiiPost(grayson, "phone/kiwii/Posts/v8/red_square.webp", "", number_likes=renpy.random.randint(100, 200))
@@ -104,12 +103,10 @@ label v8_ending:
         $ newKiwiiPost = KiwiiPost(aubrey, "phone/kiwii/Posts/v8/red_square.webp", "", number_likes=renpy.random.randint(100, 200))
         $ newKiwiiPost = KiwiiPost(samantha, "phone/kiwii/Posts/v8/red_square.webp", "", number_likes=renpy.random.randint(100, 200))
 
-        label v8s46_phoneCheck:
-            if ryan.messenger.replies:
-                call screen phone
-            if ryan.messenger.replies:
+        while MessengerService.has_replies(ryan):
+            call screen phone
+            if MessengerService.has_replies(ryan):
                 u "I need to check my phone."
-                jump v8s46_phoneCheck
 
         u "(What the...? Is this about the upcoming fight?)"
 

@@ -36,23 +36,21 @@ label v8_scene24_apes:
     jump phn_riley11_setup
 
 label phn_riley11_setup:
-    $ riley.messenger.newMessage(_("Bad day?"), force_send=True)
-    $ riley.messenger.addReply(_("I've read the same page four times :/"))
-    $ riley.messenger.newMessage(_("At least you can read! I just found out I need glasses!"))
-    $ riley.messenger.addReply(_("I think you'd look cute in glasses."))
-    $ riley.messenger.newMessage(_("I don't know. Why don't you come with me and Aubrey to try some on?"))
-    $ riley.messenger.addReply(_("Sure, I will come. But where is the store?"))
-    $ riley.messenger.newMessage(_("Just down the road from the gym on the right hand side of the road"))
-    $ riley.messenger.addReply(_("Cool will meet you both there"))
-    $ riley.messenger.newMessage(_("Great!"))
-    play sound "sounds/vibrate.mp3"
+    $ MessengerService.new_message(riley, _("Bad day?"))
+    $ MessengerService.add_reply(riley, _("I've read the same page four times :/"))
+    $ MessengerService.new_message(riley, _("At least you can read! I just found out I need glasses!"))
+    $ MessengerService.add_reply(riley, _("I think you'd look cute in glasses."))
+    $ MessengerService.new_message(riley, _("I don't know. Why don't you come with me and Aubrey to try some on?"))
+    $ MessengerService.add_reply(riley, _("Sure, I will come. But where is the store?"))
+    $ MessengerService.new_message(riley, _("Just down the road from the gym on the right hand side of the road"))
+    $ MessengerService.add_reply(riley, _("Cool will meet you both there"))
+    $ MessengerService.new_message(riley, _("Great!"))
+    play sound sound.vibrate
 
-label phn_riley11:
-    if riley.messenger.replies:
+    while MessengerService.has_replies(riley):
         call screen phone
-    if riley.messenger.replies:
-        u "(I should talk to Riley.)"
-        jump phn_riley11
+        if MessengerService.has_replies(riley):
+            u "(I should talk to Riley.)"
 
     if joinwolves:
         u "(Guess I'm not gonna be bored to death after all.)"

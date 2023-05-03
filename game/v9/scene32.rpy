@@ -2,21 +2,6 @@
 # Locations: Outside the gym, inside the gym
 # Characters: MC (Outfit 3when outside gym,Outfit 4 when inside gym ), Evelyn (Outfit 4)
 # Time: Saturday Morning
-
-init python:
-    def v9s32_reply1():
-        riley.messenger.newMessage(_("So you're coming?"))
-        riley.messenger.addReply(_("I hope so ;)"))
-        riley.messenger.newMessage(_("See you in a few!"))
-        setattr(store, "v9_sex_with_riley", True)
-
-    def v9s32_reply2():
-        riley.messenger.newMessage(_("But? :o"))
-        riley.messenger.addReply(_("But I have to stay focused on the Brawl. There's a lot riding on my fight."))
-        riley.messenger.newMessage(_("Seriously?"))
-        riley.messenger.addReply(_("I'm so sorry. You know I would any other day. Really."))
-        riley.messenger.newMessage(_("Ok well, your loss."))
-
 label v9_sat_gym:
     scene v9atg1 # TPP. Show MC outside the Gym, neutral face, mouth closed
     with fade
@@ -152,22 +137,36 @@ label v9_sat_skip_gym:
         scene v9atg1a # TPP. Same camera as v9atg1, Show MC checking his phone.
         with dissolve
 
-        play sound "sounds/vibrate.mp3"
+        play sound sound.vibrate
 
         u "(Oh, who's that?)"
-
-        $ riley.messenger.newMessage(_("Hey, what's up? Wanna come over?"), force_send=True)
-        $ riley.messenger.addReply(_("I really shouldn't. Big day tomorrow. Stressed out"))
-        $ riley.messenger.newMessage(_("Duh, that's why I'm asking ;)"))
-        $ riley.messenger.addReply(_("Well you shoulda led with that!"), v9s32_reply1)
-        $ riley.messenger.addReply(_("Man, I'd really love to but..."), v9s32_reply2)
         
-        label s32_PhoneContinue:
-            if riley.messenger.replies:
-                call screen phone
-            if riley.messenger.replies:
+        python:
+            v9s32_reply1 = MessageBuilder(riley)
+            v9s32_reply1.new_message(_("So you're coming?"))
+            v9s32_reply1.add_reply(_("I hope so ;)"))
+            v9s32_reply1.new_message(_("See you in a few!"))
+            v9s32_reply1.set_variable("v9_sex_with_riley", True)
+
+            v9s32_reply2 = MessageBuilder(riley)
+            v9s32_reply2.new_message(_("But? :o"))
+            v9s32_reply2.add_reply(_("But I have to stay focused on the Brawl. There's a lot riding on my fight."))
+            v9s32_reply2.new_message(_("Seriously?"))
+            v9s32_reply2.add_reply(_("I'm so sorry. You know I would any other day. Really."))
+            v9s32_reply2.new_message(_("Ok well, your loss."))
+
+            MessengerService.new_message(riley,_("Hey, what's up? Wanna come over?"))
+            MessengerService.add_reply(riley,_("I really shouldn't. Big day tomorrow. Stressed out"))
+            MessengerService.new_message(riley,_("Duh, that's why I'm asking ;)"))
+            MessengerService.add_replies(riley,
+                Reply(_("Well you shoulda led with that!"), v9s32_reply1),
+                Reply(_("Man, I'd really love to but..."), v9s32_reply2)
+            )
+        
+        while MessengerService.has_replies(riley):
+            call screen phone
+            if MessengerService.has_replies(riley):
                 u "(I should reply to Riley.)"
-                jump s32_PhoneContinue
 
         if v9_sex_with_riley:
             stop music fadeout 3
