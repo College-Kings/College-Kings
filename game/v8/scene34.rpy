@@ -10,16 +10,6 @@ label v8_tues_noon:
         v8s34_reply8.new_message(_("There's a new Japanese place right down the road"))
         v8s34_reply8.add_reply(_("Sounds delicious. Meet you there!"))
 
-        v8s34_reply5 = MessageBuilder(chloe)
-        v8s34_reply5.set_variable("chloeSteakHouse", True)
-        v8s34_reply5.add_function(reputation.add_point, RepComponent.BOYFRIEND)
-        v8s34_reply5.new_message(_("Um... how's now? ;)"))
-        v8s34_reply5.add_reply(_("Now's perfect! Should I cum to your place or you wanna cum here? ;)"))
-        v8s34_reply5.new_message(_("I was thinking more along the lines of food. I'm hungry!"))
-        v8s34_reply5.add_reply(_("Well I got something to fill your mouth up"))
-        v8s34_reply5.new_message(_("Maybe after real food :P"))
-        v8s34_reply5.add_reply(_("What are you in the mood for? Lady's choice"), v8s34_reply8)
-
         v8s34_reply6 = MessageBuilder(chloe)
         v8s34_reply6.set_variable("chloeSteakHouse", True)
         v8s34_reply6.add_function(reputation.add_point, RepComponent.BOYFRIEND)
@@ -37,6 +27,14 @@ label v8_tues_noon:
 
         if ending == "chloe":
             v8s34_reply4.add_reply(_("So when can I see you again?"), v8s34_reply5)
+            v8s34_reply4.set_variable("chloeSteakHouse", True)
+            v8s34_reply4.add_function(reputation.add_point, RepComponent.BOYFRIEND)
+            v8s34_reply4.new_message(_("Um... how's now? ;)"))
+            v8s34_reply4.add_reply(_("Now's perfect! Should I cum to your place or you wanna cum here? ;)"))
+            v8s34_reply4.new_message(_("I was thinking more along the lines of food. I'm hungry!"))
+            v8s34_reply4.add_reply(_("Well I got something to fill your mouth up"))
+            v8s34_reply4.new_message(_("Maybe after real food :P"))
+            v8s34_reply4.add_reply(_("What are you in the mood for? Lady's choice"), v8s34_reply8)
 
         else:
             v8s34_reply4.add_replies(
