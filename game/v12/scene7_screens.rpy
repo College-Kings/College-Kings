@@ -1,24 +1,24 @@
 init python:
     def v12s7_kill(char_obj: NonPlayableCharacter):
         # Check Competitive stat
-        if char_obj.stats["Competitive"] and len(v12s7_killList) < 3:
+        if char_obj.is_competitive and len(v12s7_killList) < 3:
             char_obj.points -= 1
-        elif not char_obj.stats["Competitive"] and len(v12s7_killList) < 3:
+        elif not char_obj.is_competitive and len(v12s7_killList) < 3:
             char_obj.points += 1
 
         # Check Vindictive stat
-        for character in char_obj.stats["Vindictive"]:
+        for character in char_obj.vindictive_characters:
             if character in v12s7_killList:
                 char_obj.points += 1
             else:
                 char_obj.points -= 1
 
         # Check Talkative stat
-        if char_obj.stats["Talkative"] and char_obj in v12s7_endtalkList:
+        if char_obj.is_talkative and char_obj in v12s7_endtalkList:
             char_obj.points += 1
-        elif char_obj.stats["Talkative"]:
+        elif char_obj.is_talkative:
             char_obj.points -= 1
-        elif not char_obj.stats["Talkative"] and char_obj in v12s7_endtalkList:
+        elif not char_obj.is_talkative and char_obj in v12s7_endtalkList:
             char_obj.points -= 1
 
         # Add character to kill list
