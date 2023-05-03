@@ -508,62 +508,6 @@ label after_load:
 
         kiwii_posts = [kiwii_post for kiwii_post in kiwii_posts if hasattr(kiwii_post.user, "name")]
 
-        # Simplr Contacts
-        try:
-            simplr_app.contacts = simplr_contacts
-            del simpler_contacts
-        except NameError: pass
-
-        try:
-            simplr_app.pending_contacts = simplr_pendingContacts
-            del simplr_pendingContacts
-        except NameError: pass
-
-        try: simplr_app.contacts
-        except AttributeError: simplr_app.contacts = []
-
-        try: simplr_app.pending_contacts
-        except AttributeError: simplr_app.pending_contacts = []
-
-        try:
-            beth.simplr = simplr_Beth
-            del simplr_Beth
-        except NameError: pass
-        try:
-            iris.simplr = simplr_Iris
-            del simplr_Iris
-        except NameError: pass
-        try:
-            samantha.simplr = simplr_Samantha
-            del simplr_Samantha
-        except NameError: pass
-        try:
-            emmy.simplr = simplr_Emmy
-            del simplr_Emmy
-        except NameError: pass
-
-        try:
-            for contact in (simplr_app.contacts + simplr_app.pending_contacts):
-
-                try: contact.pending_messages
-                except AttributeError:
-                    contact.pending_messages = contact.pendingMessages
-                    del contact.pendingMessages
-
-                try: contact.sent_messages
-                except AttributeError:
-                    contact.sent_messages = contact.sentMessages
-                    del contact.sentMessages
-
-                try: contact._notification
-                except AttributeError: contact._notification = False
-
-                try: contact.user
-                except AttributeError:
-                    contact.user = getattr(store, contact.name.lower().replace(' ', '_'))
-        except NameError:
-            pass
-
         ## RELATIONSHIP APP
         relationship_girls = [relationship_girl for relationship_girl in relationship_girls if hasattr(relationship_girl, "name")]
 
