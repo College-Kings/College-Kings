@@ -31,9 +31,6 @@ image main_menu_discord_hover = "gui/main_menu/discord_hover.webp"
 
 #endregion Main Menu
 
-## KCT Choice Hint
-image kct_choice_hint_background = Frame("gui/kct/background.webp", 44, 6, 44, 0) 
-
 ## Path Builder
 image path_builder_button_idle = Frame("main_menu/path_builder/images/button_idle.webp", 24, 6)
 image path_builder_button_hover = Frame("main_menu/path_builder/images/button_hover.webp", 24, 6)
