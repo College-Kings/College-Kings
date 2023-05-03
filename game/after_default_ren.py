@@ -10,7 +10,7 @@ init python:
 """
 
 
-def add_applications_to_phone() -> None:
+def phone_setup() -> None:
     store.phone.applications = (
         store.messenger,
         store.achievement_app,
@@ -19,6 +19,13 @@ def add_applications_to_phone() -> None:
         store.reputation_app,
         store.simplr_app,
     )
+
+    store.simplr_app.pending_contacts = [
+        store.beth,
+        store.iris,
+        store.samantha,
+        store.emmy,
+    ]
 
 
 def create_pb_variables() -> None:
@@ -133,5 +140,5 @@ store.pb_girls = {}
 store.pb_extra_options = ()
 store.pb_advanced_options = ()
 
-config.after_default_callbacks.append(add_applications_to_phone)
+config.after_default_callbacks.append(phone_setup)
 config.after_default_callbacks.append(create_pb_variables)
