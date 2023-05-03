@@ -39,26 +39,24 @@ label v12_simplr_convo:
 
     u "(Haven't checked out Simplr in a while.)"
 
-    if emmy.simplr in simplr_app.contacts:
+    if emmy in messenger.contacts:
         $ v12s24_emmymatch = True
 
-        $ emmy.simplr.newMessage("Hey handsome, I was hoping I'd match with you. Where are you from?", force_send=True)
-        $ emmy.simplr.addReply("I'm actually in Paris right now, but I'm from California. Wbu?")
-        $ emmy.simplr.newMessage("Wow, my distance settings are way off. I'm from Amsterdam.")
-        $ emmy.simplr.addReply("Haha, call it a coincidence, but I'm actually headed to Amsterdam here soon.")
-        $ emmy.simplr.newMessage("Wowww, guess I got a headstart on all the other Amsterdam chicks huh?")
-        $ emmy.simplr.addReply("Ha, I'm thinking I'm the lucky one.")
-        $ emmy.simplr.newMessage("There's actually a Simplr event they do regularly here, you should stop by when you come and maybe we'll run into each other.")
-        $ emmy.simplr.addReply("I'll definitely look into that.")
-        $ emmy.simplr.newMessage("Good, I know it's late so goodnight handsome ;)")
-        $ emmy.simplr.addReply("Goodnight ;)")
+        $ MessengerService.new_message(emmy, "Hey handsome, I was hoping I'd match with you. Where are you from?")
+        $ MessengerService.add_reply(emmy, "I'm actually in Paris right now, but I'm from California. Wbu?")
+        $ MessengerService.new_message(emmy, "Wow, my distance settings are way off. I'm from Amsterdam.")
+        $ MessengerService.add_reply(emmy, "Haha, call it a coincidence, but I'm actually headed to Amsterdam here soon.")
+        $ MessengerService.new_message(emmy, "Wowww, guess I got a headstart on all the other Amsterdam chicks huh?")
+        $ MessengerService.add_reply(emmy, "Ha, I'm thinking I'm the lucky one.")
+        $ MessengerService.new_message(emmy, "There's actually a Simplr event they do regularly here, you should stop by when you come and maybe we'll run into each other.")
+        $ MessengerService.add_reply(emmy, "I'll definitely look into that.")
+        $ MessengerService.new_message(emmy, "Good, I know it's late so goodnight handsome ;)")
+        $ MessengerService.add_reply(emmy, "Goodnight ;)")
 
-        label v12s24_PhoneContinueEmmy:
-            if emmy.simplr.replies:
-                call screen phone
-            if emmy.simplr.replies:
+        while MessengerService.has_replies(emmy):
+            call screen phone
+            if MessengerService.has_replies(emmy):
                 u "(I should check Simplr.)"
-                jump v12s24_PhoneContinueEmmy
 
         scene v12sic1a
         with dissolve

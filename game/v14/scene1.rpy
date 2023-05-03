@@ -42,10 +42,6 @@ label v14_start:
 
         if CharacterService.is_fwb(samantha):
             $ v13_cameron_and_mc_friends = True
-    
-    #if emmy.simplr.pending_messages: #for compatibility with v12 players where emmy replies were not forced to be seen
-        #$ emmy.simplr.pending_messages = []
-        #$ emmy.simplr.sent_messages[-1].replies = []
 
     if CharacterService.is_fwb(aubrey) and CharacterService.is_fwb(riley):
         $ v13_threesomeending = True
