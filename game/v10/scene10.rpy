@@ -174,7 +174,7 @@ label v10_sun_morn:
             $ MessengerService.new_message(lindsey, "Hey, [name]... congrats on the win.")
             $ MessengerService.new_message(lindsey, "I know it's quite early, but")
         else:
-            $ MessengerService.new_message(lindsey, "Hey, [name]... I know you have a lot on your mind right now with everything that happened yesterday...", force_send=True)
+            $ MessengerService.new_message(lindsey, "Hey, [name]... I know you have a lot on your mind right now with everything that happened yesterday...")
         $ MessengerService.new_message(lindsey, "I've just been dealing with some stuff...")
         $ MessengerService.new_message(lindsey, "And I need someone to talk to")
         $ MessengerService.new_message(lindsey, "Sorry, we don't even know each other that well")

@@ -316,7 +316,7 @@ label v12_lindsey_lobby:
 
     pause 2
 
-    $ MessengerService.new_message(riley, "Hey, I saw you were having breakfast with Lindsey, can you come to the cafe down the road when you're done? I have something to talk to you about in private.", force_send=True)
+    $ MessengerService.new_message(riley, "Hey, I saw you were having breakfast with Lindsey, can you come to the cafe down the road when you're done? I have something to talk to you about in private.")
     $ MessengerService.add_reply(riley, "Sure, on my way")
 
     while MessengerService.has_replies(riley):
