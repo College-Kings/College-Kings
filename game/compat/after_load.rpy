@@ -428,6 +428,9 @@ label after_load:
                 if comment.user == "Samantha": comment.user = samantha
                 if comment.user == "Sebastian": comment.user = sebastian
 
+                if comment.mentions is None:
+                    comment.mentions = []
+
                 for mention in comment.mentions:
                     temp_mentions = []
                     if mention == "Aaron": temp_mentions.append(aaron)
@@ -465,6 +468,9 @@ label after_load:
                 ###### KIWII COMMENT REPLIES
                 for reply in comment.replies:
                     reply.disabled = False
+
+                    if reply.mentions is None:
+                        reply.mentions = []
 
                     for mention in reply.mentions:
                         temp_mentions = []
