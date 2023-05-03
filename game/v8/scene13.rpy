@@ -46,7 +46,7 @@ label after_apes_ceremony:
         v8s13_reply2.new_message(_("Good night."))
 
         MessengerService.new_message(chloe, _("Congrats on getting in. Looks like we'll be seeing a lot of each other."))
-        MessengerService.add_replies(chloe, 
+        MessengerService.add_replies(chloe,
             Reply(_("Exactly how much is a lot? ;)"), v8s13_reply1),
             Reply(_("Hope so. I like talking to you."), v8s13_reply2)
         )
@@ -168,7 +168,7 @@ label phn_chloe11_done:
     with dissolve
     ry "Woohoooo!"
 
-    if chloe.messenger.find_message("Guess you'll have to wait and see ;)"):
+    if MessengerService.find_message("Guess you'll have to wait and see ;)"):
         scene v8apes28 # FPP. MC inside the room now and he notices Chloe and Caleb chitchatting
         with dissolve
         u "(Oh, Chloe is here.)"

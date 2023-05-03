@@ -46,7 +46,6 @@ label v9_walk_li_txt:
         if MessengerService.has_replies(lindsey):
             u "(I should reply to Lindsey.)"
 
-    
     scene v9wlt2 # TPP. Show MC putting his phone away and continue to walk on.
     with dissolve
 

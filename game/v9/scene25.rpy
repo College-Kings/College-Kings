@@ -77,7 +77,6 @@ label v9_room_fri_eve:
                 if MessengerService.has_replies(lauren):
                     u "(I should text Lauren.)"
 
-
         scene v9rfe4 # TPP. Show MC's door.
         with dissolve
 

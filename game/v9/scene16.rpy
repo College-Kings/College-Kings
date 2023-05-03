@@ -5,7 +5,6 @@
 # Kiwii Images: v9emiKiwii (Emily's Cleavage)
 
 label v9_room_thur_night:
-
     if joinwolves:
         scene v9emi1 # TPP. Show MC sat on his bed in his Wolves room, looking tired.
         with fade
@@ -819,61 +818,58 @@ label v9_thur_night_aft_em_w:
 
         u "(I need to get some sleep.)"
 
+    python:
+        v9s16_reply1 = MessageBuilder(lindsey)
+        v9s16_reply1.new_message(_("I see you're still riding high from that fight"))
+        v9s16_reply1.add_reply(_("Maybe a little. But I'm still happy you texted"))
+        v9s16_reply1.new_message(_("I just wanted to say goodnight... and I was thinking about you"))
+        v9s16_reply1.add_reply(_("I'll definitely be thinking about you now instead of sleeping ;)"))
+        v9s16_reply1.new_message(_("Can I text you before the Brawl?"))
+        v9s16_reply1.add_reply(_("YES! Can't wait. Goodnight to you too"))
+        v9s16_reply1.new_message(_("Goodnight"))
+
+        v9s16_reply2 = MessageBuilder(lindsey)
+        v9s16_reply2.new_message(_("Yeah, just wanted to say hi. I was thinking about you"))
+        v9s16_reply2.add_reply(_("Oooh, anything interesting? ;)"))
+        v9s16_reply2.new_message(_("A little ;)"))
+        v9s16_reply2.add_reply(_("Do tell!"))
+        v9s16_reply2.new_message(_("Maybe after the Brawl... if you win"))
+        v9s16_reply2.add_reply(_("I sure will now!"))
+        v9s16_reply2.new_message(_("Fingers crossed. Goodnight!"))
+
+        v9s16_reply3 = MessageBuilder(lindsey)
+        v9s16_reply3.new_message(_("I was thinking about you"))
+        v9s16_reply3.add_reply(_("Oh? Anything fun?"))
+        v9s16_reply3.new_message(_("Maybe ;)"))
+        v9s16_reply3.add_reply(_("I'd love to hear more"))
+        v9s16_reply3.new_message(_("What do you think about me checking on you again tomorrow?"))
+        v9s16_reply3.add_reply(_("I think I should get punched more often!"))
+        v9s16_reply3.new_message(_("You're so sweet, goodnight :)"))
+        v9s16_reply3.add_reply(_("Goodnight"))
+
+        v9s16_reply4 = MessageBuilder(lindsey)
+        v9s16_reply4.new_message(_("I just couldn't stop worrying about you"))
+        v9s16_reply4.add_reply(_("That's very nice of you"))
+        v9s16_reply4.new_message(_("Can I check on you again tomorrow?"))
+        v9s16_reply4.add_reply(_("Sure! Anytime"))
+        v9s16_reply4.new_message(_("Good, maybe we can meet up, let me get a good look at you before the Brawl"))
+        v9s16_reply4.add_reply(_("I'd love too!"))
+        v9s16_reply4.new_message(_("Great, goodnight :)"))
+        v9s16_reply4.add_reply(_("Goodnight"))
+
     if hl_punch:
-
-        python:
-            v9s16_reply1 = MessageBuilder(lindsey)
-            v9s16_reply1.new_message(_("I see you're still riding high from that fight"))
-            v9s16_reply1.add_reply(_("Maybe a little. But I'm still happy you texted"))
-            v9s16_reply1.new_message(_("I just wanted to say goodnight... and I was thinking about you"))
-            v9s16_reply1.add_reply(_("I'll definitely be thinking about you now instead of sleeping ;)"))
-            v9s16_reply1.new_message(_("Can I text you before the Brawl?"))
-            v9s16_reply1.add_reply(_("YES! Can't wait. Goodnight to you too"))
-            v9s16_reply1.new_message(_("Goodnight"))
-
-            v9s16_reply2 = MessageBuilder(lindsey)
-            v9s16_reply2.new_message(_("Yeah, just wanted to say hi. I was thinking about you"))
-            v9s16_reply2.add_reply(_("Oooh, anything interesting? ;)"))
-            v9s16_reply2.new_message(_("A little ;)"))
-            v9s16_reply2.add_reply(_("Do tell!"))
-            v9s16_reply2.new_message(_("Maybe after the Brawl... if you win"))
-            v9s16_reply2.add_reply(_("I sure will now!"))
-            v9s16_reply2.new_message(_("Fingers crossed. Goodnight!"))
-
-            MessengerService.new_message(lindsey, _("How are you doing tonight?"))
-            MessengerService.add_replies(lindsey,
-                Reply(_("Better now that I'm talking to you"), v9s16_reply1),
-                Reply(_("Super. You getting ready for bed?"), v9s16_reply2)
-            )
+        $ MessengerService.new_message(lindsey, _("How are you doing tonight?"))
+        $ MessengerService.add_replies(lindsey,
+            Reply(_("Better now that I'm talking to you"), v9s16_reply1),
+            Reply(_("Super. You getting ready for bed?"), v9s16_reply2)
+        )
 
     else:
-
-        python:
-            v9s16_reply3 = MessageBuilder(lindsey)
-            v9s16_reply3.new_message(_("I was thinking about you"))
-            v9s16_reply3.add_reply(_("Oh? Anything fun?"))
-            v9s16_reply3.new_message(_("Maybe ;)"))
-            v9s16_reply3.add_reply(_("I'd love to hear more"))
-            v9s16_reply3.new_message(_("What do you think about me checking on you again tomorrow?"))
-            v9s16_reply3.add_reply(_("I think I should get punched more often!"))
-            v9s16_reply3.new_message(_("You're so sweet, goodnight :)"))
-            v9s16_reply3.add_reply(_("Goodnight"))
-
-            v9s16_reply4 = MessageBuilder(lindsey)
-            v9s16_reply4.new_message(_("I just couldn't stop worrying about you"))
-            v9s16_reply4.add_reply(_("That's very nice of you"))
-            v9s16_reply4.new_message(_("Can I check on you again tomorrow?"))
-            v9s16_reply4.add_reply(_("Sure! Anytime"))
-            v9s16_reply4.new_message(_("Good, maybe we can meet up, let me get a good look at you before the Brawl"))
-            v9s16_reply4.add_reply(_("I'd love too!"))
-            v9s16_reply4.new_message(_("Great, goodnight :)"))
-            v9s16_reply4.add_reply(_("Goodnight"))
-
-            MessengerService.new_message(lindsey, _("Hey, how you feeling?"))
-            MessengerService.add_replies(lindsey,
-                Reply(_("Better now that I'm talking to you"), v9s16_reply3),
-                Reply(_("I'm ok, it's really not that bad"), v9s16_reply4)
-            )
+        $ MessengerService.new_message(lindsey, _("Hey, how you feeling?"))
+        $ MessengerService.add_replies(lindsey,
+            Reply(_("Better now that I'm talking to you"), v9s16_reply3),
+            Reply(_("I'm ok, it's really not that bad"), v9s16_reply4)
+        )
 
     while MessengerService.has_replies(lindsey):
         call screen phone
@@ -908,61 +904,58 @@ label v9_thur_night_aft_em_a:
 
         u "(I need to get some sleep.)"
 
+    python:
+        v9s16_reply1 = MessageBuilder(lindsey)
+        v9s16_reply1.new_message(_("I see you're still riding high from that fight"))
+        v9s16_reply1.add_reply(_("Maybe a little. But I'm still happy you texted"))
+        v9s16_reply1.new_message(_("I just wanted to say goodnight... and I was thinking about you"))
+        v9s16_reply1.add_reply(_("I'll definitely be thinking about you now instead of sleeping ;)"))
+        v9s16_reply1.new_message(_("Can I text you before the Brawl?"))
+        v9s16_reply1.add_reply(_("YES! Can't wait. Goodnight to you too"))
+        v9s16_reply1.new_message(_("Goodnight"))
+
+        v9s16_reply2 = MessageBuilder(lindsey)
+        v9s16_reply2.new_message(_("Yeah, just wanted to say hi. I was thinking about you"))
+        v9s16_reply2.add_reply(_("Oooh, anything interesting? ;)"))
+        v9s16_reply2.new_message(_("A little ;)"))
+        v9s16_reply2.add_reply(_("Do tell!"))
+        v9s16_reply2.new_message(_("Maybe after the Brawl... if you win"))
+        v9s16_reply2.add_reply(_("I sure will now!"))
+        v9s16_reply2.new_message(_("Fingers crossed. Goodnight!"))
+
+        v9s16_reply3 = MessageBuilder(lindsey)
+        v9s16_reply3.new_message(_("I was thinking about you"))
+        v9s16_reply3.add_reply(_("Oh? Anything fun?"))
+        v9s16_reply3.new_message(_("Maybe ;)"))
+        v9s16_reply3.add_reply(_("I'd love to hear more"))
+        v9s16_reply3.new_message(_("What do you think about me checking on you again tomorrow?"))
+        v9s16_reply3.add_reply(_("I think I should get punched more often!"))
+        v9s16_reply3.new_message(_("You're so sweet, goodnight :)"))
+        v9s16_reply3.add_reply(_("Goodnight"))
+
+        v9s16_reply4 = MessageBuilder(lindsey)
+        v9s16_reply4.new_message(_("I just couldn't stop worrying about you"))
+        v9s16_reply4.add_reply(_("That's very nice of you"))
+        v9s16_reply4.new_message(_("Can I check on you again tomorrow?"))
+        v9s16_reply4.add_reply(_("Sure! Anytime"))
+        v9s16_reply4.new_message(_("Good, maybe we can meet up, let me get a good look at you before the Brawl"))
+        v9s16_reply4.add_reply(_("I'd love too!"))
+        v9s16_reply4.new_message(_("Great, goodnight :)"))
+        v9s16_reply4.add_reply(_("Goodnight"))
+
     if hl_punch:
-
-        python:
-            v9s16_reply1 = MessageBuilder(lindsey)
-            v9s16_reply1.new_message(_("I see you're still riding high from that fight"))
-            v9s16_reply1.add_reply(_("Maybe a little. But I'm still happy you texted"))
-            v9s16_reply1.new_message(_("I just wanted to say goodnight... and I was thinking about you"))
-            v9s16_reply1.add_reply(_("I'll definitely be thinking about you now instead of sleeping ;)"))
-            v9s16_reply1.new_message(_("Can I text you before the Brawl?"))
-            v9s16_reply1.add_reply(_("YES! Can't wait. Goodnight to you too"))
-            v9s16_reply1.new_message(_("Goodnight"))
-
-            v9s16_reply2 = MessageBuilder(lindsey)
-            v9s16_reply2.new_message(_("Yeah, just wanted to say hi. I was thinking about you"))
-            v9s16_reply2.add_reply(_("Oooh, anything interesting? ;)"))
-            v9s16_reply2.new_message(_("A little ;)"))
-            v9s16_reply2.add_reply(_("Do tell!"))
-            v9s16_reply2.new_message(_("Maybe after the Brawl... if you win"))
-            v9s16_reply2.add_reply(_("I sure will now!"))
-            v9s16_reply2.new_message(_("Fingers crossed. Goodnight!"))
-
-            MessengerService.new_message(lindsey, _("How are you doing tonight?"))
-            MessengerService.add_replies(lindsey,
-                Reply(_("Better now that I'm talking to you"), v9s16_reply1),
-                Reply(_("Super. You getting ready for bed?"), v9s16_reply2)
-            )
+        $ MessengerService.new_message(lindsey, _("How are you doing tonight?"))
+        $ MessengerService.add_replies(lindsey,
+            Reply(_("Better now that I'm talking to you"), v9s16_reply1),
+            Reply(_("Super. You getting ready for bed?"), v9s16_reply2)
+        )
 
     else:
-
-        python:
-            v9s16_reply3 = MessageBuilder(lindsey)
-            v9s16_reply3.new_message(_("I was thinking about you"))
-            v9s16_reply3.add_reply(_("Oh? Anything fun?"))
-            v9s16_reply3.new_message(_("Maybe ;)"))
-            v9s16_reply3.add_reply(_("I'd love to hear more"))
-            v9s16_reply3.new_message(_("What do you think about me checking on you again tomorrow?"))
-            v9s16_reply3.add_reply(_("I think I should get punched more often!"))
-            v9s16_reply3.new_message(_("You're so sweet, goodnight :)"))
-            v9s16_reply3.add_reply(_("Goodnight"))
-
-            v9s16_reply4 = MessageBuilder(lindsey)
-            v9s16_reply4.new_message(_("I just couldn't stop worrying about you"))
-            v9s16_reply4.add_reply(_("That's very nice of you"))
-            v9s16_reply4.new_message(_("Can I check on you again tomorrow?"))
-            v9s16_reply4.add_reply(_("Sure! Anytime"))
-            v9s16_reply4.new_message(_("Good, maybe we can meet up, let me get a good look at you before the Brawl"))
-            v9s16_reply4.add_reply(_("I'd love too!"))
-            v9s16_reply4.new_message(_("Great, goodnight :)"))
-            v9s16_reply4.add_reply(_("Goodnight"))
-
-            MessengerService.new_message(lindsey, _("Hey, how you feeling?"))
-            MessengerService.add_replies(lindsey,
-                Reply(_("Better now that I'm talking to you"), v9s16_reply3),
-                Reply(_("I'm ok, it's really not that bad"), v9s16_reply4)
-            )
+        $ MessengerService.new_message(lindsey, _("Hey, how you feeling?"))
+        $ MessengerService.add_replies(lindsey,
+            Reply(_("Better now that I'm talking to you"), v9s16_reply3),
+            Reply(_("I'm ok, it's really not that bad"), v9s16_reply4)
+        )
 
     while MessengerService.has_replies(lindsey):
         call screen phone
