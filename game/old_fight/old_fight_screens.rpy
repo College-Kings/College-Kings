@@ -1,4 +1,4 @@
-screen fight_tutorial(highlight=None, stance="attack"):
+screen old_fight_tutorial(highlight=None, stance="attack"):
     tag tag_fightTutorial
 
     add "images/fight_background.webp"
