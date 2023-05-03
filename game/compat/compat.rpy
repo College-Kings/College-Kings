@@ -1,4 +1,7 @@
 init 999 python:
+    class Checklist(list):
+        pass
+
     class SimplrContact:
         pass
 
