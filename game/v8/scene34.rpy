@@ -26,7 +26,7 @@ label v8_tues_noon:
         v8s34_reply4.new_message(_("Can't say it's all done, but I sure am!"))
 
         if ending == "chloe":
-            v8s34_reply4.add_reply(_("So when can I see you again?"), v8s34_reply5)
+            v8s34_reply4.add_reply(_("So when can I see you again?"))
             v8s34_reply4.set_variable("chloeSteakHouse", True)
             v8s34_reply4.add_function(reputation.add_point, RepComponent.BOYFRIEND)
             v8s34_reply4.new_message(_("Um... how's now? ;)"))
