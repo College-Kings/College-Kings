@@ -144,8 +144,8 @@ label v9_room_sat_aft:
                     Reply(_("Yeah, of course"), v9s35_reply_boyfriend),
                     Reply(_("You need to ask? :)"))
                 )
-                MessengerService.new_message(chloe, "images/v9/Scene 35/chloetxtimg.webp")
-                MessengerService.add_replies(chloe,
+                $ MessengerService.new_message(chloe, "images/v9/Scene 35/chloetxtimg.webp")
+                $ MessengerService.add_replies(chloe,
                     Reply(_("OMG! I miss those!")),
                     Reply(_("OMG! You are magnificent!"))
                 )
