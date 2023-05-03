@@ -13,7 +13,7 @@ define config.label_callback = label_callback
 define _quit_slot = "99-1"
 
 
-label path_builder():
+label path_builder:
     $ quick_menu = False
     
     call screen path_builder_starting_location
