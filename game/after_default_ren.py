@@ -17,6 +17,7 @@ def add_applications_to_phone() -> None:
         store.relationship_app,
         store.kiwii,
         store.reputation_app,
+        store.simplr_app,
     )
 
 
