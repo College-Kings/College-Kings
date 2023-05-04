@@ -52,10 +52,67 @@ python early:
             renpy.quit()
         except OSError:
             raise Exception("Deleting old files please RESTART GAME.")
-            
 
 label after_load:
     python:
+        npcs = (aaron, adam, amber, aryssa, aubrey, autumn, beth, buyer, caleb, cameron, candy, charli, chloe, chris, dean, elijah, emily, emmy, evelyn, grayson, imre, iris, jenny, josh, julia, kai, kim, kourtney, lauren, lews_official, lindsey, mason, mr_lee, ms_rose, naomi, nora, parker, penelope, polly, riley, ryan, samantha, satin, sebastian, tom, trainer, wolf)
+
+        mc.profile_pictures = CharacterService.get_profile_pictures(mc.name)
+
+        for npc in npcs:
+            npc.profile_pictures = CharacterService.get_profile_pictures(npc.name)
+
+        if _version != (1, 3, 0):
+            #region NonPlayableCharacters
+            try:
+                if elijah._relationship == Relationship.MAKEFUN:
+                    CharacterService.set_mood(elijah, Moods.HURT)
+            except AttributeError: pass
+
+            try:
+                if evelyn._relationship == Relationship.MOVE:
+                    v2_made_a_move_on_evelyn = True
+            except AttributeError: pass
+
+            try:
+                if evelyn._relationship == Relationship.LIKES:
+                    v6_evelyn_successful_date = True
+            except AttributeError: pass
+
+            for npc in npcs:             
+                npc.pending_text_messages = []
+                npc.text_messages = []
+
+                npc.pending_simplr_messages = []
+                npc.simplr_messages = []
+
+                try:
+                    if character._relationship == Relationship.MAD:
+                        CharacterService.set_mood(character, Moods.MAD)
+                except AttributeError: pass
+
+                npc.relationships = {}
+                
+                try:
+                    npc.relationships["mc"] = npc._relationship
+                    del npc._relationship
+                except AttributeError: pass
+            #endregion NonPlayableCharacters
+            
+            #region Messenger    
+            old_messenger_contacts = messenger.contacts.copy()
+            for contact in old_messenger_contacts:
+                npc = contact.user
+                npc.text_messages = []
+                for message in contact.sent_messages:
+                    if isinstance(message, Reply):
+                        npc.text_messages.append(Reply(message.content))
+                    else:
+                        npc.text_messages.append(Message(npc, message.content))
+
+            messenger.contacts = list(contact.user for contact in old_messenger_contacts)    
+            #endregion Messenger
+
         # Disable skip transitions
         preferences.transitions = 2
 
@@ -69,136 +126,7 @@ label after_load:
         try: mc.relationships
         except AttributeError: mc.relationships = {}
 
-
-#region NonPlayable Character
-        try: chloe
-        except NameError: chloe = NonPlayableCharacter("Chloe", "Chloe101")
-        try: amber
-        except NameError: amber = NonPlayableCharacter("Amber", "Amber_xx")
-        try: penelope
-        except NameError: penelope = NonPlayableCharacter("Penelope", "Penelopeeps")
-        try: riley
-        except NameError: riley = NonPlayableCharacter("Riley", "RileyReads")
-        try: lindsey
-        except NameError: lindsey = NonPlayableCharacter("Lindsey", "LindsLou")
-        try: lauren
-        except NameError: lauren = NonPlayableCharacter("Lauren", "LoLoLauren")
-        try: emily
-        except NameError: emily = NonPlayableCharacter("Emily", "emilyyyy")
-        try: ms_rose
-        except NameError: ms_rose = NonPlayableCharacter("Ms Rose")
-        try: nora
-        except NameError: nora = NonPlayableCharacter("Nora", "Nora_12")
-        try: aubrey
-        except NameError: aubrey = NonPlayableCharacter("Aubrey", "Aubs123")
-        try: ryan
-        except NameError: ryan = NonPlayableCharacter("Ryan", "Ryanator")
-        try: imre
-        except NameError: imre = NonPlayableCharacter("Imre", "BadBoyImre")
-        try: chris
-        except NameError: chris = NonPlayableCharacter("Chris", "Chriscuit")
-        try: charli
-        except NameError: charli = NonPlayableCharacter("Charli", "CharliAndTheCockFactory")
-        try: cameron
-        except NameError: cameron = NonPlayableCharacter("Cameron", "Cameroon")
-        try: josh
-        except NameError: josh = NonPlayableCharacter("Josh", "Josh80085")
-        try: julia
-        except NameError: julia = NonPlayableCharacter("Julia")
-        try: evelyn
-        except NameError: evelyn = NonPlayableCharacter("Evelyn")
-        try: autumn
-        except NameError: autumn = NonPlayableCharacter("Autumn", "Its_Fall")
-        try: sebastian
-        except NameError: sebastian = NonPlayableCharacter("Sebastian", "Big Seb")
-        try: grayson
-        except NameError: grayson = NonPlayableCharacter("Grayson", "G-rayson")
-        try: jenny
-        except NameError: jenny = NonPlayableCharacter("Jenny")
-        try: samantha
-        except NameError: samantha = NonPlayableCharacter("Samantha", "SamFromSpaceJam")
-
-        if isinstance(chloe, CustomCharacter):
-            chloe = NonPlayableCharacter("Chloe", "Chloe101")
-        if isinstance(amber, CustomCharacter):
-            amber = NonPlayableCharacter("Amber", "Amber_xx")
-        if isinstance(penelope, CustomCharacter):
-            penelope = NonPlayableCharacter("Penelope", "Penelopeeps")
-        if isinstance(riley, CustomCharacter):
-            riley = NonPlayableCharacter("Riley", "RileyReads")
-        if isinstance(lindsey, CustomCharacter):
-            lindsey = NonPlayableCharacter("Lindsey", "LindsLou")
-        if isinstance(lauren, CustomCharacter):
-            lauren = NonPlayableCharacter("Lauren", "LoLoLauren")
-        if isinstance(emily, CustomCharacter):
-            emily = NonPlayableCharacter("Emily", "emilyyyy")
-        if isinstance(ms_rose, CustomCharacter):
-            ms_rose = NonPlayableCharacter("Ms Rose")
-        if isinstance(nora, CustomCharacter):
-            nora = NonPlayableCharacter("Nora", "Nora_12")
-        if isinstance(aubrey, CustomCharacter):
-            aubrey = NonPlayableCharacter("Aubrey", "Aubs123")
-        if isinstance(ryan, CustomCharacter):
-            ryan = NonPlayableCharacter("Ryan", "Ryanator")
-        if isinstance(imre, CustomCharacter):
-            imre = NonPlayableCharacter("Imre", "BadBoyImre")
-        if isinstance(chris, CustomCharacter):
-            chris = NonPlayableCharacter("Chris", "Chriscuit")
-        if isinstance(charli, CustomCharacter):
-            charli = NonPlayableCharacter("Charli", "CharliAndTheCockFactory")
-        if isinstance(cameron, CustomCharacter):
-            cameron = NonPlayableCharacter("Cameron", "Cameroon")
-        if isinstance(josh, CustomCharacter):
-            josh = NonPlayableCharacter("Josh", "Josh80085")
-
-        ms_rose.name = "Ms Rose"
-        chloe.username = "Chloe101"
-        amber.username = "Amber_xx"
-        penelope.username = "Penelopeeps"
-        riley.username = "RileyReads"
-        lindsey.username = "LindsLou"
-        lauren.username = "LoLoLauren"
-        emily.username = "emilyyyy"
-        nora.username = "Nora_12"
-        aubrey.username = "Aubs123"
-        ryan.username = "Ryanator"
-        imre.username = "BadBoyImre"
-        chris.username = "Chriscuit"
-        charli.username = "CharliAndTheCockFactory"
-        cameron.username = "Cameroon"
-        josh.username = "Josh80085"
-        autumn.username = "Its_Fall"
-        sebastian.username = "Big Seb"
-        grayson.username = "G-rayson"
-        mason.username = "Mason_Mas"
-        elijah.username = "Elijah_Woods"
-        caleb.username = "Aleb"
-        aaron.username = "DoubleARon"
-        naomi.username = "NaomiXMarie"
-        samantha.username = "SamFromSpaceJam"
-
-        try:
-            if elijah.relationship == Relationship.MAKEFUN:
-                CharacterService.set_mood(elijah, Moods.HURT)
-        except AttributeError: pass
-
-        try:
-            if evelyn.relationship == Relationship.MOVE:
-                v2_made_a_move_on_evelyn = True
-        except AttributeError: pass
-
-        for character in (josh, lauren, chris, autumn, chloe, imre, nora):
-            try:
-                if character.relationship == Relationship.MAD:
-                    CharacterService.set_mood(character, Moods.MAD)
-            except AttributeError: pass
-
-        try:
-            if evelyn.relationship == Relationship.LIKES:
-                v6_evelyn_successful_date = True
-        except AttributeError: pass
-
-#endregion NonPlayableCharacters
+        #endregion NonPlayableCharacters
         try:
             bro = reputation.components[Reputations.BRO]
             boyfriend = reputation.components[Reputations.BOYFRIEND]
@@ -245,27 +173,7 @@ label after_load:
         achievement_app.home_screen = "{}_home".format(achievement_app.name.lower())
         kiwii.home_screen = "{}_home".format(kiwii.name.lower())
         simplr_app.home_screen = "{}_home".format(simplr_app.name.lower())
-        relationship_app.home_screen = "{}_home".format(relationship_app.name.lower())
-
-        for contact in messenger.contacts:
-            try: contact.sent_messages
-            except AttributeError: contact.sent_messages = []
-
-            try: contact.sent_messages = contact.sentMessages
-            except AttributeError: pass
-
-            try: contact.pending_messages
-            except AttributeError: contact.pending_messages = []
-
-            try: contact.pending_messages = contact.pendingMessages
-            except AttributeError: pass
-
-            try: contact._notification
-            except AttributeError: contact._notification = False
-
-            try: contact.user
-            except AttributeError:
-                contact.user = getattr(store, contact.name.lower().replace(' ', '_'))
+        relationship_app.home_screen = "{}_home".format(relationship_app.name.lower())        
 
         ### KIWII
         #### KIWII POSTS
@@ -464,47 +372,6 @@ label after_load:
 
                 try: comment.number_likes
                 except AttributeError: comment.number_likes = comment.numberLikes
-
-                ###### KIWII COMMENT REPLIES
-                for reply in comment.replies:
-                    reply.disabled = False
-
-                    if reply.mentions is None:
-                        reply.mentions = []
-
-                    for mention in reply.mentions:
-                        temp_mentions = []
-                        if mention == "Aaron": temp_mentions.append(aaron)
-                        if mention == "Amber": temp_mentions.append(amber)
-                        if mention == "Aubrey": temp_mentions.append(aubrey)
-                        if mention == "Autumn": temp_mentions.append(autumn)
-                        if mention == "Caleb": temp_mentions.append(caleb)
-                        if mention == "Cameron": temp_mentions.append(cameron)
-                        if mention == "Charli": temp_mentions.append(charli)
-                        if mention == "Chloe": temp_mentions.append(chloe)
-                        if mention == "Chris": temp_mentions.append(chris)
-                        if mention == "Elijah": temp_mentions.append(elijah)
-                        if mention == "Emily": temp_mentions.append(emily)
-                        if mention == "Grayson": temp_mentions.append(grayson)
-                        if mention == "Imre": temp_mentions.append(imre)
-                        if mention == "Josh": temp_mentions.append(josh)
-                        if mention == "Lauren": temp_mentions.append(lauren)
-                        if mention == "LewsOfficial": temp_mentions.append(lews_official)
-                        if mention == "Lindsey": temp_mentions.append(lindsey)
-                        if mention == "Mason": temp_mentions.append(mason)
-                        if mention == "MC": temp_mentions.append(mc)
-                        if mention == "Naomi": temp_mentions.append(naomi)
-                        if mention == "Nora": temp_mentions.append(nora)
-                        if mention == "Parker": temp_mentions.append(parker)
-                        if mention == "Penelope": temp_mentions.append(penelope)
-                        if mention == "Riley": temp_mentions.append(riley)
-                        if mention == "Ryan": temp_mentions.append(ryan)
-                        if mention == "Samantha": temp_mentions.append(samantha)
-                        if mention == "Sebastian": temp_mentions.append(sebastian)
-                        reply.mentions = temp_mentions
-
-                    try: reply.number_likes
-                    except AttributeError: reply.number_likes = reply.numberLikes
 
         kiwii_posts = [kiwii_post for kiwii_post in kiwii_posts if hasattr(kiwii_post.user, "name")]
 
@@ -774,4 +641,6 @@ label after_load:
     else:
         hide screen bug_testing_overlay
 
+    $ _version = config.version
+    
     return
