@@ -208,7 +208,6 @@ default reputation_app = Application(_("Reputation"))
 default calendar = Application(_("Calendar"))
 
 #region Kiwii
-default kiwii_first_time = False
 default kiwii_posts = []
 #endregion Kiwii
 #endregion Phone
