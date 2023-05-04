@@ -62,7 +62,7 @@ label after_load:
         for npc in npcs:
             npc.profile_pictures = CharacterService.get_profile_pictures(npc.name)
 
-        if _version != (1, 3, 0):
+        if isinstance(_version, str) or _version < (1, 3, 0):
             #region NonPlayableCharacters
             try:
                 if elijah._relationship == Relationship.MAKEFUN:
@@ -401,14 +401,6 @@ label after_load:
 
         try:
             if chlorers: chloers = True
-        except NameError: pass
-        
-        try: kiwiiPost1
-        except NameError: kiwii_first_time = False
-
-        try:
-            kiwii_first_time = kiwii_firstTime
-            del kiwii_firstTime
         except NameError: pass
 
         try:
