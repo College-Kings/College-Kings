@@ -113,6 +113,13 @@ label after_load:
             messenger.contacts = list(contact.user for contact in old_messenger_contacts)    
             #endregion Messenger
 
+            #region Kiwii
+            for post in kiwii_posts:
+                for comment in post.sent_comments:
+                    comment.replies = comment._replies
+            #endregion Kiwii
+
+
         # Disable skip transitions
         preferences.transitions = 2
 
