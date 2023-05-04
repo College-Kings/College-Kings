@@ -1357,10 +1357,12 @@ label conyourdorm:
 
         play sound sound.vibrate
 
+        $ show_kiwii_popup = MessageBuilder(riley)
+        $ show_kiwii_popup.new_message(_("Check Kiwii..."))
+        $ show_kiwii_popup.add_function(renpy.show_screen, "kiwiiPopup")
+
         $ MessengerService.new_message(riley, _("Are you and Emily back together?"))
-        $ MessengerService.add_reply(riley, _("What are you talking about???"))
-        $ MessengerService.new_message(riley, _("Check Kiwii..."))
-        $ kiwii_first_time = True
+        $ MessengerService.add_reply(riley, _("What are you talking about???"), show_kiwii_popup)
 
         pause 0.5
 
@@ -1374,9 +1376,9 @@ label conyourdorm:
             if MessengerService.has_replies(riley):
                 u "(I need to respond to some of these messages.)"
 
-        while kiwii_first_time:
+        while v7_kiwiiPost4.replies:
             call screen phone
-            if kiwii_first_time:
+            if v7_kiwiiPost4.replies:
                 u "(I should check out what Emily posted on Kiwii.)"
 
         while MessengerService.has_replies(penelope):
@@ -1598,11 +1600,12 @@ label conyourdorm:
     else:
         play sound sound.vibrate
 
+        $ show_kiwii_popup = MessageBuilder(riley).add_function(renpy.show_screen, "kiwiiPopup")
+
         $ MessengerService.new_message(riley, _("Hey, how come you're not on Kiwii?"))
         $ MessengerService.add_reply(riley, _("What's that?"))
         $ MessengerService.new_message(riley, _("It's a new social media app, you should give it a try"))
-        $ MessengerService.add_reply(riley, _("Okay, I'll have a look"))
-        $ kiwii_first_time = True
+        $ MessengerService.add_reply(riley, _("Okay, I'll have a look"), show_kiwii_popup)
 
         pause 0.5
 
