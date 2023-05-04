@@ -639,7 +639,7 @@ label after_load:
         except NameError: v13_aubrey_vote = "na"
         try: v14_ryan_satin
         except NameError: v14_ryan_satin = False
-
+    
     hide screen reply
     hide screen simplr_reply
 
@@ -649,5 +649,5 @@ label after_load:
         hide screen bug_testing_overlay
 
     $ _version = config.version
-    
+    $ renpy.block_rollback()
     return
