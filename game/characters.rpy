@@ -1,37 +1,23 @@
-init python:
-    def relationship_callback(event, interact=True, **kwargs):
-        character = kwargs.get("character")
-
-        if character is None:
-            return
-
-        character = getattr(store, character)
-        relationship_girls = getattr(store, "relationship_girls")
-
-        if character not in relationship_girls:
-            relationship_girls.append(character)
-            setattr(store, "relationship_girls", relationship_girls)
-
 # Declare characters used by this game. The color argument colorizes the name of the character.
 define character.narrator = Character (None, what_outlines=[ (2, "#000") ])
 define character.u = Character(_("[name]"), who_color="#53d769", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 define character.aa = Character(_("Aaron"), who_color="#fd9426", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 define character.ad = Character(_("Adam"), who_color="#fecb2e", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
-define character.am = Character(_("Amber"), who_color="#fc3158", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ], callback=relationship_callback, cb_character="amber")
+define character.am = Character(_("Amber"), who_color="#fc3158", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 define character.an = Character(_("Mrs. Anderson"), who_color="#fecb2e", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
-define character.au = Character(_("Aubrey"), who_color="#fc3158", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ], callback=relationship_callback, cb_character="aubrey")
-define character.aut = Character(_("Autumn"), who_color="#fc3158", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ], callback=relationship_callback, cb_character="autumn")
+define character.au = Character(_("Aubrey"), who_color="#fc3158", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
+define character.aut = Character(_("Autumn"), who_color="#fc3158", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 define character.ben = Character(_("Benjamin"), who_color="#5fc9f8", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 define character.ca = Character(_("Cameron"), who_color="#147efb", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 define character.car = Character(_("Car"), who_color="#147efb", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 define character.ch = Character(_("Chris"), who_color="#147efb", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
-define character.cl = Character(_("Chloe"), who_color="#fc3158", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ], callback=relationship_callback, cb_character="chloe")
+define character.cl = Character(_("Chloe"), who_color="#fc3158", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 define character.clerk = Character(_("Clerk"), who_color="#5fc9f8", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 define character.co = Character(_("Counselor"), who_color="#fecb2e", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 define character.courtney = Character(_("Courtney"), who_color="#fc3d39", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 define character.ehr = Character(_("Dr. Ehrmantraut"), who_color="#fecb2e", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 define character.el = Character(_("Elijah"), who_color="#147efb", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
-define character.em = Character(_("Emily"), who_color="#fc3d39", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ], callback=relationship_callback, cb_character="emily")
+define character.em = Character(_("Emily"), who_color="#fc3d39", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 define character.ev = Character(_("Evelyn"), who_color="#fecb2e", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 define character.gr = Character(_("Grayson"), who_color="#fd9426", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 define character.imre = Character(_("Imre"), who_color="#fecb2e", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
@@ -41,14 +27,14 @@ define character.ju = Character(_("Julia"), who_color="#fecb2e", who_outlines=[ 
 define character.karen = Character(_("Karen"), who_color="#fc3158", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 define character.katy = Character(_("Katy"), who_color="#fd9426", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 define character.ki = Character(_("Kim"), who_color="#fc3d39", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
-define character.la = Character(_("Lauren"), who_color="#fd9426", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ], callback=relationship_callback, cb_character="lauren")
+define character.la = Character(_("Lauren"), who_color="#fd9426", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 define character.lee = Character(_("Mr. Lee"), who_color="#5fc9f8", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
-define character.li = Character(_("Lindsey"), who_color="#fc3158", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ], callback=relationship_callback, cb_character="lindsey")
+define character.li = Character(_("Lindsey"), who_color="#fc3158", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 define character.ma = Character(_("Mason"), who_color="#fd9426", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
-define character.no = Character(_("Nora"), who_color="#fc3158", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ], callback=relationship_callback, cb_character="nora")
-define character.pe = Character(_("Penelope"), who_color="#fd9426", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ], callback=relationship_callback, cb_character="penelope")
-define character.ri = Character(_("Riley"), who_color="#fecb2e", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ], callback=relationship_callback, cb_character="riley")
-define character.ro = Character(_("Ms. Rose"), who_color="#fc3d39", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ], callback=relationship_callback, cb_character="ms_rose")
+define character.no = Character(_("Nora"), who_color="#fc3158", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
+define character.pe = Character(_("Penelope"), who_color="#fd9426", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
+define character.ri = Character(_("Riley"), who_color="#fecb2e", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
+define character.ro = Character(_("Ms. Rose"), who_color="#fc3d39", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 define character.ry = Character(_("Ryan"), who_color="#5fc9f8", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 define character.sam = Character(_("Sam"), who_color="#fecb2e", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 define character.sarah = Character(_("Sarah"), who_color="#fecb2e", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
@@ -68,7 +54,7 @@ define character.host = Character(_("Host"), who_color="#fecb2e", who_outlines=[
 define character.matt = Character(_("Matt"), who_color="#fecb2e", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 define character.poet1 = Character(_("Lisa"), who_color="#fc3158", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 define character.poet2 = Character(_("Martin"), who_color="#fd9426", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
-define character.sa = Character(_("Samantha"), who_color="#fecb2e", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ], callback=relationship_callback, cb_character="samantha")
+define character.sa = Character(_("Samantha"), who_color="#fecb2e", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 define character.se = Character(_("Sebastian"), who_color="#147efb", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 define character.waiter = Character(_("Waiter"), who_color="#5fc9f8", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 
@@ -101,7 +87,7 @@ define character.dg1 = Character(_("Rachel"), who_color="#fc3158", who_outlines=
 define character.dg2 = Character(_("Eleanor"), who_color="#fc3158", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 define character.dg3 = Character(_("Karen"), who_color="#fc3158", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 define character.dg4 = Character(_("Rebecca"), who_color="#fc3158", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
-define character.jen = Character(_("Jenny"), who_color="#fc3158", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ], callback=relationship_callback, cb_character="jenny")
+define character.jen = Character(_("Jenny"), who_color="#fc3158", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 define character.jer = Character(_("Jerry"), who_color="#0055ff", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 define character.mrr = Character(_("Mr. Rose"), who_color="#0055ff", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 
