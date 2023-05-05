@@ -2,18 +2,16 @@ screen girls():
     modal True
 
     # character, label
-    default girl_labels = [
-            [_("Chloe"), "juchloe"],
-            [_("Aubrey"), "juaubrey"],
-            [_("Lauren"), "julauren"],
-            [_("Riley"), "juriley"],
-            [_("Emily"), "juemily"],
-            [_("Penelope"), "jupenelope"],
-        ]
-        
-    default image_path = "gui/julia_call/"
+    default girl_labels = (
+        (chloe, "juchloe"),
+        (aubrey, "juaubrey"),
+        (lauren, "julauren"),
+        (riley, "juriley"),
+        (emily, "juemily"),
+        (penelope, "jupenelope"),
+    )
 
-    add image_path + "jc_background.webp"
+    add "images/v4/jc_background.webp"
 
     vpgrid:
         cols 3
@@ -22,20 +20,23 @@ screen girls():
         xalign 0.5
         ypos 450
 
-        for character, l in girl_labels:
-            vbox:
-                align (0.5, 0.5)
+        for girl_obj, l in girl_labels:
+            button:
+                background "girl_button_idle"
+                hover_background "girl_button_hover"
+                xysize (307, 112)
+                action Jump(l)
 
-                imagebutton:
-                    idle image_path + character + "_idle.webp"
-                    hover image_path + character + ".webp"
-                    action Jump(l)
+                add Transform(girl_obj.profile_picture, xysize=(100, 100)) xpos 6 yalign 0.5
+ 
+                vbox:
+                    xpos 120
+                    yalign 0.5
+                    spacing -2
 
-                text character:
-                    yoffset -80
-                    xoffset 30
-                    xalign 0.5
-                    size 30
+                    text girl_obj.name:
+                        size 30
+                        color "#FFF"
     
     if config_debug:
         timer 0.1 action Jump(renpy.random.choice(list(i[1] for i in girl_labels)))
