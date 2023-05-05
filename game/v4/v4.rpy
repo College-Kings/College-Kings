@@ -629,8 +629,12 @@ label v4start:
         with dissolve
 
         u "Uhm... yeah."
+        
+        hide screen phone_icon
 
         call screen girls
+
+        show screen phone_icon
 
         label juchloe:
             $ girl = "Chloe"
