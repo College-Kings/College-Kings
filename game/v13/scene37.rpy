@@ -275,7 +275,7 @@ label v13s37_nora:
 
     no "You and I both..."
 
-    if CharacterService.is_fwb(nora):
+    if not CharacterService.is_fwb(nora):
         scene v13s37no_4a
         with dissolve
 
