@@ -62,7 +62,7 @@ label after_load:
         for npc in npcs:
             npc.profile_pictures = CharacterService.get_profile_pictures(npc.name)
 
-        if isinstance(_version, str) or _version < (1, 3, 0):
+        if isinstance(_version, str) or _version < (1, 3, 5):
             if isinstance(mc.relationships, set):
                 mc.relationships = {}
 
