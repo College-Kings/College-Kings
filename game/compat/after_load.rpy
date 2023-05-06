@@ -99,6 +99,11 @@ label after_load:
                 except AttributeError: pass
             #endregion NonPlayableCharacters
             
+            #region PlayableCharacter
+            try: mc.profile_picture
+            except AttributeError: mc.profile_picture = mc.profile_pictures[0]
+            #endregion PlayableCharacter
+
             #region Messenger    
             old_messenger_contacts = messenger.contacts.copy()
             for contact in old_messenger_contacts:
