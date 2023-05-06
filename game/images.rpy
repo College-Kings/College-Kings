@@ -28,7 +28,6 @@ image main_menu_patreon_idle = "gui/main_menu/patreon_idle.webp"
 image main_menu_patreon_hover = Transform("gui/main_menu/patreon_hover.webp", pos=(-18, -14))
 image main_menu_discord_idle = "gui/main_menu/discord_idle.webp"
 image main_menu_discord_hover = "gui/main_menu/discord_hover.webp"
-
 #endregion Main Menu
 
 ## Path Builder
@@ -214,6 +213,12 @@ image calm_down_big_fella = "images/achievements/v13/calm_down_big_fella.webp"
 image ready_player_three = "images/achievements/v14/ready_player_three.webp"
 image saving_ryans_privates = "images/achievements/v14/saving_ryans_privates.webp"
 
+#region Common
+image girl_button_idle = "images/common/girl_button_idle.webp"
+image girl_button_hover = "images/common/girl_button_hover.webp"
+image girl_button_insensitive = Transform("girl_button_idle", matrixcolor=SaturationMatrix(0))
+#endregion Common
+
 # v1.0 - v2.0
 image s14 = "images/v1/s14.webp"
 image s14a = "images/v1/s14a.webp"
@@ -290,12 +295,13 @@ image asexnew13 = Movie(play="images/v3/asexnew13.webm", loop=False, image="imag
 
 image rikiss2 = Movie(play="images/v3/rikiss.webm", loop=False, image="images/v3/rikiss.webp", start_image="images/v3/rikiss.webp")
 
-# v4.0
+#region v4.0
 image s316 = "images/v4/s316.webp" # Julia looking forward talking smiling
 image s316a = "images/v4/s316a.webp" # Julia looking forward talking smiling mouth closed
 image s316c = "images/v4/s316c.webp" # Julia looking forward curious
 image s316d = "images/v4/s316d.webp" # Julia looking forward curious mouth closed
 image s316b = "images/v4/s316b.webp" # Julia looking at you smiling mouth open
+#endregion v4.0
 
 # v5.0
 image af5 = Movie(play="images/v5/af5.webm", start_image="images/v5/af5start.webp", image="images/v5/af5pic.webp", loop=False)

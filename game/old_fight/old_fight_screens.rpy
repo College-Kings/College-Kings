@@ -69,18 +69,21 @@ screen fight_typeMenu():
         text_size 40
         align (0.5, 0.6)
         sensitive True
+        selected False
         action [SetVariable("fight_type", "normal"), Return()]
 
     textbutton _("Simulate: realistic"):
         text_size 40
         align (0.5, 0.7)
         sensitive True
+        selected False
         action [SetVariable("fight_type", "simReal"), Return()]
 
     textbutton _("Simulate: auto-win"):
         text_size 40
         align (0.5, 0.8)
         sensitive True
+        selected False
         action [SetVariable("fight_type", "simWin"), Return()]
 
     if config_debug:

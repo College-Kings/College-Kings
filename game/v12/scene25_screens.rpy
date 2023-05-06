@@ -1,48 +1,45 @@
 screen v12_girls():
-
     # character: label
     default girl_labels = {
-        "Amber": {
+        amber: {
             "label": "v12_jc_amber",
             "condition": True
         },
-        "Aubrey": {
+        aubrey: {
             "label": "v12_jc_aubrey",
             "condition": True
         },
-        "Chloe": {
+        chloe: {
             "label": "v12_jc_chloe",
             "condition": not CharacterService.is_mad(chloe)
         },
-        "Lauren": {
+        lauren: {
             "label": "v12_jc_lauren",
             "condition": not v11_lauren_caught_aubrey
         },
-        "Lindsey": {
+        lindsey: {
             "label": "v12_jc_lindsey",
             "condition": True
         },
-        "Nora": {
+        nora: {
             "label": "v12_jc_nora",
             "condition": True
         },
-        "Penelope": {
+        penelope: {
             "label": "v12_jc_penelope",
             "condition": True
         },
-        "Riley": {
+        riley: {
             "label": "v12_jc_riley",
             "condition": True
         },
-        "Samantha": {
+        samantha: {
             "label": "v12_jc_samantha",
             "condition": v11_invite_sam_europe
         }
     }
 
-    default image_path = "gui/julia_call/"
-
-    add image_path + "jc_background.webp"
+    add "images/v4/jc_background.webp"
 
     vpgrid:
         cols 4
@@ -52,22 +49,26 @@ screen v12_girls():
         ypos 350
         allow_underfull True
 
-        for character, i in girl_labels.items():
-            vbox:
-                align (0.5, 0.5)
+        for girl_obj, i in girl_labels.items():
+            button:
+                background "girl_button_idle"
+                hover_background "girl_button_hover"
+                insensitive_background "girl_button_insensitive"
+                sensitive i["condition"]
+                xysize (307, 112)
+                action Jump(i["label"])
 
-                imagebutton:
-                    idle image_path  + "{}_idle.webp".format(character)
-                    hover image_path + "{}.webp".format(character)
-                    insensitive image_path + "{}_grey.webp".format(character)
-                    sensitive i["condition"]
-                    action Jump(i["label"])
+                add Transform(girl_obj.profile_picture, xysize=(100, 100)) xpos 6 yalign 0.5
+ 
+                vbox:
+                    xpos 120
+                    yalign 0.5
+                    spacing -2
 
-                text character:
-                    yoffset -80
-                    xoffset 30
-                    xalign 0.5
-                    size 30
+                    text girl_obj.name:
+                        size 30
+                        color "#FFF"
 
     if config_debug:
         timer 0.1 action Jump(renpy.random.choice([i["label"] for i in girl_labels.values()]))
+

@@ -9,50 +9,49 @@ screen hc_select():
     modal True
 
     default image_path = "images/v7/HC_Date_Select_screen/"
-    default girl_path = "gui/julia_call/"
 
     $ girl_labels = {
-        _("Amber"): {
+        amber: {
             "label": "hc_asking_amber",
             "condition": ("amber" not in hcAsked) and not CharacterService.is_girlfriend(lauren),
             "tooltip": _("I'm not that close with Amber but she does seem quite flirty around me")
         },
-        _("Aubrey"): {
+        aubrey: {
             "label": "hc_asking_aubrey",
             "condition": ("aubrey" not in hcAsked) and not CharacterService.is_girlfriend(lauren),
             "tooltip": (_("Aubrey and I get along well, she might be down to go with me.")
                 if CharacterService.is_friend(aubrey) else
                 _("I'm pretty sure that Aubrey would go with me and that would probably lead to a pretty hot night afterwards..."))
         },
-        _("Autumn"): {
+        autumn: {
             "label": "hc_asking_autumn",
             "condition": ("autumn" not in hcAsked) and (not CharacterService.is_mad(autumn)) and not CharacterService.is_girlfriend(lauren),
             "tooltip": (_("Autumn and I aren't really close, but I'll never know if she'd say yes if I don't try.")
                 if not CharacterService.is_mad(autumn) else
                 _("I think Autumn might be mad at me, so I probably shouldn't ask her."))
         },
-        _("Chloe"): {
+        chloe: {
             "label": "hc_asking_chloe",
             "condition": ("chloe" not in hcAsked) and not CharacterService.is_mad(chloe) and not CharacterService.is_girlfriend(lauren),
             "tooltip": (_("Chloe and I have been getting closer recently. Who knows, I might have a shot.")
                 if not CharacterService.is_mad(chloe) else
                 _("I think Chloe is mad at me, so I probably shouldn't ask her."))
         },
-        _("Emily"): {
+        emily: {
             "label": "hc_asking_emily",
             "condition": ("emily" not in hcAsked) and (forgiveemily) and not CharacterService.is_girlfriend(lauren),
             "tooltip": (_("I could take Emily. She definitely still has a thing for me.")
                 if forgiveemily else
                 _("I don't think asking Emily is the right call."))
         },
-        _("Lauren"): {
+        lauren: {
             "label": "hc_asking_lauren",
             "condition": ("lauren" not in hcAsked) and not CharacterService.is_mad(lauren),
             "tooltip": (_("I'm not sure Lauren sees me as more than a friend, but we have been getting closer.")
                 if not CharacterService.is_mad(lauren) else
                 _("It's kinda weird between Lauren and me, I probably should ask someone else."))
         },
-        _("Penelope"): {
+        penelope: {
             "label": "hc_asking_penelope",
             "condition": ("penelope" not in hcAsked) and (not v7_emily_bowling) and not CharacterService.is_girlfriend(lauren),
             "tooltip": (_("Penelope didn't seem too eager to talk to me today, I better ask someone else.")
@@ -61,7 +60,7 @@ screen hc_select():
                 if bowling else
                 _("I haven't done that much with Penelope so far, but maybe she'll yes."))
         },
-        _("Riley"): {
+        riley: {
             "label": "hc_asking_riley",
             "condition": ("riley" not in hcAsked) and not CharacterService.is_girlfriend(lauren),
             "tooltip": (_("Riley and I are good friends. She might say yes if I ask her."))
@@ -82,20 +81,23 @@ screen hc_select():
         xalign 0.5
         ypos 400
 
-        for character, i in girl_labels.items():
+        for girl_obj, i in girl_labels.items():
             button:
-                idle_background girl_path + "{}_idle.webp".format(character)
-                hover_background girl_path + "{}.webp".format(character)
-                insensitive_background girl_path + "{}_grey.webp".format(character)
+                background "girl_button_idle"
+                hover_background "girl_button_hover"
+                insensitive_background "girl_button_insensitive"
                 sensitive i["condition"]
                 tooltip i["tooltip"]
                 action Jump(i["label"])
                 xysize (307, 112)
 
-                text character:
+                add Transform(girl_obj.profile_picture, xysize=(100, 100)) xpos 6 yalign 0.5
+
+                text girl_obj.name:
+                    size 30
+                    color "#FFF"
                     xpos 120
                     yalign 0.5
-                    size 30
 
     $ tooltip = GetTooltip()
     
