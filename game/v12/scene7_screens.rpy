@@ -843,7 +843,7 @@ screen v12s7_utility():
         if "josh" in freeroam9 and josh not in v12s7_killList:
             hotspot(413, 183, 452, 895):
                 if "josh2" in freeroam9 and not v12s7_aubrey_moved:
-                    action Call("v12s7_free_roam_spoken", backgroundImg="v12ferjos3", returnScreen="v12s7_utility", seenList=[], victim=josh)
+                    action Call("v12s7_free_roam_spoken", backgroundImg="v12ferjos3", returnScreen="v12s7_utility", seenList=[aubrey], victim=josh)
                 elif "josh2" in freeroam9:
                     action Call("v12s7_free_roam_spoken", backgroundImg="v12ferjos3noau", returnScreen="v12s7_utility", seenList=[], victim=josh)
                 else:
