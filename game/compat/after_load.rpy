@@ -282,6 +282,11 @@ label after_load:
                 if mention == "Sebastian": temp_mentions.append(sebastian)
                 kiwii_post.mentions = temp_mentions
 
+            if post.user.name:
+                post.user = getattr(store, post.user.name.lower().replace(' ', '_'))
+            elif isinstance(post.user, PlayableCharacter):
+                post.user = mc
+
             try: kiwii_post.number_likes
             except AttributeError: kiwii_post.number_likes = kiwii_post.numberLikes
 
