@@ -63,6 +63,9 @@ label after_load:
             npc.profile_pictures = CharacterService.get_profile_pictures(npc.name)
 
         if isinstance(_version, str) or _version < (1, 3, 0):
+            if isinstance(mc.relationships, set):
+                mc.relationships = {}
+
             #region NonPlayableCharacters
             try:
                 if elijah._relationship == Relationship.MAKEFUN:
@@ -115,13 +118,17 @@ label after_load:
                     else:
                         npc.text_messages.append(Message(npc, message.content))
 
-            messenger.contacts = list(contact.user for contact in old_messenger_contacts)    
+            try:
+                messenger.contacts = list(contact.user for contact in old_messenger_contacts)
+            except AttributeError: pass
             #endregion Messenger
 
             #region Kiwii
             for post in kiwii_posts:
                 for comment in post.sent_comments:
-                    comment.replies = comment._replies
+                    try:
+                        comment.replies = comment._replies
+                    except AttributeError: pass
             #endregion Kiwii
 
 
