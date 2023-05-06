@@ -489,11 +489,25 @@ screen v12s7_bow():
 screen v12s7_left_walkway_front():
     tag free_roam
 
+    if v11_pen_goes_europe and penelope not in v12s7_killList:
+        add "images/v12/Scene 7/Screens/Navigation 12a.webp" # Penelope
+    else:
+        add "images/v12/Scene 7/Screens/Navigation 12b.webp"
+
+    if v11_pen_goes_europe and penelope not in v12s7_killList:
+        hotspot (223, 326, 752, 656):
+            if "penelope" in freeroam9:
+                action Call("v12s7_free_roam_spoken", backgroundImg="v12ferpen1", returnScreen="v12s7_left_walkway_front", seenList=[], victim=penelope)
+            else:
+                action Jump("v12s7_penelope1") #penelope
+
+    imagebutton:
+        idle ""
+        hover ""
+        
+
     imagemap:
-        if v11_pen_goes_europe and penelope not in v12s7_killList:
-            idle "images/v12/Scene 7/Screens/Navigation 12a.webp" # Penelope
-        else:
-            idle "images/v12/Scene 7/Screens/Navigation 12b.webp"
+
         hover "images/v12/Scene 7/Buttons/nav 12.webp"
 
         if v11_pen_goes_europe and penelope not in v12s7_killList:
