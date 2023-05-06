@@ -94,7 +94,7 @@ label after_load:
                 npc.relationships = {}
                 
                 try:
-                    npc.relationships["mc"] = npc._relationship
+                    npc.relationships[mc] = npc._relationship
                     del npc._relationship
                 except AttributeError: pass
             #endregion NonPlayableCharacters
