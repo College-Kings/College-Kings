@@ -9,7 +9,7 @@ label v11_emily_park:
         scene v11seap1 # TPP. Show MC sitting down on his bed in WOLVES room and noticing that he got a text. Normal expression, mouth closed.
         with fade
 
-        play sound "sounds/vibrate.mp3"
+        play sound sound.vibrate
         u "(I should see who that is.)"
 
         scene v11seap1a # TPP. Same camera as v11seap1. Show MC sitting down on his bed in WOLVES room and looking at his phone, normal expression, mouth closed.
@@ -21,7 +21,7 @@ label v11_emily_park:
         scene v11seap2 # TPP. Show MC sitting down on his bed in APES room and noticing that he got a text. Normal expression, mouth closed.
         with fade
 
-        play sound "sounds/vibrate.mp3"
+        play sound sound.vibrate
         u "(I should see who that is.)"
 
         scene v11seap2b # TPP. Same camera as v10seap2. Show MC sitting down on his bed in APES room and looking at his phone, normal expression, mouth closed.

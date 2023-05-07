@@ -9,7 +9,7 @@ label v11_chloe_hotel_room_amber_call:
         scene v11hrc1 # TPP. MC is inside his hotel room, next to the door, mouth closed
         with fade
         
-        play sound "sounds/call.mp3"
+        play sound sound.call
 
         u "(I literally just got to my room, who could be calling me?)"
 
@@ -211,7 +211,7 @@ label v11_chloe_hotel_room_amber_call:
 
         u "I am too. *Chuckles*"
 
-        play sound "sounds/knock.mp3"
+        play sound sound.knock
 
         pause 0.5
 
@@ -244,7 +244,7 @@ label v11_chloe_hotel_room_amber_call:
         scene v11hrc11e # FPP. MC kisses chloe
         with dissolve
 
-        play sound "sounds/kiss.mp3"
+        play sound sound.kiss
 
         pause 0.75
 
@@ -268,7 +268,7 @@ label v11_chloe_hotel_room_amber_call:
 
         u "I was thinking maybe we could-"
 
-        play sound "sounds/knock.mp3"
+        play sound sound.knock
 
         pause 0.5
 
@@ -346,7 +346,7 @@ label v11_chloe_hotel_room_amber_call:
         scene v11hrc19a # FPP MC kisses chloe's forehead, mouth closed
         with dissolve
 
-        play sound "sounds/kiss.mp3"
+        play sound sound.kiss
 
         pause 0.75
 

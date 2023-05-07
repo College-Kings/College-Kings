@@ -171,7 +171,7 @@ label v8_cl_start:
 
     $ renpy.end_replay()
 
-    play sound "sounds/knock.mp3"
+    play sound sound.knock
     stop music
 
     scene v8s20c # Same as v8s20b but Chloe shocked, eyes fully open, mouth open

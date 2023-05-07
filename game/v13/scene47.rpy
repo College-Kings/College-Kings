@@ -41,7 +41,7 @@ label v13s47:
 
     u "Sure, I could use a-"
 
-    play sound "sounds/call.mp3"
+    play sound sound.call
 
     scene v13s47_3
     with dissolve
@@ -156,7 +156,7 @@ label v13s47:
 
         pause 0.4
 
-        play sound "sounds/kiss.mp3"
+        play sound sound.kiss
         scene v13s47_6 # TPP. show mc holding lauren behind her head kissing her
         with dissolve
 

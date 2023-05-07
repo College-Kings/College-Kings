@@ -39,7 +39,7 @@ label v13s5:
 
         pause 1.25
 
-        play sound "sounds/kiss.mp3"
+        play sound sound.kiss
 
         scene v13s5_7 # TPP. Show MC kissing Chloe on the forehead
         with dissolve

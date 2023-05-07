@@ -194,7 +194,7 @@ label v11_aubrey_plane_sex:
 
                 au "Oh fuck!"
 
-                play sound "sounds/knock.mp3"
+                play sound sound.knock
                 
                 u "Oh shit..."
 

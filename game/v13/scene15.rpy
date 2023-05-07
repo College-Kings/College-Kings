@@ -99,7 +99,7 @@ label v13s15:
             v13s15_Reply2.add_reply("Sorry babe, I'm just so tired.")
             v13s15_Reply2.new_message("It's okay, night.")
 
-        play sound "sounds/vibrate.mp3"
+        play sound sound.vibrate
 
         scene v13s15_10 # TPP. MC looking down at his phone, he is standing in same place as v13s15_6, slightly surprised, mouth closed
         with dissolve

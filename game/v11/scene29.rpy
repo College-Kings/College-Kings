@@ -5,7 +5,7 @@
 
 label v11_hotel_room:
     play music "music/mhorror.mp3"
-    play sound "sounds/swoosh.mp3"
+    play sound sound.swoosh
     scene s587
     with flash
     ri "He's coming!"
@@ -51,7 +51,7 @@ label v11_hotel_room:
             scene s593 # Mc and Lauren on the ground terrified
             with vpunch
 
-            play sound "sounds/gun.mp3"
+            play sound sound.gun
             pause 0.5
 
             scene s593a # mc looks back and screams
@@ -79,7 +79,7 @@ label v11_hotel_room:
             scene s595 # Mc and Riley on the ground terrified
             with vpunch
 
-            play sound "sounds/gun.mp3"
+            play sound sound.gun
             pause 0.5
 
             scene s595a # mc looks back and screams
@@ -101,7 +101,7 @@ label v11timera:
     with dissolve
 
     u "1..."
-    play sound "sounds/gun.mp3"
+    play sound sound.gun
 
     scene s596a # Mc screaming terrified
     with vpunch
@@ -111,7 +111,7 @@ label v11timera:
 label v11wakeupa:
     stop sound
     hide fantasyoverlay onlayer foreground
-    play sound "sounds/swoosh.mp3"
+    play sound sound.swoosh
 
     if not v11_riley_roomate:
         scene v11bane2 # TPP. Close up of mc, MC jumps awake from the dream. Sitting up in bed, scared face
@@ -231,7 +231,7 @@ label v11wakeupa:
                 scene v11hr6 # TPP. Show MC kissing Chloe while holding her chin, same position as v11hr3
                 with dissolve
 
-                play sound "sounds/kiss.mp3"
+                play sound sound.kiss
 
                 pause 1
 

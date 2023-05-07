@@ -41,7 +41,7 @@ label v8_la_start:
     with dissolve
     u "God, you're beautiful."
 
-    play sound "sounds/kiss.mp3"
+    play sound sound.kiss
 
     scene v8s4 # TPP (same angle as v8s3 but zoomed in to focus on faces and upper torsos). MC and Lauren making out passionately
     with dissolve
@@ -144,7 +144,7 @@ label v8_la_start:
     with Dissolve(1)
     pause 0.5
 
-    play sound "sounds/kiss.mp3"
+    play sound sound.kiss
 
     scene v8s6b # MC kissing on Lauren's cheek (to wake her up)
     with dissolve
@@ -188,7 +188,7 @@ label v8_la_start:
 
     scene v8s8 # TPP (from top). Lauren and MC quick peck on the lips
     with dissolve
-    play sound "sounds/kiss.mp3"
+    play sound sound.kiss
     pause 0.5
 
     scene v8s7a
@@ -213,7 +213,7 @@ label v8_la_start:
 
     scene v8s8
     with dissolve
-    play sound "sounds/kiss.mp3"
+    play sound sound.kiss
     pause 0.5
 
     scene v8s7
@@ -234,7 +234,7 @@ label v8_la_start:
 
     scene v8s8
     with dissolve
-    play sound "sounds/kiss.mp3"
+    play sound sound.kiss
     pause 0.5
 
     scene v8s7a

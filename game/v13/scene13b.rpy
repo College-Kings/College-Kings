@@ -264,7 +264,7 @@ label v13s13b:
 
             scene v13s13b_5a # TPP Same angle as 5, Penelope kissing MC on the cheek
             with dissolve
-            play sound "sounds/kiss.mp3"
+            play sound sound.kiss
 
             polly "Too cute!"
 
@@ -274,7 +274,7 @@ label v13s13b:
 
     polly "Smile big!"
 
-    play sound "sounds/capture.mp3"
+    play sound sound.capture
     scene v13s13b_5
     with flash
 

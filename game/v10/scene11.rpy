@@ -7,7 +7,7 @@ label v10_linds_room:
     scene v10slds1 # TPP. Show MC arriving at the door to Lindsey's house and knocking. Normal expression, mouth closed.
     with fade
 
-    play sound "sounds/knock.mp3"
+    play sound sound.knock
 
     play music "music/v10/Track Scene 11.mp3" fadein 2
 

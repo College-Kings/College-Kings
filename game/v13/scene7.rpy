@@ -260,7 +260,7 @@ label v13_ticket_transfer:
                         scene v13s7_9 # TPP Show Penelope kissing MC
                         with dissolve
 
-                        play sound "sounds/kiss.mp3"
+                        play sound sound.kiss
                         pause 1.5
 
                         scene v13s7_9a # TPP Same angle as v13s7_9, Penelope leaning back after kissing MC, Penelope smiling with mouth open

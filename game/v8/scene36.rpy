@@ -8,7 +8,7 @@ label v8_julia_call:
     if joinwolves:
         scene v8room20a # MC holding his phone to his ear, neutral expression, mouth closed
         with dissolve
-        play sound "sounds/calling.mp3"
+        play sound sound.calling
         pause 1
 
         stop sound
@@ -115,7 +115,7 @@ label v8_julia_call:
     else:
         scene v8room21a # MC holding his phone to his ear, neutral expression, mouth closed
         with dissolve
-        play sound "sounds/calling.mp3"
+        play sound sound.calling
         pause 1
 
         stop sound

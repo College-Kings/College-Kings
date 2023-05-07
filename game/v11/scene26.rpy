@@ -120,7 +120,7 @@ label v11_hotel_bar_wolves: #can only get here if joinwolves
 
         ro "*Whisper* Speaking of what happens in London stays in London... Room 404, 10 minutes. Don't be late."
 
-        #play sound "sounds/kiss.mp3"
+        #play sound sound.kiss
 
         scene v11hrs4b # FPP Same angle as v11hrs4, Ms. Rose walking away, looking back at MC and blowing a kiss
         with dissolve

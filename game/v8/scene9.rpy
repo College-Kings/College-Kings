@@ -25,7 +25,7 @@ label after_prot_wolves:
 
     u "I'm never gonna get this shit."
 
-    play sound "sounds/knock.mp3"
+    play sound sound.knock
     "*Knock knock knock*"
 
     scene v8sprot24 # FPP. Show the closed door of MC's room as Sebastian is knocking on the door.

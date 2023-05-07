@@ -29,7 +29,7 @@ label v13s9:
 
         cl "Oh! Hey there handsome. Guess I won't have to go around the hotel looking for you since you're right here. *Chuckles*"
 
-        play sound "sounds/kiss.mp3"
+        play sound sound.kiss
 
         scene v13s9_3 # TPP. Chloe kisses MC on the lips.
         with dissolve
@@ -297,7 +297,7 @@ label v13s9:
             if CharacterService.is_girlfriend(chloe): # -If Chloegirlfriend (extra dialog)
                 $ reputation.add_point(RepComponent.BOYFRIEND)
 
-                play sound "sounds/kiss.mp3"
+                play sound sound.kiss
                 
                 scene v13s9_13 # TPP: Chloe, facing MC (no longer leaning against rail) arms around MC, giving him a kiss.
                 with dissolve
@@ -511,7 +511,7 @@ label v13s9:
 
     cl "Well, anytime would be fine. Whenever you-"
 
-    play sound "sounds/call.mp3"
+    play sound sound.call
 
     scene v13s9_14 # FPP. Close up of MC holding his phone lit up, incoming call ideally showing the name Ryan under a picture of Ryan.
     with dissolve

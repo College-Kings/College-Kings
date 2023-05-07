@@ -113,7 +113,7 @@ label v2start:
     with fade
 
     label bjj_bd: #for compatibility only
-    play sound "sounds/vibrate.mp3"
+    play sound sound.vibrate
     queue sound "sounds/vibrate.mp3"
 
     python:
@@ -1307,7 +1307,7 @@ label meet_lauren2:
 
 label historye: #for compatibility only
 label history2:
-    play sound "sounds/vibrate.mp3"
+    play sound sound.vibrate
 
     python:
         v2_reply7 = MessageBuilder(josh)
@@ -2303,7 +2303,7 @@ label bo_bd:
         u "(Still... I don't know if I can ever fully forgive her for what she did.)"
 
     # text from aubrey
-    play sound "sounds/vibrate.mp3"
+    play sound sound.vibrate
 
     python:
         v2_reply12 = MessageBuilder(aubrey)
@@ -2487,7 +2487,7 @@ label bo_bd:
 
     u "Ugh... alright."
 
-    play sound "sounds/vibrate.mp3"
+    play sound sound.vibrate
 
     python:
         v2_reply13 = MessageBuilder(aubrey)
@@ -2557,7 +2557,7 @@ label bo_bd:
 label csaub:
     scene s156
     with Fade (1,0,1)
-    play sound "sounds/knock.mp3"
+    play sound sound.knock
     pause 1
     play sound "sounds/dooropen.mp3"
 

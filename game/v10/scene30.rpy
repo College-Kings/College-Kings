@@ -184,7 +184,7 @@ label v10_chloe_gym:
 
                 u "I'd run that back on repeat."
 
-                play sound "sounds/kiss.mp3"
+                play sound sound.kiss
 
                 scene v10chg7 # TPP In gym, show Chloe kissing MC
                 with dissolve

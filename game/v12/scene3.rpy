@@ -7,7 +7,7 @@ label v12_penelope_roof:
     scene v12penr1 # TPP Show MC sitting on his bed looking down at his phone, in his hand
     with fade
 
-    play sound "sounds/vibrate.mp3"
+    play sound sound.vibrate
     pause 1
 
     play music "music/v12/Track Scene 3_1.mp3" fadein 2
@@ -354,7 +354,7 @@ label v12_penelope_roof:
                         scene v12penr13 # TPP Show close-up of Penelope giving MC a kiss
                         with dissolve
 
-                        play sound "sounds/kiss.mp3"
+                        play sound sound.kiss
 
                         pause 1.5
 
@@ -442,7 +442,7 @@ label v12_penelope_roof:
                 scene v12penr16 # TPP Outside of Penelope's hotel room, show Penelope kissing MC
                 with dissolve
 
-                play sound "sounds/kiss.mp3"
+                play sound sound.kiss
 
                 pause 1.5
 

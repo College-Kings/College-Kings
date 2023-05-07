@@ -42,7 +42,7 @@ label v9_room_fri_morn:
         scene v9fmr4c # TPP. Same camera as v9fmr4, show MC checking his phone.
         with dissolve
 
-        play sound "sounds/vibrate.mp3"
+        play sound sound.vibrate
 
         $ MessengerService.new_message(lauren, _("Hey, would yould you like to come over to my dorm and help me? I need help with my Deer initiation. They want me to help with the annual charity day event they have."))
         $ MessengerService.add_reply(lauren, _("Sure, OMW!"))
@@ -81,7 +81,7 @@ label v9_room_fri_morn:
         scene v9fmr7 # TPP. Same camera as v9fmr6, show MC checking his phone.
         with dissolve
 
-        play sound "sounds/vibrate.mp3"
+        play sound sound.vibrate
 
         $ MessengerService.new_message(lauren, _("Hey, would yould you like to come over to my dorm and help me? I need help with my Deer initiation. They want me to help with the annual charity day event they have."))
         $ MessengerService.add_reply(lauren, _("Sure, OMW!"))

@@ -108,7 +108,7 @@ label caf_w_aub:
         au "You have a lot going on today?"
 
         if protest:
-            play sound "sounds/call.mp3"
+            play sound sound.call
 
             scene scaf9 # TPP. Show MC and Aubrey, MC has his phone in hand as Autumn is calling him. Aubrey neutral expression, MC neutral expression mouth open.
             with dissolve
@@ -185,7 +185,7 @@ label caf_w_aub:
         au "So you got a lot going on today?"
 
         if protest:
-            play sound "sounds/call.mp3"
+            play sound sound.call
 
             scene scaf9
             with dissolve

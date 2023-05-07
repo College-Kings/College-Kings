@@ -11,7 +11,7 @@ label v13s27:
 
     play music "music/v13/Track Scene 27_1.mp3" fadein 2
 
-    play sound "sounds/vibrate.mp3"
+    play sound sound.vibrate
 
     scene v13s27_1a # TPP. Same as v13s27_1, MC slightly surprised, going to grab his phone, mouth closed
     with dissolve

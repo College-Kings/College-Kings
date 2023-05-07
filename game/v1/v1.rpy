@@ -128,7 +128,7 @@ label starta: #for compatibility only
     
     u "(I better not lose this bag, Julia loves it.)"
 
-    play sound "sounds/vibrate.mp3"
+    play sound sound.vibrate
 
     u "(Huh?)"
     
@@ -873,7 +873,7 @@ label starta: #for compatibility only
             Reply(_("Thanks, Julia :)"), v1_reply4)
         )
 
-    play sound "sounds/vibrate.mp3"
+    play sound sound.vibrate
     
     call screen v1_freeRoam1_1
     with dissolve
@@ -1134,7 +1134,7 @@ label starta: #for compatibility only
 
         scene s55ch3
         with dissolve
-        play sound "sounds/kiss.mp3"
+        play sound sound.kiss
         " "
 
         scene s55ch4
@@ -1238,7 +1238,7 @@ label efra:
     pause 0.75
     
     stop music fadeout 3
-    play sound "sounds/knock.mp3"
+    play sound sound.knock
     
     scene s60
     with dissolve
@@ -1506,7 +1506,7 @@ label efra:
     with Fade(1, 0, 1)
     stop music fadeout 3
 
-    play sound "sounds/knock.mp3"
+    play sound sound.knock
     pause 0.75
 
     scene s66
@@ -1567,7 +1567,7 @@ label efra:
 
     u "Yeah, she should be here any minute."
 
-    play sound "sounds/knock.mp3"
+    play sound sound.knock
 
     scene s68a
     with dissolve
@@ -1776,7 +1776,7 @@ label efra:
     scene s75a
     with hpunch
 
-    play sound "sounds/slap.mp3"
+    play sound sound.slap
     pause 1.5
 
     scene s75b
@@ -2239,7 +2239,7 @@ label at_bd:
             with dissolve
 
             pause 0.3
-            play sound "sounds/slap.mp3"
+            play sound sound.slap
             scene sda60a
             with vpunch
 
@@ -2249,7 +2249,7 @@ label at_bd:
             with dissolve
 
             pause 0.3
-            play sound "sounds/slap.mp3"
+            play sound sound.slap
             scene sda60a
             with vpunch
 
@@ -2259,7 +2259,7 @@ label at_bd:
             with dissolve
 
             pause 0.3
-            play sound "sounds/slap.mp3"
+            play sound sound.slap
             scene sda60a
             with vpunch
 
@@ -2860,7 +2860,7 @@ label aw_bd:
 
                 scene s90
                 with dissolve # kiss
-                play sound "sounds/kiss.mp3"
+                play sound sound.kiss
                 $ grant_achievement("romeo")
 
                 pause
@@ -3010,7 +3010,7 @@ label aw_bd:
     u "I guess..."
 
     stop music fadeout 3
-    play sound "sounds/vibrate.mp3"
+    play sound sound.vibrate
 
     $ MessengerService.new_message(ryan, _("Hey man, it's Ryan.\nThe Apes' rush party is tonight at 9. You're coming, right???"))
     $ MessengerService.add_reply(ryan, _("Alright, but I'll only stay for a few hours."))
@@ -3569,7 +3569,7 @@ label v1_freeRoam2_camp:
 
     else:
         if MessengerService.find_message(lauren, _("Hey :)\nSorry about today.\n\nCan we talk tomorrow?")):
-            play sound "sounds/vibrate.mp3"
+            play sound sound.vibrate
 
             python:
                 v1_reply6 = MessageBuilder(lauren)

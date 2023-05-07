@@ -231,7 +231,7 @@ label v13s13a:
     au "CHEESE!"
     polly "CHEESE!"
 
-    play sound "sounds/capture.mp3"
+    play sound sound.capture
     scene v13s13a_5b
     with flash
 

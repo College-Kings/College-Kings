@@ -22,7 +22,7 @@ label v11_walking_back:
     scene v11wb2 # TPP. Same as v11wb1b, but MC and Charli in a different place on the sidewalk. MC slightly surprised, mouth closed, Charli neutral expression, mouth closed
     with dissolve
 
-    play sound "sounds/vibrate.mp3"
+    play sound sound.vibrate
 
     if is_censored:
         $ MessengerService.new_message(jenny, "gui/censoredPopup/censoredBackground.webp")

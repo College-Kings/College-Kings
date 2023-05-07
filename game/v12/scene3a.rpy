@@ -11,7 +11,7 @@ label v12_penelope_call:
 
     play music "music/v12/Track Scene 3a.mp3" fadein 2
     
-    play sound "sounds/call.mp3"
+    play sound sound.call
 
     scene v12pec1a # TPP. Same as v11pec1, MC slightly startled, mouth closed
     with dissolve

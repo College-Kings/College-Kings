@@ -521,7 +521,7 @@ label v12_riddle_riley:
                     scene v12rrl41 # TPP MC kisses Riley
                     with dissolve
 
-                    play sound "sounds/kiss.mp3"
+                    play sound sound.kiss
 
                     pause 1
 

@@ -320,7 +320,7 @@ label v11_lauren_airport_convo:
 
         la "*Whisper* I'll show you soon."
 
-        play sound "sounds/kiss.mp3"
+        play sound sound.kiss
 
         scene v11laac4 # TPP. Same positioning as v11laac2, but Lauren is kissing MC on the cheek, MC is slightly surprised, mouth closed
         with dissolve

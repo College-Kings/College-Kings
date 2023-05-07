@@ -343,7 +343,7 @@ label v13s12a:
 
             scene v13s12a_6o # TPP. Same as v13s12a_6j, Aubrey kissed MC in the lips
             with dissolve
-            play sound "sounds/kiss.mp3"
+            play sound sound.kiss
 
             pause 1.25
 
@@ -528,7 +528,7 @@ label v13s12a:
 
                 scene v13s12a_14 # TPP. Aubrey kissing MC on the cheek
                 with dissolve
-                play sound "sounds/kiss.mp3"
+                play sound sound.kiss
 
                 pause 1.25
 

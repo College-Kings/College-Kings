@@ -198,7 +198,7 @@ label v12_morning_london:
     scene v12mol9 # TPP. Show the door to the hallway
     with dissolve
 
-    play sound "sounds/knock.mp3"
+    play sound sound.knock
 
     pause 1.25
     
@@ -268,7 +268,7 @@ label v12_morning_london:
             scene v12mol15 # TPP. Show MC giving Chloe a kiss, MC holding his bag
             with dissolve
 
-            play sound "sounds/kiss.mp3"
+            play sound sound.kiss
 
             pause
         

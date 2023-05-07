@@ -312,11 +312,11 @@ label v13s59:
 
                 scene v13s59_7 # TPP. Aubrey and MC romantically kiss
                 with dissolve
-                play sound "sounds/kiss.mp3"
+                play sound sound.kiss
 
                 pause 1.25
 
-                play sound "sounds/lick.mp3"
+                play sound sound.lick
                 scene v13s59_7a # TPP. the cow licks aubrey and the mc's faces, aubrey and mc slight shock, they are both looking at the cow
                 with dissolve
 
