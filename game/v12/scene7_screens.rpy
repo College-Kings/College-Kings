@@ -490,36 +490,37 @@ screen v12s7_left_walkway_front():
     tag free_roam
 
     if v11_pen_goes_europe and penelope not in v12s7_killList:
-        add "images/v12/Scene 7/Screens/Navigation 12a.webp" # Penelope
+        add "v12s7_left_walkway_front_background_a" # Penelope
     else:
-        add "images/v12/Scene 7/Screens/Navigation 12b.webp"
-
+        add "v12s7_left_walkway_front_background_b"
+        
     if v11_pen_goes_europe and penelope not in v12s7_killList:
-        hotspot (223, 326, 752, 656):
+        imagebutton:
+            idle "v12s7_left_walkway_front_penelope_idle"
+            hover "v12s7_left_walkway_front_penelope_hover"
+            pos (223, 327)
             if "penelope" in freeroam9:
                 action Call("v12s7_free_roam_spoken", backgroundImg="v12ferpen1", returnScreen="v12s7_left_walkway_front", seenList=[], victim=penelope)
             else:
                 action Jump("v12s7_penelope1") #penelope
+    
+    imagebutton:
+        idle "v12s7_left_walkway_front_door_idle"
+        hover "v12s7_left_walkway_front_door_hover"
+        action Show("v12s7_foyer")
+        pos (1002, 286)
 
     imagebutton:
-        idle ""
-        hover ""
+        idle "v12s7_left_walkway_front_right_idle"
+        hover "v12s7_left_walkway_front_right_hover"
+        action Show("v12s7_rear_gallery")
+        pos (1711, 73)
         
-
-    imagemap:
-
-        hover "images/v12/Scene 7/Buttons/nav 12.webp"
-
-        if v11_pen_goes_europe and penelope not in v12s7_killList:
-            hotspot (223, 326, 752, 656):
-                if "penelope" in freeroam9:
-                    action Call("v12s7_free_roam_spoken", backgroundImg="v12ferpen1", returnScreen="v12s7_left_walkway_front", seenList=[], victim=penelope)
-                else:
-                    action Jump("v12s7_penelope1") #penelope
-        
-        hotspot (1003, 288, 251, 492) action Show("v12s7_foyer")
-        hotspot (1693, 73, 140, 787) action Show("v12s7_rear_gallery")
-        hotspot (353, 984, 1158, 96) action Show("v12s7_left_walkway_middle")
+    imagebutton:
+        idle "free_roam_vertical_transparent"
+        hover "free_roam_bottom"
+        action Show("v12s7_left_walkway_middle")
+        align (0.5, 1.0)
 
     use v12s7_minimap(location="ld_left_walkway")
 
