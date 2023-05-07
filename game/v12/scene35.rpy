@@ -84,7 +84,7 @@ label v12_chris_nora_room:
 
             scene v12cnr12 # TPP. Show MC knocking on Nora's door, MC slightly worried, mouth open
             with dissolve
-            play sound "sounds/knock.mp3"
+            play sound sound.knock
 
             u "Nora, I... Are you alright?"
 

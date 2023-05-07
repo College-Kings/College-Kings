@@ -211,7 +211,7 @@ label v11_chloe_hotel_room_amber_call:
 
         u "I am too. *Chuckles*"
 
-        play sound "sounds/knock.mp3"
+        play sound sound.knock
 
         pause 0.5
 
@@ -268,7 +268,7 @@ label v11_chloe_hotel_room_amber_call:
 
         u "I was thinking maybe we could-"
 
-        play sound "sounds/knock.mp3"
+        play sound sound.knock
 
         pause 0.5
 

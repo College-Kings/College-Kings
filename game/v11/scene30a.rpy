@@ -19,7 +19,7 @@ label v11_lauren_apology:
 
     pause 0.75
 
-    play sound "sounds/knock.mp3"
+    play sound sound.knock
 
     scene v11laa3 # FPP. MC is looking at the door, he is knocking on the door
     with dissolve

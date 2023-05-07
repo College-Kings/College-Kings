@@ -320,7 +320,7 @@ label v12_nora_robbed:
 
             u "(Amber's tough as nails. Definitely don't wanna be on her bad side. Maybe if I would've gone after the robber I could've been the hero.)"
 
-            play sound "sounds/knock.mp3"
+            play sound sound.knock
             stop music fadeout 3
 
             jump v12_nora_checks_mc #scene 2

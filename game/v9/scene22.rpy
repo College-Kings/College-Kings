@@ -7,7 +7,7 @@ label v9_room_w_sam:
     scene v9rwsa1 # TPP. Show MC's apes door.
     with dissolve
 
-    play sound "sounds/knock.mp3"
+    play sound sound.knock
 
     "*Knock* *Knock*"
 

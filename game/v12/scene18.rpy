@@ -571,7 +571,7 @@ label v12s18_bottlespin:
 
             u "Good, I was hoping you'd say that."
 
-            play sound "sounds/slap.mp3"
+            play sound sound.slap
 
             scene v12slpbs11 # TPP. Show MC slapping Ryan on the face, MC smiling, mouth closed, Ryan in pain, mouth closed
             with vpunch
@@ -612,7 +612,7 @@ label v12s18_bottlespin:
 
             u "Go ahead and slap me dude, I'm not kissing you."
 
-            play sound "sounds/slap.mp3"
+            play sound sound.slap
 
             scene v12slpbs13 # TPP. Show Ryan slapping MC on the face, MC in pain, mouth closed, Ryan smiling, mouth closed
             with vpunch
@@ -913,14 +913,14 @@ label v12s18_bottlespin:
 
     imre "What the fuck is going on? No! I'm not kissing a god damn dude. Especially this ugly motherfuc-"
 
-    play sound "sounds/slap.mp3"
+    play sound sound.slap
 
     scene v12slpbs17 # TPP. Show Ryan slapping Imre, Ryan slightly angry, Imre startled and in pain, both mouths closed
     with dissolve
 
     pause 0.75
 
-    play sound "sounds/slap.mp3"
+    play sound sound.slap
 
     scene v12slpbs17a # TPP. Same as v12slpbs17, Imre slapping Ryan, Ryan in pain, Imre angry, both mouths closed
     with dissolve
@@ -1569,7 +1569,7 @@ label v12s18_bet: # END OF FREE ROAM
 
         u "YOU'RE POSTING IT NOW!?"
 
-        play sound "sounds/knock.mp3"
+        play sound sound.knock
 
         scene v12slpbet6 # FPP. MC looking at the door
         with dissolve
@@ -1667,7 +1667,7 @@ label v12s18_bet: # END OF FREE ROAM
 
         am "Oooo, these are good! Damn..."
 
-        play sound "sounds/knock.mp3"
+        play sound sound.knock
 
         scene v12slpbet6
         with dissolve

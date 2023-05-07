@@ -575,7 +575,7 @@ label v12_chloe_cafe:
     scene v12chc5c 
     with dissolve
 
-    play sound "sounds/vibrate.mp3"
+    play sound sound.vibrate
 
     u "Sorry, let me check this real quick."
 

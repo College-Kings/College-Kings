@@ -14,7 +14,7 @@ label v10_walk_jenny_text:
     scene v10swjt2 # TPP. Show MC stood exactly where he met Penelope, phone in hand.
     with dissolve
 
-    play sound "sounds/vibrate.mp3"
+    play sound sound.vibrate
 
     u "(Phone buzzing, I should get that.)"
 

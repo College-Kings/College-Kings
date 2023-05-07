@@ -8,7 +8,7 @@ label v10_sun_morn:
     if joinwolves:
         scene v10sum1 # TPP. Show MC in his Wolves bed looking up at the ceiling, MC looks tired.
         with fade
-        play sound "sounds/vibrate.mp3"
+        play sound sound.vibrate
 
         pause 1.25
 
@@ -63,7 +63,7 @@ label v10_sun_morn:
             if MessengerService.has_replies(josh) or MessengerService.has_replies(riley):
                 u "(I should check my phone.)"
 
-        play sound "sounds/vibrate.mp3"
+        play sound sound.vibrate
 
         python:
             v10s10_reply1 = MessageBuilder(lindsey)
@@ -111,7 +111,7 @@ label v10_sun_morn:
     else:
         scene v10sum4 # TPP. Show MC in his Apes bed looking up at the ceiling, MC looks tired.
         with fade
-        play sound "sounds/vibrate.mp3"
+        play sound sound.vibrate
 
         pause 1.25
 
@@ -162,7 +162,7 @@ label v10_sun_morn:
             if MessengerService.has_replies(josh) or MessengerService.has_replies(riley):
                 u "(I should check my phone.)"
 
-        play sound "sounds/vibrate.mp3"
+        play sound sound.vibrate
 
         python:
             v10s10_reply1 = MessageBuilder(lindsey)

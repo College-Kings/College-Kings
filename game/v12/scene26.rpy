@@ -102,7 +102,7 @@ label v12_nora_chris_fight:
 
     no "Maybe if you weren't so focused on chasing after the man your daddy was, you'd be your own-"
 
-    play sound "sounds/hs.mp3"
+    play sound sound.hit
     scene v12ncf4e # TPP. Same as v12ncf4, Chris pushing Nora, Chris very angry, mouth closed, Nora losing her balance, mouth closed, scared
     with hpunch
 

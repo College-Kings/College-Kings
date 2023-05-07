@@ -1425,7 +1425,7 @@ label v11_quiz_bonus:
 
         u "(She said she loved me.)"
         
-        play sound "sounds/vibrate.mp3"
+        play sound sound.vibrate
 
         u "(Probably our pictures.)"
 
@@ -1445,7 +1445,7 @@ label v11_quiz_bonus:
 
         u "(Wow, that was really nice.)"
 
-        play sound "sounds/vibrate.mp3"
+        play sound sound.vibrate
 
         u "(Probably our picture.)"
 

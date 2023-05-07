@@ -25,7 +25,7 @@ label v8_cl_start:
     with dissolve
     u "So bad."
 
-    play music "music/msexy.mp3"
+    play music music.ck1.sexy
     scene v8s13 # TPP (lateral shot). Chloe pushing MC (who is sitting) into the bed playfully with one hand
     with hpunch
     cl "Good."
@@ -171,7 +171,7 @@ label v8_cl_start:
 
     $ renpy.end_replay()
 
-    play sound "sounds/knock.mp3"
+    play sound sound.knock
     stop music
 
     scene v8s20c # Same as v8s20b but Chloe shocked, eyes fully open, mouth open

@@ -99,7 +99,7 @@ label v13s61:
     scene v13s61_4a # FPP. Same as v13s61_4, MC looking at door to his room
     with fade
 
-    play sound "sounds/knock.mp3"
+    play sound sound.knock
 
     pause 1.5
 

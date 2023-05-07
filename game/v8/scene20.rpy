@@ -1,21 +1,14 @@
 # SCENE20: ARCADE WITH EMILY
 # Locations: Slot Machine Arcade, Emily's dorm
 # Characters: MC (outfit 2), Emily (outfit 3 or better put together something more skimpier), arcade room employee, two random extras
-# Time: Sunday evening
-
-### Extra audio files needed (coded but commented out for now) ###
-# arcade_amb.mp3 - Arcade room ambience, arcade_win.mp3 - A short arcade game winning sound, arcade_lose.mp3 - A short arcade game losing sound
-
-init python:
-    renpy.music.register_channel("ambience", mixer="sfx", loop=True)
+# Time: Sunday evening    
 
 label emily_arcade:
-    
     $ renpy.music.set_volume(1, channel="ambience")
 
     scene v8arcade1 # TPP. MC walking into the arcade building, Emily can be seen waiting for him inside
     with Fade(0.75, 0.25, 0.75)
-    play ambience "sounds/arcade_amb.mp3" fadein 2
+    play ambience ambience.arcade fadein 2
     pause 1
 
     if CharacterService.is_fwb(emily):

@@ -44,7 +44,7 @@ label v12_paris_hotel:
     scene v12pht3 # FPP. Chris and Imre high five
     with dissolve
 
-    play sound "sounds/ks.mp3"
+    play sound sound.hit
 
     pause 0.75
 

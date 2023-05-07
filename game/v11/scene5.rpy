@@ -11,7 +11,7 @@ label v11_nightclub_with_josh:
     with dissolve
 
     play music "music/v11/Track Scene 4_1.mp3" fadein 2
-    play sound "sounds/vibrate.mp3"
+    play sound sound.vibrate
 
     u "(Let's see who this is.)"
 

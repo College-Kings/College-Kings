@@ -309,7 +309,7 @@ label mc_LarsBodyhookBlock: # MC Body Hooks Lars (Blocks)
 
 label lars_McKickHit: # Lars Kicks MC (Hits/No Block)
 
-    play sound "sounds/ks.mp3"
+    play sound sound.hit
     $ youDamage += 1
     scene Lars_Kick_hit
     with hpunch
@@ -322,7 +322,7 @@ label lars_McKickHit: # Lars Kicks MC (Hits/No Block)
 
 label lars_McKickBlock: # Lars Kicks MC (Blocked)
 
-    play sound "sounds/ks.mp3"
+    play sound sound.hit
     scene Lars_Kick_block
     with hpunch
 
@@ -334,7 +334,7 @@ label lars_McKickBlock: # Lars Kicks MC (Blocked)
 
 label lars_McJabHit: # Lars Kicks MC (Hits/No Block)
 
-    play sound "sounds/js.mp3"
+    play sound sound.hit
     $ youDamage += 1
     scene Lars_Jab_hit
     with hpunch
@@ -349,7 +349,7 @@ label lars_McJabHit: # Lars Kicks MC (Hits/No Block)
 
 label lars_McJabBlock: # Lars Kicks MC (Hits/No Block)
 
-    play sound "sounds/bs.mp3"
+    play sound sound.hit
     scene Lars_Hook_block
     with hpunch
 
@@ -361,7 +361,7 @@ label lars_McJabBlock: # Lars Kicks MC (Hits/No Block)
 
 label lars_McHookHit: # Lars Kicks MC (Hits/No Block)
 
-    play sound "sounds/hs.mp3"
+    play sound sound.hit
     $ youDamage += 1
     scene Lars_Hook_hit
     with hpunch
@@ -376,7 +376,7 @@ label lars_McHookHit: # Lars Kicks MC (Hits/No Block)
 
 label lars_McHookBlock: # Lars Kicks MC (Hits/No Block)
 
-    play sound "sounds/bs.mp3"
+    play sound sound.hit
     scene Lars_Hook_block
     with hpunch
 
@@ -388,7 +388,7 @@ label lars_McHookBlock: # Lars Kicks MC (Hits/No Block)
 
 label lars_McBodyhookHit: # Lars Kicks MC (Hits/No Block)
 
-    play sound "sounds/hs.mp3"
+    play sound sound.hit
     $ youDamage += 1
     scene Lars_BodyJab_hit
     with hpunch
@@ -401,7 +401,7 @@ label lars_McBodyhookHit: # Lars Kicks MC (Hits/No Block)
 
 label lars_McBodyhookBlock: # Lars Kicks MC (Hits/No Block)
 
-    play sound "sounds/bs.mp3"
+    play sound sound.hit
     scene Lars_BodyJab_block
     with hpunch
 

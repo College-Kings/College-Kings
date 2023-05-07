@@ -190,7 +190,7 @@ menu:
         with dissolve
         pause
 
-        play sound "sounds/hs.mp3"
+        play sound sound.hit
 
         scene v9dream12 # TPP. Show MC punching Ryan in the ring. (It should be a weak punch and Ryan isn't too shaken by it)
         with hpunch
@@ -206,7 +206,7 @@ menu:
         with dissolve
         pe "My grandma can hit harder than that! *Laughs*"
 
-        play sound "sounds/hs.mp3"
+        play sound sound.hit
 
         scene v9dream12a # Show Ryan punching MC back very hard
         with hpunch
@@ -244,7 +244,7 @@ menu:
         with dissolve
         pause
 
-        play sound "sounds/hs.mp3"
+        play sound sound.hit
 
         scene v9dream14 # TPP (Use same camera as v9dream12. I used different frame numbering for ease of understanding). Same as v9dream12 but instead of Ryan, it's Caleb
         with hpunch
@@ -260,7 +260,7 @@ menu:
         with dissolve
         pe "My grandma can hit harder than that! *Laughs*"
 
-        play sound "sounds/hs.mp3"
+        play sound sound.hit
 
         scene v9dream14a # Same as v9dream12a but instead of Ryan, it's Caleb
         with hpunch
@@ -436,7 +436,7 @@ menu:
         with dissolve
         pause
 
-        play sound "sounds/hs.mp3"
+        play sound sound.hit
 
         scene v9dream17 # TPP (Use same camera as v9dream12. I used different frame numbering for ease of understanding). Same as v9dream12 but instead of Ryan, it's Imre
         with hpunch
@@ -452,7 +452,7 @@ menu:
         with dissolve
         ri "My grandma can hit harder than that! *Laughs*"
 
-        play sound "sounds/hs.mp3"
+        play sound sound.hit
 
         scene v9dream17a # Same as v9dream12a but instead of Ryan, it's Imre
         with hpunch
@@ -490,7 +490,7 @@ menu:
         with dissolve
         pause
 
-        play sound "sounds/hs.mp3"
+        play sound sound.hit
 
         scene v9dream18 # TPP (Use same camera as v9dream12. I used different frame numbering for ease of understanding). Same as v9dream12 but instead of Ryan, it's Perry
         with hpunch
@@ -506,7 +506,7 @@ menu:
         with dissolve
         ri "My grandma can hit harder than that! *Laughs*"
 
-        play sound "sounds/hs.mp3"
+        play sound sound.hit
 
         scene v9dream18a # Same as v9dream12a but instead of Ryan, it's Perry
         with hpunch

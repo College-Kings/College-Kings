@@ -5,7 +5,7 @@ label v3start:
     with Fade (1,0,1)
 
     stop music fadeout 3
-    play sound "sounds/knock.mp3"
+    play sound sound.knock
 
     u "(Who could that be?)"
 
@@ -1067,7 +1067,7 @@ label conl:
 
             pause 0.5
 
-            play sound "sounds/ks.mp3"
+            play sound sound.hit
 
             scene s240d # you doing complicated kick
             with vpunch
@@ -1107,7 +1107,7 @@ label conl:
 
     pause 0.5
 
-    play sound "sounds/ks.mp3"
+    play sound sound.hit
 
     scene s240a
     with vpunch
@@ -1119,7 +1119,7 @@ label conl:
 
     pause 0.5
 
-    play sound "sounds/ks.mp3"
+    play sound sound.hit
 
     scene s240b
     with vpunch
@@ -1131,7 +1131,7 @@ label conl:
 
     pause 0.5
 
-    play sound "sounds/ks.mp3"
+    play sound sound.hit
 
     scene s240c
     with vpunch
@@ -1314,7 +1314,7 @@ label conl:
 
     imre "It's quite simple. Whenever your opponent leaves his torso open you simply use your left arm to throw a body hook."
 
-    play sound "sounds/ks.mp3"
+    play sound sound.hit
 
     scene s248f # imre hitting punching bag
     with vpunch
@@ -1336,7 +1336,7 @@ label conl:
 
     pause 0.5
 
-    play sound "sounds/ks.mp3"
+    play sound sound.hit
 
     scene s249a
     with vpunch
@@ -1348,7 +1348,7 @@ label conl:
 
     pause 0.5
 
-    play sound "sounds/ks.mp3"
+    play sound sound.hit
 
     scene s249a
     with vpunch
@@ -1372,7 +1372,7 @@ label conl:
 
     u "Yeah, I think I will."
     
-    play sound "sounds/vibrate.mp3"
+    play sound sound.vibrate
 
 
 
@@ -2080,7 +2080,7 @@ label conl:
                 $ sceneList.add("v3_aubrey")
 
                 stop music fadeout 3
-                play music "music/msexy.mp3"
+                play music music.ck1.sexy
 
                 scene aub1
                 pause 1.0
@@ -2700,7 +2700,7 @@ label continueq:
     label de_bd: #for compatibility only
     scene s270
     with fade
-    play sound "sounds/knock.mp3"
+    play sound sound.knock
 
     pause 0.75
     scene s272 # showing you sitting on the side of bed pushing ready to stand up // camera angle to side of bed, looking at you from front
@@ -3133,7 +3133,7 @@ label continueq:
 
         scene s284 # Knocking on lauren's dorm
         with Fade (1,0,1)
-        play sound "sounds/knock.mp3"
+        play sound sound.knock
         pause 1
 
         play sound "sounds/dooropen.mp3"
@@ -3362,7 +3362,7 @@ label continueq:
 
                                 stop music fadeout 3
 
-                                play sound "sounds/slap.mp3"
+                                play sound sound.slap
 
                                 scene s291c # lauren smacks your hand away
                                 with hpunch

@@ -280,7 +280,7 @@ label v10_aft_walk_home:
     scene v10smwh1c
     with dissolve
 
-    play sound "sounds/vibrate.mp3"
+    play sound sound.vibrate
 
     $ MessengerService.new_message(lauren, "Hey, wanna hang out? I have some free time in between study sessions.")
     $ MessengerService.add_reply(lauren, "Sure, on my way")

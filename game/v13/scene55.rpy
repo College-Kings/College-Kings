@@ -165,7 +165,7 @@ label v13s55:
 
         u "*Phone buzzes*"
     
-        play sound "sounds/vibrate.mp3"
+        play sound sound.vibrate
 
         u "One sec, let me check this."
 

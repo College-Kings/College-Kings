@@ -158,7 +158,7 @@ label after_drugs:
     with Fade(1, 0.25, 0.5)
     pause 0.75
 
-    play sound "sounds/knock.mp3"
+    play sound sound.knock
     pause 0.75
 
     scene v8josh21

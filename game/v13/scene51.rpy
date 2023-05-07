@@ -105,7 +105,7 @@ label v13s51_emily_fight:
 
     u "(She's a fucking psycho, I swear!)"
 
-    play sound "sounds/knock.mp3"
+    play sound sound.knock
 
     scene v13s51_6 # TPP. Emily in front of the bathroom door, mad, mouth open (talking through the door).
     with dissolve

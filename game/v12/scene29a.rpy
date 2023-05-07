@@ -841,7 +841,7 @@ label v12_late_night_workout:
     menu:
         "Hard":
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
-            play sound "sounds/ks.mp3"
+            play sound sound.hit
             scene v12lnw25c # TPP Same angle as v12lnw25, MC kicking back at the punching bag, missing, and losing his balance
             with dissolve
 

@@ -21,7 +21,7 @@ label v13s8:
 
     pause 0.75
 
-    play sound "sounds/knock.mp3"
+    play sound sound.knock
 
     scene v13s8_4 # TPP. Show MC knocking on Nora's hotel room door, slight smile, mouth closed
     with dissolve

@@ -12,7 +12,7 @@ label v11_samantha_packing:
     scene v11samp2 # FPP. MC is looking at his room's door, closed
     with dissolve
 
-    play sound "sounds/knock.mp3"
+    play sound sound.knock
     pause 1
 
     play sound "sounds/dooropen.mp3"

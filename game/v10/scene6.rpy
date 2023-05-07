@@ -257,7 +257,7 @@ label v10_mc_vs_ryan_fight:
 
             label ryan_McKickHit: # Ryan Kicks MC (Hits/No Block)
 
-                play sound "sounds/ks.mp3"
+                play sound sound.hit
                 $ youDamage += 1
                 scene Ryan_Kick_hit
                 with hpunch
@@ -270,7 +270,7 @@ label v10_mc_vs_ryan_fight:
 
             label ryan_McKickBlock: # Ryan Kicks MC (Blocked)
 
-                play sound "sounds/ks.mp3"
+                play sound sound.hit
                 scene Ryan_Kick_block
                 with hpunch
 
@@ -282,7 +282,7 @@ label v10_mc_vs_ryan_fight:
 
             label ryan_McJabHit: # Ryan Kicks MC (Hits/No Block)
 
-                play sound "sounds/js.mp3"
+                play sound sound.hit
                 $ youDamage += 1
                 scene Ryan_Jab_hit
                 with hpunch
@@ -297,7 +297,7 @@ label v10_mc_vs_ryan_fight:
 
             label ryan_McJabBlock: # Ryan Kicks MC (Hits/No Block)
 
-                play sound "sounds/bs.mp3"
+                play sound sound.hit
                 scene Ryan_Hook_block
                 with hpunch
 
@@ -309,7 +309,7 @@ label v10_mc_vs_ryan_fight:
 
             label ryan_McHookHit: # Ryan Kicks MC (Hits/No Block)
 
-                play sound "sounds/hs.mp3"
+                play sound sound.hit
                 $ youDamage += 1
                 scene Ryan_Hook_hit
                 with hpunch
@@ -324,7 +324,7 @@ label v10_mc_vs_ryan_fight:
 
             label ryan_McHookBlock: # Ryan Kicks MC (Hits/No Block)
 
-                play sound "sounds/bs.mp3"
+                play sound sound.hit
                 scene Ryan_Hook_block
                 with hpunch
 
@@ -336,7 +336,7 @@ label v10_mc_vs_ryan_fight:
 
             label ryan_McBodyhookHit: # Ryan Kicks MC (Hits/No Block)
 
-                play sound "sounds/hs.mp3"
+                play sound sound.hit
                 $ youDamage += 1
                 scene Ryan_BodyJab_hit
                 with hpunch
@@ -349,7 +349,7 @@ label v10_mc_vs_ryan_fight:
 
             label ryan_McBodyhookBlock: # Ryan Kicks MC (Hits/No Block)
 
-                play sound "sounds/bs.mp3"
+                play sound sound.hit
                 scene Ryan_BodyJab_block
                 with hpunch
 

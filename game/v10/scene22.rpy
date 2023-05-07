@@ -226,7 +226,7 @@ label v10_cafe_w_jenny:
 
                 jen "I may just have to try one at some point."
 
-        play sound "sounds/vibrate.mp3"
+        play sound sound.vibrate
 
         scene v10scwj9 # FPP. Show MC's phone in MC's hand, Camera as if MC is looking down at his phone screen. Use Penelope call texture.
         with dissolve

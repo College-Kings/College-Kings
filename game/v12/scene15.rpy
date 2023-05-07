@@ -393,7 +393,7 @@ label v12_riddle_riley:
     stop music fadeout 3
     play music "music/v12/Track Scene 15_3.mp3" fadein 2
 
-    play sound "sounds/hs.mp3"
+    play sound sound.hit
     scene v12rrl31 # FPP. Riley on the ground, looking hurt, hand on her leg, mouth opened
     with dissolve
 

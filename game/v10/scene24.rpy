@@ -7,7 +7,7 @@ label v10_lauren_room:
     scene v10lar1 # TPP Show MC knocking on Lauren's door.
     with fade
     play music "music/v10/Track Scene 24_1.mp3" fadein 2
-    play sound "sounds/knock.mp3"
+    play sound sound.knock
     
     pause 0.75
     

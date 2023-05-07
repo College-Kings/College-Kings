@@ -198,7 +198,7 @@ label v12_morning_london:
     scene v12mol9 # TPP. Show the door to the hallway
     with dissolve
 
-    play sound "sounds/knock.mp3"
+    play sound sound.knock
 
     pause 1.25
     

@@ -7435,7 +7435,7 @@ label cameron_thurs_tasks:
 
     u "Alright, what's up first?"
 
-    play music "music/m15punk.mp3"
+    play music music.ck1.punk15
     queue music [ "music/m11punk.mp3", "music/m6punk.mp3" ]
 
     scene scc17 # FPP. Close up Cameon, with heavy dute construction glue in hand, grin on face.
@@ -8948,7 +8948,7 @@ label rileysexscene:
 
     scene ridrm2b
     with vpunch
-    play music "music/msexy.mp3"
+    play music music.ck1.sexy
 
     pause 0.5
 

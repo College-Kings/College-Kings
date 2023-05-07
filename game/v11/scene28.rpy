@@ -41,7 +41,7 @@ label v11_ms_rose_sex:
             scene v11ros2c # FPP. Same as v11ros2, show MC knocking on the door
             with dissolve
 
-            play sound "sounds/knock.mp3"
+            play sound sound.knock
 
             pause 0.75
 

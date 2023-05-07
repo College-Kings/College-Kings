@@ -338,7 +338,7 @@ label v12_escape_room:
 
     au "*Chuckles*"
 
-    play sound "sounds/vibrate.mp3"
+    play sound sound.vibrate
     scene v12esr14b # FPP. Same as v12esr14, Lindsey looking at Imre, Lindsey slight smile, mouth open
     with dissolve
 
@@ -384,7 +384,7 @@ label v12_escape_room:
 
     li "Nope, not yet."
 
-    play sound "sounds/vibrate.mp3"
+    play sound sound.vibrate
 
     scene v12esr14c
     with dissolve
@@ -416,7 +416,7 @@ label v12_escape_room:
 
     charli "I wonder if she responds directly to us or if she has a prepared response. Like if I said, \"just so you know, my name is Charli\", would she know my name is Charli?"
 
-    play sound "sounds/vibrate.mp3"
+    play sound sound.vibrate
     scene v12esr14d
     with dissolve
 
@@ -437,7 +437,7 @@ label v12_escape_room:
 
     charli "Well, that proves that they respond directly to us rather than automated responses. I assume it's the guy at the front."
 
-    play sound "sounds/vibrate.mp3"
+    play sound sound.vibrate
     scene v12esr14c
     with dissolve
 
@@ -503,7 +503,7 @@ label v12_escape_room:
 
     charli "*Sighs*"
 
-    play sound "sounds/vibrate.mp3"
+    play sound sound.vibrate
 
     li "Just got another message. It says, \"tell your friends 'bye' because you won't see them for a while. Go into the room across the hall to find out how to help them.\""
 
@@ -557,7 +557,7 @@ label v12_escape_room:
 
     pause 0.75
 
-    play sound "sounds/vibrate.mp3"
+    play sound sound.vibrate
     scene v12esr18b # FPP. Same as v12esr18, Charli looking down at Lindsey's phone, slightly annoyed, mouth open
     with dissolve
 
@@ -588,7 +588,7 @@ label v12_escape_room:
 
     charli "Just forward the messages to us."
 
-    play sound "sounds/vibrate.mp3"
+    play sound sound.vibrate
 
     scene v12esr18
     with dissolve

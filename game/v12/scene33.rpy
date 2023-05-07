@@ -351,7 +351,7 @@ label v12s33:
 
     scene v12s33_19a # same as 19, the man masseuse cracks Imre's back hard with his elbow-
     with dissolve
-    play sound "sounds/hs.mp3"
+    play sound sound.hit
 
     "*Crack*"
 
@@ -414,7 +414,7 @@ label v12s33:
 
     scene v12s33_21a # same as 21, the man masseuse cracks Mr. Lee's back hard with his elbow just as he did Imre-
     with dissolve
-    play sound "sounds/hs.mp3"
+    play sound sound.hit
 
     "*Crack*"
 
@@ -439,7 +439,7 @@ label v12s33:
 
     scene v12s33_21b #same as 21 # -the man masseuse cracks Mr. Lee's neck in one direction-
     with dissolve
-    play sound "sounds/js.mp3"
+    play sound sound.hit
 
     "*Crack*"
 
@@ -450,7 +450,7 @@ label v12s33:
     scene v12s33_21c #  same as 21b, He snaps Mr. Lee's neck again in the opposite direction-
     with dissolve
     
-    play sound "sounds/hs.mp3"
+    play sound sound.hit
     "*Crack*"
 
     lee "HOOO! Oh wow, that feels... amazing!"
