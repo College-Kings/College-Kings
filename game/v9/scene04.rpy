@@ -10,7 +10,7 @@
 
 label v9_dream:
 play music "music/v9/Track Scene 4.mp3" fadein 2
-play sound "sounds/swoosh.mp3"
+play sound sound.swoosh
 
 scene v9dream1 # TPP (camera from the front so the void is not fully visible yet). MC standing near an open door (as if he just entered it) behind which there is the black void, nervous, mouth closed
 with dissolve

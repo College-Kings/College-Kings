@@ -352,7 +352,7 @@ label v13s37_nora:
 
         menu:
             "Kiss her forehead":
-                play sound "sounds/kiss.mp3"
+                play sound sound.kiss
                 scene v13s37no_7 # TPP. Show MC kissing Nora's forehead, Nora slight smile, mouth closed
                 with dissolve
 
@@ -371,7 +371,7 @@ label v13s37_nora:
             "Kiss her lips":
                 $ v13_imre_disloyal = True
 
-                play sound "sounds/kiss.mp3"
+                play sound sound.kiss
                 scene v13s37no_8 # TPP. MC and Nora kissing
                 with dissolve
 

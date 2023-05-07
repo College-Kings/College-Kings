@@ -12,7 +12,7 @@ label v10_call_with_lauren1:
     
     with fade
 
-    play sound "sounds/call.mp3"
+    play sound sound.call
     
     pause 1
 

@@ -361,7 +361,7 @@ label v11_wolves_packing_chris:
 
             u "(THAT. WAS. ROUGH.)"
 
-            play sound "sounds/call.mp3"
+            play sound sound.call
             pause 2.25
 
         "Don't let him":
@@ -400,7 +400,7 @@ label v11_wolves_packing_chris:
             scene v10swpc2
             with dissolve
 
-            play sound "sounds/call.mp3"
+            play sound sound.call
             pause 2.25
         
     stop music fadeout 3

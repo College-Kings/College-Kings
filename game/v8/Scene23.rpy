@@ -10,7 +10,7 @@ label josh_calls_you:
 
         pause 0.5
 
-        play sound "sounds/call.mp3"
+        play sound sound.call
 
         scene v8sjc2 # TPP. Show MC's phone ringing on his bed, it's Josh on the caller ID.
         with dissolve
@@ -84,7 +84,7 @@ label josh_calls_you:
 
         pause 0.5
 
-        play sound "sounds/call.mp3"
+        play sound sound.call
 
         scene v8sjc8 # TPP. Show MC's phone ringing on his bed, it's Josh on the caller ID.
         with dissolve

@@ -523,7 +523,7 @@ label v12_valentine:
 
     bishop "Wonderful, now do either of you-"
 
-    play sound "sounds/call.mp3"
+    play sound sound.call
 
     scene v12val24a # FPP. Same as v12val24, bishop looking at Chris, bishop startled, Chris looking at his phone, worried, mouth open, Nora looking at Chris, Nora angry, mouth closed
     with dissolve
@@ -841,7 +841,7 @@ label v12_valentine:
                 scene v12val35 # TPP. Show MC kissing Nora's cheek, Nora slight smile, blushing, mouth closed
                 with dissolve
 
-                play sound "sounds/kiss.mp3"
+                play sound sound.kiss
 
                 pause 1.25
 

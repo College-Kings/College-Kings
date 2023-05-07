@@ -114,7 +114,7 @@ label v11_chloe_bathroom:
 
     pause 0.75
 
-    play sound "sounds/kiss.mp3"
+    play sound sound.kiss
 
     scene v11chb9 # TPP. Show MC and Chloe making out in the room
     with dissolve
@@ -186,7 +186,7 @@ label v11_chloe_bathroom:
             if CharacterService.is_fwb(chloe) or CharacterService.is_girlfriend(chloe):
                 scene v11chb12b # TPP. Same as v11chb12a, MC and Chloe kissing (just a peck on the lips)
                 with dissolve
-                play sound "sounds/kiss.mp3"
+                play sound sound.kiss
 
                 pause 0.75
             

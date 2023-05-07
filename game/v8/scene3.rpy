@@ -258,7 +258,7 @@ label v8s3_rileyDoggy:
 
     scene v8s33_2 # TPP. Close up of MC and Riley kissing from top
     with dissolve
-    play sound "sounds/kiss.mp3"
+    play sound sound.kiss
     pause 0.5
 
     scene v8s33a
@@ -306,7 +306,7 @@ label v8s3_rileyDoggy:
 label v8s3_nsfwSkipLabel1:
     scene v8s33_2
     with dissolve
-    play sound "sounds/kiss.mp3"
+    play sound sound.kiss
     pause 0.5
 
     scene v8s32a # MC on his back and Riley leaning over on him and sleeping
@@ -392,7 +392,7 @@ label v8s3_nsfwSkipLabel1:
     with dissolve
     pause 0.5
 
-    play sound "sounds/kiss.mp3"
+    play sound sound.kiss
 
     scene v8s36a # Riley gives a quick peck on MC's lips
     with dissolve

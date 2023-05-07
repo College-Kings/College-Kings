@@ -20,7 +20,7 @@ label v10_lauren_room:
         scene v10lar1a # TPP Same angle as v10lar1: MC and Lauren kiss at her door
         with dissolve
 
-        play sound "sounds/kiss.mp3"
+        play sound sound.kiss
 
         pause 0.75
 
@@ -602,7 +602,7 @@ label v10_lauren_room:
         scene v10lar1a
         with fade
 
-        play sound "sounds/kiss.mp3"
+        play sound sound.kiss
         
         pause 1
 

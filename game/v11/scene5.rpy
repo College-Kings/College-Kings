@@ -1007,7 +1007,7 @@ label v11s5_galleryScene:
 
     u "Oh fuck!"
 
-    play sound "sounds/slam.mp3"
+    play sound sound.slam
 
     scene v11swc26a # FPP Same angle as v11swc26, Dennis kicking in bedroom door, looking angry with mouth open
     with dissolve

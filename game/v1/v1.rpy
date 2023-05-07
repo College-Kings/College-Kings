@@ -1134,7 +1134,7 @@ label starta: #for compatibility only
 
         scene s55ch3
         with dissolve
-        play sound "sounds/kiss.mp3"
+        play sound sound.kiss
         " "
 
         scene s55ch4
@@ -2860,7 +2860,7 @@ label aw_bd:
 
                 scene s90
                 with dissolve # kiss
-                play sound "sounds/kiss.mp3"
+                play sound sound.kiss
                 $ grant_achievement("romeo")
 
                 pause

@@ -230,14 +230,14 @@ label v13s12b:
     if CharacterService.is_dating(penelope):
         scene v13s12b_6j # TPP. Same as v13s12b_6b, Penelope kissing MC on the lips
         with dissolve
-        play sound "sounds/kiss.mp3"
+        play sound sound.kiss
 
         pause 1.5
     
     else:
         scene v13s12b_6k # TPP. Same as v13s12b_6j, Penelope kissing MC on the cheek
         with dissolve
-        play sound "sounds/kiss.mp3"
+        play sound sound.kiss
         pause 1
 
     scene v13s12b_6b

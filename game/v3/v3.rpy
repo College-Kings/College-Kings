@@ -103,7 +103,7 @@ label v3start:
     scene s204d # chloe kissing you on the cheek
     with dissolve
 
-    play sound "sounds/kiss.mp3"
+    play sound sound.kiss
     pause 0.5
 
     scene s204c
@@ -463,7 +463,7 @@ label conl:
     scene s213 # chloe opening the gym door
     with dissolve
 
-    play sound "sounds/lock.mp3"
+    play sound sound.lock
 
     pause 1.0
 
@@ -770,7 +770,7 @@ label conl:
     with Fade (2,0,2)
 
     pause 0.5
-    play sound "sounds/swoosh.mp3"
+    play sound sound.swoosh
     pause 0.5
 
     show fantasyoverlay onlayer foreground
@@ -828,7 +828,7 @@ label conl:
     scene s228a # your door at night
     with hpunch ## GLITCH TRANSITION
 
-    play sound "sounds/doorbell.mp3"
+    play sound sound.doorbell
 
     pause 1
 
@@ -888,7 +888,7 @@ label conl:
 
     u "NO! This is wrong. Just get out! Leave me alone!"
 
-    play sound "sounds/swoosh.mp3"
+    play sound sound.swoosh
 
     stop music fadeout 3
 
@@ -1445,7 +1445,7 @@ label conl:
 
                 stop sound
 
-                play sound "sounds/thud.mp3"
+                play sound sound.thud
 
                 scene s253c
                 with dissolve
@@ -1638,7 +1638,7 @@ label conl:
 
                 stop sound
 
-                play sound "sounds/thud.mp3"
+                play sound sound.thud
 
                 scene s253c
                 with dissolve
@@ -1894,7 +1894,7 @@ label conl:
 
         stop sound
 
-        play sound "sounds/thud.mp3"
+        play sound sound.thud
 
         scene s253c
         with dissolve
@@ -2422,7 +2422,7 @@ label acream:
 
     au "Yeah, I need to get back to studying as well..."
 
-    play sound "sounds/kiss.mp3"
+    play sound sound.kiss
 
     scene s263 # kiss
     with dissolve
@@ -2593,7 +2593,7 @@ label continueq:
 
     pause 0.5
 
-    play sound "sounds/call.mp3"
+    play sound sound.call
 
     scene s270a2
     with dissolve
@@ -3068,7 +3068,7 @@ label continueq:
 
                     show rikiss2
                     pause 1
-                    play sound "sounds/kiss.mp3"
+                    play sound sound.kiss
 
                     $ grant_achievement("lips_dont_lie")
                         
@@ -3561,7 +3561,7 @@ label dk_ad:
 label continues: # This is after the date
     play music "music/horror2.mp3"
 
-    play sound "sounds/call.mp3"
+    play sound sound.call
 
     scene s294 # phone on table unknown number
     with dissolve

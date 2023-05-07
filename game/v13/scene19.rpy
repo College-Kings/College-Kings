@@ -133,7 +133,7 @@ label v13s19:
 
     scene v13s19_8 # TPP. Show Riley kissing MC on the cheek
     with dissolve
-    play sound "sounds/kiss.mp3"
+    play sound sound.kiss
     
     pause 2
 

@@ -114,7 +114,7 @@ label after_drugs:
     with dissolve
     u "(I should call Amber and tell her what happened.)"
 
-    play sound "sounds/calling.mp3"
+    play sound sound.calling
 
     scene v8josh22a # MC holding the phone to his face, looking somewhat upset, mouth closed
     with dissolve
@@ -276,7 +276,7 @@ label after_drugs:
             with dissolve
             u "(What is she up to?)"
 
-            play sound "sounds/flush.mp3"
+            play sound sound.flush
             pause 0.75
 
             scene v8josh27a # Amber walking towards the couch to sit beside MC, looking at him neutral expression. MC neutral expression, mouth open

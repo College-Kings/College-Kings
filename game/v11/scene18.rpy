@@ -28,7 +28,7 @@ label v11_msrose_convo:
 
             pause 0.75
 
-            play sound "sounds/kiss.mp3"
+            play sound sound.kiss
 
             scene v11roc2b # TPP. Same as v11roc2a, MC and Ms Rose are now kissing, MC keeps his hand on Ms Rose's chin and on the wall
             with dissolve
@@ -48,7 +48,7 @@ label v11_msrose_convo:
             scene v11roc5 # TPP. MC and Ms Rose are making out again, MC has his hands on her waist, pulling her close
             with dissolve
 
-            play sound "sounds/kiss.mp3"
+            play sound sound.kiss
 
             pause 0.75
 

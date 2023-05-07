@@ -890,7 +890,7 @@ label v12_lindsey_kiss_or_not:
             scene v12esr30 # TPP. Show MC and Lindsey kissing
             with dissolve
 
-            play sound "sounds/kiss.mp3"
+            play sound sound.kiss
 
             pause 1.5
 

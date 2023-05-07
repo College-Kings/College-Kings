@@ -496,7 +496,7 @@ label v12s18_bottlespin:
     scene v12slpbs9 # TPP. Show Imre and Lindsey having a peck on the lips
     with dissolve
 
-    play sound "sounds/kiss.mp3"
+    play sound sound.kiss
 
     pause 1.5
 
@@ -671,7 +671,7 @@ label v12s18_bottlespin:
 
     scene v12slpbs14 # TPP. Show Chris and Chloe kissing (try and make it look a bit passionate)
     with dissolve
-    play sound "sounds/kiss.mp3"
+    play sound sound.kiss
 
     pause 1.5
 
@@ -697,7 +697,7 @@ label v12s18_bottlespin:
 
     scene v12slpbs15 # TPP. Show Chris and Nora kissing
     with dissolve
-    play sound "sounds/kiss.mp3"
+    play sound sound.kiss
 
     pause 1.5
 
@@ -731,7 +731,7 @@ label v12s18_bottlespin:
 
     imre "That was cruel."
 
-    play sound "sounds/call.mp3"
+    play sound sound.call
 
     scene v12slpbs12d # FPP. Same as v12slpbs12b, Chris looking down at his pocket, worried, mouth closed
     with dissolve
@@ -852,14 +852,14 @@ label v12s18_bottlespin:
     if v8_nora_likes_mc:
         scene v12slpbs16 # TPP. Show Nora grabbing MC's face and kissing him (try and make this a bit passionate)
         with dissolve
-        play sound "sounds/kiss.mp3"
+        play sound sound.kiss
 
         pause 2.25
     
     else:
         scene v12slpbs16a # TPP. Same as v12slpbs16, less passionate of a kiss 
         with dissolve
-        play sound "sounds/kiss.mp3"
+        play sound sound.kiss
 
         pause 1
 
@@ -981,7 +981,7 @@ label v12s18_bottlespin:
     scene v12slpbs20 # TPP. Show Aubrey and Chloe kissing (Try and make it look hot)
     with dissolve
 
-    play sound "sounds/kiss.mp3"
+    play sound sound.kiss
 
     pause 1.75
 
@@ -1030,7 +1030,7 @@ label v12s18_bottlespin:
     scene v12slpbs22 # TPP. Show Nora and Chloe sharing a quick peck on the lips
     with dissolve
 
-    play sound "sounds/kiss.mp3"
+    play sound sound.kiss
 
     pause 1.25
     

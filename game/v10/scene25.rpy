@@ -228,7 +228,7 @@ label v10_ms_rose_fight:
 
             pause 1
 
-            play sound "sounds/kiss.mp3"
+            play sound sound.kiss
 
             scene v10msf6 # FPP. Show Close up of Ms. Rose and MC kissing.
             with dissolve

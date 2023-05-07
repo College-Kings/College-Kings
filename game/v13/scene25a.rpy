@@ -250,7 +250,7 @@ label v13s25a:
 
             kourt "I could have gotten over your age, you know."
 
-            play sound "sounds/kiss.mp3"
+            play sound sound.kiss
             scene v13s25a_8 # TPP. Kourtney pulls Mc's face towards her, and she kisses MC on the cheek
             with dissolve
 

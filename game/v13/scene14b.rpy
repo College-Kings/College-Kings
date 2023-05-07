@@ -290,7 +290,7 @@ label v13s14b:
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
             u "I may just let you..."
 
-            play sound "sounds/kiss.mp3"
+            play sound sound.kiss
             scene v13s14b_15a # TPP Same angle as 15, Penelope kissing and nibbling MC's neck
             with dissolve
 

@@ -1058,7 +1058,7 @@ label v11_race_continue3:
             scene v11cam45 # TPP. Show Amber kissing MC, he is surprised
             with dissolve
 
-            play sound "sounds/kiss.mp3"
+            play sound sound.kiss
 
             pause 1.25
 

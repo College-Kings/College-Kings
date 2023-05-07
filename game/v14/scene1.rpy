@@ -353,7 +353,7 @@ label v14s01:
 
             ri "*Laughs* I call that a job well done."
 
-            play sound "sounds/kiss.mp3"
+            play sound sound.kiss
 
             scene v14s01_11f # FPP. Same as v14s01_11d, Aubrey and Riley kissing
             with dissolve

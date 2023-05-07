@@ -41,7 +41,7 @@ label v13s52a:
 
     cl "*Chuckles* You're so cute."
 
-    play sound "sounds/kiss.mp3"
+    play sound sound.kiss
     scene v13s52a_2 # TPP. Chloe kisses MC who is still laying in bed
     with dissolve
 

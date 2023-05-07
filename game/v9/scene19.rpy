@@ -630,7 +630,7 @@ label v9_lau_dorm_kiss:
     scene v9lau17 # TPP. Show Lauren and MC kissing.
     with dissolve
 
-    play sound "sounds/kiss.mp3"
+    play sound sound.kiss
 
     pause 1
 
