@@ -50,7 +50,6 @@ label v10_mc_vs_imre_fight:
 
     imre "Ready to get your ass kicked?"
 
-    # TODO: Update Imre fight
     menu:
         "Fight Imre":
             $ v10_imre_fight = True
@@ -100,7 +99,7 @@ label v10_mc_vs_imre_fight:
             label imre_McAttack:
                 $ stance = 2 # Defence
 
-                show screen fight_overlay(stance="defend") # TODO: Update fight code
+                show screen fight_overlay(stance="defend")
 
                 # Imre hook
                 if imreAttack == 1:
@@ -405,7 +404,7 @@ label v10_mc_vs_imre_fight:
             label imre_fightEnd:
                 hide screen imreFight_MCAttack
                 hide screen imreFight_MCDefend
-                hide screen fight_overlay # TODO: Update fight code
+                hide screen fight_overlay
                 $ youDamage = 0
                 $ stance = 0
                 stop music fadeout 3

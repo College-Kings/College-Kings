@@ -125,7 +125,6 @@ label int_deal_w_josh:
     scene v8sdd10 # TPP. Show Joe running at Josh with the Pipe looking angry, Lars readying for a fight with MC.
     with dissolve
 
-    # TODO: Update Lars Fight
     call screen confirm(_("Would you like to play the fighting tutorial?"),
         yes_action=[SetVariable("fight_tutorial", True), Call("fight_tutorialLabel")],
         no_action=[SetVariable("fight_tutorial", False), Return()])
@@ -163,7 +162,7 @@ label int_deal_w_josh:
 label lars_McAttack:
     $ stance = 2
 
-    show screen fight_overlay(stance="defend") # TODO: Update fight code
+    show screen fight_overlay(stance="defend")
     
     # Lars hook
     if larsAttack == 1:
@@ -458,7 +457,7 @@ label mc_larsAttack:
 label mc_larsFightEnd: # MC wins fight against Lars
     hide screen s28_larsMcAttack
     hide screen s28_mcLarsAttack
-    hide screen fight_overlay # TODO: Update fight code
+    hide screen fight_overlay
     $ youDamage = 0
     $ stance = 0
     $ s28_fightWinner = "MC"
@@ -468,7 +467,7 @@ label mc_larsFightEnd: # MC wins fight against Lars
 label lars_McFightEnd: # MC loses fight against Lars
     hide screen s28_larsMcAttack
     hide screen s28_mcLarsAttack
-    hide screen fight_overlay # TODO: Update fight code
+    hide screen fight_overlay
     $ youDamage = 0
     $ stance = 0
     $ s28_fightWinner = "Lars"

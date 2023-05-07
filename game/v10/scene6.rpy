@@ -61,7 +61,6 @@ label v10_mc_vs_ryan_fight:
 
     ry "You ready to do this?"
 
-    # TODO: Update ryan fight
     menu:
         "Fight Ryan":
             $ v10_ryan_fight = True
@@ -110,7 +109,7 @@ label v10_mc_vs_ryan_fight:
             label ryan_McAttack:
                 $ stance = 2 # Defence
 
-                show screen fight_overlay(stance="defend") # TODO: Update fight code
+                show screen fight_overlay(stance="defend")
 
                 # Ryan hook
                 if ryanAttack == 1:
@@ -415,7 +414,7 @@ label v10_mc_vs_ryan_fight:
             label ryan_fightEnd:
                 hide screen ryanFight_MCAttack
                 hide screen ryanFight_MCDefend
-                hide screen fight_overlay # TODO: Update fight code
+                hide screen fight_overlay
                 $ youDamage = 0
                 $ stance = 0
                 stop music fadeout 3
