@@ -466,7 +466,7 @@ label v13s46:
 
             pause 0.75
 
-            play sound "sounds/twig.mp3"
+            play sound sound.twig
             scene v13s46_16 # FPP. show just laurens foot stepping on a branch
             with dissolve
 

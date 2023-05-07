@@ -118,7 +118,7 @@ label caf_w_aub:
             scene scaf9a # TPP. Same camera as scaf9a, Show MC walking away from the table now on the phone, MC mouth closed. Aubrey neutral expression mouth open.
             with dissolve
             stop sound
-            play sound "sounds/answercall.mp3"
+            play sound sound.answer_call
             au "Okay."
 
             jump au_prot_call
@@ -196,7 +196,7 @@ label caf_w_aub:
             with dissolve
             
             stop sound
-            play sound "sounds/answercall.mp3"
+            play sound sound.answer_call
             au "Okay."
 
             jump au_prot_call

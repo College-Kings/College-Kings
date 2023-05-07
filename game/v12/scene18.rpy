@@ -776,7 +776,7 @@ label v12s18_bottlespin:
 
     stop sound
 
-    play sound "sounds/answercall.mp3"
+    play sound sound.answer_call
     scene v12slpbs12e # FPP. Same as v12slpbs12b, Chris talking on his phone, worried, mouth open
     with dissolve
 

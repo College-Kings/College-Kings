@@ -757,7 +757,7 @@ label v11_carriage_ride:
     with dissolve
 
     pause 0.75
-    play sound "sounds/fall.mp3"
+    play sound sound.fall
 
     scene v11car18 # TPP. Show Nora and Chloe on the ground, both angry, mouths closed
     with vpunch

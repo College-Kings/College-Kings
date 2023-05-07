@@ -30,7 +30,7 @@ label v10_call_with_lauren1:
     with dissolve
     
     stop sound
-    play sound "sounds/answercall.mp3"
+    play sound sound.answer_call
 
     u "Hello?"
 
@@ -708,7 +708,7 @@ label v10_call_with_lauren1:
 
             u "I actually love Halloween, but I-"
 
-    play sound "sounds/twig.mp3"
+    play sound sound.twig
 
     label v10s15_c3:
     if joinwolves:

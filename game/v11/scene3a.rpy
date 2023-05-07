@@ -19,7 +19,7 @@ label v11_wolves_packing_chris:
 
     ch "Hey man, saw you come home. You usually aren't here around this time and everyone else is out. What are you up to?"
 
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
 
     scene v10swpc2b # FPP. Same camera as v10swpc2. Show a closer shot of Chris after walking in to talk w/ MC. Smiling, mouth closed.
     with dissolve
@@ -354,7 +354,7 @@ label v11_wolves_packing_chris:
 
             pause 0.75
 
-            play sound "sounds/doorclose.mp3"
+            play sound sound.door_close
 
             scene v10swpc2
             with dissolve
@@ -395,7 +395,7 @@ label v11_wolves_packing_chris:
 
             pause 0.75
 
-            play sound "sounds/doorclose.mp3"
+            play sound sound.door_close
 
             scene v10swpc2
             with dissolve

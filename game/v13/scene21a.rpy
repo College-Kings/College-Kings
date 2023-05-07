@@ -188,7 +188,7 @@ label v13s21a:
 
     scene v13s21a_20 # TPP. Mr. Lee pins Charli's wrists to the ground, Mr Lee ontop of Charli, Charli very scared, both mouths closed
     with vpunch
-    play sound "sounds/fall.mp3"
+    play sound sound.fall
 
     pause 0.75
 

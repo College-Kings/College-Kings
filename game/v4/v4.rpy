@@ -240,7 +240,7 @@ label v4start:
 
     pause 0.5
 
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
 
     scene s301 # Showing you from the back looking over your shoulder in front of open door with Riley standing outside sad
     with dissolve
@@ -522,7 +522,7 @@ label v4start:
         scene s312a # Tip of Julias car pulling in, same frame as before
         with fade
 
-        play sound "sounds/carbrake.mp3"
+        play sound sound.car_brake
 
         pause 0.5
 
@@ -531,7 +531,7 @@ label v4start:
 
         pause 0.5
 
-        play sound "sounds/cardooropen.mp3"
+        play sound sound.car_door_open
         scene s314a # Julia getting out of the car
         with dissolve
 
@@ -2203,7 +2203,7 @@ label continueab:
 
     pause 0.5
 
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
 
     scene s353a # josh opens door
     with dissolve
@@ -2505,7 +2505,7 @@ label continueab:
 
     pause 0.5
 
-    play sound "sounds/fall.mp3"
+    play sound sound.fall
 
     scene jomon3b
     with vpunch
@@ -2619,12 +2619,12 @@ label continueab:
 
     pause 0.5
 
-    play sound "sounds/cup.mp3"
+    play sound sound.cup
     scene jomon10 # cups on table # cups hits table sound
     with Dissolve (1)
 
     pause 0.5
-    play sound "sounds/cup.mp3"
+    play sound sound.cup
     scene jomon11 # cups on table # cups hits table sound
     with Dissolve (1)
 
@@ -2690,7 +2690,7 @@ label continueab:
                     $ reputation.add_point(RepComponent.TROUBLEMAKER)
                     $ CharacterService.set_relationship(amber, Relationship.KISSED)
 
-                    play sound "sounds/spit.mp3"
+                    play sound sound.spit
 
                     scene jomon15a # spits out lemon
                     with dissolve
@@ -2702,7 +2702,7 @@ label continueab:
 
                     pause 1.0
 
-                    play sound "sounds/phonealarm.mp3"
+                    play sound sound.phone_alarm
 
                     "*Phone alarm goes off*"
 
@@ -2714,14 +2714,14 @@ label continueab:
                 "Don't kiss her":
                     $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
-                    play sound "sounds/spit.mp3"
+                    play sound sound.spit
 
                     scene jomon15a # spits out lemon
                     with dissolve
 
                     u "*Spits*"
 
-                    play sound "sounds/phonealarm.mp3"
+                    play sound sound.phone_alarm
 
                     scene jomon15c # you pull away and look down
                     with dissolve
@@ -2756,7 +2756,7 @@ label continueab:
                 "Kiss her":
                     $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
-                    play sound "sounds/spit.mp3"
+                    play sound sound.spit
 
                     scene jomon17a # spits out lemon
                     with dissolve
@@ -2771,7 +2771,7 @@ label continueab:
                     scene jomon17b2
                     with dissolve
 
-                    play sound "sounds/phonealarm.mp3"
+                    play sound sound.phone_alarm
 
                     "*Phone alarm goes off*"
 
@@ -2783,14 +2783,14 @@ label continueab:
                 "Don't kiss her":
                     $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
-                    play sound "sounds/spit.mp3"
+                    play sound sound.spit
 
                     scene jomon17a # spits out lemon
                     with dissolve
 
                     u "*Spits*"
 
-                    play sound "sounds/phonealarm.mp3"
+                    play sound sound.phone_alarm
 
                     scene jomon17c # you look down at your phone
                     with dissolve
@@ -2827,7 +2827,7 @@ label continueab:
 
     "*Knock knock knock*"
 
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
 
     play music "music/msad2.mp3"
 
@@ -2958,7 +2958,7 @@ label continueab:
 
     u "HNGGGG!"
 
-    play sound "sounds/facepunch1.mp3"
+    play sound sound.hit
 
     scene s372a # you punch the wall
     with vpunch

@@ -208,7 +208,7 @@ label sun_aft_grayson:
 
     pause 0.5
 
-    play sound "sounds/doorclose.mp3"
+    play sound sound.door_close
 
     scene v8sahs15 # FPP. Close up Cameron, Cameron looking really angry, mouth closed.
     with dissolve
@@ -270,7 +270,7 @@ label sun_aft_cameron:
 
     pause 0.5
 
-    play sound "sounds/doorclose.mp3"
+    play sound sound.door_close
     stop music
 
     scene v8sahs15b # FPP. Same camera as v8sahs15, Cameron neutral expression, mouth closed.

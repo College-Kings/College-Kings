@@ -46,7 +46,7 @@ label v11_hotel_room:
             with dissolve
 
             u "1..."
-            play sound "sounds/fall.mp3"
+            play sound sound.fall
 
             scene s593 # Mc and Lauren on the ground terrified
             with vpunch
@@ -74,7 +74,7 @@ label v11_hotel_room:
             with dissolve
 
             u "1..."
-            play sound "sounds/fall.mp3"
+            play sound sound.fall
 
             scene s595 # Mc and Riley on the ground terrified
             with vpunch

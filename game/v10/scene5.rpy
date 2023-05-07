@@ -54,7 +54,7 @@ label v10_imre_vs_caleb_fight:
     scene v10ivc9b # TPP. Same as ivc9, Caleb now knocked out on the floor, Imre stood over him with a saractic smile.
     with dissolve
 
-    play sound "sounds/fall.mp3"
+    play sound sound.fall
 
     pause 1
 

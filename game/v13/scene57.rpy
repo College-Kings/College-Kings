@@ -45,7 +45,7 @@ label v13s57:
     scene v13s57a_2b
     with dissolve
 
-    play sound "sounds/rejectcall.mp3"
+    play sound sound.reject_call
 
     u "Is she on the way?"
 

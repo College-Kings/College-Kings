@@ -31,7 +31,7 @@ label v12_penelope_call:
             with dissolve
 
             stop sound
-            play sound "sounds/answercall.mp3"
+            play sound sound.answer_call
 
             pause 0.75
 
@@ -212,7 +212,7 @@ label v12_penelope_call:
             scene v12pec2c # FPP. Same as v12pec2a, show MC clicking to end the call
             with dissolve
 
-            play sound "sounds/rejectcall.mp3"
+            play sound sound.reject_call
             pause 0.75
             stop music fadeout 3
 
@@ -224,7 +224,7 @@ label v12_penelope_call:
             with dissolve
 
             stop sound
-            play sound "sounds/rejectcall.mp3"
+            play sound sound.reject_call
 
             u "(If it's serious she'll call again or leave a message.)"
 

@@ -11,7 +11,7 @@ label v11_room_aubrey_shopping:
 
         pause 0.75
 
-        play sound "sounds/twig.mp3"
+        play sound sound.twig
 
         scene v11auw2 # TPP. Show a pebble hitting the room's window
         with dissolve
@@ -31,7 +31,7 @@ label v11_room_aubrey_shopping:
 
         pause 0.75
 
-        play sound "sounds/twig.mp3"
+        play sound sound.twig
 
         scene v11auw2 # TPP. Show a pebble hitting the room's window
         with dissolve

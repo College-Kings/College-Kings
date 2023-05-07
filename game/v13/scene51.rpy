@@ -93,7 +93,7 @@ label v13s51_emily_fight:
 
     pause 0.75
 
-    play sound "sounds/dooropen.mp3" 
+    play sound sound.door_open 
 
     scene v13s51_4 # TPP. MC pushing open the door to the bathroom (entering the bathroom).
     with dissolve
@@ -117,7 +117,7 @@ label v13s51_emily_fight:
 
     u "(muffled) Emily, go chill somewhere and leave me alone."
 
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
     
     scene v13s51_6b # TPP. Emily with both arms extended out, both hands shoving open the bathroom door, mad, mouth closed.
     with dissolve

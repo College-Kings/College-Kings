@@ -267,7 +267,7 @@ label v11_big_ben:
     u "I'm pretty sure you-"
 
     # Big Ben rings very loudly
-    play sound "sounds/bells.mp3"
+    play sound sound.bells
     scene v11bb9 # Show MC looking shocked, Nora looking at him, smiling with mouth closed
     with dissolve
 

@@ -91,7 +91,7 @@ label v11_apes_manhunt:
 
     pause 0.5
 
-    play sound "sounds/fall.mp3"
+    play sound sound.fall
 
     scene v11amh9c # FPP. Same as v11amh9a, now Cameron is throwing Caleb to the ground (Caleb is on the ground at this point), Cameron is angry, Caleb is startled, both mouths closed
     with dissolve
@@ -133,7 +133,7 @@ label v11_apes_manhunt:
 
     pause 0.5
 
-    play sound "sounds/fall.mp3"
+    play sound sound.fall
 
     scene v11amh9c 
     with dissolve
@@ -185,7 +185,7 @@ label v11_apes_manhunt:
 
             pause 0.5
 
-            play sound "sounds/fall.mp3"
+            play sound sound.fall
             scene v11amh11 # FPP. MC is lying on the ground looking up at Cameron, Cameron looking down at MC, Cameron is angry, mouth open
             with vpunch
 
@@ -351,7 +351,7 @@ label v11_apes_manhunt:
 
             pause 0.75
 
-            play sound "sounds/fall.mp3"
+            play sound sound.fall
             scene v11amh23a # TPP. Same cam as v11amh23, Show Grayson slamming MC to the ground, MC is startled, Grayson is laughing
             with vpunch
 
@@ -548,7 +548,7 @@ label v11_apes_manhunt:
 
                                     pause 0.75
 
-                                    play sound "sounds/fall.mp3"
+                                    play sound sound.fall
                                     scene v11amh32a # FPP. Same cam as v11amh32, but Ryan is now on the ground, Cameron is looking down on him, Cameron is laughing
                                     with dissolve
 
@@ -564,7 +564,7 @@ label v11_apes_manhunt:
 
                                     pause 0.5
 
-                                    play sound "sounds/fall.mp3"
+                                    play sound sound.fall
                                     scene v11amh23a
                                     with vpunch
 
@@ -599,7 +599,7 @@ label v11_apes_manhunt:
 
                                     pause 0.75
 
-                                    play sound "sounds/fall.mp3"
+                                    play sound sound.fall
                                     scene v11amh32a
                                     with dissolve
 
@@ -630,7 +630,7 @@ label v11_apes_manhunt:
 
                                     pause 0.5
 
-                                    play sound "sounds/fall.mp3"
+                                    play sound sound.fall
                                     scene v11amh23a
                                     with vpunch
 
@@ -719,7 +719,7 @@ label v11_apes_manhunt:
 
                             pause 0.5
 
-                            play sound "sounds/fall.mp3"
+                            play sound sound.fall
                             scene v11amh39b # FPP. Same cam as v11amh39, Caleb is on the ground, Grayson and Cameron are chest bumping, Grayson smiling, mouth open, Cameron smiling, mouth closed
                             with dissolve
 
@@ -765,7 +765,7 @@ label v11_apes_manhunt:
 
                             pause 0.5
 
-                            play sound "sounds/fall.mp3"
+                            play sound sound.fall
                             scene v11amh23a
                             with vpunch
 
@@ -854,7 +854,7 @@ label v11_apes_manhunt:
 
                     pause 0.5
 
-                    play sound "sounds/fall.mp3"
+                    play sound sound.fall
                     scene v11amh39b 
                     with dissolve
 
@@ -900,7 +900,7 @@ label v11_apes_manhunt:
 
                     pause 0.5
 
-                    play sound "sounds/fall.mp3"
+                    play sound sound.fall
                     scene v11amh23a
                     with vpunch
 
@@ -1042,7 +1042,7 @@ label v11_apes_manhunt:
                     scene v11amh44c # FPP. Same as v11amh44, the horse is kicking Cameron right in the chest, Cameron mouth closed, startled expression
                     with dissolve
 
-                    play sound "sounds/facepunch1.mp3"
+                    play sound sound.hit
                     pause 0.75
 
                     scene v11amh44d # FPP. Same as v11amh44, Cameron is on the ground, mouth closed, he is in pain
@@ -1101,7 +1101,7 @@ label v11_apes_manhunt:
 
                     scene v11amh51c # TPP. Same as v11amh51, but now MC is on the ground, the horse is running away, MC is in pain, mouth closed
                     with vpunch
-                    play sound "sounds/fall.mp3"
+                    play sound sound.fall
 
                     pause 1
 
@@ -1143,7 +1143,7 @@ label v11_horse_fall:
 
     pause 0.75
 
-    play sound "sounds/fall.mp3"
+    play sound sound.fall
     scene v11amh51c
     with vpunch
 
@@ -1197,7 +1197,7 @@ label v11_mc_horse_room:
     scene v11amh53a # TPP. Same cam as v11amh53, MC drops into his bed (similar to s95 in v1)
     with dissolve
 
-    play sound "sounds/impactbed.mp3"
+    play sound sound.impact_bed
 
     pause 1
 

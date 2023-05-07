@@ -21,7 +21,7 @@ label v11_ms_rose_sex:
 
             scene v11ros2a # FPP. Same as v11ros2, MC is grabbing the door handle
             with dissolve
-            play sound "sounds/dooropen.mp3"
+            play sound sound.door_open
 
             pause 0.75
 
@@ -306,7 +306,7 @@ label v11_ms_rose_sex_sg:
     scene v11ros20 # TPP. Show MC slosing the door behind him
     with dissolve
 
-    play sound "sounds/doorclose.mp3"
+    play sound sound.door_close
 
     $ renpy.end_replay()
 

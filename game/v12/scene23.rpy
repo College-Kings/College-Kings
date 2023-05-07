@@ -451,7 +451,7 @@ label v12_ms_rose_sex: #can only get here if joinwolves
                 scene black
                 with dissolve
 
-                play sound "sounds/dooropen.mp3"
+                play sound sound.door_open
 
                 pause
 

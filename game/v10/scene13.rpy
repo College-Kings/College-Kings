@@ -9,7 +9,7 @@ label v10_wolves_redec:
         scene v10swhr1 # TPP. Show MC walking through the front door of the Wolves house.
         with Fade(1, 0, 1)
 
-        play sound "sounds/dooropen.mp3"
+        play sound sound.door_open
 
     else:
         scene v10swhr8 # TPP. Show MC walking down the stairs of the Wolves house.

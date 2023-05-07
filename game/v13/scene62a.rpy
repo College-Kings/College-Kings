@@ -4,7 +4,7 @@
 # Time: Night
 
 label v13s62a:
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
 
     scene v13s62a_1 # FPP. Lindsey walking into the hotel room, sexy expression, mouth closed
     with dissolve

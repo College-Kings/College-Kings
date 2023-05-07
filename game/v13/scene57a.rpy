@@ -68,7 +68,7 @@ label v13s57a:
     scene v13s57a_2b
     with dissolve
 
-    play sound "sounds/rejectcall.mp3"
+    play sound sound.reject_call
 
     pause 0.75
 

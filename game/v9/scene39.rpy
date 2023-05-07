@@ -252,7 +252,7 @@ label v9_hang_w_linds:
                     scene v9hwl9 # TPP. Show MC lying on Lindsey's bed looking at Lindsey, both smiling.
                     with dissolve
 
-                    play sound "sounds/phonealarm.mp3"
+                    play sound sound.phone_alarm
 
                     "*Phone alarm goes off*"
 

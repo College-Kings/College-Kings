@@ -727,7 +727,7 @@ label v11_nightclub_with_josh:
 
             scene v11swc16a # TPP Same angle as v11swc16, Show Dennis punching MC
             with dissolve
-            play sound "sounds/facepunch1.mp3"
+            play sound sound.hit
 
             pause 0.75
             

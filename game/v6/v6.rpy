@@ -65,7 +65,7 @@ label imrecona: # Find Imre
 
     scene s443 # you entering dorm
     with fade
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
     pause 0.5
 
     scene s444 # Imre packing his bag
@@ -471,7 +471,7 @@ label imrecond: # Meet Chloe
 
     pause 0.5
 
-    play sound "sounds/splash2.mp3"
+    play sound sound.splash2
     scene s457e2 # chloe moves a bit away and splashes wateer
     with vpunch
 
@@ -598,7 +598,7 @@ label imrecond: # Meet Chloe
 
     cl "Yeah, haha. Bye."
 
-    play sound "sounds/rejectcall.mp3"
+    play sound sound.reject_call
 
     scene s463 # mc sitting on the side of the pool with a towel as Chloe walks back to him with towel, mc looking at the water
     with dissolve
@@ -743,7 +743,7 @@ label imrecond: # Meet Chloe
 
                     cl "Exactly."
 
-                    play sound "sounds/twig.mp3"
+                    play sound sound.twig
 
                     scene s469b # both girls look in your direction but not directly at you
                     with dissolve
@@ -833,7 +833,7 @@ label imrecond: # Meet Chloe
 
 # opening the room of your dorm after not choosing Imre, if imre mad, find a note of him moved out, if = False, he's gone and you call imre and he tells you that ADAM wasnt in his dorm, you have the same talk as if you had visited him over the phone
 label fs_bd:
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
     scene s476 # you Entering your dorm room # cant look inside yet
     with Fade (1,0,1)
 
@@ -939,7 +939,7 @@ label fs_bd:
 
         u "Yeah, bye."
 
-        play sound "sounds/rejectcall.mp3"
+        play sound sound.reject_call
 
 label continuebb:
     scene s482 # transition slide from your dorm, you doing something
@@ -1103,7 +1103,7 @@ label continuebd:
             scene clocka
             with fade
 
-            play sound "sounds/clock2.mp3"
+            play sound sound.clock2
 
             pause (0.5)
 
@@ -1190,7 +1190,7 @@ label continuebd:
             scene clocka
             with fade
 
-            play sound "sounds/clock2.mp3"
+            play sound sound.clock2
 
             pause (0.5)
 
@@ -1291,7 +1291,7 @@ label continuebd:
             scene clocka
             with fade
 
-            play sound "sounds/clock2.mp3"
+            play sound sound.clock2
 
             pause (0.5)
 
@@ -1397,7 +1397,7 @@ label continuebd:
         scene clocka
         with fade
 
-        play sound "sounds/clock2.mp3"
+        play sound sound.clock2
 
         pause (0.5)
 
@@ -1531,14 +1531,14 @@ label continuebd:
     scene s498 #FIRST PERSON:  Ryan opens a door, perspective so you can't look inside much
     with dissolve
 
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
 
     ry "In here."
 
     scene s499 #FIRST PERSON: Graysons inside the small, dark room ,sitting on a chair,
     with dissolve
 
-    play sound "sounds/doorclose.mp3"
+    play sound sound.door_close
 
     u "What the fuck is this?!"
 
@@ -2027,7 +2027,7 @@ label continuebd:
 
                 ev "I'm sure you'll find someone else, good bye."
 
-                play sound "sounds/rejectcall.mp3"
+                play sound sound.reject_call
 
                 "*Evelyn hangs up*"
 
@@ -2090,7 +2090,7 @@ label continuebd:
 
                 ev "Yes..."
 
-                play sound "sounds/rejectcall.mp3"
+                play sound sound.reject_call
 
                 "*Evelyn hangs up*"
 
@@ -2120,11 +2120,11 @@ label continuebd:
         play sound sound.swoosh
         scene s388e #you press lever
         with flash
-        play sound "sounds/lever.mp3"
+        play sound sound.lever
 
         pause 0.5
 
-        play sound "sounds/splat.mp3"
+        play sound sound.splat
 
         scene s390a # your face full of blood
         with vpunch
@@ -2196,7 +2196,7 @@ label continuebd:
     menu:
         "Accept call":
             stop sound
-            play sound "sounds/answercall.mp3"
+            play sound sound.answer_call
             $ reputation.add_point(RepComponent.BOYFRIEND)
 
             # aceept call sound
@@ -2258,7 +2258,7 @@ label continuebd:
                         scene s531d # mc looks at phone, away from ear
                         with dissolve
 
-                        play sound "sounds/rejectcall.mp3"
+                        play sound sound.reject_call
 
                         "*You hang up*"
 
@@ -2342,7 +2342,7 @@ label continuebd:
                         scene s531d # mc looks at phone, away from ear
                         with dissolve
 
-                        play sound "sounds/rejectcall.mp3"
+                        play sound sound.reject_call
 
                         "*You hang up*"
 
@@ -2379,7 +2379,7 @@ label continuebd:
                 scene s531d # mc looks at phone, away from ear
                 with dissolve
 
-                play sound "sounds/rejectcall.mp3"
+                play sound sound.reject_call
 
                 "*You hang up*"
 
@@ -2453,13 +2453,13 @@ label continuebd:
 
         "Reject call":
             stop sound
-            play sound "sounds/rejectcall.mp3"
+            play sound sound.reject_call
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             scene s531d
             with dissolve
 
-            play sound "sounds/rejectcall.mp3"
+            play sound sound.reject_call
 
             pause 0.5
 
@@ -3028,7 +3028,7 @@ label fy_bd: # not gone to Emily's
         u "(I really hope Imre comes back at some point.)"
 
     else:
-        play sound "sounds/dooropen.mp3"
+        play sound sound.door_open
 
         scene s540a
         with dissolve
@@ -3741,7 +3741,7 @@ label fy_bd: # not gone to Emily's
 
     scene s567 # Close Up: Aubrey opens the door
     with dissolve
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
 
     au "Heyy."
 
@@ -3788,7 +3788,7 @@ label fy_bd: # not gone to Emily's
 
     scene s570a # you toast
     with dissolve
-    play sound "sounds/toast.mp3"
+    play sound sound.toast
 
     u "Cheers."
 
@@ -5056,7 +5056,7 @@ label afteraubrey:
             with dissolve
 
             unknown "1..."
-            play sound "sounds/fall.mp3"
+            play sound sound.fall
 
             scene s593 # Mc and Lauren on the ground terrified
             with vpunch
@@ -5079,7 +5079,7 @@ label afteraubrey:
             with dissolve
 
             unknown "1..."
-            play sound "sounds/fall.mp3"
+            play sound sound.fall
 
             scene s595 # Mc and Riley on the ground terrified
             with vpunch
@@ -5471,7 +5471,7 @@ label wakeupa:
 
     stop sound
 
-    play sound "sounds/answercall.mp3"
+    play sound sound.answer_call
 
     play music "music/mindie1.mp3"
 
@@ -6316,7 +6316,7 @@ label wakeupa:
         with dissolve
 
         pause 0.5
-        play sound "sounds/strike.mp3"
+        play sound sound.strike
         scene s641 # hits 7 or so pins
         with vpunch
 
@@ -6432,7 +6432,7 @@ label wakeupa:
 
         pause 0.5
 
-        play sound "sounds/strike.mp3"
+        play sound sound.strike
 
         scene s651 # all pins knocked down
         with vpunch
@@ -10403,7 +10403,7 @@ label upstairsamber: # upstairs with amber
 
     am "Hold up."
 
-    play sound "sounds/answercall.mp3"
+    play sound sound.answer_call
 
     scene sufr3am2h # amber on phone mouth open serious
     with dissolve

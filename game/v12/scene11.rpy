@@ -412,7 +412,7 @@ label v12_paris_hotel:
 
     scene v12pht12 # TPP. MC at his hotel door
     with dissolve
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
 
     pause 0.75
     stop music fadeout 3

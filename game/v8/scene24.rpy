@@ -100,13 +100,13 @@ label josh_room:
             with dissolve
             u "Josh, c'mon man..."
 
-            play sound "sounds/dooropen.mp3"
+            play sound sound.door_open
 
             scene v8josh5a # Josh opened the door and storming into his room. MC's hand still in air (as if Josh jerked his shoulder to get rid of MC's hand)
             with dissolve
             pause 0.5
 
-            play sound "sounds/doorclose.mp3"
+            play sound sound.door_close
 
             scene v8josh5b # Josh went inside, door closed. MC's hand no longer in air
             with hpunch

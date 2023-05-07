@@ -98,7 +98,7 @@ label v13s19:
 
         u "(Luuk?)"
 
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
     scene v13s19_6b # TPP. Same as v13s19_6, Riley opening the door, both slight smiles, mouths closed
     with dissolve
 

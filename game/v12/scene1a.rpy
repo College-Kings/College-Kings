@@ -36,7 +36,7 @@ label v12_chase_robber:
 
             scene v12car6 # TPP Show MC getting hit on the back of the head
             with dissolve
-            play sound "sounds/facepunch1.mp3"
+            play sound sound.hit
 
             pause 0.3
             scene v12car7 # TPP Show MC laying on the ground in the alley, face down, trying to catch himself
@@ -82,13 +82,13 @@ label v12_chase_robber:
 
                     pause 0.75
                     
-                    play sound "sounds/facepunch1.mp3"
+                    play sound sound.hit
                     scene v12car0
                     with hpunch
                     
                     pause 0.5
                     
-                    play sound "sounds/facepunch1.mp3"
+                    play sound sound.hit
                     scene v12car00
                     with vpunch
                     
@@ -100,7 +100,7 @@ label v12_chase_robber:
                         scene v12car12a # TPP Same angle as v12car12, show MC getting punched in the mouth by the robber
                         with hpunch
 
-                        play sound "sounds/facepunch1.mp3"
+                        play sound sound.hit
 
                         pause 0.75
 
@@ -309,7 +309,7 @@ label v12_chase_robber:
                 $ reputation.add_point(RepComponent.TROUBLEMAKER)
                 scene v12car16b # TPP Same angle as v12car16, show MC kicking robber
                 with dissolve
-                play sound "sounds/facepunch1.mp3"
+                play sound sound.hit
 
 
                 u "Bitch!"

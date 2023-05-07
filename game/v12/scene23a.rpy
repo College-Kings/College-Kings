@@ -7,7 +7,7 @@ label v12_mc_chilling:
     if not v11_riley_roomate:
         scene v12mor1 # TPP. MC leaving riley's room
         with fade 
-        play sound "sounds/doorclose.mp3"
+        play sound sound.door_close
 
         pause 0.75
 
@@ -20,7 +20,7 @@ label v12_mc_chilling:
 
         scene v12mor3 # TPP. MC arriving on his room
         with dissolve
-        play sound "sounds/dooropen.mp3"
+        play sound sound.door_open
 
         pause 1
 
@@ -480,7 +480,7 @@ label v12_mc_chilling:
 
                 scene v12mor24 # TPP. MC with the phone to his ear, mouth closed
                 with dissolve
-                play sound "sounds/answercall.mp3"
+                play sound sound.answer_call
 
                 pause 0.75
 
@@ -561,7 +561,7 @@ label v12_mc_chilling:
 
                 scene v12mor24e # TPP. MC puts his phone away, slight smile
                 with dissolve
-                play sound "sounds/rejectcall.mp3"
+                play sound sound.reject_call
 
                 pause 0.75
 
@@ -598,7 +598,7 @@ label v12_mc_chilling:
         scene v12mor24a
         with dissolve
         stop sound
-        play sound "sounds/answercall.mp3"
+        play sound sound.answer_call
 
         u "Hello?"
 
@@ -747,7 +747,7 @@ label v12_mc_chilling:
 
         sa "*Drunk* Forget my number, you stupid fuckboy!"
 
-        play sound "sounds/rejectcall.mp3"
+        play sound sound.reject_call
 
         scene v12mor24b
         with dissolve
@@ -776,7 +776,7 @@ label v12_mc_chilling:
 
                 u "(*Sighs* He should know that she's drunk.)"
 
-                play sound "sounds/answercall.mp3"
+                play sound sound.answer_call
 
                 pause 0.75
                 scene v12mor25

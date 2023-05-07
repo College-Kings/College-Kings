@@ -514,7 +514,7 @@ label v12_game_roommate:
 
             scene v12grm11 # FPP. MC on the floor, looking up at Chloe who is sitting on her bed, Chloe slight smile, mouth open
             with vpunch
-            play sound "sounds/fall.mp3"
+            play sound sound.fall
 
             cl "Oh my god, are you okay?! *Chuckles?*"
 

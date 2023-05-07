@@ -191,7 +191,7 @@ label v8_cl_start:
     with dissolve
     pause 0.5
 
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
 
     scene v8s22 # TPP (behind Chloe). Chloe opened the door. She's shocked and talking. Lindsey on other side of the door, crying really bad, mouth closed. MC behind Chloe. Focus on Lindsey
     with dissolve
@@ -218,7 +218,7 @@ label v8s2_nsfwSkipLabel1:
     with dissolve
     pause 1
 
-    play sound "sounds/doorclose.mp3"
+    play sound sound.door_close
 
     scene v8s22d # Door closed and nobody in the shot
     with dissolve
@@ -232,7 +232,7 @@ label v8s2_nsfwSkipLabel1:
     with Dissolve(1.5)
     pause 1
 
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
 
     scene v8s23a # Chloe opened the door and walking in with a sad, sorry face
     with Dissolve(0.5)

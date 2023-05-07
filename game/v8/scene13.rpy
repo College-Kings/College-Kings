@@ -85,7 +85,7 @@ label phn_chloe11_done:
     with dissolve
     pause 0.5
 
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
 
     scene v8apes25a # Door open now. Grayson is standing there with his hands behind his back (He's holding two beer bottles). He's in a party mood, smiling and mouth closed
     with dissolve

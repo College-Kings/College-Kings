@@ -76,7 +76,7 @@ label v13s60:
 
     scene v13s60_6 # TPP. Close up of MC hitting his head on the ground, worried expression, mouth closed.
     with vpunch
-    play sound "sounds/fall.mp3"
+    play sound sound.fall
 
     pause
 

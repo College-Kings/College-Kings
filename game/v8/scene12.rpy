@@ -440,7 +440,7 @@ label after_apes_ranking:
         with dissolve
         u "Heh. Glad to have made it in. I don't know how I'd have reacted if I lost either."
 
-        play sound "sounds/toast.mp3"
+        play sound sound.toast
 
         scene v8apes20d # Cameron and MC cheers toasting their beers. Cameron talking
         with Dissolve(0.3)
