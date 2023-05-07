@@ -256,7 +256,7 @@ label v1_tomShoutBack:
 
     scene tompush
     pause 0.7
-    play sound "sounds/push.mp3"
+    play sound sound.push
     scene push12
     with vpunch
 
@@ -441,7 +441,7 @@ label tomFightStart:
 
             scene youfinishmovie
             $ renpy.pause(1)
-            play sound "sounds/fall.mp3"
+            play sound sound.fall
             $ stance = 0
             $ youDamage = 0
             scene youfinish
@@ -466,7 +466,7 @@ label tomFightStart:
 
             scene tomfinishmovie
             $ renpy.pause(1)
-            play sound "sounds/fall.mp3"
+            play sound sound.fall
             $ stance = 0
             $ youDamage = 0
             scene tomfinish
@@ -494,7 +494,7 @@ label tomFightStart:
 
             scene tomfinishmovie
             $ renpy.pause(1)
-            play sound "sounds/fall.mp3"
+            play sound sound.fall
             $ stance = 0
             $ youDamage = 0
             scene tomfinish
@@ -523,7 +523,7 @@ label tomFightStart:
 
             scene youfinishmovie
             $ renpy.pause(1)
-            play sound "sounds/fall.mp3"
+            play sound sound.fall
             $ stance = 0
             $ youDamage = 0
             scene youfinish
@@ -552,7 +552,7 @@ label tomFightStart:
 
             scene tomfinishmovie
             $ renpy.pause(1)
-            play sound "sounds/fall.mp3"
+            play sound sound.fall
             $ stance = 0
             $ youDamage = 0
             scene tomfinish
@@ -579,7 +579,7 @@ label tomFightStart:
 
             scene tomfinishmovie
             $ renpy.pause(1)
-            play sound "sounds/fall.mp3"
+            play sound sound.fall
             $ stance = 0
             $ youDamage = 0
             scene tomfinish
@@ -608,7 +608,7 @@ label tomFightStart:
 
             scene youfinishmovie
             $ renpy.pause(1)
-            play sound "sounds/fall.mp3"
+            play sound sound.fall
             $ stance = 0
             $ youDamage = 0
             scene youfinish
@@ -640,7 +640,7 @@ label tomFightStart:
 
             scene tomfinishmovie
             $ renpy.pause(1)
-            play sound "sounds/fall.mp3"
+            play sound sound.fall
             $ stance = 0
             $ youDamage = 0
             scene tomfinish
@@ -669,7 +669,7 @@ label tomFightStart:
             scene tomfinishmovie
             $ renpy.pause(1)
 
-            play sound "sounds/fall.mp3"
+            play sound sound.fall
             $ stance = 0
             $ youDamage = 0
             scene tomfinish
@@ -1599,7 +1599,7 @@ label history2:
     scene clocka
     with fade
 
-    play sound "sounds/clock2.mp3"
+    play sound sound.clock2
 
     pause (0.5)
 
@@ -1976,7 +1976,7 @@ label bo_ad:
 
     label bq_bd: #for compatibility only
     stop ambience
-    play sound "sounds/busstop.mp3"
+    play sound sound.bus_stop
 
     hide s145c
     hide s145f
@@ -2557,7 +2557,7 @@ label csaub:
     with Fade (1,0,1)
     play sound sound.knock
     pause 1
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
 
     scene s157
     with dissolve
@@ -2579,7 +2579,7 @@ label csaub:
 
     no "You're welcome."
 
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
 
 # door open sound
     scene s157d # aubrey appears

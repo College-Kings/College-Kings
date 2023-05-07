@@ -35,7 +35,7 @@ label phn_penelope6_done:
     scene v8rose1a
     u "Come in!"
 
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
     scene v8rose2 # FPP. Chris walks in and is now standing somewhere near MC's bed. Serious expression, mouth open
     with dissolve
     ch "Hey man, you busy?"
@@ -278,7 +278,7 @@ label phn_penelope6_done:
     with vpunch
     u "One moment."
 
-    play sound "sounds/answercall.mp3"
+    play sound sound.answer_call
 
     scene v8rose15a # TPP. MC moves to a side away from the convo with Rose and Chris to take a call. He's holding the phone to his head, neutral expression, mouth open
     with dissolve
@@ -318,7 +318,7 @@ label phn_penelope6_done:
         with dissolve
         u "Sure, bye."
 
-    play sound "sounds/answercall.mp3"
+    play sound sound.answer_call
 
     scene v8rose5d
     with dissolve

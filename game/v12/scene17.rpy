@@ -482,7 +482,7 @@ label v12_escape_room:
 
     unknown "Three."
 
-    play sound "sounds/lever.mp3"
+    play sound sound.lever
     scene v12esr17d # FPP. Same as v12esr17c, Imre, Aubrey and Charli outside, door closed, all slightly surprised, mouths closed
     with vpunch
 
@@ -1259,7 +1259,7 @@ label v12_after_sex:
     stop music fadeout 3
     play music "music/v12/Track Scene 17_5.mp3" fadein 2
 
-    play sound "sounds/lever.mp3"
+    play sound sound.lever
 
     scene v12esr17i # FPP. Same as v12esr17, lights dim
     with dissolve

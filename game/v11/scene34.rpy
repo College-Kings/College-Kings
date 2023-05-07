@@ -110,7 +110,7 @@ label v11_cardealership:
     scene v11cd8 # TPP. Shows the car arriving at the front door
     with dissolve
 
-    play sound "sounds/carbrake.mp3"
+    play sound sound.car_brake
 
     pause 1.75
 
@@ -243,7 +243,7 @@ label v11_cardealership:
     scene v11cd20 # TPP. MC and chloe inside the car, smiling, looking forwards in london steets location a (artist decides location)
     with dissolve
 
-    play sound "sounds/driving1.mp3"
+    play ambience ambience.driving
 
     pause 0.75
     
@@ -474,7 +474,7 @@ label v11_cardealership:
 
                             u "Wow... c'mon, let's get this car back."
 
-                            play sound "sounds/driving1.mp3"
+                            play ambience ambience.driving
 
                             scene v11cd28 # TPP. MC and chloe inside the car, smiling, looking forwards in london steets location d
                             with dissolve
@@ -518,7 +518,7 @@ label v11_cardealership:
 
                             u "C'mon, let's get this car back."
 
-                            play sound "sounds/driving1.mp3"
+                            play ambience ambience.driving
 
                             scene v11cd28 # TPP. MC and chloe inside the car, smiling, looking forwards in london steets location d
                             with dissolve
@@ -536,7 +536,7 @@ label v11_cardealership:
 
                         u "C'mon, let's get this car back."
 
-                        play sound "sounds/driving1.mp3"
+                        play ambience ambience.driving
 
                         scene v11cd28 # TPP. MC and chloe inside the car, smiling, looking forwards in london steets location d
                         with dissolve
@@ -610,7 +610,7 @@ label v11_cardealership:
 
                 pause 0.75
 
-                play sound "sounds/driving1.mp3"
+                play ambience ambience.driving
 
                 scene v11cd28 # TPP. MC and chloe inside the car, smiling, looking forwards in london steets location d
                 with dissolve
@@ -682,7 +682,7 @@ label v11_cardealership:
 
         pause 1
 
-        play sound "sounds/driving1.mp3"
+        play ambience ambience.driving
 
         scene v11cd28 # TPP. MC and chloe inside the car, smiling, looking forwards in london steets location d
         with dissolve

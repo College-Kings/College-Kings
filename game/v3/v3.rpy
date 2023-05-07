@@ -116,7 +116,7 @@ label v3start:
     scene s205 # Imre coming into the room
     with Fade (1,0,1)
 
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
 
     pause 0.5
 
@@ -384,7 +384,7 @@ label conl:
     scene clock2
     with fade
 
-    play sound "sounds/clock2.mp3"
+    play sound sound.clock2
 
     pause (0.5)
 
@@ -553,45 +553,45 @@ label conl:
 
     scene s217 # chloe behind volleyball net
     with fade
-    play sound "sounds/volley3.mp3"
+    play sound sound.volley3
 
     scene s217f
     with dissolve
-    play sound "sounds/volley1.mp3"
+    play sound sound.volley1
 
     pause 0.5
 
     scene s217a
     with dissolve
-    play sound "sounds/volley2.mp3"
+    play sound sound.volley2
 
     pause 0.5
 
     scene s217e
     with dissolve
 
-    play sound "sounds/volley4.mp3"
+    play sound sound.volley4
 
     pause 0.5
 
     scene s217c
     with dissolve
 
-    play sound "sounds/volley3.mp3"
+    play sound sound.volley3
 
     pause 0.5
 
     scene s217d
     with dissolve
 
-    play sound "sounds/volley1.mp3"
+    play sound sound.volley1
 
     pause 0.5
 
     scene s217b
     with dissolve
 
-    play sound "sounds/volley2.mp3"
+    play sound sound.volley2
 
     ############ volleyball scene with sounds
 
@@ -607,7 +607,7 @@ label conl:
             scene s218a # you hitting the volleyball
             with vpunch
 
-            play sound "sounds/volleyhit.mp3"
+            play sound sound.volley_hit
 
             pause 0.5
 
@@ -616,7 +616,7 @@ label conl:
             scene s218b # ball hitting the floor next to chloe
             with dissolve
 
-            play sound "sounds/volleyimp.mp3"
+            play sound sound.volley_hit
 
             pause 0.5
 
@@ -636,7 +636,7 @@ label conl:
 
             scene s218c # you missing the ball
             with vpunch
-            play sound "sounds/volleyhit.mp3"
+            play sound sound.volley_hit
 
             pause 0.5
 
@@ -680,7 +680,7 @@ label conl:
 
     stop music fadeout 3
 
-    play sound "sounds/olddoor.mp3"
+    play sound sound.old_door
 
     # Door sound
 
@@ -719,7 +719,7 @@ label conl:
 
     pause 0.5
 
-    play sound "sounds/switch.mp3"
+    play sound sound.switch
     scene s223c # security out, lights off
 
     pause 0.75
@@ -819,7 +819,7 @@ label conl:
     pause 0.5
 
     show glitch
-    play sound "sounds/glitch.mp3"
+    play sound sound.glitch
 
     pause 0.1
 
@@ -842,7 +842,7 @@ label conl:
 
     pause 1
 
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
     scene s230 # you open door and i's emily at night crying
     with dissolve
 
@@ -854,7 +854,7 @@ label conl:
     em "[name], I did something bad."
 
     show glitch
-    play sound "sounds/glitch.mp3"
+    play sound sound.glitch
 
     pause 0.1
 
@@ -1082,7 +1082,7 @@ label conl:
             scene s240e # you on the floor
             with vpunch
 
-            play sound "sounds/fall.mp3"
+            play sound sound.fall
 
             pause 0.5
 
@@ -1431,7 +1431,7 @@ label conl:
 
                 pause 0.5
 
-                play sound "sounds/leaves.mp3"
+                play sound sound.leaves
 
                 scene s253a
                 with dissolve
@@ -1624,7 +1624,7 @@ label conl:
 
                 pause 0.5
 
-                play sound "sounds/leaves.mp3"
+                play sound sound.leaves
 
                 scene s253a
                 with dissolve
@@ -1880,7 +1880,7 @@ label conl:
 
         pause 0.5
 
-        play sound "sounds/leaves.mp3"
+        play sound sound.leaves
 
         scene s253a
         with dissolve
@@ -2608,7 +2608,7 @@ label continueq:
     menu:
         "Answer":
             stop sound
-            play sound "sounds/answercall.mp3"
+            play sound sound.answer_call
             $ reputation.add_point(RepComponent.BOYFRIEND)
 
             scene s270b # you answer, hold phone next to your ear
@@ -2664,7 +2664,7 @@ label continueq:
 
                     ju "Bye, honey."
 
-                    play sound "sounds/rejectcall.mp3"
+                    play sound sound.reject_call
 
                 "I can't, sorry":
                     $ reputation.add_point(RepComponent.TROUBLEMAKER)
@@ -2681,11 +2681,11 @@ label continueq:
 
                     u "Yeah... next time."
 
-                    play sound "sounds/rejectcall.mp3"
+                    play sound sound.reject_call
 
         "Don't answer":
             stop sound
-            play sound "sounds/rejectcall.mp3"
+            play sound sound.reject_call
 
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
             # phone call declined sound
@@ -2708,7 +2708,7 @@ label continueq:
 
     u "(I guess there goes my one minute of alone time...)"
 
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
 
     scene s273 # FIRST PERSON: through your dorm door open seeing riley and ryan standing there happily looking at you, only seeing their upper body and faces, both mouths closed// ryan hold picnic basket
     with dissolve
@@ -3136,7 +3136,7 @@ label continueq:
         play sound sound.knock
         pause 1
 
-        play sound "sounds/dooropen.mp3"
+        play sound sound.door_open
 
         scene s285 # Lauren oppens the door smiling
         with dissolve
@@ -3306,7 +3306,7 @@ label continueq:
         with fade
 
         pause 0.5
-        play sound "sounds/horrorsound.mp3"
+        play sound sound.horror
 
         scene s289b # lauren grabs onto your arm scared
         with dissolve
@@ -3510,7 +3510,7 @@ label continueq:
 
         la "Really? Thank you so much."
 
-        play sound "sounds/dooropen.mp3"
+        play sound sound.door_open
 
         scene s293d2 # lauren entering
         with dissolve
@@ -3527,7 +3527,7 @@ label continueq:
 
         u "Yeah, good night, Lauren."
 
-        play sound "sounds/doorclose.mp3"
+        play sound sound.door_close
 
         # door close sound
 
@@ -3570,7 +3570,7 @@ label continues: # This is after the date
 
     stop sound
 
-    play sound "sounds/answercall.mp3"
+    play sound sound.answer_call
 
     scene s295 # you on the phone from the side
     with dissolve

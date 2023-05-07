@@ -293,7 +293,7 @@ label starta: #for compatibility only
 
     ju "Don't worry, I'll get it for you, honey."
 
-    play sound "sounds/trunkopen.mp3"
+    play sound sound.trunk_open
 
     scene s18
     with dissolve
@@ -625,7 +625,7 @@ label starta: #for compatibility only
     scene clocka
     with fade
 
-    play sound "sounds/clock2.mp3"
+    play sound sound.clock2
 
     pause 0.5
 
@@ -2414,7 +2414,7 @@ label v1_nsfwSkipLabel1:
 
     ro "Today, we're gonna learn about-"
 
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
 
     scene s85 ###Lauren comes in, her roomates a dick so she wants to stay with you whenever Imre's gone."
     with dissolve
@@ -2428,7 +2428,7 @@ label v1_nsfwSkipLabel1:
     ro "Just sit down, so that we can get started on the material."
     #####clock video
     stop music fadeout 3
-    play sound "sounds/clock2.mp3"
+    play sound sound.clock2
     scene clocka
     with fade
 
@@ -2538,7 +2538,7 @@ label v1_nsfwSkipLabel1:
     with Fade (1,0,1)
 
     play music "music/mlove1.mp3"
-    play sound "sounds/park.mp3"
+    play sound sound.park
 
     la "This park is really nice. I've never been here before."
 
@@ -2937,7 +2937,7 @@ label aw_bd:
     with dissolve
 
     u "Right, glad you enjoyed them."
-    play sound "sounds/impactbed.mp3"
+    play sound sound.impact_bed
     scene s95 # you falling onto bed
     with vpunch
 

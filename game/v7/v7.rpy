@@ -512,7 +512,7 @@ label v7start:
 ####### SCENE 3 Outside with Nora
 label hd_bd:
     stop music fadeout 1
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
     scene s688 # You walk open the backyard door
     with dissolve
 
@@ -1194,7 +1194,7 @@ label hd_ad:
 
             u "Of course."
 
-            play sound "sounds/dooropen.mp3"
+            play sound sound.door_open
 
             scene s710 # First Person Riley quietly walking in her dorm in front of you # ALL RILEY DORM renders should be regular lighting and I'll make it dark in photoshop
             with dissolve
@@ -1503,7 +1503,7 @@ label conyourdorm:
 
                 em "Oh, yeah... Okay. Sorry."
 
-                play sound "sounds/rejectcall.mp3"
+                play sound sound.reject_call
                 scene s714d
                 with dissolve
                 u "*Sighs*"
@@ -1583,7 +1583,7 @@ label conyourdorm:
 
                 scene s714d # mc looking dpeesperate holding his phone in front of his face mouth closed
                 with dissolve
-                play sound "sounds/rejectcall.mp3"
+                play sound sound.reject_call
 
                 u "(I forgot how fucking crazy she is...)"
 
@@ -1647,7 +1647,7 @@ label apologylauren:
 
     pause 1.5
 
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
 
     scene s717 #close up Lauren opening door mouth open  a bit upset / put off
     with dissolve
@@ -1838,7 +1838,7 @@ label thisbelauren:
 
     pause 1.5
 
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
 
     scene s717
     with dissolve
@@ -2006,7 +2006,7 @@ label thisbelauren:
 
                         u "Fine. I'll go."
 
-                        play sound "sounds/doorclose.mp3"
+                        play sound sound.door_close
                         scene s717k # door closed
                         with vpunch
 
@@ -2054,7 +2054,7 @@ label thisbelauren:
 
                     la "I said we're done!"
 
-                    play sound "sounds/doorclose.mp3"
+                    play sound sound.door_close
                     scene s717k # door closed
                     with vpunch
 
@@ -2642,7 +2642,7 @@ label beachlauren:
 
     pause 1.5
 
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
 
     if CharacterService.is_girlfriend(lauren):
         play music "music/mlove2.mp3"
@@ -3425,7 +3425,7 @@ label beachlauren:
 ########## SCENE 12: MC BACK AT DORM WEDNESDAY EVENING
     label rightafterbeach: #for compatibility only
     if CharacterService.is_fwb(emily):
-        play sound "sounds/dooropen.mp3"
+        play sound sound.door_open
         scene s753 # mc opens his dorm door and looks on the ground, there's a letter
         with dissolve
 
@@ -3945,7 +3945,7 @@ label chloe_call:
 
         u "What about-"
 
-        play sound "sounds/rejectcall.mp3"
+        play sound sound.reject_call
 
         scene sphone1a # mc on the phone mouth closed
         with dissolve
@@ -3977,7 +3977,7 @@ label chloe_call:
 
         u "Sounds good."
 
-        play sound "sounds/rejectcall.mp3"
+        play sound sound.reject_call
 
         scene sphone1a # mc on the phone mouth closed
         with dissolve
@@ -4009,7 +4009,7 @@ label chloe_call:
 
         u "I mean I can-"
 
-        play sound "sounds/rejectcall.mp3"
+        play sound sound.reject_call
 
         scene sphone1a # mc on the phone mouth closed
         with dissolve
@@ -5086,7 +5086,7 @@ label ep7_fight_cam:
             ca "Come with me. I'm gonna show you something."
 
 label ep7_cam_picture:
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
     scene s849 # Camera - TPP. MC and Cameron entering a room (Need not show what's inside the room in the shot, they're just entering through the door.)
     with fade
     pause 0.5
@@ -5330,7 +5330,7 @@ label ep7_cam_picture:
     stop sound
 
     if CharacterService.is_mad(chloe):
-        play sound "sounds/answercall.mp3"
+        play sound sound.answer_call
         cl "What do you want, [name]?"
 
         scene snew860a # mouth open
@@ -5343,12 +5343,12 @@ label ep7_cam_picture:
 
         cl "Good for you."
 
-        play sound "sounds/rejectcall.mp3"
+        play sound sound.reject_call
 
         "*Chloe hangs up*"
 
     else:
-        play sound "sounds/answercall.mp3"
+        play sound sound.answer_call
         cl "Hello? [name]?"
 
         scene snew860a # mouth open
@@ -5381,7 +5381,7 @@ label ep7_cam_picture:
         scene snew860
         with dissolve
 
-        play sound "sounds/rejectcall.mp3"
+        play sound sound.reject_call
 
         "*Chloe hangs up*"
 
@@ -6039,7 +6039,7 @@ label after_history:
     with fade
     pause 0.5
 
-    play sound "sounds/clock2.mp3"
+    play sound sound.clock2
 
     scene clockb
     with dissolve
@@ -6415,7 +6415,7 @@ label after_history:
     scene s905 # Same as s904 but MC is now 2 feet behind Lee
     with dissolve
 
-    play sound "sounds/countdown.mp3" #check - is this fine?
+    play sound sound.countdown #check - is this fine?
 
     menu (fail_label="lee_pants_fail"): # 3 second timer default
         "Pull it":
@@ -6538,7 +6538,7 @@ label hc_asking_amber:
 
     pause 1.5
 
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
     scene s919 # Camera - FPP. Amber opens the door and talking with a confused look
     with dissolve
     am "Uhmmm... are you about to ask me to go to homecoming with you?"
@@ -6893,7 +6893,7 @@ label hc_asking_emily:
 
     pause 0.5
 
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
 
     scene s950a # emily comes in
     with dissolve
@@ -7128,7 +7128,7 @@ label hc_asking_riley:
 
     pause 0.5
 
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
 
     scene s959a #fpp close up riley opened the door a bit surprised
     with dissolve
@@ -7287,7 +7287,7 @@ label cameron_thurs_tasks:
 
     pause 1.5
     
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
     scene scc2 # FPP. Show MC door, now open, Cameron stood in threshold, neutral expression.
     with dissolve
 
@@ -9256,7 +9256,7 @@ label signs_with_autumn:
 
     pause 1.5
 
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
 
     scene sas3 # FPP. Close up on Autumn who is now stood at the door, smile, mouth open.
     with dissolve
@@ -9743,7 +9743,7 @@ label amberhocodate:
     
     pause 1.5
 
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
     scene sfr4am3 #CLOSE UP Amber opens the door, excited mouth open
     with dissolve
 
@@ -9892,7 +9892,7 @@ label v7_nsfwSkipLabel5:
     scene sfr4am8a #amber puts on some music and changes the lights to dark blue lighting
     with dissolve
 
-    play sound "sounds/rejectcall.mp3"
+    play sound sound.reject_call
 
     # music starts
 
@@ -10127,7 +10127,7 @@ label chloehocodate:
 
     pause 1.5
 
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
     scene sfr4cl3 # close up nora opening the door indifferent in her dress
     with dissolve
 
@@ -10678,7 +10678,7 @@ label emilyhocodate:
 
     pause 1.5
 
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
     scene sfr4em3 # close up emily opening the door in her dress smiling
     with dissolve
 
@@ -11117,7 +11117,7 @@ label laurenhocodate:
 
     pause 1.5
 
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
     scene sfr4la1 # first personclose up lauren opens the door shy smile
     with dissolve
 
@@ -11189,7 +11189,7 @@ label laurenhocodate:
     scene sfr4la5b # toasting wine glasses
     with dissolve
 
-    play sound "sounds/toast.mp3"
+    play sound sound.toast
 
     u "Cheers."
 
@@ -11499,7 +11499,7 @@ label penelopehocodate:
     menu:
         "Enter her room":
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
-            play sound "sounds/dooropen.mp3"
+            play sound sound.door_open
             scene sfr4pe1b # showing mc entering her room, door still only half open, cant see penelope or much in the room
             with dissolve
 
@@ -11556,7 +11556,7 @@ label penelopehocodate:
 
             pe "Okay, you can come in now!"
 
-            play sound "sounds/dooropen.mp3"
+            play sound sound.door_open
             scene sfr4pe1b # showing mc entering her room, door still only half open, cant see penelope
             with dissolve
 
@@ -11620,7 +11620,7 @@ label penelopehocodate:
     with dissolve
 
     # beer bottle opening sounds #check - add beeropen.mp3 sound file
-    play sound "sounds/beeropen.mp3"
+    play sound sound.beer_open
 
     u "Nice hiding spot."
 
@@ -11972,7 +11972,7 @@ label rileyhocodate:
 
     pause 1.5
 
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
 
     scene sfr4ri1 # first person close up riley oepning hte door, behind her are lauren and ryan sitting on the floor around a small wooden table filled with bottles of alcohol
     with dissolve
@@ -12079,21 +12079,21 @@ label rileyhocodate:
 
     pause 0.5
 
-    play sound "sounds/cup.mp3"
+    play sound sound.cup
 
     scene sfr4ri11a #Ryan still trying to flip his cup.
     with dissolve
 
     u "Come on, come on!"
 
-    play sound "sounds/cup.mp3"
+    play sound sound.cup
 
     scene sfr4ri11b #Ryan still trying to flip his cup.
     with dissolve
 
     u "You got this, man!"
 
-    play sound "sounds/cup.mp3"
+    play sound sound.cup
     scene sfr4ri12 #Lauren successfully flips her cup on the first try.
     with dissolve
 
@@ -12115,7 +12115,7 @@ label rileyhocodate:
 
     pause 0.5
 
-    play sound "sounds/cup.mp3"
+    play sound sound.cup
 
     scene sfr4ri13b # riley celebrating
     with dissolve
@@ -12149,20 +12149,20 @@ label rileyhocodate:
 
     pause 0.5
 
-    play sound "sounds/cup.mp3"
+    play sound sound.cup
 
     scene sfr4ri15b # you trying to flip your cup again
     with dissolve
 
     la "Yes, Riley!"
 
-    play sound "sounds/cup.mp3"
+    play sound sound.cup
     scene sfr4ri15c  # you finally get it flipped
     with dissolve
 
     pause 0.5
 
-    play sound "sounds/cup.mp3"
+    play sound sound.cup
     scene sfr4ri15d  # you finally get it flipped
     with dissolve
 
@@ -12173,7 +12173,7 @@ label rileyhocodate:
 
     pause 0.5
 
-    play sound "sounds/cup.mp3"
+    play sound sound.cup
     scene sfr4ri16 #ryan flips it on the first try
     with dissolve
 
@@ -12209,7 +12209,7 @@ label rileyhocodate:
 
     pause 0.5
 
-    play sound "sounds/cup.mp3"
+    play sound sound.cup
     scene sfr4ri16 #ryan flips it on the first try
     with dissolve
 
@@ -12225,7 +12225,7 @@ label rileyhocodate:
 
     ry "Bro, you got this!"
 
-    play sound "sounds/cup.mp3"
+    play sound sound.cup
     scene sfr4ri13b #Riley flips her cup
     with dissolve
 
@@ -13360,7 +13360,7 @@ label fr4laurendate:
 
     scene sfr4la23 #Lauren and Mc arrive at Lauren's dorm.
     with fade
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
 
     pause 0.5
 
@@ -15878,7 +15878,7 @@ label fr4penelope1:
     scene sfr4pe24b #Penelope hangs up.
     with dissolve
 
-    play sound "sounds/rejectcall.mp3"
+    play sound sound.reject_call
 
     pause 0.5
 
@@ -17204,7 +17204,7 @@ label fr4chloeending:
 
     u "Sure."
 
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
     scene sfr4cl60 # fpp showing chloe slightly opening a door inside her room  about to walk inside
     with dissolve
 
@@ -17215,7 +17215,7 @@ label fr4chloeending:
 
     cl "*Chuckles* I'll be back in a minute."
 
-    play sound "sounds/doorclose.mp3"
+    play sound sound.door_close
 
     scene sfr4cl61 # tpp mc walking towards her night stand with a book on it."
     with dissolve
@@ -17232,14 +17232,14 @@ label fr4chloeending:
 
     u "(Hmm... Colony Crisis. Interesting.)"
 
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
     scene sfr4cl61c #showing mc, mc looks up at the door
     with dissolve
 
     "*Door opening*"
 
     # towel drop sound #check - add towel.mp3 sound file
-    play sound "sounds/towel.mp3"
+    play sound sound.towel
 
     if is_censored:
         call screen censored_popup("v8s2_nsfwSkipLabel1")

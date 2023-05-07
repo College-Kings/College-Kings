@@ -28,7 +28,7 @@ label v12_party_wake_up:
 
     scene v12pwu3 # TPP. Show MC opening the bathroom door and walking in, smiling, mouth closed
     with dissolve
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
 
     pause 0.75
 

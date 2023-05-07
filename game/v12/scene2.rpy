@@ -296,7 +296,7 @@ label v12_nora_checks_mc:
 
     pause 1
 
-    play sound "sounds/doorclose.mp3"
+    play sound sound.door_close
 
     stop music fadeout 3
 

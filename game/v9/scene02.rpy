@@ -17,7 +17,7 @@ label v9_start_apes:
 
     scene v9apost2 # FPP. Cameron opens the door slightly and peeks through the opening, slightly annoyed, mouth open
     with dissolve
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
     ca "What you want, pledge?"
 
     scene v9apost3 # FPP (Can use the same camera as v9apost2 but different frame number to allow camera freedom). Cameron comes out and is standing in front of the MC now, looking slightly annoyed, mouth closed. Door still only half open.
@@ -180,7 +180,7 @@ label v9_start_apes:
             with dissolve
             ca "Saturday."
 
-            play sound "sounds/doorclose.mp3"
+            play sound sound.door_close
 
             scene v9apost3f # Cameron slammed the door and went inside, so just show a closed door
             with hpunch
@@ -212,7 +212,7 @@ label v9_start_apes:
             with dissolve
             ca "Saturday. Get to work!"
 
-            play sound "sounds/doorclose.mp3"
+            play sound sound.door_close
 
             scene v9apost3f
             with hpunch

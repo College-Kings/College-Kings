@@ -21,7 +21,7 @@ label v9_start_wolves:
     pause 0.5
     ch "Come in."
 
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
 
     scene v9wpost2 # FPP. (MC entered the room now and is standing near Chris' desk). Show Chris sitting at his desk just chilling, looking at his phone, smiling, mouth closed (preferably phone screen not visible)
     with dissolve

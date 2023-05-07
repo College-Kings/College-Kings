@@ -118,7 +118,7 @@ label v9_call_w_lindsey:
 
         u "Goodnight."
 
-        play sound "sounds/rejectcall.mp3"
+        play sound sound.reject_call
 
         scene v9cwl3
         with dissolve
@@ -245,7 +245,7 @@ label v9_call_w_lindsey:
 
         u "Goodnight."
 
-        play sound "sounds/rejectcall.mp3"
+        play sound sound.reject_call
 
         scene v9cwl1
         with dissolve

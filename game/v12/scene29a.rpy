@@ -804,7 +804,7 @@ label v12_late_night_workout:
 
     pause 0.5
 
-    play sound "sounds/facepunch1.mp3"
+    play sound sound.hit
     scene v12lnw25a # FPP Same angle as v12lnw25, Lindsey kicking backward at the punching bag while looking away
     with dissolve
 
@@ -858,7 +858,7 @@ label v12_late_night_workout:
             li "Just a little. *Chuckles*"
             
         "Steady":
-            play sound "sounds/facepunch1.mp3"
+            play sound sound.hit
             scene v12lnw25d # TPP Same angle as v12lnw25, MC kicking back at the punching bag, the kick landing squarly and knocking the bag back
             with dissolve
 

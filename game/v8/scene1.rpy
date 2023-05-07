@@ -23,7 +23,7 @@ label v8_la_start:
     with dissolve
     u "I like the sound of that."
 
-    play sound "sounds/switch.mp3"
+    play sound sound.switch
 
     scene v8s1 # TPP. MC turning the light switch off in Lauren's room (lights are off in this render)
     with dissolve

@@ -108,7 +108,7 @@ label v12_nora_chris_fight:
 
     pause 1.25
 
-    play sound "sounds/fall.mp3"
+    play sound sound.fall
     scene v12ncf7 # TPP. Nora on the ground, mouth open, curled up on the ground, crying, Chris looking down at her, Chris very angry, mouth closed
     with vpunch
 

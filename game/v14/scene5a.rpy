@@ -6,7 +6,7 @@
 label v14s05a:
     play music "music/v13/Track Scene 40_3.mp3" fadein 2
 
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
     pause 0.51
 
     scene v14s05a_1 # TPP. Show walking into his room, neutral expression, mouth closed

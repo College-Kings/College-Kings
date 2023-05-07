@@ -391,7 +391,7 @@ label v13s12b_failed_timer:
 
     scene v13s12b_13 # FPP. MC looking at Penelope, she's on the floor, very embarassed, in pain, mouth closed
     with vpunch
-    play sound "sounds/fall.mp3"
+    play sound sound.fall
 
     u "Oh shit! I'm so sorry, Penelope... I-"
 

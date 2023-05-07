@@ -7,7 +7,7 @@
 label after_prot_wolves:
     scene v8sprot22 # TPP. Show MC entering his wolves room.
     with fade
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
     pause 0.5
 
     scene v8sprot23 # TPP. Show MC sitting at his desk with an open book.
@@ -34,7 +34,7 @@ label after_prot_wolves:
     u "(Just in time.)"
     u "Come in!"
 
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
 
     scene v8sprot25 # TPP. Show Sebastian now in MC's room pointing at the books on his desk, Sebastian mouth open.
     with dissolve
@@ -62,7 +62,7 @@ label after_prot_wolves:
 label after_prot_dorm:
     scene v8sprot28 # TPP. Show MC entering his college dorm.
     with fade
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
     pause 0.5
 
     scene v8sprot29 # TPP. Show MC sitting on the edge of his bed. MC mouth open.

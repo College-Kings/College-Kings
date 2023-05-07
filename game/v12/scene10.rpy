@@ -391,7 +391,7 @@ label v12_amber_bus:
 
     u "Don't pass the blame, cause \"you have a fifth grade education\"."
 
-    play sound "sounds/facepunch1.mp3"
+    play sound sound.hit
     scene v12amb3m # FPP. Same as v12amb3i, Amber slightly annoyed, mouth closed, punching MC in the arm
     with vpunch
 

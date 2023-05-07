@@ -365,7 +365,7 @@ label v11_roommate:
 
         pause 0.75
 
-        play sound "sounds/dooropen.mp3"
+        play sound sound.door_open
 
         scene v11rm11a # FPP. Same cam as v11rm11, Door now open, MC looking at Riley, Riley slight smile, mouth closed (Day)
         with dissolve

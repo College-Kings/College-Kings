@@ -80,7 +80,7 @@ label v11_imre_ryan_grapple:
     scene v11irg7 # FPP. MC looking at Imre on the ground, holding his jaw, mouth closed, in pain and angry
     with vpunch
 
-    play sound "sounds/fall.mp3"
+    play sound sound.fall
 
     pause 0.75
 
@@ -92,7 +92,7 @@ label v11_imre_ryan_grapple:
     scene v11irg8 # FPP. Show Ryan on the ground, in pain, mouth closed
     with vpunch
 
-    play sound "sounds/fall.mp3"
+    play sound sound.fall
 
     pause 0.75
 

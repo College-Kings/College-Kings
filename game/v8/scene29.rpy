@@ -32,7 +32,7 @@ label after_drugs:
         pause 0.5
         jo "*Groans*"
 
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
     play music "music/mchill1.mp3"
 
     scene v8josh14 # TPP (This is the next scene for both v8josh12a and v8josh13, in different paths of course, so both the transitions should look smooth). Show MC opening the room door (half open) with Josh still taking support from MC
@@ -120,7 +120,7 @@ label after_drugs:
     with dissolve
     pause 1
 
-    play sound "sounds/answercall.mp3"
+    play sound sound.answer_call
 
     scene v8josh22a
     with dissolve
@@ -147,7 +147,7 @@ label after_drugs:
     with dissolve
     u "He's sleeping at the moment, Amber, and I..."
 
-    play sound "sounds/rejectcall.mp3"
+    play sound sound.reject_call
     pause 0.5
 
     scene v8josh22
@@ -166,7 +166,7 @@ label after_drugs:
     stop ambience
     pause 0.5
 
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
 
     scene v8josh24 # TPP. Show MC opening the door (Door is half open. For context, Amber is standing outside)
     with dissolve

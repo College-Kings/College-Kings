@@ -27,7 +27,7 @@ label v12_julia_call:
     with dissolve
 
     stop sound
-    play sound "sounds/answercall.mp3"
+    play sound sound.answer_call
     u "Hello?"
 
     scene v12juc3 # TPP. Show Julia in her house. Julia slightly worried, mouth open, talking on the phone

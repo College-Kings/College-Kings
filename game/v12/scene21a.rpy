@@ -236,7 +236,7 @@ label v12_nursing_aubrey:
 
             au "*Chuckles* Fucking weirdo..."
 
-    play sound "sounds/doorclose.mp3"
+    play sound sound.door_close
     scene v12aun6 # FPP. MC looking at the hotel room door to the corridor, door is open, Imre is in front of it, looking at MC, he is smiling, mouth open, very excited
     with vpunch
 

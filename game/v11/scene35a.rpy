@@ -395,7 +395,7 @@ label v11_chloe_hotel_room_amber_call:
         scene v11ris7a # TPP. Same cam as v11ris7, MC is startled, mouth closed, still sitting down, looking at the door to the hallway direction (day)
         with vpunch
 
-        play sound "sounds/fall.mp3"
+        play sound sound.fall
 
         pause 0.75
 

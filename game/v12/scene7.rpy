@@ -684,11 +684,11 @@ label v12s7_aubrey2:
             with dissolve
 
             u "Absolu-"
-            play sound "sounds/dooropen.mp3"
+            play sound sound.door_open
 
             unknown "Could've sworn I heard people talking in here... Guess not."
 
-            play sound "sounds/doorclose.mp3"
+            play sound sound.door_close
 
             scene v12ferauh4
             with dissolve
@@ -4716,7 +4716,7 @@ label v12s7_sam2:
             scene v12fersam1b
             with dissolve
 
-            play sound "sounds/doorclose.mp3"
+            play sound sound.door_close
 
             u "(Shit!) That might be Mr. Lee, shh!"
 

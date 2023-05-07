@@ -302,7 +302,7 @@ label tec_end_time:
 
     stop music fadeout 3
 
-    play sound "sounds/clock2.mp3"
+    play sound sound.clock2
     scene clocka
     with fade
     pause 0.5

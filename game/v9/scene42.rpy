@@ -148,7 +148,7 @@ label v9_at_warehouse:
             u "(Oh, God what if they boo me when I get in the ring?)"
 
             show glitch
-            play sound "sounds/glitch.mp3"
+            play sound sound.glitch
             pause 0.1
             hide glitch
 
@@ -158,7 +158,7 @@ label v9_at_warehouse:
 
                 pause 1
 
-                play sound "sounds/fall.mp3"
+                play sound sound.fall
 
                 scene v9dream12b # IGNORE THIS
                 with hpunch
@@ -171,7 +171,7 @@ label v9_at_warehouse:
 
                 pause 1
 
-                play sound "sounds/fall.mp3"
+                play sound sound.fall
 
                 scene v9dream14b # IGNORE THIS
                 with hpunch
@@ -179,7 +179,7 @@ label v9_at_warehouse:
                 pause 1
             
             show glitch
-            play sound "sounds/glitch.mp3"
+            play sound sound.glitch
             pause 0.1
             hide glitch
 

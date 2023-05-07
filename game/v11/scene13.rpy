@@ -261,7 +261,7 @@ label v11_aubrey_plane_sex:
                 scene v11aub17 # FPP. MC is looking at the door, door slightly open, can not see Lauren yet (Make sure this render is using the plane bathroom instead of the other one)
                 with dissolve
 
-                play sound "sounds/cardooropen.mp3"
+                play sound sound.car_door_open
 
                 pause 0.75
                 stop music fadeout 3
@@ -290,7 +290,7 @@ label v11_aubrey_plane_sex:
                     scene v11aub17
                     with dissolve
 
-                    play sound "sounds/doorclose.mp3"
+                    play sound sound.door_close
 
                     pause 0.75
                     
@@ -305,7 +305,7 @@ label v11_aubrey_plane_sex:
                     scene v11aub17
                     with dissolve
 
-                    play sound "sounds/doorclose.mp3"
+                    play sound sound.door_close
 
                     pause 0.75
 

@@ -9,7 +9,7 @@ label v13s20:
 
     play music "music/v13/Track Scene 20.mp3" fadein 2
 
-    play sound "sounds/doorclose.mp3"
+    play sound sound.door_close
 
     u "(Ohhhh shit... I'm gonna fuck some shit up.) *Laughs*"
 

@@ -106,7 +106,7 @@ label v8_julia_call:
                 with dissolve
                 ju "Keep in touch, honey! Take care!"
 
-        play sound "sounds/rejectcall.mp3"
+        play sound sound.reject_call
 
         scene v8room20
         with dissolve
@@ -213,7 +213,7 @@ label v8_julia_call:
                 with dissolve
                 ju "Keep in touch, honey! Take care!"
 
-        play sound "sounds/rejectcall.mp3"
+        play sound sound.reject_call
 
         scene v8room21
         with dissolve

@@ -310,7 +310,7 @@ label v9_hc_return:
     scene clocka
     with fade
 
-    play sound "sounds/clock2.mp3"
+    play sound sound.clock2
 
     pause (0.5)
 

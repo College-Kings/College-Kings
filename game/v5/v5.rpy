@@ -187,7 +187,7 @@ label jorepb:
 
     "*Knock knock knock*"
 
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
 
     play music "music/msad2.mp3"
 
@@ -374,7 +374,7 @@ label jorepb:
 
             u "HNGGGG!"
 
-            play sound "sounds/facepunch1.mp3"
+            play sound sound.hit
 
             scene s372a # you punch the wall
             with vpunch
@@ -1176,7 +1176,7 @@ label continuetrolley:
 
     la "You can decide to switch the lever, but remember, you're on a timer. If you don't switch the lever within a few seconds, the train will keep its current course."
 
-    play sound "sounds/countdown.mp3"
+    play sound sound.countdown
     call screen trolleyProblem("trolleyaa", "trolleyab")
 
 label trolleyaa: # you don't press the lever
@@ -1188,7 +1188,7 @@ label trolleyaa: # you don't press the lever
 
     pause 0.5
 
-    play sound "sounds/splat.mp3"
+    play sound sound.splat
 
     scene s390 # your face full of blood
     with vpunch
@@ -1200,13 +1200,13 @@ label trolleyaa: # you don't press the lever
 label trolleyab: # you do press the lever
     stop sound
     $ reputation.add_point(RepComponent.BRO)
-    play sound "sounds/lever.mp3"
+    play sound sound.lever
     scene s388e #you press lever
     with dissolve
 
     pause 0.5
 
-    play sound "sounds/splat.mp3"
+    play sound sound.splat
 
     scene s390a # your face full of blood
     with vpunch
@@ -1285,7 +1285,7 @@ label continueam:
 
             la "You can decide to switch the lever, but remember, you're on a timer. If you don't switch the lever within a few seconds, the train will keep its current course."
             
-            play sound "sounds/countdown.mp3"
+            play sound sound.countdown
             call screen trolleyProblem("trolleyba", "trolleybb")
 
         "I'd rather not":
@@ -1298,7 +1298,7 @@ label trolleyba: # you don't press the lever
     with dissolve
 
     pause 0.5
-    play sound "sounds/splat.mp3"
+    play sound sound.splat
     scene s390 # your face full of blood
     with vpunch
 
@@ -1309,13 +1309,13 @@ label trolleyba: # you don't press the lever
 label trolleybb: # you do press the lever
     stop sound
     $ trolleyb = True
-    play sound "sounds/lever.mp3"
+    play sound sound.lever
     scene s388e #you press lever
     with dissolve
 
     pause 0.5
 
-    play sound "sounds/splat.mp3"
+    play sound sound.splat
 
     scene s390a # your face full of blood
     with vpunch
@@ -1398,7 +1398,7 @@ label continuean:
 
             la "You can decide to switch the lever, but remember, you're on a timer. If you don't switch the lever within a few seconds, the train will keep its current course."
            
-            play sound "sounds/countdown.mp3"
+            play sound sound.countdown
             call screen trolleyProblem("trolleyca", "trolleycb")
 
         "I'd rather not":
@@ -1414,7 +1414,7 @@ label trolleyca: # you don't press the lever
 
     pause 0.5
 
-    play sound "sounds/splat.mp3"
+    play sound sound.splat
 
     scene s390 # your face full of blood
     with vpunch
@@ -1426,13 +1426,13 @@ label trolleyca: # you don't press the lever
 label trolleycb: # you do press the lever
     stop sound
     $ reputation.add_point(RepComponent.BOYFRIEND)
-    play sound "sounds/lever.mp3"
+    play sound sound.lever
     scene s388e #you press lever
     with dissolve
 
     pause 0.5
 
-    play sound "sounds/splat.mp3"
+    play sound sound.splat
 
     scene s390a # your face full of blood
     with vpunch
@@ -2242,7 +2242,7 @@ label hospitala:
     pause 0.5
     stop ambience
 
-    play sound "sounds/busstop.mp3"
+    play sound sound.bus_stop
 
     "*Bus stops*"
 
@@ -2687,7 +2687,7 @@ label hospitala:
     scene s420e2 # phone away from ear
     with dissolve
 
-    play sound "sounds/rejectcall.mp3"
+    play sound sound.reject_call
 
     u "*Hangs up*"
 
@@ -2720,7 +2720,7 @@ label hospitala:
 
             "*Knock knock knock*"
 
-            play sound "sounds/dooropen.mp3"
+            play sound sound.door_open
 
             scene s398
             with dissolve
@@ -2896,7 +2896,7 @@ label hospitala:
 
         scene adamfinish
         $ renpy.pause(1.3)
-        play sound "sounds/fall.mp3"
+        play sound sound.fall
         $ stance = 0
         $ youDamage = 0
         scene adamfinishclose
@@ -3403,7 +3403,7 @@ label hospitala:
 
             scene youfinishadam
             $ renpy.pause(1)
-            play sound "sounds/fall.mp3"
+            play sound sound.fall
             $ stance = 0
             $ youDamage = 0
             scene youfinishadamclose
@@ -3441,7 +3441,7 @@ label hospitala:
 
             scene youfinishadam
             $ renpy.pause(1)
-            play sound "sounds/fall.mp3"
+            play sound sound.fall
             $ stance = 0
             $ youDamage = 0
             scene youfinishadamclose
@@ -3478,7 +3478,7 @@ label hospitala:
 
             scene youfinishadam
             $ renpy.pause(1)
-            play sound "sounds/fall.mp3"
+            play sound sound.fall
             $ stance = 0
             $ youDamage = 0
             scene youfinishadamclose
@@ -3515,7 +3515,7 @@ label hospitala:
 
             scene youfinishadam
             $ renpy.pause(1)
-            play sound "sounds/fall.mp3"
+            play sound sound.fall
             $ stance = 0
             $ youDamage = 0
             scene youfinishadamclose
@@ -3566,7 +3566,7 @@ label fl_a:  # tell the school
 
     scene s423 #mc before counselors office, opening door
     with Fade(1,0,1)
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
     pause 0.5
     play music music.ck1.punk15
     scene s424 #cam behind MC walks into the counselor's office. She is sitting at her desk.
@@ -3816,7 +3816,7 @@ label adamfinish: ###Adam beats you
 
     scene s430 #FIRST PErson: looking at Adam spitting on you
     with dissolve
-    play sound "sounds/spit.mp3"
+    play sound sound.spit
     ad "*Spits*"
 
     scene s430b #adam disgusting grin

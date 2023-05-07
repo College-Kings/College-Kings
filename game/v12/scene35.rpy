@@ -119,7 +119,7 @@ label v12_chris_nora_room:
 
                 pause 0.75
 
-                play sound "sounds/doorclose.mp3"
+                play sound sound.door_close
                 scene v12cnr4
                 with dissolve
 
@@ -133,7 +133,7 @@ label v12_chris_nora_room:
                 jump v12_game_roommate
 
             else:
-                play sound "sounds/dooropen.mp3"
+                play sound sound.door_open
                 scene v12cnr12a # TPP. Same as v12cnr12, Door open, Nora inside the room, looking at MC who is outside, Nora crying, mouth closed, MC worried, mouth closed
                 with dissolve
 

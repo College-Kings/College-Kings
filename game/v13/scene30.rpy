@@ -128,7 +128,7 @@ label v13s30:
 
     pause 0.75
 
-    play sound "sounds/rejectcall.mp3"
+    play sound sound.reject_call
     scene v13s30_2c # FPP. Same as v13s30_2b, Amber with phone to her ear, slight smile, mouth open.
     with dissolve
 
