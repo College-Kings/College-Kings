@@ -217,6 +217,15 @@ image saving_ryans_privates = "images/achievements/v14/saving_ryans_privates.web
 image girl_button_idle = "images/common/girl_button_idle.webp"
 image girl_button_hover = "images/common/girl_button_hover.webp"
 image girl_button_insensitive = Transform("girl_button_idle", matrixcolor=SaturationMatrix(0))
+
+#region Free Roam
+image free_roam_top = "images/common/free_roam_highlights/top.webp"
+image free_roam_right = "images/common/free_roam_highlights/right.webp"
+image free_roam_bottom = "images/common/free_roam_highlights/bottom.webp"
+image free_roam_left = "images/common/free_roam_highlights/left.webp"
+image free_roam_vertical_transparent = Transform("free_roam_top", alpha=0.0)
+image free_roam_horizontal_transparent = Transform("free_roam_right", alpha=0.0)
+#endregion Free Roam
 #endregion Common
 
 # v1.0 - v2.0
@@ -466,5 +475,16 @@ image Imre_Jab_block = "images/v10/Scene 7/Animations/END/MCIMRE-JABBLOCKED-END.
 image Imre_Kick_hit = "images/v10/Scene 7/Animations/END/MCIMRE-KICKHIT-END.webp"
 image Imre_Kick_block = "images/v10/Scene 7/Animations/END/MCIMRE-KICKBLOCKED-END.webp"
 
-# Misc
-image credits = Movie(play="images/credits.webm", Loop = True)
+#region v12.0
+image v12s7_left_walkway_front_background_a = "images/v12/Scene 7/Screens/Navigation 12a.webp"
+image v12s7_left_walkway_front_background_b = "images/v12/Scene 7/Screens/Navigation 12b.webp"
+
+image v12s7_left_walkway_front_door_idle = Transform("v12s7_left_walkway_front_door_hover", alpha=0.0)
+image v12s7_left_walkway_front_door_hover = "images/v12/Scene 7/Buttons/v12s7_left_walkway_front_door.png"
+
+image v12s7_left_walkway_front_penelope_idle = Transform("v12s7_left_walkway_front_penelope_hover", alpha=0.0)
+image v12s7_left_walkway_front_penelope_hover = "images/v12/Scene 7/Buttons/v12s7_left_walkway_front_penelope.png"
+
+image v12s7_left_walkway_front_right_idle = Transform("v12s7_left_walkway_front_right_hover", alpha=0.0)
+image v12s7_left_walkway_front_right_hover = "images/v12/Scene 7/Buttons/v12s7_left_walkway_front_right.png"
+#endregion v12.0
