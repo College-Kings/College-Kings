@@ -57,12 +57,15 @@ label after_load:
     python:
         npcs = (aaron, adam, amber, aryssa, aubrey, autumn, beth, buyer, caleb, cameron, candy, charli, chloe, chris, dean, elijah, emily, emmy, evelyn, grayson, imre, iris, jenny, josh, julia, kai, kim, kourtney, lauren, lews_official, lindsey, mason, mr_lee, ms_rose, naomi, nora, parker, penelope, polly, riley, ryan, samantha, satin, sebastian, tom, trainer, wolf)
 
-        mc.profile_pictures = CharacterService.get_profile_pictures(mc.name)
+        mc.name = name
+        if not mc.username:
+            mc.username = name
+        mc.profile_pictures = CharacterService.get_profile_pictures("mc")
 
         for npc in npcs:
             npc.profile_pictures = CharacterService.get_profile_pictures(npc.name)
 
-        if isinstance(_version, str) or _version < (1, 3, 5):
+        if isinstance(_version, str) or _version < config.version:
             if isinstance(mc.relationships, set):
                 mc.relationships = {}
 
@@ -105,6 +108,9 @@ label after_load:
             #region PlayableCharacter
             try: mc.profile_picture
             except AttributeError: mc.profile_picture = mc.profile_pictures[0]
+
+            if not mc.profile_picture:
+                mc.profile_picture = mc.profile_pictures[0]
             #endregion PlayableCharacter
 
             #region Messenger    
