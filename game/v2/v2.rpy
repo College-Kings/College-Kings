@@ -1837,8 +1837,7 @@ label history2:
             jump bo_bd
 
 label bo_ad:
-
-    play music "sounds/bus.mp3"
+    play ambience ambience.bus
 
     scene carback
 
@@ -1976,7 +1975,7 @@ label bo_ad:
             em "Haha, I'm not sure who told you that."
 
     label bq_bd: #for compatibility only
-    stop music
+    stop ambience
     play sound "sounds/busstop.mp3"
 
     hide s145c

@@ -4514,7 +4514,7 @@ label afteraubrey:
 
             #### Car scene
 
-            play music "sounds/driving1.mp3"
+            play ambience ambience.driving
 
             show carbacknight
 
@@ -4719,7 +4719,7 @@ label afteraubrey:
                     gr "We're here."
 
             label wehere: #for compatibility only
-            stop music fadeout 3
+            stop ambience fadeout 3
 
             scene s580 # Showing you and Grayson At night on a ledge, overlooking the city??? Or something else cool, Grayson looking into the distance
             with fade
@@ -4886,7 +4886,7 @@ label afteraubrey:
 
                     # back in the car, already rendered
                     # car sound and background
-                    play music "sounds/driving1.mp3"
+                    play ambience ambience.driving
                     scene carbacknight
 
                     show s579a
@@ -4929,7 +4929,7 @@ label afteraubrey:
                     with dissolve
 
                     gr "Good. Trust me, this will change everything."
-                    stop music fadeout 3
+                    stop ambience fadeout 3
 
                 "I'm not in":
                     $ reputation.add_point(RepComponent.BRO)

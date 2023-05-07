@@ -1131,7 +1131,8 @@ label gokissb:
 label continuetrolley:
     stop music fadeout 3
 
-    play music "sounds/train.mp3"
+    play ambience ambience.train
+
     scene s383a # you looking at lauren mouth closed on train
     with dissolve
 
@@ -1213,7 +1214,7 @@ label trolleyab: # you do press the lever
     u "Holy fuck..."
 
 label continueam:
-    stop music
+    stop ambience
 
     scene s382a
     with flash
@@ -1242,7 +1243,7 @@ label continueam:
             scene s383a
             with Fade (1,0,0.5)
 
-            play music "sounds/train.mp3"
+            play ambience ambience.train
 
             u "Okay, done."
 
@@ -1325,7 +1326,7 @@ label trolleybb: # you do press the lever
     u "Ahh fuck!"
 
 label continuean:
-    stop music
+    stop ambience
 
     scene s382a
     with flash
@@ -1352,7 +1353,8 @@ label continuean:
 
             scene s383a
             with Fade (1,0,0.5)
-            play music "sounds/train.mp3"
+
+            play ambience ambience.train
 
             u "Okay, I'm on the train."
 
@@ -1438,7 +1440,7 @@ label trolleycb: # you do press the lever
     u "Oh my god!"
 
 label continueao:
-    stop music
+    stop ambience
 
     scene s382a
     with flash
@@ -2193,8 +2195,8 @@ label continueaf:
 
 label hospitala:
     stop music fadeout 3
+    play ambience ambience.bus
 
-    play music "sounds/bus.mp3"
     scene s399 #Riley and and MC are on the bus. They look at each other affectionately. MC readjusts awkwardly.
     with Fade (1,0,1)
 
@@ -2238,7 +2240,7 @@ label hospitala:
     u "Mhmmm..."
 
     pause 0.5
-    stop music fadeout 3
+    stop ambience
 
     play sound "sounds/busstop.mp3"
 
@@ -2324,7 +2326,7 @@ label hospitala:
     scene s407 #Riley, MC, and Imre are now all sitting on the bus towards the back.
     with fade
 
-    play music "sounds/bus.mp3"
+    play ambience ambience.bus
 
     pause 1.0
 
@@ -2449,7 +2451,7 @@ label hospitala:
     with dissolve
 
     pause 0.5
-    stop music fadeout 3
+    stop ambience fadeout 3
 
     scene s416 # Imre, Mc and Riley in front of your dorm
     with Fade(1,0,1)

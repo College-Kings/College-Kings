@@ -161,7 +161,7 @@ label starta: #for compatibility only
     scene carback
     show s14
     with fade
-    play music "sounds/driving1.mp3"
+    play ambience ambience.driving
 
     ju "You know, when I was in college, there were these fraternities and sororities that everyone wanted to join."
 
@@ -267,7 +267,7 @@ label starta: #for compatibility only
 
     u "(I wonder if he's still dealing...)"
 
-    stop music fadeout 3
+    stop ambience fadeout 3
 
     car "*stops*"
 

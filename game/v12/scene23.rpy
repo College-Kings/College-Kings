@@ -458,11 +458,11 @@ label v12_ms_rose_sex: #can only get here if joinwolves
                 scene black
                 with dissolve
 
-                play music "sounds/driving1.mp3" fadein 2
+                play ambience ambience.driving fadein 2
 
                 pause
 
-                stop music fadeout 3
+                stop ambience fadeout 3
 
                 if not v11_riley_roomate:
                     scene v12msr29 # TPP. Chloe in front of MC and Ms. Rose, MC very drunk, Ms. Rose helping him stand up. Show Chloe looking at them, Chloe worried, mouth open (Only Chloe in shot)
