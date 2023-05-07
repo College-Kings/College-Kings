@@ -62,6 +62,9 @@ label after_load:
             mc.username = name
         mc.profile_pictures = CharacterService.get_profile_pictures("mc")
 
+        ms_rose.name = "Ms Rose"
+        mr_lee.name = "Mr Lee"
+
         for npc in npcs:
             npc.profile_pictures = CharacterService.get_profile_pictures(npc.name)
 
@@ -514,7 +517,6 @@ label after_load:
         lauren.name = "Lauren"
         samantha.name = "Samantha"
         emily.name = "Emily"
-        ms_rose.name = "Ms_Rose"
         nora.name = "Nora"
         aubrey.name = "Aubrey"
         ryan.name = "Ryan"
