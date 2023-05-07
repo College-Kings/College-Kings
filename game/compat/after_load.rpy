@@ -54,6 +54,10 @@ python early:
             raise Exception("Deleting old files please RESTART GAME.")
 
 label after_load:
+    stop music
+    stop ambience
+    stop sound
+
     python:
         npcs = (aaron, adam, amber, aryssa, aubrey, autumn, beth, buyer, caleb, cameron, candy, charli, chloe, chris, dean, elijah, emily, emmy, evelyn, grayson, imre, iris, jenny, josh, julia, kai, kim, kourtney, lauren, lews_official, lindsey, mason, mr_lee, ms_rose, naomi, nora, parker, penelope, polly, riley, ryan, samantha, satin, sebastian, tom, trainer, wolf)
 
