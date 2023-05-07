@@ -55,8 +55,6 @@ python early:
 
 label after_load:
     python:
-        print(f"{nora._relationship=}")
-
         npcs = (aaron, adam, amber, aryssa, aubrey, autumn, beth, buyer, caleb, cameron, candy, charli, chloe, chris, dean, elijah, emily, emmy, evelyn, grayson, imre, iris, jenny, josh, julia, kai, kim, kourtney, lauren, lews_official, lindsey, mason, mr_lee, ms_rose, naomi, nora, parker, penelope, polly, riley, ryan, samantha, satin, sebastian, tom, trainer, wolf)
 
         mc.name = name
@@ -98,33 +96,6 @@ label after_load:
                 npc.simplr_messages = []
 
                 npc.relationships = {}
-
-                if npc._relationship == Relationship.STRANGER:
-                    npc._relationship = Relationship.MOVE
-
-                if npc._relationship == Relationship.EX:
-                    npc._relationship = Relationship.DATE
-
-                if npc._relationship == Relationship.MAD:
-                    npc._relationship = Relationship.LIKES
-
-                if npc._relationship == Relationship.THREATEN:
-                    npc._relationship = Relationship.TRUST
-
-                if npc._relationship == Relationship.MAKEFUN:
-                    npc._relationship = Relationship.BRO
-
-                if npc._relationship == Relationship.AWKWARD:
-                    npc._relationship = Relationship.KISS
-
-                if npc._relationship == Relationship.KISSED:
-                    npc._relationship = Relationship.LOYAL
-
-                if npc._relationship == Relationship.MOVE:
-                    npc._relationship = Relationship.TAMED
-
-                if npc._relationship == Relationship.DATE:
-                    npc._relationship = Relationship.GIRLFRIEND
 
                 try:
                     if npc._relationship == Relationship.MAD:
