@@ -11,7 +11,7 @@ label v10_room_mon_night:
 
         pause 0.75
 
-        play sound "sounds/vibrate.mp3"
+        play sound sound.vibrate
 
         if simplr_app not in phone.applications:
             $ phone.applications.append(simplr_app)
@@ -81,7 +81,7 @@ label v10_room_mon_night:
 
         pause 0.75
 
-        play sound "sounds/vibrate.mp3"
+        play sound sound.vibrate
 
         python:
             v10s20_reply1 = MessageBuilder(josh)

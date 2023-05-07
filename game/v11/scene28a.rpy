@@ -803,7 +803,7 @@ label v11s28a_galleryScene:
     scene v11sas21 # TPP. Show Sam kissing MC on the cheek
     with dissolve
 
-    play sound "sounds/kiss.mp3"
+    play sound sound.kiss
 
     pause 1
 

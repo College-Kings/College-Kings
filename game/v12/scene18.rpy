@@ -496,7 +496,7 @@ label v12s18_bottlespin:
     scene v12slpbs9 # TPP. Show Imre and Lindsey having a peck on the lips
     with dissolve
 
-    play sound "sounds/kiss.mp3"
+    play sound sound.kiss
 
     pause 1.5
 
@@ -571,7 +571,7 @@ label v12s18_bottlespin:
 
             u "Good, I was hoping you'd say that."
 
-            play sound "sounds/slap.mp3"
+            play sound sound.slap
 
             scene v12slpbs11 # TPP. Show MC slapping Ryan on the face, MC smiling, mouth closed, Ryan in pain, mouth closed
             with vpunch
@@ -612,7 +612,7 @@ label v12s18_bottlespin:
 
             u "Go ahead and slap me dude, I'm not kissing you."
 
-            play sound "sounds/slap.mp3"
+            play sound sound.slap
 
             scene v12slpbs13 # TPP. Show Ryan slapping MC on the face, MC in pain, mouth closed, Ryan smiling, mouth closed
             with vpunch
@@ -671,7 +671,7 @@ label v12s18_bottlespin:
 
     scene v12slpbs14 # TPP. Show Chris and Chloe kissing (try and make it look a bit passionate)
     with dissolve
-    play sound "sounds/kiss.mp3"
+    play sound sound.kiss
 
     pause 1.5
 
@@ -697,7 +697,7 @@ label v12s18_bottlespin:
 
     scene v12slpbs15 # TPP. Show Chris and Nora kissing
     with dissolve
-    play sound "sounds/kiss.mp3"
+    play sound sound.kiss
 
     pause 1.5
 
@@ -731,7 +731,7 @@ label v12s18_bottlespin:
 
     imre "That was cruel."
 
-    play sound "sounds/call.mp3"
+    play sound sound.call
 
     scene v12slpbs12d # FPP. Same as v12slpbs12b, Chris looking down at his pocket, worried, mouth closed
     with dissolve
@@ -852,14 +852,14 @@ label v12s18_bottlespin:
     if v8_nora_likes_mc:
         scene v12slpbs16 # TPP. Show Nora grabbing MC's face and kissing him (try and make this a bit passionate)
         with dissolve
-        play sound "sounds/kiss.mp3"
+        play sound sound.kiss
 
         pause 2.25
     
     else:
         scene v12slpbs16a # TPP. Same as v12slpbs16, less passionate of a kiss 
         with dissolve
-        play sound "sounds/kiss.mp3"
+        play sound sound.kiss
 
         pause 1
 
@@ -913,14 +913,14 @@ label v12s18_bottlespin:
 
     imre "What the fuck is going on? No! I'm not kissing a god damn dude. Especially this ugly motherfuc-"
 
-    play sound "sounds/slap.mp3"
+    play sound sound.slap
 
     scene v12slpbs17 # TPP. Show Ryan slapping Imre, Ryan slightly angry, Imre startled and in pain, both mouths closed
     with dissolve
 
     pause 0.75
 
-    play sound "sounds/slap.mp3"
+    play sound sound.slap
 
     scene v12slpbs17a # TPP. Same as v12slpbs17, Imre slapping Ryan, Ryan in pain, Imre angry, both mouths closed
     with dissolve
@@ -981,7 +981,7 @@ label v12s18_bottlespin:
     scene v12slpbs20 # TPP. Show Aubrey and Chloe kissing (Try and make it look hot)
     with dissolve
 
-    play sound "sounds/kiss.mp3"
+    play sound sound.kiss
 
     pause 1.75
 
@@ -1030,7 +1030,7 @@ label v12s18_bottlespin:
     scene v12slpbs22 # TPP. Show Nora and Chloe sharing a quick peck on the lips
     with dissolve
 
-    play sound "sounds/kiss.mp3"
+    play sound sound.kiss
 
     pause 1.25
     
@@ -1569,7 +1569,7 @@ label v12s18_bet: # END OF FREE ROAM
 
         u "YOU'RE POSTING IT NOW!?"
 
-        play sound "sounds/knock.mp3"
+        play sound sound.knock
 
         scene v12slpbet6 # FPP. MC looking at the door
         with dissolve
@@ -1667,7 +1667,7 @@ label v12s18_bet: # END OF FREE ROAM
 
         am "Oooo, these are good! Damn..."
 
-        play sound "sounds/knock.mp3"
+        play sound sound.knock
 
         scene v12slpbet6
         with dissolve

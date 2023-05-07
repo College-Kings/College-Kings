@@ -115,7 +115,7 @@ label v14s05a:
         scene v14s05a_11 # TPP. Closeup of Riley and MC kissing
         with dissolve
 
-        play sound "sounds/kiss.mp3"
+        play sound sound.kiss
         pause 0.75
 
         scene v14s05a_11a # TPP. Same postion as v14s05a_11, Riley slight smile, mouth closed, MC, slight smile, mouth closed

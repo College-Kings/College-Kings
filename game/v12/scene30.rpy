@@ -19,7 +19,7 @@ label v12_room_sneak:
 
             u "(So beautiful.)"
 
-            play sound "sounds/kiss.mp3"
+            play sound sound.kiss
 
             scene v12rs3 # TPP. Show MC giving Chloe a quick kiss on the cheek, Chloe still sleeping
             with dissolve

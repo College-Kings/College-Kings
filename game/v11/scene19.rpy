@@ -347,7 +347,7 @@ label v11_roommate:
         scene v11rm9 # FPP. MC lying in his bed, looking at the door to the hallway (day)
         with dissolve
 
-        play sound "sounds/knock.mp3"
+        play sound sound.knock
 
         u "Huh?"
 

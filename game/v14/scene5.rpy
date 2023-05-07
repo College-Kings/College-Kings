@@ -153,7 +153,7 @@ label v14s05:
         scene v14s05_7 # TPP. Close up (head shot), Chloe kissing MC while he is laying in bed.
         with dissolve
 
-        play sound "sounds/kiss.mp3"
+        play sound sound.kiss
 
         pause 0.75
 

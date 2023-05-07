@@ -454,7 +454,7 @@ label fr5riley1:
             "Kiss her":
                 $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
-                play sound "sounds/kiss.mp3"
+                play sound sound.kiss
 
                 scene v9slake3 #TPP showing mc and riley kissing
                 with dissolve

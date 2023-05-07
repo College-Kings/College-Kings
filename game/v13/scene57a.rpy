@@ -26,7 +26,7 @@ label v13s57a:
 
     pause 0.75
 
-    play sound "sounds/ring.mp3"
+    play sound sound.ring
     scene v13s57a_2c # FPP. Same as v13s57a_2b, Nora holding her phone to her ear, slight smile, mouth open.
     with dissolve
 

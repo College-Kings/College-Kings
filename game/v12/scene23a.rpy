@@ -586,7 +586,7 @@ label v12_mc_chilling:
         pause 0.75
 
     else: 
-        play sound "sounds/call.mp3"
+        play sound sound.call
 
         pause 1.25
 

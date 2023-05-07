@@ -1053,7 +1053,7 @@ label v12s7_riley1:
             if CharacterService.is_fwb(chloe) or CharacterService.is_girlfriend(chloe):
                 scene v12ferri6 # TPP. Show MC kissing chloe
                 with dissolve
-                play sound "sounds/kiss.mp3"
+                play sound sound.kiss
                 
                 pause 0.75
     
@@ -1298,7 +1298,7 @@ label v12s7_chloe1:
 
         scene v12ferch4 # TPP. Show chloe kissing MC
         with dissolve
-        play sound "sounds/kiss.mp3"
+        play sound sound.kiss
 
         pause 1.5
 
@@ -1779,7 +1779,7 @@ label v12s7_lauren1:
     if CharacterService.is_girlfriend(lauren):
         scene v12ferla5 # TPP. Show lauren kissing mc.
         with dissolve
-        play sound "sounds/kiss.mp3"
+        play sound sound.kiss
 
         pause 1.5
 
@@ -1932,7 +1932,7 @@ label v12s7_lauren1:
 
         scene v12ferla6 # TPP. Show Lauren and mc kissing
         with dissolve
-        play sound "sounds/kiss.mp3"
+        play sound sound.kiss
         pause 1.5
 
     scene v12ferla1
@@ -3777,7 +3777,7 @@ label v12s7_penelope1:
 
                 scene v12ferpen6 # TPP. Show Penelope kissing mc.
                 with dissolve
-                play sound "sounds/kiss.mp3"
+                play sound sound.kiss
 
                 pause 1.5
 
@@ -4704,7 +4704,7 @@ label v12s7_sam2:
 
             scene v12fersam2 # TPP. Show mc and samantha kissing, mc's hand on samantha's cheek
             with dissolve
-            play sound "sounds/kiss.mp3"
+            play sound sound.kiss
 
             pause 1.5
 

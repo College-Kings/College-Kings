@@ -203,7 +203,7 @@ label v12_amber_after_spa:
 
         scene v12ams10 # TPP. Same positioning as v12ams2, Show Amber smacking MC on the side of the head, Amber very angry, MC startled, both mouths closed
         with vpunch
-        play sound "sounds/slap.mp3"
+        play sound sound.slap
 
         pause 1.25
 

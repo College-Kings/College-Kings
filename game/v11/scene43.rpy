@@ -650,7 +650,7 @@ label v11_at_the_bank:
         scene v11bank23 # TPP Show Ms. Rose pushing MC up against a wall and making out with him
         with dissolve
 
-        play sound "sounds/kiss.mp3"
+        play sound sound.kiss
         
         pause 1
 

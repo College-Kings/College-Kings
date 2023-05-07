@@ -357,7 +357,7 @@ label v12_nora_no_sex:
         jump v12_lindsey_lobby
 
 label v12_nora_sex:
-        play sound "sounds/kiss.mp3"
+        play sound sound.kiss
         scene v12nos15 # TPP. Nora and MC on her bed, kissing
         with dissolve
 
@@ -368,7 +368,7 @@ label v12_nora_sex:
 
         no "Is this-"
 
-        play sound "sounds/kiss.mp3"
+        play sound sound.kiss
 
         scene v12nos15a # TPP. Same as v12nos15, MC and Nora making out even more intensely
         with dissolve

@@ -11,7 +11,7 @@ label v11_nightclub_with_josh:
     with dissolve
 
     play music "music/v11/Track Scene 4_1.mp3" fadein 2
-    play sound "sounds/vibrate.mp3"
+    play sound sound.vibrate
 
     u "(Let's see who this is.)"
 
@@ -1007,7 +1007,7 @@ label v11s5_galleryScene:
 
     u "Oh fuck!"
 
-    play sound "sounds/slam.mp3"
+    play sound sound.slam
 
     scene v11swc26a # FPP Same angle as v11swc26, Dennis kicking in bedroom door, looking angry with mouth open
     with dissolve

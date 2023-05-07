@@ -13,7 +13,7 @@ label v9_call_w_lindsey:
         u "(What a jam-packed day. And this wasn't even the real deal. Tomorrow is showtime.)"
         u "(I didn't see myself going down this road when I started college, but I'm in too deep now. There's no way I'll lose, no way in hell.)"
 
-        play sound "sounds/calling.mp3"
+        play sound sound.calling
         pause 1
 
         stop sound
@@ -142,7 +142,7 @@ label v9_call_w_lindsey:
         u "(What a jam-packed day. And this wasn't even the real deal. Tomorrow is showtime.)"
         u "(I didn't see myself going down this road when I started college, but I'm in too deep now. There's no way I'll lose, no way in hell.)"
 
-        play sound "sounds/calling.mp3"
+        play sound sound.calling
         pause 1
 
         stop sound

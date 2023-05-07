@@ -230,7 +230,7 @@ label v11_Amber_Penelope:
         scene v11amp9 # TPP Show Penelope kissing MC on the cheek
         with dissolve
 
-        play sound "sounds/kiss.mp3"
+        play sound sound.kiss
 
         pause 0.75
 
@@ -242,7 +242,7 @@ label v11_Amber_Penelope:
                 $ CharacterService.set_relationship(penelope, Relationship.DATING)
                 $ reputation.add_point(RepComponent.BOYFRIEND)
 
-                play sound "sounds/kiss.mp3"
+                play sound sound.kiss
 
                 scene v11amp9a # TPP Same angle as v11amp9, MC with his hand on Penelope's cheek, kissing her on the lips
                 with dissolve

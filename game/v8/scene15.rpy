@@ -8,7 +8,7 @@ label penelope_dorm_hack:
     with Fade(0.75, 0.25, 0.75)
     pause 0.5
 
-    play sound "sounds/knock.mp3"
+    play sound sound.knock
 
     scene v8spen2 # TPP. Show MC knocking on Penelope's dorm door.
     with dissolve

@@ -10,7 +10,7 @@ label v13s33:
         scene black
         with vpunch
 
-        play sound "sounds/knock.mp3"
+        play sound sound.knock
 
         pause
 

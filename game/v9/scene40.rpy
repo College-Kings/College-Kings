@@ -31,7 +31,7 @@ label v9_wolves_pre_fight:
     scene v9wpf3 # TPP. Show MC's door.
     with dissolve
 
-    play sound "sounds/knock.mp3"
+    play sound sound.knock
 
     "*Knock* *knock*"
 

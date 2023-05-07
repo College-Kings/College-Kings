@@ -514,7 +514,7 @@ label v12_chase_robber:
     scene v12car30
     with dissolve
 
-    play sound "sounds/vibrate.mp3"
+    play sound sound.vibrate
     pause 1.25
 
     scene v12car30a # TPP Same angle as v12car30, MC sitting on the hotel room bed and checking his phone
@@ -555,7 +555,7 @@ label v12_chase_robber:
 
     # -MC hears a knock on his door-
 
-    play sound "sounds/knock.mp3"
+    play sound sound.knock
     pause 0.75
 
     stop music fadeout 3

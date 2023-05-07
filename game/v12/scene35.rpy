@@ -57,7 +57,7 @@ label v12_chris_nora_room:
 
     ch "I'm not gonna keep feeling bad all the time like all this shit is my fault. Enjoy your fucking night. I'll go sleep somewhere else!"
 
-    play sound "sounds/slam.mp3"
+    play sound sound.slam
 
     scene v12cnr7a # TPP. Same as v12cnr7, MC startled, mouth closed
     with dissolve
@@ -84,7 +84,7 @@ label v12_chris_nora_room:
 
             scene v12cnr12 # TPP. Show MC knocking on Nora's door, MC slightly worried, mouth open
             with dissolve
-            play sound "sounds/knock.mp3"
+            play sound sound.knock
 
             u "Nora, I... Are you alright?"
 

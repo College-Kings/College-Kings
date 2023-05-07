@@ -31,7 +31,7 @@ label v14s06:
 
     u "(I feel like I never even hit my head.)"
 
-    play sound "sounds/knock.mp3"
+    play sound sound.knock
 
     scene v14s06_5 # FPP. MC standing same place as v14s06_4, looking at the hotel door (door closed)
     with dissolve

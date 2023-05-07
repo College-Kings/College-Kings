@@ -233,7 +233,7 @@ label v11_cardealership:
 
     pause 0.75
 
-    play sound "sounds/revving.mp3"
+    play sound sound.revving
 
     scene v11cd52 # TPP. Show's the car pulling away from the front of the store
     with dissolve
@@ -416,7 +416,7 @@ label v11_cardealership:
                 scene v11cd32 # TPP. Mc kisses chloe romantically on the hood of the car
                 with dissolve
 
-                play sound "sounds/kiss.mp3"
+                play sound sound.kiss
 
                 pause 0.75
 
@@ -459,7 +459,7 @@ label v11_cardealership:
                             scene v11cd35 # TPP. MC picks up chloe with her legs wrapped arround him and kisses her romantically
                             with dissolve
 
-                            play sound "sounds/kiss.mp3"
+                            play sound sound.kiss
 
                             if CharacterService.is_girlfriend(lauren) and not v11_lauren_caught_aubrey:
                                 $ grant_achievement("two_timer")
@@ -509,7 +509,7 @@ label v11_cardealership:
                             scene v11cd38 # FPP. Chloe kisses MC
                             with dissolve
 
-                            play sound "sounds/kiss.mp3"
+                            play sound sound.kiss
 
                             pause 1.25
 
@@ -596,7 +596,7 @@ label v11_cardealership:
                 scene v11cd26 # FPP. Chloe gets in the car, mc is in the passanger door looking through glass, mouth opened
                 with dissolve
 
-                play sound "sounds/revving.mp3"
+                play sound sound.revving
 
                 cl "If you don't hurry, I will leave you."
 
@@ -668,7 +668,7 @@ label v11_cardealership:
         scene v11cd26 # FPP. Chloe gets in the car, mc is in the passanger door looking through glass, mouth opened
         with dissolve
 
-        play sound "sounds/revving.mp3"
+        play sound sound.revving
 
         cl "If you don't hurry, I will leave you."
 
@@ -728,7 +728,7 @@ label v11_cardealership:
 
     csa "So, will you two be purchasing the car?"
 
-    play sound "sounds/call.mp3"
+    play sound sound.call
 
     scene v11cd41 # FPP. now looking at chloe, mouth opened
     with dissolve

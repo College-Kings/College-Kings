@@ -7,7 +7,7 @@ label v10_lauren_room:
     scene v10lar1 # TPP Show MC knocking on Lauren's door.
     with fade
     play music "music/v10/Track Scene 24_1.mp3" fadein 2
-    play sound "sounds/knock.mp3"
+    play sound sound.knock
     
     pause 0.75
     
@@ -20,7 +20,7 @@ label v10_lauren_room:
         scene v10lar1a # TPP Same angle as v10lar1: MC and Lauren kiss at her door
         with dissolve
 
-        play sound "sounds/kiss.mp3"
+        play sound sound.kiss
 
         pause 0.75
 
@@ -602,7 +602,7 @@ label v10_lauren_room:
         scene v10lar1a
         with fade
 
-        play sound "sounds/kiss.mp3"
+        play sound sound.kiss
         
         pause 1
 

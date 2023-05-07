@@ -336,7 +336,7 @@ label v13s30:
 
         pause 0.75
 
-        play sound "sounds/kiss.mp3"
+        play sound sound.kiss
         scene v13s30_9a # TPP. Same as v13s30_9. Lauren kissing MC while grabbing his chin.
         with dissolve
 

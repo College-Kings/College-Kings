@@ -12,7 +12,7 @@ label seb_in_room:
 
     pause 0.5
 
-    play sound "sounds/knock.mp3"
+    play sound sound.knock
 
     scene v8ssir2 # FPP. Show the closed door of MCs room.
     with dissolve

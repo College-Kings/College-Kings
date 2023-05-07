@@ -750,7 +750,7 @@ label v11s23_penelope1:
 
                 u "Pretty sure I did."
 
-                play sound "sounds/kiss.mp3"
+                play sound sound.kiss
 
                 scene v11frmpe11 # TPP Show Penelope leaning over and kissing MC on the lips
                 with dissolve

@@ -12,7 +12,7 @@ label v9_lau_dorm:
 
     pause 0.8
 
-    play sound "sounds/knock.mp3"
+    play sound sound.knock
 
     scene v9lau2 # TPP. Show MC knocking on Lauren's dorm door.
     with dissolve
@@ -630,7 +630,7 @@ label v9_lau_dorm_kiss:
     scene v9lau17 # TPP. Show Lauren and MC kissing.
     with dissolve
 
-    play sound "sounds/kiss.mp3"
+    play sound sound.kiss
 
     pause 1
 

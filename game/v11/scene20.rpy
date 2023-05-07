@@ -331,7 +331,7 @@ label v11_treasure_hunt:
 
             u "Three... Two... One..."
 
-            play sound "sounds/gun.mp3"
+            play sound sound.gun
 
             pause 0.5
 
@@ -363,7 +363,7 @@ label v11_treasure_hunt:
             scene v11th17c # TPP. Same as v11th17b, Riley now aiming the gun at the bullseye, mouth closed, nervous expression
             with dissolve
 
-            play sound "sounds/gun.mp3"
+            play sound sound.gun
             pause 1
 
             scene v11th18a # TPP. Show a bullet mark that hit right in the middle of the bullseye
@@ -421,7 +421,7 @@ label v11_treasure_hunt:
             scene v11th17c
             with dissolve
 
-            play sound "sounds/gun.mp3"
+            play sound sound.gun
 
             pause 1
 
@@ -452,7 +452,7 @@ label v11_treasure_hunt:
 
             u "Three... Two... One..."
 
-            play sound "sounds/gun.mp3"
+            play sound sound.gun
 
             pause 0.75
 

@@ -8,7 +8,7 @@
 label v12_julia_call:
     scene black
     with fade
-    play sound "sounds/call.mp3"
+    play sound sound.call
     pause 1
 
     play music "music/v12/Track Scene 25.mp3" fadein 2

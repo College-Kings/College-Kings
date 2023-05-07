@@ -12,7 +12,7 @@ label v11_wolves_packing_chris:
     scene v10swpc2 # FPP. MC looks at the door in his Wolves room. It's closed.
     with fade
 
-    play sound "sounds/knock.mp3"
+    play sound sound.knock
 
     scene v10swpc2a # FPP. Same camera as v10swpc2. MC's door opens and Chris starts walking in. Show Chris, smiling, mouth open.
     with dissolve
@@ -361,7 +361,7 @@ label v11_wolves_packing_chris:
 
             u "(THAT. WAS. ROUGH.)"
 
-            play sound "sounds/call.mp3"
+            play sound sound.call
             pause 2.25
 
         "Don't let him":
@@ -400,7 +400,7 @@ label v11_wolves_packing_chris:
             scene v10swpc2
             with dissolve
 
-            play sound "sounds/call.mp3"
+            play sound sound.call
             pause 2.25
         
     stop music fadeout 3

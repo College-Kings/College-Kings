@@ -125,7 +125,7 @@ label v13s10:
 
             u "Who's buzzing me?"
 
-            play sound "sounds/vibrate.mp3"
+            play sound sound.vibrate
 
             $ MessengerService.new_message(aubrey, "Still getting ready, meet you in about an hour? We still have plenty of time.")
             $ MessengerService.add_reply(aubrey, "Haha, OK ")
@@ -142,7 +142,7 @@ label v13s10:
 
             u "Who's buzzing me?"
 
-            play sound "sounds/vibrate.mp3"
+            play sound sound.vibrate
 
             $ MessengerService.new_message(penelope, "Trying to finish some things for Ms. Rose, give me about an hour?")
             $ MessengerService.add_reply(penelope, "No worries, we have time.")

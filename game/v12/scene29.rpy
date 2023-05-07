@@ -751,7 +751,7 @@ label v12_lauren_sex:
 
                 scene v12las47
                 with dissolve
-                play sound "sounds/kiss.mp3"
+                play sound sound.kiss
 
                 pause
 
@@ -863,7 +863,7 @@ label v12_lauren_sex:
                 label v12s29_lauren_fingering: 
                     scene v12las54c # TPP. Same as v12las54b, MC kissing Lauren's lips, hand over her pussy
                     with dissolve
-                    play sound "sounds/kiss.mp3"
+                    play sound sound.kiss
 
                     pause
 
@@ -948,7 +948,7 @@ label v12_lauren_sex:
 
                     scene v12las58 # TPP. Show MC kissing Lauren
                     with dissolve
-                    play sound "sounds/kiss.mp3"
+                    play sound sound.kiss
 
                     pause
 
@@ -1144,7 +1144,7 @@ label v12_lauren_sex:
 
                 scene v12las72 # TPP. Show Lauren kissing MC
                 with dissolve
-                play sound "sounds/kiss.mp3"
+                play sound sound.kiss
 
                 pause
 
