@@ -608,7 +608,8 @@ label v4start:
         scene carback
         show s316
         with Fade (1,0,1)
-        play music "sounds/driving1.mp3"
+        
+        play ambience ambience.driving
 
         ju "Sooo... have you met any girls yet?"
 
@@ -629,8 +630,12 @@ label v4start:
         with dissolve
 
         u "Uhm... yeah."
+        
+        hide screen phone_icon
 
         call screen girls
+
+        show screen phone_icon
 
         label juchloe:
             $ girl = "Chloe"
@@ -755,7 +760,7 @@ label v4start:
             u "Thanks, Julia."
 
         label jucon2:
-            stop music fadeout 3
+            stop ambience fadeout 3
 
             scene s317 # you and julia at the start of clothing store there are some people there.
             with Fade (1,0,1)
@@ -2683,7 +2688,7 @@ label continueab:
             menu:
                 "Kiss her":
                     $ reputation.add_point(RepComponent.TROUBLEMAKER)
-                    $ CharacterService.set_relationship(amber, Relationship.KISSED, mc)
+                    $ CharacterService.set_relationship(amber, Relationship.KISSED)
 
                     play sound "sounds/spit.mp3"
 

@@ -1034,7 +1034,7 @@ label continuebd:
     stop music fadeout 3
     scene s484 # MC NO LONGER HAS BLACK EYE  in bed
     with Fade (1,0,1)
-    play music "music/m15punk.mp3"
+    play music music.ck1.punk15
     pause 0.5
 
     scene s484a # mc yawns
@@ -2538,7 +2538,7 @@ label fz_a:
 
     menu:
         "Kiss her back":
-            $ CharacterService.set_relationship(emily, Relationship.FWB, mc)
+            $ CharacterService.set_relationship(emily, Relationship.FWB)
             $ forgiveemily = True
 
             jump emsex_a
@@ -2644,7 +2644,7 @@ label fz_b:
 
     menu:
         "Kiss her back":
-            $ CharacterService.set_relationship(emily, Relationship.FWB, mc)
+            $ CharacterService.set_relationship(emily, Relationship.FWB)
             $ forgiveemily = True
 
             jump emsex_c
@@ -2685,7 +2685,7 @@ label fz_b:
 
     #### SEX SCENE EMILY
 label emsex_c:
-    play music "music/msexy.mp3"
+    play music music.ck1.sexy
 
     scene emvid1
     with dissolve
@@ -2720,7 +2720,7 @@ label emsex_a:
     scene emvid2
     with dissolve
 
-    play music "music/msexy.mp3"
+    play music music.ck1.sexy
 
     $ grant_achievement("reignition")
     
@@ -3996,7 +3996,7 @@ label aubreysexb: # aubreysex scene
     $ sceneList.add("v6_aubrey")
 
     stop music fadeout 3
-    play music "music/msexy.mp3"
+    play music music.ck1.sexy
 
     scene naubvid0
     with dissolve
@@ -4514,7 +4514,7 @@ label afteraubrey:
 
             #### Car scene
 
-            play music "sounds/driving1.mp3"
+            play ambience ambience.driving
 
             show carbacknight
 
@@ -4719,7 +4719,7 @@ label afteraubrey:
                     gr "We're here."
 
             label wehere: #for compatibility only
-            stop music fadeout 3
+            stop ambience fadeout 3
 
             scene s580 # Showing you and Grayson At night on a ledge, overlooking the city??? Or something else cool, Grayson looking into the distance
             with fade
@@ -4886,7 +4886,7 @@ label afteraubrey:
 
                     # back in the car, already rendered
                     # car sound and background
-                    play music "sounds/driving1.mp3"
+                    play ambience ambience.driving
                     scene carbacknight
 
                     show s579a
@@ -4929,7 +4929,7 @@ label afteraubrey:
                     with dissolve
 
                     gr "Good. Trust me, this will change everything."
-                    stop music fadeout 3
+                    stop ambience fadeout 3
 
                 "I'm not in":
                     $ reputation.add_point(RepComponent.BRO)
@@ -5116,7 +5116,7 @@ label wakeupa:
     with flash
 
     u "*Breathing heavily* (Holy shit... thank god that was just a dream.)"
-    play music "music/m15punk.mp3"
+    play music music.ck1.punk15
 
     queue music ["music/mfunk.mp3"]
 
@@ -5258,7 +5258,7 @@ label wakeupa:
         with dissolve
 
         pause 0.5
-        play sound "sounds/bs.mp3"
+        play sound sound.hit
         scene s599a # Imre throws uppercut, bag barely moves
         with vpunch
 
@@ -5305,7 +5305,7 @@ label wakeupa:
         with fade
 
         pause 0.5
-        play sound "sounds/bs.mp3"
+        play sound sound.hit
         scene s600a # mc throws an uppercut successfully
         with vpunch
 
@@ -5316,7 +5316,7 @@ label wakeupa:
 
         imre "Nice! Try again."
 
-        play sound "sounds/bs.mp3"
+        play sound sound.hit
         scene s600a
         with vpunch
 
@@ -5326,7 +5326,7 @@ label wakeupa:
         with dissolve
 
         pause 0.5
-        play sound "sounds/bs.mp3"
+        play sound sound.hit
         scene s600a
         with vpunch
 

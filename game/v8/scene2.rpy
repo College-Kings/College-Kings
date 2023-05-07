@@ -1,6 +1,6 @@
 ### SCENE 2: Chloe v7 ending continued
 label v8_cl_start:
-    $ CharacterService.set_relationship(chloe, Relationship.FWB, mc)
+    $ CharacterService.set_relationship(chloe, Relationship.FWB)
     $ sceneList.add("v8_chloe")
 
     # Note to renderers: Make sure the MC is in his suit and any other props are the same as Chloe's ending in v7
@@ -25,7 +25,7 @@ label v8_cl_start:
     with dissolve
     u "So bad."
 
-    play music "music/msexy.mp3"
+    play music music.ck1.sexy
     scene v8s13 # TPP (lateral shot). Chloe pushing MC (who is sitting) into the bed playfully with one hand
     with hpunch
     cl "Good."

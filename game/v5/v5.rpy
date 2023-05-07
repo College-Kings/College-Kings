@@ -1131,7 +1131,8 @@ label gokissb:
 label continuetrolley:
     stop music fadeout 3
 
-    play music "sounds/train.mp3"
+    play ambience ambience.train
+
     scene s383a # you looking at lauren mouth closed on train
     with dissolve
 
@@ -1213,7 +1214,7 @@ label trolleyab: # you do press the lever
     u "Holy fuck..."
 
 label continueam:
-    stop music
+    stop ambience
 
     scene s382a
     with flash
@@ -1242,7 +1243,7 @@ label continueam:
             scene s383a
             with Fade (1,0,0.5)
 
-            play music "sounds/train.mp3"
+            play ambience ambience.train
 
             u "Okay, done."
 
@@ -1325,7 +1326,7 @@ label trolleybb: # you do press the lever
     u "Ahh fuck!"
 
 label continuean:
-    stop music
+    stop ambience
 
     scene s382a
     with flash
@@ -1352,7 +1353,8 @@ label continuean:
 
             scene s383a
             with Fade (1,0,0.5)
-            play music "sounds/train.mp3"
+
+            play ambience ambience.train
 
             u "Okay, I'm on the train."
 
@@ -1438,7 +1440,7 @@ label trolleycb: # you do press the lever
     u "Oh my god!"
 
 label continueao:
-    stop music
+    stop ambience
 
     scene s382a
     with flash
@@ -1915,7 +1917,7 @@ label continueaf:
         if reputation() == Reputations.LOYAL:
             call screen reputation_popup
 
-            $ CharacterService.set_relationship(lauren, Relationship.GIRLFRIEND, mc)
+            $ CharacterService.set_relationship(lauren, Relationship.GIRLFRIEND)
 
             scene s380b
             with dissolve
@@ -2019,7 +2021,7 @@ label continueaf:
             jump gotest
 
     else:
-        $ CharacterService.set_relationship(lauren, Relationship.GIRLFRIEND, mc)
+        $ CharacterService.set_relationship(lauren, Relationship.GIRLFRIEND)
 
         scene s380b
         with dissolve
@@ -2193,8 +2195,8 @@ label continueaf:
 
 label hospitala:
     stop music fadeout 3
+    play ambience ambience.bus
 
-    play music "sounds/bus.mp3"
     scene s399 #Riley and and MC are on the bus. They look at each other affectionately. MC readjusts awkwardly.
     with Fade (1,0,1)
 
@@ -2238,7 +2240,7 @@ label hospitala:
     u "Mhmmm..."
 
     pause 0.5
-    stop music fadeout 3
+    stop ambience
 
     play sound "sounds/busstop.mp3"
 
@@ -2324,7 +2326,7 @@ label hospitala:
     scene s407 #Riley, MC, and Imre are now all sitting on the bus towards the back.
     with fade
 
-    play music "sounds/bus.mp3"
+    play ambience ambience.bus
 
     pause 1.0
 
@@ -2449,7 +2451,7 @@ label hospitala:
     with dissolve
 
     pause 0.5
-    stop music fadeout 3
+    stop ambience fadeout 3
 
     scene s416 # Imre, Mc and Riley in front of your dorm
     with Fade(1,0,1)
@@ -2820,7 +2822,7 @@ label hospitala:
     image af2 = Movie(play="images/v5/af2.webm", start_image="images/v5/af2start.webp", image="images/v5/af2pic.webp", loop = False)
 
 
-    play sound "sounds/hs.mp3"
+    play sound sound.hit
     scene af0close
     with hpunch
 
@@ -2852,7 +2854,6 @@ label hospitala:
 
     scene af4
 
-    # TODO: Update Adam Fight
     call screen confirm(_("Would you like to play the fighting tutorial?"),
         yes_action=[SetVariable("fight_tutorial", True), Call("fight_tutorialLabel")],
         no_action=[SetVariable("fight_tutorial", False), Return()])
@@ -2986,7 +2987,7 @@ label hospitala:
 
     label adamhookhit:
 
-        play sound "sounds/hs.mp3"
+        play sound sound.hit
         $ youDamage += 1
         scene adamhookhit
         with hpunch
@@ -3038,7 +3039,7 @@ label hospitala:
 
     label adamhookblocked:
 
-        play sound "sounds/bs.mp3"
+        play sound sound.hit
         scene adamhookblock
         with hpunch
 
@@ -3089,7 +3090,7 @@ label hospitala:
 
     label adamjabhit:
 
-        play sound "sounds/js.mp3"
+        play sound sound.hit
         $ youDamage += 1
         scene adamjabhit
         with hpunch
@@ -3141,7 +3142,7 @@ label hospitala:
 
     label adamjabblocked:
 
-        play sound "sounds/bs.mp3"
+        play sound sound.hit
         scene adamjabblock
         with hpunch
 
@@ -3192,7 +3193,7 @@ label hospitala:
 
     label adambodyhit:
 
-        play sound "sounds/hs.mp3"
+        play sound sound.hit
         $ youDamage += 1
         scene adambodyhit
         with hpunch
@@ -3244,7 +3245,7 @@ label hospitala:
 
     label adambodyblocked:
 
-        play sound "sounds/bs.mp3"
+        play sound sound.hit
         scene adambodyblock
         with hpunch
 
@@ -3295,7 +3296,7 @@ label hospitala:
 
     label adamkickhit:
 
-        play sound "sounds/ks.mp3"
+        play sound sound.hit
         $ youDamage += 1
         scene adamkickhit
         with hpunch
@@ -3347,7 +3348,7 @@ label hospitala:
 
     label adamkickblocked:
 
-        play sound "sounds/ks.mp3"
+        play sound sound.hit
         scene adamkickblock
         with hpunch
 
@@ -3415,7 +3416,7 @@ label hospitala:
             $ adamdmg += 1
             scene af11
             $ renpy.pause(0.7)
-            play sound "sounds/ks.mp3"
+            play sound sound.hit
             scene af11close
             with hpunch
 
@@ -3426,7 +3427,7 @@ label hospitala:
 
             scene af12
             $ renpy.pause(0.7)
-            play sound "sounds/ks.mp3"
+            play sound sound.hit
             scene af12close
             with hpunch
 
@@ -3453,7 +3454,7 @@ label hospitala:
             $ adamdmg += 1
             scene af5
             $ renpy.pause(0.7)
-            play sound "sounds/hs.mp3"
+            play sound sound.hit
             scene af5close
             with hpunch
 
@@ -3464,7 +3465,7 @@ label hospitala:
 
             scene af6
             $ renpy.pause(0.7)
-            play sound "sounds/bs.mp3"
+            play sound sound.hit
             scene af6close
             with hpunch
 
@@ -3490,7 +3491,7 @@ label hospitala:
             $ adamdmg += 1
             scene af7
             $ renpy.pause(0.7)
-            play sound "sounds/js.mp3"
+            play sound sound.hit
             scene af7close
             with hpunch
 
@@ -3501,7 +3502,7 @@ label hospitala:
 
             scene af8
             $ renpy.pause(0.7)
-            play sound "sounds/bs.mp3"
+            play sound sound.hit
             scene af8close
             with hpunch
 
@@ -3527,7 +3528,7 @@ label hospitala:
             $ adamdmg += 1
             scene af9
             $ renpy.pause(0.7)
-            play sound "sounds/hs.mp3"
+            play sound sound.hit
             scene af9close
             with hpunch
 
@@ -3538,7 +3539,7 @@ label hospitala:
 
             scene af10
             $ renpy.pause(0.7)
-            play sound "sounds/bs.mp3"
+            play sound sound.hit
             scene af10close
             with hpunch
 
@@ -3567,7 +3568,7 @@ label fl_a:  # tell the school
     with Fade(1,0,1)
     play sound "sounds/dooropen.mp3"
     pause 0.5
-    play music "music/m15punk.mp3"
+    play music music.ck1.punk15
     scene s424 #cam behind MC walks into the counselor's office. She is sitting at her desk.
     with dissolve
 

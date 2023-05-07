@@ -73,7 +73,7 @@ label v11_imre_ryan_grapple:
     scene v11irg3a # TPP. Same as v11irg3, Ryan reaching past Mr Lee, Ryan hitting Imre on the jaw, Imre startled, mouth closed, Ryan angry, mouth closed
     with dissolve
 
-    play sound "sounds/hs.mp3"
+    play sound sound.hit
 
     pause 0.75
 

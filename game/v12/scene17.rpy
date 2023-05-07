@@ -764,7 +764,7 @@ label v12_escape_room:
 
     imre "I don't care if his fucking non-existent balls freeze off, I'm not touchin- *inaudible*."
 
-    play music "sounds/driving1.mp3"
+    play ambience ambience.driving
 
     scene v12esr29 # FPP. Same positioning as v12esr28, MC and Lindsey looking at each other, Lindsey slightly worried, mouth open
     with dissolve
@@ -796,7 +796,7 @@ label v12_escape_room:
 
     u "That we do..."
 
-    stop music fadeout 3
+    stop ambience fadeout 3
     play music "music/v12/Track Scene 17_4.mp3" fadein 2
 
     if CharacterService.is_girlfriend(chloe):
@@ -895,7 +895,7 @@ label v12_lindsey_kiss_or_not:
             pause 1.5
 
             if CharacterService.is_kissed(lindsey) or reputation() == Reputations.POPULAR or len(v12s7_killList) >= 5:
-                if CharacterService.is_friend(lindesy) and not len(v12s7_killList) >= 5:
+                if CharacterService.is_friend(lindsey) and not len(v12s7_killList) >= 5:
                     call screen reputation_popup
                 jump v12_lindsey_sex
             
@@ -930,7 +930,7 @@ label v12_lindsey_kiss_or_not:
 
 label v12_lindsey_sex:
     $ sceneList.add("v12_lindsey")
-    $ CharacterService.set_relationship(lindsey, Relationship.FWB, mc)
+    $ CharacterService.set_relationship(lindsey, Relationship.FWB)
 
     scene v12esr29g # FPP. Same as v12esr29c, Lindsey eyes open, slight smile, mouth open, face close to MC
     with dissolve

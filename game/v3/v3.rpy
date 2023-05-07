@@ -1067,7 +1067,7 @@ label conl:
 
             pause 0.5
 
-            play sound "sounds/ks.mp3"
+            play sound sound.hit
 
             scene s240d # you doing complicated kick
             with vpunch
@@ -1107,7 +1107,7 @@ label conl:
 
     pause 0.5
 
-    play sound "sounds/ks.mp3"
+    play sound sound.hit
 
     scene s240a
     with vpunch
@@ -1119,7 +1119,7 @@ label conl:
 
     pause 0.5
 
-    play sound "sounds/ks.mp3"
+    play sound sound.hit
 
     scene s240b
     with vpunch
@@ -1131,7 +1131,7 @@ label conl:
 
     pause 0.5
 
-    play sound "sounds/ks.mp3"
+    play sound sound.hit
 
     scene s240c
     with vpunch
@@ -1314,7 +1314,7 @@ label conl:
 
     imre "It's quite simple. Whenever your opponent leaves his torso open you simply use your left arm to throw a body hook."
 
-    play sound "sounds/ks.mp3"
+    play sound sound.hit
 
     scene s248f # imre hitting punching bag
     with vpunch
@@ -1336,7 +1336,7 @@ label conl:
 
     pause 0.5
 
-    play sound "sounds/ks.mp3"
+    play sound sound.hit
 
     scene s249a
     with vpunch
@@ -1348,7 +1348,7 @@ label conl:
 
     pause 0.5
 
-    play sound "sounds/ks.mp3"
+    play sound sound.hit
 
     scene s249a
     with vpunch
@@ -2080,7 +2080,7 @@ label conl:
                 $ sceneList.add("v3_aubrey")
 
                 stop music fadeout 3
-                play music "music/msexy.mp3"
+                play music music.ck1.sexy
 
                 scene aub1
                 pause 1.0

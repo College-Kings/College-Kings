@@ -47,7 +47,7 @@ label v10_imre_vs_caleb_fight:
     scene v10ivc9a # TPP. Same as ivc9, show Imre, returning from his dodge with a punch square to Caleb's jaw, Caleb in pain, begins to fall.
     with hpunch
 
-    play sound "sounds/hs.mp3"
+    play sound sound.hit
 
     pause 0.75
 

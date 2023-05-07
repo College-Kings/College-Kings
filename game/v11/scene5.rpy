@@ -765,7 +765,7 @@ label v11_nightclub_with_josh:
 
         "Act like family":
             $ sceneList.add("v11_candy")
-            $ CharacterService.set_relationship(candy, Relationship.FWB, mc)
+            $ CharacterService.set_relationship(candy, Relationship.FWB)
 
             scene v11swc16e # TPP Same angle and characters as v11swc16, MC puts one hand on his waist, stands in a faminine way, and holds his other hand up, wrist limp
             with dissolve

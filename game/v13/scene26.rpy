@@ -5,7 +5,7 @@
 
 label v13_emmy_sex:
     $ sceneList.add("v13_emmy")
-    $ CharacterService.set_relationship(emmy, Relationship.FWB, mc)
+    $ CharacterService.set_relationship(emmy, Relationship.FWB)
 
     play music "music/v13/Track Scene 26.mp3" fadein 2
 

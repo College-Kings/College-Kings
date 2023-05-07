@@ -22,41 +22,13 @@ image transparent_bar = Frame("#0000")
 image choice_button_idle = Frame("gui/choice/button_idle.webp", 40, 8)
 image choice_button_hover = Frame("gui/choice/button_hover.webp", 40, 8)
 
-#region End Screen
-image end_screen_background:
-    "gui/end_screen/end_01.webp" with dissolve
-    pause 5.0
-    
-    "gui/end_screen/end_02.webp" with dissolve
-    pause 5.0
-
-    "gui/end_screen/end_03.webp" with dissolve
-    pause 5.0
-
-    "gui/end_screen/end_04.webp" with dissolve
-    pause 5.0
-
-    "gui/end_screen/end_05a.webp" with dissolve
-    pause 5.0
-
-    repeat
-
-image end_screen_text = "gui/end_screen/end_text.webp"
-
-image patreon_credits = Movie(play="gui/end_screen/patreon_credits.webm")
-#endregion End Screen
-
 #region Main Menu
 image main_menu_background = "gui/main_menu/background.webp"
 image main_menu_patreon_idle = "gui/main_menu/patreon_idle.webp"
 image main_menu_patreon_hover = Transform("gui/main_menu/patreon_hover.webp", pos=(-18, -14))
 image main_menu_discord_idle = "gui/main_menu/discord_idle.webp"
 image main_menu_discord_hover = "gui/main_menu/discord_hover.webp"
-
 #endregion Main Menu
-
-## KCT Choice Hint
-image kct_choice_hint_background = Frame("gui/kct/background.webp", 44, 6, 44, 0) 
 
 ## Path Builder
 image path_builder_button_idle = Frame("main_menu/path_builder/images/button_idle.webp", 24, 6)
@@ -241,6 +213,21 @@ image calm_down_big_fella = "images/achievements/v13/calm_down_big_fella.webp"
 image ready_player_three = "images/achievements/v14/ready_player_three.webp"
 image saving_ryans_privates = "images/achievements/v14/saving_ryans_privates.webp"
 
+#region Common
+image girl_button_idle = "images/common/girl_button_idle.webp"
+image girl_button_hover = "images/common/girl_button_hover.webp"
+image girl_button_insensitive = Transform("girl_button_idle", matrixcolor=SaturationMatrix(0))
+
+#region Free Roam
+image free_roam_top = "images/common/free_roam_highlights/top.webp"
+image free_roam_right = "images/common/free_roam_highlights/right.webp"
+image free_roam_bottom = "images/common/free_roam_highlights/bottom.webp"
+image free_roam_left = "images/common/free_roam_highlights/left.webp"
+image free_roam_vertical_transparent = Transform("free_roam_top", alpha=0.0)
+image free_roam_horizontal_transparent = Transform("free_roam_right", alpha=0.0)
+#endregion Free Roam
+#endregion Common
+
 # v1.0 - v2.0
 image s14 = "images/v1/s14.webp"
 image s14a = "images/v1/s14a.webp"
@@ -317,12 +304,13 @@ image asexnew13 = Movie(play="images/v3/asexnew13.webm", loop=False, image="imag
 
 image rikiss2 = Movie(play="images/v3/rikiss.webm", loop=False, image="images/v3/rikiss.webp", start_image="images/v3/rikiss.webp")
 
-# v4.0
+#region v4.0
 image s316 = "images/v4/s316.webp" # Julia looking forward talking smiling
 image s316a = "images/v4/s316a.webp" # Julia looking forward talking smiling mouth closed
 image s316c = "images/v4/s316c.webp" # Julia looking forward curious
 image s316d = "images/v4/s316d.webp" # Julia looking forward curious mouth closed
 image s316b = "images/v4/s316b.webp" # Julia looking at you smiling mouth open
+#endregion v4.0
 
 # v5.0
 image af5 = Movie(play="images/v5/af5.webm", start_image="images/v5/af5start.webp", image="images/v5/af5pic.webp", loop=False)
@@ -487,5 +475,16 @@ image Imre_Jab_block = "images/v10/Scene 7/Animations/END/MCIMRE-JABBLOCKED-END.
 image Imre_Kick_hit = "images/v10/Scene 7/Animations/END/MCIMRE-KICKHIT-END.webp"
 image Imre_Kick_block = "images/v10/Scene 7/Animations/END/MCIMRE-KICKBLOCKED-END.webp"
 
-# Misc
-image credits = Movie(play="images/credits.webm", Loop = True)
+#region v12.0
+image v12s7_left_walkway_front_background_a = "images/v12/Scene 7/Screens/Navigation 12a.webp"
+image v12s7_left_walkway_front_background_b = "images/v12/Scene 7/Screens/Navigation 12b.webp"
+
+image v12s7_left_walkway_front_door_idle = Transform("v12s7_left_walkway_front_door_hover", alpha=0.0)
+image v12s7_left_walkway_front_door_hover = "images/v12/Scene 7/Buttons/v12s7_left_walkway_front_door.png"
+
+image v12s7_left_walkway_front_penelope_idle = Transform("v12s7_left_walkway_front_penelope_hover", alpha=0.0)
+image v12s7_left_walkway_front_penelope_hover = "images/v12/Scene 7/Buttons/v12s7_left_walkway_front_penelope.png"
+
+image v12s7_left_walkway_front_right_idle = Transform("v12s7_left_walkway_front_right_hover", alpha=0.0)
+image v12s7_left_walkway_front_right_hover = "images/v12/Scene 7/Buttons/v12s7_left_walkway_front_right.png"
+#endregion v12.0

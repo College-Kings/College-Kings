@@ -420,7 +420,7 @@ label v13s29:
 
     gary "You know I do."
 
-    play sound "sounds/js.mp3"
+    play sound sound.hit
     scene v13s29_24 # TPP. Show Amber angry, kneeing Gary in the nuts, Gary in pain, both mouths open
     with vpunch
 

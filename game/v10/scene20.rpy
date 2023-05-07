@@ -13,9 +13,6 @@ label v10_room_mon_night:
 
         play sound sound.vibrate
 
-        if simplr_app not in phone.applications:
-            $ phone.applications.append(simplr_app)
-
         python:
             v10s20_reply1 = MessageBuilder(josh)
             v10s20_reply1.set_variable("v10_simplr_known", True)

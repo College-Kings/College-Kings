@@ -39,4 +39,4 @@ label v14_end:
 
     pause
 
-    call screen end_screen
+    call screen ck1_end_screen

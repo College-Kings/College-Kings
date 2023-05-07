@@ -18,7 +18,7 @@ label v8_ri_start:
     with dissolve
     ri "I'd rather show you instead."
 
-    play music "music/msexy.mp3" ###CHECK - Maybe add more sexy time music?
+    play music music.ck1.sexy ###CHECK - Maybe add more sexy time music?
 
     scene v8s26a # Riley's dress is off now. She's wearing a sexy red lingerie underneath and showing off her body, seductive expression and mouth closed
     with fade

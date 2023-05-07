@@ -5,7 +5,7 @@ label starta: #for compatibility only
 
     show fantasyoverlay onlayer foreground
 
-    play music "music/msexy.mp3"
+    play music music.ck1.sexy
     
     scene s0a
     with dissolve
@@ -30,7 +30,7 @@ label starta: #for compatibility only
     scene s1b
     with dissolve
 
-    play music "music/m15punk.mp3"
+    play music music.ck1.punk15
 
     if not config_debug:
         $ mc.username = name = renpy.input(_("What's your name?"), default=name).strip() or _("Alex")
@@ -161,7 +161,7 @@ label starta: #for compatibility only
     scene carback
     show s14
     with fade
-    play music "sounds/driving1.mp3"
+    play ambience ambience.driving
 
     ju "You know, when I was in college, there were these fraternities and sororities that everyone wanted to join."
 
@@ -267,7 +267,7 @@ label starta: #for compatibility only
 
     u "(I wonder if he's still dealing...)"
 
-    stop music fadeout 3
+    stop ambience fadeout 3
 
     car "*stops*"
 
@@ -1210,7 +1210,7 @@ label starta: #for compatibility only
 
         scene adamaubrey36
         stop music fadeout 3
-        play music "music/msexy.mp3"
+        play music music.ck1.sexy
         show adam1
 
         au "Ohhh shit, that feels good!"
@@ -2088,7 +2088,7 @@ label at_bd:
 
     u "Probably not for a few hours yet."
 
-    play music "music/msexy.mp3"
+    play music music.ck1.sexy
 
     if not _in_replay:
         if not is_censored:

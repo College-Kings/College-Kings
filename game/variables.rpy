@@ -189,7 +189,6 @@ default menu_set = set()
 
 default is_censored = False
 default label_history = []
-default name = _("Alex")
 default real_life_mode = False
 
 # Recap 
@@ -208,7 +207,6 @@ default reputation_app = Application(_("Reputation"))
 default calendar = Application(_("Calendar"))
 
 #region Kiwii
-default kiwii_first_time = False
 default kiwii_posts = []
 #endregion Kiwii
 #endregion Phone
@@ -248,55 +246,6 @@ default sex_overlay_options = []
 
 # Splashscreen
 default persistent.confirm_18 = False
-
-#region NonPlayableCharacters
-default aaron = NonPlayableCharacter("Aaron", "DoubleARon")
-default amber = NonPlayableCharacter("Amber", "Amber_xx")
-default anon = NonPlayableCharacter("Anon", "concerned1")
-default aubrey = NonPlayableCharacter("Aubrey", "Aubs123")
-default autumn = NonPlayableCharacter("Autumn", "Its_Fall")
-default beth = NonPlayableCharacter("Beth")
-default buyer = NonPlayableCharacter("Buyer")
-default caleb = NonPlayableCharacter("Caleb", "Aleb")
-default cameron = NonPlayableCharacter("Cameron", "Cameroon")
-default charli = NonPlayableCharacter("Charli", "CharliAndTheCockFactory")
-default chloe = NonPlayableCharacter("Chloe", "Chloe101")
-default chris = NonPlayableCharacter("Chris", "Chriscuit")
-default dean = NonPlayableCharacter("Dean")
-default elijah = NonPlayableCharacter("Elijah", "Elijah_Woods")
-default emily = NonPlayableCharacter("Emily", "emilyyyy")
-default emmy = NonPlayableCharacter("Emmy")
-default grayson = NonPlayableCharacter("Grayson", "G-rayson")
-default imre = NonPlayableCharacter("Imre", "BadBoyImre")
-default iris = NonPlayableCharacter("Iris")
-default jenny = NonPlayableCharacter("Jenny")
-default josh = NonPlayableCharacter("Josh", "Josh80085")
-default julia = NonPlayableCharacter("Julia")
-default lauren = NonPlayableCharacter("Lauren", "LoLoLauren")
-default lews_official = NonPlayableCharacter("Lews Official", "LewsOfficial")
-default lindsey = NonPlayableCharacter("Lindsey", "LindsLou")
-default mason = NonPlayableCharacter("Mason", "Mason_Mas")
-default mr_lee = NonPlayableCharacter("Mr Lee")
-default ms_rose = NonPlayableCharacter("Ms Rose")
-default naomi = NonPlayableCharacter("Naomi", "NaomiXMarie")
-default nora = NonPlayableCharacter("Nora", "Nora_12")
-default parker = NonPlayableCharacter("Parker")
-default perry = NonPlayableCharacter("Perry")
-default penelope = NonPlayableCharacter("Penelope", "Penelopeeps")
-default polly = NonPlayableCharacter("Polly")
-default riley = NonPlayableCharacter("Riley", "RileyReads")
-default ryan = NonPlayableCharacter("Ryan", "Ryanator")
-default samantha = NonPlayableCharacter("Samantha", "SamFromSpaceJam")
-default sebastian = NonPlayableCharacter("Sebastian", "Big Seb")
-default tom = NonPlayableCharacter("Tom")
-default trainer = NonPlayableCharacter("Trainer")
-default wolf = NonPlayableCharacter("Wolf")
-#endregion NonPlayableCharacters
-
-#region PlayableCharacters
-default mc = PlayableCharacter()
-#endregion PlayableCharacters
-
 #endregion Init
 
 # 1.0 - 6.0
@@ -555,6 +504,7 @@ default v13s48_canoeing_as_date = False
 default v13s48_get_aubrey_chocolate = False
 default v13s48_ryan_double_date = False
 default v13s9_go_to_concert = False
+default v13_cameron_and_mc_friends = False
 
 # 14.0
 # Animated Bar

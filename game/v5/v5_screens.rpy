@@ -198,7 +198,7 @@ screen youattack2():
 
         timer 0.1 action Jump(renpy.random.choice(labels))
 
-    use fight_overlay # TODO: Update fight code
+    use fight_overlay
 
 
 screen adamattack():
@@ -400,7 +400,7 @@ screen adamattack():
 
         timer 0.1 action Jump(renpy.random.choice(labels))
 
-    use fight_overlay # TODO: Update fight code
+    use fight_overlay
 
 
 screen trolleyProblem(option1, option2):

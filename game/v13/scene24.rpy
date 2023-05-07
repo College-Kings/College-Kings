@@ -278,9 +278,6 @@ label v13s24:
 
     emmy "Hello boys! *Chuckles* It's nice to meet you all."
 
-    if emmy.simplr in simplr_app.contacts: #for v12-v13 compatibility
-        $ v12s24_emmymatch = True
-
     if v12s24_emmymatch:
         scene v13s24_17 # FPP. emmy recognizes MC, eyebrow raised, slight smile, mouth closed
         with dissolve

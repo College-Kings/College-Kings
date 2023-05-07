@@ -3,7 +3,7 @@ define config.enable_steam = False
 define config.console = True
 define config_debug = False # Automatic Testing
 
-define config.version = (1, 2, 11)
+define config.version = (1, 3, 2)
 
 define config.steam_appid = 1463120
 define config.image_cache_size_mb = 520
@@ -13,7 +13,7 @@ define config.label_callback = label_callback
 define _quit_slot = "99-1"
 
 
-label path_builder():
+label path_builder:
     $ quick_menu = False
     
     call screen path_builder_starting_location

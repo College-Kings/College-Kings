@@ -1357,10 +1357,12 @@ label conyourdorm:
 
         play sound sound.vibrate
 
+        $ show_kiwii_popup = MessageBuilder(riley)
+        $ show_kiwii_popup.new_message(_("Check Kiwii..."))
+        $ show_kiwii_popup.add_function(renpy.show_screen, "kiwiiPopup")
+
         $ MessengerService.new_message(riley, _("Are you and Emily back together?"))
-        $ MessengerService.add_reply(riley, _("What are you talking about???"))
-        $ MessengerService.new_message(riley, _("Check Kiwii..."))
-        $ kiwii_first_time = True
+        $ MessengerService.add_reply(riley, _("What are you talking about???"), show_kiwii_popup)
 
         pause 0.5
 
@@ -1374,9 +1376,9 @@ label conyourdorm:
             if MessengerService.has_replies(riley):
                 u "(I need to respond to some of these messages.)"
 
-        while kiwii_first_time:
+        while v7_kiwiiPost4.replies:
             call screen phone
-            if kiwii_first_time:
+            if v7_kiwiiPost4.replies:
                 u "(I should check out what Emily posted on Kiwii.)"
 
         while MessengerService.has_replies(penelope):
@@ -1598,11 +1600,12 @@ label conyourdorm:
     else:
         play sound sound.vibrate
 
+        $ show_kiwii_popup = MessageBuilder(riley).add_function(renpy.show_screen, "kiwiiPopup")
+
         $ MessengerService.new_message(riley, _("Hey, how come you're not on Kiwii?"))
         $ MessengerService.add_reply(riley, _("What's that?"))
         $ MessengerService.new_message(riley, _("It's a new social media app, you should give it a try"))
-        $ MessengerService.add_reply(riley, _("Okay, I'll have a look"))
-        $ kiwii_first_time = True
+        $ MessengerService.add_reply(riley, _("Okay, I'll have a look"), show_kiwii_popup)
 
         pause 0.5
 
@@ -2064,7 +2067,7 @@ label thisbelauren:
         "Deny the cheating":
             $ reputation.add_point(RepComponent.BRO)
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
-            $ CharacterService.set_relationship(lauren, Relationship.GIRLFRIEND, mc)
+            $ CharacterService.set_relationship(lauren, Relationship.GIRLFRIEND)
 
             u "I know how this looks."
 
@@ -4686,7 +4689,7 @@ label aftercall:
 
 ######## SCENE 14 APES
 label pledgeapes:
-    $ reputation.add_point(Reputations.TROUBLEMAKER, 3) # I think more TM points for joining the Apes makes sense
+    $ reputation.add_point(RepComponent.TROUBLEMAKER, 3) # I think more TM points for joining the Apes makes sense
     $ joinwolves = False
 
     scene s756 # Not a new render
@@ -6592,7 +6595,7 @@ label hc_asking_amber:
             "Alright, I'm in":
                 $ reputation.add_point(RepComponent.TROUBLEMAKER)
                 $ hcGirl = "amber"
-                $ CharacterService.set_relationship(amber, Relationship.FWB, mc)
+                $ CharacterService.set_relationship(amber, Relationship.FWB)
 
                 scene s919e
                 with dissolve
@@ -6979,7 +6982,7 @@ label hc_asking_lauren:
         if not beachfirstkiss:
             call screen reputation_popup
 
-        $ CharacterService.set_relationship(lauren, Relationship.GIRLFRIEND, mc)
+        $ CharacterService.set_relationship(lauren, Relationship.GIRLFRIEND)
 
         scene s967b # lauren laughing
         with dissolve
@@ -7432,7 +7435,7 @@ label cameron_thurs_tasks:
 
     u "Alright, what's up first?"
 
-    play music "music/m15punk.mp3"
+    play music music.ck1.punk15
     queue music [ "music/m11punk.mp3", "music/m6punk.mp3" ]
 
     scene scc17 # FPP. Close up Cameon, with heavy dute construction glue in hand, grin on face.
@@ -8914,7 +8917,7 @@ label rileytext:
 #### RIley Sex Scene, if riley rs = True, you get a message in your dorm from Riley telling you that her roommate isnt home and if you wanna come over. Since you already did stuff, you say yes.
 # It's thurday night
 label rileysexscene:
-    $ CharacterService.set_relationship(riley, Relationship.FWB, mc)
+    $ CharacterService.set_relationship(riley, Relationship.FWB)
     $ sceneList.add("v7_riley")
 
     if joinwolves:
@@ -8945,7 +8948,7 @@ label rileysexscene:
 
     scene ridrm2b
     with vpunch
-    play music "music/msexy.mp3"
+    play music music.ck1.sexy
 
     pause 0.5
 

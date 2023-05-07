@@ -1,24 +1,24 @@
 init python:
     def v12s7_kill(char_obj: NonPlayableCharacter):
         # Check Competitive stat
-        if char_obj.stats["Competitive"] and len(v12s7_killList) < 3:
+        if char_obj.is_competitive and len(v12s7_killList) < 3:
             char_obj.points -= 1
-        elif not char_obj.stats["Competitive"] and len(v12s7_killList) < 3:
+        elif not char_obj.is_competitive and len(v12s7_killList) < 3:
             char_obj.points += 1
 
         # Check Vindictive stat
-        for character in char_obj.stats["Vindictive"]:
+        for character in char_obj.vindictive_characters:
             if character in v12s7_killList:
                 char_obj.points += 1
             else:
                 char_obj.points -= 1
 
         # Check Talkative stat
-        if char_obj.stats["Talkative"] and char_obj in v12s7_endtalkList:
+        if char_obj.is_talkative and char_obj in v12s7_endtalkList:
             char_obj.points += 1
-        elif char_obj.stats["Talkative"]:
+        elif char_obj.is_talkative:
             char_obj.points -= 1
-        elif not char_obj.stats["Talkative"] and char_obj in v12s7_endtalkList:
+        elif not char_obj.is_talkative and char_obj in v12s7_endtalkList:
             char_obj.points -= 1
 
         # Add character to kill list
@@ -489,23 +489,38 @@ screen v12s7_bow():
 screen v12s7_left_walkway_front():
     tag free_roam
 
-    imagemap:
-        if v11_pen_goes_europe and penelope not in v12s7_killList:
-            idle "images/v12/Scene 7/Screens/Navigation 12a.webp" # Penelope
-        else:
-            idle "images/v12/Scene 7/Screens/Navigation 12b.webp"
-        hover "images/v12/Scene 7/Buttons/nav 12.webp"
-
-        if v11_pen_goes_europe and penelope not in v12s7_killList:
-            hotspot (223, 326, 752, 656):
-                if "penelope" in freeroam9:
-                    action Call("v12s7_free_roam_spoken", backgroundImg="v12ferpen1", returnScreen="v12s7_left_walkway_front", seenList=[], victim=penelope)
-                else:
-                    action Jump("v12s7_penelope1") #penelope
+    if v11_pen_goes_europe and penelope not in v12s7_killList:
+        add "v12s7_left_walkway_front_background_a" # Penelope
+    else:
+        add "v12s7_left_walkway_front_background_b"
         
-        hotspot (1003, 288, 251, 492) action Show("v12s7_foyer")
-        hotspot (1693, 73, 140, 787) action Show("v12s7_rear_gallery")
-        hotspot (353, 984, 1158, 96) action Show("v12s7_left_walkway_middle")
+    if v11_pen_goes_europe and penelope not in v12s7_killList:
+        imagebutton:
+            idle "v12s7_left_walkway_front_penelope_idle"
+            hover "v12s7_left_walkway_front_penelope_hover"
+            pos (223, 327)
+            if "penelope" in freeroam9:
+                action Call("v12s7_free_roam_spoken", backgroundImg="v12ferpen1", returnScreen="v12s7_left_walkway_front", seenList=[], victim=penelope)
+            else:
+                action Jump("v12s7_penelope1") #penelope
+    
+    imagebutton:
+        idle "v12s7_left_walkway_front_door_idle"
+        hover "v12s7_left_walkway_front_door_hover"
+        action Show("v12s7_foyer")
+        pos (1002, 286)
+
+    imagebutton:
+        idle "v12s7_left_walkway_front_right_idle"
+        hover "v12s7_left_walkway_front_right_hover"
+        action Show("v12s7_rear_gallery")
+        pos (1711, 73)
+        
+    imagebutton:
+        idle "free_roam_vertical_transparent"
+        hover "free_roam_bottom"
+        action Show("v12s7_left_walkway_middle")
+        align (0.5, 1.0)
 
     use v12s7_minimap(location="ld_left_walkway")
 
@@ -843,7 +858,7 @@ screen v12s7_utility():
         if "josh" in freeroam9 and josh not in v12s7_killList:
             hotspot(413, 183, 452, 895):
                 if "josh2" in freeroam9 and not v12s7_aubrey_moved:
-                    action Call("v12s7_free_roam_spoken", backgroundImg="v12ferjos3", returnScreen="v12s7_utility", seenList=[], victim=josh)
+                    action Call("v12s7_free_roam_spoken", backgroundImg="v12ferjos3", returnScreen="v12s7_utility", seenList=[aubrey], victim=josh)
                 elif "josh2" in freeroam9:
                     action Call("v12s7_free_roam_spoken", backgroundImg="v12ferjos3noau", returnScreen="v12s7_utility", seenList=[], victim=josh)
                 else:
