@@ -6,7 +6,7 @@
 
 label v10_econ_class:
     play music music.ck1.v10.Track_Scene_27 fadein 2
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         scene v10eco1 # TPP. Show MC in his room, Slight worried face, mouth closed (wolves)
         with fade
     else:
@@ -45,7 +45,7 @@ label v10_econ_class:
 
     ri "Well after hanging all last night I bet you were tired."
 
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         scene v10eco6 # FPP. Show Ryan in seat on other side of room, mouth open
         with dissolve
 
@@ -183,7 +183,7 @@ label v10_econ_class:
     scene v10eco8 # FPP. MC now stood infront of Ms rose at front of class, Show Ms. Rose, mouth open
     with dissolve
 
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         if CharacterService.is_kissed(ms_rose):
             ro "I just wanted to see how you were doing after... everything."
             

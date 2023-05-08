@@ -5,7 +5,7 @@
 
 label v10_room_mon_night:
     play music music.ck1.v10.Track_Scene_20 fadein 2
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         scene v10smnr1 # TPP. Show mc in his new Wolves room chilling on his bed on his phone.
         with Fade(1, 0, 1)
 

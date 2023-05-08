@@ -10,7 +10,7 @@ label sun_eve_room:
 
         if is_censored:
             v8s19_reply1.add_reply("gui/censoredPopup/censoredBackground.webp")
-        elif joinwolves:
+        elif mc.frat == Frat.WOLVES:
             v8s19_reply1.add_reply("images/v8/Scene 19/w_dick_pic.webp")
         else:
             v8s19_reply1.add_reply("images/v8/Scene 19/a_dick_pic.webp")
@@ -60,7 +60,7 @@ label sun_eve_room:
         v8s19_reply4.new_message(_("Okay talk to you soon"))
         v8s19_reply4.add_reply(_("Goodnight"))
 
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         scene v8sser1 # TPP. Show MC lying on his Wolves bed on his phone.
         with fade
 

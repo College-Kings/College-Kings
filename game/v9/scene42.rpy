@@ -4,7 +4,7 @@
 # Time: Saturday Night
 
 label v9_at_warehouse:
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         scene v9aaw1 # FPP. Show Sebastian removing the blindfold being removed from Camera, blurry image (As if adjusting to the light).
         with fade
         

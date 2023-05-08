@@ -4,7 +4,7 @@
 # Time: Wednesday Night / Wednesday Morning
 
 label room_wed_night:
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         scene v9wnr1 # TPP. Show MC sitting on his Wolves bed looking tired.
         with fade
 

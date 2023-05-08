@@ -277,7 +277,7 @@ label v12_chase_nora:
 
     stop music fadeout 3
 
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         jump v12s27 # scene 27
     else:
         jump v12s27a

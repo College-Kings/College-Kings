@@ -279,7 +279,7 @@ label v12_riley_room:
 
     u "Of course."
 
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         scene v12rir11c
         with dissolve
 

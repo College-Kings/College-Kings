@@ -52,7 +52,7 @@ label phn_riley11_setup:
         if MessengerService.has_replies(riley):
             u "(I should talk to Riley.)"
 
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         u "(Guess I'm not gonna be bored to death after all.)"
 
     else:

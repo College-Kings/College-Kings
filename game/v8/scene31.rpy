@@ -85,7 +85,7 @@ label v8_tues_eco_class:
 
     u "Hey."
 
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         scene v8stec6a # FPP. Same camera as v8stec6, Ryan neutral expression, mouth open
         with dissolve
 

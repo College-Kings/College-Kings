@@ -375,7 +375,7 @@ label v9_hang_w_linds:
                     pause 1
                     $ renpy.end_replay()
 
-            if joinwolves:
+            if mc.frat == Frat.WOLVES:
                 jump v9_wolves_pre_fight
             
             else:
@@ -433,7 +433,7 @@ label v9_hang_w_linds:
             pause 1
             $ renpy.end_replay()
     
-            if joinwolves:
+            if mc.frat == Frat.WOLVES:
                 jump v9_wolves_pre_fight
             
             else:

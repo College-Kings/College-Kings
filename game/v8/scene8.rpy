@@ -547,7 +547,7 @@ label prot_w_au_end:
     with Dissolve(1)
     pause 0.5
 
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         jump after_prot_wolves
 
     else:

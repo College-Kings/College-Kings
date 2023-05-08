@@ -351,7 +351,6 @@ default ending = _("riley")
 default freeroam4 = set()
 default hcAsked = [] # hcAsked.append("girl_name") to add
 default hcGirl = _("alone")
-default joinwolves = False
 default nobeach = False
 default politics = False
 default preventgrayson = False

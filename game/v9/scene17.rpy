@@ -4,7 +4,7 @@
 # Time: Friday Morning
 
 label v9_room_fri_morn:
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         scene v9fmr1 # FPP. Show Chris looking into camera as if Chris is looking at MC whilst MC is in bed. Chris letter in hand. Camera looking up at Chris , Chris mouth open. (MC Wolves Room)
         with fade
 

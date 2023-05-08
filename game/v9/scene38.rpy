@@ -59,7 +59,7 @@ label v9_walk_li_txt:
     else:
         u "(Shit.)"
 
-        if joinwolves:
+        if mc.frat == Frat.WOLVES:
             stop music fadeout 3
             jump v9_wolves_pre_fight
 

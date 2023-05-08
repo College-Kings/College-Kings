@@ -12,7 +12,7 @@ label v10_fight_result:
 
     play music music.ck1.v10.Track_Scene_8 fadein 2
 
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         if v10_ryan_win: # -If MC wins the fight against Ryan-
             scene v10fr1
             with dissolve

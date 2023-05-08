@@ -119,7 +119,7 @@ label josh_room:
     with dissolve
     pause 0.5
 
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         jump v8_scene24_wolves
     else:
         jump v8_scene24_apes

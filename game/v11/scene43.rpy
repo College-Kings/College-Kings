@@ -626,7 +626,7 @@ label v11_at_the_bank:
 
     ro "Will someone please explain to me exactly what has happened?"
 
-    if CharacterService.is_fwb(ms_rose) and joinwolves: #sanitizing pathbuilder input
+    if CharacterService.is_fwb(ms_rose) and mc.frat == Frat.WOLVES: #sanitizing pathbuilder input
         scene v11bank18
         with dissolve
 

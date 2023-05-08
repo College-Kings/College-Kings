@@ -114,6 +114,13 @@ label after_load:
             #endregion NonPlayableCharacters
             
             #region PlayableCharacter
+            try:
+                if joinwolves:
+                    mc.frat = Frat.WOLVES
+                else:
+                    mc.frat = Frat.APES
+            except NameError: mc.frat = None
+
             try: mc.profile_picture
             except AttributeError: mc.profile_picture = mc.profile_pictures[0]
 
@@ -296,10 +303,13 @@ label after_load:
                 if mention == "Sebastian": temp_mentions.append(sebastian)
                 kiwii_post.mentions = temp_mentions
 
-            if post.user.name:
-                post.user = getattr(store, post.user.name.lower().replace(' ', '_'))
-            elif isinstance(post.user, PlayableCharacter):
+            if isinstance(post.user, PlayableCharacter):
                 post.user = mc
+            elif post.user.name:
+                if post.user.name == lews_official.name:
+                    post.user = lews_official
+                else:
+                    post.user = getattr(store, post.user.name.lower().replace(' ', '_'))
 
             try: kiwii_post.number_likes
             except AttributeError: kiwii_post.number_likes = kiwii_post.numberLikes
@@ -410,6 +420,14 @@ label after_load:
 
                 try: comment.number_likes
                 except AttributeError: comment.number_likes = comment.numberLikes
+
+                if isinstance(comment.user, PlayableCharacter):
+                    comment.user = mc
+                elif comment.user.name:
+                    if comment.user.name == lews_official.name:
+                        comment.user = lews_official
+                    else:
+                        comment.user = getattr(store, comment.user.name.lower().replace(' ', '_'))
 
         kiwii_posts = [kiwii_post for kiwii_post in kiwii_posts if hasattr(kiwii_post.user, "name")]
 
@@ -669,6 +687,9 @@ label after_load:
         show screen bug_testing_overlay
     else:
         hide screen bug_testing_overlay
+
+    if mc.frat is None:
+        call screen compat_frat_is_none
 
     $ _version = config.version
     $ renpy.block_rollback()

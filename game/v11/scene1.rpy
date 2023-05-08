@@ -860,7 +860,7 @@ label v11s1_mrrose:
     if not "mr rose" in freeroam7:
         $ freeroam7.add("mr rose")
 
-        if joinwolves:
+        if mc.frat == Frat.WOLVES:
             scene v11cocmrr1a # FPP. Same as mrr1, but Mr Rose mouth closed
             with dissolve
 

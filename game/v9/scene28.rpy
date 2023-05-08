@@ -4,7 +4,7 @@
 # Time: Friday Night
 
 label v9_call_w_lindsey:
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         scene v9cwl3 # TPP. Show MC on his bed in his Wolves room, phone in hand, looking tired.
         with fade
 

@@ -6,7 +6,7 @@
 label v10_waking_up_end:
     play music music.ck1.v10.Track_Scene_22_1 fadein 2
 
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         scene v10end1 # TPP. Show MC waking up drowsy in his new Wolves room.
         with fade
 

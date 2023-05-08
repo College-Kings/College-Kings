@@ -593,7 +593,7 @@ label v12s18_bottlespin:
 
             imre "*Laughs*"
 
-            if joinwolves:
+            if mc.frat == Frat.WOLVES:
                 scene v12slpbs12 # FPP. Same positioning as v12slpbs3, MC and Chris looking at each other, Chris slight smile, mouth open
                 with dissolve
 

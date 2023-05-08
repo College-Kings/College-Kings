@@ -69,7 +69,7 @@ label v10_talk_nora:
 
         no "And I still do. *Chuckles*"
 
-        if joinwolves:
+        if mc.frat == Frat.WOLVES:
             menu:
                 "Mention last night":
                     scene v10hal1
@@ -100,7 +100,7 @@ label v10_talk_nora:
 
                     u "(I'll leave it alone as they'd rather keep it private.)"
 
-    elif not joinwolves and not v8_nora_likes_mc:
+    elif mc.frat == Frat.APES and not v8_nora_likes_mc:
         scene v10hal1a
         with dissolve
 

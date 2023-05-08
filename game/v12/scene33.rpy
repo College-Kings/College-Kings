@@ -1129,7 +1129,7 @@ label v12s33_three_doors_back:
 
     lee "That'll count as one..."
 
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         scene v12s33_39
         with dissolve
 

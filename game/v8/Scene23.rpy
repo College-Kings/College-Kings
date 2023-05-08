@@ -4,7 +4,7 @@
 # Time: Monday Morning
 
 label josh_calls_you:
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         scene v8sjc1 # TPP. Show MC sat at his desk in his Wolves room chilling.
         with dissolve
 

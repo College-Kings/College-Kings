@@ -5,7 +5,7 @@
 label v10_call_with_lauren1:
     play music music.ck1.v10.Track_Scene_15 fadein 2
     
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         scene v10saow1 # TPP. Show MC in his Wolves bedroom, laying in his bed relaxing. He notices his phone buzzing. Curious/thoughtful expression, mouth closed.
     else:
         scene v10saow4 # TPP. Show MC in his Ape bedroom, laying in his bed relaxing. He notices his phone buzzing. Curious/thoughtful expression, mouth closed.
@@ -18,7 +18,7 @@ label v10_call_with_lauren1:
 
     u "(Guess I should get that.)"
 
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         scene v10saow1a # TPP. Same camera as v10saow1. Show MC in his Wolves bedroom, laying in his bed relaxing. He checks his phone to see who's calling. Curious/thoughtful expression, mouth closed.
     else:
         scene v10saow4a # TPP. Same camera as v10saow1. Show MC in his Ape bedroom, laying in his bed relaxing. He checks his phone to see who's calling. Curious/thoughtful expression, mouth closed.
@@ -56,7 +56,7 @@ label v10_call_with_lauren1:
 
         u "Sure, I'm just chilling in my room. What's up?"
 
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         scene v10scwl2 # Ignore Render
     else:
         scene v10saow3 # TPP. Show MC in his Ape bedroom. MC is laying on his bed, phone to ear (talking to Lauren), smiling, mouth closed.
@@ -69,7 +69,7 @@ label v10_call_with_lauren1:
 
     u "Oh, where are you going?"
 
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         scene v10scwl2
     else:
         scene v10saow3
@@ -82,7 +82,7 @@ label v10_call_with_lauren1:
 
     u "Aww that's cute, haha. What'd you get her?"
 
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         scene v10scwl2
     else:
         scene v10saow3
@@ -95,7 +95,7 @@ label v10_call_with_lauren1:
 
     u "What?"
 
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         scene v10scwl2
     else:
         scene v10saow3
@@ -108,7 +108,7 @@ label v10_call_with_lauren1:
 
     u "Guess that means you're leaving the conversation planning to me? *Laughs*"
 
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         scene v10scwl2
     else:
         scene v10saow3
@@ -126,7 +126,7 @@ label v10_call_with_lauren1:
 
     la "I mean at this point I'm happy with anything, what game did you have in mind?"
 
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         scene v10scwl2
     else:
         scene v10saow3
@@ -136,7 +136,7 @@ label v10_call_with_lauren1:
         "Two truths one lie":
             label v10s15_c1:
         
-            if joinwolves:
+            if mc.frat == Frat.WOLVES:
                 scene v10scwl2c # TPP. Same camera as v10scwl2. Show MC in his Wolves bedroom. MC is laying on his bed, normal/content expression, mouth open
             else:
                 scene v10saow3c # TPP. Same camera as v10scwl2. Show MC in his Ape bedroom. MC is laying on his bed, normal/content expression, mouth open
@@ -144,7 +144,7 @@ label v10_call_with_lauren1:
 
             u "How about we play two truths and a lie?"
 
-            if joinwolves:
+            if mc.frat == Frat.WOLVES:
                 scene v10scwl2
             else:
                 scene v10saow3
@@ -159,7 +159,7 @@ label v10_call_with_lauren1:
             
             u "I was the star in a children's show as an infant, and I'm a pretty good harmonica player."
 
-            if joinwolves:
+            if mc.frat == Frat.WOLVES:
                 scene v10scwl2
             else:
                 scene v10saow3
@@ -172,7 +172,7 @@ label v10_call_with_lauren1:
 
             u "I don't want to brag or anything, but I am sort of a professional at this game. The trick is to live a life that's utterly ridiculous."
 
-            if joinwolves:
+            if mc.frat == Frat.WOLVES:
                 scene v10scwl2
             else:
                 scene v10saow3
@@ -185,7 +185,7 @@ label v10_call_with_lauren1:
 
             u "Are you?"
 
-            if joinwolves:
+            if mc.frat == Frat.WOLVES:
                 scene v10scwl2
             else:
                 scene v10saow3
@@ -212,7 +212,7 @@ label v10_call_with_lauren1:
 
             u "Yeah, I'd rather get chewed up by dogs then suffer the smell of a porta potty for hours."
 
-            if joinwolves:
+            if mc.frat == Frat.WOLVES:
                 scene v10scwl2
             else:
                 scene v10saow3
@@ -225,7 +225,7 @@ label v10_call_with_lauren1:
 
             u "Yeah to be fair, I kinda knew you were gonna follow up on them when I said them out loud. *Chuckles*"
 
-            if joinwolves:
+            if mc.frat == Frat.WOLVES:
                 scene v10scwl2
             else:
                 scene v10saow3
@@ -244,7 +244,7 @@ label v10_call_with_lauren1:
             
             u "The rest is history."
 
-            if joinwolves:
+            if mc.frat == Frat.WOLVES:
                 scene v10scwl2
             else:
                 scene v10saow3
@@ -267,7 +267,7 @@ label v10_call_with_lauren1:
 
             u "It's because I gained a whole lot of baby weight and the producers said a \"fat\" baby wasn't good for the camera."
 
-            if joinwolves:
+            if mc.frat == Frat.WOLVES:
                 scene v10scwl2
             else:
                 scene v10saow3
@@ -280,7 +280,7 @@ label v10_call_with_lauren1:
 
             u "What was the second one again? Only thing I can think about right now are my fat baby rolls."
 
-            if joinwolves:
+            if mc.frat == Frat.WOLVES:
                 scene v10scwl2
             else:
                 scene v10saow3
@@ -295,7 +295,7 @@ label v10_call_with_lauren1:
             
             u "After a few years of dabbling, I got really good."
 
-            if joinwolves:
+            if mc.frat == Frat.WOLVES:
                 scene v10scwl2
             else:
                 scene v10saow3
@@ -313,7 +313,7 @@ label v10_call_with_lauren1:
 
             la "I'm gonna need proof of a claim that bold."
 
-            if joinwolves:
+            if mc.frat == Frat.WOLVES:
                 scene v10scwl2
             else:
                 scene v10saow3
@@ -321,7 +321,7 @@ label v10_call_with_lauren1:
 
             menu:
                 "I could play":
-                    if joinwolves:
+                    if mc.frat == Frat.WOLVES:
                         scene v10scwl2c
                     else:
                         scene v10saow3c
@@ -351,7 +351,7 @@ label v10_call_with_lauren1:
                         u "What can I say, I'm a unique guy."
                 
                 "Joke around":
-                    if joinwolves:
+                    if mc.frat == Frat.WOLVES:
                         scene v10scwl2c
                     else:
                         scene v10saow3c
@@ -370,7 +370,7 @@ label v10_call_with_lauren1:
                     u "You know, playing the harmonica requires quite a lot of tongue coordination, usually girls like that."
 
                     if CharacterService.is_kissed(lauren) or CharacterService.is_girlfriend(lauren):
-                        if joinwolves:
+                        if mc.frat == Frat.WOLVES:
                             scene v10scwl2
                         else:
                             scene v10saow3
@@ -383,7 +383,7 @@ label v10_call_with_lauren1:
 
                         u "*Laughs* What? I'm just saying!"
 
-                        if joinwolves:
+                        if mc.frat == Frat.WOLVES:
                             scene v10scwl2
                         else:
                             scene v10saow3
@@ -397,7 +397,7 @@ label v10_call_with_lauren1:
                         u "*Chuckles* Fine, we can do that too."
 
                     else: # RCS - MC is not in a relationship with Lauren, and didn't makeout with her
-                        if joinwolves:
+                        if mc.frat == Frat.WOLVES:
                             scene v10scwl2
                         else:
                             scene v10saow3
@@ -410,7 +410,7 @@ label v10_call_with_lauren1:
 
                         u "Alright, offer stands."
 
-                        if joinwolves:
+                        if mc.frat == Frat.WOLVES:
                             scene v10scwl2
                         else:
                             scene v10saow3
@@ -423,7 +423,7 @@ label v10_call_with_lauren1:
 
                         u "Fine, I can do that too."
 
-                        if joinwolves:
+                        if mc.frat == Frat.WOLVES:
                             scene v10scwl2
                         else:
                             scene v10saow3
@@ -434,7 +434,7 @@ label v10_call_with_lauren1:
         "Favorites":
             label v10s15_c2:
             
-            if joinwolves:
+            if mc.frat == Frat.WOLVES:
                 scene v10scwl2c
             else:
                 scene v10saow3c
@@ -442,7 +442,7 @@ label v10_call_with_lauren1:
             
             u "Let's play favorites!"
 
-            if joinwolves:
+            if mc.frat == Frat.WOLVES:
                 scene v10scwl2
             else:
                 scene v10saow3
@@ -458,7 +458,7 @@ label v10_call_with_lauren1:
             u "I just name a topic, say my favorite thing in that topic and then you answer your favorite. Then the game continues, but switched."
 
             if CharacterService.is_girlfriend(lauren): # RCS - MC is in a relationship with Lauren
-                if joinwolves:
+                if mc.frat == Frat.WOLVES:
                     scene v10scwl2
                 else:
                     scene v10saow3
@@ -471,7 +471,7 @@ label v10_call_with_lauren1:
 
                 u "Okay, I feel like considering you get to talk to your boyfriend and hear about all his favorite things, you're getting a pretty good deal here."
 
-                if joinwolves:
+                if mc.frat == Frat.WOLVES:
                     scene v10scwl2
                 else:
                     scene v10saow3
@@ -490,7 +490,7 @@ label v10_call_with_lauren1:
                 la "Yeah, yeah, yeah. *Laughs* Can we start already?"
 
             else:
-                if joinwolves:
+                if mc.frat == Frat.WOLVES:
                     scene v10scwl2
                 else:
                     scene v10saow3
@@ -503,7 +503,7 @@ label v10_call_with_lauren1:
             
             u "Alright let's go."
 
-            if joinwolves:
+            if mc.frat == Frat.WOLVES:
                 scene v10scwl2
             else:
                 scene v10saow3
@@ -511,7 +511,7 @@ label v10_call_with_lauren1:
 
             menu:
                 "Orange":
-                    if joinwolves:
+                    if mc.frat == Frat.WOLVES:
                         scene v10scwl2c
                     else:
                         scene v10saow3c
@@ -520,7 +520,7 @@ label v10_call_with_lauren1:
                     u "Color, orange."
 
                 "Blue":
-                    if joinwolves:
+                    if mc.frat == Frat.WOLVES:
                         scene v10scwl2c
                     else:
                         scene v10saow3c
@@ -538,7 +538,7 @@ label v10_call_with_lauren1:
 
             u "Cute."
 
-            if joinwolves:
+            if mc.frat == Frat.WOLVES:
                 scene v10scwl2
             else:
                 scene v10saow3
@@ -546,7 +546,7 @@ label v10_call_with_lauren1:
 
             menu:
                 "Gecko":
-                    if joinwolves:
+                    if mc.frat == Frat.WOLVES:
                         scene v10scwl2c
                     else:
                         scene v10saow3c
@@ -555,7 +555,7 @@ label v10_call_with_lauren1:
                     u "Gecko."
                 
                 "Lion":
-                    if joinwolves:
+                    if mc.frat == Frat.WOLVES:
                         scene v10scwl2c
                     else:
                         scene v10saow3c
@@ -564,7 +564,7 @@ label v10_call_with_lauren1:
                     $ grant_achievement("rawr_im_a_lion")
                     u "Lion."
 
-            if joinwolves:
+            if mc.frat == Frat.WOLVES:
                 scene v10scwl2
             else:
                 scene v10saow3
@@ -572,7 +572,7 @@ label v10_call_with_lauren1:
 
             menu:
                 "Spring":
-                    if joinwolves:
+                    if mc.frat == Frat.WOLVES:
                         scene v10scwl2c
                     else:
                         scene v10saow3c
@@ -581,7 +581,7 @@ label v10_call_with_lauren1:
                     u "Hmm, season... Spring."
 
                 "Fall":
-                    if joinwolves:
+                    if mc.frat == Frat.WOLVES:
                         scene v10scwl2c
                     else:
                         scene v10saow3c
@@ -599,7 +599,7 @@ label v10_call_with_lauren1:
 
             u "Wait, what? Your birthday doesn't count as a holiday... well unless your birthday is on a holiday. *Laughs*"
 
-            if joinwolves:
+            if mc.frat == Frat.WOLVES:
                 scene v10scwl2
             else:
                 scene v10saow3
@@ -612,7 +612,7 @@ label v10_call_with_lauren1:
 
             u "Hmmm, can I get a hint?"
 
-            if joinwolves:
+            if mc.frat == Frat.WOLVES:
                 scene v10scwl2
             else:
                 scene v10saow3
@@ -625,7 +625,7 @@ label v10_call_with_lauren1:
 
             u "Kinda surprised I don't know your birthday already, but let's see, are you a Christmas baby?"
 
-            if joinwolves:
+            if mc.frat == Frat.WOLVES:
                 scene v10scwl2
             else:
                 scene v10saow3
@@ -638,7 +638,7 @@ label v10_call_with_lauren1:
 
             u "New Years Baby?"
 
-            if joinwolves:
+            if mc.frat == Frat.WOLVES:
                 scene v10scwl2
             else:
                 scene v10saow3
@@ -651,7 +651,7 @@ label v10_call_with_lauren1:
 
             u "Wait, is Halloween a holiday?"
 
-            if joinwolves:
+            if mc.frat == Frat.WOLVES:
                 scene v10scwl2
             else:
                 scene v10saow3
@@ -664,7 +664,7 @@ label v10_call_with_lauren1:
 
             u "I don't know, like a day were people celebrate scary stuff and don't have to go to school because of it."
 
-            if joinwolves:
+            if mc.frat == Frat.WOLVES:
                 scene v10scwl2
             else:
                 scene v10saow3
@@ -682,7 +682,7 @@ label v10_call_with_lauren1:
 
             u "So Halloween. You must like horror movies and stuff."
 
-            if joinwolves:
+            if mc.frat == Frat.WOLVES:
                 scene v10scwl2
             else:
                 scene v10saow3
@@ -695,7 +695,7 @@ label v10_call_with_lauren1:
 
             u "I have to admit it is a bad coincidence."
 
-            if joinwolves:
+            if mc.frat == Frat.WOLVES:
                 scene v10scwl2
             else:
                 scene v10saow3
@@ -711,7 +711,7 @@ label v10_call_with_lauren1:
     play sound sound.twig
 
     label v10s15_c3:
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         scene v10saow1b # TPP. Same camera as v10saow1. MC laying in his bed relaxing. He has the phone up to his ear, talking with Lauren. He looks over towards his window. Curious/thoughtful expression, mouth closed.
     else:
         scene v10saow4b # TPP. Same camera as v10saow4. Show MC in his Ape bedroom, laying in his bed relaxing. He has the phone up to his ear, talking w' Lauren. Curious/thoughtful expression, mouth closed.
@@ -719,7 +719,7 @@ label v10_call_with_lauren1:
     
     pause 1
 
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         scene v10saow1c # TPP. Same camera as v10saow1. Show MC in his Wolves bedroom, laying in his bed relaxing. He puts the phone aside and gets up from his bed. Curious expression, mouth closed.
     else:
         scene v10saow4c # TPP. Same camera as v10saow4. Show MC in his Ape bedroom, laying in his bed relaxing. He puts the phone aside and gets up from his bed. Curious expression, mouth closed.
@@ -727,7 +727,7 @@ label v10_call_with_lauren1:
     
     pause 0.75
     
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         scene v10saow1e # TPP. Same camera as v10saow1. Show MC in his Wolves bedroom, standing by his bed with his phone up to his ear (talking with Lauren). Normal expression, mouth open.
     else:
         scene v10saow4e # TPP. Same camera as v10saow1. Show MC in his Ape bedroom, standing by his bed with his phone up to his ear (talking with Lauren). Normal expression, mouth open.
@@ -735,7 +735,7 @@ label v10_call_with_lauren1:
 
     u "Hey Lauren, mind giving me just a sec?"
 
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         scene v10saow1d # TPP. Same camera as v10saow1. Show MC in his Wolves bedroom, standing by his bed with his phone up to his ear (talking with Lauren). Normal expression, mouth closed.
     else:
         scene v10saow4d # TPP. Same camera as v10saow4. Show MC in his Ape bedroom, standing by his bed with his phone up to his ear (talking with Lauren). Normal expression, mouth closed.
@@ -763,7 +763,7 @@ label v10_call_with_lauren1:
             "Walk her home":
                 u "Hell yeah, I'll be down in a second."
 
-                if joinwolves:
+                if mc.frat == Frat.WOLVES:
                     scene v10saow1d
                 else:
                     scene v10saow4d
@@ -814,7 +814,7 @@ label v10_call_with_lauren1:
 
                 u "See ya!"
 
-                if joinwolves:
+                if mc.frat == Frat.WOLVES:
                     scene v10saow1d
                 else:
                     scene v10saow4d
@@ -827,7 +827,7 @@ label v10_call_with_lauren1:
 
                 u "Hey Lauren!"
 
-                if joinwolves:
+                if mc.frat == Frat.WOLVES:
                     scene v10scwl2
                 else:
                     scene v10saow3
@@ -840,7 +840,7 @@ label v10_call_with_lauren1:
 
                 u "Yeah everything's fine, had a bird at my window. *Laughs*"
 
-                if joinwolves:
+                if mc.frat == Frat.WOLVES:
                     scene v10scwl2
                 else:
                     scene v10saow3
@@ -869,7 +869,7 @@ label v10_call_with_lauren1:
 
                 u "Yeah sure, I'll be right down."
 
-                if joinwolves:
+                if mc.frat == Frat.WOLVES:
                     scene v10saow1d
                 else:
                     scene v10saow4d
@@ -920,7 +920,7 @@ label v10_call_with_lauren1:
 
                 u "See ya!"
 
-                if joinwolves:
+                if mc.frat == Frat.WOLVES:
                     scene v10saow1d
                 else:
                     scene v10saow4d
@@ -933,7 +933,7 @@ label v10_call_with_lauren1:
 
                 u "Hey Lauren!"
 
-                if joinwolves:
+                if mc.frat == Frat.WOLVES:
                     scene v10scwl2
                 else:
                     scene v10saow3
@@ -951,7 +951,7 @@ label v10_call_with_lauren1:
 
                 la "A bird took you that long? What'd you do, sing to it? *Laughs*"
 
-                if joinwolves:
+                if mc.frat == Frat.WOLVES:
                     scene v10scwl2
                 else:
                     scene v10saow3

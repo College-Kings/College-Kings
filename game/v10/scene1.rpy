@@ -15,7 +15,7 @@ label v10start:
 
     pause 0.75
 
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         scene v10sta2 # FPP. Show Imre and ryan now standing in fighting stances both with fists raised, angry look on imre/ryan, ryan mouth closed, imre mouth open
         with dissolve
 
@@ -55,7 +55,7 @@ label v10start:
 
     stop music fadeout 3
 
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         scene v10sta4a # FPP. Same Camera as v10sta4, imre now left scene, Show Sebastian near the warehouse doors facing camera, neutral look, mouth open
         with dissolve
  

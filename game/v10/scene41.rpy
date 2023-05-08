@@ -97,8 +97,9 @@ label v10_mc_pen_call:
     u "(I really hope tomorrow goes well.)"
 
     stop music fadeout 3
+
     play music music.ck1.v10.Track_Scene_41_2 fadein 2
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
 
         scene v10spen5 # TPP. Show MC in his new wolves room, lying on his bed tired.
         with dissolve

@@ -3508,7 +3508,7 @@ label afterbeach:
 ####### SCENE 13 PLEDGING THE WOLVES
 label pledgewolves:
     $ reputation.add_point(RepComponent.BRO)
-    $ joinwolves = True
+    $ mc.frat = Frat.WOLVES
 
     scene s756 # Camera - third person, MC walking through town during evening wearing jeans
     with fade
@@ -4690,7 +4690,7 @@ label aftercall:
 ######## SCENE 14 APES
 label pledgeapes:
     $ reputation.add_point(RepComponent.TROUBLEMAKER, 3) # I think more TM points for joining the Apes makes sense
-    $ joinwolves = False
+    $ mc.frat = Frat.APES
 
     scene s756 # Not a new render
     with fade
@@ -5408,7 +5408,7 @@ label after_pledges:
     scene s861 # Camera - TPP. MC walking home at night through the town after Apes pledging
     with fade
 
-    if apesVids == 1 or joinwolves:
+    if apesVids == 1 or mc.frat == Frat.WOLVES:
         pause 0.5
 
     else:
@@ -5453,7 +5453,7 @@ label after_pledges:
     scene s865 # Camera - TPP. MC waking up yawning in bed. No black eye
     with Fade(1,0,1)
 
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         $ v7_kiwiiPost5 = KiwiiPost(chris, "phone/kiwii/Posts/v7/chpost1.webp", _("One of us!"), number_likes=133, mentions=[mc])
         $ v7_kiwiiPost5.newComment(cameron, _("Losers"), 3)
         $ v7_kiwiiPost5.newComment(imre, _("Hell yeah bro!"), 14)
@@ -5503,7 +5503,7 @@ label after_pledges:
         with dissolve
         pause 0.5
 
-    elif joinwolves:
+    elif mc.frat == Frat.WOLVES:
         scene s866
         with dissolve
         imre "Morning."
@@ -5738,7 +5738,7 @@ label after_pledges:
         with dissolve
         pause 0.5
 
-    if CharacterService.is_mad(imre) and joinwolves:
+    if CharacterService.is_mad(imre) and mc.frat == Frat.WOLVES:
         scene s878 # Camera - FPP. MC sitting beside Imre. Imre looking at MC with a bored/uninterested expression. Imre mouth closed
         with dissolve
         u "Hey."
@@ -5964,7 +5964,7 @@ label after_pledges:
                 with dissolve
                 pause 0.5
 
-                if not joinwolves:
+                if mc.frat == Frat.APES:
                     scene s881
                     with dissolve
                     ca "Buurrnnn!"
@@ -6289,7 +6289,7 @@ label after_history:
         with dissolve
         pause 0.5
 
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         jump after_cam_history
 
 ########## SCENE 19 CAMERON AFTER HISTORY
@@ -7236,7 +7236,7 @@ label suit_rental:
 
 ### SCENE 32: AFTER TUDEXO SHOPPING
 label thurs_night_dorm:
-    if joinwolves and CharacterService.is_mad(imre):
+    if mc.frat == Frat.WOLVES and CharacterService.is_mad(imre):
         scene s1002 # Camera - TPP. MC packing his bag, same as the one he has in scene 34
         with fade
 
@@ -7248,7 +7248,7 @@ label thurs_night_dorm:
 
         jump wolves_ceremony
 
-    elif joinwolves:
+    elif mc.frat == Frat.WOLVES:
         scene s1002
         with fade
         pause 0.7
@@ -8901,7 +8901,7 @@ label rileytext:
         u "(Guess I'm not going to sleep yet.)"
         jump rileysexscene
 
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         scene swc91 # TPP. Show MC in bed going to sleep
         with dissolve
 
@@ -8920,7 +8920,7 @@ label rileysexscene:
     $ CharacterService.set_relationship(riley, Relationship.FWB)
     $ sceneList.add("v7_riley")
 
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         stop music fadeout 3
         scene preri1 # You walking through the night to riley
         with fade
@@ -9133,7 +9133,7 @@ label v7_nsfwSkipLabel1:
     with dissolve
     u "Yeah, see you tomorrow."
 
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         scene preri1a # You walking through the night back home
         with fade
 
@@ -9147,7 +9147,7 @@ label v7_nsfwSkipLabel1:
 
 ########## SCENE 35 MC AT DORM / WOLVES ROOM AT NIGHT
 
-    if joinwolves: # IN WOLVES ROOM
+    if mc.frat == Frat.WOLVES: # IN WOLVES ROOM
         scene swc91 # TPP. Show MC in bed going to sleep
         with fade
 
@@ -9642,7 +9642,7 @@ label walking_through_hallways:
         $ name = renpy.input(_("What's your name?"), default=name).strip() or _("Alex")
         $ pb_name_set = True
 
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         stop music fadeout 3
 
         scene sfr4mc2 # mc in his wolves' room studying
@@ -9676,7 +9676,7 @@ label walking_through_hallways:
     else:
         u "(I should probably start getting my suit on and get ready for homecoming.)"
 
-        if joinwolves:
+        if mc.frat == Frat.WOLVES:
             scene sfr4mc4 # mc adjusting his suit in his Wolves' room
             with fade
 
@@ -10148,7 +10148,7 @@ label chloehocodate:
     scene sfr4cl4 #First personBehind Chloe walking into the kitchen where Aubrey, Aaron and Lindsey are already taking shots.
     with dissolve
 
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         cl "This is Lindsey by the way."
 
     else:
@@ -14040,7 +14040,7 @@ label fr4nora1:
 
     pause 0.5
 
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         scene sfr4no2c
         with dissolve
 
@@ -14398,7 +14398,7 @@ label fr4aaron1:
         "Back up Aaron":
             $ reputation.add_point(RepComponent.BRO)
 
-            if joinwolves or hcGirl == "chloe":
+            if mc.frat == Frat.WOLVES or hcGirl == "chloe":
                 u "Trust me, Aaron's a great guy and any girl would be lucky to go home with him."
 
                 scene sfr4aa3 # close up aaron smiling at you
@@ -14477,7 +14477,7 @@ label fr4aaron1:
         "Side with Lindsey":
             $ reputation.add_point(RepComponent.BOYFRIEND)
 
-            if joinwolves or hcGirl == "chloe":
+            if mc.frat == Frat.WOLVES or hcGirl == "chloe":
                 u "You guys should stay. It's fun!"
 
                 scene sfr4aa3f # close up aaron looking at you annoyed
@@ -15471,7 +15471,7 @@ label fr4cameron1:
 
     ca "God, all you do is complain."
 
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         scene sfr4ca2b # cameron looking at you pissed
         with dissolve
 
@@ -15817,7 +15817,7 @@ label fr4imre1:
 
     unknown "*Moans* Fuck Mhmmm, yes!"
 
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         menu:
             "Say something to Imre":
                 $ reputation.add_point(RepComponent.BRO)
@@ -16173,7 +16173,7 @@ label fr4grayson1:
 
     scene sfr4gr1 # grayson about to spray the wall
 
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         u "What are you doing, Grayson?"
 
         scene sfr4gr1b # grayson looking at you annoyed intense
@@ -16767,7 +16767,7 @@ label fr4samantha1:
     scene sfr4sa5b # sam unsure
     with dissolve
 
-    if not joinwolves:
+    if mc.frat == Frat.APES:
         sa "Wait, I know you... or... do I know you?"
 
         scene sfr4sa4d # sebastian looking at sam
@@ -16844,7 +16844,7 @@ label fr4samantha1:
 
             u "No."
 
-            if not joinwolves:
+            if mc.frat == Frat.APES:
                 scene sfr4sa5c
                 with dissolve
 

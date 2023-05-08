@@ -2,10 +2,10 @@
 # Locations: MC bedroom, sidewalk, lew's clothing store
 # Characters: MC (outfit 9), Aubrey (Outfit 1), Amber (smart button up shits and trousers(may need new outfit from lew))
 # Time: Friday Morning
-
 label v11_room_aubrey_shopping:
     play music music.ck1.v11.Track_Scene_7_1 fadein 2
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
+
         scene v11auw1 # TPP. Show MC sitting on his bed, as if he had just woken up, he's tired and yawning (New Wolves room)
         with fade
 

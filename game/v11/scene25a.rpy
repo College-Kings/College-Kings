@@ -82,7 +82,7 @@ label v11_hotel_charlie_bar:
 
     u "(Fuck him! He doesn't know me! I'm not letting him get to me...)"
     stop music fadeout 3
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         jump v11_hotel_bar_wolves
     else:
         jump v11_hotel_bar_apes
