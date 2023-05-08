@@ -9,7 +9,7 @@ label v13s18:
 
     u "Hey Luuk, please tell me you got something for me today... *Chuckles*"
 
-    play music "music/v13/Track Scene 18.mp3" fadein 2
+    play music music.v13_Track_Scene_18 fadein 2
 
     scene v13s18_2 # FPP. MC looking at Luuk, Luuk looking back at MC, slight smile, mouth open.
     with dissolve

@@ -10,7 +10,7 @@ label v12_riley_cafe:
 
     pause 0.75
 
-    play music "music/v12/Track Scene 14.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_14 fadein 2
 
     scene v12ric2 # TPP. Show MC and Riley approaching their table, both smiling, mouths closed
     with dissolve

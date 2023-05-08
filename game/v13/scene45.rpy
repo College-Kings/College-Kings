@@ -9,7 +9,7 @@ label v13s45:
 
     pause 0.75
 
-    play music "music/v13/Track Scene 45.mp3" fadein 2
+    play music music.v13_Track_Scene_45 fadein 2
 
     scene v13s45_2 # FPP. MC looking at Lauren, Lauren looking at MC, Slight smile, mouth open.
     with dissolve

@@ -26,7 +26,7 @@ label v12s32:
 
     u "So, where exactly are they doing the shoot?"
 
-    play music "music/v12/Track Scene 32_1.mp3" fadein 2
+    play music music.v12_Track_Scene_32_1 fadein 2
 
     scene v12s32_2 # FPP, close up AUbrey looking at mc, but walking forwards. Aubrey slightly nervous not smiling, mouth open
     with dissolve
@@ -76,7 +76,7 @@ label v12s32:
     pause 0.7
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 32_2.mp3" fadein 2
+    play music music.v12_Track_Scene_32_2 fadein 2
 
     scene v12s32_4 # FPP shows photographer taking pictures of Naomi (Aubrey's sister)
     with dissolve
@@ -263,7 +263,7 @@ label v12s32:
     pg "I want you posing together, get sexy!"
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 32_3.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_32_3 fadein 2
 
     scene v12s32_15 # TPP show Aubrey and mc, Aubrey looking at the camera, mc confused looking at aubrey, mouth open
     with dissolve
@@ -601,7 +601,7 @@ label v12s32:
     pause 0.7
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 32_4.mp3" fadein 2
+    play music music.v12_Track_Scene_32_4 fadein 2
 
     if v12s32_Aubrey_Boost:
         scene v12s32_27 # TPP show aubrey hugging mc, aubrey mouth open, cute smile

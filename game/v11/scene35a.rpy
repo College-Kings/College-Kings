@@ -4,7 +4,7 @@
 # Time: Day
 
 label v11_chloe_hotel_room_amber_call:
-    play music "music/v10/Track Scene 40_2.mp3" fadein 2
+    play music music.ck1.v10.Track_Scene_40_2 fadein 2
     if CharacterService.is_mad(chloe) and not v11_riley_roomate:
         scene v11hrc1 # TPP. MC is inside his hotel room, next to the door, mouth closed
         with fade
@@ -148,7 +148,7 @@ label v11_chloe_hotel_room_amber_call:
     pause 0.75
     
     stop music fadeout 3
-    play music "music/v10/Track Scene 15.mp3" fadein 2
+    play music music.ck1.v10.Track_Scene_15 fadein 2
 
     scene v11hrc8 # TPP. Chloe is shaking mc, waking him up
     with fade

@@ -9,7 +9,7 @@ label v12_riley_lobby:
     with dissolve
 
     pause 0.75
-    play music "music/v12/Track Scene 28.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_28 fadein 2
 
     scene v12ril1a # FPP. Same as v12ril1, Riley now in talking distance to MC, Riley very angry, mouth open
     with dissolve

@@ -9,7 +9,7 @@ label v13s25:
 
     pause 0.75
 
-    play music "music/v13/Track Scene 25.mp3" fadein 2
+    play music music.v13_Track_Scene_25 fadein 2
    
     scene v13s25_2 # TPP. Mc grabbing chair looking at Emmy, Mc's back turned to camera, Emmy looking at Mc, slight smile, mouth closed
     with dissolve

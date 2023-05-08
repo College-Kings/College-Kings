@@ -9,7 +9,7 @@ label v13_hotel_imre:
     
     imre "I'm gonna go take a hot shower. Really not in the mood for people right now."
 
-    play music "music/v13/Track Scene 39.mp3" fadein 2
+    play music music.v13_Track_Scene_39 fadein 2
 
     scene v13s39_1a # FPP. Ryan coming behind imre, hands in his mouth as if he was calling imre, imre still looking at mc with his mouth closed
     with dissolve

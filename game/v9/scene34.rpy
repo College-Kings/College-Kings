@@ -9,7 +9,7 @@ label v9_ri_sex:
     scene v9ris1 # TPP. Show MC outside Riley's dorm knocking on the door.
     with fade
 
-    play music "music/v9/Track Scene 12_2.mp3" fadein 2
+    play music music.ck1.v9.Track_Scene_12_2 fadein 2
 
     pause 1
 
@@ -101,7 +101,7 @@ label v9_ri_sex:
     scene v9ris7a # TPP. Same camera as v9ris7a, MC now wearing no pants, Riley looking at MC seductively.
     with dissolve
 
-    play music "music/v9/Track Scene 34_2.mp3" fadein 2
+    play music music.ck1.v9.Track_Scene_34_2 fadein 2
 
     pause 1
 
@@ -355,7 +355,7 @@ label v9s34_rileyCowgirl:
 
     u "Do you... need anything?"
 
-    play music "music/v9/Track Scene 3.mp3" fadein 2
+    play music music.ck1.v9.Track_Scene_3 fadein 2
 
     scene v9ris23a # FPP. Same camera as v9ris23, smile, mouth open.
     with dissolve

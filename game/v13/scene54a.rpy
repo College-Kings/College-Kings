@@ -9,7 +9,7 @@ label v13s54a:
 
     pause 0.75
 
-    play music "music/v13/Track Scene 52a.mp3" fadein 2
+    play music music.v13_Track_Scene_52a fadein 2
 
     scene v13s54a_2 # TPP. MC looking up at the ceiling, slight smile, mouth closed
     with dissolve

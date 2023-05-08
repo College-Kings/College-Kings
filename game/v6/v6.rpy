@@ -360,9 +360,9 @@ label imrecond: # Meet Chloe
 
     scene s451 ## FIRST PERSON: you see chloe sitting in bikini at the pool staring at the water
     with Fade (1,0,1)
-    play music "music/m16punk.mp3"
+    play music music.ck1.m16punk
 
-    queue music [ "music/mchill1.mp3", "music/m7punk.mp3" ]
+    queue music [music.ck1.mchill1, music.ck1.m7punk]
 
     pause 0.5
 
@@ -1473,9 +1473,9 @@ label continuebd:
 
             u "Thanks, Riley."
 
-    play music "music/m4punk.mp3"
+    play music music.ck1.m4punk
 
-    queue music [ "music/m9punk.mp3"]
+    queue music [music.ck1.m9punk]
 
     label afterclass: #for compatibility only
     scene s494 # showing your and rileys backs leaving the classroom
@@ -1654,9 +1654,9 @@ label continuebd:
     with fade
 
     pause 0.5
-    play music "music/mindie1.mp3"
+    play music music.ck1.mindie1
 
-    queue music [ "music/mindie2.mp3", "music/mindie3.mp3" ]
+    queue music [music.ck1.mindie2, music.ck1.mindie3]
 
     scene s504a # Mc walking past open classroom door
     with dissolve
@@ -2139,7 +2139,7 @@ label continuebd:
         u "*Breathing heavily*"
 
     label runback: #for compatibility only
-    play music "music/mindie5.mp3"
+    play music music.ck1.mindie5
 
     scene s526 # you running back to your dorm
     with fade
@@ -2191,7 +2191,7 @@ label continuebd:
     scene s530  # FIrst person: Looking at phone: Emily callingL
     with dissolve
 
-    play music "music/m16punk.mp3"
+    play music music.ck1.m16punk
 
     menu:
         "Accept call":
@@ -2902,7 +2902,7 @@ label emhead:
     hide screen emilysexoverlay
     $ renpy.end_replay()
 
-    play music "music/m7punk.mp3"
+    play music music.ck1.m7punk
 
     scene em17
     with fade
@@ -2992,7 +2992,7 @@ label fy_bd: # not gone to Emily's
     scene s540 # you working on your desk
     with Fade (1,0,1)
 
-    play music "music/mfunk.mp3"
+    play music music.ck1.mfunk
 
     if imreforgives:
         $ CharacterService.set_relationship(imre, Relationship.FRIEND, mc)
@@ -3119,8 +3119,8 @@ label fy_bd: # not gone to Emily's
     pause 0.5
 
     if CharacterService.is_dating(evelyn):
-        play music "music/mlove1.mp3"
-        queue music ["music/mlove2.mp3"]
+        play music music.ck1.mlove1
+        queue music [music.ck1.mlove2]
 
         scene s546a # phone close up, it's 7:30
         with dissolve
@@ -3728,9 +3728,9 @@ label fy_bd: # not gone to Emily's
 
             jump afteraubrey
 
-    play music "music/mindie1.mp3"
+    play music music.ck1.mindie1
 
-    queue music [ "music/mindie2.mp3", "music/mindie3.mp3" ]
+    queue music [music.ck1.mindie2, music.ck1.mindie3]
 
     scene s566 # you knock on aubrey's door
     with Fade(1,0,1)
@@ -4360,7 +4360,7 @@ label naubclimax:
 
     u "That was amazing."
 
-    play music "music/m16punk.mp3"
+    play music music.ck1.m16punk
     scene naub21
     with dissolve
 
@@ -4471,9 +4471,9 @@ label afteraubrey:
             scene s575 # mc sits alone at midnight on the front stairs of the college waiting.
             with fade
 
-            play music "music/m3punk.mp3"
+            play music music.ck1.m3punk
 
-            queue music [ "music/m4punk.mp3", "music/m12punk.mp3", "music/m13punk.mp3" ]
+            queue music [music.ck1.m4punk, music.ck1.m12punk, music.ck1.m13punk]
 
             pause 1.0
 
@@ -5013,7 +5013,7 @@ label afteraubrey:
 
     pause 0.5
     #### Nightmare
-    play music "music/mhorror.mp3"
+    play music music.horror
     play sound sound.swoosh
     scene s587 # Showing you, lauren and Riley running through the forest terrified like someone's after them
     with flash
@@ -5118,7 +5118,7 @@ label wakeupa:
     u "*Breathing heavily* (Holy shit... thank god that was just a dream.)"
     play music music.ck1.punk15
 
-    queue music ["music/mfunk.mp3"]
+    queue music [music.ck1.mfunk]
 
     if CharacterService.is_mad(imre):
         scene s604 # Mc wakes up in bed,
@@ -5473,9 +5473,9 @@ label wakeupa:
 
     play sound sound.answer_call
 
-    play music "music/mindie1.mp3"
+    play music music.ck1.mindie1
 
-    queue music [ "music/mindie2.mp3", "music/mindie3.mp3" ]
+    queue music [music.ck1.mindie2, music.ck1.mindie3]
 
     scene s611 # close up mc on phone mouth open
     with dissolve
@@ -6181,9 +6181,9 @@ label wakeupa:
     stop music fadeout 3
 
     if bowling: # Penelope bowling scene
-        play music "music/m16punk.mp3"
+        play music music.ck1.m16punk
 
-        queue music [ "music/mchill1.mp3", "music/m7punk.mp3" ]
+        queue music [music.ck1.mchill1, music.ck1.m7punk]
         scene s630 # you walking towards bowling
         with Fade (1,0,1)
 
@@ -6629,7 +6629,7 @@ label wakeupa:
 
     label readywolf: #for compatibility only
     stop music fadeout 3
-    play music "music/m6punk.mp3"
+    play music music.ck1.m6punk
 
     if CharacterService.is_mad(imre):
         scene s660 # Mc getting ready for the party by himself
@@ -6991,9 +6991,9 @@ label wolvesfr:
 
 ### WOLVES RUSH PARTY FREE ROAM freeroam3 freeroam 3 free roam 3
 label wolvesfr2:
-    play music "music/mparty2.mp3"
+    play music music.ck1.mparty2
 
-    queue music [ "music/mparty3.mp3", "music/mparty4.mp3"]
+    queue music [music.ck1.mparty3, music.ck1.mparty4]
 
     #### room labels Navigation:
     call screen v6_fr3garden

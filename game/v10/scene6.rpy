@@ -4,7 +4,7 @@
 # Time: Saturday Night
 
 label v10_mc_vs_ryan_fight:
-    play music "music/v10/Track Scene 6.mp3" fadein 2
+    play music music.ck1.v10.Track_Scene_6 fadein 2
     
     if False:
         scene v10mvr1 # FPP. Show imre and chris near ring, imre excited look, mouth open chris mouth closed

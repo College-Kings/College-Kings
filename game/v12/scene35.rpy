@@ -10,7 +10,7 @@ label v12_chris_nora_room:
 
     pause 0.75
 
-    play music "music/v12/Track Scene 35.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_35 fadein 2
 
     scene v12cnr2 # TPP. Show MC walking into his room, mouth closed, neutral expression
     with dissolve

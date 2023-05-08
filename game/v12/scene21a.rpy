@@ -10,7 +10,7 @@ label v12_nursing_aubrey:
 
     pause 1
 
-    play music "music/v12/Track Scene 21a.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_21a fadein 2
 
     scene v12aun2 # TPP. Show MC helping Aubrey sit down on the bed, Aubrey in pain, MC worried, both mouths closed
     with dissolve

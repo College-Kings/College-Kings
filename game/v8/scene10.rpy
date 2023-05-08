@@ -4,7 +4,7 @@
 # Time: Saturday Evening
 
 label wolves_gym_intro:
-    play music "music/m11punk.mp3" fadein 2
+    play music music.ck1.m11punk fadein 2
 
     scene v8swgym1 # FPP. Shot of the Wolves gym, Sebastian in view, mouth open, arms out as if introducing someone to a location.
     with Fade(0.75, 0.25, 0.75)

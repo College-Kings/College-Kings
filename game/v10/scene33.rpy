@@ -20,7 +20,7 @@ label v10_charity_freeroam:
     with fade
 
     u "(Now this is an event!)"
-    play music "music/v10/Track Scene 33.mp3" fadein 2
+    play music music.ck1.v10.Track_Scene_33 fadein 2
 
     jump v10s33_autumn1
 

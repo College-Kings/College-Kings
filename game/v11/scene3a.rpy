@@ -6,7 +6,7 @@ label v11_wolves_packing_chris:
 
     scene v10swpc1 # FPP. MC is in his Wolves room, looking at his clothes. 
     with fade
-    play music "music/v11/Track Scene 3.mp3" fadein 2
+    play music music.ck1.v11.Track_Scene_3 fadein 2
     u "(I really should get some more clothes.)"
 
     scene v10swpc2 # FPP. MC looks at the door in his Wolves room. It's closed.

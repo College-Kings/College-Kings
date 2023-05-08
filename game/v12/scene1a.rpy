@@ -10,7 +10,7 @@ label v12_chase_robber:
 
     pause 0.75
 
-    play music "music/v12/Track Scene 1_1.mp3" fadein 2
+    play music music.v12_Track_Scene_1_1 fadein 2
 
     scene v12car2 # TPP Show MC turning into an alley at a full run
     with dissolve
@@ -113,7 +113,7 @@ label v12_chase_robber:
         robber "Ha, you sure are one sorry ass fighter. Now your girl lost her bag and you got your ass kicked. Bet you won't be getting any tonight. *Laughs*"
 
         stop music fadeout 3
-        play music "music/v12/Track Scene 1a_2.mp3" fadein 2
+        play music music.ck1.v12.Track_Scene_1a_2 fadein 2
 
         scene v12car14 # FPP View of MC laying on the ground, show robber running out of the alley and into the night
         with dissolve
@@ -213,7 +213,7 @@ label v12_chase_robber:
         pause 0.75
 
         stop music fadeout 3
-        play music "music/v12/Track Scene 1a_3.mp3" fadein 2
+        play music music.ck1.v12.Track_Scene_1a_3 fadein 2
 
         scene v12car100
         with fade
@@ -294,7 +294,7 @@ label v12_chase_robber:
         u "Fucking asshole!"
 
         stop music fadeout 3
-        play music "music/v12/Track Scene 1a_2.mp3" fadein 2
+        play music music.ck1.v12.Track_Scene_1a_2 fadein 2
 
         scene v12car16a # TPP Same angle as v12car16, show MC reaching down to robber on the ground and grabbing Nora's bag
         with dissolve
@@ -435,7 +435,7 @@ label v12_chase_robber:
         pause 0.75
 
         stop music fadeout 3
-        play music "music/v12/Track Scene 1a_3.mp3" fadein 2
+        play music music.ck1.v12.Track_Scene_1a_3 fadein 2
 
         scene v12car23
         with dissolve
@@ -478,7 +478,7 @@ label v12_chase_robber:
         pause 0.75
 
     stop music fadeout 3
-    play music "music/v11/Track Scene 6.mp3" fadein 2
+    play music music.v11_Track_Scene_6 fadein 2
 
     scene v12car30 # TPP Show MC sitting on his bed in the hotel room
     with dissolve

@@ -9,7 +9,7 @@ label v13s44:
 
     pause 0.75
 
-    play music "music/v13/Track Scene 44.mp3" fadein 2
+    play music music.ck1.v13.Track_Scene_44 fadein 2
 
     scene v13s44_1a # TPP. Same as v13s44_1a, Lauren caught up to MC, MC slight smile, mouth closed, Lauren slight smile, mouth open.
     with dissolve

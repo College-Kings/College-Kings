@@ -9,7 +9,7 @@ label v13s56:
 
     pause 0.75
 
-    play music "music/v13/Track Scene 56.mp3" fadein 2
+    play music music.ck1.v13.Track_Scene_56 fadein 2
 
     scene v13s56_1a # TPP. Same as v13s56_1, different place on sidewalk
     with dissolve

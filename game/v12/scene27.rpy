@@ -10,7 +10,7 @@ label v12s27:
 
     imre "Bro, did you hear what went down with Chris and Nora?! I swear she's starting to really do too much..."
 
-    play music "music/v12/Track Scene 27_1.mp3" fadein 2
+    play music music.v12_Track_Scene_27_1 fadein 2
 
     scene v12s27_2 # FPP, Imre standing in front of mc close up, slightly outraged
     with dissolve
@@ -93,7 +93,7 @@ label v12s27:
     u "You know where the place is?"
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 27_2.mp3" fadein 2
+    play music music.v12_Track_Scene_27_2 fadein 2
 
     scene v12s27_4 #FPP Imre close up looking at mc whilst walking, (so body is forwards and head is rotated towards mc, background doesn't need to move, so don't actually make him walk forwards each shot), laughing smile, mouth open
     with dissolve
@@ -126,7 +126,7 @@ label v12s27:
     pause 0.7
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 27_3.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_27_3 fadein 2
 
     scene v12s27_6 # FPP shows closeup tattoo parlor looking at you, smiling, mouth open
     with dissolve
@@ -418,7 +418,7 @@ label v12s27:
     imre "I'm not paying for this shit!"
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 27_4.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_27_4 fadein 2
 
     scene v12s27_15 # TPP Imre and mc walking back to the hotel, Imre mouth open angry, looking at mc, mc neutral expression
     with fade

@@ -7,7 +7,7 @@ label v9_satmorn_gfb_walk:
     scene v9gfb1 # FPP. MC on sidewalk, looking at the horizon, sun barely risen
     with fade
 
-    play music "music/v9/Track Scene 30.mp3" fadein 2
+    play music music.ck1.v9.Track_Scene_30 fadein 2
 
     pause 1
 

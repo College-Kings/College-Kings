@@ -10,7 +10,7 @@ label v12_valentine:
 
     u "Home sweet home... *Laughs* Feeling alright?"
 
-    play music "music/v12/Track Scene 16_1.mp3" fadein 2
+    play music music.v12_Track_Scene_16_1 fadein 2
 
     scene v12val1a # FPP. Same as v12val1, Riley slight smile, mouth open
     with dissolve
@@ -153,7 +153,7 @@ label v12_valentine:
     pause 1.25
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 16_2.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_16_2 fadein 2
 
     scene v12val12 # FPP. MC, Mr. Lee and Nora standing next to each other, in front of them is the bishop, MC looking at bishop, bishop looking at Mr. lee, bishop smiling, mouth open (Only Bishop in shot)
     with dissolve
@@ -629,7 +629,7 @@ label v12_valentine:
             u "*Whisper* I know that bothered you, but try and roll it off your shoulder, yeah? Worry about what's in front of you, not what's down the hall."
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 16_3.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_16_3 fadein 2
 
     scene v12val30c # FPP. Same as v12val30, Nora looking at MC, Nora slight smile, mouth closed
     with dissolve
@@ -953,7 +953,7 @@ label v12_valentine:
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 16_4.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_16_4 fadein 2
 
     scene v12val42 # TPP. Show Charli walking next to MC, Imre and Lindsey walking in front of them, on sidewalk, all slightly smiling, mouths closed
     with dissolve

@@ -6,7 +6,7 @@
 label v10_imre_vs_caleb:
     scene v10ivc1 # TPP. Show MC walking towards the ring, Josh in ring in tux, mouths closed, nerutal expressions-
     with fade
-    play music "music/v10/Track Scene 2.mp3" fadein 2
+    play music music.ck1.v10.Track_Scene_2 fadein 2
 
     pause 0.75
 

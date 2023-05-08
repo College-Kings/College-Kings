@@ -4,7 +4,7 @@
 # Time: Saturday Night
 
 label v10_imre_vs_caleb_fight:
-    play music "music/v10/Track Scene 4.mp3" fadein 2
+    play music music.ck1.v10.Track_Scene_4 fadein 2
     scene v10ivc3b # TPP. Show Josh in the ring strolling around as if he's adressing a crowd, mouth open.
     with fade
 

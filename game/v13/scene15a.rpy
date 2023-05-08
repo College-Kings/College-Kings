@@ -9,7 +9,7 @@ label v13s15a:
 
     pause 0.75
 
-    play music "music/v13/Track Scene 15.mp3" fadein 2
+    play music music.v13_Track_Scene_15 fadein 2
 
     scene v13s15a_2 # TPP. Show MC standing in front of the door, in the room, MC neutral expression, mouth closed, room is dark
     with dissolve

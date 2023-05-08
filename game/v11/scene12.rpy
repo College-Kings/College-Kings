@@ -6,7 +6,7 @@
 label v11_sit_ryan_convo:
     scene v11src1 # FPP View down the aisle from front of the plane, some people sitting, some standing, Ms. Rose standing with mouth open
     with dissolve
-    play music "music/v11/Track Scene 12.mp3" fadein 2
+    play music music.ck1.v11.Track_Scene_12 fadein 2
     ro "Alright, you know your seats. [name], you're sitting next to Ryan."
 
     scene v11src1a # FPP Same angle and characters as v11src1, Ms. Rose mouth closed

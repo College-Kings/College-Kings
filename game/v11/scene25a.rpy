@@ -6,7 +6,7 @@
 label v11_hotel_charlie_bar:
     scene v11cmb1 # TPP. Show Charli approaching MC at the bar.
     with dissolve
-    play music "music/v11/Track Scene 5_6.mp3" fadein 2
+    play music music.ck1.v11.Track_Scene_5_6 fadein 2
     charli "Wearing that shirt with those pants was a pretty brave choice."
 
     scene v11cmb2 # FPP. Show charli mouth closed

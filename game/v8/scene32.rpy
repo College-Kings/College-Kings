@@ -9,7 +9,7 @@ label mr_aft_class:
         with dissolve
         pause 0.5
 
-        play music "music/mindie3.mp3"
+        play music music.ck1.mindie3
 
         scene v8saec2 # FPP. Show Ms. Rose looking at MC (Camera), gesturing to come over, neutral expression, mouth open.
         with dissolve

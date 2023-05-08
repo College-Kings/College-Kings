@@ -4,7 +4,7 @@
 # Time: night/day
 
 label v11_hotel_room:
-    play music "music/mhorror.mp3"
+    play music music.ck1.mhorror
     play sound sound.swoosh
     scene s587
     with flash
@@ -129,7 +129,7 @@ label v11wakeupa:
 
         u "Oh, uh... yeah. Just a bad dream I guess... You're up early."
 
-        play music "music/v11/Track Scene 19_1.mp3" fadein 2
+        play music music.ck1.v11.Track_Scene_19_1 fadein 2
         scene v11bane3b # FPP. Same 3, chloe now looking at her suitcase accross the room, mouth open.
         with dissolve
 
@@ -307,7 +307,7 @@ label v11wakeupa:
 
         ri "[name]! Get up! You can't just sleep all day."
 
-        play music "music/v11/Track Scene 19_1.mp3" fadein 2
+        play music music.ck1.v11.Track_Scene_19_1 fadein 2
 
         scene v11hr9 # FPP. MC is lying in his bed, he is looking at Riley, who is standing next to him, she is slightly angry, mouth closed
         with fade

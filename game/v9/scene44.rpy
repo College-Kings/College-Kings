@@ -9,7 +9,7 @@ label v9_warehouse_lindsey:
 
     u "(I need a breather. I should go see what this lineup looks like. Prepare myself for the night.)"
 
-    play music "music/v9/Track Scene 7.mp3" fadein 2
+    play music music.ck1.v9.Track_Scene_7 fadein 2
 
     scene v9wwl2 # TPP. Show MC continuing to walk, he bumps into Lindsey as he is walking.
     with dissolve

@@ -17,7 +17,7 @@ label v10_wolves_redec:
 
     pause 0.75
 
-    play music "music/v10/Track Scene 13.mp3" fadein 2
+    play music music.ck1.v10.Track_Scene_13 fadein 2
 
     scene v10swhr2 # FPP. Show Chris stood in the Wolves hallway this angle must make sense for both whr1 & whr8, Chris neutral, mouth closed.
     with dissolve

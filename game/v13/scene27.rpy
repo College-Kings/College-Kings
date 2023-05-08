@@ -9,7 +9,7 @@ label v13s27:
 
     pause 0.75
 
-    play music "music/v13/Track Scene 27_1.mp3" fadein 2
+    play music music.ck1.v13.Track_Scene_27_1 fadein 2
 
     play sound sound.vibrate
 
@@ -61,7 +61,7 @@ label v13s27:
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v13/Track Scene 27_2.mp3" fadein 2
+    play music music.v13_Track_Scene_27_2 fadein 2
 
     scene v13s27_4 # TPP. Show MC walking in the street, slight smile, mouth closed
     with fade

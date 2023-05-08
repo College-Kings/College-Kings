@@ -14,7 +14,7 @@ label v9_room_w_sam:
     scene v9rwsa2 # TPP. Show MC getting up from his desk to answer his door.
     with dissolve
 
-    play music "music/v9/Track Scene 21.mp3" fadein 2
+    play music music.ck1.v9.Track_Scene_21 fadein 2
 
     pause 0.8
 

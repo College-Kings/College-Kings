@@ -7,7 +7,7 @@ label v9_room_w_chris:
     scene v9rwc1 # TPP. Show MC sat at his desk, continuing on from v9fra2a.
     with dissolve
 
-    play music "music/v9/Track Scene 21.mp3" fadein 2
+    play music music.ck1.v9.Track_Scene_21 fadein 2
 
     pause 1
 

@@ -33,7 +33,7 @@ label after_drugs:
         jo "*Groans*"
 
     play sound sound.door_open
-    play music "music/mchill1.mp3"
+    play music music.ck1.mchill1
 
     scene v8josh14 # TPP (This is the next scene for both v8josh12a and v8josh13, in different paths of course, so both the transitions should look smooth). Show MC opening the room door (half open) with Josh still taking support from MC
     with dissolve
@@ -667,7 +667,7 @@ label tues_morning_at_joshs:
         u "(Oh, looks like Amber is up already.)"
         u "(I should get dressed and see how Josh is doing.)"
 
-        play music "music/mfunk.mp3"
+        play music music.ck1.mfunk
 
         scene v8josh39 # FPP. MC walking down the stairs into the kitchen, no others should be seen in the shot (For context, Josh is making breakfast and Amber is sitting at the table talking to Josh but they should not be visible in this shot)
         with dissolve
@@ -778,7 +778,7 @@ label tues_morning_at_joshs:
         u "(Oh, looks like Josh and Amber are up already.)"
         u "(Guess I better get up and see how he is.)"
 
-        play music "music/mfunk.mp3"
+        play music music.ck1.mfunk
 
         scene v8josh38 # FPP. MC walking into the kitchen but just outside it, so no others should be seen in the shot (For context, Josh is making breakfast and Amber is sitting at the table talking to Josh but they should not be visible in this shot)
         with dissolve

@@ -28,7 +28,7 @@ label v9_apes_pre_fight:
 
     pause 2
 
-    play music "music/v9/Track Scene 14.mp3" fadein 2
+    play music music.ck1.v9.Track_Scene_14 fadein 2
 
     scene v9apf3 # TPP. Show Grayson barging through the door of MC's room.
     with dissolve

@@ -9,7 +9,7 @@ label v13s51_emily_fight:
 
     pause 0.75
 
-    play music "music/v13/Track Scene 51.mp3" fadein 2
+    play music music.ck1.v13.Track_Scene_51 fadein 2
     
     scene v13s51_2 # FPP. Same positioning as v13s51_1, Emily mouth open, mad
     with dissolve

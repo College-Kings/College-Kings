@@ -7,7 +7,7 @@ label v10_emily_course:
     scene v10semi1 # TPP. Show MC walking down the college hallways, towards a slightly open door.
     with fade
 
-    play music "music/v10/Track Scene 27.mp3" fadein 2
+    play music music.ck1.v10.Track_Scene_27 fadein 2
 
     pause 0.75
 

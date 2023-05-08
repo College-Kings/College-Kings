@@ -9,7 +9,7 @@ label v13s34:
 
     pause 0.75
 
-    play music "music/v13/Track Scene 34_1.mp3" fadein 2
+    play music music.ck1.v13.Track_Scene_34_1 fadein 2
 
     scene v13s34_2 # FPP. Show clipps looking at MC, slight smile, mouth open
     with dissolve
@@ -154,7 +154,7 @@ label v13s34:
     pause 0.75 
 
     stop music fadeout 3
-    play music "music/v13/Track Scene 34_2.mp3" fadein 2
+    play music music.ck1.v13.Track_Scene_34_2 fadein 2
 
     scene v13s34_9 # TPP. Show the gate door slamming closed, Riley, angry expression, mouth closed
     with dissolve
@@ -428,7 +428,7 @@ label v13s34_1:
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v13/Track Scene 34_3.mp3" fadein 2
+    play music music.ck1.v13.Track_Scene_34_3 fadein 2
     
     scene v13s34_23 # FPP. Duncan, Clipps, Mr. Lee all standing infront of MC looking at him, all slight smile, mouth closed
     with dissolve
@@ -484,7 +484,7 @@ label v13s34_1:
             pause 0.75
 
             stop music fadeout 3
-            play music "music/v13/Track Scene 34_4.mp3" fadein 2
+            play music music.ck1.v13.Track_Scene_34_4 fadein 2
 
             scene v13s34_29 # FPP. Riley looking at MC, mascara dripping down her face, crying expression, mouth open
             with dissolve
@@ -671,7 +671,7 @@ label v13s34_1:
             pause 0.75
 
             stop music fadeout 3
-            play music "music/v13/Track Scene 34_4.mp3" fadein 2
+            play music music.ck1.v13.Track_Scene_34_4 fadein 2
 
             scene v13s34_33 # FPP. Riley looking at Mr. Lee, surprised expression, mouth open
             with dissolve

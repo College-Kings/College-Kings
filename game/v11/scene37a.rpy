@@ -4,7 +4,7 @@
 # Time: Morning
 
 label v11_walk_or_ride:
-    play music "music/v10/Track Scene 17_1.mp3" fadein 2
+    play music music.ck1.v10.Track_Scene_17_1 fadein 2
     menu:
         "Ride with Mr. Lee":
             $ v11_ride_with_mrlee = True

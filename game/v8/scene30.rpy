@@ -64,7 +64,7 @@ label v8s30_amberBlowjob:
     else:
         am "Oh wow, I could get used to this."
 
-    play music "music/v8/Track Scene 30.mp3" fadein 2
+    play music music.ck1.v8.Track_Scene_30 fadein 2
 
     image v8am2bj1 = Movie(play="images/v8/Scene 30/v8am2bj1.webm", loop=True, image="images/v8/Scene 30/2ambj_000.webp", start_image="images/v8/Scene 30/2ambj_000.webp") # BJ TPP
     image v8am2bj1f = Movie(play="images/v8/Scene 30/v8am2bj1f.webm", loop=True, image="images/v8/Scene 30/2ambj_000.webp", start_image="images/v8/Scene 30/2ambj_000.webp")

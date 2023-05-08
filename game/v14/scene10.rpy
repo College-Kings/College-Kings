@@ -4,7 +4,7 @@
 # Time: Afternoon
 
 label v14s10:
-    play music "music/v11/Track Scene 13_1.mp3" fadein 2
+    play music music.ck1.v11.Track_Scene_13_1 fadein 2
 
     scene v14s10_1 # TPP. Show the plane taking off
     with fade

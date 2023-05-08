@@ -10,7 +10,7 @@ label v12_room_chloe_riley:
 
         u "Hey, hey. Thanks for checking us in."
 
-        play music "music/v12/Track Scene 12_1.mp3" fadein 2
+        play music music.ck1.v12.Track_Scene_12_1 fadein 2
 
         scene v12crm2a # FPP. same as 2, smiling and mouth opened
         with dissolve
@@ -216,7 +216,7 @@ label v12_room_chloe_riley:
 
         ri "About time! What were you doing, plotting your next murder?"
 
-        play music "music/v12/Track Scene 12_2.mp3" fadein 2
+        play music music.ck1.v12.Track_Scene_12_2 fadein 2
 
         scene v12crm12a # FPP. looking at riley, mouth closed
         with dissolve

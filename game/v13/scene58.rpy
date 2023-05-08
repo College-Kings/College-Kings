@@ -9,7 +9,7 @@ label v13s58:
 
     u "(There goes all my money.)"
 
-    play music "music/v13/Track Scene 58.mp3" fadein 2
+    play music music.v13_Track_Scene_58 fadein 2
 
     scene v13s58_1a # TPP. Same as v13s58_1, slight smile, mouth open.
     with dissolve

@@ -7,7 +7,7 @@ label v9_ending:
     scene v9end1 # TPP. Show MC walking near the exit of the warehouse.
     with fade
 
-    play music "music/v9/Track Scene 45.mp3" fadein 2
+    play music music.ck1.v9.Track_Scene_45 fadein 2
 
     pause 1
 

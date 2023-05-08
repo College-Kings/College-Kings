@@ -10,7 +10,7 @@ label v12_dock_arrival:
 
     pause 1
 
-    play music "music/v12/Track Scene 9.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_9 fadein 2
 
     scene v12doa2 # TPP. Show Imre running past MC, MC slightly surprised, mouth closed, Imre happy, mouth closed
     with dissolve

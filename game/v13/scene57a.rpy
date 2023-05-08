@@ -9,7 +9,7 @@ label v13s57a:
 
     pause 0.75
 
-    play music "music/v13/Track Scene 57.mp3" fadein 2
+    play music music.v13_Track_Scene_57 fadein 2
 
     scene v13s57a_2 # FPP. Nora looking at MC, MC looking at Nora, Nora slight smile, mouth closed.
     with dissolve

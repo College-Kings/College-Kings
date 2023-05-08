@@ -10,8 +10,8 @@ label apes_join_ceremony:
     with fade
     u "(Looking good there, [name].)"
 
-    play music "music/mindie1.mp3" fadein 2
-    queue music ["music/m15punk.mp3", "music/m2punk.mp3"]
+    play music music.ck1.mindie1 fadein 2
+    queue music [music.ck1.m15punk, music.ck1.m2punk]
 
     if "v8_riley" in sceneList:
         u "(I hope I run into Riley tonight. Last night was great.)"

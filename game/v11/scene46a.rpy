@@ -7,7 +7,7 @@ label v11_dinner_with_aubrey:
     scene v11dwa1 # FPP. Show Aubrey slight smile mouth closed
     with dissolve
     u "So, do you like fancy restaurants like this?"
-    play music "music/v10/Track Scene 40_2.mp3" fadein 2
+    play music music.ck1.v10.Track_Scene_40_2 fadein 2
     scene v11dwa1a # FPP. # FPP. Show Aubrey slight smile mouth open
     with dissolve
 

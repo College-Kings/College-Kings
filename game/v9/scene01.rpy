@@ -10,7 +10,7 @@ label v9start:
         jump v9_start_apes
 
 label v9_start_wolves:
-    play music "music/v9/Track Scene 1.mp3" fadein 2
+    play music music.ck1.v9.Track_Scene_1 fadein 2
 
     u "(I need to find out what's going on. This is insane!)"
 
@@ -187,7 +187,7 @@ label v9_start_wolves:
     with dissolve
     pause 0.75
 
-    play music "music/v9/Track Scene 3.mp3" fadein 2
+    play music music.ck1.v9.Track_Scene_3 fadein 2
 
     scene v9wpost6 # TPP. MC IN UNDERWEAR FROM NOW ON AND IT SHOULD BE DARK INSIDE THE ROOM. Show MC flexing one of his arms, looking at himself in mirror inside his room, neutral expression, mouth closed
     with Fade(0.75, 0.25, 0.75)

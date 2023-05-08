@@ -9,7 +9,7 @@ label v3start:
 
     u "(Who could that be?)"
 
-    play music "music/mlove2.mp3"
+    play music music.ck1.mlove2
 
     scene s201 # open door and chloe embarrassed smile
     with fade
@@ -120,7 +120,7 @@ label v3start:
 
     pause 0.5
 
-    play music "music/m6punk.mp3"
+    play music music.ck1.m6punk
 
     scene s205a # I'mre close up
     with dissolve
@@ -405,8 +405,8 @@ label conl:
 
     u "(I really hope she actually shows up.)"
 
-    play music "music/m16punk.mp3"
-    queue music [ "music/mchill1.mp3", "music/m7punk.mp3" ]
+    play music music.ck1.m16punk
+    queue music [music.ck1.mchill1, music.ck1.m7punk]
 
     scene s211 #you behind gym
     with Fade (1,0,1)
@@ -695,7 +695,7 @@ label conl:
 
     cl "Shit! We need to hide, we're not allowed to be here."
 
-    play music "music/m12punk.mp3"
+    play music music.ck1.m12punk
 
     scene s222 # showing you hiding behind bleachers
     with fade
@@ -739,7 +739,7 @@ label conl:
     scene s212d # outside of the gym, cl flirty
     with Fade (1,0,1)
 
-    play music "music/mlove2.mp3"
+    play music music.ck1.mlove2
 
     cl "So, are we even now?"
 
@@ -775,7 +775,7 @@ label conl:
 
     show fantasyoverlay onlayer foreground
 
-    play music "music/mhorror.mp3"
+    play music music.horror
     scene s226 # Dream with emily, fighting over a stuffed animal in bed
     with flash
 
@@ -898,9 +898,9 @@ label conl:
 
     u "*Breathing heavily*"
 
-    play music "music/mindie1.mp3"
+    play music music.ck1.mindie1
 
-    queue music [ "music/mindie2.mp3", "music/mindie3.mp3" ]
+    queue music [music.ck1.mindie2, music.ck1.mindie3]
 
     scene s232 #Imre waking you op
     with Fade (2,0,2)
@@ -1355,7 +1355,7 @@ label conl:
     $ bodyHook = True
     call screen fightPopup("Body Hook")
 
-    play music "music/m16punk.mp3"
+    play music music.ck1.m16punk
 
     scene s250 # walking back
     with Fade (1,0,1)
@@ -1420,7 +1420,7 @@ label conl:
 
                 u "(Okay, let's see. Which one's her room?)"
 
-                play music "music/m4punk.mp3"
+                play music music.ck1.m4punk
 
                 u "(Oh no, the only open window is on the second floor.)"
 
@@ -1613,7 +1613,7 @@ label conl:
 
                 u "(Okay, let's see. Which one's her room?)"
 
-                play music "music/m4punk.mp3"
+                play music music.ck1.m4punk
 
                 u "(Oh no, the only open window is on the second floor.)"
 
@@ -1869,7 +1869,7 @@ label conl:
 
         u "(Okay, let's see. Which one's her room?)"
 
-        play music "music/m4punk.mp3"
+        play music music.ck1.m4punk
 
         u "(Oh no, the only open window is on the second floor.)"
 
@@ -2391,7 +2391,7 @@ label acream:
 
     $ renpy.end_replay()
 
-    play music "music/mlove2.mp3"
+    play music music.ck1.mlove2
 
     scene s261a
     with dissolve
@@ -2447,9 +2447,9 @@ label acream:
 label aubsexad:
     pause 0.5
 
-    play music "music/mchill1.mp3"
+    play music music.ck1.mchill1
 
-    queue music [ "music/mchill2.mp3"]
+    queue music [music.ck1.mchill2]
 
 
 ### Meet Lauren
@@ -2833,7 +2833,7 @@ label continueq:
 
     ry "Any retribution will only make it worse."
 
-    play music "music/m9punk.mp3"
+    play music music.ck1.m9punk
 
     scene s275br # ryan mouth closed disturbed looking at riley
     with dissolve
@@ -2976,7 +2976,7 @@ label continueq:
 
     ri "[name], wait!"
 
-    play music "music/mlove1.mp3"
+    play music music.ck1.mlove1
 
     scene s279 # Riley arriving at the spot behind the cabin , emphatic
     with dissolve
@@ -3122,7 +3122,7 @@ label continueq:
     stop music fadeout 3
 
     if CharacterService.is_girlfriend(lauren): #LAUREN MOVIES
-        play music "music/mindie2.mp3"
+        play music music.ck1.mindie2
 
         scene s282  ## later that day transition pic
         with Fade (1,0,1)
@@ -3275,7 +3275,7 @@ label continueq:
 
         pause 0.5
 
-        play music "music/mindie1.mp3"
+        play music music.ck1.mindie1
 
         scene s290 # lauren close up whispering ironically FIRST PERSON
         with dissolve
@@ -3474,7 +3474,7 @@ label continueq:
         with Fade (1,0,1)
 
         pause 0.5
-        play music "music/mlove2.mp3"
+        play music music.ck1.mlove2
 
         scene s293 # FIRST PERSON: lauren close up turns around looking at you cute
         with dissolve
@@ -3559,7 +3559,7 @@ label dk_ad:
     pause 1
 
 label continues: # This is after the date
-    play music "music/horror2.mp3"
+    play music music.horror
 
     play sound sound.call
 

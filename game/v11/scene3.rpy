@@ -6,7 +6,7 @@
 label v11_samantha_packing:
     scene v11samp1 # FPP. MC is looking at his packed luggage, the luggage is open, with some clothes on the outside, next to the luggage
     with fade
-    play music "music/v11/Track Scene 3.mp3" fadein 2
+    play music music.ck1.v11.Track_Scene_3 fadein 2
     u "(I really should get some more clothes.)"
 
     scene v11samp2 # FPP. MC is looking at his room's door, closed
