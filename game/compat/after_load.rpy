@@ -306,7 +306,10 @@ label after_load:
             if isinstance(post.user, PlayableCharacter):
                 post.user = mc
             elif post.user.name:
-                post.user = getattr(store, post.user.name.lower().replace(' ', '_'))
+                if post.user.name == lews_official.name:
+                    post.user = lews_official
+                else:
+                    post.user = getattr(store, post.user.name.lower().replace(' ', '_'))
 
             try: kiwii_post.number_likes
             except AttributeError: kiwii_post.number_likes = kiwii_post.numberLikes
@@ -421,7 +424,10 @@ label after_load:
                 if isinstance(comment.user, PlayableCharacter):
                     comment.user = mc
                 elif comment.user.name:
-                    comment.user = getattr(store, comment.user.name.lower().replace(' ', '_'))
+                    if comment.user.name == lews_official.name:
+                        comment.user = lews_official
+                    else:
+                        comment.user = getattr(store, comment.user.name.lower().replace(' ', '_'))
 
         kiwii_posts = [kiwii_post for kiwii_post in kiwii_posts if hasattr(kiwii_post.user, "name")]
 
