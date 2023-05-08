@@ -7,7 +7,7 @@
 
 label v10_cafe_w_jenny:
     play music "music/v10/Track Scene 22_2.mp3" fadein 2
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         scene v10scwj1 # TPP. Show MC waking up in his new Wolves room in underwear.
         with fade
 

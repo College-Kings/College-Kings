@@ -74,7 +74,7 @@ scene v9dream8
 with dissolve
 pause 1
 
-if joinwolves:
+if mc.frat == Frat.WOLVES:
     jump v9_dream_wolves
 else:
     jump v9_dream_apes

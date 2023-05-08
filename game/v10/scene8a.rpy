@@ -16,7 +16,7 @@ label v10_avoid_fight:
         scene v10frr2 # TPP. Show MC having just left the warehouse (camera from outside, mc facing camera)        
         with dissolve
 
-        if joinwolves:
+        if mc.frat == Frat.WOLVES:
             scene v10frr2a # TPP. same camera as v10frr2, Show MC having just left the warehouse (camera from outside, mc facing camera), Show chris just exiting the warehouse. MC mouth closed, Chris mouth open
             with dissolve
 

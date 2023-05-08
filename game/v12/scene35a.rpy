@@ -729,7 +729,7 @@ label v12_nora_sex:
         scene v12nos13a # TPP. Same as v12nos13, MC smiling, mouth closed
         with dissolve
 
-        if joinwolves:
+        if mc.frat == Frat.WOLVES:
             $ grant_achievement("inside_job")
         else:
             $ grant_achievement("all_is_fair_in_love_and_war")

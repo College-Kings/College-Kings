@@ -4,7 +4,7 @@
 # Time: Wednesday early morning
 
 label v9_dream_wakeup:
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         scene v9dream20 # TPP (maybe from above). MC in his room in Wolves house waking up from sleep suddenly (his head lifted up from pillow) as if from a bad dream, sweating a bit, eyes wide open, mouth open (not because he's talking but because he's hyperventilating)
         with flash
         u "(What the hell was that? Holy shit!)"
@@ -67,7 +67,7 @@ label v9_dream_wakeup:
 
 
 label v9_phn_riley1_done:
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         scene v9dream21 # TPP. Show MC sitting on the side of his bed while stretching his arms, looking uncertain, mouth closed
         with dissolve
         u "(I wonder what that dream was all about. Why am I that worried about the stupid Brawl thing?)"

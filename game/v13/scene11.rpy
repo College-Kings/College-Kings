@@ -649,7 +649,7 @@ label v13_imre_continue:
             u "(I'm not getting involved in it.)"
 
         "Stick up for Ryan":
-            if joinwolves:
+            if mc.frat == Frat.WOLVES:
                 $ reputation.add_point(RepComponent.TROUBLEMAKER)
             else:
                 $ reputation.add_point(RepComponent.BRO)

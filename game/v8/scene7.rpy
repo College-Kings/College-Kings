@@ -208,7 +208,7 @@ label cafe_no_call:
     scene scaf8
     with dissolve
 
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         u "Nothing in particular except for some of the Wolves' stuff."
 
     else:
@@ -230,7 +230,7 @@ label cafe_no_call:
     with Dissolve(1)
     pause 0.75
 
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         jump after_prot_wolves
 
     else:
@@ -395,7 +395,7 @@ label caf_no_prot_au:
     with Dissolve(1)
     pause 0.75
 
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         jump after_prot_wolves
 
     else:

@@ -214,7 +214,7 @@ label v12_follow_chris:
         "You're right":
             $ v12_help_chris += 1
             if v12_help_chris >= 4:
-                if joinwolves:
+                if mc.frat == Frat.WOLVES:
                     $ grant_achievement("brotherhood_of_men")
                 else:
                     $ grant_achievement("best_frenemies")
@@ -386,7 +386,7 @@ label v12_follow_chris:
 
     stop music fadeout 3
 
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         jump v12s27 #scene 27
     else:
         jump v12s27a #scene 27a

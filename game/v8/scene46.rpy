@@ -4,7 +4,7 @@
 # Time: Tuesday Night
 
 label v8_ending:
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         scene v8send1 # TPP. Show MC lying on his Wolves bed, looking tired.
         with fade
 

@@ -12,7 +12,7 @@ label v12_late_night_workout:
 
     play music "music/v12/Track Scene 29_1.mp3" fadein 2
 
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         scene v12lnw2 # FPP Show Lindsey, looking at MC, neutral expression with mouth closed
         with dissolve
 

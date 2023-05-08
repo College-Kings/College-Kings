@@ -147,7 +147,7 @@ label help_pen:
     with Dissolve(1)
     pause 0.5
  
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         jump mc_wolves_sun_aft
 
     else:
@@ -185,7 +185,7 @@ label no_help_pen:
     u "(Damn, I hope she'll be okay.)"
 
     # SCENE 16 #
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         jump mc_wolves_sun_aft
 
     else:

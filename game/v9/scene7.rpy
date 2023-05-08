@@ -28,7 +28,7 @@ label v9_before_lake_fr:
 label fr5ryan1:
     $ freeroam5.add("ryan")
 
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         scene v9slake1 #FPP closeup ryan sitting on a picnic blanket, mouth closed, Ryan grinning looking at the girls (you can't see the girls)
 
         u "Enjoying the view?"

@@ -1,5 +1,5 @@
 label v10_mc_clock_trans:
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         scene woldclock10
         with dissolve
 

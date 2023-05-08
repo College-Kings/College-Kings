@@ -5,7 +5,7 @@
 
 label v10_sun_morn:
     play music "music/v10/Track Scene 10.mp3" fadein 2
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         scene v10sum1 # TPP. Show MC in his Wolves bed looking up at the ceiling, MC looks tired.
         with fade
         play sound sound.vibrate

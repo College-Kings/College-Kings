@@ -4,7 +4,7 @@
 # Time: Sunday Morning
 label v10_leave_fight:
     play music "music/v10/Track Scene 9.mp3" fadein 2
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         scene v10sraf1 # TPP. MC sits down on bed in his room.
         with fade
         pause 0.5

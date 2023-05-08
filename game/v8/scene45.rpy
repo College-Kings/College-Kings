@@ -5,7 +5,7 @@
 
 label tue_night_in_room:
     stop music fadeout 3
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         scene v8star1 # TPP. Show MC lying on his bed in his Wolves room staring at the ceiling.
         with fade
 

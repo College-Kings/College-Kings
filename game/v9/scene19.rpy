@@ -308,7 +308,7 @@ label v9_lau_dorm:
     scene v9lau6c
     with dissolve
 
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         u "Five bucks to punch Grayson in the face-"
 
     else:

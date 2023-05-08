@@ -5,7 +5,7 @@
 # Kiwii Images: v9emiKiwii (Emily's Cleavage)
 
 label v9_room_thur_night:
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         scene v9emi1 # TPP. Show MC sat on his bed in his Wolves room, looking tired.
         with fade
 
@@ -293,7 +293,7 @@ label v9_emily_dorm:
                 u "Anyways, I should probably head home."
                 $ renpy.end_replay()
 
-                if joinwolves:
+                if mc.frat == Frat.WOLVES:
                     jump v9_thur_night_aft_em_w
 
                 else:
@@ -395,7 +395,7 @@ label v9_emily_dorm:
                 u "Anyways, I should probably head home."
                 $ renpy.end_replay()
 
-                if joinwolves:
+                if mc.frat == Frat.WOLVES:
                     jump v9_thur_night_aft_em_w
 
                 else:
@@ -799,7 +799,7 @@ label v9s16_emilyDoggy:
 
     $ CharacterService.set_relationship(emily, Relationship.FWB)
     
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         jump v9_thur_night_aft_em_w
 
     else:

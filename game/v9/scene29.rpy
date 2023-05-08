@@ -4,7 +4,7 @@
 # Time: Sat Morning
 
 label v9_your_room_satmorn:
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         scene v9smr1 # TPP. Show MC waking up on his Wolves bed in underwear.
         with fade
 

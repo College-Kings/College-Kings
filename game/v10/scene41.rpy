@@ -98,7 +98,7 @@ label v10_mc_pen_call:
 
     stop music fadeout 3
     play music "music/v10/Track Scene 41_2.mp3" fadein 2
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
 
         scene v10spen5 # TPP. Show MC in his new wolves room, lying on his bed tired.
         with dissolve

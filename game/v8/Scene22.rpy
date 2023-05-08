@@ -4,7 +4,7 @@
 # Time: Monday Morning
 
 label s22:
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         scene v8spc1 # TPP. Show MC sat on the edge of his bed in Wolves room.
         with Fade(0.75, 0.25, 0.75)
 

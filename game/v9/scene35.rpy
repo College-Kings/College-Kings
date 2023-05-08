@@ -5,7 +5,7 @@
 
 label v9_room_sat_aft:
     $ v9s35_reply_boyfriend = MessageBuilder(chloe).add_function(reputation.add_point, RepComponent.BOYFRIEND)
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         scene v9rsa1 # TPP. Show MC stood in his Wolves room near his bed.
         with fade
 

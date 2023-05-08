@@ -4,7 +4,7 @@
 # Time: Tuesday Morning
 
 label mr_aft_class:
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         scene v8saec1 # TPP. Show everyone in the class standing up from their seats in preparation to leave the class.
         with dissolve
         pause 0.5

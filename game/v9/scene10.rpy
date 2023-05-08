@@ -21,7 +21,7 @@ label v9_history_class:
 
     lee "[name], so nice of you to join us."
 
-    if not joinwolves:
+    if mc.frat == Frat.APES:
         scene v9hc4 # TPP. Show MC taking a seat next to Random Classmate, MC looks a bit embrassed.
         with dissolve
 
@@ -115,7 +115,7 @@ label v9_hc_cont2:
 
     ca "Whatever. I just wanna go back to bed."
 
-    if not joinwolves:
+    if mc.frat == Frat.APES:
         scene v9hc11 # TPP. Show MC getting up from his seat.
         with dissolve
     else:
@@ -298,7 +298,7 @@ label v9_hc_return:
 
     pause 1
 
-    if not joinwolves:
+    if mc.frat == Frat.APES:
         scene v9hc26 # TPP. Show MC sitting back at his desk.
         with dissolve
     else:

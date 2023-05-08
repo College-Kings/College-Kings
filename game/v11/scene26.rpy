@@ -3,7 +3,7 @@
 # Characters: MC (Outfit 1), Ms. Rose (Outfit 1), Samantha (Outfit 1)
 # Time: Evening
 
-label v11_hotel_bar_wolves: #can only get here if joinwolves
+label v11_hotel_bar_wolves: #can only get here if mc.frat == Frat.WOLVES
     play music "music/v11/Track Scene 5_6.mp3" fadein 2
     if v11s25_beer:
         scene v11hrs1 # TPP Show MC taking a drink of his beer

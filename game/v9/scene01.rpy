@@ -4,7 +4,7 @@
 # Time: Tuesday night
 
 label v9start:
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         jump v9_start_wolves
     else:
         jump v9_start_apes

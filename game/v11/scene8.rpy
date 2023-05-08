@@ -284,7 +284,7 @@ label v11_chicks_house:
     
     stop music fadeout 3
     
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         jump v11_wolves_seb_prank
     else:
         jump v11_apes_manhunt

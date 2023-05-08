@@ -528,7 +528,7 @@ label v10_lauren_room:
 
     u "Uhm, hold on."
 
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         scene v10lar11 # FPP Show Ms. Rose on phone, worried expression, mouth closed, plain black background
         with dissolve
 
@@ -607,7 +607,7 @@ label v10_lauren_room:
         pause 1
 
     $ renpy.end_replay()
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         jump v10_ms_rose_fight
     else:
         jump v10_sam_kitchen

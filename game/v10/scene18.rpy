@@ -5,7 +5,7 @@
 label v10_call_with_lauren2:
     play music "music/v10/Track Scene 15.mp3" fadein 2
 
-    if joinwolves: # MC is a wolf, is that the correct variable name?
+    if mc.frat == Frat.WOLVES: # MC is a wolf, is that the correct variable name?
         scene v10scwl1 # TPP. Show Lauren as though FPP, she's sitting on the train. Lauren on phone listening to MC, smiling, mouth closed.
         with fade
 

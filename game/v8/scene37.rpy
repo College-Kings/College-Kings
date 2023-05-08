@@ -5,7 +5,7 @@
 
 label v8_tues_evening:
     stop music fadeout 3
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         scene v8ster1 # TPP. Show MC sat at his desk in his Wolves room, make sure MC's phone is visible on the desk. MC studying.
         with fade
 
@@ -69,7 +69,7 @@ label v8_tues_evening:
 
         jump seb_in_room
 
-    if not joinwolves:
+    if mc.frat == Frat.APES:
         scene v8ster4 # TPP. Show MC sat at his desk in his Apes room, make sure MC's phone is visible on the desk. MC studying.
         with fade
 

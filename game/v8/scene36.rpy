@@ -5,7 +5,7 @@
 # Note: There's two versions for MC's renders in this scene. They're both the same essentially except one of them is in Wolves house (starting with "v8room20") and the other is in Apes house (starting with "v8room21")
 
 label v8_julia_call:
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         scene v8room20a # MC holding his phone to his ear, neutral expression, mouth closed
         with dissolve
         play sound sound.calling

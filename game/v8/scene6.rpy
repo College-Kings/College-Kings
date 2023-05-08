@@ -2,7 +2,7 @@
 # MC arrives back at his room and lays down on his bed. He gets on his phone and opens the Kiwii app. MC scrolls through homecoming photos.
 # Note to renderers, MC wearing outfit 3.
 label aft_amb_night:
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         scene scaf1 # TPP. Show MC lay on his bed on his phone in his wolves bedroom.
         with fade
 

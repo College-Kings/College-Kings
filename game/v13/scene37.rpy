@@ -212,7 +212,7 @@ label v13s37_nora:
 
     no "Not yet... You may someday, but I'm talking about my family. Specifically my stepmom."
 
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         scene v13s37no_2d
         with dissolve
 

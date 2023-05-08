@@ -66,7 +66,7 @@ label v14s07:
 
     ro "There were memories made..."
 
-    if joinwolves and ("v12_rose" in sceneList or "v11_rose" in sceneList):
+    if mc.frat == Frat.WOLVES and ("v12_rose" in sceneList or "v11_rose" in sceneList):
         scene v14s07_2 # FPP. same as v14s07_2a Ms. Rose makes direct eye contact with mc
         with dissolve
 

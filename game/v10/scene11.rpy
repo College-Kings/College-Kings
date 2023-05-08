@@ -469,7 +469,7 @@ label v10_linds_room:
 
     stop music fadeout 3
 
-if joinwolves: # I don't know this variable name
+if mc.frat == Frat.WOLVES: # I don't know this variable name
     jump v10_wolves_redec
 
 else: # RCS - if MC is an ape?

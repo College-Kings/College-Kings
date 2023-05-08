@@ -401,7 +401,7 @@ label v12s7fr:
     pause
     hide murder_tutorial2
 
-    if (v12s7_victims == 16) or (v12s7_victims == 15 and joinwolves):
+    if (v12s7_victims == 16) or (v12s7_victims == 15 and mc.frat == Frat.WOLVES):
         show murder_tutorial3 at truecenter
         pause
         hide murder_tutorial3
@@ -5286,7 +5286,7 @@ label v12s7_nora1:
             no "Eventually there will come a time when you can't play both sides. Either he'll get mad that you're talking to me or I'll get mad because you're talking to him."
             no "It's going to happen, so what would be your choice?"
 
-            if joinwolves:
+            if mc.frat == Frat.WOLVES:
                 scene v12fernor1c
                 with dissolve
 
@@ -5346,7 +5346,7 @@ label v12s7_nora1:
 
                     u "There's no choice."
 
-                    if joinwolves:
+                    if mc.frat == Frat.WOLVES:
                         scene v12fernor1
                         with dissolve
 

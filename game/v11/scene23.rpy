@@ -24,7 +24,7 @@ label v11s23_chris1:
 
     ch "Look man, I'm sorry but I need to handle this right now. I can't talk."
 
-    if not joinwolves: # if Apes
+    if mc.frat == Frat.APES: # if Apes
         scene v11frmch1
         with dissolve
 

@@ -61,7 +61,7 @@ label v11_arrive_hotel:
 
     ro "Everyone please wait and talk amongst yourselves while we wait on the keys."
     stop music fadeout 3
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         scene v11arrh3
         with dissolve
 

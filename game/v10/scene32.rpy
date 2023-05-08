@@ -5,7 +5,7 @@
 
 label v10_tues_room_night:
     play music "music/v10/Track Scene 32_1.mp3" fadein 2
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         scene v10strn1 # TPP. Show MC tired and stressed, plopping down on his Wolves bed.
         with fade
 
