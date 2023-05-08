@@ -3,7 +3,7 @@
 # Characters: MC (Outfit 3),Nora (outfit 1)
 # Time: Tuesday Morning
 label v10_talk_nora:
-    play music "music/v10/Track Scene 28.mp3" fadein 2
+    play music music.ck1.v10.Track_Scene_28 fadein 2
     scene v10hal1 # FPP. Show Nora in hallway, mouth closed
     with fade
 

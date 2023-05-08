@@ -9,7 +9,7 @@ label v13s10:
 
     pause 0.75
 
-    play music "music/v13/Track Scene 10.mp3" fadein 2
+    play music music.v13_Track_Scene_10 fadein 2
 
     scene v13s10_2 # FPP Chloe walking away while Ryan walks toward MC
     with dissolve

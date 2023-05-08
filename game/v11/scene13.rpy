@@ -6,7 +6,7 @@
 label v11_aubrey_plane_sex:
     scene v11aub1 # TPP. Show Aubrey walking down the plane aisle, she has a slight smile, mouth closed (MC can be seen sitting in his seat in the backrgound, make sure the rest of the seating matches scene12)
     with fade
-    play music "music/v11/Track Scene 13_1.mp3" fadein 2
+    play music music.ck1.v11.Track_Scene_13_1 fadein 2
     pause 0.75
 
     if CharacterService.is_friend(aubrey):
@@ -56,7 +56,7 @@ label v11_aubrey_plane_sex:
                     call screen censored_popup("v11s13_nsfwSkipLabel1")
 
                 stop music fadeout 3
-                play music "music/v11/Track Scene 13_2.mp3" fadein 2
+                play music music.ck1.v11.Track_Scene_13_2 fadein 2
                 scene v11aub8 # FPP. MC walks in the bathroom and sees Aubrey, she is naked, smiling seducrtively at him, mouth closed (Make sure it's not the plane one, use the other bathroom)
                 with dissolve
 
@@ -279,7 +279,7 @@ label v11_aubrey_plane_sex:
 
                     scene v11aub17b # FPP. Same as v11aub17a, Lauren is very angry, mouth closed
                     with dissolve
-                    play music "music/v11/Track Scene 13_1.mp3" fadein 2
+                    play music music.ck1.v11.Track_Scene_13_1 fadein 2
                     u "I'm just helping her with her uh..."
 
                     scene v11aub17a
@@ -301,7 +301,7 @@ label v11_aubrey_plane_sex:
 
                 else: # Lauren not dating MC
                     la "Oh... oh shit. Sorry."
-                    play music "music/v11/Track Scene 13_1.mp3" fadein 2
+                    play music music.ck1.v11.Track_Scene_13_1 fadein 2
                     scene v11aub17
                     with dissolve
 

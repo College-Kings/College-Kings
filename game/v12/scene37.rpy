@@ -10,7 +10,7 @@ label v12_riley_ending:
 
     pause 0.75
 
-    play music "music/v12/Track Scene 37.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_37 fadein 2
 
     scene v12rie2 # FPP. Riley sitting down in the chair in front of MC, MC and Riley looking at each other, Riley slightly sad, mouth closed
     with dissolve

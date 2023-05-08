@@ -289,7 +289,7 @@ label starta: #for compatibility only
     scene s17
     with dissolve
 
-    play music "music/mfunk.mp3"
+    play music music.ck1.mfunk
 
     ju "Don't worry, I'll get it for you, honey."
 
@@ -349,7 +349,7 @@ label starta: #for compatibility only
     scene s29
     with dissolve
 
-    play music "music/m3punk.mp3"
+    play music music.ck1.m3punk
 
     ca "Yo, watch where you're fucking walking, bitch!"
 
@@ -387,7 +387,7 @@ label starta: #for compatibility only
     scene s33a
     with dissolve
 
-    play music "music/mlove1.mp3"
+    play music music.ck1.mlove1
 
     u "Yeah...thanks."
 
@@ -468,7 +468,7 @@ label starta: #for compatibility only
     scene s41
     with dissolve  #Rose annoyed bend over laptop
 
-    play music "music/m6punk.mp3"
+    play music music.ck1.m6punk
 
     ro "It's fine, just take a seat."
 
@@ -650,7 +650,7 @@ label starta: #for compatibility only
     scene s48
     with fade # ryan standing up
 
-    play music "music/mchill1.mp3"
+    play music music.ck1.mchill1
 
     ry "[name], give me your number and I'll hit you up for the Apes' rush party tomorrow."
 
@@ -858,7 +858,7 @@ label starta: #for compatibility only
 
     u "(I should probably go to my new dorm, but I might as well explore for a bit beforehand.)"
 
-    play music "music/mchill2.mp3"
+    play music music.ck1.mchill2
 
     scene s50 # freeroam
     with dissolve
@@ -1243,7 +1243,7 @@ label efra:
     scene s60
     with dissolve
 
-    play music "music/m16punk.mp3"
+    play music music.ck1.m16punk
 
     imre "Yooo, what's up my man?"
 
@@ -1511,7 +1511,7 @@ label efra:
 
     scene s66
     with dissolve
-    play music "music/mparty.mp3"
+    play music music.ck1.mparty
     imre "I think the ladies are here!"
 
     scene s67
@@ -1920,7 +1920,7 @@ label efra:
     ### Late night talk with Imre.
     scene s80
     with Fade(1, 0, 1)
-    play music "music/msad.mp3"
+    play music music.ck1.msad
 
     imre "Man, I can't wait to bang this Riley chick."
 
@@ -2321,7 +2321,7 @@ label v1_nsfwSkipLabel1:
 
         u "*Yawn*"
 
-        play music "music/mfunk.mp3"
+        play music music.ck1.mfunk
 
         u "(That was the most amazing dream of my life.)"
         u "(I wish I could sleep some more, but I gotta get to class.)"
@@ -2357,7 +2357,7 @@ label v1_nsfwSkipLabel1:
 
         u "*Yawn*"
 
-        play music "music/mfunk.mp3"
+        play music music.ck1.mfunk
 
         u "(What a weird dream...)"
 
@@ -2459,7 +2459,7 @@ label v1_nsfwSkipLabel1:
 
     ry "This class is so damn boring..."
 
-    play music "music/m11punk.mp3"
+    play music music.ck1.m11punk
     scene s86a
     with dissolve
 
@@ -2537,7 +2537,7 @@ label v1_nsfwSkipLabel1:
     scene s88
     with Fade (1,0,1)
 
-    play music "music/mlove1.mp3"
+    play music music.ck1.mlove1
     play sound sound.park
 
     la "This park is really nice. I've never been here before."
@@ -2924,7 +2924,7 @@ label aw_bd:
     scene s93a
     with dissolve
 
-    play music "music/msad.mp3"
+    play music music.ck1.msad
 
     u "For the last time, it wasn't a date."
 
@@ -3024,7 +3024,7 @@ label aw_bd:
         if MessengerService.has_replies(ryan):
             u "(I should really check who texted me.)"
 
-    play music "music/m3punk.mp3"
+    play music music.ck1.m3punk
 
     scene s96c
     with dissolve    
@@ -3060,7 +3060,7 @@ label aw_bd:
 
     u "(Holy shit, their house is huge. I guess someone here has rich parents.)"
 
-    play music "music/muffledparty.mp3"
+    play music music.ck1.muffledparty
 
     u "(Looks like Ryan's right there as well, waiting for me.)"
 
@@ -3179,8 +3179,8 @@ label v1_freeRoam2_sam2:
 label v1_freeRoam2_door:
     $ freeroam2.add("door")
     
-    play music "music/mparty2.mp3"
-    queue music [ "music/mparty3.mp3", "music/mparty4.mp3" ]
+    play music music.ck1.mparty2
+    queue music [music.ck1.mparty3, music.ck1.mparty4]
     
     scene s103
     #with dissolve
@@ -3907,7 +3907,7 @@ label fr2end: #for compatibility only
 
     u "Ryan?"
 
-    play music "music/mlove.mp3"
+    play music music.ck1.mlove
     scene s108
     with dissolve
 
@@ -4097,7 +4097,7 @@ label fr2end: #for compatibility only
 
     cl "So you're a first year, huh? Are you excited to get into the college lifestyle?"
 
-    play music "music/mlove2.mp3"
+    play music music.ck1.mlove2
     scene s114a
     with dissolve
 
@@ -4247,7 +4247,7 @@ label fr2end: #for compatibility only
     with dissolve
 
     u "Uhh... yeah, let's go."
-    play music "music/mparty2.mp3"
+    play music music.ck1.mparty2
     scene s118 # looking from behind main room at l and chloe
     with fade
 

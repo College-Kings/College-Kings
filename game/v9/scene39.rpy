@@ -7,7 +7,7 @@ label v9_hang_w_linds:
     scene v9hwl1 # TPP. Show MC knocking on the door of the chicks house.
     with fade
 
-    play music "music/v9/Track Scene 8_1.mp3" fadein 2
+    play music music.ck1.v9.Track_Scene_8_1 fadein 2
 
     pause 1
 
@@ -195,7 +195,7 @@ label v9_hang_w_linds:
             
             stop music fadeout 3
 
-            play music "music/v9/Track Scene 39_2.mp3" fadein 2
+            play music music.ck1.v9.Track_Scene_39_2 fadein 2
 
 
             menu:

@@ -9,7 +9,7 @@ label v13s52a:
 
     cl "Hey, wake up. *Chuckles*"
 
-    play music "music/v13/Track Scene 52a.mp3" fadein 2
+    play music music.v13_Track_Scene_52a fadein 2
 
     scene v13s52a_1a # FPP. Same as 1, mouth closed
     with dissolve

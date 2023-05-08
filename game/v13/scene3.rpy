@@ -9,7 +9,7 @@ label v13s3:
 
     pause 0.75
 
-    play music "music/v13/Track Scene 3.mp3" fadein 2
+    play music music.ck1.v13.Track_Scene_3 fadein 2
 
     scene v13s3_2 # TPP. Show MC sitting down in his seat, no one next to him, MC slight smile, mouth closed
     with dissolve

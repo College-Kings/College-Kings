@@ -4,7 +4,7 @@
 # Time: Evening 
 
 label v14s05:
-    play music "music/v13/Track Scene 40_3.mp3" fadein 2
+    play music music.v13_Track_Scene_40_3 fadein 2
 
     play sound sound.door_open
     pause 0.51

@@ -10,7 +10,7 @@ label v12_late_night_workout:
 
     li "What are you doing down here all by yourself?"
 
-    play music "music/v12/Track Scene 29_1.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_29_1 fadein 2
 
     if joinwolves:
         scene v12lnw2 # FPP Show Lindsey, looking at MC, neutral expression with mouth closed
@@ -115,7 +115,7 @@ label v12_late_night_workout:
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 29a_1.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_29a_1 fadein 2
 
     scene v12lnw6 # TPP Show MC and Lindsey, now inside gym looking around, Lindsey looks amazed and has mouth open
     with dissolve
@@ -900,7 +900,7 @@ label v12_late_night_workout:
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 29_6.mp3" fadein 2
+    play music music.v12_Track_Scene_29_6 fadein 2
 
     scene v12lnw28 # FPP Show Lindsey, back at hotel lobby, Lindsey smiling with mouth closed
     with dissolve

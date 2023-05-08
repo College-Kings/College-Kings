@@ -9,7 +9,7 @@ label v13s21a:
 
     pause 0.75
 
-    play music "music/v13/Track Scene 21a.mp3" fadein 2
+    play music music.ck1.v13.Track_Scene_21a fadein 2
 
     scene v13s21a_1 # FPP. MC looking at Mr. Lee, walking around furiously, mouth open
     with dissolve

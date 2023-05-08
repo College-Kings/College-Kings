@@ -11,7 +11,7 @@ label v12_mc_chilling:
 
         pause 0.75
 
-        play music "music/v12/Track Scene 23a.mp3" fadein 2
+        play music music.v12_Track_Scene_23a fadein 2
 
         scene v12mor2 # TPP. MC on the hotel hallway
         with dissolve
@@ -38,7 +38,7 @@ label v12_mc_chilling:
 
         pause 0.75
 
-        play music "music/v12/Track Scene 23a.mp3" fadein 2
+        play music music.v12_Track_Scene_23a fadein 2
 
         scene v12mor5
         with dissolve

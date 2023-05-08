@@ -9,7 +9,7 @@ label v13s16:
 
     pause 0.75
 
-    play music "music/v13/Track Scene 16.mp3" fadein 2
+    play music music.v13_Track_Scene_16 fadein 2
 
     scene v13s16_2 # TPP. Show MC entering Lauren's room, slight smile, mouth closed
     with dissolve

@@ -4,7 +4,7 @@
 # Time: Friday Morning
 
 label v11_room_aubrey_shopping:
-    play music "music/v11/Track Scene 7_1.mp3" fadein 2
+    play music music.ck1.v11.Track_Scene_7_1 fadein 2
     if joinwolves:
         scene v11auw1 # TPP. Show MC sitting on his bed, as if he had just woken up, he's tired and yawning (New Wolves room)
         with fade
@@ -95,7 +95,7 @@ label v11_room_aubrey_shopping:
 
     au "Hurry, it's windy out here."
     stop music fadeout 3
-    play music "music/v11/Track Scene 7_2.mp3" fadein 2
+    play music music.ck1.v11.Track_Scene_7_2 fadein 2
     scene v11auw5 # TPP. Show MC and Aubrey walking on the sidewalk (around the city, near where Lew's will be) both of them mouth closed, happy expression
     with fade
 
@@ -142,7 +142,7 @@ label v11_room_aubrey_shopping:
     au "Again, you said it, not me. *Laughs*"
 
     stop music fadeout 3
-    play music "music/v11/Track Scene 7_3.mp3" fadein 2
+    play music music.ck1.v11.Track_Scene_7_3 fadein 2
 
     scene v11auw7 # TPP. Show MC and Aubrey walking through the door of Lew's shop. They're both smiling, mouths closed
     with dissolve

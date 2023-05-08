@@ -10,7 +10,7 @@ label v12_nora_exploring:
 
     pause 0.75
 
-    play music "music/v12/Track Scene 21_1.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_21_1 fadein 2
 
     scene v12noe2 # FPP. MC sitting on the concrete block, Nora sitting on the ground. Both of them looking at each other, Nora slight smile, mouth closed
     with dissolve
@@ -430,7 +430,7 @@ label v12_nora_exploring:
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 21_2.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_21_2 fadein 2
 
     scene v12noe16 # FPP. MC and Nora standing next to each other in the room, Aubrey lying on her bed, with her phone, Imre drunk sitting on the floor, MC looking at Aubrey, Aubrey looking at MC, Aubrey slight smile, mouth open (Only Aubrey in shot)
     with dissolve

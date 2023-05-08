@@ -9,7 +9,7 @@ label v13s42:
 
     pause 0.75
 
-    play music "music/v13/Track Scene 42.mp3" fadein 2
+    play music music.v13_Track_Scene_42 fadein 2
 
     scene v13s42_2 # TPP. MC walking in the hotel corridor heading to his room still smiling
     with dissolve

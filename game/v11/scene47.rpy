@@ -6,7 +6,7 @@
 label v11_walking_back:
     scene v11wb1 # TPP. Show MC walking on the sidewalk, Charli a few feet behind him, Charli smirking, mouth closed, MC mouth closed, slight smile
     with dissolve
-    play music "music/v10/Track Scene 41_1.mp3" fadein 2
+    play music music.ck1.v10.Track_Scene_41_1 fadein 2
     pause 0.75
     
     scene v11wb1a # TPP. Same as v11wb1, Show MC looking back at Charli, Charli smirking, mouth closed, MC mouth closed, slightly annoyed

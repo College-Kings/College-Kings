@@ -14,7 +14,7 @@ label v13s13a:
 
     pause 0.75
 
-    play music "music/v13/Track Scene 13a_1.mp3" fadein 2
+    play music music.ck1.v13.Track_Scene_13a_1 fadein 2
 
     scene v13s13a_2 # FPP Show Polly sitting down near MC and Aubrey but not looking their way, Polly looking tired with mouth open
     with dissolve
@@ -399,7 +399,7 @@ label v13s13a:
         pause 0.5
 
         stop music fadeout 3
-        play music "music/v13/Track Scene 12a_2.mp3" fadein 2
+        play music music.ck1.v13.Track_Scene_12a_2 fadein 2
 
         scene v13s13a_16 # TPP Show MC and Aubrey getting into a cab
         with dissolve
@@ -415,7 +415,7 @@ label v13s13a:
         with dissolve
 
         stop music fadeout 3
-        play music "music/v13/Track Scene 12a_1.mp3" fadein 2
+        play music music.ck1.v13.Track_Scene_12a_1 fadein 2
         
         au "That was... a once in a lifetime opportunity. Thank you so much."
 

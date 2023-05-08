@@ -9,7 +9,7 @@ label v13s17c:
 
     pause 0.75
 
-    play music "music/v13/Track Scene 17.mp3" fadein 2
+    play music music.v13_Track_Scene_17 fadein 2
 
     scene v13s17c_1a # TPP. Same as v13s17c_1, show MC slightly startled, looking down at his stomach, mouth closed
     with vpunch

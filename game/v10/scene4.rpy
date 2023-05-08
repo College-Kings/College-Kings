@@ -3,7 +3,7 @@
 # Characters: Ryan (Outfit 2), Perry (Outfit ), Josh (Outfit 2), 
 # Time: Saturday Night
 label v9_ryan_v_perry_fight:
-    play music "music/v10/Track Scene 4.mp3" fadein 2
+    play music music.ck1.v10.Track_Scene_4 fadein 2
     scene v10rpf1 # FPP. Show josh, in ring, excited look, mouth open
     with fade
     jo "Well, the show must go on."

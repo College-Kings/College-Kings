@@ -9,7 +9,7 @@ label v13s39a:
 
     pause 0.75
 
-    play music "music/v13/Track Scene 39a.mp3" fadein 2
+    play music music.v13_Track_Scene_39a fadein 2
 
     scene v13s39a_2 # TPP. show mc racking the balls on the pool table
     with dissolve

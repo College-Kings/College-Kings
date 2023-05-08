@@ -9,7 +9,7 @@ label v12_docks:
 
     pause 1
 
-    play music "music/v12/Track Scene 6.mp3" fadein 2
+    play music music.v12_Track_Scene_6 fadein 2
 
     scene v12dock2 # TPP. Show MC walking out of the shuttle, slight smile, mouth closed
     with dissolve

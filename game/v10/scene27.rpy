@@ -5,7 +5,7 @@
     # -MC wakes up and hears his alarm going off-
 
 label v10_econ_class:
-    play music "music/v10/Track Scene 27.mp3" fadein 2
+    play music music.ck1.v10.Track_Scene_27 fadein 2
     if joinwolves:
         scene v10eco1 # TPP. Show MC in his room, Slight worried face, mouth closed (wolves)
         with fade

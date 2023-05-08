@@ -4,7 +4,7 @@
 # Time: Saturday Night
 
 label v10_ryan_v_perry:
-    play music "music/v10/Track Scene 2.mp3" fadein 2
+    play music music.ck1.v10.Track_Scene_2 fadein 2
     scene v10rvp1 # FPP. Show Josh in the ring walking around, taking the announcer role in his stride. Mouth open.
     with dissolve
 

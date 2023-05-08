@@ -3,7 +3,7 @@
 # Characters: Ryan (Outfit 2), Sam (Outfit 2),MC (Outfit 7), Grayson (Outfit 3),Imre (Outfit 4), Sebastian (Outfit 1),Cameron (Outfit 3),Chris (Outfit 2)
 # Time: Sunday Morning
 label v10_leave_fight:
-    play music "music/v10/Track Scene 9.mp3" fadein 2
+    play music music.ck1.v10.Track_Scene_9 fadein 2
     if joinwolves:
         scene v10sraf1 # TPP. MC sits down on bed in his room.
         with fade

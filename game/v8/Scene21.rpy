@@ -11,7 +11,7 @@ label mon_morning_room:
 
         u "(I gotta go talk to the dean today about Penelope. I better get ready)"
 
-        play music "music/mindie2.mp3" fadein 2
+        play music music.ck1.mindie2 fadein 2
 
         scene v8sdea2 # TPP. Show MC getting ready in his Wolves room.
         with dissolve
@@ -26,7 +26,7 @@ label mon_morning_room:
 
         u "(I gotta go talk to the dean today about Penelope. I better get ready)"
 
-        play music "music/mindie2.mp3" fadein 2
+        play music music.ck1.mindie2 fadein 2
 
         scene v8sdea4 # TPP. Show MC getting ready in his Apes room.
         with dissolve

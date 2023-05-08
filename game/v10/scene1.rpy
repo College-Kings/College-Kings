@@ -8,7 +8,7 @@ label v10start:
     with dissolve
     u "What are you guys doing!?"
 
-    play music "music/v10/Track Scene 1.mp3" fadein 2
+    play music music.ck1.v10.Track_Scene_1 fadein 2
 
     scene v10sta2 # FPP. Show MC trying to pull Ryan and imre apart, imre/ryan angry, mc worried look, mouths closed
     with dissolve

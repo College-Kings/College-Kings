@@ -4,7 +4,7 @@
 # Time: Morning
 
 label v13s33:
-    play music "music/v13/Track Scene 33.mp3" fadein 2
+    play music music.v13_Track_Scene_33 fadein 2
 
     if not v11_riley_roomate:
         scene black

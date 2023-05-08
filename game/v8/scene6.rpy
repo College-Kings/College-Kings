@@ -8,7 +8,7 @@ label aft_amb_night:
 
         pause 1
 
-        play music "music/mchill1.mp3"
+        play music music.ck1.mchill1
 
         scene scaf1a # TPP. As above but show MC sat on the edge of his bed, mouth open.
         with dissolve
@@ -27,7 +27,7 @@ label aft_amb_night:
 
         pause 1
 
-        play music "music/mchill1.mp3"
+        play music music.ck1.mchill1
 
         scene scaf3a # TPP. Show MC sat on the edge of his bed, mouth open.
         with dissolve

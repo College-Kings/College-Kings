@@ -14,8 +14,8 @@ label prot_w_au:
 
     pause 0.5
 
-    play music "music/mindie5.mp3" fadein 2
-    queue music "music/mfunk.mp3"
+    play music music.ck1.mindie5 fadein 2
+    queue music music.ck1.mfunk
 
     scene v8sprot3 # FPP. Close up of Autumn, Autumn smile, mouth open.
     with dissolve

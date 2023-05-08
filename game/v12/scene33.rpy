@@ -11,7 +11,7 @@ label v12s33:
 
     pause 0.75
 
-    play music "music/v12/Track Scene 33_1.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_33_1 fadein 2
 
     scene v12s33_2 #FPP Lindsey in a towel walking towards you, slightly surprised mouth open (again don't show the empty hotel lobby in the background)
     with dissolve
@@ -147,7 +147,7 @@ label v12s33:
     pause 1.25
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 33_2.mp3" fadein 2
+    play music music.v12_Track_Scene_33_2 fadein 2
 
     scene v12s33_7a # same as 7, AUbrey now without top (no bra), starting to take her pants off
     with dissolve
@@ -210,7 +210,7 @@ label v12s33:
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 33_3.mp3" fadein 2
+    play music music.v12_Track_Scene_33_3 fadein 2
 
     scene v12s33_12 #FPP showing close up of Ryan laying a massage table with his head looking at mc, mouth open, smiling, Ryan should have black hair here
     with dissolve
@@ -601,7 +601,7 @@ label v12s33_sneak_off1: # -If Mc presses the Sneak Off button during the massag
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 33_4.mp3" fadein 2
+    play music music.v12_Track_Scene_33_4 fadein 2
 
     if len(v12_saunadoors) == 3:
         jump v12s33_sauna
@@ -618,7 +618,7 @@ label v12s33_door1:
     u "*Whistles*"
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 33_5.mp3" fadein 2
+    play music music.v12_Track_Scene_33_5 fadein 2
 
     scene v12s33_27a # now all looking at him, ms rose mouth open, suspicious look
     with dissolve
@@ -631,7 +631,7 @@ label v12s33_door1:
     u "Oh sorry, my bad. I was looking for the restroom."
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 33_4.mp3" fadein 2
+    play music music.v12_Track_Scene_33_4 fadein 2
 
     if len(v12_saunadoors) == 3:
         scene v12s33_24a # same as 24, clock now at 16:00
@@ -667,7 +667,7 @@ label v12s33_door1:
         #with dissolve
     
     stop music fadeout 3
-    play music "music/v12/Track Scene 33_5.mp3" fadein 2
+    play music music.v12_Track_Scene_33_5 fadein 2
 
     u "Heyah, hope you don't mind me coming in."
 
@@ -846,7 +846,7 @@ label v12s33_door1:
         sa "Bye, [name]."
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 33_4.mp3" fadein 2
+    play music music.v12_Track_Scene_33_4 fadein 2
 
     if len(v12_saunadoors) == 3:
         scene v12s33_24a # same as 24, clock now at 16:00
@@ -882,7 +882,7 @@ label v12s33_door1:
     u "Hey, ladies!"
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 33_5.mp3" fadein 2
+    play music music.v12_Track_Scene_33_5 fadein 2
 
     if v11_pen_goes_europe:
         scene v12s33_33 # FPP,close up Penelope, smiling, mouth open, looking at mc
@@ -1005,7 +1005,7 @@ label v12s33_door1:
         pe "Bye, [name]!"
     
     stop music fadeout 3
-    play music "music/v12/Track Scene 33_4.mp3" fadein 2
+    play music music.v12_Track_Scene_33_4 fadein 2
 
     if len(v12_saunadoors) == 3:
         scene v12s33_24a # same as 24, clock now at 16:00
@@ -1060,7 +1060,7 @@ label v12s33_three_doors_back:
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 33_3.mp3" fadein 2
+    play music music.v12_Track_Scene_33_3 fadein 2
 
     scene v12s33_36 # Now the guys are in the sauna, show them sweaty if possible. All guys are in towels. TPP Close up Imre sitting in Sauna, annoyed, mouth open, looking forward but not straight at the camera
     with fade
@@ -1300,7 +1300,7 @@ label v12s33_sneak_off2:
     u "Ha, alright then... I'll be back."
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 33_5.mp3" fadein 2
+    play music music.v12_Track_Scene_33_5 fadein 2
 
     scene v12s33_43 # TPP show mc crouching looking at the massage tables, where 5 girls are laying on. In this order (closest to mc first): Amber, Nora, Lindsey, Ms Rose, Chloe. They should be somewhat naked as you would be on a massage table, don't show the whole room as a lot of girls are missing.
     with fade

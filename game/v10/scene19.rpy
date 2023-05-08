@@ -7,7 +7,7 @@ label v10_walk_jenny_text:
     scene v10swjt1 # TPP. Show MC walking on the sidewalk where he originally met Penelope.
     with fade
 
-    play music "music/v10/Track Scene 19.mp3" fadein 2
+    play music music.ck1.v10.Track_Scene_19 fadein 2
 
     pause 0.75
 

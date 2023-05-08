@@ -7,7 +7,7 @@ label v9_sat_cafe_w_nora:
     scene v9cwn1 # TPP. Show MC and Nora walking to a table in the cafe.
     with fade
 
-    play music "music/v9/Track Scene 31.mp3" fadein 2
+    play music music.ck1.v9.Track_Scene_31 fadein 2
 
     pause 1
 

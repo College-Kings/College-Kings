@@ -11,7 +11,7 @@ label v13s55:
 
     pause 0.75
 
-    play music "music/v13/Track Scene 55.mp3" fadein 2
+    play music music.ck1.v13.Track_Scene_55 fadein 2
 
     scene v13s55_2 # TPP. MC sitting next to Nora, Nora looking at MC, slight smile, mouth closed.
     with dissolve

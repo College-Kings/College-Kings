@@ -10,7 +10,7 @@ label v12_aubrey_wake_up_ri:
 
     au "Hey, wake up!"
 
-    play music "music/v12/Track Scene 31.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_31 fadein 2
 
     scene v12auwr1 # FPP. MC lying in his bed, Aubrey standing next to him, MC and Aubrey looking at each other, Aubrey slight smile, mouth closed
     with dissolve

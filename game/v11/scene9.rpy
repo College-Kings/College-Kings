@@ -6,7 +6,7 @@
 label v11_apes_manhunt:
     scene v11amh1 # TPP. Show MC walking in through the Apes house door, he has a neutral expression, mouth closed
     with fade
-    play music "music/v11/Track Scene 9_1.mp3" fadein 2
+    play music music.ck1.v11.Track_Scene_9_1 fadein 2
     pause 1
 
     scene v11amh2 # FPP. MC is in the living room, Cameron and Grayson are sitting on the couch, looking at MC, both of them smiling, mouths closed (Ryan and Caleb are standing nearby, out of shot)
@@ -48,7 +48,7 @@ label v11_apes_manhunt:
 
     scene v11amh7 # FPP. MC, Ryan, Caleb, Grayson and Cameron are in the forest, show MC looking at Grayson, Grayson's mouth closed, grinning (Only Grayson in shot, MC, Ryan and Caleb next to each other, Cameron next to Grayson, Cameron and Grayson are across from MC, Ryan and Caleb)
     with fade
-    play music "music/v11/Track Scene 9_2.mp3" fadein 2
+    play music music.ck1.v11.Track_Scene_9_2 fadein 2
     u "Okay, what are we doing out here?"
 
     scene v11amh8 # FPP. Same character positioning as v11amh7, MC is now looking at Ryan, Ryan looking at Grayson, Ryan mouth open, worried expression (Only Ryan in shot)
@@ -1191,7 +1191,7 @@ label v11_mc_horse_room:
     with fade
   
     stop music fadeout 3
-    play music "music/v11/Track Scene 9_3.mp3" fadein 2
+    play music music.ck1.v11.Track_Scene_9_3 fadein 2
     u "(I swear they want to kill us. I definitely need a good night's sleep.)"
 
     scene v11amh53a # TPP. Same cam as v11amh53, MC drops into his bed (similar to s95 in v1)
@@ -1216,7 +1216,7 @@ label v11_mc_horse_room:
 
     ry "Wake up, man."
     stop music fadeout 3
-    play music "music/v11/Track Scene 9_4.mp3" fadein 2
+    play music music.ck1.v11.Track_Scene_9_4 fadein 2
     scene v11amh55 # FPP. MC is now sitting on his bed, still looking at Ryan, Ryan mouth open, slightly worried expression
     with dissolve
 

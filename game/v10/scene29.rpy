@@ -4,7 +4,7 @@
 # Time: Tuesday Morning
 
 label v10_chloe_hallway:
-    play music "music/v10/Track Scene 29.mp3" fadein 2
+    play music music.ck1.v10.Track_Scene_29 fadein 2
     scene v10such1 # TPP. Show MC walking down the school hallway after exiting econ class, to the side in the distance near lockers should be Chloe and Aubrey.
     with fade
 

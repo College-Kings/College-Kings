@@ -6,7 +6,7 @@
 label v11_riley_amber_smoking:
     scene v11ras1 # TPP. Show MC walking into the room, he's slightly confused, mouth closed
     with dissolve
-    play music "music/v11/Track Scene 9a_1.mp3" fadein 2
+    play music music.ck1.v11.Track_Scene_9a_1 fadein 2
     pause 0.75
 
     scene v11ras2 # FPP. MC standing near the door, he can see Riley and Amber lying down on Riley's bed, on their stomachs, with the blanket over them, only showing their head, both smiling, Riley mouth open, Amber mouth closed, the girls are looking at each other, Riley has the vape

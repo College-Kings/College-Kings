@@ -4,7 +4,7 @@
 # Time: Evening
 
 label v11_hotel_bar_wolves: #can only get here if joinwolves
-    play music "music/v11/Track Scene 5_6.mp3" fadein 2
+    play music music.ck1.v11.Track_Scene_5_6 fadein 2
     if v11s25_beer:
         scene v11hrs1 # TPP Show MC taking a drink of his beer
         with dissolve

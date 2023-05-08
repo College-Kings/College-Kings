@@ -3,7 +3,7 @@
 # Characters: MC (Outfit 7),Josh (Outfit 2),Imre (Outfit 2),Imre (Outfit 4),Grayson (Outfit 3)
 # Time: Saturday Night
 label v10_mc_vs_imre_fight:
-    play music "music/v10/Track Scene 6.mp3" fadein 2
+    play music music.ck1.v10.Track_Scene_6 fadein 2
     scene v10mvi1 # FPP. Show imre and grayson near ring, Imre Mouth open Grayson mouth closed
     with dissolve
     ry "Hey man real quick. I'm not saying I think you would, but I know you and Imre are friends and have been close since you started college..."

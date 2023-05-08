@@ -7,7 +7,7 @@ label v11_nora_chloe_hallway:
     scene v11nohall1 # TPP. Show MC walking in the hallway, camera should be behind MC, Nora is supposed to be in the background looking at the bulleting board
     with fade
 
-    play music "music/v11/Track Scene 2.mp3" fadein 2
+    play music music.ck1.v11.Track_Scene_2 fadein 2
 
     pause 0.75
 

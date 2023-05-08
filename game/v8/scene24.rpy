@@ -8,7 +8,7 @@ label josh_room:
     with fade
     u "(What does Josh want now? He sounded a bit nervous on the phone.)"
 
-    play music "music/m16punk.mp3" fadein 2
+    play music music.ck1.m16punk fadein 2
 
     scene v8josh2 # TPP (far shot). Showing Josh waiting outside his room, standing against a wall just looking at the ground, nervous, mouth closed. MC walking towards Josh, neutral expression, mouth closed
     with dissolve

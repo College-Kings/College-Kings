@@ -465,7 +465,7 @@ label v9_emily_dorm:
 
     u "Oh God. I've missed this."
 
-    play music "music/v9/Track Scene 16.mp3" fadein 2
+    play music music.ck1.v9.Track_Scene_16 fadein 2
 
     scene v9emi13b # FPP. Same camera as v9emi13, on her knees on the floor looking up at camera, seductive expression, Emily mouth open.
     with dissolve

@@ -13,7 +13,7 @@ label v12_slumber_party:
 
     pause 0.75
 
-    play music "music/v12/Track Scene 18_1.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_18_1 fadein 2
 
     scene v12slp2 # FPP. Aubrey, Imre, Aubrey and Lindsey in a circle talking to each other. MC looking at Aubrey, Aubrey looking at MC, Aubrey slight smile, mouth open (Only Aubrey in shot)
     with dissolve
@@ -168,7 +168,7 @@ label v12_slumber_party:
     imre "Time to party!"
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 18_2.mp3" fadein 2
+    play music music.v12_Track_Scene_18_2 fadein 2
 
     scene v12slp9a # FPP. Same as v12slp9, Imre normal pose, smiling, mouth closed
     with dissolve
@@ -1470,7 +1470,7 @@ label v12s18_bet: # END OF FREE ROAM
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 18_3.mp3" fadein 2
+    play music music.v12_Track_Scene_18_3 fadein 2
 
     if v11_overtake_points < 2: # MC lost the race
         scene v12slpbet3 # FPP. MC and Amber now in the bathroom, looking at each other, Amber smiling, mouth open
@@ -1753,7 +1753,7 @@ label v12s18_bet: # END OF FREE ROAM
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 18_4.mp3" fadein 2
+    play music music.v12_Track_Scene_18_4 fadein 2
 
     scene v12slpbet10 # TPP. Show Aubrey and Riley sleeping on Riley's bed
     with dissolve

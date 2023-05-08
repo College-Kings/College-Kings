@@ -8,7 +8,7 @@ label v9_walk_w_sam:
     with fade  
     sa "Thanks for walking with me."
 
-    play music "music/v9/Track Scene 9.mp3" fadein 2
+    play music music.ck1.v9.Track_Scene_9 fadein 2
 
     menu:
         "Joke around":

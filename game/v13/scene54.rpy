@@ -10,7 +10,7 @@ label v13s54:
 
     u "(What will be in store for me tomorrow?)"
 
-    play music "music/v13/Track Scene 52.mp3" fadein 2
+    play music music.v13_Track_Scene_52 fadein 2
 
     #scene v13s54_2 # TPP. MC walking into his room, neutral expression, mouth closed ###ERROR wrong outfit
     scene v13s5_8

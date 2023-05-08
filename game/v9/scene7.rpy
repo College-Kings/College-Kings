@@ -19,7 +19,7 @@ label v9_before_lake_fr:
     scene fr5lakefull
     with dissolve
 
-    play music "music/v9/Track Scene 7.mp3" fadein 2
+    play music music.ck1.v9.Track_Scene_7 fadein 2
 
     scene fr5lakefull
 

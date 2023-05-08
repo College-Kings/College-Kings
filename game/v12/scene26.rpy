@@ -10,7 +10,7 @@ label v12_nora_chris_fight:
 
     pause 0.75
 
-    play music "music/v12/Track Scene 26.mp3" fadein 2
+    play music music.v12_Track_Scene_26 fadein 2
 
     scene v12ncf2 # FPP. MC and Ryan standing in front of each other in the lobby, Ryan slight smile, mouth open
     with dissolve

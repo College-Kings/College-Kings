@@ -14,7 +14,7 @@ label v13s13b:
 
     pause 0.75
 
-    play music "music/v13/Track Scene 13a_1.mp3" fadein 2
+    play music music.ck1.v13.Track_Scene_13a_1 fadein 2
 
     scene v13s13b_2 # FPP Show Polly sitting down near MC and Penelope but not looking their way, Polly looking tired with mouth open
     with dissolve
@@ -467,7 +467,7 @@ label v13s13b:
         pause 0.5
 
         stop music fadeout 3
-        play music "music/v13/Track Scene 12a_2.mp3" fadein 2
+        play music music.ck1.v13.Track_Scene_12a_2 fadein 2
 
         scene v13s13b_15 # TPP Show MC and Penelope getting into a cab
         with dissolve
@@ -483,7 +483,7 @@ label v13s13b:
         with dissolve
 
         stop music fadeout 3
-        play music "music/v13/Track Scene 12a_1.mp3" fadein 2
+        play music music.ck1.v13.Track_Scene_12a_1 fadein 2
 
         pe "Jeez... I didn't know Polly and I had so much in common... *Chuckles*"
 

@@ -4,7 +4,7 @@
 # Time: Sunday Morning
 
 label v10_sun_morn:
-    play music "music/v10/Track Scene 10.mp3" fadein 2
+    play music music.ck1.v10.Track_Scene_10 fadein 2
     if joinwolves:
         scene v10sum1 # TPP. Show MC in his Wolves bed looking up at the ceiling, MC looks tired.
         with fade
