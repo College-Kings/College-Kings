@@ -677,6 +677,9 @@ label after_load:
     else:
         hide screen bug_testing_overlay
 
+    if mc.frat is None:
+        call screen compat_frat_is_none
+
     $ _version = config.version
     $ renpy.block_rollback()
     return
