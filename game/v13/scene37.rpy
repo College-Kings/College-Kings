@@ -9,7 +9,7 @@ label v13s37:
 
     pause 0.75
 
-    play music "music/v13/Track Scene 37_1.mp3" fadein 2
+    play music music.ck1.v13.Track_Scene_37_1 fadein 2
 
     scene v13s37_2 # FPP. Same positioning as v13s37_1, MC looking at Lindsey, Lindsey looking at Chris' direction (Only Lindsey in shot), Lindsey slight smile, mouth open
     with dissolve
@@ -110,7 +110,7 @@ label v13s37:
     ch "Let's go enjoy ourselves, people."
 
     stop music fadeout 3
-    play music "music/v13/Track Scene 37_2.mp3" fadein 2
+    play music music.ck1.v13.Track_Scene_37_2 fadein 2
     call screen v13s37_garden1
 
 label v13s37_nora:

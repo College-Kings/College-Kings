@@ -4,7 +4,7 @@
 # Time: Sunday
 
 label v14s03b:
-    play music "music/v13/Track Scene 11_1.mp3" fadein 2
+    play music music.v13_Track_Scene_11_1 fadein 2
 
     scene v14s03b_1 # TPP Show MC, Imre, and Ryan coming in the brothel door, Imre pointing and looking toward the girls, mouth open
     with dissolve

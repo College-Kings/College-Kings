@@ -4,7 +4,7 @@ label v10_chloe_vs_nora:
     with dissolve
 
     cl "*Grunts*"
-    play music "music/v10/Track Scene 35.mp3" fadein 2
+    play music music.ck1.v10.Track_Scene_35 fadein 2
 
     scene v10cvn2 #second with Nora hitting Chloe's arms into the air off her shoulders
     with dissolve

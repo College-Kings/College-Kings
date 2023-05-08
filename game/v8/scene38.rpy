@@ -20,7 +20,7 @@ label seb_in_room:
     u "(Wonder who that is.)"
 
     play music music.ck1.punk15
-    queue music ["music/m16punk.mp3", "music/m7punk.mp3"]
+    queue music [music.ck1.m16punk, music.ck1.m7punk]
 
     scene v8ssir3 # TPP. Show MC going to the door and opening it, show Sebastian stood on the other side, Sebastian smile, mouth open.
     with dissolve

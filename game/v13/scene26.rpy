@@ -7,7 +7,7 @@ label v13_emmy_sex:
     $ sceneList.add("v13_emmy")
     $ CharacterService.set_relationship(emmy, Relationship.FWB)
 
-    play music "music/v13/Track Scene 26.mp3" fadein 2
+    play music music.v13_Track_Scene_26 fadein 2
 
     image v13emmha = Movie(play="images/v13/Scene 26/v13emmaha.webm", loop=True, image="images/v13/Scene 26/v13emmahaStart.webp", start_image="images/v13/Scene 26/v13emmahaStart.webp") # emmy giving mc head using her hands as well 
     image v13emmhaf = Movie(play="images/v13/Scene 26/v13emmahaf.webm", loop=True, image="images/v13/Scene 26/v13emmahaStart.webp", start_image="images/v13/Scene 26/v13emmahaStart.webp") # emmy giving mc head using her hands as well spedup

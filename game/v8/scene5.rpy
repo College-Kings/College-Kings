@@ -188,7 +188,7 @@ label hoco_amb_morning:
 
     u "Haha. Yeah."
 
-    play music "music/mfunk.mp3"
+    play music music.ck1.mfunk
 
     scene v8samb16 # FPP. Close up of Amber, Amber mouth open, tired expression.
     with dissolve

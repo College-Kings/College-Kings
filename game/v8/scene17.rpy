@@ -86,7 +86,7 @@ label phn_penelope6_done:
     with dissolve
     u "When will he be back?"
 
-    play music "music/msad.mp3" fadein 2
+    play music music.ck1.msad fadein 2
 
     scene v8rose5b # Rose upset, not smiling anymore and mouth open. She's looking into the camera
     with dissolve

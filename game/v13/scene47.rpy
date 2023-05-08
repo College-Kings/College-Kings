@@ -9,7 +9,7 @@ label v13s47:
 
     pause 0.75
 
-    play music "music/v13/Track Scene 47.mp3" fadein 2
+    play music music.ck1.v13.Track_Scene_47 fadein 2
 
     scene v13s47_2 # TPP. show MC and lauren get off their bikes and turn them into the bike clerk
     with dissolve

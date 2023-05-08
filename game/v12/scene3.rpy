@@ -10,7 +10,7 @@ label v12_penelope_roof:
     play sound sound.vibrate
     pause 1
 
-    play music "music/v12/Track Scene 3_1.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_3_1 fadein 2
 
     $ MessengerService.new_message(penelope, "Hey, are you up still?")
     $ MessengerService.new_message(penelope, "If you are, can you meet me in the hallway?")
@@ -37,7 +37,7 @@ label v12_penelope_roof:
             pause 1
 
             stop music fadeout 3
-            play music "music/v12/Track Scene 3_2.mp3" fadein 2
+            play music music.ck1.v12.Track_Scene_3_2 fadein 2
 
             scene v12penr3 # FPP Show Penelope in hotel room hallway, embarrassed expression, mouth closed
             with dissolve
@@ -150,7 +150,7 @@ label v12_penelope_roof:
             pause 1
 
             stop music fadeout 3
-            play music "music/v12/Track Scene 3_3.mp3" fadein 2
+            play music music.v12_Track_Scene_3_3 fadein 2
 
             scene v12penr8 # TPP Show MC and Penelope out on hotel roof in the process of sitting down
             with dissolve
@@ -409,7 +409,7 @@ label v12_penelope_roof:
             pause 1.25
 
             stop music fadeout 3
-            play music "music/v12/Track Scene 3_4.mp3" fadein 2
+            play music music.v12_Track_Scene_3_4 fadein 2
 
             if CharacterService.is_dating(penelope):
                 scene v12penr4a # TPP Same angle as v12penr4, MC and Penelope walking down hotel hallway holding hands

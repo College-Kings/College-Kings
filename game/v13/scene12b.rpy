@@ -9,7 +9,7 @@ label v13s12b:
 
     pause 0.75
 
-    play music "music/v13/Track Scene 12a_1.mp3" fadein 2
+    play music music.ck1.v13.Track_Scene_12a_1 fadein 2
 
     scene v13s12b_2 # FPP. Penelope standing in front of MC, Penelope slightly worried, mouth open
     with dissolve
@@ -62,7 +62,7 @@ label v13s12b:
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v13/Track Scene 12a_2.mp3" fadein 2
+    play music music.ck1.v13.Track_Scene_12a_2 fadein 2
 
     scene v13s12b_4 # TPP. Show MC and Penelope walking on sidewalk, both slight smiles, mouths closed
     with fade
@@ -82,7 +82,7 @@ label v13s12b:
     pause
 
     stop music fadeout 3
-    play music "music/v13/Track Scene 12a_3.mp3" fadein 2
+    play music music.ck1.v13.Track_Scene_12a_3 fadein 2
 
     scene v13s12b_6 # TPP. MC and Penelope in front of the stage (play with angles so that no other people have to be shown). MC and Penelope looking at each other, both smiling, Penelope mouth open, MC mouth closed (Camera is behind them as to show their shoulders and head) (Polly NOT on stage)
     with dissolve
@@ -102,7 +102,7 @@ label v13s12b:
     pe "*Deep breath* You're right. *Chuckles* You're right..."
 
     stop music fadeout 3
-    play music "music/v13/Track Scene 12b_1.mp3" fadein 2
+    play music music.ck1.v13.Track_Scene_12b_1 fadein 2
 
     scene v13s12b_7 # TPP. Show Polly on stage, holding mic to her mouth, mouth open, smiling, looking at the crowd
     with dissolve
@@ -291,7 +291,7 @@ label v13s12b:
                     with dissolve
 
                     stop music fadeout 3
-                    play music "music/v13/Track Scene 12b_2.mp3" fadein 2
+                    play music music.ck1.v13.Track_Scene_12b_2 fadein 2
 
                     #polly "THIS GIRL HERE KNOWS ALL OF THE DAMN LYRICS! *Laughs* WHAT'S YOUR NAME, SWEETNESS?"
                     polly "THIS GIRL HERE KNOWS ALL OF THE DAMN LYRICS! *Laughs*"
@@ -323,7 +323,7 @@ label v13s12b:
                     polly "LET'S GET THE SHOW BACK ON!"
 
                     stop music fadeout 3
-                    play music "music/v13/Track Scene 12a_6.mp3" fadein 2
+                    play music music.ck1.v13.Track_Scene_12a_6 fadein 2
 
                     scene v13s12b_7a
                     with dissolve
@@ -361,7 +361,7 @@ label v13s12b:
                     pe "Yeah! Let's go."
 
                     stop music fadeout 3
-                    play music "music/v13/Track Scene 12a_8.mp3" fadein 2
+                    play music music.ck1.v13.Track_Scene_12a_8 fadein 2
 
                     scene v13s12b_11 # TPP. MC and Penelope walking into the backstage area, both smiling, mouths closed
                     with fade
@@ -455,7 +455,7 @@ label v13s12b_failed_timer:
         u "Of course."
 
         stop music fadeout 3
-        play music "music/v13/Track Scene 12a_2.mp3" fadein 2
+        play music music.ck1.v13.Track_Scene_12a_2 fadein 2
 
         scene v13s12b_15 # TPP. Show MC and Penelope leaving the concert venue, Penelope sad, in slight pain, MC worried, mouths closed
         with dissolve
@@ -473,7 +473,7 @@ label v13s12b_failed_timer:
         pause 0.75
 
         stop music fadeout 3
-        play music "music/v13/Track Scene 12a_1.mp3" fadein 2
+        play music music.ck1.v13.Track_Scene_12a_1 fadein 2
 
         scene v13s12b_18 # FPP. MC and Penelope in hotel lobby, looking at each other, Penelope sad, mouth open
         with dissolve
@@ -554,7 +554,7 @@ label v13s12b_failed_timer:
         u "Haha, c'mon... I'm not letting you ruin your one night out, and I'll be with you every second of the way."
 
         stop music fadeout 3
-        play music "music/v13/Track Scene 12a_8.mp3" fadein 2
+        play music music.ck1.v13.Track_Scene_12a_8 fadein 2
 
         scene v13s12b_11
         with dissolve

@@ -9,7 +9,7 @@ label v13s49:
 
     pause 0.75
 
-    play music "music/v13/Track Scene 49.mp3" fadein 2
+    play music music.ck1.v13.Track_Scene_49 fadein 2
 
     scene v13s49_2 # FPP. MC looking at Aubrey, Aubrey looking at MC, Aubrey slight smile, mouth open.
     with dissolve

@@ -3,7 +3,7 @@ label ev_b: #for compatibility only
 label v5start:
     scene s373 # nora approaching
     with dissolve
-    play music "music/m16punk.mp3"
+    play music music.ck1.m16punk
     no "What are you doing here? And why did you just punch the wall?"
 
     menu:
@@ -138,9 +138,9 @@ label v5start:
 
     scene s376a # you opening your eyes
     with dissolve
-    play music "music/mindie1.mp3"
+    play music music.ck1.mindie1
 
-    queue music [ "music/mindie2.mp3", "music/mindie3.mp3" ]
+    queue music [music.ck1.mindie2, music.ck1.mindie3]
 
     u "(Oh man, I drank way too much last night...)"
     if volleyball:
@@ -189,7 +189,7 @@ label jorepb:
 
     play sound sound.door_open
 
-    play music "music/msad2.mp3"
+    play music music.ck1.msad2
 
     scene s369 # door opening sound chloe inside
     with dissolve
@@ -399,7 +399,7 @@ label jorepb:
 
             scene s373 # nora approaching
             with dissolve
-            play music "music/m16punk.mp3"
+            play music music.ck1.m16punk
             no "What are you doing here? And why did you just punch the wall?"
 
             menu:
@@ -534,9 +534,9 @@ label jorepb:
 
     scene s376a # you opening your eyes
     with dissolve
-    play music "music/mindie1.mp3"
+    play music music.ck1.mindie1
 
-    queue music [ "music/mindie2.mp3", "music/mindie3.mp3" ]
+    queue music [music.ck1.mindie2, music.ck1.mindie3]
 
     pause 0.5
 
@@ -1449,7 +1449,7 @@ label continueao:
 
     scene s382
     with dissolve
-    play music "music/mindie5.mp3"
+    play music music.ck1.mindie5
 
     la "Sorry, I had to ask around in order to find a weak spot. My psych professor said this was essential for the last problem to work."
 
@@ -1583,7 +1583,7 @@ label fb_b:
 
     label skiptrolleya:
 
-    play music "music/mindie5.mp3"
+    play music music.ck1.mindie5
 
     la "That'd be all. I'll let you know once I have analyzed the results."
 
@@ -2251,7 +2251,7 @@ label hospitala:
 
     pause 0.5
 
-    play music "music/m7punk.mp3"
+    play music music.ck1.m7punk
 
     scene s402 # Imre half limping towards them in front of hospital
     with fade
@@ -2468,7 +2468,7 @@ label hospitala:
 
     imre "Bye, Riley."
     
-    play music "music/m4punk.mp3"
+    play music music.ck1.m4punk
 
     scene s417 # you opening dorm door but Imre is walking somewhere else?
     with dissolve
@@ -2557,7 +2557,7 @@ label hospitala:
 
     pause 0.5
 
-    play music "music/m9punk.mp3"
+    play music music.ck1.m9punk
     scene s419a
     with dissolve
 
@@ -3695,7 +3695,7 @@ label youfinishadam: #### You beat adam
 
     u "Never touch Imre again, you piece of shit."
 
-    play music "music/m12punk.mp3"
+    play music music.ck1.m12punk
 
     scene s427 #you in front of your dorm door about to open the door
     with dissolve
@@ -3807,7 +3807,7 @@ label adamfinish: ###Adam beats you
     $ winadam = False
 
     pause 1.0
-    play music "music/m12punk.mp3"
+    play music music.ck1.m12punk
 
     scene s429 # showing Adam kicking you on the ground
     with vpunch
@@ -3962,7 +3962,7 @@ label adamfinish: ###Adam beats you
     u "(But first, I gotta wash the blood of my face.)"
 
 label findimre:
-    play music "music/m16punk.mp3"
+    play music music.ck1.m16punk
 
     #### montage of you looking for Imre
 
@@ -4257,9 +4257,9 @@ label findimre:
 
     scene s442 # you on a park bench depressed
     with Fade (1,0,1)
-    play music "music/mindie1.mp3"
+    play music music.ck1.mindie1
 
-    queue music [ "music/mindie2.mp3", "music/mindie3.mp3" ]
+    queue music [music.ck1.mindie2, music.ck1.mindie3]
 
     if CharacterService.is_mad(imre):
         u "(How the fuck did everything go so wrong??)"

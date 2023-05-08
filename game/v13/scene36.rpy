@@ -9,7 +9,7 @@ label v13_walk_garden:
 
     pause 0.75
 
-    play music "music/v13/Track Scene 36.mp3" fadein 2
+    play music music.ck1.v13.Track_Scene_36 fadein 2
 
     #scene v13s36_2 # FPP. MC looking at lindsey who has a neutral expression, mouth closed (location 1)
     scene v13s36_3a

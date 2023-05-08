@@ -6,7 +6,7 @@
 label v11_bar_chloe_and_aubrey:
     scene v11caa1 # TPP. Show MC walking to the bar, mouth closed
     with fade
-    play music "music/v11/Track Scene 11.mp3" fadein 2
+    play music music.ck1.v11.Track_Scene_11 fadein 2
     pause 0.75
 
     scene v11caa2 # FPP. MC spots chloe and aubrey sitting at the bar holding beer, mouth closed

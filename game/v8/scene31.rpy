@@ -14,7 +14,7 @@ label v8_tues_eco_class:
 
     pause 0.5
 
-    play music "music/m16punk.mp3"
+    play music music.ck1.m16punk
 
     scene v8stec3 # FPP. Show Ms Rose stood at the front of the class, mouth open looking around at class, mouth open.
     with dissolve

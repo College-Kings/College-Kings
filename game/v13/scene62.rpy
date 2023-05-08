@@ -9,7 +9,7 @@ label v13s62:
 
     pause 1.5
 
-    play music "music/v13/Track Scene 62.mp3" fadein 2
+    play music music.ck1.v13.Track_Scene_62 fadein 2
 
     scene v13s62_2 # FPP. Show Aubrey and Rilet sitting on the bed next to MC, both slightly worried, looking at MC, Aubrey mouth open, RIley mouth closed
     with dissolve

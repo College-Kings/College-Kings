@@ -240,7 +240,7 @@ label v8s3_rileyDoggy:
 
     $ renpy.end_replay()
 
-    play music "music/mlove.mp3" fadein 2
+    play music music.ck1.mlove fadein 2
 
     scene v8s33a # Same as v8s33 but Riley mouth closed
     with dissolve

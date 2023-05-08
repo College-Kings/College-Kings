@@ -9,7 +9,7 @@ label v13s53a:
 
     pause 0.75
 
-    play music "music/v13/Track Scene 52a.mp3" fadein 2
+    play music music.v13_Track_Scene_52a fadein 2
 
     scene v13s53a_1a # TPP. Same as v13s53a_1, MC looking at Riley, MC laughing, Riley same
     with dissolve

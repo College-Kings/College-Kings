@@ -9,7 +9,7 @@ label v13s40a:
     
     cl "You fuckin' and dippin' or going to cuddle me like a gentleman?"
 
-    play music "music/v13/Track Scene 40a.mp3" fadein 2
+    play music music.v13_Track_Scene_40a fadein 2
 
     scene v13s40a_1a # FPP. Same as 1, mouth closed
     with dissolve

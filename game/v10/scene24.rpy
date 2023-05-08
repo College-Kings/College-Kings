@@ -6,7 +6,7 @@
 label v10_lauren_room:
     scene v10lar1 # TPP Show MC knocking on Lauren's door.
     with fade
-    play music "music/v10/Track Scene 24_1.mp3" fadein 2
+    play music music.ck1.v10.Track_Scene_24_1 fadein 2
     play sound sound.knock
     
     pause 0.75
@@ -278,7 +278,7 @@ label v10_lauren_room:
 
         la "Oh [name]! *Moans*"
         stop music fadeout 3
-        play music "music/v10/Track Scene 24_2.mp3" fadein 2
+        play music music.ck1.v10.Track_Scene_24_2 fadein 2
         menu:
             "Suck on her tits":
                 $ sceneList.add("v10_lauren")
@@ -353,7 +353,7 @@ label v10_lauren_room:
 
                     stop music fadeout 3
 
-                    play music "music/v10/Track Scene 24_3.mp3" fadein 2
+                    play music music.ck1.v10.Track_Scene_24_3 fadein 2
                     
                     la "[name], I... I don't think I'm ready. Sorry I just..."
 

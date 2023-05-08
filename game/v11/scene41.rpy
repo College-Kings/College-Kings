@@ -6,7 +6,7 @@
 label v11_chloe_bathroom:
     scene v11chb1 # TPP. Show MC walking into the room, confused, mouth closed
     with dissolve
-    play music "music/v10/Track Scene 40_3.mp3" fadein 2
+    play music music.ck1.v10.Track_Scene_40_3 fadein 2
     cl "*Crying*"
 
     scene v11chb2 # TPP. Show MC walking up to the bathroom door, worried expression, mouth closed

@@ -9,7 +9,7 @@ label v13s11:
 
     pause 0.75
 
-    play music "music/v13/Track Scene 11_1.mp3" fadein 2
+    play music music.v13_Track_Scene_11_1 fadein 2
 
     scene v13s11_2 # FPP. Camera behind imre, imre is moving his head as if he was humming
     with dissolve
@@ -281,7 +281,7 @@ label v13_imre_continue:
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v13/Track Scene 11_2.mp3" fadein 2
+    play music music.ck1.v13.Track_Scene_11_2 fadein 2
 
     scene v13s11_21 # FPP. MC sitting from the other side of the table from ryan, with a view to imre, imre waiting in the back, ryan slight smiling, mouth closed
     with dissolve
@@ -489,7 +489,7 @@ label v13_imre_continue:
     imre "Yeah, whatever."
 
     stop music fadeout 3
-    play music "music/v13/Track Scene 11_3.mp3" fadein 2
+    play music music.ck1.v13.Track_Scene_11_3 fadein 2
 
     scene v13s11_27b # FPP. The bar hosts walks by, standing besides imre, mouth opened
     with dissolve
@@ -619,7 +619,7 @@ label v13_imre_continue:
     pause 0.6
 
     stop music fadeout 3
-    play music "music/v13/Track Scene 11_4.mp3" fadein 2
+    play music music.ck1.v13.Track_Scene_11_4 fadein 2
 
     scene v13s11_33a # FPP. looking at imre, mouth closed
     with dissolve

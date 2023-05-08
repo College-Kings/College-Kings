@@ -7,7 +7,7 @@ label v9_run_w_ryan:
     scene v9rwr1 # TPP. Show Ryan walking through MC's door into his room.
     with dissolve
 
-    play music "music/v9/Track Scene 36.mp3" fadein 2
+    play music music.ck1.v9.Track_Scene_36 fadein 2
 
     pause 1
 

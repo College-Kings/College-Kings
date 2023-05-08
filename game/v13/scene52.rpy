@@ -9,7 +9,7 @@ label v13s52:
 
     u "(I wonder how my baby girl Chloe is doing.)"
 
-    play music "music/v13/Track Scene 52.mp3" fadein 2
+    play music music.v13_Track_Scene_52 fadein 2
 
     scene v13s52_2 # TPP. MC goes to chloe's room
     with dissolve

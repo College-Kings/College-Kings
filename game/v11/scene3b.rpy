@@ -2,10 +2,11 @@
 # Locations: MC's room (apes and wolves), sidewalk, cafe
 # Characters: MC (New outfit from scene 1), charli (outfit 1), riley (outfit 3)
 # Time: Thursday afternoon
-
 label v11_cafe_with_riley:
-    play music "music/v11/Track Scene 3.mp3" fadein 2
+
+    play music music.ck1.v11.Track_Scene_3 fadein 2
     if mc.frat == Frat.WOLVES:
+
         scene v11s3bris1 # TPP. Show MC talking on his phone in his wolves bedroom, sat on the bed, mouth open
         with dissolve
 

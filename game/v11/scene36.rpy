@@ -6,7 +6,7 @@
 label v11_imre_ryan_grapple:
     scene v11irg1 # FPP. MC looking down the hallway, he can see Imre and Ryan grappling on the floor, both angry, mouths closed, show Mr Lee worried, mouth closed, running towards them
     with dissolve
-    play music "music/v10/Track Scene 10.mp3" fadein 2
+    play music music.ck1.v10.Track_Scene_10 fadein 2
     pause 0.75
 
     scene v11irg1a # FPP. Same as v11irg1, Ryan and Imre still grappling on the floor (different pose to v11irg1), Mr Lee's hands on Imre's shoulders, Imre and Ryan angry, mouths closed, Mr Lee worried, mouth closed

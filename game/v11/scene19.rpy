@@ -6,7 +6,7 @@
 label v11_roommate:
     #scene v11rm1 # TPP. Show MC walking in the lobby, he is slightly smiling, mouth closed ###ERROR WRONG OUTFIT
     #with fade
-    play music "music/v11/Track Scene 19_1.mp3" fadein 2
+    play music music.ck1.v11.Track_Scene_19_1 fadein 2
     #pause 0.75
 
     scene v11rm2 # FPP. MC is standing in the lobby, he can see Chloe and Riley in the background (slightly close to the counter), Chloe is looking at her phone, Riley is reading a brochure
@@ -328,7 +328,7 @@ label v11_roommate:
 
         pause 0.75
         stop music fadeout 3
-        play music "music/v11/Track Scene 19_2.mp3" fadein 2
+        play music music.ck1.v11.Track_Scene_19_2 fadein 2
         scene v11rm8 # TPP. Show MC and Chloe sleeping (lights turned off now)
         with fade
 

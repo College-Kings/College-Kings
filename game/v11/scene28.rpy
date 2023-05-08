@@ -9,7 +9,7 @@ label v11_ms_rose_sex:
 
     scene v11ros1 # TPP. Show MC walking thourgh the corridor, he is slightly nervous, mouth closed
     with fade
-    play music "music/v10/Track Scene 41_2.mp3" fadein 2
+    play music music.ck1.v10.Track_Scene_41_2 fadein 2
     pause 0.75
 
     scene v11ros2 # FPP. MC is standing outside Ms Rose's room, he is looking at the door
@@ -72,7 +72,7 @@ label v11_ms_rose_sex:
 
 label v11_ms_rose_sex_sg:
     stop music fadeout 3
-    play music "music/v10/Track Scene 17_2.mp3" fadein 2
+    play music music.ck1.v10.Track_Scene_17_2 fadein 2
     scene v11ros3a # FPP. Same as v11ros3, Rose mouth open, seductive look
     with dissolve
 
@@ -273,7 +273,7 @@ label v11_ms_rose_sex_sg:
     scene v11ros16 # TPP. Show MC getting out of bed, slight smile, mouth closed, Ms Rose lying down in the bed, mouth closed, neutral expression
     with dissolve
     stop music fadeout 3
-    play music "music/v10/Track Scene 41_2.mp3" fadein 2
+    play music music.ck1.v10.Track_Scene_41_2 fadein 2
     pause 1
 
     scene v11ros17 # TPP. Show MC putting on his pants, Ms Rose sitting down in the bed behind him, still naked, both mouths closed, slight smiles

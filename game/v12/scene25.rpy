@@ -11,7 +11,7 @@ label v12_julia_call:
     play sound sound.call
     pause 1
 
-    play music "music/v12/Track Scene 25.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_25 fadein 2
     
     scene v12juc1 # TPP. Show MC sleeping in his bed
     with dissolve

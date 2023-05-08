@@ -1,5 +1,5 @@
 label v2start:
-    play music "music/muffledparty.mp3"
+    play music music.ck1.muffledparty
     scene black
     
     scene s121a
@@ -20,7 +20,7 @@ label v2start:
 
     imre "Hey man, did you have a good night?"
 
-    play music "music/m9punk.mp3"
+    play music music.ck1.m9punk
     scene s123a
     with dissolve
 
@@ -197,7 +197,7 @@ label v2start:
 
     u "(I can't believe I got knocked out in front of everyone...)"
 
-    play music "music/m4punk.mp3"
+    play music music.ck1.m4punk
 
     u "(Especially in front of Chloe, that's so humiliating.)"
 
@@ -1054,7 +1054,7 @@ label v1_tom_walk_away:
         jump history2
 
 label meet_lauren2:
-    play music "music/mlove2.mp3"
+    play music music.ck1.mlove2
 
     if fighttom and not wintom:
         scene s128a #outside of cafe with bloody nose
@@ -1348,7 +1348,7 @@ label history2:
 
     u "(Time to sit through another boring ass lecture.)"
 
-    play music "music/m16punk.mp3"
+    play music music.ck1.m16punk
     scene s136 ## seeing Imre in lecture room looking apologetic
     with Fade (1,0,1)
 
@@ -1624,7 +1624,7 @@ label history2:
     scene s140 # You and Imre in hallway
     with Fade (1,0,1)
 
-    play music "music/m11punk.mp3"
+    play music music.ck1.m11punk
 
     imre "I can't believe he's making us come in costume."
 
@@ -1990,7 +1990,7 @@ label bo_ad:
     scene s146far # doctors reception
     with Fade (1,0,1)
 
-    play music "music/m16punk.mp3"
+    play music music.ck1.m16punk
 
     u "Hey there, you accept walk-ins right?"
 
@@ -2331,7 +2331,7 @@ label bo_bd:
         if MessengerService.has_replies(aubrey):
             u "(I should check my messages.)"
     
-    play music "music/mlove.mp3"
+    play music music.ck1.mlove
 
     scene s155
     with fade
@@ -2562,7 +2562,7 @@ label csaub:
     scene s157
     with dissolve
     pause 0.75
-    play music "music/m7punk.mp3"
+    play music music.ck1.m7punk
 
 
     no "Oh, look who it is."
@@ -2616,9 +2616,9 @@ label csaub:
 
     u "Didn't you say this was a costume shop?"
 
-    play music "music/mindie1.mp3"
+    play music music.ck1.mindie1
 
-    queue music [ "music/mindie2.mp3", "music/mindie3.mp3" ]
+    queue music [music.ck1.mindie2, music.ck1.mindie3]
 
     au "It was! At least the last time I was here."
 
@@ -3140,9 +3140,9 @@ label cspe:
 
     u "I swear Google maps said this was a costume shop."
 
-    play music "music/mindie1.mp3"
+    play music music.ck1.mindie1
 
-    queue music [ "music/mindie2.mp3", "music/mindie3.mp3" ]
+    queue music [music.ck1.mindie2, music.ck1.mindie3]
 
     pe "Maybe we can ask the lady over there, she seems to work here."
 

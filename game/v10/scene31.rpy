@@ -6,7 +6,7 @@ label v10_late_alley:
 
     scene v10all1 # TPP. Show MC on the sidewalk, just before the entrance to the alley, mouth closed
     with dissolve
-    play music "music/v10/Track Scene 31.mp3" fadein 2
+    play music music.ck1.v10.Track_Scene_31 fadein 2
     pause 0.75
 
     scene v10all2 # FPP. Show Alley, 2 hookers against the wall near the entrance, Josh down the bottom of the alley with unknown guy in hoody,

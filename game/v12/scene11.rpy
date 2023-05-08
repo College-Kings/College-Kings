@@ -9,7 +9,7 @@ label v12_paris_hotel:
     
     pause 0.75
 
-    play music "music/v12/Track Scene 11.mp3" fadein 2
+    play music music.v12_Track_Scene_11 fadein 2
 
     scene v12pht2 # FPP. Looking at imre, mouth opened
     with dissolve

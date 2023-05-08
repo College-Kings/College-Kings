@@ -22,7 +22,7 @@ label v11_amber_bar:
     $ v11s38_kiwiiPost1.newComment(charli, _("I told you that outfit was made for you... absolutely stunning."), number_likes=renpy.random.randint(150,300))
     $ v11s38_kiwiiPost1.addReply(_("Woah! Hot as always"), v11s38_kiwiiReply1, number_likes=renpy.random.randint(260, 340))
     $ v11s38_kiwiiPost1.addReply(_("Thanks for the invite... lol"), v11s38_kiwiiReply2, number_likes=renpy.random.randint(250, 330))
-    play music "music/v11/Track Scene 3.mp3" fadein 2
+    play music music.ck1.v11.Track_Scene_3 fadein 2
     scene v11amb1 # TPP. Show MC walking in the lobby, he has a slight smile, mouth closed
     with dissolve
 

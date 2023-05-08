@@ -6,7 +6,7 @@
 label v11_msrose_convo:
     scene v11roc1 # FPP. Ms Rose and MC are in a secluded area, lookign at each other, Ms Rose is slightly embarrassed, mouth open (Ms Rose should have her back facing a wall, the wall should be relatively close)
     with fade
-    play music "music/v11/Track Scene 3.mp3" fadein 2
+    play music music.ck1.v11.Track_Scene_3 fadein 2
     ro "I wanted to apologize for my behavior. I shouldn't have let our relationship get inappropriate, and should've never treated you like anything more than a student."
 
     ro "From now on I'm going to keep things strictly professional."

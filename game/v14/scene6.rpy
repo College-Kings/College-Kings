@@ -4,7 +4,7 @@
 # Time: Morning
 
 label v14s06:
-    play music "music/v13/Track Scene 46_1.mp3" fadein 2
+    play music music.v13_Track_Scene_46_1 fadein 2
 
     scene black
     with fade

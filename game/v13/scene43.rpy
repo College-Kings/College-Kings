@@ -7,7 +7,7 @@ label v13s43:
     scene v13s43_1 # TPP. Show MC in bed, phone buzzing on nightstand, eyes closed, neutral expression, mouth closed
     with dissolve
 
-    play music "music/v13/Track Scene 43.mp3" fadein 2 
+    play music music.ck1.v13.Track_Scene_43 fadein 2 
 
     pause 0.75
 

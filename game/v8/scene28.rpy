@@ -72,7 +72,7 @@ label drug_deal_w_josh:
 
     pause 0.5
 
-    play music "music/m3punk.mp3"
+    play music music.ck1.m3punk
 
     scene v8sdd4c # FPP. Same camera as v8sdd4, Joe and Lars looking at the camera, angry expression, Joe now holding the pipe in one hand only. Joe mouth open.
     with dissolve

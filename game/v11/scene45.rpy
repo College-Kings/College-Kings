@@ -5,7 +5,7 @@
 label v11_lobby_mrlee:
     scene v11lob1 # FPP. Show Mr Lee, slight smile mouth open, stood in hotel lobby
     with dissolve
-    play music "music/v11/Track Scene 9a_1.mp3" fadein 2
+    play music music.ck1.v11.Track_Scene_9a_1 fadein 2
     lee "Students, so far it has been an absolute pleasure traveling with you all."
 
     scene v11lob2 # FPP. Show Nora and chris stood together, slight annoyed faces
@@ -106,7 +106,7 @@ label v11_lobby_mrlee:
     pause 1
 
     stop music fadeout 3
-    play music "music/v11/Track Scene 7_3.mp3"
+    play music music.ck1.v11.Track_Scene_7_3
 
     scene v11lob22 # TPP. Show Mr Lee and a couple of the students walking through the entrance of the restraunt. 
     with dissolve

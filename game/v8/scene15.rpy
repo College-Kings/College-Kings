@@ -19,7 +19,7 @@ label penelope_dorm_hack:
 
     pe "It's open!"
 
-    play music "music/msad.mp3" fadein 2
+    play music music.ck1.msad fadein 2
 
     scene v8spen3 # FPP. Now inside Penelope's dorm, show Penelope sitting on her bed, crying.
     with dissolve

@@ -9,8 +9,8 @@ label hallway_w_nora:
 
     pause 0.5
 
-    play music "music/mchill2.mp3"
-    queue music "music/mindie4.mp3"
+    play music music.ck1.mchill2
+    queue music music.ck1.mindie4
 
     scene v8shal2 # TPP. Show MC continuing to walk down the hallway, MC notices Nora and Nora notices MC.
     with dissolve

@@ -7,7 +7,7 @@ label v10_ms_rose_fight:
     scene v10msf1 # FPP. Show MS rose's house, MS rose stood at the door, Mr rose stood infront of house. Ms rose angry look, Ms rose mouth closed, mr rose mouth open
     with dissolve
 
-    play music "music/v10/Track Scene 25_1.mp3" fadein 2
+    play music music.ck1.v10.Track_Scene_25_1 fadein 2
 
     mrr "These things take time, how is that not clear? You can't expect a luxurious lifestyle if you're not willing to put the work in!"
 
@@ -99,7 +99,7 @@ label v10_ms_rose_fight:
 
             mrr "*Sighs* Fine."
             stop music fadeout 3
-            play music "music/v10/Track Scene 25_2.mp3" fadein 2
+            play music music.ck1.v10.Track_Scene_25_2 fadein 2
 
             scene v10msf3 # FPP. Show Mr Rose walking away from the house
             with dissolve
@@ -130,7 +130,7 @@ label v10_ms_rose_fight:
 
             mrr "When everything is said and done, you're gonna regret this."
             stop music fadeout 3
-            play music "music/v10/Track Scene 25_2.mp3" fadein 2
+            play music music.ck1.v10.Track_Scene_25_2 fadein 2
             scene v10msf3
             with dissolve
             pause 0.75
