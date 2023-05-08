@@ -1,5 +1,5 @@
 init 999 python:
-    class Checklist(list):
+    class Checklist:
         pass
 
     class SimplrContact:
