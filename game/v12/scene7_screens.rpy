@@ -971,28 +971,30 @@ screen v12s7_balcony_middle():
         timer 0.1 action Show(renpy.random.choice(("v12s7_balcony_left", "v12s7_balcony_right", "v12s7_front_gallery")))
 
 
-
 screen v12s7_balcony_left():
     tag free_roam
-
-    imagemap:
-        if nora in v12s7_killList:
-            idle "images/v12/Scene 7/Screens/Navigation 21b.webp" # No one
-            hover "images/v12/Scene 7/Buttons/nav 21b.webp"
-        else:
-            idle "images/v12/Scene 7/Screens/Navigation 21a.webp" # Nora
-            hover "images/v12/Scene 7/Buttons/nav 21.webp"
-
-        if nora not in v12s7_killList:
-            hotspot (507, 152, 282, 926):
-                if "nora" in freeroam9:
-                    action Call("v12s7_free_roam_spoken", backgroundImg="v12fernor1", returnScreen="v12s7_balcony_left", seenList=[] if v12s7_aubrey_moved else [riley], victim=nora)
-                else:
-                    action Jump("v12s7_nora1") # Nora
-            hotspot (850, 1000, 1070, 80) action Show("v12s7_balcony_middle")
-        else:
-            hotspot (339, 983, 1198, 97) action Show("v12s7_balcony_middle")
     
+    if nora in v12s7_killList:
+        add "v12s7_balcony_left_background_a" # No one
+    else:
+        add "v12s7_balcony_left_background_b" # Nora
+
+    if nora not in v12s7_killList:
+        imagebutton:
+            idle "v12s7_balcony_left_nora_idle"
+            hover "v12s7_balcony_left_nora_hover"
+            if "nora" in freeroam9:
+                action Call("v12s7_free_roam_spoken", backgroundImg="v12fernor1", returnScreen="v12s7_balcony_left", seenList=[] if v12s7_aubrey_moved else [riley], victim=nora)
+            else:
+                action Jump("v12s7_nora1") # Nora
+            pos (493, 137)
+    
+    imagebutton:
+        idle "free_roam_vertical_transparent"
+        hover "free_roam_bottom"
+        action Show("v12s7_balcony_middle")
+        align (0.5, 1.0)
+
     use v12s7_minimap(location="md_balcony")
 
     on "replaced" action SetVariable("previous_location", "v12s7_balcony_left")
