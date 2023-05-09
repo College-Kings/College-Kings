@@ -30,28 +30,26 @@ python early:
         "setup.rpy",
     )
 
-    restart_game = False # NEVER CHANGE
+    restart_game = False  # NEVER CHANGE
+    rpy_files = set()
+    
+    if config.developer:
+        for file in renpy.list_files().copy():
+            if file in old_files:
+                restart_game = True
+                os.remove(os.path.join(config.gamedir, file))
 
-    for rpy_file in old_files:
-        rpyc_file = rpy_file + "c"
+            if file.endswith(".rpy") or file.endswith("_ren.py"):
+                rpy_files.add(file)
 
-        rpy_file_path = os.path.join(config.basedir, "game", *rpy_file.split("/"))
-        rpyc_file_path = os.path.join(config.basedir, "game", *rpyc_file.split("/"))
-
-        if renpy.loadable(rpy_file):
-            restart_game = True
-            os.remove(rpy_file_path)
-        if renpy.loadable(rpyc_file):
-            restart_game = True
-            os.remove(rpyc_file_path)
+        for file in renpy.list_files().copy():
+            if file.endswith(".rpyc") and not (file.replace(".rpyc", ".rpy") in rpy_files or file.replace(".rpyc", "_ren.py") in rpy_files):
+                restart_game = True
+                os.remove(os.path.join(config.gamedir, file))
 
     if restart_game:
-        try:
-            import subprocess
-            subprocess.call([os.path.join(config.basedir, "CollegeKings.exe")])
-            renpy.quit()
-        except OSError:
-            raise Exception("Deleting old files please RESTART GAME.")
+        renpy.quit(True)
+
 
 label after_load:
     stop music
