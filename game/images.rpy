@@ -476,6 +476,7 @@ image Imre_Kick_hit = "images/v10/Scene 7/Animations/END/MCIMRE-KICKHIT-END.webp
 image Imre_Kick_block = "images/v10/Scene 7/Animations/END/MCIMRE-KICKBLOCKED-END.webp"
 
 #region v12.0
+#region Left Walkway Front
 image v12s7_left_walkway_front_background_a = "images/v12/Scene 7/Screens/Navigation 12a.webp"
 image v12s7_left_walkway_front_background_b = "images/v12/Scene 7/Screens/Navigation 12b.webp"
 
@@ -487,4 +488,13 @@ image v12s7_left_walkway_front_penelope_hover = "images/v12/Scene 7/Buttons/v12s
 
 image v12s7_left_walkway_front_right_idle = Transform("v12s7_left_walkway_front_right_hover", alpha=0.0)
 image v12s7_left_walkway_front_right_hover = "images/v12/Scene 7/Buttons/v12s7_left_walkway_front_right.png"
+#endregion Left Walkway Front
+
+#region Balcony Left
+image v12s7_balcony_left_background_a = "images/v12/Scene 7/Screens/Navigation 21a.webp"
+image v12s7_balcony_left_background_b = "images/v12/Scene 7/Screens/Navigation 21b.webp"
+
+image v12s7_balcony_left_nora_idle = Transform("v12s7_balcony_left_nora_hover", alpha=0.0)
+image v12s7_balcony_left_nora_hover = "images/v12/Scene 7/Buttons/v12s7_balcony_left_nora.png"
+#endregion Balcony Left
 #endregion v12.0
