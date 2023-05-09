@@ -127,8 +127,5 @@ init 999 python:
     v13s15a_Reply1 = None
     v13s15a_Reply2 = None
 
-    def v7_msgReply9():
-        pass
-
-    def v14_emmy_simplr1():
-        pass
+    v7_msgReply9 = None
+    v14_emmy_simplr1 = None
