@@ -379,9 +379,9 @@ label v12s27a:
 
     u "Let me just take some pictures for Kiwii..."
 
-    $ v12s27a_kiwiiPost1 = KiwiiPost(mc, "phone/kiwii/Posts/v12/roastedape.webp", _("#RoastedApe"), number_likes=469)
-    $ v12s27a_kiwiiPost1.newComment(imre, _("Holy shit... You make it way too easy, Ryan!"), mentions=[ryan], number_likes=renpy.random.randint(250,350))
-    $ v12s27a_kiwiiPost1.newComment(amber, _("Haha, yes! That's what you get, moron..."), mentions=[ryan], number_likes=renpy.random.randint(250,400))
+    $ kiwii_post = KiwiiService.new_post(mc, "phone/kiwii/Posts/v12/roastedape.webp", _("#RoastedApe"), number_likes=469)
+    $ KiwiiService.new_comment(kiwii_post, imre, _("Holy shit... You make it way too easy, Ryan!"), mentions=[ryan], number_likes=renpy.random.randint(250,350))
+    $ KiwiiService.new_comment(kiwii_post, amber, _("Haha, yes! That's what you get, moron..."), mentions=[ryan], number_likes=renpy.random.randint(250,400))
   
     scene v12s27a_8b # same as 8a, ryan mouth open, outraged, hiding his face behind his hands
     with dissolve

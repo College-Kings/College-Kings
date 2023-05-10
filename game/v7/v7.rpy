@@ -1,27 +1,4 @@
 init python:
-    def v7_kiwiiReply1():
-        v7_kiwiiPost1.newComment(cameron, _("Lol, pussy"), mentions=[mc], number_likes=renpy.random.randint(1, 10))
-        reputation.add_point(RepComponent.BOYFRIEND)
-
-    def v7_kiwiiReply2():
-        v7_kiwiiPost1.newComment(imre, _("Slide into her DMs bro!"), mentions=[mc], number_likes=renpy.random.randint(5, 15))
-        reputation.add_point(RepComponent.BRO)
-        reputation.add_point(RepComponent.TROUBLEMAKER)
-
-    def v7_kiwiiReply3():
-        reputation.add_point(RepComponent.BOYFRIEND)
-
-    def v7_kiwiiReply4():
-        v7_kiwiiPost2.newComment(autumn, _("Yeah, they really are"), mentions=[mc], number_likes=renpy.random.randint(8, 18))
-    
-    def v7_kiwiiReply5():
-        reputation.add_point(RepComponent.BRO)
-        v7_kiwiiPost3.newComment(aubrey, _("Bring it on!"), mentions=[mc], number_likes=renpy.random.randint(15, 35))
-
-    def v7_kiwiiReply6():
-        reputation.add_point(RepComponent.TROUBLEMAKER)
-        v7_kiwiiPost4.newComment(josh, _("lol"), mentions=[mc], number_likes=renpy.random.randint(3, 7))
-
     def kiwii_firstTimeMessages():
         if CharacterService.is_fwb(emily):
             MessengerService.add_reply(riley, _("We're not back together"))
@@ -1324,36 +1301,67 @@ label conyourdorm:
 
     pause 0.5
 
-    $ v7_kiwiiPost1 = KiwiiPost(chloe, "phone/kiwii/Posts/v7/clpost1.webp", _("I'll always follow the sun :)"), number_likes=186)
-    $ v7_kiwiiPost1.newComment(grayson, _("Check your DMs"), 14)
-    $ v7_kiwiiPost1.newComment(ryan, _("Whore."), 1)
-    $ v7_kiwiiPost1.newComment(aubrey, _("What I wouldn't give for your body..."), 32)
-    $ v7_kiwiiPost1.newComment(elijah, _("If you ever need a tutor, I'm free on Wednesdays and Fridays."), 2)
-    $ v7_kiwiiPost1.newComment(imre, _("SO FUCKING HOT WTFFF"), 10)
-    $ v7_kiwiiPost1.newComment(emily, _("Where did you get that bikini?"), 18, mentions=[chloe])
-    $ v7_kiwiiPost1.newComment(chloe, _("I can't remember :("), 11, mentions=[emily])
-    $ v7_kiwiiPost1.addReply(_("You're so beautiful!"), v7_kiwiiReply1, number_likes=renpy.random.randint(2, 8))
-    $ v7_kiwiiPost1.addReply(_("I got some sun in my room..."), v7_kiwiiReply2, number_likes=renpy.random.randint(20, 30))
+    $ kiwii_post = KiwiiService.new_post(chloe, "phone/kiwii/Posts/v7/clpost1.webp", _("I'll always follow the sun :)"), number_likes=186)
 
-    $ v7_kiwiiPost2 = KiwiiPost(lauren, "phone/kiwii/Posts/v7/lapost1.webp", _("Wishing I could go back..."), number_likes=39)
-    $ v7_kiwiiPost2.newComment(autumn, _("That was such a great vacation!"), 2)
-    $ v7_kiwiiPost2.newComment(penelope, _("Omg beautiful!"), 3)
-    $ v7_kiwiiPost2.addReply(_("You're a cutie!"), v7_kiwiiReply3, number_likes=renpy.random.randint(3, 10))
-    $ v7_kiwiiPost2.addReply(_("Winter vacations are the best"), v7_kiwiiReply4, number_likes=renpy.random.randint(10, 17))
+    $ v7_kiwii_reply1 = KiwiiBuilder(kiwii_post)
+    $ v7_kiwii_reply1.new_comment(cameron, _("Lol, pussy"), mentions=[mc], number_likes=renpy.random.randint(1, 10))
+    $ v7_kiwii_reply1.set_variable(reputation.add_point, RepComponent.BOYFRIEND)
 
-    $ v7_kiwiiPost3 = KiwiiPost(aubrey, "phone/kiwii/Posts/v7/aupost1.webp", _("Finally changed my profile pic!"), number_likes=133)
-    $ v7_kiwiiPost3.newComment(cameron, _("You put the hot into thot"), 2)
-    $ v7_kiwiiPost3.newComment(josh, _("You still single?"), 3)
-    $ v7_kiwiiPost3.newComment(riley, _("Holy hell... gorgeous Aubs!"), 6)
-    $ v7_kiwiiPost3.newComment(chloe, _("Most beautiful girl in the world <3"), 6)
-    $ v7_kiwiiPost3.addReply(_("I'd destroy you in Air hockey!"), v7_kiwiiReply5, mentions=[aubrey], number_likes=renpy.random.randint(15, 25))
+    $ v7_kiwii_reply2 = KiwiiBuilder(kiwii_post)
+    $ v7_kiwii_reply2.new_comment(imre, _("Slide into her DMs bro!"), mentions=[mc], number_likes=renpy.random.randint(5, 15))
+    $ v7_kiwii_reply2.set_variable(reputation.add_point, RepComponent.BRO)
+    $ v7_kiwii_reply2.set_variable(reputation.add_point, RepComponent.TROUBLEMAKER)
+
+    $ KiwiiService.new_comment(kiwii_post, grayson, _("Check your DMs"), 14)
+    $ KiwiiService.new_comment(kiwii_post, ryan, _("Whore."), 1)
+    $ KiwiiService.new_comment(kiwii_post, aubrey, _("What I wouldn't give for your body..."), 32)
+    $ KiwiiService.new_comment(kiwii_post, elijah, _("If you ever need a tutor, I'm free on Wednesdays and Fridays."), 2)
+    $ KiwiiService.new_comment(kiwii_post, imre, _("SO FUCKING HOT WTFFF"), 10)
+    $ KiwiiService.new_comment(kiwii_post, emily, _("Where did you get that bikini?"), 18, mentions=[chloe])
+    $ KiwiiService.new_comment(kiwii_post, chloe, _("I can't remember :("), 11, mentions=[emily])
+    $ KiwiiService.add_replies(kiwii_post,
+        KiwiiReply(_("You're so beautiful!"), v7_kiwii_reply1, number_likes=renpy.random.randint(2, 8)),
+        KiwiiReply(_("I got some sun in my room..."), v7_kiwii_reply2, number_likes=renpy.random.randint(20, 30))
+    )
+
+    $ kiwii_post = KiwiiService.new_post(lauren, "phone/kiwii/Posts/v7/lapost1.webp", _("Wishing I could go back..."), number_likes=39)
+
+    $ v7_kiwii_reply3 = KiwiiBuilder(kiwii_post)
+    $ v7_kiwii_reply3.set_variable(reputation.add_point, RepComponent.BOYFRIEND)
+
+    $ v7_kiwii_reply4 = KiwiiBuilder(kiwii_post)
+    $ v7_kiwii_reply4.new_comment(autumn, _("Yeah, they really are"), mentions=[mc], number_likes=renpy.random.randint(8, 18))
+
+    $ KiwiiService.new_comment(kiwii_post, autumn, _("That was such a great vacation!"), 2)
+    $ KiwiiService.new_comment(kiwii_post, penelope, _("Omg beautiful!"), 3)
+    $ KiwiiService.add_replies(kiwii_post,
+        KiwiiReply(_("You're a cutie!"), v7_kiwii_reply3, number_likes=renpy.random.randint(3, 10)),
+        KiwiiReply(_("Winter vacations are the best"), v7_kiwii_reply4, number_likes=renpy.random.randint(10, 17))
+    )
+
+    $ kiwii_post = KiwiiService.new_post(aubrey, "phone/kiwii/Posts/v7/aupost1.webp", _("Finally changed my profile pic!"), number_likes=133)
+
+    $ v7_kiwii_reply5 = KiwiiBuilder(kiwii_post)
+    $ v7_kiwii_reply5.set_variable(reputation.add_point, RepComponent.BRO)
+    $ v7_kiwii_reply5.new_comment(aubrey, _("Bring it on!"), mentions=[mc], number_likes=renpy.random.randint(15, 35))
+
+    $ KiwiiService.new_comment(kiwii_post, cameron, _("You put the hot into thot"), 2)
+    $ KiwiiService.new_comment(kiwii_post, josh, _("You still single?"), 3)
+    $ KiwiiService.new_comment(kiwii_post, riley, _("Holy hell... gorgeous Aubs!"), 6)
+    $ KiwiiService.new_comment(kiwii_post, chloe, _("Most beautiful girl in the world <3"), 6)
+    $ KiwiiService.add_reply(kiwii_post, _("I'd destroy you in Air hockey!"), v7_kiwii_reply5, mentions=[aubrey], number_likes=renpy.random.randint(15, 25))
 
     if CharacterService.is_fwb(emily): # first riley texts, then once you've opened the app you get 2 more messages.
-        $ v7_kiwiiPost4 = KiwiiPost(emily, "phone/kiwii/Posts/v7/empost1.webp", _("Finally fate brings us back together. What doesn't kill us only makes us stronger."), number_likes=82)
-        $ v7_kiwiiPost4.newComment(riley, _("You guys are so cute"), 5)
-        $ v7_kiwiiPost4.newComment(aubrey, _("GORGEOUS"), 8)
-        $ v7_kiwiiPost4.newComment(josh, _("Woah, you guys back together??"), 3)
-        $ v7_kiwiiPost4.addReply(_("No, we're not."), v7_kiwiiReply6, mentions=[josh], number_likes=renpy.random.randint(5, 15))
+        $ kiwii_post = KiwiiService.new_post(emily, "phone/kiwii/Posts/v7/empost1.webp", _("Finally fate brings us back together. What doesn't kill us only makes us stronger."), number_likes=82)
+
+        $ v7_kiwii_reply6 = KiwiiBuilder(kiwii_post)
+        $ v7_kiwii_reply6.set_variable(reputation.add_point, RepComponent.TROUBLEMAKER)
+        $ v7_kiwii_reply6.new_comment(josh, _("lol"), mentions=[mc], number_likes=renpy.random.randint(3, 7))
+
+        $ KiwiiService.new_comment(kiwii_post, riley, _("You guys are so cute"), 5)
+        $ KiwiiService.new_comment(kiwii_post, aubrey, _("GORGEOUS"), 8)
+        $ KiwiiService.new_comment(kiwii_post, josh, _("Woah, you guys back together??"), 3)
+        $ KiwiiService.add_reply(kiwii_post, _("No, we're not."), v7_kiwii_reply6, mentions=[josh], number_likes=renpy.random.randint(5, 15))
 
         play sound sound.vibrate
 
@@ -1376,9 +1384,9 @@ label conyourdorm:
             if MessengerService.has_replies(riley):
                 u "(I need to respond to some of these messages.)"
 
-        while v7_kiwiiPost4.replies:
+        while KiwiiService.has_replies(Emily):
             call screen phone
-            if v7_kiwiiPost4.replies:
+            if KiwiiService.has_replies(Emily):
                 u "(I should check out what Emily posted on Kiwii.)"
 
         while MessengerService.has_replies(penelope):
@@ -5454,10 +5462,10 @@ label after_pledges:
     with Fade(1,0,1)
 
     if mc.frat == Frat.WOLVES:
-        $ v7_kiwiiPost5 = KiwiiPost(chris, "phone/kiwii/Posts/v7/chpost1.webp", _("One of us!"), number_likes=133, mentions=[mc])
-        $ v7_kiwiiPost5.newComment(cameron, _("Losers"), 3)
-        $ v7_kiwiiPost5.newComment(imre, _("Hell yeah bro!"), 14)
-        $ v7_kiwiiPost5.newComment(aubrey, _("Woohoo!"), 35)
+        $ kiwii_post = KiwiiService.new_post(chris, "phone/kiwii/Posts/v7/chpost1.webp", _("One of us!"), number_likes=133, mentions=[mc])
+        $ KiwiiService.new_comment(kiwii_post, cameron, _("Losers"), 3)
+        $ KiwiiService.new_comment(kiwii_post, imre, _("Hell yeah bro!"), 14)
+        $ KiwiiService.new_comment(kiwii_post, aubrey, _("Woohoo!"), 35)
 
     if emilyText:
         play sound sound.vibrate
