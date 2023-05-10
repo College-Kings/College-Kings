@@ -4,7 +4,7 @@
 # Time: Afternoon
 label v10_aft_walk_home:
 
-    play music "music/v10/Track Scene 23.mp3" fadein 2
+    play music music.ck1.v10.Track_Scene_23 fadein 2
 
     scene v10smwh1 # TPP. Show MC walking on the sidewalk. Normal expression, mouth closed.
     with fade
@@ -280,7 +280,7 @@ label v10_aft_walk_home:
     scene v10smwh1c
     with dissolve
 
-    play sound "sounds/vibrate.mp3"
+    play sound sound.vibrate
 
     $ MessengerService.new_message(lauren, "Hey, wanna hang out? I have some free time in between study sessions.")
     $ MessengerService.add_reply(lauren, "Sure, on my way")

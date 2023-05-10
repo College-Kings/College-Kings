@@ -4,7 +4,7 @@
 # Time: Afternoon
 
 label v14s09:
-    play music "music/v11/Track Scene 10.mp3" fadein 2
+    play music music.v11_Track_Scene_10 fadein 2
     
     scene v14s09_1 # TPP. show mc walking through airport, pulling his luggae, slight smile, mouth closed
     with dissolve
@@ -66,7 +66,7 @@ label v14s09:
 
     lee "*Sighs* I suppose that what happens in Europe, truly does stay in Europe..."
 
-    if CharacterService.is_fwb(ms_rose) and joinwolves and v13s20_bleach_suitcase: #sanitizing pathbuilder input
+    if CharacterService.is_fwb(ms_rose) and mc.frat == Frat.WOLVES and v13s20_bleach_suitcase: #sanitizing pathbuilder input
         scene v14s09_2e # FPP. same as v14s09_2a show Ms. Rose looking at mc slightly biting a pen slight smile, mouth closed, show Mr. Lee looking at Charli's suitcase with a confused expression, mouth closed
         with dissolve
 

@@ -12,15 +12,15 @@ label seb_in_room:
 
     pause 0.5
 
-    play sound "sounds/knock.mp3"
+    play sound sound.knock
 
     scene v8ssir2 # FPP. Show the closed door of MCs room.
     with dissolve
 
     u "(Wonder who that is.)"
 
-    play music "music/m15punk.mp3"
-    queue music ["music/m16punk.mp3", "music/m7punk.mp3"]
+    play music music.ck1.punk15
+    queue music [music.ck1.m16punk, music.ck1.m7punk]
 
     scene v8ssir3 # TPP. Show MC going to the door and opening it, show Sebastian stood on the other side, Sebastian smile, mouth open.
     with dissolve

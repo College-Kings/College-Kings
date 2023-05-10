@@ -10,9 +10,9 @@ label v12_lindsey_lobby:
 
     pause 0.75
 
-    play music "music/v12/Track Scene 36_1.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_36_1 fadein 2
 
-    play sound "sounds/knock.mp3"
+    play sound sound.knock
 
     scene v12lil1a # TPP. Same as v12lil1, MC slightly startled, mouth closed, awake
     with dissolve
@@ -29,7 +29,7 @@ label v12_lindsey_lobby:
 
     pause 0.75
 
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
     scene v12lil4 # FPP. MC looking at the door, hand on handle, going to open the door
     with dissolve
 
@@ -181,7 +181,7 @@ label v12_lindsey_lobby:
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 36_2.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_36_2 fadein 2
 
     scene v12lil12 # FPP. MC and Lindsey sitting down, looking at each other, Lindsey slightly worried, mouth open
     with dissolve
@@ -312,7 +312,7 @@ label v12_lindsey_lobby:
     with dissolve
 
     pause 0.75
-    play sound "sounds/vibrate.mp3"
+    play sound sound.vibrate
 
     pause 2
 

@@ -7,9 +7,9 @@ label v10_linds_room:
     scene v10slds1 # TPP. Show MC arriving at the door to Lindsey's house and knocking. Normal expression, mouth closed.
     with fade
 
-    play sound "sounds/knock.mp3"
+    play sound sound.knock
 
-    play music "music/v10/Track Scene 11.mp3" fadein 2
+    play music music.ck1.v10.Track_Scene_11 fadein 2
 
     pause 0.75
     
@@ -469,7 +469,7 @@ label v10_linds_room:
 
     stop music fadeout 3
 
-if joinwolves: # I don't know this variable name
+if mc.frat == Frat.WOLVES: # I don't know this variable name
     jump v10_wolves_redec
 
 else: # RCS - if MC is an ape?

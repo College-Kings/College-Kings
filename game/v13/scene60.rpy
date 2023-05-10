@@ -9,7 +9,7 @@ label v13s60:
 
     pause 0.75
 
-    play music "music/v13/Track Scene 60_1.mp3" fadein 2
+    play music music.v13_Track_Scene_60_1 fadein 2
 
     scene v13s60_2 # TPP. Show MC and Aubrey standing still in a different part of the woods, both slight smile, mouth closed.
     with fade
@@ -76,12 +76,12 @@ label v13s60:
 
     scene v13s60_6 # TPP. Close up of MC hitting his head on the ground, worried expression, mouth closed.
     with vpunch
-    play sound "sounds/fall.mp3"
+    play sound sound.fall
 
     pause
 
     stop music fadeout 3
-    play music "music/v13/Track Scene 60_2.mp3" fadein 2
+    play music music.ck1.v13.Track_Scene_60_2 fadein 2
 
     scene v13s60_7 # TPP. Show MC holding his head and rolling slightly to the left, in pain expression, mouth closed.
     with dissolve

@@ -1,5 +1,5 @@
 label v2start:
-    play music "music/muffledparty.mp3"
+    play music music.ck1.muffledparty
     scene black
     
     scene s121a
@@ -20,7 +20,7 @@ label v2start:
 
     imre "Hey man, did you have a good night?"
 
-    play music "music/m9punk.mp3"
+    play music music.ck1.m9punk
     scene s123a
     with dissolve
 
@@ -113,7 +113,7 @@ label v2start:
     with fade
 
     label bjj_bd: #for compatibility only
-    play sound "sounds/vibrate.mp3"
+    play sound sound.vibrate
     queue sound "sounds/vibrate.mp3"
 
     python:
@@ -197,7 +197,7 @@ label v2start:
 
     u "(I can't believe I got knocked out in front of everyone...)"
 
-    play music "music/m4punk.mp3"
+    play music music.ck1.m4punk
 
     u "(Especially in front of Chloe, that's so humiliating.)"
 
@@ -256,7 +256,7 @@ label v1_tomShoutBack:
 
     scene tompush
     pause 0.7
-    play sound "sounds/push.mp3"
+    play sound sound.push
     scene push12
     with vpunch
 
@@ -286,7 +286,7 @@ label gb:
             scene kick2movie
             pause 0.7
 
-            play sound "sounds/ks.mp3"
+            play sound sound.hit
             
             scene kick2pic
             with hpunch
@@ -318,7 +318,7 @@ label gb:
         label tomtut1hook:
             scene hook1movie
             $ renpy.pause(0.7)
-            play sound "sounds/bs.mp3"
+            play sound sound.hit
             scene hook1pic
             with hpunch
 
@@ -350,7 +350,7 @@ label gb:
         label tomtut1jab:
             scene jab1movie
             $ renpy.pause(0.7)
-            play sound "sounds/bs.mp3"
+            play sound sound.hit
             scene jab1pic
             with hpunch
 
@@ -383,7 +383,7 @@ label gb:
 
 
         label tuthookblock:
-            play sound "sounds/bs.mp3"
+            play sound sound.hit
             scene tomhookblock
             with hpunch
 
@@ -397,7 +397,7 @@ label gb:
 
 
         label tuthookhit:
-            play sound "sounds/hs.mp3"
+            play sound sound.hit
             scene tomhookhit
             with hpunch
 
@@ -441,7 +441,7 @@ label tomFightStart:
 
             scene youfinishmovie
             $ renpy.pause(1)
-            play sound "sounds/fall.mp3"
+            play sound sound.fall
             $ stance = 0
             $ youDamage = 0
             scene youfinish
@@ -454,7 +454,7 @@ label tomFightStart:
             $ tomdmg += 1
             scene kick2movie
             $ renpy.pause(0.7)
-            play sound "sounds/ks.mp3"
+            play sound sound.hit
             scene kick2pic
             with hpunch
 
@@ -466,7 +466,7 @@ label tomFightStart:
 
             scene tomfinishmovie
             $ renpy.pause(1)
-            play sound "sounds/fall.mp3"
+            play sound sound.fall
             $ stance = 0
             $ youDamage = 0
             scene tomfinish
@@ -480,7 +480,7 @@ label tomFightStart:
         else:
             scene hook1movie
             $ renpy.pause(0.7)
-            play sound "sounds/bs.mp3"
+            play sound sound.hit
             scene hook1pic
             with hpunch
 
@@ -494,7 +494,7 @@ label tomFightStart:
 
             scene tomfinishmovie
             $ renpy.pause(1)
-            play sound "sounds/fall.mp3"
+            play sound sound.fall
             $ stance = 0
             $ youDamage = 0
             scene tomfinish
@@ -507,7 +507,7 @@ label tomFightStart:
 
             scene jab1movie
             $ renpy.pause(0.7)
-            play sound "sounds/bs.mp3"
+            play sound sound.hit
             scene jab1pic
             with hpunch
 
@@ -523,7 +523,7 @@ label tomFightStart:
 
             scene youfinishmovie
             $ renpy.pause(1)
-            play sound "sounds/fall.mp3"
+            play sound sound.fall
             $ stance = 0
             $ youDamage = 0
             scene youfinish
@@ -537,7 +537,7 @@ label tomFightStart:
 
             scene hook2movie
             $ renpy.pause(0.7)
-            play sound "sounds/hs.mp3"
+            play sound sound.hit
             scene hook2pic
             with hpunch
 
@@ -552,7 +552,7 @@ label tomFightStart:
 
             scene tomfinishmovie
             $ renpy.pause(1)
-            play sound "sounds/fall.mp3"
+            play sound sound.fall
             $ stance = 0
             $ youDamage = 0
             scene tomfinish
@@ -566,7 +566,7 @@ label tomFightStart:
 
             scene jab1movie
             $ renpy.pause(0.7)
-            play sound "sounds/bs.mp3"
+            play sound sound.hit
             scene jab1pic
             with hpunch
 
@@ -579,7 +579,7 @@ label tomFightStart:
 
             scene tomfinishmovie
             $ renpy.pause(1)
-            play sound "sounds/fall.mp3"
+            play sound sound.fall
             $ stance = 0
             $ youDamage = 0
             scene tomfinish
@@ -593,7 +593,7 @@ label tomFightStart:
 
             scene kick1movie
             $ renpy.pause(0.7)
-            play sound "sounds/ks.mp3"
+            play sound sound.hit
             scene kick1pic
             with hpunch
 
@@ -608,7 +608,7 @@ label tomFightStart:
 
             scene youfinishmovie
             $ renpy.pause(1)
-            play sound "sounds/fall.mp3"
+            play sound sound.fall
             $ stance = 0
             $ youDamage = 0
             scene youfinish
@@ -622,7 +622,7 @@ label tomFightStart:
 
             scene jab2movie
             $ renpy.pause(0.7)
-            play sound "sounds/js.mp3"
+            play sound sound.hit
             scene jab2pic
             with hpunch
 
@@ -640,7 +640,7 @@ label tomFightStart:
 
             scene tomfinishmovie
             $ renpy.pause(1)
-            play sound "sounds/fall.mp3"
+            play sound sound.fall
             $ stance = 0
             $ youDamage = 0
             scene tomfinish
@@ -652,7 +652,7 @@ label tomFightStart:
         else:
             scene hook1movie
             $ renpy.pause(0.7)
-            play sound "sounds/bs.mp3"
+            play sound sound.hit
             scene hook1pic
             with hpunch
 
@@ -669,7 +669,7 @@ label tomFightStart:
             scene tomfinishmovie
             $ renpy.pause(1)
 
-            play sound "sounds/fall.mp3"
+            play sound sound.fall
             $ stance = 0
             $ youDamage = 0
             scene tomfinish
@@ -683,7 +683,7 @@ label tomFightStart:
 
             scene kick1movie
             $ renpy.pause(0.7)
-            play sound "sounds/ks.mp3"
+            play sound sound.hit
             scene kick1pic
             with hpunch
 
@@ -779,7 +779,7 @@ label tomFightStart:
     label tomhookhit2:
     label timer4:
 
-        play sound "sounds/hs.mp3"
+        play sound sound.hit
         $ youDamage += 1
         scene tomhookhit
         with hpunch
@@ -816,7 +816,7 @@ label tomFightStart:
 
     label tomhookblocked:
 
-        play sound "sounds/bs.mp3"
+        play sound sound.hit
         scene tomhookblock
         with hpunch
 
@@ -853,7 +853,7 @@ label tomFightStart:
     label tomjabhit2:
     label timer5:
 
-        play sound "sounds/js.mp3"
+        play sound sound.hit
         scene tomjabhit
         with hpunch
 
@@ -889,7 +889,7 @@ label tomFightStart:
 
     label tomjabblocked:
 
-        play sound "sounds/bs.mp3"
+        play sound sound.hit
         scene tomjabblock
         with hpunch
 
@@ -925,7 +925,7 @@ label tomFightStart:
     label tomkickhit:
     label tomkickhit2:
     label timer6:
-        play sound "sounds/ks.mp3"
+        play sound sound.hit
         scene tomkickhit
         with hpunch
 
@@ -960,7 +960,7 @@ label tomFightStart:
             call screen youattack
 
     label tomkickblocked:
-        play sound "sounds/ks.mp3"
+        play sound sound.hit
         scene tomkickblock
         with hpunch
 
@@ -1017,7 +1017,7 @@ label youfinish:
         "Kick him":
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
-            play sound "sounds/js.mp3"
+            play sound sound.hit
             scene yf
             with vpunch
 
@@ -1054,7 +1054,7 @@ label v1_tom_walk_away:
         jump history2
 
 label meet_lauren2:
-    play music "music/mlove2.mp3"
+    play music music.ck1.mlove2
 
     if fighttom and not wintom:
         scene s128a #outside of cafe with bloody nose
@@ -1307,7 +1307,7 @@ label meet_lauren2:
 
 label historye: #for compatibility only
 label history2:
-    play sound "sounds/vibrate.mp3"
+    play sound sound.vibrate
 
     python:
         v2_reply7 = MessageBuilder(josh)
@@ -1348,7 +1348,7 @@ label history2:
 
     u "(Time to sit through another boring ass lecture.)"
 
-    play music "music/m16punk.mp3"
+    play music music.ck1.m16punk
     scene s136 ## seeing Imre in lecture room looking apologetic
     with Fade (1,0,1)
 
@@ -1599,7 +1599,7 @@ label history2:
     scene clocka
     with fade
 
-    play sound "sounds/clock2.mp3"
+    play sound sound.clock2
 
     pause (0.5)
 
@@ -1624,7 +1624,7 @@ label history2:
     scene s140 # You and Imre in hallway
     with Fade (1,0,1)
 
-    play music "music/m11punk.mp3"
+    play music music.ck1.m11punk
 
     imre "I can't believe he's making us come in costume."
 
@@ -1837,8 +1837,7 @@ label history2:
             jump bo_bd
 
 label bo_ad:
-
-    play music "sounds/bus.mp3"
+    play ambience ambience.bus
 
     scene carback
 
@@ -1976,8 +1975,8 @@ label bo_ad:
             em "Haha, I'm not sure who told you that."
 
     label bq_bd: #for compatibility only
-    stop music
-    play sound "sounds/busstop.mp3"
+    stop ambience
+    play sound sound.bus_stop
 
     hide s145c
     hide s145f
@@ -1991,7 +1990,7 @@ label bo_ad:
     scene s146far # doctors reception
     with Fade (1,0,1)
 
-    play music "music/m16punk.mp3"
+    play music music.ck1.m16punk
 
     u "Hey there, you accept walk-ins right?"
 
@@ -2302,7 +2301,7 @@ label bo_bd:
         u "(Still... I don't know if I can ever fully forgive her for what she did.)"
 
     # text from aubrey
-    play sound "sounds/vibrate.mp3"
+    play sound sound.vibrate
 
     python:
         v2_reply12 = MessageBuilder(aubrey)
@@ -2332,7 +2331,7 @@ label bo_bd:
         if MessengerService.has_replies(aubrey):
             u "(I should check my messages.)"
     
-    play music "music/mlove.mp3"
+    play music music.ck1.mlove
 
     scene s155
     with fade
@@ -2486,7 +2485,7 @@ label bo_bd:
 
     u "Ugh... alright."
 
-    play sound "sounds/vibrate.mp3"
+    play sound sound.vibrate
 
     python:
         v2_reply13 = MessageBuilder(aubrey)
@@ -2556,14 +2555,14 @@ label bo_bd:
 label csaub:
     scene s156
     with Fade (1,0,1)
-    play sound "sounds/knock.mp3"
+    play sound sound.knock
     pause 1
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
 
     scene s157
     with dissolve
     pause 0.75
-    play music "music/m7punk.mp3"
+    play music music.ck1.m7punk
 
 
     no "Oh, look who it is."
@@ -2580,7 +2579,7 @@ label csaub:
 
     no "You're welcome."
 
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
 
 # door open sound
     scene s157d # aubrey appears
@@ -2617,9 +2616,9 @@ label csaub:
 
     u "Didn't you say this was a costume shop?"
 
-    play music "music/mindie1.mp3"
+    play music music.ck1.mindie1
 
-    queue music [ "music/mindie2.mp3", "music/mindie3.mp3" ]
+    queue music [music.ck1.mindie2, music.ck1.mindie3]
 
     au "It was! At least the last time I was here."
 
@@ -3141,9 +3140,9 @@ label cspe:
 
     u "I swear Google maps said this was a costume shop."
 
-    play music "music/mindie1.mp3"
+    play music music.ck1.mindie1
 
-    queue music [ "music/mindie2.mp3", "music/mindie3.mp3" ]
+    queue music [music.ck1.mindie2, music.ck1.mindie3]
 
     pe "Maybe we can ask the lady over there, she seems to work here."
 

@@ -5,7 +5,7 @@
 label v11_nora_lingerie:
     scene v11nol1 # TPP. Show MC and Nora walking next to each other on the sidewalk, both slightly smiling, mouths closed
     with dissolve
-    play music "music/v10/Track Scene 22_2.mp3" fadein 2
+    play music music.ck1.v10.Track_Scene_22_2 fadein 2
     pause 0.75
 
     scene v11nol2 # FPP. MC standing next to Nora on the sidewalk, they're walking, MC and Nora looking at each other, Nora smiling, mouth closed

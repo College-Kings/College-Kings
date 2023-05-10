@@ -20,7 +20,7 @@ label hoco_amb_night:
 
     pause 0.5
 
-    play music "music/msexy.mp3"
+    play music music.ck1.sexy
 
 label v8s5_amberBlowjob:
     scene v8samb3 # FPP. Show Amber starting to give MC a blowjob. MC legs spread enough for Amber to fit in-between, Amber looking at MC (Camera). (If needed, place the camera slightly above MC's head to give a clear view, so need not be technically FPP. Just should look first person)
@@ -188,7 +188,7 @@ label hoco_amb_morning:
 
     u "Haha. Yeah."
 
-    play music "music/mfunk.mp3"
+    play music music.ck1.mfunk
 
     scene v8samb16 # FPP. Close up of Amber, Amber mouth open, tired expression.
     with dissolve

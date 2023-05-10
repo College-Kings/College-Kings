@@ -4,7 +4,7 @@
 # Time: Night
 
 label v14s04:
-    play music "music/v13/Track Scene 16a_2.mp3" fadein 2
+    play music music.v13_Track_Scene_16a_2 fadein 2
 
     scene v14s04_1 # TPP. Show MC enteting the hotel lobby, neutral expression, mouth closed
     with dissolve

@@ -72,7 +72,7 @@ label drug_deal_w_josh:
 
     pause 0.5
 
-    play music "music/m3punk.mp3"
+    play music music.ck1.m3punk
 
     scene v8sdd4c # FPP. Same camera as v8sdd4, Joe and Lars looking at the camera, angry expression, Joe now holding the pipe in one hand only. Joe mouth open.
     with dissolve
@@ -125,7 +125,6 @@ label int_deal_w_josh:
     scene v8sdd10 # TPP. Show Joe running at Josh with the Pipe looking angry, Lars readying for a fight with MC.
     with dissolve
 
-    # TODO: Update Lars Fight
     call screen confirm(_("Would you like to play the fighting tutorial?"),
         yes_action=[SetVariable("fight_tutorial", True), Call("fight_tutorialLabel")],
         no_action=[SetVariable("fight_tutorial", False), Return()])
@@ -163,7 +162,7 @@ label int_deal_w_josh:
 label lars_McAttack:
     $ stance = 2
 
-    show screen fight_overlay(stance="defend") # TODO: Update fight code
+    show screen fight_overlay(stance="defend")
     
     # Lars hook
     if larsAttack == 1:
@@ -310,7 +309,7 @@ label mc_LarsBodyhookBlock: # MC Body Hooks Lars (Blocks)
 
 label lars_McKickHit: # Lars Kicks MC (Hits/No Block)
 
-    play sound "sounds/ks.mp3"
+    play sound sound.hit
     $ youDamage += 1
     scene Lars_Kick_hit
     with hpunch
@@ -323,7 +322,7 @@ label lars_McKickHit: # Lars Kicks MC (Hits/No Block)
 
 label lars_McKickBlock: # Lars Kicks MC (Blocked)
 
-    play sound "sounds/ks.mp3"
+    play sound sound.hit
     scene Lars_Kick_block
     with hpunch
 
@@ -335,7 +334,7 @@ label lars_McKickBlock: # Lars Kicks MC (Blocked)
 
 label lars_McJabHit: # Lars Kicks MC (Hits/No Block)
 
-    play sound "sounds/js.mp3"
+    play sound sound.hit
     $ youDamage += 1
     scene Lars_Jab_hit
     with hpunch
@@ -350,7 +349,7 @@ label lars_McJabHit: # Lars Kicks MC (Hits/No Block)
 
 label lars_McJabBlock: # Lars Kicks MC (Hits/No Block)
 
-    play sound "sounds/bs.mp3"
+    play sound sound.hit
     scene Lars_Hook_block
     with hpunch
 
@@ -362,7 +361,7 @@ label lars_McJabBlock: # Lars Kicks MC (Hits/No Block)
 
 label lars_McHookHit: # Lars Kicks MC (Hits/No Block)
 
-    play sound "sounds/hs.mp3"
+    play sound sound.hit
     $ youDamage += 1
     scene Lars_Hook_hit
     with hpunch
@@ -377,7 +376,7 @@ label lars_McHookHit: # Lars Kicks MC (Hits/No Block)
 
 label lars_McHookBlock: # Lars Kicks MC (Hits/No Block)
 
-    play sound "sounds/bs.mp3"
+    play sound sound.hit
     scene Lars_Hook_block
     with hpunch
 
@@ -389,7 +388,7 @@ label lars_McHookBlock: # Lars Kicks MC (Hits/No Block)
 
 label lars_McBodyhookHit: # Lars Kicks MC (Hits/No Block)
 
-    play sound "sounds/hs.mp3"
+    play sound sound.hit
     $ youDamage += 1
     scene Lars_BodyJab_hit
     with hpunch
@@ -402,7 +401,7 @@ label lars_McBodyhookHit: # Lars Kicks MC (Hits/No Block)
 
 label lars_McBodyhookBlock: # Lars Kicks MC (Hits/No Block)
 
-    play sound "sounds/bs.mp3"
+    play sound sound.hit
     scene Lars_BodyJab_block
     with hpunch
 
@@ -458,7 +457,7 @@ label mc_larsAttack:
 label mc_larsFightEnd: # MC wins fight against Lars
     hide screen s28_larsMcAttack
     hide screen s28_mcLarsAttack
-    hide screen fight_overlay # TODO: Update fight code
+    hide screen fight_overlay
     $ youDamage = 0
     $ stance = 0
     $ s28_fightWinner = "MC"
@@ -468,7 +467,7 @@ label mc_larsFightEnd: # MC wins fight against Lars
 label lars_McFightEnd: # MC loses fight against Lars
     hide screen s28_larsMcAttack
     hide screen s28_mcLarsAttack
-    hide screen fight_overlay # TODO: Update fight code
+    hide screen fight_overlay
     $ youDamage = 0
     $ stance = 0
     $ s28_fightWinner = "Lars"

@@ -6,7 +6,7 @@
 label v11_bartender_hotel_chat:
     scene v11hbc1 # FPP. MC is sitting at the bar, looking at the bartender, the bartender is slightly smiling, mouth open
     with dissolve
-    play music "music/v11/Track Scene 5_6.mp3" fadein 2
+    play music music.ck1.v11.Track_Scene_5_6 fadein 2
     bartender "You're the most company I've had all year long... most people go to an actual bar."
 
     scene v11hbc1a # FPP. Same as v11hbc1, Bartender slightly smiling, mouth closed

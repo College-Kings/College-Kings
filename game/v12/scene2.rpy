@@ -9,7 +9,7 @@ label v12_nora_checks_mc:
 
     pause 0.75
 
-    play music "music/v12/Track Scene 2.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_2 fadein 2
 
     scene v12ncm2 # FPP. MC opens the door and nora is standing there, mouth closed
     with dissolve
@@ -296,7 +296,7 @@ label v12_nora_checks_mc:
 
     pause 1
 
-    play sound "sounds/doorclose.mp3"
+    play sound sound.door_close
 
     stop music fadeout 3
 

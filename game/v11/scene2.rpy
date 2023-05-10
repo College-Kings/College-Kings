@@ -7,7 +7,7 @@ label v11_nora_chloe_hallway:
     scene v11nohall1 # TPP. Show MC walking in the hallway, camera should be behind MC, Nora is supposed to be in the background looking at the bulleting board
     with fade
 
-    play music "music/v11/Track Scene 2.mp3" fadein 2
+    play music music.ck1.v11.Track_Scene_2 fadein 2
 
     pause 0.75
 
@@ -243,7 +243,7 @@ label v11_nora_chloe_hallway:
 
     u "If you're looking for a more mellow time then Lauren or Lindsey may be nice to talk to, but if you have a more wild side then getting to know Amber or Aubrey is probably right up your alley."
 
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         u "In terms of people to avoid, It's always best to avoid Grayson. *Laughs*"
 
     else:
@@ -819,7 +819,7 @@ label v11_nora_chloe_hallway:
                         pause 0.75
     stop music fadeout 3
 
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         jump v11_wolves_packing_chris
     else:
         jump v11_samantha_packing

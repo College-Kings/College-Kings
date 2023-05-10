@@ -4,7 +4,7 @@
 # Time: Saturday Night
 
 label v10_mc_vs_ryan_fight:
-    play music "music/v10/Track Scene 6.mp3" fadein 2
+    play music music.ck1.v10.Track_Scene_6 fadein 2
     
     if False:
         scene v10mvr1 # FPP. Show imre and chris near ring, imre excited look, mouth open chris mouth closed
@@ -61,7 +61,6 @@ label v10_mc_vs_ryan_fight:
 
     ry "You ready to do this?"
 
-    # TODO: Update ryan fight
     menu:
         "Fight Ryan":
             $ v10_ryan_fight = True
@@ -110,7 +109,7 @@ label v10_mc_vs_ryan_fight:
             label ryan_McAttack:
                 $ stance = 2 # Defence
 
-                show screen fight_overlay(stance="defend") # TODO: Update fight code
+                show screen fight_overlay(stance="defend")
 
                 # Ryan hook
                 if ryanAttack == 1:
@@ -258,7 +257,7 @@ label v10_mc_vs_ryan_fight:
 
             label ryan_McKickHit: # Ryan Kicks MC (Hits/No Block)
 
-                play sound "sounds/ks.mp3"
+                play sound sound.hit
                 $ youDamage += 1
                 scene Ryan_Kick_hit
                 with hpunch
@@ -271,7 +270,7 @@ label v10_mc_vs_ryan_fight:
 
             label ryan_McKickBlock: # Ryan Kicks MC (Blocked)
 
-                play sound "sounds/ks.mp3"
+                play sound sound.hit
                 scene Ryan_Kick_block
                 with hpunch
 
@@ -283,7 +282,7 @@ label v10_mc_vs_ryan_fight:
 
             label ryan_McJabHit: # Ryan Kicks MC (Hits/No Block)
 
-                play sound "sounds/js.mp3"
+                play sound sound.hit
                 $ youDamage += 1
                 scene Ryan_Jab_hit
                 with hpunch
@@ -298,7 +297,7 @@ label v10_mc_vs_ryan_fight:
 
             label ryan_McJabBlock: # Ryan Kicks MC (Hits/No Block)
 
-                play sound "sounds/bs.mp3"
+                play sound sound.hit
                 scene Ryan_Hook_block
                 with hpunch
 
@@ -310,7 +309,7 @@ label v10_mc_vs_ryan_fight:
 
             label ryan_McHookHit: # Ryan Kicks MC (Hits/No Block)
 
-                play sound "sounds/hs.mp3"
+                play sound sound.hit
                 $ youDamage += 1
                 scene Ryan_Hook_hit
                 with hpunch
@@ -325,7 +324,7 @@ label v10_mc_vs_ryan_fight:
 
             label ryan_McHookBlock: # Ryan Kicks MC (Hits/No Block)
 
-                play sound "sounds/bs.mp3"
+                play sound sound.hit
                 scene Ryan_Hook_block
                 with hpunch
 
@@ -337,7 +336,7 @@ label v10_mc_vs_ryan_fight:
 
             label ryan_McBodyhookHit: # Ryan Kicks MC (Hits/No Block)
 
-                play sound "sounds/hs.mp3"
+                play sound sound.hit
                 $ youDamage += 1
                 scene Ryan_BodyJab_hit
                 with hpunch
@@ -350,7 +349,7 @@ label v10_mc_vs_ryan_fight:
 
             label ryan_McBodyhookBlock: # Ryan Kicks MC (Hits/No Block)
 
-                play sound "sounds/bs.mp3"
+                play sound sound.hit
                 scene Ryan_BodyJab_block
                 with hpunch
 
@@ -415,7 +414,7 @@ label v10_mc_vs_ryan_fight:
             label ryan_fightEnd:
                 hide screen ryanFight_MCAttack
                 hide screen ryanFight_MCDefend
-                hide screen fight_overlay # TODO: Update fight code
+                hide screen fight_overlay
                 $ youDamage = 0
                 $ stance = 0
                 stop music fadeout 3

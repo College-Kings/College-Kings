@@ -61,7 +61,7 @@ label v9_hall_apol:
 
     unknown "Watch where you're fucking walking, bitch!"
 
-    play music "music/v9/Track Scene 12_1.mp3" fadein 2
+    play music music.ck1.v9.Track_Scene_12_1 fadein 2
 
     jump v9_hall_cont1
 
@@ -78,7 +78,7 @@ label v9_hall_calm:
 
     unknown "Fuck you!"
 
-    play music "music/v9/Track Scene 12_1.mp3" fadein 2
+    play music music.ck1.v9.Track_Scene_12_1 fadein 2
 
     jump v9_hall_cont1
 
@@ -178,7 +178,7 @@ label v9_hall_punch:
     scene v9hlw12 # FPP. Show Lindsey and another girl who are a distance away from the camera, Lindsey looking at camera (MC). Lindsey smile.
     with dissolve
 
-    play music "music/v9/Track Scene 12_2.mp3" fadein 2
+    play music music.ck1.v9.Track_Scene_12_2 fadein 2
 
     pause 1
 
@@ -263,7 +263,7 @@ label v9_hall_no_punch:
     scene v9hlw23 # TPP. Show MC now sat up against the wall with a bleeding nose, Lindsey kneeling infront of MC, Lindsey concerned, mouth open.
     with dissolve
 
-    play music "music/v9/Track Scene 12_2.mp3" fadein 2
+    play music music.ck1.v9.Track_Scene_12_2 fadein 2
 
     li "Are you okay?"
 

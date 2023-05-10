@@ -6,7 +6,7 @@
 label v11_sam_spa:
     scene v11sas1 # TPP. Show MC and Samantha walking in a corridor, both smiling, mouths closed
     with dissolve
-    play music "music/v10/Track Scene 41_2.mp3" fadein 2
+    play music music.ck1.v10.Track_Scene_41_2 fadein 2
     pause 1
 
     scene v11sas2 # TPP. Show MC and Sam walking into the spa, both smiling, mouths closed
@@ -803,7 +803,7 @@ label v11s28a_galleryScene:
     scene v11sas21 # TPP. Show Sam kissing MC on the cheek
     with dissolve
 
-    play sound "sounds/kiss.mp3"
+    play sound sound.kiss
 
     pause 1
 

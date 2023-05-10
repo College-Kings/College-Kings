@@ -10,9 +10,9 @@ label v10_fight_result:
     
     jo "*Laughs* In the words of Smokey, \"you got knocked the fuck out!\""
 
-    play music "music/v10/Track Scene 8.mp3" fadein 2
+    play music music.ck1.v10.Track_Scene_8 fadein 2
 
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         if v10_ryan_win: # -If MC wins the fight against Ryan-
             scene v10fr1
             with dissolve

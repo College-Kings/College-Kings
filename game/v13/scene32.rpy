@@ -4,7 +4,7 @@
 # Time: Night
 
 label v13s32:
-    play music "music/v13/Track Scene 32.mp3" fadein 2
+    play music music.v13_Track_Scene_32 fadein 2
 
     if not v13_lauren_smoke:
         scene v13s32_1 # TPP. Show MC, Lauren and Amber walking into the room, all slightly smiling, mouths closed
@@ -23,7 +23,7 @@ label v13s32:
         la "I'm not here for your games Amber, but I am going to bed. *Chuckles*"
 
         if CharacterService.is_girlfriend(lauren):
-            play sound "sounds/kiss.mp3"
+            play sound sound.kiss
             scene v13s32_4 # TPP. Show Lauren kissing MC
             with dissolve
 

@@ -18,7 +18,7 @@ label v8_ri_start:
     with dissolve
     ri "I'd rather show you instead."
 
-    play music "music/msexy.mp3" ###CHECK - Maybe add more sexy time music?
+    play music music.ck1.sexy ###CHECK - Maybe add more sexy time music?
 
     scene v8s26a # Riley's dress is off now. She's wearing a sexy red lingerie underneath and showing off her body, seductive expression and mouth closed
     with fade
@@ -240,7 +240,7 @@ label v8s3_rileyDoggy:
 
     $ renpy.end_replay()
 
-    play music "music/mlove.mp3" fadein 2
+    play music music.ck1.mlove fadein 2
 
     scene v8s33a # Same as v8s33 but Riley mouth closed
     with dissolve
@@ -258,7 +258,7 @@ label v8s3_rileyDoggy:
 
     scene v8s33_2 # TPP. Close up of MC and Riley kissing from top
     with dissolve
-    play sound "sounds/kiss.mp3"
+    play sound sound.kiss
     pause 0.5
 
     scene v8s33a
@@ -306,7 +306,7 @@ label v8s3_rileyDoggy:
 label v8s3_nsfwSkipLabel1:
     scene v8s33_2
     with dissolve
-    play sound "sounds/kiss.mp3"
+    play sound sound.kiss
     pause 0.5
 
     scene v8s32a # MC on his back and Riley leaning over on him and sleeping
@@ -392,7 +392,7 @@ label v8s3_nsfwSkipLabel1:
     with dissolve
     pause 0.5
 
-    play sound "sounds/kiss.mp3"
+    play sound sound.kiss
 
     scene v8s36a # Riley gives a quick peck on MC's lips
     with dissolve

@@ -4,9 +4,9 @@
 # Time: Night
 
 label v14s05a:
-    play music "music/v13/Track Scene 40_3.mp3" fadein 2
+    play music music.v13_Track_Scene_40_3 fadein 2
 
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
     pause 0.51
 
     scene v14s05a_1 # TPP. Show walking into his room, neutral expression, mouth closed
@@ -115,7 +115,7 @@ label v14s05a:
         scene v14s05a_11 # TPP. Closeup of Riley and MC kissing
         with dissolve
 
-        play sound "sounds/kiss.mp3"
+        play sound sound.kiss
         pause 0.75
 
         scene v14s05a_11a # TPP. Same postion as v14s05a_11, Riley slight smile, mouth closed, MC, slight smile, mouth closed

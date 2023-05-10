@@ -6,13 +6,13 @@
 label v11_bar_chloe_and_aubrey:
     scene v11caa1 # TPP. Show MC walking to the bar, mouth closed
     with fade
-    play music "music/v11/Track Scene 11.mp3" fadein 2
+    play music music.ck1.v11.Track_Scene_11 fadein 2
     pause 0.75
 
     scene v11caa2 # FPP. MC spots chloe and aubrey sitting at the bar holding beer, mouth closed
     with dissolve
 
-    play sound "sounds/swoosh.mp3"
+    play sound sound.swoosh
     pause 0.75
 
     show fantasyoverlay onlayer foreground
@@ -24,7 +24,7 @@ label v11_bar_chloe_and_aubrey:
     charli "First you thought I was being kind to the girls with a hidden agenda, but now that you know I'm gay you've lost the ability to connect those dots."
     charli "You can't comprehend being nice without an agenda, because you yourself aren't nice without an agenda."
 
-    play sound "sounds/swoosh.mp3"
+    play sound sound.swoosh
 
     pause 0.75
     hide fantasyoverlay onlayer foreground
@@ -171,7 +171,7 @@ label v11_bar_chloe_and_aubrey:
 
     cl "That's kinda what it sounds like."
 
-    play sound "sounds/call.mp3"
+    play sound sound.call
 
     scene v11caa10 # FPP. aubrey looks down at her pocket
     with dissolve

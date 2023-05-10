@@ -11,7 +11,7 @@ label v11_lauren_store:
     
     scene v11las1 # TPP. Lauren is in the lobby, she is looking at her phone, show MC sneaking up on her
     with fade
-    play music "music/v11/Track Scene 1_1.mp3" fadein 2
+    play music music.ck1.v11.Track_Scene_1_1 fadein 2
     pause 0.75
 
     scene v11las1a # TPP. Same cam as v11las1, MC is behind Lauren, he is smiling, mouth closed, his hands over her eyes, Lauren is surprised, mouth closed
@@ -1065,7 +1065,7 @@ label v11_quiz_bonus:
     la "I'm glad we won, but it feels even better knowing we beat that jerk."
 
     if CharacterService.is_girlfriend(lauren):
-        play sound "sounds/kiss.mp3"
+        play sound sound.kiss
         scene v11las33 # TPP. Show Lauren kissing MC, they're both still sitting down
         with dissolve
 
@@ -1268,7 +1268,7 @@ label v11_quiz_bonus:
     jud "I'd be happy to! Please, squish together a bit."
 
     if CharacterService.is_girlfriend(lauren):
-        play sound "sounds/kiss.mp3"
+        play sound sound.kiss
         scene v11las45 # TPP. Show MC and Lauren posing for a picture, Lauren has her arms wrapped around MC's neck and they're kissing
         with dissolve
 
@@ -1367,7 +1367,7 @@ label v11_quiz_bonus:
 
                 u "I love you too, Lauren."
 
-                play sound "sounds/kiss.mp3"
+                play sound sound.kiss
 
                 scene v11las46 # TPP. MC and Lauren passionately kissing
                 with dissolve
@@ -1391,7 +1391,7 @@ label v11_quiz_bonus:
     scene v11las44k # FPP. Same as v11las44d, Lauren slight smile, mouth open
     with dissolve
     stop music fadeout 3
-    play music "music/v11/Track Scene 17.mp3" fadein 2
+    play music music.ck1.v11.Track_Scene_17 fadein 2
     la "If it was my choice I'd spend all day with you exploring Hogwash, but I promised Riley I'd help her out with something, so I have to run."
 
     scene v11las44l # FPP. Same as v11las44k, Lauren slight smile, mouth closed
@@ -1425,7 +1425,7 @@ label v11_quiz_bonus:
 
         u "(She said she loved me.)"
         
-        play sound "sounds/vibrate.mp3"
+        play sound sound.vibrate
 
         u "(Probably our pictures.)"
 
@@ -1445,7 +1445,7 @@ label v11_quiz_bonus:
 
         u "(Wow, that was really nice.)"
 
-        play sound "sounds/vibrate.mp3"
+        play sound sound.vibrate
 
         u "(Probably our picture.)"
 

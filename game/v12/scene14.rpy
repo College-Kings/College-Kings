@@ -10,7 +10,7 @@ label v12_chloe_cafe:
 
     pause 0.75
 
-    play music "music/v12/Track Scene 14.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_14 fadein 2
 
     scene v12chc2 # TPP. Show MC and Chloe approaching their table, both smiling, mouths closed
     with dissolve
@@ -575,7 +575,7 @@ label v12_chloe_cafe:
     scene v12chc5c 
     with dissolve
 
-    play sound "sounds/vibrate.mp3"
+    play sound sound.vibrate
 
     u "Sorry, let me check this real quick."
 

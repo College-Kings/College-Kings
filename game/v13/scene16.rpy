@@ -9,7 +9,7 @@ label v13s16:
 
     pause 0.75
 
-    play music "music/v13/Track Scene 16.mp3" fadein 2
+    play music music.v13_Track_Scene_16 fadein 2
 
     scene v13s16_2 # TPP. Show MC entering Lauren's room, slight smile, mouth closed
     with dissolve
@@ -138,7 +138,7 @@ label v13s16:
 
             u "Of course I am, Lauren... I wouldn't be here if I wasn't, and you give me many reasons to be."
 
-            play sound "sounds/kiss.mp3"
+            play sound sound.kiss
             scene v13s16_8 # TPP. Show MC and Lauren kissing
             with dissolve
 
@@ -242,7 +242,7 @@ label v13s16:
             u "I love you too."
 
         "Kiss her head":
-            play sound "sounds/kiss.mp3"
+            play sound sound.kiss
             scene v13s16_9 # TPP. Show MC kissing Lauren's head, Lauren smiling, mouth closed
             with dissolve
 

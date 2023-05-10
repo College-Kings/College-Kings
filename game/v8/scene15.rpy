@@ -8,7 +8,7 @@ label penelope_dorm_hack:
     with Fade(0.75, 0.25, 0.75)
     pause 0.5
 
-    play sound "sounds/knock.mp3"
+    play sound sound.knock
 
     scene v8spen2 # TPP. Show MC knocking on Penelope's dorm door.
     with dissolve
@@ -19,7 +19,7 @@ label penelope_dorm_hack:
 
     pe "It's open!"
 
-    play music "music/msad.mp3" fadein 2
+    play music music.ck1.msad fadein 2
 
     scene v8spen3 # FPP. Now inside Penelope's dorm, show Penelope sitting on her bed, crying.
     with dissolve
@@ -147,7 +147,7 @@ label help_pen:
     with Dissolve(1)
     pause 0.5
  
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         jump mc_wolves_sun_aft
 
     else:
@@ -185,7 +185,7 @@ label no_help_pen:
     u "(Damn, I hope she'll be okay.)"
 
     # SCENE 16 #
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         jump mc_wolves_sun_aft
 
     else:

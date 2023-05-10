@@ -14,7 +14,7 @@ label v8_tues_eco_class:
 
     pause 0.5
 
-    play music "music/m16punk.mp3"
+    play music music.ck1.m16punk
 
     scene v8stec3 # FPP. Show Ms Rose stood at the front of the class, mouth open looking around at class, mouth open.
     with dissolve
@@ -85,7 +85,7 @@ label v8_tues_eco_class:
 
     u "Hey."
 
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         scene v8stec6a # FPP. Same camera as v8stec6, Ryan neutral expression, mouth open
         with dissolve
 
@@ -302,7 +302,7 @@ label tec_end_time:
 
     stop music fadeout 3
 
-    play sound "sounds/clock2.mp3"
+    play sound sound.clock2
     scene clocka
     with fade
     pause 0.5

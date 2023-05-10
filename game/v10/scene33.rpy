@@ -20,7 +20,7 @@ label v10_charity_freeroam:
     with fade
 
     u "(Now this is an event!)"
-    play music "music/v10/Track Scene 33.mp3" fadein 2
+    play music music.ck1.v10.Track_Scene_33 fadein 2
 
     jump v10s33_autumn1
 
@@ -247,7 +247,7 @@ label v10s33_deergirl11:
     with dissolve
     guyd "Only took me a thousand tries."
     
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         scene v10cfrdg12b # FPP. same 12, show perry looking at camera, mouth open
         with dissolve
 
@@ -419,7 +419,7 @@ label v10s33_deergirl11:
 
     dg1 "If you're interested in learning any more dances, you know where to find me."
 
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         menu:
             "Make fun of Perry":
                 scene v10cfrdg12c
@@ -814,7 +814,7 @@ label v10s33_deergirl11:
     scene v10cfrau4c
     with dissolve
 
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         u "*Blushes* Uhhh'"
 
         scene v10cfrau4b
@@ -1418,7 +1418,7 @@ label v10s33_deergirl21:
         scene v10cfrla2 #TPP showing Mc kissing Lauren over the table
         with dissolve
 
-        play sound "sounds/kiss.mp3"
+        play sound sound.kiss
 
         pause 0.5
 
@@ -3039,7 +3039,7 @@ label v10s33_riley2:
 
     label v10s33_chris1:
 
-    if not joinwolves:
+    if mc.frat == Frat.APES:
         if v10s33_toldChloe:
             scene fr6bagtossnonora
         else:

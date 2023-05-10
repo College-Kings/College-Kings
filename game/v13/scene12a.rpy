@@ -9,7 +9,7 @@ label v13s12a:
 
     pause 0.75
 
-    play music "music/v13/Track Scene 12a_1.mp3" fadein 2
+    play music music.ck1.v13.Track_Scene_12a_1 fadein 2
     
     scene v13s12a_2 # FPP. Aubrey standing in front of MC, looking at MC, slight smile, mouth open
     with dissolve
@@ -49,7 +49,7 @@ label v13s12a:
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v13/Track Scene 12a_2.mp3" fadein 2
+    play music music.ck1.v13.Track_Scene_12a_2 fadein 2
 
     scene v13s12a_4 # TPP. Show MC and Aubrey walking on sidewalk, both slight smiles, mouths closed
     with fade
@@ -69,7 +69,7 @@ label v13s12a:
     pause
     
     stop music fadeout 3
-    play music "music/v13/Track Scene 12a_3.mp3" fadein 2
+    play music music.ck1.v13.Track_Scene_12a_3 fadein 2
 
     scene v13s12a_6 # TPP. MC and Aubrey in front of the stage (play with angles so that no other people have to be shown). MC and Aubrey looking at each other, both smiling, Aubrey mouth open, MC mouth closed (Camera is behind them as to show their shoulders and head) (Polly NOT on stage)
     with dissolve
@@ -107,7 +107,7 @@ label v13s12a:
     au "Haha, luckily we got a front row spot. We won't have a problem-"
 
     stop music fadeout 3
-    play music "music/v13/Track Scene 12a_4.mp3" fadein 2
+    play music music.ck1.v13.Track_Scene_12a_4 fadein 2
 
     scene v13s12a_7 # TPP. Show Polly on stage, holding mic to her mouth, mouth open, smiling, looking at the crowd
     with dissolve
@@ -284,7 +284,7 @@ label v13s12a:
     au "People are gonna be so jealous of these!"
 
     stop music fadeout 3
-    play music "music/v13/Track Scene 12a_5.mp3" fadein 2
+    play music music.ck1.v13.Track_Scene_12a_5 fadein 2
 
     scene v13s12a_7b # TPP. Same as v13s12a_7, Polly looking down to where Aubrey would be, slightly annoyed, mouth open
     with dissolve
@@ -324,7 +324,7 @@ label v13s12a:
             polly "LET'S GET THE SHOW BACK ON!"
 
             stop music fadeout 3
-            play music "music/v13/Track Scene 12a_6.mp3" fadein 2
+            play music music.ck1.v13.Track_Scene_12a_6 fadein 2
 
             scene v13s12a_7a
             with dissolve
@@ -343,7 +343,7 @@ label v13s12a:
 
             scene v13s12a_6o # TPP. Same as v13s12a_6j, Aubrey kissed MC in the lips
             with dissolve
-            play sound "sounds/kiss.mp3"
+            play sound sound.kiss
 
             pause 1.25
 
@@ -384,7 +384,7 @@ label v13s12a:
             polly "You guys have been an amazing crowd! And to my two hotshots up here, I'll see you guys backstage... GOODNIGHT!"
 
             stop music fadeout 3
-            play music "music/v13/Track Scene 12a_7.mp3" fadein 2
+            play music music.ck1.v13.Track_Scene_12a_7 fadein 2
 
             scene v13s12a_6a
             with dissolve
@@ -402,7 +402,7 @@ label v13s12a:
             u "Haha, alright!"
 
             stop music fadeout 3
-            play music "music/v13/Track Scene 12a_8.mp3" fadein 2
+            play music music.ck1.v13.Track_Scene_12a_8 fadein 2
 
             scene v13s12a_8 # TPP. MC and Aubrey walking into the backstage area, both smiling, mouths closed
             with fade
@@ -432,7 +432,7 @@ label v13s12a:
             polly "NOW, LET'S GET THE SHOW BACK ON!"
 
             stop music fadeout 3
-            play music "music/v13/Track Scene 12a_6.mp3" fadein 2
+            play music music.ck1.v13.Track_Scene_12a_6 fadein 2
 
             scene v13s12a_7a
             with dissolve
@@ -470,7 +470,7 @@ label v13s12a:
                 au "*Sighs* If you say so... Even if she is a bitch... I'd still like to meet her. *Laughs*"
                 
                 stop music fadeout 3
-                play music "music/v13/Track Scene 12a_8.mp3" fadein 2
+                play music music.ck1.v13.Track_Scene_12a_8 fadein 2
                 
                 scene v13s12a_8
                 with fade
@@ -491,7 +491,7 @@ label v13s12a:
                 u "*Sighs* Not the night I expected either... OKAY, LET'S GO."
 
                 stop music fadeout 3
-                play music "music/v13/Track Scene 12a_2.mp3" fadein 2
+                play music music.ck1.v13.Track_Scene_12a_2 fadein 2
 
                 scene v13s12a_10 # TPP. Show MC and Aubrey leaving the concert venue, both slightly sad, mouths closed
                 with dissolve
@@ -512,7 +512,7 @@ label v13s12a:
                 with dissolve
 
                 stop music fadeout 3
-                play music "music/v13/Track Scene 12a_1.mp3" fadein 2
+                play music music.ck1.v13.Track_Scene_12a_1 fadein 2
 
                 au "Well... Tonight definitely isn't a night that I'll be forgetting anytime soon."
 
@@ -528,7 +528,7 @@ label v13s12a:
 
                 scene v13s12a_14 # TPP. Aubrey kissing MC on the cheek
                 with dissolve
-                play sound "sounds/kiss.mp3"
+                play sound sound.kiss
 
                 pause 1.25
 

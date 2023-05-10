@@ -4,12 +4,12 @@
 # Time: Day
 
 label v11_chloe_hotel_room_amber_call:
-    play music "music/v10/Track Scene 40_2.mp3" fadein 2
+    play music music.ck1.v10.Track_Scene_40_2 fadein 2
     if CharacterService.is_mad(chloe) and not v11_riley_roomate:
         scene v11hrc1 # TPP. MC is inside his hotel room, next to the door, mouth closed
         with fade
         
-        play sound "sounds/call.mp3"
+        play sound sound.call
 
         u "(I literally just got to my room, who could be calling me?)"
 
@@ -148,7 +148,7 @@ label v11_chloe_hotel_room_amber_call:
     pause 0.75
     
     stop music fadeout 3
-    play music "music/v10/Track Scene 15.mp3" fadein 2
+    play music music.ck1.v10.Track_Scene_15 fadein 2
 
     scene v11hrc8 # TPP. Chloe is shaking mc, waking him up
     with fade
@@ -211,7 +211,7 @@ label v11_chloe_hotel_room_amber_call:
 
         u "I am too. *Chuckles*"
 
-        play sound "sounds/knock.mp3"
+        play sound sound.knock
 
         pause 0.5
 
@@ -244,7 +244,7 @@ label v11_chloe_hotel_room_amber_call:
         scene v11hrc11e # FPP. MC kisses chloe
         with dissolve
 
-        play sound "sounds/kiss.mp3"
+        play sound sound.kiss
 
         pause 0.75
 
@@ -268,7 +268,7 @@ label v11_chloe_hotel_room_amber_call:
 
         u "I was thinking maybe we could-"
 
-        play sound "sounds/knock.mp3"
+        play sound sound.knock
 
         pause 0.5
 
@@ -346,7 +346,7 @@ label v11_chloe_hotel_room_amber_call:
         scene v11hrc19a # FPP MC kisses chloe's forehead, mouth closed
         with dissolve
 
-        play sound "sounds/kiss.mp3"
+        play sound sound.kiss
 
         pause 0.75
 
@@ -395,7 +395,7 @@ label v11_chloe_hotel_room_amber_call:
         scene v11ris7a # TPP. Same cam as v11ris7, MC is startled, mouth closed, still sitting down, looking at the door to the hallway direction (day)
         with vpunch
 
-        play sound "sounds/fall.mp3"
+        play sound sound.fall
 
         pause 0.75
 

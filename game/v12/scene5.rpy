@@ -4,7 +4,7 @@
 # Time: Morning
 
 label v12_morning_london:
-    play music "music/v12/Track Scene 5.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_5 fadein 2
 
     if not v11_riley_roomate:
         if CharacterService.is_fwb(chloe) or CharacterService.is_girlfriend(chloe):
@@ -198,7 +198,7 @@ label v12_morning_london:
     scene v12mol9 # TPP. Show the door to the hallway
     with dissolve
 
-    play sound "sounds/knock.mp3"
+    play sound sound.knock
 
     pause 1.25
     
@@ -268,7 +268,7 @@ label v12_morning_london:
             scene v12mol15 # TPP. Show MC giving Chloe a kiss, MC holding his bag
             with dissolve
 
-            play sound "sounds/kiss.mp3"
+            play sound sound.kiss
 
             pause
         

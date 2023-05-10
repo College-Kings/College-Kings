@@ -4,13 +4,13 @@
 # Time: Night
 # Phone Images: None
 
-label v12_ms_rose_sex: #can only get here if joinwolves
+label v12_ms_rose_sex: #can only get here if mc.frat == Frat.WOLVES
     scene v12msr1 # TPP. Show MC walking out of Riley's room into the hallway, slight smile, mouth closed
     with dissolve
 
     pause 0.75
 
-    play music "music/v12/Track Scene 23_1.mp3" fadein 2
+    play music music.v12_Track_Scene_23_1 fadein 2
 
     scene v12msr2 # FPP. MC and Ms. Rose in the hallway, MC and Ms. Rose looking at each other, Ms. Rose slight smile, mouth open
     with dissolve
@@ -125,7 +125,7 @@ label v12_ms_rose_sex: #can only get here if joinwolves
                 pause 0.75
 
                 stop music fadeout 3
-                play music "music/v12/Track Scene 23_2.mp3" fadein 2
+                play music music.v12_Track_Scene_23_2 fadein 2
 
                 scene v12msr10 # FPP. MC and Ms. Rose in living room, looking at each other, Ms. Rose slight smile, mouth closed
                 with dissolve
@@ -444,25 +444,25 @@ label v12_ms_rose_sex: #can only get here if joinwolves
                 u "I'm feeling... really..."
 
                 stop music fadeout 3
-                play music "music/v12/Track Scene 23_3.mp3" fadein 2
+                play music music.ck1.v12.Track_Scene_23_3 fadein 2
 
                 label v12s23_nsfwSkipLabel1:
 
                 scene black
                 with dissolve
 
-                play sound "sounds/dooropen.mp3"
+                play sound sound.door_open
 
                 pause
 
                 scene black
                 with dissolve
 
-                play music "sounds/driving1.mp3" fadein 2
+                play ambience ambience.driving fadein 2
 
                 pause
 
-                stop music fadeout 3
+                stop ambience fadeout 3
 
                 if not v11_riley_roomate:
                     scene v12msr29 # TPP. Chloe in front of MC and Ms. Rose, MC very drunk, Ms. Rose helping him stand up. Show Chloe looking at them, Chloe worried, mouth open (Only Chloe in shot)

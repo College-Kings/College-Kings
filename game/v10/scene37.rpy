@@ -4,7 +4,7 @@ label v10_riley_vs_amber:
 
     ri "Oh wow, you're kinda strong."
 
-    play music "music/v10/Track Scene 37.mp3" fadein 2
+    play music music.ck1.v10.Track_Scene_37 fadein 2
 
     am "Kinda?"
 

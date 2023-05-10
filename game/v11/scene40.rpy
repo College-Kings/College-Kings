@@ -6,7 +6,7 @@
 label v11_carriage_ride:
     scene v11car1 # FPP. MC standing in the lobby next to the other students (Charli leaning on the wall, Imre, Lindsey, out of shot), looking at Mr Lee in front of the counter, Mr Lee slight smile, mouth open
     with dissolve
-    play music "music/v10/Track Scene 10.mp3" fadein 2
+    play music music.ck1.v10.Track_Scene_10 fadein 2
     lee "Settle down, everyone... If you haven't yet heard from your fellow students or myself, we have a planned event tonight. An event that I certainly will enjoy, and I believe you all will as well..."
 
     scene v11car2 # FPP. Same positioning as v11car1, MC looking at Imre, Imre looking at Mr Lee's direction, Imre slight grin, mouth open
@@ -757,7 +757,7 @@ label v11_carriage_ride:
     with dissolve
 
     pause 0.75
-    play sound "sounds/fall.mp3"
+    play sound sound.fall
 
     scene v11car18 # TPP. Show Nora and Chloe on the ground, both angry, mouths closed
     with vpunch

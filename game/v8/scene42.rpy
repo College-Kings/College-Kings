@@ -9,8 +9,8 @@ label gray_in_room:
 
     u "(What the?!)"
 
-    play music "music/m15punk.mp3"
-    queue music ["music/m16punk.mp3", "music/m7punk.mp3"]
+    play music music.ck1.punk15
+    queue music [music.ck1.m16punk, music.ck1.m7punk]
 
     scene v8sgir2 # FPP. Show Grayson barging through MC's door, slight intimidating expression, Grayson mouth open.
     with dissolve

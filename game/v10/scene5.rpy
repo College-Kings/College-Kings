@@ -4,7 +4,7 @@
 # Time: Saturday Night
 
 label v10_imre_vs_caleb_fight:
-    play music "music/v10/Track Scene 4.mp3" fadein 2
+    play music music.ck1.v10.Track_Scene_4 fadein 2
     scene v10ivc3b # TPP. Show Josh in the ring strolling around as if he's adressing a crowd, mouth open.
     with fade
 
@@ -47,14 +47,14 @@ label v10_imre_vs_caleb_fight:
     scene v10ivc9a # TPP. Same as ivc9, show Imre, returning from his dodge with a punch square to Caleb's jaw, Caleb in pain, begins to fall.
     with hpunch
 
-    play sound "sounds/hs.mp3"
+    play sound sound.hit
 
     pause 0.75
 
     scene v10ivc9b # TPP. Same as ivc9, Caleb now knocked out on the floor, Imre stood over him with a saractic smile.
     with dissolve
 
-    play sound "sounds/fall.mp3"
+    play sound sound.fall
 
     pause 1
 

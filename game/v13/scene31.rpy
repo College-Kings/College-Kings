@@ -9,7 +9,7 @@ label v13s31:
    
     am "Hello, our friend here is having a negative reaction to marijuana... It was her first time and I-"
 
-    play music "music/v13/Track Scene 31.mp3" fadein 2
+    play music music.ck1.v13.Track_Scene_31 fadein 2
 
     scene v13s31_2 # TPP. Show Amber looking at nurse, serious expression, mouth closed, MC looing at nurse, serious expression, mouth closed, nurse looking at amber, neutral look, mouth open
     with dissolve

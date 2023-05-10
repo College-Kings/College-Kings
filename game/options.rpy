@@ -180,6 +180,7 @@ init python:
     build.classify('**/#**', None)
     build.classify('**/thumbs.db', None)
     build.classify("README.md", None)
+    build.classify("**/ck2/**", None)
 
     ## To archive files, classify them as 'archive'.
 

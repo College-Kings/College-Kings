@@ -9,7 +9,7 @@ label v13s48:
 
     pause 0.75
 
-    play music "music/v13/Track Scene 48.mp3" fadein 2
+    play music music.v13_Track_Scene_48 fadein 2
 
     scene v13s48_2 # FPP. MC looking at Aubrey, Aubrey looking at MC, Slight smile, mouth closed.
     with dissolve
@@ -698,7 +698,7 @@ label v13s48:
     u "Oooh, now I'm excited. *Chuckles*"
 
     if v10s33_ryan_flirt_emily and emily_europe:
-        play sound "sounds/vibrate.mp3"
+        play sound sound.vibrate
 
         scene v13s48_8
         with dissolve

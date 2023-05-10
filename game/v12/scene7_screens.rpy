@@ -489,23 +489,38 @@ screen v12s7_bow():
 screen v12s7_left_walkway_front():
     tag free_roam
 
-    imagemap:
-        if v11_pen_goes_europe and penelope not in v12s7_killList:
-            idle "images/v12/Scene 7/Screens/Navigation 12a.webp" # Penelope
-        else:
-            idle "images/v12/Scene 7/Screens/Navigation 12b.webp"
-        hover "images/v12/Scene 7/Buttons/nav 12.webp"
-
-        if v11_pen_goes_europe and penelope not in v12s7_killList:
-            hotspot (223, 326, 752, 656):
-                if "penelope" in freeroam9:
-                    action Call("v12s7_free_roam_spoken", backgroundImg="v12ferpen1", returnScreen="v12s7_left_walkway_front", seenList=[], victim=penelope)
-                else:
-                    action Jump("v12s7_penelope1") #penelope
+    if v11_pen_goes_europe and penelope not in v12s7_killList:
+        add "v12s7_left_walkway_front_background_a" # Penelope
+    else:
+        add "v12s7_left_walkway_front_background_b"
         
-        hotspot (1003, 288, 251, 492) action Show("v12s7_foyer")
-        hotspot (1693, 73, 140, 787) action Show("v12s7_rear_gallery")
-        hotspot (353, 984, 1158, 96) action Show("v12s7_left_walkway_middle")
+    if v11_pen_goes_europe and penelope not in v12s7_killList:
+        imagebutton:
+            idle "v12s7_left_walkway_front_penelope_idle"
+            hover "v12s7_left_walkway_front_penelope_hover"
+            pos (223, 327)
+            if "penelope" in freeroam9:
+                action Call("v12s7_free_roam_spoken", backgroundImg="v12ferpen1", returnScreen="v12s7_left_walkway_front", seenList=[], victim=penelope)
+            else:
+                action Jump("v12s7_penelope1") #penelope
+    
+    imagebutton:
+        idle "v12s7_left_walkway_front_door_idle"
+        hover "v12s7_left_walkway_front_door_hover"
+        action Show("v12s7_foyer")
+        pos (1002, 286)
+
+    imagebutton:
+        idle "v12s7_left_walkway_front_right_idle"
+        hover "v12s7_left_walkway_front_right_hover"
+        action Show("v12s7_rear_gallery")
+        pos (1711, 73)
+        
+    imagebutton:
+        idle "free_roam_vertical_transparent"
+        hover "free_roam_bottom"
+        action Show("v12s7_left_walkway_middle")
+        align (0.5, 1.0)
 
     use v12s7_minimap(location="ld_left_walkway")
 
@@ -956,28 +971,30 @@ screen v12s7_balcony_middle():
         timer 0.1 action Show(renpy.random.choice(("v12s7_balcony_left", "v12s7_balcony_right", "v12s7_front_gallery")))
 
 
-
 screen v12s7_balcony_left():
     tag free_roam
-
-    imagemap:
-        if nora in v12s7_killList:
-            idle "images/v12/Scene 7/Screens/Navigation 21b.webp" # No one
-            hover "images/v12/Scene 7/Buttons/nav 21b.webp"
-        else:
-            idle "images/v12/Scene 7/Screens/Navigation 21a.webp" # Nora
-            hover "images/v12/Scene 7/Buttons/nav 21.webp"
-
-        if nora not in v12s7_killList:
-            hotspot (507, 152, 282, 926):
-                if "nora" in freeroam9:
-                    action Call("v12s7_free_roam_spoken", backgroundImg="v12fernor1", returnScreen="v12s7_balcony_left", seenList=[] if v12s7_aubrey_moved else [riley], victim=nora)
-                else:
-                    action Jump("v12s7_nora1") # Nora
-            hotspot (850, 1000, 1070, 80) action Show("v12s7_balcony_middle")
-        else:
-            hotspot (339, 983, 1198, 97) action Show("v12s7_balcony_middle")
     
+    if nora in v12s7_killList:
+        add "v12s7_balcony_left_background_a" # No one
+    else:
+        add "v12s7_balcony_left_background_b" # Nora
+
+    if nora not in v12s7_killList:
+        imagebutton:
+            idle "v12s7_balcony_left_nora_idle"
+            hover "v12s7_balcony_left_nora_hover"
+            if "nora" in freeroam9:
+                action Call("v12s7_free_roam_spoken", backgroundImg="v12fernor1", returnScreen="v12s7_balcony_left", seenList=[] if v12s7_aubrey_moved else [riley], victim=nora)
+            else:
+                action Jump("v12s7_nora1") # Nora
+            pos (493, 137)
+    
+    imagebutton:
+        idle "free_roam_vertical_transparent"
+        hover "free_roam_bottom"
+        action Show("v12s7_balcony_middle")
+        align (0.5, 1.0)
+
     use v12s7_minimap(location="md_balcony")
 
     on "replaced" action SetVariable("previous_location", "v12s7_balcony_left")

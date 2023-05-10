@@ -10,7 +10,7 @@ label v12_escape_room:
 
     au "It's about time you guys got here."
 
-    play music "music/v12/Track Scene 17_1.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_17_1 fadein 2
 
     scene v12esr2 # FPP. Same positioning as v12esr1, MC looking at Imre, Imre looking at Aubrey, Imre slight smile, mouth open
     with dissolve
@@ -123,7 +123,7 @@ label v12_escape_room:
     escman "*Dry Tone* Welcome to Escape, do you have a reservation?"
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 17_2.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_17_2 fadein 2
 
     scene v12esr7 # FPP. Same positioning as v12esr6, MC looking at Lindsey, Lindsey looking at Escape Manager, Lindsey slight smile, mouth open
     with dissolve
@@ -286,7 +286,7 @@ label v12_escape_room:
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 17_3.mp3" fadein 2
+    play music music.v12_Track_Scene_17_3 fadein 2
 
     scene v12esr12 # FPP. Same positioning as v12esr11, MC looking at Charli, Charli looking at Escape Manager, Charli uncomfortable, mouth open
     with dissolve
@@ -338,7 +338,7 @@ label v12_escape_room:
 
     au "*Chuckles*"
 
-    play sound "sounds/vibrate.mp3"
+    play sound sound.vibrate
     scene v12esr14b # FPP. Same as v12esr14, Lindsey looking at Imre, Lindsey slight smile, mouth open
     with dissolve
 
@@ -384,7 +384,7 @@ label v12_escape_room:
 
     li "Nope, not yet."
 
-    play sound "sounds/vibrate.mp3"
+    play sound sound.vibrate
 
     scene v12esr14c
     with dissolve
@@ -416,7 +416,7 @@ label v12_escape_room:
 
     charli "I wonder if she responds directly to us or if she has a prepared response. Like if I said, \"just so you know, my name is Charli\", would she know my name is Charli?"
 
-    play sound "sounds/vibrate.mp3"
+    play sound sound.vibrate
     scene v12esr14d
     with dissolve
 
@@ -437,7 +437,7 @@ label v12_escape_room:
 
     charli "Well, that proves that they respond directly to us rather than automated responses. I assume it's the guy at the front."
 
-    play sound "sounds/vibrate.mp3"
+    play sound sound.vibrate
     scene v12esr14c
     with dissolve
 
@@ -482,7 +482,7 @@ label v12_escape_room:
 
     unknown "Three."
 
-    play sound "sounds/lever.mp3"
+    play sound sound.lever
     scene v12esr17d # FPP. Same as v12esr17c, Imre, Aubrey and Charli outside, door closed, all slightly surprised, mouths closed
     with vpunch
 
@@ -503,7 +503,7 @@ label v12_escape_room:
 
     charli "*Sighs*"
 
-    play sound "sounds/vibrate.mp3"
+    play sound sound.vibrate
 
     li "Just got another message. It says, \"tell your friends 'bye' because you won't see them for a while. Go into the room across the hall to find out how to help them.\""
 
@@ -557,7 +557,7 @@ label v12_escape_room:
 
     pause 0.75
 
-    play sound "sounds/vibrate.mp3"
+    play sound sound.vibrate
     scene v12esr18b # FPP. Same as v12esr18, Charli looking down at Lindsey's phone, slightly annoyed, mouth open
     with dissolve
 
@@ -588,7 +588,7 @@ label v12_escape_room:
 
     charli "Just forward the messages to us."
 
-    play sound "sounds/vibrate.mp3"
+    play sound sound.vibrate
 
     scene v12esr18
     with dissolve
@@ -764,7 +764,7 @@ label v12_escape_room:
 
     imre "I don't care if his fucking non-existent balls freeze off, I'm not touchin- *inaudible*."
 
-    play music "sounds/driving1.mp3"
+    play ambience ambience.driving
 
     scene v12esr29 # FPP. Same positioning as v12esr28, MC and Lindsey looking at each other, Lindsey slightly worried, mouth open
     with dissolve
@@ -796,8 +796,8 @@ label v12_escape_room:
 
     u "That we do..."
 
-    stop music fadeout 3
-    play music "music/v12/Track Scene 17_4.mp3" fadein 2
+    stop ambience fadeout 3
+    play music music.ck1.v12.Track_Scene_17_4 fadein 2
 
     if CharacterService.is_girlfriend(chloe):
         scene v12esr29
@@ -890,7 +890,7 @@ label v12_lindsey_kiss_or_not:
             scene v12esr30 # TPP. Show MC and Lindsey kissing
             with dissolve
 
-            play sound "sounds/kiss.mp3"
+            play sound sound.kiss
 
             pause 1.5
 
@@ -1257,9 +1257,9 @@ label v12_after_sex:
     unknown "We're having some sort of technical difficulties with the electric... So, you'll be- Or, I mean, your teacher will be refunded. Sorry. Thanks."
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 17_5.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_17_5 fadein 2
 
-    play sound "sounds/lever.mp3"
+    play sound sound.lever
 
     scene v12esr17i # FPP. Same as v12esr17, lights dim
     with dissolve
@@ -1306,7 +1306,7 @@ label v12_after_sex:
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 17_6.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_17_6 fadein 2
 
     scene v12esr48 # FPP. MC and Lindsey in the viewing room, MC looking at Lindsey, Lindsey looking at MC, Lindsey slight smile, mouth closed
     with dissolve
@@ -1444,7 +1444,7 @@ label v12_after_sex:
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 17_2.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_17_2 fadein 2
 
     scene v12esr54 # FPP. Same positioning as v12esr53, MC looking at Lindsey, Lindsey looking at Aubrey, Lindsey worried, mouth open
     with dissolve
@@ -1517,7 +1517,7 @@ label v12_after_sex:
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 17_7.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_17_7 fadein 2
 
     scene v12esr61 # FPP. MC looking at Aubrey, outside the escape room building, Aubrey looking at MC, Aubrey slight smile, mouth open
     with dissolve

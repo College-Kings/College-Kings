@@ -3,7 +3,7 @@
 # Characters: MC (Outfit 7),Josh (Outfit 2),Imre (Outfit 2),Imre (Outfit 4),Grayson (Outfit 3)
 # Time: Saturday Night
 label v10_mc_vs_imre_fight:
-    play music "music/v10/Track Scene 6.mp3" fadein 2
+    play music music.ck1.v10.Track_Scene_6 fadein 2
     scene v10mvi1 # FPP. Show imre and grayson near ring, Imre Mouth open Grayson mouth closed
     with dissolve
     ry "Hey man real quick. I'm not saying I think you would, but I know you and Imre are friends and have been close since you started college..."
@@ -50,7 +50,6 @@ label v10_mc_vs_imre_fight:
 
     imre "Ready to get your ass kicked?"
 
-    # TODO: Update Imre fight
     menu:
         "Fight Imre":
             $ v10_imre_fight = True
@@ -100,7 +99,7 @@ label v10_mc_vs_imre_fight:
             label imre_McAttack:
                 $ stance = 2 # Defence
 
-                show screen fight_overlay(stance="defend") # TODO: Update fight code
+                show screen fight_overlay(stance="defend")
 
                 # Imre hook
                 if imreAttack == 1:
@@ -248,7 +247,7 @@ label v10_mc_vs_imre_fight:
 
             label imre_McKickHit: # Imre Kicks MC (Hits/No Block)
 
-                play sound "sounds/ks.mp3"
+                play sound sound.hit
                 $ youDamage += 1
                 scene Imre_Kick_hit
                 with hpunch
@@ -261,7 +260,7 @@ label v10_mc_vs_imre_fight:
 
             label imre_McKickBlock: # Imre Kicks MC (Blocked)
 
-                play sound "sounds/ks.mp3"
+                play sound sound.hit
                 scene Imre_Kick_block
                 with hpunch
 
@@ -273,7 +272,7 @@ label v10_mc_vs_imre_fight:
 
             label imre_McJabHit: # Imre Kicks MC (Hits/No Block)
 
-                play sound "sounds/js.mp3"
+                play sound sound.hit
                 $ youDamage += 1
                 scene Imre_Jab_hit
                 with hpunch
@@ -288,7 +287,7 @@ label v10_mc_vs_imre_fight:
 
             label imre_McJabBlock: # Imre Kicks MC (Hits/No Block)
 
-                play sound "sounds/bs.mp3"
+                play sound sound.hit
                 scene Imre_Hook_block
                 with hpunch
 
@@ -300,7 +299,7 @@ label v10_mc_vs_imre_fight:
 
             label imre_McHookHit: # Imre Kicks MC (Hits/No Block)
 
-                play sound "sounds/hs.mp3"
+                play sound sound.hit
                 $ youDamage += 1
                 scene Imre_Hook_hit
                 with hpunch
@@ -315,7 +314,7 @@ label v10_mc_vs_imre_fight:
 
             label imre_McHookBlock: # Imre Kicks MC (Hits/No Block)
 
-                play sound "sounds/bs.mp3"
+                play sound sound.hit
                 scene Imre_Hook_block
                 with hpunch
 
@@ -327,7 +326,7 @@ label v10_mc_vs_imre_fight:
 
             label imre_McBodyhookHit: # Imre Kicks MC (Hits/No Block)
 
-                play sound "sounds/hs.mp3"
+                play sound sound.hit
                 $ youDamage += 1
                 scene Imre_BodyJab_hit
                 with hpunch
@@ -340,7 +339,7 @@ label v10_mc_vs_imre_fight:
 
             label imre_McBodyhookBlock: # Imre Kicks MC (Hits/No Block)
 
-                play sound "sounds/bs.mp3"
+                play sound sound.hit
                 scene Imre_BodyJab_block
                 with hpunch
 
@@ -405,7 +404,7 @@ label v10_mc_vs_imre_fight:
             label imre_fightEnd:
                 hide screen imreFight_MCAttack
                 hide screen imreFight_MCDefend
-                hide screen fight_overlay # TODO: Update fight code
+                hide screen fight_overlay
                 $ youDamage = 0
                 $ stance = 0
                 stop music fadeout 3

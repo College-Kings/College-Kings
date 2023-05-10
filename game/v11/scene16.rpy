@@ -4,7 +4,7 @@
 # Time: around 3am sunday morning (dark outside)
 
 label v11_lauren_airport_convo:
-    play music "music/v11/Track Scene 16.mp3" fadein 2
+    play music music.v11_Track_Scene_16 fadein 2
     if v11_lauren_caught_aubrey:
         scene v11laac1 # TPP. Show Lauren standing in the airport, looking at her phone, she is very angry, mouth closed, MC is in the background looking at her, walking towards her direction (he is relatively far away), MC mouth closed, worried expression (make sure diff location in airport to v11noac1)
         with fade
@@ -320,7 +320,7 @@ label v11_lauren_airport_convo:
 
         la "*Whisper* I'll show you soon."
 
-        play sound "sounds/kiss.mp3"
+        play sound sound.kiss
 
         scene v11laac4 # TPP. Same positioning as v11laac2, but Lauren is kissing MC on the cheek, MC is slightly surprised, mouth closed
         with dissolve

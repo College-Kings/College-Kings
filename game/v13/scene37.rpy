@@ -9,7 +9,7 @@ label v13s37:
 
     pause 0.75
 
-    play music "music/v13/Track Scene 37_1.mp3" fadein 2
+    play music music.ck1.v13.Track_Scene_37_1 fadein 2
 
     scene v13s37_2 # FPP. Same positioning as v13s37_1, MC looking at Lindsey, Lindsey looking at Chris' direction (Only Lindsey in shot), Lindsey slight smile, mouth open
     with dissolve
@@ -110,7 +110,7 @@ label v13s37:
     ch "Let's go enjoy ourselves, people."
 
     stop music fadeout 3
-    play music "music/v13/Track Scene 37_2.mp3" fadein 2
+    play music music.ck1.v13.Track_Scene_37_2 fadein 2
     call screen v13s37_garden1
 
 label v13s37_nora:
@@ -212,7 +212,7 @@ label v13s37_nora:
 
     no "Not yet... You may someday, but I'm talking about my family. Specifically my stepmom."
 
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         scene v13s37no_2d
         with dissolve
 
@@ -352,7 +352,7 @@ label v13s37_nora:
 
         menu:
             "Kiss her forehead":
-                play sound "sounds/kiss.mp3"
+                play sound sound.kiss
                 scene v13s37no_7 # TPP. Show MC kissing Nora's forehead, Nora slight smile, mouth closed
                 with dissolve
 
@@ -371,7 +371,7 @@ label v13s37_nora:
             "Kiss her lips":
                 $ v13_imre_disloyal = True
 
-                play sound "sounds/kiss.mp3"
+                play sound sound.kiss
                 scene v13s37no_8 # TPP. MC and Nora kissing
                 with dissolve
 

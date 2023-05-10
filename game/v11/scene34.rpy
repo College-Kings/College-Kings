@@ -8,7 +8,7 @@ label v11_cardealership:
 
     scene v11cd1 # TPP. Shows MC and Chloe getting into the car dealership
     with fade
-    play music "music/v11/Track Scene 3.mp3" fadein 2
+    play music music.ck1.v11.Track_Scene_3 fadein 2
     pause 0.75
 
     scene v11cd2 # TPP. MC is looking for a car salesman, spotting one, him looking back at them
@@ -110,7 +110,7 @@ label v11_cardealership:
     scene v11cd8 # TPP. Shows the car arriving at the front door
     with dissolve
 
-    play sound "sounds/carbrake.mp3"
+    play sound sound.car_brake
 
     pause 1.75
 
@@ -179,7 +179,7 @@ label v11_cardealership:
 
     u "Thank you."
     stop music fadeout 3
-    play music "music/v10/Track Scene 13.mp3" fadein 2
+    play music music.ck1.v10.Track_Scene_13 fadein 2
     scene v11cd15 # TPP. MC and chloe getting into the car
     with dissolve
 
@@ -233,7 +233,7 @@ label v11_cardealership:
 
     pause 0.75
 
-    play sound "sounds/revving.mp3"
+    play sound sound.revving
 
     scene v11cd52 # TPP. Show's the car pulling away from the front of the store
     with dissolve
@@ -243,7 +243,7 @@ label v11_cardealership:
     scene v11cd20 # TPP. MC and chloe inside the car, smiling, looking forwards in london steets location a (artist decides location)
     with dissolve
 
-    play sound "sounds/driving1.mp3"
+    play ambience ambience.driving
 
     pause 0.75
     
@@ -416,7 +416,7 @@ label v11_cardealership:
                 scene v11cd32 # TPP. Mc kisses chloe romantically on the hood of the car
                 with dissolve
 
-                play sound "sounds/kiss.mp3"
+                play sound sound.kiss
 
                 pause 0.75
 
@@ -438,7 +438,7 @@ label v11_cardealership:
                         scene v11cd33c # FPP. Chloe looks back at mc, mouth closed
                         with dissolve
                         stop music fadeout 3
-                        play music "music/v10/Track Scene 11.mp3" fadein 2
+                        play music music.ck1.v10.Track_Scene_11 fadein 2
                         u "Chloe, I've been captured by you since the moment I first saw you. Every day I think about you and hope that we can be together at all times."
                         u "I don't know what I'd do if one day you were just... gone. The truth is... I love you, Chloe, and I don't want to go another day without you being mine."
                         u "So with all that said, can we make it official? Will you be my girl?"
@@ -459,7 +459,7 @@ label v11_cardealership:
                             scene v11cd35 # TPP. MC picks up chloe with her legs wrapped arround him and kisses her romantically
                             with dissolve
 
-                            play sound "sounds/kiss.mp3"
+                            play sound sound.kiss
 
                             if CharacterService.is_girlfriend(lauren) and not v11_lauren_caught_aubrey:
                                 $ grant_achievement("two_timer")
@@ -474,7 +474,7 @@ label v11_cardealership:
 
                             u "Wow... c'mon, let's get this car back."
 
-                            play sound "sounds/driving1.mp3"
+                            play ambience ambience.driving
 
                             scene v11cd28 # TPP. MC and chloe inside the car, smiling, looking forwards in london steets location d
                             with dissolve
@@ -509,7 +509,7 @@ label v11_cardealership:
                             scene v11cd38 # FPP. Chloe kisses MC
                             with dissolve
 
-                            play sound "sounds/kiss.mp3"
+                            play sound sound.kiss
 
                             pause 1.25
 
@@ -518,7 +518,7 @@ label v11_cardealership:
 
                             u "C'mon, let's get this car back."
 
-                            play sound "sounds/driving1.mp3"
+                            play ambience ambience.driving
 
                             scene v11cd28 # TPP. MC and chloe inside the car, smiling, looking forwards in london steets location d
                             with dissolve
@@ -536,7 +536,7 @@ label v11_cardealership:
 
                         u "C'mon, let's get this car back."
 
-                        play sound "sounds/driving1.mp3"
+                        play ambience ambience.driving
 
                         scene v11cd28 # TPP. MC and chloe inside the car, smiling, looking forwards in london steets location d
                         with dissolve
@@ -596,7 +596,7 @@ label v11_cardealership:
                 scene v11cd26 # FPP. Chloe gets in the car, mc is in the passanger door looking through glass, mouth opened
                 with dissolve
 
-                play sound "sounds/revving.mp3"
+                play sound sound.revving
 
                 cl "If you don't hurry, I will leave you."
 
@@ -610,7 +610,7 @@ label v11_cardealership:
 
                 pause 0.75
 
-                play sound "sounds/driving1.mp3"
+                play ambience ambience.driving
 
                 scene v11cd28 # TPP. MC and chloe inside the car, smiling, looking forwards in london steets location d
                 with dissolve
@@ -668,7 +668,7 @@ label v11_cardealership:
         scene v11cd26 # FPP. Chloe gets in the car, mc is in the passanger door looking through glass, mouth opened
         with dissolve
 
-        play sound "sounds/revving.mp3"
+        play sound sound.revving
 
         cl "If you don't hurry, I will leave you."
 
@@ -682,7 +682,7 @@ label v11_cardealership:
 
         pause 1
 
-        play sound "sounds/driving1.mp3"
+        play ambience ambience.driving
 
         scene v11cd28 # TPP. MC and chloe inside the car, smiling, looking forwards in london steets location d
         with dissolve
@@ -728,7 +728,7 @@ label v11_cardealership:
 
     csa "So, will you two be purchasing the car?"
 
-    play sound "sounds/call.mp3"
+    play sound sound.call
 
     scene v11cd41 # FPP. now looking at chloe, mouth opened
     with dissolve

@@ -9,7 +9,7 @@ label v13s46:
 
     pause 0.75
 
-    play music "music/v13/Track Scene 46_1.mp3" fadein 2
+    play music music.v13_Track_Scene_46_1 fadein 2
 
     scene v13s46_2 # FPP. Show lauren riding her bike on MC's right side, slight smile, mouth closed, forest background
     with dissolve
@@ -151,7 +151,7 @@ label v13s46:
     la "*Whispers* Shhh! Slow down! Stop here..."
 
     stop music fadeout 3
-    play music "music/v13/Track Scene 46_2.mp3" fadein 2
+    play music music.ck1.v13.Track_Scene_46_2 fadein 2
 
     scene v13s46_4b # FPP. same as v13s46_4 Lauren looks off into the background and then her face shows shock
     with dissolve
@@ -376,7 +376,7 @@ label v13s46:
     la "*Whispers* [name], stop! For real, stop..."
 
     stop music fadeout 3
-    play music "music/v13/Track Scene 46_3.mp3" fadein 2
+    play music music.ck1.v13.Track_Scene_46_3 fadein 2
 
     scene v13s46_2c # FPP. same as v13s46_2b MC stops his bike, and gets off his bike
     with dissolve
@@ -466,7 +466,7 @@ label v13s46:
 
             pause 0.75
 
-            play sound "sounds/twig.mp3"
+            play sound sound.twig
             scene v13s46_16 # FPP. show just laurens foot stepping on a branch
             with dissolve
 

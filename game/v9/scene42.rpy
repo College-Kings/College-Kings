@@ -4,11 +4,11 @@
 # Time: Saturday Night
 
 label v9_at_warehouse:
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         scene v9aaw1 # FPP. Show Sebastian removing the blindfold being removed from Camera, blurry image (As if adjusting to the light).
         with fade
         
-        play music "music/v9/Track Scene 42.mp3" fadein 2
+        play music music.ck1.v9.Track_Scene_42 fadein 2
 
         pause 1
 
@@ -148,7 +148,7 @@ label v9_at_warehouse:
             u "(Oh, God what if they boo me when I get in the ring?)"
 
             show glitch
-            play sound "sounds/glitch.mp3"
+            play sound sound.glitch
             pause 0.1
             hide glitch
 
@@ -158,7 +158,7 @@ label v9_at_warehouse:
 
                 pause 1
 
-                play sound "sounds/fall.mp3"
+                play sound sound.fall
 
                 scene v9dream12b # IGNORE THIS
                 with hpunch
@@ -171,7 +171,7 @@ label v9_at_warehouse:
 
                 pause 1
 
-                play sound "sounds/fall.mp3"
+                play sound sound.fall
 
                 scene v9dream14b # IGNORE THIS
                 with hpunch
@@ -179,7 +179,7 @@ label v9_at_warehouse:
                 pause 1
             
             show glitch
-            play sound "sounds/glitch.mp3"
+            play sound sound.glitch
             pause 0.1
             hide glitch
 
@@ -239,7 +239,7 @@ label v9_at_warehouse:
         scene v9aaw8 # FPP. Show Cameron removing the blindfold being removed from Camera, blurry image (As if adjusting to the light).
         with fade
 
-        play music "music/v9/Track Scene 42.mp3" fadein 2
+        play music music.ck1.v9.Track_Scene_42 fadein 2
 
         pause 1
 

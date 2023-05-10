@@ -9,7 +9,7 @@ label v13s10:
 
     pause 0.75
 
-    play music "music/v13/Track Scene 10.mp3" fadein 2
+    play music music.v13_Track_Scene_10 fadein 2
 
     scene v13s10_2 # FPP Chloe walking away while Ryan walks toward MC
     with dissolve
@@ -125,7 +125,7 @@ label v13s10:
 
             u "Who's buzzing me?"
 
-            play sound "sounds/vibrate.mp3"
+            play sound sound.vibrate
 
             $ MessengerService.new_message(aubrey, "Still getting ready, meet you in about an hour? We still have plenty of time.")
             $ MessengerService.add_reply(aubrey, "Haha, OK ")
@@ -142,7 +142,7 @@ label v13s10:
 
             u "Who's buzzing me?"
 
-            play sound "sounds/vibrate.mp3"
+            play sound sound.vibrate
 
             $ MessengerService.new_message(penelope, "Trying to finish some things for Ms. Rose, give me about an hour?")
             $ MessengerService.add_reply(penelope, "No worries, we have time.")

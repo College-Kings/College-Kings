@@ -5,7 +5,7 @@ label starta: #for compatibility only
 
     show fantasyoverlay onlayer foreground
 
-    play music "music/msexy.mp3"
+    play music music.ck1.sexy
     
     scene s0a
     with dissolve
@@ -30,7 +30,7 @@ label starta: #for compatibility only
     scene s1b
     with dissolve
 
-    play music "music/m15punk.mp3"
+    play music music.ck1.punk15
 
     if not config_debug:
         $ mc.username = name = renpy.input(_("What's your name?"), default=name).strip() or _("Alex")
@@ -128,7 +128,7 @@ label starta: #for compatibility only
     
     u "(I better not lose this bag, Julia loves it.)"
 
-    play sound "sounds/vibrate.mp3"
+    play sound sound.vibrate
 
     u "(Huh?)"
     
@@ -161,7 +161,7 @@ label starta: #for compatibility only
     scene carback
     show s14
     with fade
-    play music "sounds/driving1.mp3"
+    play ambience ambience.driving
 
     ju "You know, when I was in college, there were these fraternities and sororities that everyone wanted to join."
 
@@ -267,7 +267,7 @@ label starta: #for compatibility only
 
     u "(I wonder if he's still dealing...)"
 
-    stop music fadeout 3
+    stop ambience fadeout 3
 
     car "*stops*"
 
@@ -289,11 +289,11 @@ label starta: #for compatibility only
     scene s17
     with dissolve
 
-    play music "music/mfunk.mp3"
+    play music music.ck1.mfunk
 
     ju "Don't worry, I'll get it for you, honey."
 
-    play sound "sounds/trunkopen.mp3"
+    play sound sound.trunk_open
 
     scene s18
     with dissolve
@@ -349,7 +349,7 @@ label starta: #for compatibility only
     scene s29
     with dissolve
 
-    play music "music/m3punk.mp3"
+    play music music.ck1.m3punk
 
     ca "Yo, watch where you're fucking walking, bitch!"
 
@@ -387,7 +387,7 @@ label starta: #for compatibility only
     scene s33a
     with dissolve
 
-    play music "music/mlove1.mp3"
+    play music music.ck1.mlove1
 
     u "Yeah...thanks."
 
@@ -468,7 +468,7 @@ label starta: #for compatibility only
     scene s41
     with dissolve  #Rose annoyed bend over laptop
 
-    play music "music/m6punk.mp3"
+    play music music.ck1.m6punk
 
     ro "It's fine, just take a seat."
 
@@ -625,7 +625,7 @@ label starta: #for compatibility only
     scene clocka
     with fade
 
-    play sound "sounds/clock2.mp3"
+    play sound sound.clock2
 
     pause 0.5
 
@@ -650,7 +650,7 @@ label starta: #for compatibility only
     scene s48
     with fade # ryan standing up
 
-    play music "music/mchill1.mp3"
+    play music music.ck1.mchill1
 
     ry "[name], give me your number and I'll hit you up for the Apes' rush party tomorrow."
 
@@ -858,7 +858,7 @@ label starta: #for compatibility only
 
     u "(I should probably go to my new dorm, but I might as well explore for a bit beforehand.)"
 
-    play music "music/mchill2.mp3"
+    play music music.ck1.mchill2
 
     scene s50 # freeroam
     with dissolve
@@ -873,7 +873,7 @@ label starta: #for compatibility only
             Reply(_("Thanks, Julia :)"), v1_reply4)
         )
 
-    play sound "sounds/vibrate.mp3"
+    play sound sound.vibrate
     
     call screen v1_freeRoam1_1
     with dissolve
@@ -1134,7 +1134,7 @@ label starta: #for compatibility only
 
         scene s55ch3
         with dissolve
-        play sound "sounds/kiss.mp3"
+        play sound sound.kiss
         " "
 
         scene s55ch4
@@ -1210,7 +1210,7 @@ label starta: #for compatibility only
 
         scene adamaubrey36
         stop music fadeout 3
-        play music "music/msexy.mp3"
+        play music music.ck1.sexy
         show adam1
 
         au "Ohhh shit, that feels good!"
@@ -1238,12 +1238,12 @@ label efra:
     pause 0.75
     
     stop music fadeout 3
-    play sound "sounds/knock.mp3"
+    play sound sound.knock
     
     scene s60
     with dissolve
 
-    play music "music/m16punk.mp3"
+    play music music.ck1.m16punk
 
     imre "Yooo, what's up my man?"
 
@@ -1506,12 +1506,12 @@ label efra:
     with Fade(1, 0, 1)
     stop music fadeout 3
 
-    play sound "sounds/knock.mp3"
+    play sound sound.knock
     pause 0.75
 
     scene s66
     with dissolve
-    play music "music/mparty.mp3"
+    play music music.ck1.mparty
     imre "I think the ladies are here!"
 
     scene s67
@@ -1567,7 +1567,7 @@ label efra:
 
     u "Yeah, she should be here any minute."
 
-    play sound "sounds/knock.mp3"
+    play sound sound.knock
 
     scene s68a
     with dissolve
@@ -1776,7 +1776,7 @@ label efra:
     scene s75a
     with hpunch
 
-    play sound "sounds/slap.mp3"
+    play sound sound.slap
     pause 1.5
 
     scene s75b
@@ -1920,7 +1920,7 @@ label efra:
     ### Late night talk with Imre.
     scene s80
     with Fade(1, 0, 1)
-    play music "music/msad.mp3"
+    play music music.ck1.msad
 
     imre "Man, I can't wait to bang this Riley chick."
 
@@ -2088,7 +2088,7 @@ label at_bd:
 
     u "Probably not for a few hours yet."
 
-    play music "music/msexy.mp3"
+    play music music.ck1.sexy
 
     if not _in_replay:
         if not is_censored:
@@ -2239,7 +2239,7 @@ label at_bd:
             with dissolve
 
             pause 0.3
-            play sound "sounds/slap.mp3"
+            play sound sound.slap
             scene sda60a
             with vpunch
 
@@ -2249,7 +2249,7 @@ label at_bd:
             with dissolve
 
             pause 0.3
-            play sound "sounds/slap.mp3"
+            play sound sound.slap
             scene sda60a
             with vpunch
 
@@ -2259,7 +2259,7 @@ label at_bd:
             with dissolve
 
             pause 0.3
-            play sound "sounds/slap.mp3"
+            play sound sound.slap
             scene sda60a
             with vpunch
 
@@ -2321,7 +2321,7 @@ label v1_nsfwSkipLabel1:
 
         u "*Yawn*"
 
-        play music "music/mfunk.mp3"
+        play music music.ck1.mfunk
 
         u "(That was the most amazing dream of my life.)"
         u "(I wish I could sleep some more, but I gotta get to class.)"
@@ -2357,7 +2357,7 @@ label v1_nsfwSkipLabel1:
 
         u "*Yawn*"
 
-        play music "music/mfunk.mp3"
+        play music music.ck1.mfunk
 
         u "(What a weird dream...)"
 
@@ -2414,7 +2414,7 @@ label v1_nsfwSkipLabel1:
 
     ro "Today, we're gonna learn about-"
 
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
 
     scene s85 ###Lauren comes in, her roomates a dick so she wants to stay with you whenever Imre's gone."
     with dissolve
@@ -2428,7 +2428,7 @@ label v1_nsfwSkipLabel1:
     ro "Just sit down, so that we can get started on the material."
     #####clock video
     stop music fadeout 3
-    play sound "sounds/clock2.mp3"
+    play sound sound.clock2
     scene clocka
     with fade
 
@@ -2459,7 +2459,7 @@ label v1_nsfwSkipLabel1:
 
     ry "This class is so damn boring..."
 
-    play music "music/m11punk.mp3"
+    play music music.ck1.m11punk
     scene s86a
     with dissolve
 
@@ -2537,8 +2537,8 @@ label v1_nsfwSkipLabel1:
     scene s88
     with Fade (1,0,1)
 
-    play music "music/mlove1.mp3"
-    play sound "sounds/park.mp3"
+    play music music.ck1.mlove1
+    play sound sound.park
 
     la "This park is really nice. I've never been here before."
 
@@ -2860,7 +2860,7 @@ label aw_bd:
 
                 scene s90
                 with dissolve # kiss
-                play sound "sounds/kiss.mp3"
+                play sound sound.kiss
                 $ grant_achievement("romeo")
 
                 pause
@@ -2924,7 +2924,7 @@ label aw_bd:
     scene s93a
     with dissolve
 
-    play music "music/msad.mp3"
+    play music music.ck1.msad
 
     u "For the last time, it wasn't a date."
 
@@ -2937,7 +2937,7 @@ label aw_bd:
     with dissolve
 
     u "Right, glad you enjoyed them."
-    play sound "sounds/impactbed.mp3"
+    play sound sound.impact_bed
     scene s95 # you falling onto bed
     with vpunch
 
@@ -3010,7 +3010,7 @@ label aw_bd:
     u "I guess..."
 
     stop music fadeout 3
-    play sound "sounds/vibrate.mp3"
+    play sound sound.vibrate
 
     $ MessengerService.new_message(ryan, _("Hey man, it's Ryan.\nThe Apes' rush party is tonight at 9. You're coming, right???"))
     $ MessengerService.add_reply(ryan, _("Alright, but I'll only stay for a few hours."))
@@ -3024,7 +3024,7 @@ label aw_bd:
         if MessengerService.has_replies(ryan):
             u "(I should really check who texted me.)"
 
-    play music "music/m3punk.mp3"
+    play music music.ck1.m3punk
 
     scene s96c
     with dissolve    
@@ -3060,7 +3060,7 @@ label aw_bd:
 
     u "(Holy shit, their house is huge. I guess someone here has rich parents.)"
 
-    play music "music/muffledparty.mp3"
+    play music music.ck1.muffledparty
 
     u "(Looks like Ryan's right there as well, waiting for me.)"
 
@@ -3179,8 +3179,8 @@ label v1_freeRoam2_sam2:
 label v1_freeRoam2_door:
     $ freeroam2.add("door")
     
-    play music "music/mparty2.mp3"
-    queue music [ "music/mparty3.mp3", "music/mparty4.mp3" ]
+    play music music.ck1.mparty2
+    queue music [music.ck1.mparty3, music.ck1.mparty4]
     
     scene s103
     #with dissolve
@@ -3569,7 +3569,7 @@ label v1_freeRoam2_camp:
 
     else:
         if MessengerService.find_message(lauren, _("Hey :)\nSorry about today.\n\nCan we talk tomorrow?")):
-            play sound "sounds/vibrate.mp3"
+            play sound sound.vibrate
 
             python:
                 v1_reply6 = MessageBuilder(lauren)
@@ -3907,7 +3907,7 @@ label fr2end: #for compatibility only
 
     u "Ryan?"
 
-    play music "music/mlove.mp3"
+    play music music.ck1.mlove
     scene s108
     with dissolve
 
@@ -4097,7 +4097,7 @@ label fr2end: #for compatibility only
 
     cl "So you're a first year, huh? Are you excited to get into the college lifestyle?"
 
-    play music "music/mlove2.mp3"
+    play music music.ck1.mlove2
     scene s114a
     with dissolve
 
@@ -4247,7 +4247,7 @@ label fr2end: #for compatibility only
     with dissolve
 
     u "Uhh... yeah, let's go."
-    play music "music/mparty2.mp3"
+    play music music.ck1.mparty2
     scene s118 # looking from behind main room at l and chloe
     with fade
 

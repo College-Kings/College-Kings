@@ -3,7 +3,7 @@
 # Characters: Ms. Rose(Outfit 1), MC (Outfit 3), Chris(Outfit 2), Imre(Outfit 1), Finn(Outfit 3), 
 # Time: Friday Afternoon
 label v9_dinner_w_rose:
-    play music "music/v9/Track Scene 23.mp3" fadein 2
+    play music music.ck1.v9.Track_Scene_23 fadein 2
 
     scene v9damr1 # FPP. Fade in at Ms. Rose's house
     with fade

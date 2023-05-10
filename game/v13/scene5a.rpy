@@ -9,7 +9,7 @@ label v13s5a:
 
     pause 1
 
-    play music "music/v13/Track Scene 5.mp3" fadein 2
+    play music music.v13_Track_Scene_5 fadein 2
 
     scene v13s5a_2 # TPP. Show MC and Riley walking into the hotel room, carrying their luggage, Riley slightly smiling, mouth closed, MC slight smile, mouth closed
     with dissolve

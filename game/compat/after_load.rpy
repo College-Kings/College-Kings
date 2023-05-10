@@ -30,39 +30,50 @@ python early:
         "setup.rpy",
     )
 
-    restart_game = False # NEVER CHANGE
+    restart_game = False  # NEVER CHANGE
+    rpy_files = set()
+    
+    if config.developer:
+        for file in renpy.list_files().copy():
+            if file in old_files:
+                restart_game = True
+                os.remove(os.path.join(config.gamedir, file))
 
-    for rpy_file in old_files:
-        rpyc_file = rpy_file + "c"
+            if file.endswith(".rpy") or file.endswith("_ren.py"):
+                rpy_files.add(file)
 
-        rpy_file_path = os.path.join(config.basedir, "game", *rpy_file.split("/"))
-        rpyc_file_path = os.path.join(config.basedir, "game", *rpyc_file.split("/"))
-
-        if renpy.loadable(rpy_file):
-            restart_game = True
-            os.remove(rpy_file_path)
-        if renpy.loadable(rpyc_file):
-            restart_game = True
-            os.remove(rpyc_file_path)
+        for file in renpy.list_files().copy():
+            if file.endswith(".rpyc") and not (file.replace(".rpyc", ".rpy") in rpy_files or file.replace(".rpyc", "_ren.py") in rpy_files):
+                restart_game = True
+                os.remove(os.path.join(config.gamedir, file))
 
     if restart_game:
-        try:
-            import subprocess
-            subprocess.call([os.path.join(config.basedir, "CollegeKings.exe")])
-            renpy.quit()
-        except OSError:
-            raise Exception("Deleting old files please RESTART GAME.")
+        renpy.quit(True)
+
 
 label after_load:
+    stop music
+    stop ambience
+    stop sound
+
     python:
         npcs = (aaron, adam, amber, aryssa, aubrey, autumn, beth, buyer, caleb, cameron, candy, charli, chloe, chris, dean, elijah, emily, emmy, evelyn, grayson, imre, iris, jenny, josh, julia, kai, kim, kourtney, lauren, lews_official, lindsey, mason, mr_lee, ms_rose, naomi, nora, parker, penelope, polly, riley, ryan, samantha, satin, sebastian, tom, trainer, wolf)
 
-        mc.profile_pictures = CharacterService.get_profile_pictures(mc.name)
+        mc.name = name
+        if not mc.username:
+            mc.username = name
+        mc.profile_pictures = CharacterService.get_profile_pictures("mc")
+
+        ms_rose.name = "Ms Rose"
+        mr_lee.name = "Mr Lee"
 
         for npc in npcs:
             npc.profile_pictures = CharacterService.get_profile_pictures(npc.name)
 
-        if isinstance(_version, str) or _version < (1, 3, 0):
+        if isinstance(_version, str) or _version < config.version:
+            if isinstance(mc.relationships, set):
+                mc.relationships = {}
+
             #region NonPlayableCharacters
             try:
                 if elijah._relationship == Relationship.MAKEFUN:
@@ -86,19 +97,35 @@ label after_load:
                 npc.pending_simplr_messages = []
                 npc.simplr_messages = []
 
+                npc.relationships = {}
+
                 try:
-                    if character._relationship == Relationship.MAD:
-                        CharacterService.set_mood(character, Moods.MAD)
+                    if npc._relationship == Relationship.MAD:
+                        CharacterService.set_mood(npc, Moods.MAD)
+                        CharacterService.set_relationship(npc, Relationship.FRIEND)
                 except AttributeError: pass
 
-                npc.relationships = {}
-                
                 try:
-                    npc.relationships["mc"] = npc._relationship
+                    CharacterService.set_relationship(npc, npc._relationship)
                     del npc._relationship
                 except AttributeError: pass
             #endregion NonPlayableCharacters
             
+            #region PlayableCharacter
+            try:
+                if joinwolves:
+                    mc.frat = Frat.WOLVES
+                else:
+                    mc.frat = Frat.APES
+            except NameError: mc.frat = None
+
+            try: mc.profile_picture
+            except AttributeError: mc.profile_picture = mc.profile_pictures[0]
+
+            if not mc.profile_picture:
+                mc.profile_picture = mc.profile_pictures[0]
+            #endregion PlayableCharacter
+
             #region Messenger    
             old_messenger_contacts = messenger.contacts.copy()
             for contact in old_messenger_contacts:
@@ -110,13 +137,17 @@ label after_load:
                     else:
                         npc.text_messages.append(Message(npc, message.content))
 
-            messenger.contacts = list(contact.user for contact in old_messenger_contacts)    
+            try:
+                messenger.contacts = list(contact.user for contact in old_messenger_contacts)
+            except AttributeError: pass
             #endregion Messenger
 
             #region Kiwii
             for post in kiwii_posts:
+                kiwii_post = KiwiiService.new_post(post.user, post.image, post.message, post.number_likes, post.mentions)
+
                 for comment in post.sent_comments:
-                    comment.replies = comment._replies
+                    KiwiiService.new_comment(kiwii_post, comment.user, comment.message, comment.number_likes, comment.mentions)
             #endregion Kiwii
 
 
@@ -124,7 +155,7 @@ label after_load:
         preferences.transitions = 2
 
         ## PLAYABLE CHARACTERS
-        if isinstance(mc, FightCharacter) or isinstance(mc, MainCharacter):
+        if not isinstance(mc, PlayableCharacter):
             mc = PlayableCharacter()
 
         try: mc.username
@@ -161,18 +192,6 @@ label after_load:
             del contacts
         except NameError: pass
 
-        # Transfer kiwiiApp to kiwii
-        try:
-            kiwii = kiwiiApp
-            kiwii.home_screen = "kiwiiApp"
-            kiwii.locked = kiwiiApp.locked
-            kiwii.contacts = []
-            del kiwiiApp
-        except NameError: pass
-            
-        if not isinstance(kiwii, Application):
-            kiwii = Application("kiwii")
-
         for app in phone.applications:
             app.home_screen = "{}_home".format(app.name.lower())
 
@@ -181,206 +200,6 @@ label after_load:
         kiwii.home_screen = "{}_home".format(kiwii.name.lower())
         simplr_app.home_screen = "{}_home".format(simplr_app.name.lower())
         relationship_app.home_screen = "{}_home".format(relationship_app.name.lower())        
-
-        ### KIWII
-        #### KIWII POSTS
-        try: v11s1_kiwiiPost.img = "images/phone/kiwii/posts/v11/v11_autumn_kiwii.webp"
-        except NameError: pass
-        try: v11s19_kiwiiPost1.img = "images/phone/kiwii/posts/v11/v11_chloemcselfie.webp"
-        except NameError: pass
-        try: v11s19_kiwiiPost2.img = "images/phone/kiwii/posts/v11/v11_chloemcselfie.webp"
-        except NameError: pass
-        try: v11s19_kiwiiPost3.img = "images/phone/kiwii/posts/v11/v11_rileymcselfie.webp"
-        except NameError: pass
-        try: v11s24_kiwiiPost1.img = "images/phone/kiwii/posts/v11/v11_caleb.webp"
-        except NameError: pass
-        try: v11s24_kiwiiPost2.img = "images/phone/kiwii/posts/v11/v11_imrebunny.webp"
-        except NameError: pass
-        try: v11s38_kiwiiPost1.img = "images/phone/kiwii/posts/v11/v11s38_amber_kiwii.webp"
-        except NameError: pass
-        try: v11s9a_kiwiiPost1.img = "images/phone/kiwii/posts/v11/sebnaked.webp"
-        except NameError: pass
-        try: v11s9a_kiwiiPost2.img = "images/phone/kiwii/posts/v11/sebnaked.webp"
-        except NameError: pass
-        try: v13s49_kiwiiPost1.img = "images/phone/kiwii/posts/v13/aubrey_beach.webp"
-        except NameError: pass
-
-        try:
-            kiwii_posts = kiwiiPosts
-            del kiwiiPosts
-        except NameError: pass
-
-        for kiwii_post in kiwii_posts:
-            if kiwii_post.user == "Aaron": kiwii_post.user = aaron
-            if kiwii_post.user == "Amber": kiwii_post.user = amber
-            if kiwii_post.user == "Aubrey": kiwii_post.user = aubrey
-            if kiwii_post.user == "Autumn": kiwii_post.user = autumn
-            if kiwii_post.user == "Caleb": kiwii_post.user = caleb
-            if kiwii_post.user == "Cameron": kiwii_post.user = cameron
-            if kiwii_post.user == "Charli": kiwii_post.user = charli
-            if kiwii_post.user == "Chloe": kiwii_post.user = chloe
-            if kiwii_post.user == "Chris": kiwii_post.user = chris
-            if kiwii_post.user == "Elijah": kiwii_post.user = elijah
-            if kiwii_post.user == "Emily": kiwii_post.user = emily
-            if kiwii_post.user == "Grayson": kiwii_post.user = grayson
-            if kiwii_post.user == "Imre": kiwii_post.user = imre
-            if kiwii_post.user == "Josh": kiwii_post.user = josh
-            if kiwii_post.user == "Lauren": kiwii_post.user = lauren
-            if kiwii_post.user == "LewsOfficial": kiwii_post.user = lews_official
-            if kiwii_post.user == "Lindsey": kiwii_post.user = lindsey
-            if kiwii_post.user == "Mason": kiwii_post.user = mason
-            if kiwii_post.user == "MC": kiwii_post.user = mc
-            if kiwii_post.user == "Naomi": kiwii_post.user = naomi
-            if kiwii_post.user == "Nora": kiwii_post.user = nora
-            if kiwii_post.user == "Parker": kiwii_post.user = parker
-            if kiwii_post.user == "Penelope": kiwii_post.user = penelope
-            if kiwii_post.user == "Riley": kiwii_post.user = riley
-            if kiwii_post.user == "Ryan": kiwii_post.user = ryan
-            if kiwii_post.user == "Samantha": kiwii_post.user = samantha
-            if kiwii_post.user == "Sebastian": kiwii_post.user = sebastian
-
-            for mention in kiwii_post.mentions:
-                temp_mentions = []
-                if mention == "Aaron": temp_mentions.append(aaron)
-                if mention == "Amber": temp_mentions.append(amber)
-                if mention == "Aubrey": temp_mentions.append(aubrey)
-                if mention == "Autumn": temp_mentions.append(autumn)
-                if mention == "Caleb": temp_mentions.append(caleb)
-                if mention == "Cameron": temp_mentions.append(cameron)
-                if mention == "Charli": temp_mentions.append(charli)
-                if mention == "Chloe": temp_mentions.append(chloe)
-                if mention == "Chris": temp_mentions.append(chris)
-                if mention == "Elijah": temp_mentions.append(elijah)
-                if mention == "Emily": temp_mentions.append(emily)
-                if mention == "Grayson": temp_mentions.append(grayson)
-                if mention == "Imre": temp_mentions.append(imre)
-                if mention == "Josh": temp_mentions.append(josh)
-                if mention == "Lauren": temp_mentions.append(lauren)
-                if mention == "LewsOfficial": temp_mentions.append(lews_official)
-                if mention == "Lindsey": temp_mentions.append(lindsey)
-                if mention == "Mason": temp_mentions.append(mason)
-                if mention == "MC": temp_mentions.append(mc)
-                if mention == "Naomi": temp_mentions.append(naomi)
-                if mention == "Nora": temp_mentions.append(nora)
-                if mention == "Parker": temp_mentions.append(parker)
-                if mention == "Penelope": temp_mentions.append(penelope)
-                if mention == "Riley": temp_mentions.append(riley)
-                if mention == "Ryan": temp_mentions.append(ryan)
-                if mention == "Samantha": temp_mentions.append(samantha)
-                if mention == "Sebastian": temp_mentions.append(sebastian)
-                kiwii_post.mentions = temp_mentions
-
-            try: kiwii_post.number_likes
-            except AttributeError: kiwii_post.number_likes = kiwii_post.numberLikes
-
-            try:
-                kiwii_post.image = kiwii_post.img
-                del kiwii_post.img
-            except AttributeError: pass
-
-            try:
-                kiwii_post.message = kiwii_post.caption
-                del kiwii_post.caption
-            except AttributeError: pass
-
-            try: del kiwii_post.profilePicture
-            except AttributeError: pass
-
-            try:
-                kiwii_post.sentComments = kiwii_post.comments
-                del kiwii_post.comments
-            except AttributeError: pass
-
-            try:
-                kiwii_post.sent_comments = kiwii_post.sentComments
-                del kiwii_post.sentComments
-            except AttributeError: pass
-
-            try: kiwii_post.pendingComments
-            except AttributeError: kiwii_post.pendingComments = []
-
-            try: kiwii_post.pending_comments
-            except AttributeError: kiwii_post.pending_comments = kiwii_post.pendingComments
-
-            if kiwii_post.image == "images/aupost1.png":
-                kiwii_post.image = "images/phone/kiwii/Posts/v7/aupost1.webp"
-            if kiwii_post.image == "images/chpost1.png":
-                kiwii_post.image = "images/phone/kiwii/Posts/v7/chpost1.webp"
-            if kiwii_post.image == "images/clpost1.png":
-                kiwii_post.image = "images/phone/kiwii/Posts/v7/clpost1.webp"
-            if kiwii_post.image == "images/empost1.png":
-                kiwii_post.image = "images/phone/kiwii/Posts/v7/empost1.webp"
-            if kiwii_post.image == "images/lapost1.png":
-                kiwii_post.image = "images/phone/kiwii/Posts/v7/lapost1.webp"
-
-            ##### KIWII SENT COMMENTS
-            for comment in kiwii_post.sent_comments + kiwii_post.pending_comments:
-                if comment.user == "Aaron": comment.user = aaron
-                if comment.user == "Amber": comment.user = amber
-                if comment.user == "Aubrey": comment.user = aubrey
-                if comment.user == "Autumn": comment.user = autumn
-                if comment.user == "Caleb": comment.user = caleb
-                if comment.user == "Cameron": comment.user = cameron
-                if comment.user == "Charli": comment.user = charli
-                if comment.user == "Chloe": comment.user = chloe
-                if comment.user == "Chris": comment.user = chris
-                if comment.user == "Elijah": comment.user = elijah
-                if comment.user == "Emily": comment.user = emily
-                if comment.user == "Grayson": comment.user = grayson
-                if comment.user == "Josh": comment.user = josh
-                if comment.user == "Imre": comment.user = imre
-                if comment.user == "Lauren": comment.user = lauren
-                if comment.user == "LewsOfficial": comment.user = lews_official
-                if comment.user == "Lindsey": comment.user = lindsey
-                if comment.user == "Mason": comment.user = mason
-                if comment.user == "MC": comment.user = mc
-                if comment.user == "Naomi": comment.user = naomi
-                if comment.user == "Nora": comment.user = nora
-                if comment.user == "Parker": comment.user = parker
-                if comment.user == "Penelope": comment.user = penelope
-                if comment.user == "Riley": comment.user = riley
-                if comment.user == "Ryan": comment.user = ryan
-                if comment.user == "Samantha": comment.user = samantha
-                if comment.user == "Sebastian": comment.user = sebastian
-
-                if comment.mentions is None:
-                    comment.mentions = []
-
-                for mention in comment.mentions:
-                    temp_mentions = []
-                    if mention == "Aaron": temp_mentions.append(aaron)
-                    if mention == "Amber": temp_mentions.append(amber)
-                    if mention == "Aubrey": temp_mentions.append(aubrey)
-                    if mention == "Autumn": temp_mentions.append(autumn)
-                    if mention == "Caleb": temp_mentions.append(caleb)
-                    if mention == "Cameron": temp_mentions.append(cameron)
-                    if mention == "Charli": temp_mentions.append(charli)
-                    if mention == "Chloe": temp_mentions.append(chloe)
-                    if mention == "Chris": temp_mentions.append(chris)
-                    if mention == "Elijah": temp_mentions.append(elijah)
-                    if mention == "Emily": temp_mentions.append(emily)
-                    if mention == "Grayson": temp_mentions.append(grayson)
-                    if mention == "Imre": temp_mentions.append(imre)
-                    if mention == "Josh": temp_mentions.append(josh)
-                    if mention == "Lauren": temp_mentions.append(lauren)
-                    if mention == "LewsOfficial": temp_mentions.append(lews_official)
-                    if mention == "Lindsey": temp_mentions.append(lindsey)
-                    if mention == "Mason": temp_mentions.append(mason)
-                    if mention == "MC": temp_mentions.append(mc)
-                    if mention == "Naomi": temp_mentions.append(naomi)
-                    if mention == "Nora": temp_mentions.append(nora)
-                    if mention == "Parker": temp_mentions.append(parker)
-                    if mention == "Penelope": temp_mentions.append(penelope)
-                    if mention == "Riley": temp_mentions.append(riley)
-                    if mention == "Ryan": temp_mentions.append(ryan)
-                    if mention == "Samantha": temp_mentions.append(samantha)
-                    if mention == "Sebastian": temp_mentions.append(sebastian)
-                    comment.mentions = temp_mentions
-
-                try: comment.number_likes
-                except AttributeError: comment.number_likes = comment.numberLikes
-
-        kiwii_posts = [kiwii_post for kiwii_post in kiwii_posts if hasattr(kiwii_post.user, "name")]
 
         ## RELATIONSHIP APP
         relationship_girls = [relationship_girl for relationship_girl in relationship_girls if hasattr(relationship_girl, "name")]
@@ -491,7 +310,6 @@ label after_load:
         lauren.name = "Lauren"
         samantha.name = "Samantha"
         emily.name = "Emily"
-        ms_rose.name = "Ms_Rose"
         nora.name = "Nora"
         aubrey.name = "Aubrey"
         ryan.name = "Ryan"
@@ -639,6 +457,9 @@ label after_load:
         show screen bug_testing_overlay
     else:
         hide screen bug_testing_overlay
+
+    if mc.frat is None:
+        call screen compat_frat_is_none
 
     $ _version = config.version
     $ renpy.block_rollback()

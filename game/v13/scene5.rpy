@@ -4,7 +4,7 @@
 # Time: Night
 
 label v13s5:
-    play music "music/v13/Track Scene 5.mp3" fadein 2
+    play music music.v13_Track_Scene_5 fadein 2
     if not CharacterService.is_girlfriend(chloe):
         scene v13s5_1 # TPP. Show MC and Chloe walking in the hotel corridor, carrying their luggage, Chloe frowning, tired, mouth closed, MC slight smile, mouth closed
         with dissolve
@@ -39,7 +39,7 @@ label v13s5:
 
         pause 1.25
 
-        play sound "sounds/kiss.mp3"
+        play sound sound.kiss
 
         scene v13s5_7 # TPP. Show MC kissing Chloe on the forehead
         with dissolve

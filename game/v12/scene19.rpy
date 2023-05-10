@@ -17,7 +17,7 @@ label v12_party_wake_up:
 
     pause 0.75
 
-    play music "music/v12/Track Scene 19.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_19 fadein 2
 
     scene v12pwu2 # FPP. MC lying in the bed, looking at the bedroom door
     with vpunch
@@ -28,7 +28,7 @@ label v12_party_wake_up:
 
     scene v12pwu3 # TPP. Show MC opening the bathroom door and walking in, smiling, mouth closed
     with dissolve
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
 
     pause 0.75
 

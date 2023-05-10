@@ -19,7 +19,7 @@ label v9_before_lake_fr:
     scene fr5lakefull
     with dissolve
 
-    play music "music/v9/Track Scene 7.mp3" fadein 2
+    play music music.ck1.v9.Track_Scene_7 fadein 2
 
     scene fr5lakefull
 
@@ -28,7 +28,7 @@ label v9_before_lake_fr:
 label fr5ryan1:
     $ freeroam5.add("ryan")
 
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         scene v9slake1 #FPP closeup ryan sitting on a picnic blanket, mouth closed, Ryan grinning looking at the girls (you can't see the girls)
 
         u "Enjoying the view?"
@@ -454,7 +454,7 @@ label fr5riley1:
             "Kiss her":
                 $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
-                play sound "sounds/kiss.mp3"
+                play sound sound.kiss
 
                 scene v9slake3 #TPP showing mc and riley kissing
                 with dissolve

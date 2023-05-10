@@ -5,11 +5,11 @@ label v3start:
     with Fade (1,0,1)
 
     stop music fadeout 3
-    play sound "sounds/knock.mp3"
+    play sound sound.knock
 
     u "(Who could that be?)"
 
-    play music "music/mlove2.mp3"
+    play music music.ck1.mlove2
 
     scene s201 # open door and chloe embarrassed smile
     with fade
@@ -103,7 +103,7 @@ label v3start:
     scene s204d # chloe kissing you on the cheek
     with dissolve
 
-    play sound "sounds/kiss.mp3"
+    play sound sound.kiss
     pause 0.5
 
     scene s204c
@@ -116,11 +116,11 @@ label v3start:
     scene s205 # Imre coming into the room
     with Fade (1,0,1)
 
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
 
     pause 0.5
 
-    play music "music/m6punk.mp3"
+    play music music.ck1.m6punk
 
     scene s205a # I'mre close up
     with dissolve
@@ -384,7 +384,7 @@ label conl:
     scene clock2
     with fade
 
-    play sound "sounds/clock2.mp3"
+    play sound sound.clock2
 
     pause (0.5)
 
@@ -405,8 +405,8 @@ label conl:
 
     u "(I really hope she actually shows up.)"
 
-    play music "music/m16punk.mp3"
-    queue music [ "music/mchill1.mp3", "music/m7punk.mp3" ]
+    play music music.ck1.m16punk
+    queue music [music.ck1.mchill1, music.ck1.m7punk]
 
     scene s211 #you behind gym
     with Fade (1,0,1)
@@ -463,7 +463,7 @@ label conl:
     scene s213 # chloe opening the gym door
     with dissolve
 
-    play sound "sounds/lock.mp3"
+    play sound sound.lock
 
     pause 1.0
 
@@ -553,45 +553,45 @@ label conl:
 
     scene s217 # chloe behind volleyball net
     with fade
-    play sound "sounds/volley3.mp3"
+    play sound sound.volley3
 
     scene s217f
     with dissolve
-    play sound "sounds/volley1.mp3"
+    play sound sound.volley1
 
     pause 0.5
 
     scene s217a
     with dissolve
-    play sound "sounds/volley2.mp3"
+    play sound sound.volley2
 
     pause 0.5
 
     scene s217e
     with dissolve
 
-    play sound "sounds/volley4.mp3"
+    play sound sound.volley4
 
     pause 0.5
 
     scene s217c
     with dissolve
 
-    play sound "sounds/volley3.mp3"
+    play sound sound.volley3
 
     pause 0.5
 
     scene s217d
     with dissolve
 
-    play sound "sounds/volley1.mp3"
+    play sound sound.volley1
 
     pause 0.5
 
     scene s217b
     with dissolve
 
-    play sound "sounds/volley2.mp3"
+    play sound sound.volley2
 
     ############ volleyball scene with sounds
 
@@ -607,7 +607,7 @@ label conl:
             scene s218a # you hitting the volleyball
             with vpunch
 
-            play sound "sounds/volleyhit.mp3"
+            play sound sound.volley_hit
 
             pause 0.5
 
@@ -616,7 +616,7 @@ label conl:
             scene s218b # ball hitting the floor next to chloe
             with dissolve
 
-            play sound "sounds/volleyimp.mp3"
+            play sound sound.volley_hit
 
             pause 0.5
 
@@ -636,7 +636,7 @@ label conl:
 
             scene s218c # you missing the ball
             with vpunch
-            play sound "sounds/volleyhit.mp3"
+            play sound sound.volley_hit
 
             pause 0.5
 
@@ -680,7 +680,7 @@ label conl:
 
     stop music fadeout 3
 
-    play sound "sounds/olddoor.mp3"
+    play sound sound.old_door
 
     # Door sound
 
@@ -695,7 +695,7 @@ label conl:
 
     cl "Shit! We need to hide, we're not allowed to be here."
 
-    play music "music/m12punk.mp3"
+    play music music.ck1.m12punk
 
     scene s222 # showing you hiding behind bleachers
     with fade
@@ -719,7 +719,7 @@ label conl:
 
     pause 0.5
 
-    play sound "sounds/switch.mp3"
+    play sound sound.switch
     scene s223c # security out, lights off
 
     pause 0.75
@@ -739,7 +739,7 @@ label conl:
     scene s212d # outside of the gym, cl flirty
     with Fade (1,0,1)
 
-    play music "music/mlove2.mp3"
+    play music music.ck1.mlove2
 
     cl "So, are we even now?"
 
@@ -770,12 +770,12 @@ label conl:
     with Fade (2,0,2)
 
     pause 0.5
-    play sound "sounds/swoosh.mp3"
+    play sound sound.swoosh
     pause 0.5
 
     show fantasyoverlay onlayer foreground
 
-    play music "music/mhorror.mp3"
+    play music music.horror
     scene s226 # Dream with emily, fighting over a stuffed animal in bed
     with flash
 
@@ -819,7 +819,7 @@ label conl:
     pause 0.5
 
     show glitch
-    play sound "sounds/glitch.mp3"
+    play sound sound.glitch
 
     pause 0.1
 
@@ -828,7 +828,7 @@ label conl:
     scene s228a # your door at night
     with hpunch ## GLITCH TRANSITION
 
-    play sound "sounds/doorbell.mp3"
+    play sound sound.doorbell
 
     pause 1
 
@@ -842,7 +842,7 @@ label conl:
 
     pause 1
 
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
     scene s230 # you open door and i's emily at night crying
     with dissolve
 
@@ -854,7 +854,7 @@ label conl:
     em "[name], I did something bad."
 
     show glitch
-    play sound "sounds/glitch.mp3"
+    play sound sound.glitch
 
     pause 0.1
 
@@ -888,7 +888,7 @@ label conl:
 
     u "NO! This is wrong. Just get out! Leave me alone!"
 
-    play sound "sounds/swoosh.mp3"
+    play sound sound.swoosh
 
     stop music fadeout 3
 
@@ -898,9 +898,9 @@ label conl:
 
     u "*Breathing heavily*"
 
-    play music "music/mindie1.mp3"
+    play music music.ck1.mindie1
 
-    queue music [ "music/mindie2.mp3", "music/mindie3.mp3" ]
+    queue music [music.ck1.mindie2, music.ck1.mindie3]
 
     scene s232 #Imre waking you op
     with Fade (2,0,2)
@@ -1067,7 +1067,7 @@ label conl:
 
             pause 0.5
 
-            play sound "sounds/ks.mp3"
+            play sound sound.hit
 
             scene s240d # you doing complicated kick
             with vpunch
@@ -1082,7 +1082,7 @@ label conl:
             scene s240e # you on the floor
             with vpunch
 
-            play sound "sounds/fall.mp3"
+            play sound sound.fall
 
             pause 0.5
 
@@ -1107,7 +1107,7 @@ label conl:
 
     pause 0.5
 
-    play sound "sounds/ks.mp3"
+    play sound sound.hit
 
     scene s240a
     with vpunch
@@ -1119,7 +1119,7 @@ label conl:
 
     pause 0.5
 
-    play sound "sounds/ks.mp3"
+    play sound sound.hit
 
     scene s240b
     with vpunch
@@ -1131,7 +1131,7 @@ label conl:
 
     pause 0.5
 
-    play sound "sounds/ks.mp3"
+    play sound sound.hit
 
     scene s240c
     with vpunch
@@ -1314,7 +1314,7 @@ label conl:
 
     imre "It's quite simple. Whenever your opponent leaves his torso open you simply use your left arm to throw a body hook."
 
-    play sound "sounds/ks.mp3"
+    play sound sound.hit
 
     scene s248f # imre hitting punching bag
     with vpunch
@@ -1336,7 +1336,7 @@ label conl:
 
     pause 0.5
 
-    play sound "sounds/ks.mp3"
+    play sound sound.hit
 
     scene s249a
     with vpunch
@@ -1348,14 +1348,14 @@ label conl:
 
     pause 0.5
 
-    play sound "sounds/ks.mp3"
+    play sound sound.hit
 
     scene s249a
     with vpunch
     $ bodyHook = True
     call screen fightPopup("Body Hook")
 
-    play music "music/m16punk.mp3"
+    play music music.ck1.m16punk
 
     scene s250 # walking back
     with Fade (1,0,1)
@@ -1372,7 +1372,7 @@ label conl:
 
     u "Yeah, I think I will."
     
-    play sound "sounds/vibrate.mp3"
+    play sound sound.vibrate
 
 
 
@@ -1420,7 +1420,7 @@ label conl:
 
                 u "(Okay, let's see. Which one's her room?)"
 
-                play music "music/m4punk.mp3"
+                play music music.ck1.m4punk
 
                 u "(Oh no, the only open window is on the second floor.)"
 
@@ -1431,7 +1431,7 @@ label conl:
 
                 pause 0.5
 
-                play sound "sounds/leaves.mp3"
+                play sound sound.leaves
 
                 scene s253a
                 with dissolve
@@ -1445,7 +1445,7 @@ label conl:
 
                 stop sound
 
-                play sound "sounds/thud.mp3"
+                play sound sound.thud
 
                 scene s253c
                 with dissolve
@@ -1613,7 +1613,7 @@ label conl:
 
                 u "(Okay, let's see. Which one's her room?)"
 
-                play music "music/m4punk.mp3"
+                play music music.ck1.m4punk
 
                 u "(Oh no, the only open window is on the second floor.)"
 
@@ -1624,7 +1624,7 @@ label conl:
 
                 pause 0.5
 
-                play sound "sounds/leaves.mp3"
+                play sound sound.leaves
 
                 scene s253a
                 with dissolve
@@ -1638,7 +1638,7 @@ label conl:
 
                 stop sound
 
-                play sound "sounds/thud.mp3"
+                play sound sound.thud
 
                 scene s253c
                 with dissolve
@@ -1869,7 +1869,7 @@ label conl:
 
         u "(Okay, let's see. Which one's her room?)"
 
-        play music "music/m4punk.mp3"
+        play music music.ck1.m4punk
 
         u "(Oh no, the only open window is on the second floor.)"
 
@@ -1880,7 +1880,7 @@ label conl:
 
         pause 0.5
 
-        play sound "sounds/leaves.mp3"
+        play sound sound.leaves
 
         scene s253a
         with dissolve
@@ -1894,7 +1894,7 @@ label conl:
 
         stop sound
 
-        play sound "sounds/thud.mp3"
+        play sound sound.thud
 
         scene s253c
         with dissolve
@@ -2080,7 +2080,7 @@ label conl:
                 $ sceneList.add("v3_aubrey")
 
                 stop music fadeout 3
-                play music "music/msexy.mp3"
+                play music music.ck1.sexy
 
                 scene aub1
                 pause 1.0
@@ -2391,7 +2391,7 @@ label acream:
 
     $ renpy.end_replay()
 
-    play music "music/mlove2.mp3"
+    play music music.ck1.mlove2
 
     scene s261a
     with dissolve
@@ -2422,7 +2422,7 @@ label acream:
 
     au "Yeah, I need to get back to studying as well..."
 
-    play sound "sounds/kiss.mp3"
+    play sound sound.kiss
 
     scene s263 # kiss
     with dissolve
@@ -2447,9 +2447,9 @@ label acream:
 label aubsexad:
     pause 0.5
 
-    play music "music/mchill1.mp3"
+    play music music.ck1.mchill1
 
-    queue music [ "music/mchill2.mp3"]
+    queue music [music.ck1.mchill2]
 
 
 ### Meet Lauren
@@ -2593,7 +2593,7 @@ label continueq:
 
     pause 0.5
 
-    play sound "sounds/call.mp3"
+    play sound sound.call
 
     scene s270a2
     with dissolve
@@ -2608,7 +2608,7 @@ label continueq:
     menu:
         "Answer":
             stop sound
-            play sound "sounds/answercall.mp3"
+            play sound sound.answer_call
             $ reputation.add_point(RepComponent.BOYFRIEND)
 
             scene s270b # you answer, hold phone next to your ear
@@ -2664,7 +2664,7 @@ label continueq:
 
                     ju "Bye, honey."
 
-                    play sound "sounds/rejectcall.mp3"
+                    play sound sound.reject_call
 
                 "I can't, sorry":
                     $ reputation.add_point(RepComponent.TROUBLEMAKER)
@@ -2681,11 +2681,11 @@ label continueq:
 
                     u "Yeah... next time."
 
-                    play sound "sounds/rejectcall.mp3"
+                    play sound sound.reject_call
 
         "Don't answer":
             stop sound
-            play sound "sounds/rejectcall.mp3"
+            play sound sound.reject_call
 
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
             # phone call declined sound
@@ -2700,7 +2700,7 @@ label continueq:
     label de_bd: #for compatibility only
     scene s270
     with fade
-    play sound "sounds/knock.mp3"
+    play sound sound.knock
 
     pause 0.75
     scene s272 # showing you sitting on the side of bed pushing ready to stand up // camera angle to side of bed, looking at you from front
@@ -2708,7 +2708,7 @@ label continueq:
 
     u "(I guess there goes my one minute of alone time...)"
 
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
 
     scene s273 # FIRST PERSON: through your dorm door open seeing riley and ryan standing there happily looking at you, only seeing their upper body and faces, both mouths closed// ryan hold picnic basket
     with dissolve
@@ -2833,7 +2833,7 @@ label continueq:
 
     ry "Any retribution will only make it worse."
 
-    play music "music/m9punk.mp3"
+    play music music.ck1.m9punk
 
     scene s275br # ryan mouth closed disturbed looking at riley
     with dissolve
@@ -2976,7 +2976,7 @@ label continueq:
 
     ri "[name], wait!"
 
-    play music "music/mlove1.mp3"
+    play music music.ck1.mlove1
 
     scene s279 # Riley arriving at the spot behind the cabin , emphatic
     with dissolve
@@ -3068,7 +3068,7 @@ label continueq:
 
                     show rikiss2
                     pause 1
-                    play sound "sounds/kiss.mp3"
+                    play sound sound.kiss
 
                     $ grant_achievement("lips_dont_lie")
                         
@@ -3122,7 +3122,7 @@ label continueq:
     stop music fadeout 3
 
     if CharacterService.is_girlfriend(lauren): #LAUREN MOVIES
-        play music "music/mindie2.mp3"
+        play music music.ck1.mindie2
 
         scene s282  ## later that day transition pic
         with Fade (1,0,1)
@@ -3133,10 +3133,10 @@ label continueq:
 
         scene s284 # Knocking on lauren's dorm
         with Fade (1,0,1)
-        play sound "sounds/knock.mp3"
+        play sound sound.knock
         pause 1
 
-        play sound "sounds/dooropen.mp3"
+        play sound sound.door_open
 
         scene s285 # Lauren oppens the door smiling
         with dissolve
@@ -3275,7 +3275,7 @@ label continueq:
 
         pause 0.5
 
-        play music "music/mindie1.mp3"
+        play music music.ck1.mindie1
 
         scene s290 # lauren close up whispering ironically FIRST PERSON
         with dissolve
@@ -3306,7 +3306,7 @@ label continueq:
         with fade
 
         pause 0.5
-        play sound "sounds/horrorsound.mp3"
+        play sound sound.horror
 
         scene s289b # lauren grabs onto your arm scared
         with dissolve
@@ -3362,7 +3362,7 @@ label continueq:
 
                                 stop music fadeout 3
 
-                                play sound "sounds/slap.mp3"
+                                play sound sound.slap
 
                                 scene s291c # lauren smacks your hand away
                                 with hpunch
@@ -3474,7 +3474,7 @@ label continueq:
         with Fade (1,0,1)
 
         pause 0.5
-        play music "music/mlove2.mp3"
+        play music music.ck1.mlove2
 
         scene s293 # FIRST PERSON: lauren close up turns around looking at you cute
         with dissolve
@@ -3510,7 +3510,7 @@ label continueq:
 
         la "Really? Thank you so much."
 
-        play sound "sounds/dooropen.mp3"
+        play sound sound.door_open
 
         scene s293d2 # lauren entering
         with dissolve
@@ -3527,7 +3527,7 @@ label continueq:
 
         u "Yeah, good night, Lauren."
 
-        play sound "sounds/doorclose.mp3"
+        play sound sound.door_close
 
         # door close sound
 
@@ -3559,9 +3559,9 @@ label dk_ad:
     pause 1
 
 label continues: # This is after the date
-    play music "music/horror2.mp3"
+    play music music.horror
 
-    play sound "sounds/call.mp3"
+    play sound sound.call
 
     scene s294 # phone on table unknown number
     with dissolve
@@ -3570,7 +3570,7 @@ label continues: # This is after the date
 
     stop sound
 
-    play sound "sounds/answercall.mp3"
+    play sound sound.answer_call
 
     scene s295 # you on the phone from the side
     with dissolve

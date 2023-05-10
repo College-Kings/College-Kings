@@ -3,7 +3,7 @@
 # Characters: MC (Outfit 3),Nora (outfit 1)
 # Time: Tuesday Morning
 label v10_talk_nora:
-    play music "music/v10/Track Scene 28.mp3" fadein 2
+    play music music.ck1.v10.Track_Scene_28 fadein 2
     scene v10hal1 # FPP. Show Nora in hallway, mouth closed
     with fade
 
@@ -69,7 +69,7 @@ label v10_talk_nora:
 
         no "And I still do. *Chuckles*"
 
-        if joinwolves:
+        if mc.frat == Frat.WOLVES:
             menu:
                 "Mention last night":
                     scene v10hal1
@@ -100,7 +100,7 @@ label v10_talk_nora:
 
                     u "(I'll leave it alone as they'd rather keep it private.)"
 
-    elif not joinwolves and not v8_nora_likes_mc:
+    elif mc.frat == Frat.APES and not v8_nora_likes_mc:
         scene v10hal1a
         with dissolve
 

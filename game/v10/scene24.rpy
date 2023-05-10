@@ -6,8 +6,8 @@
 label v10_lauren_room:
     scene v10lar1 # TPP Show MC knocking on Lauren's door.
     with fade
-    play music "music/v10/Track Scene 24_1.mp3" fadein 2
-    play sound "sounds/knock.mp3"
+    play music music.ck1.v10.Track_Scene_24_1 fadein 2
+    play sound sound.knock
     
     pause 0.75
     
@@ -20,7 +20,7 @@ label v10_lauren_room:
         scene v10lar1a # TPP Same angle as v10lar1: MC and Lauren kiss at her door
         with dissolve
 
-        play sound "sounds/kiss.mp3"
+        play sound sound.kiss
 
         pause 0.75
 
@@ -278,7 +278,7 @@ label v10_lauren_room:
 
         la "Oh [name]! *Moans*"
         stop music fadeout 3
-        play music "music/v10/Track Scene 24_2.mp3" fadein 2
+        play music music.ck1.v10.Track_Scene_24_2 fadein 2
         menu:
             "Suck on her tits":
                 $ sceneList.add("v10_lauren")
@@ -353,7 +353,7 @@ label v10_lauren_room:
 
                     stop music fadeout 3
 
-                    play music "music/v10/Track Scene 24_3.mp3" fadein 2
+                    play music music.ck1.v10.Track_Scene_24_3 fadein 2
                     
                     la "[name], I... I don't think I'm ready. Sorry I just..."
 
@@ -528,7 +528,7 @@ label v10_lauren_room:
 
     u "Uhm, hold on."
 
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         scene v10lar11 # FPP Show Ms. Rose on phone, worried expression, mouth closed, plain black background
         with dissolve
 
@@ -602,12 +602,12 @@ label v10_lauren_room:
         scene v10lar1a
         with fade
 
-        play sound "sounds/kiss.mp3"
+        play sound sound.kiss
         
         pause 1
 
     $ renpy.end_replay()
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         jump v10_ms_rose_fight
     else:
         jump v10_sam_kitchen

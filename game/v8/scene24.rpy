@@ -8,7 +8,7 @@ label josh_room:
     with fade
     u "(What does Josh want now? He sounded a bit nervous on the phone.)"
 
-    play music "music/m16punk.mp3" fadein 2
+    play music music.ck1.m16punk fadein 2
 
     scene v8josh2 # TPP (far shot). Showing Josh waiting outside his room, standing against a wall just looking at the ground, nervous, mouth closed. MC walking towards Josh, neutral expression, mouth closed
     with dissolve
@@ -100,13 +100,13 @@ label josh_room:
             with dissolve
             u "Josh, c'mon man..."
 
-            play sound "sounds/dooropen.mp3"
+            play sound sound.door_open
 
             scene v8josh5a # Josh opened the door and storming into his room. MC's hand still in air (as if Josh jerked his shoulder to get rid of MC's hand)
             with dissolve
             pause 0.5
 
-            play sound "sounds/doorclose.mp3"
+            play sound sound.door_close
 
             scene v8josh5b # Josh went inside, door closed. MC's hand no longer in air
             with hpunch
@@ -119,7 +119,7 @@ label josh_room:
     with dissolve
     pause 0.5
 
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         jump v8_scene24_wolves
     else:
         jump v8_scene24_apes

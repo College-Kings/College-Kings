@@ -9,8 +9,8 @@ label steak_w_chloe:
 
     pause 1
 
-    play music "music/mlove.mp3"
-    queue music ["music/mhappy.mp3", "music/mindie1.mp3"]
+    play music music.ck1.mlove
+    queue music [music.ck1.mhappy, music.ck1.mindie1]
 
     scene v8steak2 # TPP. Show MC sitting down at the table with Chloe.
     with dissolve

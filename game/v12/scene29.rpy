@@ -10,7 +10,7 @@ label v12_lauren_sex:
 
     pause 0.75
 
-    play music "music/v12/Track Scene 29_1.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_29_1 fadein 2
 
     if CharacterService.is_girlfriend(lauren):
         scene v12las2 # TPP. Show Lauren kissing MC, MC still sitting down
@@ -124,7 +124,7 @@ label v12_lauren_sex:
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 29_2.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_29_2 fadein 2
 
     scene v12las9 # TPP. Show MC wearing his suit, looking at the mirror, smiling, posing seductively, mouth closed
     with dissolve
@@ -162,7 +162,7 @@ label v12_lauren_sex:
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 29_3.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_29_3 fadein 2
 
     scene v12las14 # FPP. MC and Lauren in lobby, MC and Lauren looking at each other, Lauren embarassed, mouth closed, looking at the ground, blushing
     with dissolve
@@ -277,7 +277,7 @@ label v12_lauren_sex:
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 29_4.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_29_4 fadein 2
 
     scene v12las22 # FPP. MC and Lauren inside the restaurant, standing next to each other, greeter in front of them MC looking at the greeter, greeter looking at Lauren, greeter slight smile, mouth open
     with dissolve
@@ -440,7 +440,7 @@ label v12_lauren_sex:
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 29_5.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_29_5 fadein 2
 
     scene v12las28 # FPP. MC and Lauren standing in front of the game, Lauren looking at MC, MC looking at Lauren, Lauren slightly sad, mouth open
     with dissolve
@@ -576,7 +576,7 @@ label v12_lauren_sex:
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 29_6.mp3" fadein 2
+    play music music.v12_Track_Scene_29_6 fadein 2
 
     scene v12las36 # FPP. MC and Lauren in hotel lobby, looking at each other, Lauren slight smile, mouth open
     with dissolve
@@ -664,7 +664,7 @@ label v12_lauren_sex:
             pause 0.75
 
             stop music fadeout 3
-            play music "music/v12/Track Scene 29_7.mp3" fadein 2
+            play music music.ck1.v12.Track_Scene_29_7 fadein 2
 
             scene v12las44 # FPP. MC and Lauren on the roof, looking at each other, Lauren smiling, mouth open
             with dissolve
@@ -751,7 +751,7 @@ label v12_lauren_sex:
 
                 scene v12las47
                 with dissolve
-                play sound "sounds/kiss.mp3"
+                play sound sound.kiss
 
                 pause
 
@@ -818,7 +818,7 @@ label v12_lauren_sex:
                 la "*Chuckles* I'm sure he is."
 
                 stop music fadeout 3
-                play music "music/v12/Track Scene 29_8.mp3" fadein 2
+                play music music.v12_Track_Scene_29_8 fadein 2
 
                 scene v12las53 # TPP. Show Lauren removing her dress, MC starting to remove his shirt, both smiling, mouths closed
                 with dissolve
@@ -863,7 +863,7 @@ label v12_lauren_sex:
                 label v12s29_lauren_fingering: 
                     scene v12las54c # TPP. Same as v12las54b, MC kissing Lauren's lips, hand over her pussy
                     with dissolve
-                    play sound "sounds/kiss.mp3"
+                    play sound sound.kiss
 
                     pause
 
@@ -948,7 +948,7 @@ label v12_lauren_sex:
 
                     scene v12las58 # TPP. Show MC kissing Lauren
                     with dissolve
-                    play sound "sounds/kiss.mp3"
+                    play sound sound.kiss
 
                     pause
 
@@ -1130,7 +1130,7 @@ label v12_lauren_sex:
                 pause 0.75
 
                 stop music fadeout 3
-                play music "music/v12/Track Scene 29_9.mp3" fadein 2
+                play music music.ck1.v12.Track_Scene_29_9 fadein 2
 
                 scene v12las71 # FPP. MC outside the room, Lauren inside, both in front of door, looking at each other, Lauren smiling, mouth open
                 with dissolve
@@ -1144,12 +1144,12 @@ label v12_lauren_sex:
 
                 scene v12las72 # TPP. Show Lauren kissing MC
                 with dissolve
-                play sound "sounds/kiss.mp3"
+                play sound sound.kiss
 
                 pause
 
                 stop music fadeout 3
-                play music "music/v12/Track Scene 29_6.mp3" fadein 2
+                play music music.v12_Track_Scene_29_6 fadein 2
 
                 scene v12las71
                 with dissolve

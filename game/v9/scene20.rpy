@@ -5,7 +5,7 @@
 # KIWII IMAGES: s20KiwiiWolf = Red Boxing Glove | s20KiwiiApe = Muscular MMA style fighter
 
 label v9_room_fri_aft:
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         scene v9rfa1 # TPP. Show MC sat at his desk in his Wolves room studying.
         with fade
 

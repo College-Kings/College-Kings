@@ -11,7 +11,7 @@ label v10_mc_pen_call:
 
     u "(I love college, there's some down times, but plenty of good ones too.)"
 
-    play music "music/v10/Track Scene 41_1.mp3" fadein 2
+    play music music.ck1.v10.Track_Scene_41_1 fadein 2
 
     scene v10spen2 # TPP. Show MC grabbing his pocket as if he's about to pull his phone out.
     with dissolve
@@ -97,8 +97,9 @@ label v10_mc_pen_call:
     u "(I really hope tomorrow goes well.)"
 
     stop music fadeout 3
-    play music "music/v10/Track Scene 41_2.mp3" fadein 2
-    if joinwolves:
+
+    play music music.ck1.v10.Track_Scene_41_2 fadein 2
+    if mc.frat == Frat.WOLVES:
 
         scene v10spen5 # TPP. Show MC in his new wolves room, lying on his bed tired.
         with dissolve

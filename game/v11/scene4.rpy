@@ -2,14 +2,14 @@
 # Locations: MC's Bed (Wolves/Apes), The Park
 # Characters: MC (smart outfit from scene 1), Emily (Outfit 2)
 # Time: No clue bruv
-
 label v11_emily_park:
-    play music "music/v11/Track Scene 4_1.mp3" fadein 2
-    if joinwolves: # MC is a Wolf
+    play music music.ck1.v11.Track_Scene_4_1 fadein 2
+    if mc.frat == Frat.WOLVES: # MC is a Wolf
+
         scene v11seap1 # TPP. Show MC sitting down on his bed in WOLVES room and noticing that he got a text. Normal expression, mouth closed.
         with fade
 
-        play sound "sounds/vibrate.mp3"
+        play sound sound.vibrate
         u "(I should see who that is.)"
 
         scene v11seap1a # TPP. Same camera as v11seap1. Show MC sitting down on his bed in WOLVES room and looking at his phone, normal expression, mouth closed.
@@ -21,7 +21,7 @@ label v11_emily_park:
         scene v11seap2 # TPP. Show MC sitting down on his bed in APES room and noticing that he got a text. Normal expression, mouth closed.
         with fade
 
-        play sound "sounds/vibrate.mp3"
+        play sound sound.vibrate
         u "(I should see who that is.)"
 
         scene v11seap2b # TPP. Same camera as v10seap2. Show MC sitting down on his bed in APES room and looking at his phone, normal expression, mouth closed.
@@ -51,7 +51,7 @@ label v11_emily_park:
         if MessengerService.has_replies(emily):
             u "(I should check my phone.)"
 
-    if joinwolves: # MC is a Wolf
+    if mc.frat == Frat.WOLVES: # MC is a Wolf
         scene v11seap1b # TPP. Same camera as v11seap1. Show MC sitting on his bed in WOLVES room, putting his phone away. Normal expression, mouth closed.
         with dissolve
 
@@ -78,7 +78,7 @@ label v11_emily_park:
 
     stop music fadeout 3
 
-    play music "music/v11/Track Scene 4_2.mp3" fadein 2
+    play music music.ck1.v11.Track_Scene_4_2 fadein 2
     pause 1.0
 
     scene v11seap4a # FPP. Same camera as v10seap4. Show a closer shot of Emily standing in front of MC, normal expression, mouth closed.

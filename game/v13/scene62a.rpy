@@ -4,14 +4,14 @@
 # Time: Night
 
 label v13s62a:
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
 
     scene v13s62a_1 # FPP. Lindsey walking into the hotel room, sexy expression, mouth closed
     with dissolve
 
     pause 1.25
 
-    play music "music/v13/Track Scene 62a.mp3" fadein 2
+    play music music.ck1.v13.Track_Scene_62a fadein 2
 
     scene v13s62a_2 # FPP. Lindsey standing next to MC, grabbing his hand, sexy expression, mouth open
     with dissolve

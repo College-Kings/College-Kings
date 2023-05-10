@@ -5,7 +5,7 @@ label v10_emily_vs_aubrey:
 
     au "I know I'm hot, but c'mon, don't just stare at me all day."
 
-    play music "music/v10/Track Scene 36.mp3" fadein 2
+    play music music.ck1.v10.Track_Scene_36 fadein 2
 
     scene v10eva1a # FPP. same but emily mouth open
     with dissolve

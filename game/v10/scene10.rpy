@@ -4,11 +4,11 @@
 # Time: Sunday Morning
 
 label v10_sun_morn:
-    play music "music/v10/Track Scene 10.mp3" fadein 2
-    if joinwolves:
+    play music music.ck1.v10.Track_Scene_10 fadein 2
+    if mc.frat == Frat.WOLVES:
         scene v10sum1 # TPP. Show MC in his Wolves bed looking up at the ceiling, MC looks tired.
         with fade
-        play sound "sounds/vibrate.mp3"
+        play sound sound.vibrate
 
         pause 1.25
 
@@ -63,7 +63,7 @@ label v10_sun_morn:
             if MessengerService.has_replies(josh) or MessengerService.has_replies(riley):
                 u "(I should check my phone.)"
 
-        play sound "sounds/vibrate.mp3"
+        play sound sound.vibrate
 
         python:
             v10s10_reply1 = MessageBuilder(lindsey)
@@ -111,7 +111,7 @@ label v10_sun_morn:
     else:
         scene v10sum4 # TPP. Show MC in his Apes bed looking up at the ceiling, MC looks tired.
         with fade
-        play sound "sounds/vibrate.mp3"
+        play sound sound.vibrate
 
         pause 1.25
 
@@ -162,7 +162,7 @@ label v10_sun_morn:
             if MessengerService.has_replies(josh) or MessengerService.has_replies(riley):
                 u "(I should check my phone.)"
 
-        play sound "sounds/vibrate.mp3"
+        play sound sound.vibrate
 
         python:
             v10s10_reply1 = MessageBuilder(lindsey)

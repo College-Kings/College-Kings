@@ -7,7 +7,7 @@ label v14s01a:
     if is_censored:
         jump v14s01a_nsfwSkipLabel1
 
-    play music "music/v12/Track Scene 29_2.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_29_2 fadein 2
 
     scene v14s01a_1 # TPP. Same positioning as v13s62a_10a, MC moving in for a kiss on Lindsey (not kissing yet), Lindsey smiling, mouth closed
     with dissolve
@@ -29,7 +29,7 @@ label v14s01a:
     u "Huh?"
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 33_4.mp3" fadein 2
+    play music music.v12_Track_Scene_33_4 fadein 2
 
     label v14s01a_nsfwSkipLabel1:
 

@@ -5,7 +5,7 @@
 label v11_rose_underground:
     scene v11sub1 # TPP. Show MC sitting down next to ms. rose on subway
     with dissolve
-    play music "music/v11/Track Scene 16.mp3" fadein 2
+    play music music.v11_Track_Scene_16 fadein 2
     pause 1
 
     scene v11sub2 # FPP. Show ms rose, mouth open
@@ -38,7 +38,7 @@ label v11_rose_underground:
 
     u "Yeah. The quiet moments."
 
-    if CharacterService.is_fwb(ms_rose) and joinwolves: #sanitizing pathbuilder input
+    if CharacterService.is_fwb(ms_rose) and mc.frat == Frat.WOLVES: #sanitizing pathbuilder input
         scene v11sub2
         with dissolve
 

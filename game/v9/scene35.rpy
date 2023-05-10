@@ -5,7 +5,7 @@
 
 label v9_room_sat_aft:
     $ v9s35_reply_boyfriend = MessageBuilder(chloe).add_function(reputation.add_point, RepComponent.BOYFRIEND)
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         scene v9rsa1 # TPP. Show MC stood in his Wolves room near his bed.
         with fade
 
@@ -84,7 +84,7 @@ label v9_room_sat_aft:
                 $ MessengerService.new_message(chloe, _("Goodnight [name]"))
                 $ MessengerService.add_reply(chloe, _("Goodnight Chloe."))
         
-            play sound "sounds/vibrate.mp3"
+            play sound sound.vibrate
 
             u "(I wonder who this is.)"
 
@@ -101,7 +101,7 @@ label v9_room_sat_aft:
         scene v9rsa4 # TPP. Show MC's Wolves room door.
         with dissolve
 
-        play sound "sounds/knock.mp3"
+        play sound sound.knock
 
         u "Ugh!"
 
@@ -122,7 +122,7 @@ label v9_room_sat_aft:
             scene v9rsa7 # TPP. Show MC now on his back on his bed, looking at his phone (don't show phone screen)
             with dissolve
             
-            play sound "sounds/vibrate.mp3"
+            play sound sound.vibrate
 
             u "(I wonder who this is.)"
 
@@ -203,7 +203,7 @@ label v9_room_sat_aft:
         scene v9rsa8 # TPP. Show MC's Apes room door.
         with dissolve
 
-        play sound "sounds/knock.mp3"
+        play sound sound.knock
 
         u "Ugh!"
 

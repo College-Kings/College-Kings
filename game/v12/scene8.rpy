@@ -10,12 +10,12 @@ label v12_murder_mystery_reveal:
     scene v12mmr1 # FPP. Mr. Lee and Ms. Rose standing in front of the students, addressing them, only Mr. Lee in shot. Mr. Lee smiling, mouth open, looking at MC
     with dissolve
 
-    if (joinwolves and len(v12s7_killList) == 15) or len(v12s7_killList) == 16:
+    if (mc.frat == Frat.WOLVES and len(v12s7_killList) == 15) or len(v12s7_killList) == 16:
         $ grant_achievement("mass_casualties")
 
     lee "Wow, that turned out a lot better than expected. I hope you all enjoyed yourselves. Was anyone surprised to learn [name] was my chosen murderer?"
 
-    play music "music/v12/Track Scene 8.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_8 fadein 2
 
     scene v12mmr2 # FPP. Same positioning as v12mmr1, MC looking at Lindsey, Lindsey looking at Mr. Lee's direction, Lindsey smiling, mouth open
     with dissolve

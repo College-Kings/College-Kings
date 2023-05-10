@@ -5,7 +5,7 @@
 label v11_mc_amber_gokart:
     scene v11cam1 # TPP. MC and amber in the streets
     with dissolve
-    play music "music/v10/Track Scene 9.mp3" fadein 2
+    play music music.ck1.v10.Track_Scene_9 fadein 2
     pause 0.75
 
     scene v11cam2a # FPP. MC looks at amber, mouth opened (walking)
@@ -488,7 +488,7 @@ label v11_mc_amber_gokart:
 
             am "Haha, fine. Let's do this race."
 
-    play music "music/v10/Track Scene 24_1.mp3" fadein 2
+    play music music.ck1.v10.Track_Scene_24_1 fadein 2
     scene v11cam15 # TPP. MC and amber hop in their karts, helmets on
     with dissolve
 
@@ -1005,7 +1005,7 @@ label v11_race_continue3:
 
         clerk "Hey babe, nice job! Have fun?"
     stop music fadeout 3
-    play music "music/v10/Track Scene 9.mp3" fadein 2
+    play music music.ck1.v10.Track_Scene_9 fadein 2
     scene v11cam14f # FPP. Same as v11cam14, Amber looking towards the clerk (Clerk positioned like v11cam42a), Amber annoyed, mouth open
     with dissolve
 
@@ -1058,7 +1058,7 @@ label v11_race_continue3:
             scene v11cam45 # TPP. Show Amber kissing MC, he is surprised
             with dissolve
 
-            play sound "sounds/kiss.mp3"
+            play sound sound.kiss
 
             pause 1.25
 

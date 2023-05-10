@@ -8,7 +8,7 @@
 #screen 3: Penelope(Stood at the helm display)(to the right of screen 2)
 
 label v11s23_freeroamstart: # Start of freeroam
-    play music "music/v11/Track Scene 14.mp3" fadein 2
+    play music music.v11_Track_Scene_14 fadein 2
     call screen v11s23_entrance
     
 label v11s23_chris1:
@@ -24,7 +24,7 @@ label v11s23_chris1:
 
     ch "Look man, I'm sorry but I need to handle this right now. I can't talk."
 
-    if not joinwolves: # if Apes
+    if mc.frat == Frat.APES: # if Apes
         scene v11frmch1
         with dissolve
 
@@ -750,7 +750,7 @@ label v11s23_penelope1:
 
                 u "Pretty sure I did."
 
-                play sound "sounds/kiss.mp3"
+                play sound sound.kiss
 
                 scene v11frmpe11 # TPP Show Penelope leaning over and kissing MC on the lips
                 with dissolve

@@ -9,7 +9,7 @@ label v13s40:
 
     pause 0.75
 
-    play music "music/v13/Track Scene 40_1.mp3" fadein 2
+    play music music.ck1.v13.Track_Scene_40_1 fadein 2
 
     scene v13s40_2 # FPP. MC and Chloe looking at each other, in lobby, Chloe slight smile, mouth open
     with dissolve
@@ -84,7 +84,7 @@ label v13s40:
     pause 1
 
     stop music fadeout 3
-    play music "music/v13/Track Scene 40_2.mp3" fadein 2
+    play music music.v13_Track_Scene_40_2 fadein 2
 
     label v13s40_sg:
         if _in_replay:
@@ -181,7 +181,7 @@ label v13s40_honey:
 
     cl "*Chuckles*"
 
-    play sound "sounds/kiss.mp3"
+    play sound sound.kiss
     scene v13s40ho_4 # TPP. Show MC kissing Chloe's boobs with honey, mouths closed, slight smiles
     with dissolve
 
@@ -678,7 +678,7 @@ label v13s40_end_free_roam:
         pause
 
         stop music fadeout 3
-        play music "music/v13/Track Scene 40_3.mp3" fadein 2
+        play music music.v13_Track_Scene_40_3 fadein 2
 
         scene v13s40end_15 # FPP. MC laying on top of Chloe, looking into her eyes, Chloe smiling, mouth open
         with dissolve
@@ -765,7 +765,7 @@ label v13s40_end_free_roam:
         pause 1
 
         stop music fadeout 3
-        play music "music/v13/Track Scene 40_3.mp3" fadein 2
+        play music music.v13_Track_Scene_40_3 fadein 2
 
         scene v13s40end_3
         with dissolve

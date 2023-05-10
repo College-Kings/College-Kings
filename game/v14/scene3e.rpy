@@ -4,7 +4,7 @@
 # Time: Night
 
 label v14s03e:
-    play music "music/v13/Track Scene 10.mp3" fadein 2
+    play music music.v13_Track_Scene_10 fadein 2
 
     if v14_ryan_satin: 
         scene v14s03e_1 # TPP. Show MC standing outside of room, neutral expression, mouth closed 

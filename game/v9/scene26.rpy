@@ -49,7 +49,7 @@ label v9_fri_training_w_wolves:
 
     pause 1
 
-    play music "music/v9/Track Scene 1.mp3" fadein 2
+    play music music.ck1.v9.Track_Scene_1 fadein 2
 
     scene v9tww5 # FPP. Show Chris, neutral expression, mouth open.
     with dissolve

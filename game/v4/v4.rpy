@@ -1,5 +1,5 @@
 label v4start:
-    play music "music/m4punk.mp3"
+    play music music.ck1.m4punk
 
     scene s296 #Imre in the hospital bed heavily bruised laying under blanket showing you as well coming into his room
     with Fade (1,0,1)
@@ -168,9 +168,9 @@ label v4start:
 
     pause 0.5
 
-    play music "music/mindie1.mp3"
+    play music music.ck1.mindie1
 
-    queue music [ "music/mindie2.mp3", "music/mindie3.mp3" ]
+    queue music [music.ck1.mindie2, music.ck1.mindie3]
 
     scene s299 # you sititng in the back of the cab contemplating
     with dissolve
@@ -240,7 +240,7 @@ label v4start:
 
     pause 0.5
 
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
 
     scene s301 # Showing you from the back looking over your shoulder in front of open door with Riley standing outside sad
     with dissolve
@@ -435,7 +435,7 @@ label v4start:
     with Fade (1,0,1)
 
     pause 0.5
-    play music "music/mhorror.mp3"
+    play music music.horror
 
     show fantasyoverlay onlayer foreground
 
@@ -507,7 +507,7 @@ label v4start:
     u "*Yawn*"
 
     if meetjulia:
-        play music "music/m11punk.mp3"
+        play music music.ck1.m11punk
 
         scene s310a # no logner yawning
         with dissolve
@@ -522,7 +522,7 @@ label v4start:
         scene s312a # Tip of Julias car pulling in, same frame as before
         with fade
 
-        play sound "sounds/carbrake.mp3"
+        play sound sound.car_brake
 
         pause 0.5
 
@@ -531,7 +531,7 @@ label v4start:
 
         pause 0.5
 
-        play sound "sounds/cardooropen.mp3"
+        play sound sound.car_door_open
         scene s314a # Julia getting out of the car
         with dissolve
 
@@ -608,7 +608,8 @@ label v4start:
         scene carback
         show s316
         with Fade (1,0,1)
-        play music "sounds/driving1.mp3"
+        
+        play ambience ambience.driving
 
         ju "Sooo... have you met any girls yet?"
 
@@ -759,13 +760,13 @@ label v4start:
             u "Thanks, Julia."
 
         label jucon2:
-            stop music fadeout 3
+            stop ambience fadeout 3
 
             scene s317 # you and julia at the start of clothing store there are some people there.
             with Fade (1,0,1)
 
-            play music "music/m16punk.mp3"
-            queue music [ "music/mchill1.mp3", "music/m7punk.mp3" ]
+            play music music.ck1.m16punk
+            queue music [music.ck1.mchill1, music.ck1.m7punk]
 
             ju "You know, I haven't been shopping in quite some time, this is gonna be fun."
 
@@ -1024,7 +1025,7 @@ label v4start:
     $ MessengerService.add_reply(chloe, _("Alright, cool. I'll be at yours for 11"))
     $ MessengerService.new_message(chloe, _("Sounds good :)"))
 
-    play music "music/mindie4.mp3"
+    play music music.ck1.mindie4
 
     while MessengerService.has_replies(chloe):
         call screen phone
@@ -1045,7 +1046,7 @@ label v4start:
     with Fade (1,0,1)
 
     pause 0.5
-    play music "music/mindie5.mp3"
+    play music music.ck1.mindie5
 
     scene s332 # you skimming through bookshelves
     with dissolve
@@ -1438,7 +1439,7 @@ label readmontagea:
     scene s337 # you walking through campus
     with fade
 
-    play music "music/m12punk.mp3"
+    play music music.ck1.m12punk
 
     pause 0.5
 
@@ -1562,9 +1563,9 @@ label readmontagea:
     scene s342 # in front of cafe
     with Fade (1,0,1)
 
-    play music "music/mhappy.mp3"
+    play music music.ck1.mhappy
 
-    queue music [ "music/mlove.mp3" ]
+    queue music [music.ck1.mlove]
 
     pause 0.5
 
@@ -2132,7 +2133,7 @@ label continueab:
 
     play sound sound.vibrate
 
-    play music "music/m9punk.mp3"
+    play music music.ck1.m9punk
 
     python:
         v4_reply1 = MessageBuilder(josh)
@@ -2191,9 +2192,9 @@ label continueab:
 
     pause 0.7
 
-    play music "music/mparty2.mp3"
+    play music music.ck1.mparty2
 
-    queue music [ "music/mparty3.mp3", "music/mparty4.mp3" ]
+    queue music [music.ck1.mparty3, music.ck1.mparty4]
 
     scene s353 # knocking on josh door
     with fade
@@ -2202,7 +2203,7 @@ label continueab:
 
     pause 0.5
 
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
 
     scene s353a # josh opens door
     with dissolve
@@ -2504,7 +2505,7 @@ label continueab:
 
     pause 0.5
 
-    play sound "sounds/fall.mp3"
+    play sound sound.fall
 
     scene jomon3b
     with vpunch
@@ -2618,12 +2619,12 @@ label continueab:
 
     pause 0.5
 
-    play sound "sounds/cup.mp3"
+    play sound sound.cup
     scene jomon10 # cups on table # cups hits table sound
     with Dissolve (1)
 
     pause 0.5
-    play sound "sounds/cup.mp3"
+    play sound sound.cup
     scene jomon11 # cups on table # cups hits table sound
     with Dissolve (1)
 
@@ -2689,7 +2690,7 @@ label continueab:
                     $ reputation.add_point(RepComponent.TROUBLEMAKER)
                     $ CharacterService.set_relationship(amber, Relationship.KISSED)
 
-                    play sound "sounds/spit.mp3"
+                    play sound sound.spit
 
                     scene jomon15a # spits out lemon
                     with dissolve
@@ -2701,7 +2702,7 @@ label continueab:
 
                     pause 1.0
 
-                    play sound "sounds/phonealarm.mp3"
+                    play sound sound.phone_alarm
 
                     "*Phone alarm goes off*"
 
@@ -2713,14 +2714,14 @@ label continueab:
                 "Don't kiss her":
                     $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
-                    play sound "sounds/spit.mp3"
+                    play sound sound.spit
 
                     scene jomon15a # spits out lemon
                     with dissolve
 
                     u "*Spits*"
 
-                    play sound "sounds/phonealarm.mp3"
+                    play sound sound.phone_alarm
 
                     scene jomon15c # you pull away and look down
                     with dissolve
@@ -2755,7 +2756,7 @@ label continueab:
                 "Kiss her":
                     $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
-                    play sound "sounds/spit.mp3"
+                    play sound sound.spit
 
                     scene jomon17a # spits out lemon
                     with dissolve
@@ -2770,7 +2771,7 @@ label continueab:
                     scene jomon17b2
                     with dissolve
 
-                    play sound "sounds/phonealarm.mp3"
+                    play sound sound.phone_alarm
 
                     "*Phone alarm goes off*"
 
@@ -2782,14 +2783,14 @@ label continueab:
                 "Don't kiss her":
                     $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
-                    play sound "sounds/spit.mp3"
+                    play sound sound.spit
 
                     scene jomon17a # spits out lemon
                     with dissolve
 
                     u "*Spits*"
 
-                    play sound "sounds/phonealarm.mp3"
+                    play sound sound.phone_alarm
 
                     scene jomon17c # you look down at your phone
                     with dissolve
@@ -2826,9 +2827,9 @@ label continueab:
 
     "*Knock knock knock*"
 
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
 
-    play music "music/msad2.mp3"
+    play music music.ck1.msad2
 
     scene s369 # door opening sound chloe inside
     with dissolve
@@ -2957,7 +2958,7 @@ label continueab:
 
     u "HNGGGG!"
 
-    play sound "sounds/facepunch1.mp3"
+    play sound sound.hit
 
     scene s372a # you punch the wall
     with vpunch

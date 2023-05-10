@@ -8,7 +8,7 @@ label v11_start:
     with fade
 
     pause 0.75
-    play music "music/v11/Track Scene 1_1.mp3" fadein 2
+    play music music.ck1.v11.Track_Scene_1_1 fadein 2
     scene v11coc1a # TPP. Same cam 1, MC now in shot running towards entrance
     with dissolve
 
@@ -39,7 +39,7 @@ label v11_start:
 
     pe "He hasn't texted me back all morning, the odds of him showing up now are one in a million."
     stop music fadeout 3
-    play music "music/v11/Track Scene 1_2.mp3" fadein 2
+    play music music.ck1.v11.Track_Scene_1_2 fadein 2
     scene v11coc5 # TPP. Show MC walking into the room (Camera behind MC, Penelope and Jenny in background, Penelope turned to look at MC)
     with dissolve
 
@@ -690,7 +690,7 @@ label v11_start:
 
     stop music fadeout 3
 
-    play music "music/v11/Track Scene 1_1.mp3" fadein 2
+    play music music.ck1.v11.Track_Scene_1_1 fadein 2
 
     scene v11coc21 # TPP. Show MC, Jenny and Penelope standing next to the chairs, neutral expressions, mouths closed
     with dissolve
@@ -743,7 +743,7 @@ label v11_start:
     pause 0.75
     stop music fadeout 3
 
-    play music "music/v11/Track Scene 1_4.mp3" fadein 2
+    play music music.ck1.v11.Track_Scene_1_4 fadein 2
     call screen v11s1_hallway1
 
 label v11s1_riley:
@@ -860,7 +860,7 @@ label v11s1_mrrose:
     if not "mr rose" in freeroam7:
         $ freeroam7.add("mr rose")
 
-        if joinwolves:
+        if mc.frat == Frat.WOLVES:
             scene v11cocmrr1a # FPP. Same as mrr1, but Mr Rose mouth closed
             with dissolve
 
@@ -1071,7 +1071,7 @@ label v11_case_verdict:
     stop music fadeout 3
 
     if v11s1_courtpoints >= 4:
-        play music "music/v11/Track Scene 1_5.mp3" fadein 2
+        play music music.ck1.v11.Track_Scene_1_5 fadein 2
         $ v11_pen_goes_europe = True
         scene v11coc14b # TPP. Same as 14, Mr Lee looking at Penelope
         with dissolve
@@ -1215,7 +1215,7 @@ label v11_case_verdict:
             scene v11coc25b # TPP. Same cam as 25, but Penelope is kissing MC on the cheek
             with dissolve
 
-            play sound "sounds/kiss.mp3"
+            play sound sound.kiss
 
             scene v11coc24e
             with dissolve
@@ -1230,7 +1230,7 @@ label v11_case_verdict:
             
     else:
         $ v11_pen_goes_europe = False
-        play music "music/v11/Track Scene 1_1.mp3" fadein 2
+        play music music.ck1.v11.Track_Scene_1_1 fadein 2
         scene v11coc12
         with dissolve
 

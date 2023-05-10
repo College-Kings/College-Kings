@@ -10,7 +10,7 @@ label v12_riley_room:
 
     pause 1
 
-    play music "music/v12/Track Scene 22.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_22 fadein 2
 
     scene v12rir2 # FPP Show Riley, in hotel hallway, smiling with mouth open
     with dissolve
@@ -279,7 +279,7 @@ label v12_riley_room:
 
     u "Of course."
 
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         scene v12rir11c
         with dissolve
 

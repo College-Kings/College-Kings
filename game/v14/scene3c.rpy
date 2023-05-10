@@ -4,7 +4,7 @@
 # Time: Night 
 
 label v14s03c:
-    play music "music/v13/Track Scene 62a.mp3" fadein 2
+    play music music.ck1.v13.Track_Scene_62a fadein 2
 
     scene v14s03c_1 # TPP. Show MC walking in the Brothel bar, slight smile, mouth open.
     with dissolve

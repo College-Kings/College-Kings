@@ -7,7 +7,7 @@ label v9_history_class:
     scene v9hc1 # TPP. Show MC running down the college college hallway towards Mr. Lees class, camera from behind.
     with fade
 
-    play music "music/v9/Track Scene 10.mp3" fadein 2
+    play music music.ck1.v9.Track_Scene_10 fadein 2
 
     pause 1
 
@@ -21,7 +21,7 @@ label v9_history_class:
 
     lee "[name], so nice of you to join us."
 
-    if not joinwolves:
+    if mc.frat == Frat.APES:
         scene v9hc4 # TPP. Show MC taking a seat next to Random Classmate, MC looks a bit embrassed.
         with dissolve
 
@@ -115,7 +115,7 @@ label v9_hc_cont2:
 
     ca "Whatever. I just wanna go back to bed."
 
-    if not joinwolves:
+    if mc.frat == Frat.APES:
         scene v9hc11 # TPP. Show MC getting up from his seat.
         with dissolve
     else:
@@ -284,7 +284,7 @@ label v9_hc_return:
     scene v9hc23 # TPP. Show Pen cam MC with their props, Mr. Lee stood looking at them, lee mouth open.
     with fade
 
-    play music "music/v9/Track Scene 10.mp3" fadein 2
+    play music music.ck1.v9.Track_Scene_10 fadein 2
 
     lee "Great job! I'm impressed. That's going to be hard to beat."
 
@@ -298,7 +298,7 @@ label v9_hc_return:
 
     pause 1
 
-    if not joinwolves:
+    if mc.frat == Frat.APES:
         scene v9hc26 # TPP. Show MC sitting back at his desk.
         with dissolve
     else:
@@ -310,7 +310,7 @@ label v9_hc_return:
     scene clocka
     with fade
 
-    play sound "sounds/clock2.mp3"
+    play sound sound.clock2
 
     pause (0.5)
 

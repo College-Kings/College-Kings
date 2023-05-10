@@ -6,8 +6,8 @@
 # -MC wakes from his sleep-
 
 label v10_cafe_w_jenny:
-    play music "music/v10/Track Scene 22_2.mp3" fadein 2
-    if joinwolves:
+    play music music.ck1.v10.Track_Scene_22_2 fadein 2
+    if mc.frat == Frat.WOLVES:
         scene v10scwj1 # TPP. Show MC waking up in his new Wolves room in underwear.
         with fade
 
@@ -226,7 +226,7 @@ label v10_cafe_w_jenny:
 
                 jen "I may just have to try one at some point."
 
-        play sound "sounds/vibrate.mp3"
+        play sound sound.vibrate
 
         scene v10scwj9 # FPP. Show MC's phone in MC's hand, Camera as if MC is looking down at his phone screen. Use Penelope call texture.
         with dissolve

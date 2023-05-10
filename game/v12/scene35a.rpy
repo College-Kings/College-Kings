@@ -10,7 +10,7 @@ label v12_nora_room:
 
     u "I heard what happened."
 
-    play music "music/v12/Track Scene 35.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_35 fadein 2
 
     scene v12nos1a # FPP. Same as v12nos1, Nora crying, mouth open
     with dissolve
@@ -267,7 +267,7 @@ label v12_nora_room:
                 $ CharacterService.set_relationship(nora, Relationship.FWB)
 
                 stop music fadeout 3
-                play music "music/v12/Track Scene 35a_1.mp3" fadein 2
+                play music music.ck1.v12.Track_Scene_35a_1 fadein 2
 
                 jump v12_nora_sex
     else:
@@ -333,7 +333,7 @@ label v12_nora_no_sex:
         pause 0.75
 
         stop music fadeout 3
-        play music "music/v12/Track Scene 35a_2.mp3" fadein 2
+        play music music.ck1.v12.Track_Scene_35a_2 fadein 2
 
         scene v12nos12 # TPP. Show MC removing his shirt, slightly worried, mouth closed
         with dissolve
@@ -357,7 +357,7 @@ label v12_nora_no_sex:
         jump v12_lindsey_lobby
 
 label v12_nora_sex:
-        play sound "sounds/kiss.mp3"
+        play sound sound.kiss
         scene v12nos15 # TPP. Nora and MC on her bed, kissing
         with dissolve
 
@@ -368,7 +368,7 @@ label v12_nora_sex:
 
         no "Is this-"
 
-        play sound "sounds/kiss.mp3"
+        play sound sound.kiss
 
         scene v12nos15a # TPP. Same as v12nos15, MC and Nora making out even more intensely
         with dissolve
@@ -719,7 +719,7 @@ label v12_nora_sex:
         pause 0.75
 
         stop music fadeout 3
-        play music "music/v12/Track Scene 35a_2.mp3" fadein 2
+        play music music.ck1.v12.Track_Scene_35a_2 fadein 2
 
         scene v12nos12a # TPP. Same as v12nos12, MC smiling, mouth closed
         with dissolve
@@ -729,7 +729,7 @@ label v12_nora_sex:
         scene v12nos13a # TPP. Same as v12nos13, MC smiling, mouth closed
         with dissolve
 
-        if joinwolves:
+        if mc.frat == Frat.WOLVES:
             $ grant_achievement("inside_job")
         else:
             $ grant_achievement("all_is_fair_in_love_and_war")

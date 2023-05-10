@@ -10,7 +10,7 @@ label v12_chase_robber:
 
     pause 0.75
 
-    play music "music/v12/Track Scene 1_1.mp3" fadein 2
+    play music music.v12_Track_Scene_1_1 fadein 2
 
     scene v12car2 # TPP Show MC turning into an alley at a full run
     with dissolve
@@ -36,7 +36,7 @@ label v12_chase_robber:
 
             scene v12car6 # TPP Show MC getting hit on the back of the head
             with dissolve
-            play sound "sounds/facepunch1.mp3"
+            play sound sound.hit
 
             pause 0.3
             scene v12car7 # TPP Show MC laying on the ground in the alley, face down, trying to catch himself
@@ -82,13 +82,13 @@ label v12_chase_robber:
 
                     pause 0.75
                     
-                    play sound "sounds/facepunch1.mp3"
+                    play sound sound.hit
                     scene v12car0
                     with hpunch
                     
                     pause 0.5
                     
-                    play sound "sounds/facepunch1.mp3"
+                    play sound sound.hit
                     scene v12car00
                     with vpunch
                     
@@ -100,7 +100,7 @@ label v12_chase_robber:
                         scene v12car12a # TPP Same angle as v12car12, show MC getting punched in the mouth by the robber
                         with hpunch
 
-                        play sound "sounds/facepunch1.mp3"
+                        play sound sound.hit
 
                         pause 0.75
 
@@ -113,7 +113,7 @@ label v12_chase_robber:
         robber "Ha, you sure are one sorry ass fighter. Now your girl lost her bag and you got your ass kicked. Bet you won't be getting any tonight. *Laughs*"
 
         stop music fadeout 3
-        play music "music/v12/Track Scene 1a_2.mp3" fadein 2
+        play music music.ck1.v12.Track_Scene_1a_2 fadein 2
 
         scene v12car14 # FPP View of MC laying on the ground, show robber running out of the alley and into the night
         with dissolve
@@ -213,7 +213,7 @@ label v12_chase_robber:
         pause 0.75
 
         stop music fadeout 3
-        play music "music/v12/Track Scene 1a_3.mp3" fadein 2
+        play music music.ck1.v12.Track_Scene_1a_3 fadein 2
 
         scene v12car100
         with fade
@@ -294,7 +294,7 @@ label v12_chase_robber:
         u "Fucking asshole!"
 
         stop music fadeout 3
-        play music "music/v12/Track Scene 1a_2.mp3" fadein 2
+        play music music.ck1.v12.Track_Scene_1a_2 fadein 2
 
         scene v12car16a # TPP Same angle as v12car16, show MC reaching down to robber on the ground and grabbing Nora's bag
         with dissolve
@@ -309,7 +309,7 @@ label v12_chase_robber:
                 $ reputation.add_point(RepComponent.TROUBLEMAKER)
                 scene v12car16b # TPP Same angle as v12car16, show MC kicking robber
                 with dissolve
-                play sound "sounds/facepunch1.mp3"
+                play sound sound.hit
 
 
                 u "Bitch!"
@@ -435,7 +435,7 @@ label v12_chase_robber:
         pause 0.75
 
         stop music fadeout 3
-        play music "music/v12/Track Scene 1a_3.mp3" fadein 2
+        play music music.ck1.v12.Track_Scene_1a_3 fadein 2
 
         scene v12car23
         with dissolve
@@ -478,7 +478,7 @@ label v12_chase_robber:
         pause 0.75
 
     stop music fadeout 3
-    play music "music/v11/Track Scene 6.mp3" fadein 2
+    play music music.v11_Track_Scene_6 fadein 2
 
     scene v12car30 # TPP Show MC sitting on his bed in the hotel room
     with dissolve
@@ -514,7 +514,7 @@ label v12_chase_robber:
     scene v12car30
     with dissolve
 
-    play sound "sounds/vibrate.mp3"
+    play sound sound.vibrate
     pause 1.25
 
     scene v12car30a # TPP Same angle as v12car30, MC sitting on the hotel room bed and checking his phone
@@ -555,7 +555,7 @@ label v12_chase_robber:
 
     # -MC hears a knock on his door-
 
-    play sound "sounds/knock.mp3"
+    play sound sound.knock
     pause 0.75
 
     stop music fadeout 3

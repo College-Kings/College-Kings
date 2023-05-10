@@ -60,7 +60,7 @@ label v7start:
 
     u "This is amazing."
 
-    play music "music/muffledparty.mp3"
+    play music music.ck1.muffledparty
 
     scene s674 # close up chris proud
     with dissolve
@@ -318,9 +318,9 @@ label v7start:
     u "(I should go back down too.)"
 
 ######## SCENE 2 End of the Party
-    play music "music/mparty2.mp3"
+    play music music.ck1.mparty2
 
-    queue music [ "music/mparty3.mp3", "music/mparty4.mp3"]
+    queue music [music.ck1.mparty3, music.ck1.mparty4]
 
     if CharacterService.is_mad(imre):
         scene s680 # showing mc in Wolves house living room where Aaron is talking to Aubrey
@@ -512,7 +512,7 @@ label v7start:
 ####### SCENE 3 Outside with Nora
 label hd_bd:
     stop music fadeout 1
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
     scene s688 # You walk open the backyard door
     with dissolve
 
@@ -523,7 +523,7 @@ label hd_bd:
 
     u "Hey."
 
-    play music "music/muffledparty.mp3"
+    play music music.ck1.muffledparty
 
     scene s698a # Nora turns around a bit sad and upset looking at you
     with dissolve
@@ -981,9 +981,9 @@ label hd_ad:
 
     scene s706 # Close up riley looking at you smiling
     with dissolve
-    play music "music/mlove.mp3"
+    play music music.ck1.mlove
 
-    queue music [ "music/mlove1.mp3" ]
+    queue music [music.ck1.mlove1]
 
     ri "Yeah, it was really fun getting to meet all of these new people."
 
@@ -1194,7 +1194,7 @@ label hd_ad:
 
             u "Of course."
 
-            play sound "sounds/dooropen.mp3"
+            play sound sound.door_open
 
             scene s710 # First Person Riley quietly walking in her dorm in front of you # ALL RILEY DORM renders should be regular lighting and I'll make it dark in photoshop
             with dissolve
@@ -1318,9 +1318,9 @@ label conyourdorm:
     scene s713a # mc waking up in the morning
     with Fade(2,0,2)
 
-    play music "music/mindie1.mp3"
+    play music music.ck1.mindie1
 
-    queue music [ "music/m15punk.mp3" ]
+    queue music [music.ck1.m15punk]
 
     pause 0.5
 
@@ -1503,7 +1503,7 @@ label conyourdorm:
 
                 em "Oh, yeah... Okay. Sorry."
 
-                play sound "sounds/rejectcall.mp3"
+                play sound sound.reject_call
                 scene s714d
                 with dissolve
                 u "*Sighs*"
@@ -1583,7 +1583,7 @@ label conyourdorm:
 
                 scene s714d # mc looking dpeesperate holding his phone in front of his face mouth closed
                 with dissolve
-                play sound "sounds/rejectcall.mp3"
+                play sound sound.reject_call
 
                 u "(I forgot how fucking crazy she is...)"
 
@@ -1647,16 +1647,16 @@ label apologylauren:
 
     pause 1.5
 
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
 
     scene s717 #close up Lauren opening door mouth open  a bit upset / put off
     with dissolve
 
     la "[name]? What are you doing here?"
 
-    play music "music/mindie5.mp3"
+    play music music.ck1.mindie5
 
-    queue music [ "music/mlove2.mp3" ]
+    queue music [music.ck1.mlove2]
     # No but should everything be forgiven? I think so. But you can't make a move on her at the beach I guess in some instances
 
     scene s717a
@@ -1838,15 +1838,15 @@ label thisbelauren:
 
     pause 1.5
 
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
 
     scene s717
     with dissolve
 
     la "So?"
-    play music "music/mindie5.mp3"
+    play music music.ck1.mindie5
 
-    queue music [ "music/mlove2.mp3" ]
+    queue music [music.ck1.mlove2]
 
     scene s717a
     with dissolve
@@ -2006,7 +2006,7 @@ label thisbelauren:
 
                         u "Fine. I'll go."
 
-                        play sound "sounds/doorclose.mp3"
+                        play sound sound.door_close
                         scene s717k # door closed
                         with vpunch
 
@@ -2054,7 +2054,7 @@ label thisbelauren:
 
                     la "I said we're done!"
 
-                    play sound "sounds/doorclose.mp3"
+                    play sound sound.door_close
                     scene s717k # door closed
                     with vpunch
 
@@ -2183,9 +2183,9 @@ label thisbewalk:
 
         u "Hey Autumn."
 
-        play music "music/mfunk.mp3"
+        play music music.ck1.mfunk
 
-        queue music [ "music/mindie5.mp3" ]
+        queue music [music.ck1.mindie5]
         scene s723 # close up autumn curious smile
         with dissolve
 
@@ -2471,7 +2471,7 @@ label thisbewalk:
     with fade
 
     pause 0.5
-    play music "music/mhappy.mp3"
+    play music music.ck1.mhappy
 
     if (not costumeaubrey and v2_caughtpeeking and not v2_caughtpeekingcounter) or penelopekiss:
         scene s731 # First person, Penelope sitting in front of your dorm door
@@ -2642,11 +2642,11 @@ label beachlauren:
 
     pause 1.5
 
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
 
     if CharacterService.is_girlfriend(lauren):
-        play music "music/mlove2.mp3"
-        queue music [ "music/mlove.mp3", "music/mlove1.mp3" ]
+        play music music.ck1.mlove2
+        queue music [music.ck1.mlove, music.ck1.mlove1]
 
         scene s736 # showing Mc and Lauren , she's opening the door in a bikini. happy to see mc, mouth open
         with dissolve
@@ -3033,8 +3033,8 @@ label beachlauren:
 
         la "Oh hey, you're early."
 
-        play music "music/mlove.mp3"
-        queue music [ "music/mlove2.mp3", "music/mlove1.mp3" ]
+        play music music.ck1.mlove
+        queue music [music.ck1.mlove2, music.ck1.mlove1]
 
         u "How else am I gonna catch the worm?"
 
@@ -3425,7 +3425,7 @@ label beachlauren:
 ########## SCENE 12: MC BACK AT DORM WEDNESDAY EVENING
     label rightafterbeach: #for compatibility only
     if CharacterService.is_fwb(emily):
-        play sound "sounds/dooropen.mp3"
+        play sound sound.door_open
         scene s753 # mc opens his dorm door and looks on the ground, there's a letter
         with dissolve
 
@@ -3508,7 +3508,7 @@ label afterbeach:
 ####### SCENE 13 PLEDGING THE WOLVES
 label pledgewolves:
     $ reputation.add_point(RepComponent.BRO)
-    $ joinwolves = True
+    $ mc.frat = Frat.WOLVES
 
     scene s756 # Camera - third person, MC walking through town during evening wearing jeans
     with fade
@@ -3524,7 +3524,7 @@ label pledgewolves:
 
         u "(Wait, is he waving at {i}me{/i}?)"
 
-        play music "music/m11punk.mp3"
+        play music music.ck1.m11punk
         scene s758 # Camera - third person. MC and Imre close up. Imre talking mouth open, MC confused look mouth closed. No others visible in the scene preferably
         with dissolve
 
@@ -3581,7 +3581,7 @@ label pledgewolves:
         with dissolve
         u "(There's Imre. Looks like preparations are still being made.)"
 
-        play music "music/m11punk.mp3"
+        play music music.ck1.m11punk
         scene s758g
         with dissolve
         pause 0.5
@@ -3644,8 +3644,8 @@ label pledgewolves:
     with dissolve
     ch "And fearless!"
 
-    play music "music/mindie1.mp3" fadein 3
-    queue music [ "music/m6punk.mp3", "music/m15punk.mp3", "music/m16punk.mp3" ]
+    play music music.ck1.mindie1 fadein 3
+    queue music [music.ck1.m6punk, music.ck1.m15punk, music.ck1.m16punk]
 
     scene s762a
     with dissolve
@@ -3945,7 +3945,7 @@ label chloe_call:
 
         u "What about-"
 
-        play sound "sounds/rejectcall.mp3"
+        play sound sound.reject_call
 
         scene sphone1a # mc on the phone mouth closed
         with dissolve
@@ -3977,7 +3977,7 @@ label chloe_call:
 
         u "Sounds good."
 
-        play sound "sounds/rejectcall.mp3"
+        play sound sound.reject_call
 
         scene sphone1a # mc on the phone mouth closed
         with dissolve
@@ -4009,7 +4009,7 @@ label chloe_call:
 
         u "I mean I can-"
 
-        play sound "sounds/rejectcall.mp3"
+        play sound sound.reject_call
 
         scene sphone1a # mc on the phone mouth closed
         with dissolve
@@ -4690,7 +4690,7 @@ label aftercall:
 ######## SCENE 14 APES
 label pledgeapes:
     $ reputation.add_point(RepComponent.TROUBLEMAKER, 3) # I think more TM points for joining the Apes makes sense
-    $ joinwolves = False
+    $ mc.frat = Frat.APES
 
     scene s756 # Not a new render
     with fade
@@ -4709,7 +4709,7 @@ label pledgeapes:
     with dissolve
     pause 0.5
 
-    play music "music/m11punk.mp3"
+    play music music.ck1.m11punk
 
     scene s826 # Camera - FPP. MC and Ryan close up. Ryan talking. One or two other guys can be seen in the shot, doesn't really matter as long as it looks continuous with s825a
     with dissolve
@@ -4849,8 +4849,8 @@ label pledgeapes:
     with dissolve
     pause
 
-    play music "music/m5punk.mp3" fadein 2
-    queue music [ "music/m9punk.mp3" ]
+    play music music.ck1.m5punk fadein 2
+    queue music [music.ck1.m9punk]
 
     scene s832a # Grayson energetic expression with mouth open and looking into the camera
     with dissolve
@@ -4961,7 +4961,7 @@ label pledgeapes:
     scene s843 # Camera - FPP. Cameron disappointed and mouth open
     with dissolve
     ca "Now, listen to me here, I've never coached before, but I really don't think you would do anything that an Ape would do."
-    play music "music/m3punk.mp3" fadein 2
+    play music music.ck1.m3punk fadein 2
     ca "But as your coach, I'm not willing to lose. So you're gonna suck it up and do everything I say."
 
     scene s844 # Camera - TPP (preferably same as). Cameron threatening expression and mouth open. He is leaning towards the MC and is pointing his index finger on MC's chest
@@ -5086,7 +5086,7 @@ label ep7_fight_cam:
             ca "Come with me. I'm gonna show you something."
 
 label ep7_cam_picture:
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
     scene s849 # Camera - TPP. MC and Cameron entering a room (Need not show what's inside the room in the shot, they're just entering through the door.)
     with fade
     pause 0.5
@@ -5099,8 +5099,8 @@ label ep7_cam_picture:
     with dissolve
     u "Uh.. No."
 
-    play music "music/m11punk.mp3"
-    queue music [ "music/m15punk.mp3", "music/m9punk.mp3" ]
+    play music music.ck1.m11punk
+    queue music [music.ck1.m15punk, music.ck1.m9punk]
 
     scene s850
     with dissolve
@@ -5330,7 +5330,7 @@ label ep7_cam_picture:
     stop sound
 
     if CharacterService.is_mad(chloe):
-        play sound "sounds/answercall.mp3"
+        play sound sound.answer_call
         cl "What do you want, [name]?"
 
         scene snew860a # mouth open
@@ -5343,12 +5343,12 @@ label ep7_cam_picture:
 
         cl "Good for you."
 
-        play sound "sounds/rejectcall.mp3"
+        play sound sound.reject_call
 
         "*Chloe hangs up*"
 
     else:
-        play sound "sounds/answercall.mp3"
+        play sound sound.answer_call
         cl "Hello? [name]?"
 
         scene snew860a # mouth open
@@ -5381,7 +5381,7 @@ label ep7_cam_picture:
         scene snew860
         with dissolve
 
-        play sound "sounds/rejectcall.mp3"
+        play sound sound.reject_call
 
         "*Chloe hangs up*"
 
@@ -5408,7 +5408,7 @@ label after_pledges:
     scene s861 # Camera - TPP. MC walking home at night through the town after Apes pledging
     with fade
 
-    if apesVids == 1 or joinwolves:
+    if apesVids == 1 or mc.frat == Frat.WOLVES:
         pause 0.5
 
     else:
@@ -5453,7 +5453,7 @@ label after_pledges:
     scene s865 # Camera - TPP. MC waking up yawning in bed. No black eye
     with Fade(1,0,1)
 
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         $ v7_kiwiiPost5 = KiwiiPost(chris, "phone/kiwii/Posts/v7/chpost1.webp", _("One of us!"), number_likes=133, mentions=[mc])
         $ v7_kiwiiPost5.newComment(cameron, _("Losers"), 3)
         $ v7_kiwiiPost5.newComment(imre, _("Hell yeah bro!"), 14)
@@ -5465,8 +5465,8 @@ label after_pledges:
         $ MessengerService.new_message(emily, _("It's okay. You'll get the surprise another time..."))
         $ MessengerService.add_reply(emily, _("Exciting :)"))
 
-    play music "music/mindie2.mp3"
-    queue music [ "music/m16punk.mp3", "music/mindie1.mp3" ]
+    play music music.ck1.mindie2
+    queue music [music.ck1.m16punk, music.ck1.mindie1]
     
     if CharacterService.is_mad(imre):
         scene s866 # Camera - TPP (shot should not include Imre's bed). MC sitting up on his bed, mouth closed.
@@ -5503,7 +5503,7 @@ label after_pledges:
         with dissolve
         pause 0.5
 
-    elif joinwolves:
+    elif mc.frat == Frat.WOLVES:
         scene s866
         with dissolve
         imre "Morning."
@@ -5738,7 +5738,7 @@ label after_pledges:
         with dissolve
         pause 0.5
 
-    if CharacterService.is_mad(imre) and joinwolves:
+    if CharacterService.is_mad(imre) and mc.frat == Frat.WOLVES:
         scene s878 # Camera - FPP. MC sitting beside Imre. Imre looking at MC with a bored/uninterested expression. Imre mouth closed
         with dissolve
         u "Hey."
@@ -5964,7 +5964,7 @@ label after_pledges:
                 with dissolve
                 pause 0.5
 
-                if not joinwolves:
+                if mc.frat == Frat.APES:
                     scene s881
                     with dissolve
                     ca "Buurrnnn!"
@@ -6039,7 +6039,7 @@ label after_history:
     with fade
     pause 0.5
 
-    play sound "sounds/clock2.mp3"
+    play sound sound.clock2
 
     scene clockb
     with dissolve
@@ -6289,7 +6289,7 @@ label after_history:
         with dissolve
         pause 0.5
 
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         jump after_cam_history
 
 ########## SCENE 19 CAMERON AFTER HISTORY
@@ -6415,7 +6415,7 @@ label after_history:
     scene s905 # Same as s904 but MC is now 2 feet behind Lee
     with dissolve
 
-    play sound "sounds/countdown.mp3" #check - is this fine?
+    play sound sound.countdown #check - is this fine?
 
     menu (fail_label="lee_pants_fail"): # 3 second timer default
         "Pull it":
@@ -6514,8 +6514,8 @@ label after_cam_history:
     u "(Damn, I totally forgot about it. Homecoming's tomorrow.)"
     u "(I still need to ask a girl as well as rent a suit.)"
     u "(I sure hope this decision doesn't create eight alternate timelines...)"
-    play music "music/mlove.mp3" fadein 2
-    queue music [ "music/mchill1.mp3", "music/mindie5.mp3" ]
+    play music music.ck1.mlove fadein 2
+    queue music [music.ck1.mchill1, music.ck1.mindie5]
     call screen hc_select
 
     # If chose to go alone
@@ -6538,7 +6538,7 @@ label hc_asking_amber:
 
     pause 1.5
 
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
     scene s919 # Camera - FPP. Amber opens the door and talking with a confused look
     with dissolve
     am "Uhmmm... are you about to ask me to go to homecoming with you?"
@@ -6893,7 +6893,7 @@ label hc_asking_emily:
 
     pause 0.5
 
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
 
     scene s950a # emily comes in
     with dissolve
@@ -7128,7 +7128,7 @@ label hc_asking_riley:
 
     pause 0.5
 
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
 
     scene s959a #fpp close up riley opened the door a bit surprised
     with dissolve
@@ -7236,7 +7236,7 @@ label suit_rental:
 
 ### SCENE 32: AFTER TUDEXO SHOPPING
 label thurs_night_dorm:
-    if joinwolves and CharacterService.is_mad(imre):
+    if mc.frat == Frat.WOLVES and CharacterService.is_mad(imre):
         scene s1002 # Camera - TPP. MC packing his bag, same as the one he has in scene 34
         with fade
 
@@ -7248,7 +7248,7 @@ label thurs_night_dorm:
 
         jump wolves_ceremony
 
-    elif joinwolves:
+    elif mc.frat == Frat.WOLVES:
         scene s1002
         with fade
         pause 0.7
@@ -7275,7 +7275,7 @@ label thurs_night_dorm:
     #A knock is heard at the door of MC's dorm. MC opens the door and finds Cameron standing in the doorway.
 
 label cameron_thurs_tasks:
-    play music "music/mchill1.mp3"
+    play music music.ck1.mchill1
     scene scc1 # TPP. Shot of MC sat in his room on end of his bed.
     with fade
 
@@ -7287,7 +7287,7 @@ label cameron_thurs_tasks:
 
     pause 1.5
     
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
     scene scc2 # FPP. Show MC door, now open, Cameron stood in threshold, neutral expression.
     with dissolve
 
@@ -7371,7 +7371,7 @@ label cameron_thurs_tasks:
 
     pause 0.5
 
-    play music "music/m13punk.mp3"
+    play music music.ck1.m13punk
     scene scc11 # TPP. Show Cameron grabbing Adam and throwing him to the ground.
     with hpunch
 
@@ -7435,8 +7435,8 @@ label cameron_thurs_tasks:
 
     u "Alright, what's up first?"
 
-    play music "music/m15punk.mp3"
-    queue music [ "music/m11punk.mp3", "music/m6punk.mp3" ]
+    play music music.ck1.punk15
+    queue music [music.ck1.m11punk, music.ck1.m6punk]
 
     scene scc17 # FPP. Close up Cameon, with heavy dute construction glue in hand, grin on face.
     with dissolve
@@ -7819,7 +7819,7 @@ label cameron_thurs_tasks:
     with vpunch
 
     pause 0.5
-    play music "music/mhorror.mp3"
+    play music music.horror
 
     if is_censored:
         call screen censored_popup("v7_nsfwSkipLabel4")
@@ -8035,7 +8035,7 @@ label v7_nsfwSkipLabel4:
 label wolves_ceremony:
     scene swc0 # FPP. Show Finn & Marcus standing at the entrace to the Wolves house as you are walking towards the house. Finn & Marcus chatting, Wolves house in view.
     with fade
-    play music "music/muffledparty.mp3"
+    play music music.ck1.muffledparty
 
     pause 0.75
 
@@ -8091,8 +8091,8 @@ label wolves_ceremony:
     #If Imre moved out:
     #MC arrives alone to the Wolves house holding a sports bag of his stuff. A few Wolves , including marcus are outside and welcome him.
 
-    play music "music/mparty3.mp3"
-    queue music [ "music/mparty4.mp3", "music/mparty2.mp3" ]
+    play music music.ck1.mparty3
+    queue music [music.ck1.mparty4, music.ck1.mparty2]
 
     scene swc9 # TPP. Show as many wolves as possible, make sure Chris is stood in the middle. Upbeat expressions but serious at the same time.
     with dissolve
@@ -8751,7 +8751,7 @@ label wolves_ceremony:
     with dissolve
 
     u "I'm just gonna go and find Imre."
-    play music "music/muffledparty.mp3"
+    play music music.ck1.muffledparty
 
     scene swc81 # FPP. Distant shot of Imre who is looking around outside embracing the fresh air. Camera should show the back of Imre.
     with fade
@@ -8901,7 +8901,7 @@ label rileytext:
         u "(Guess I'm not going to sleep yet.)"
         jump rileysexscene
 
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         scene swc91 # TPP. Show MC in bed going to sleep
         with dissolve
 
@@ -8920,7 +8920,7 @@ label rileysexscene:
     $ CharacterService.set_relationship(riley, Relationship.FWB)
     $ sceneList.add("v7_riley")
 
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         stop music fadeout 3
         scene preri1 # You walking through the night to riley
         with fade
@@ -8948,7 +8948,7 @@ label rileysexscene:
 
     scene ridrm2b
     with vpunch
-    play music "music/msexy.mp3"
+    play music music.ck1.sexy
 
     pause 0.5
 
@@ -9133,7 +9133,7 @@ label v7_nsfwSkipLabel1:
     with dissolve
     u "Yeah, see you tomorrow."
 
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         scene preri1a # You walking through the night back home
         with fade
 
@@ -9147,7 +9147,7 @@ label v7_nsfwSkipLabel1:
 
 ########## SCENE 35 MC AT DORM / WOLVES ROOM AT NIGHT
 
-    if joinwolves: # IN WOLVES ROOM
+    if mc.frat == Frat.WOLVES: # IN WOLVES ROOM
         scene swc91 # TPP. Show MC in bed going to sleep
         with fade
 
@@ -9157,9 +9157,9 @@ label v7_nsfwSkipLabel1:
             #- CONTINUE at Friday Morning -
             scene swc92 # TPP. Show MC in bed, waking up, camera from corner of room.
             with Fade(2,0,2)
-            play music "music/mindie1.mp3"
+            play music music.ck1.mindie1
 
-            queue music [ "music/mindie2.mp3", "music/mindie3.mp3", "music/mindie5.mp3" ]
+            queue music [music.ck1.mindie2, music.ck1.mindie3, music.ck1.mindie5]
 
             pause 0.5
 
@@ -9196,9 +9196,9 @@ label v7_nsfwSkipLabel1:
             #- CONTINUE at Friday Morning -
             scene swc97 # TPP. Show MC in bed, waking up, camera from corner of room.
             with Fade(2,0,2)
-            play music "music/mindie1.mp3"
+            play music music.ck1.mindie1
 
-            queue music [ "music/mindie2.mp3", "music/mindie3.mp3", "music/mindie5.mp3"]
+            queue music [music.ck1.mindie2, music.ck1.mindie3, music.ck1.mindie5]
 
             pause 0.5
 
@@ -9256,7 +9256,7 @@ label signs_with_autumn:
 
     pause 1.5
 
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
 
     scene sas3 # FPP. Close up on Autumn who is now stood at the door, smile, mouth open.
     with dissolve
@@ -9642,7 +9642,7 @@ label walking_through_hallways:
         $ name = renpy.input(_("What's your name?"), default=name).strip() or _("Alex")
         $ pb_name_set = True
 
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         stop music fadeout 3
 
         scene sfr4mc2 # mc in his wolves' room studying
@@ -9660,9 +9660,9 @@ label walking_through_hallways:
         scene sfr4mc1a # mc looking at his phone
         with dissolve
 
-    play music "music/mdates1.mp3"
+    play music music.ck1.mdates1
 
-    queue music [ "music/mdates2.mp3", "music/mchill1.mp3", "music/mfunk.mp3"]
+    queue music [music.ck1.mdates2, music.ck1.mchill1, music.ck1.mfunk]
 
     if hcGirl == "amber":
         u "(Probably should get going to Amber's soon.)"
@@ -9676,7 +9676,7 @@ label walking_through_hallways:
     else:
         u "(I should probably start getting my suit on and get ready for homecoming.)"
 
-        if joinwolves:
+        if mc.frat == Frat.WOLVES:
             scene sfr4mc4 # mc adjusting his suit in his Wolves' room
             with fade
 
@@ -9717,9 +9717,9 @@ label walking_through_hallways:
 
             pause 1.0
 
-            play music "music/mhoco1.mp3"
+            play music music.ck1.mhoco1
 
-            queue music [ "music/mhoco2.mp3", "music/mhoco3.mp3", "music/mhoco4.mp3"]
+            queue music [music.ck1.mhoco2, music.ck1.mhoco3, music.ck1.mhoco4]
 
             scene sfr4mc6 # mc walking into the gym building
             with fade
@@ -9743,7 +9743,7 @@ label amberhocodate:
     
     pause 1.5
 
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
     scene sfr4am3 #CLOSE UP Amber opens the door, excited mouth open
     with dissolve
 
@@ -9892,7 +9892,7 @@ label v7_nsfwSkipLabel5:
     scene sfr4am8a #amber puts on some music and changes the lights to dark blue lighting
     with dissolve
 
-    play sound "sounds/rejectcall.mp3"
+    play sound sound.reject_call
 
     # music starts
 
@@ -10127,7 +10127,7 @@ label chloehocodate:
 
     pause 1.5
 
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
     scene sfr4cl3 # close up nora opening the door indifferent in her dress
     with dissolve
 
@@ -10148,7 +10148,7 @@ label chloehocodate:
     scene sfr4cl4 #First personBehind Chloe walking into the kitchen where Aubrey, Aaron and Lindsey are already taking shots.
     with dissolve
 
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         cl "This is Lindsey by the way."
 
     else:
@@ -10549,9 +10549,9 @@ label chloehocodate:
 
             cl "*Smirks* I think we will!"
 
-    play music "music/mhoco1.mp3"
+    play music music.ck1.mhoco1
 
-    queue music [ "music/mhoco2.mp3", "music/mhoco3.mp3", "music/mhoco4.mp3"]
+    queue music [music.ck1.mhoco2, music.ck1.mhoco3, music.ck1.mhoco4]
 
     scene sfr4cl26 # you and chloe walking into the gym at homecoming
     with fade
@@ -10678,7 +10678,7 @@ label emilyhocodate:
 
     pause 1.5
 
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
     scene sfr4em3 # close up emily opening the door in her dress smiling
     with dissolve
 
@@ -10946,9 +10946,9 @@ label emilyhocodate:
 
     u "No we wouldn't."
 
-    play music "music/mhoco1.mp3"
+    play music music.ck1.mhoco1
 
-    queue music [ "music/mhoco2.mp3", "music/mhoco3.mp3", "music/mhoco4.mp3"]
+    queue music [music.ck1.mhoco2, music.ck1.mhoco3, music.ck1.mhoco4]
 
     scene sfr4em13 # emily and mc arrive inside the gym
     with fade
@@ -11117,7 +11117,7 @@ label laurenhocodate:
 
     pause 1.5
 
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
     scene sfr4la1 # first personclose up lauren opens the door shy smile
     with dissolve
 
@@ -11189,7 +11189,7 @@ label laurenhocodate:
     scene sfr4la5b # toasting wine glasses
     with dissolve
 
-    play sound "sounds/toast.mp3"
+    play sound sound.toast
 
     u "Cheers."
 
@@ -11296,9 +11296,9 @@ label laurenhocodate:
 
     u "Yeah, let's go."
 
-    play music "music/mhoco1.mp3"
+    play music music.ck1.mhoco1
 
-    queue music [ "music/mhoco2.mp3", "music/mhoco3.mp3", "music/mhoco4.mp3"]
+    queue music [music.ck1.mhoco2, music.ck1.mhoco3, music.ck1.mhoco4]
 
     scene sfr4la10 # Lauren and Mc walking into the gym
     with fade
@@ -11499,7 +11499,7 @@ label penelopehocodate:
     menu:
         "Enter her room":
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
-            play sound "sounds/dooropen.mp3"
+            play sound sound.door_open
             scene sfr4pe1b # showing mc entering her room, door still only half open, cant see penelope or much in the room
             with dissolve
 
@@ -11556,7 +11556,7 @@ label penelopehocodate:
 
             pe "Okay, you can come in now!"
 
-            play sound "sounds/dooropen.mp3"
+            play sound sound.door_open
             scene sfr4pe1b # showing mc entering her room, door still only half open, cant see penelope
             with dissolve
 
@@ -11620,7 +11620,7 @@ label penelopehocodate:
     with dissolve
 
     # beer bottle opening sounds #check - add beeropen.mp3 sound file
-    play sound "sounds/beeropen.mp3"
+    play sound sound.beer_open
 
     u "Nice hiding spot."
 
@@ -11894,9 +11894,9 @@ label penelopehocodate:
 
     u "Yeah, let's head out."
 
-    play music "music/mhoco1.mp3"
+    play music music.ck1.mhoco1
 
-    queue music [ "music/mhoco2.mp3", "music/mhoco3.mp3", "music/mhoco4.mp3"]
+    queue music [music.ck1.mhoco2, music.ck1.mhoco3, music.ck1.mhoco4]
 
     scene sfr4pe10 # showing penelope and mc walking into the gym
     with fade
@@ -11972,7 +11972,7 @@ label rileyhocodate:
 
     pause 1.5
 
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
 
     scene sfr4ri1 # first person close up riley oepning hte door, behind her are lauren and ryan sitting on the floor around a small wooden table filled with bottles of alcohol
     with dissolve
@@ -12079,21 +12079,21 @@ label rileyhocodate:
 
     pause 0.5
 
-    play sound "sounds/cup.mp3"
+    play sound sound.cup
 
     scene sfr4ri11a #Ryan still trying to flip his cup.
     with dissolve
 
     u "Come on, come on!"
 
-    play sound "sounds/cup.mp3"
+    play sound sound.cup
 
     scene sfr4ri11b #Ryan still trying to flip his cup.
     with dissolve
 
     u "You got this, man!"
 
-    play sound "sounds/cup.mp3"
+    play sound sound.cup
     scene sfr4ri12 #Lauren successfully flips her cup on the first try.
     with dissolve
 
@@ -12115,7 +12115,7 @@ label rileyhocodate:
 
     pause 0.5
 
-    play sound "sounds/cup.mp3"
+    play sound sound.cup
 
     scene sfr4ri13b # riley celebrating
     with dissolve
@@ -12149,20 +12149,20 @@ label rileyhocodate:
 
     pause 0.5
 
-    play sound "sounds/cup.mp3"
+    play sound sound.cup
 
     scene sfr4ri15b # you trying to flip your cup again
     with dissolve
 
     la "Yes, Riley!"
 
-    play sound "sounds/cup.mp3"
+    play sound sound.cup
     scene sfr4ri15c  # you finally get it flipped
     with dissolve
 
     pause 0.5
 
-    play sound "sounds/cup.mp3"
+    play sound sound.cup
     scene sfr4ri15d  # you finally get it flipped
     with dissolve
 
@@ -12173,7 +12173,7 @@ label rileyhocodate:
 
     pause 0.5
 
-    play sound "sounds/cup.mp3"
+    play sound sound.cup
     scene sfr4ri16 #ryan flips it on the first try
     with dissolve
 
@@ -12209,7 +12209,7 @@ label rileyhocodate:
 
     pause 0.5
 
-    play sound "sounds/cup.mp3"
+    play sound sound.cup
     scene sfr4ri16 #ryan flips it on the first try
     with dissolve
 
@@ -12225,7 +12225,7 @@ label rileyhocodate:
 
     ry "Bro, you got this!"
 
-    play sound "sounds/cup.mp3"
+    play sound sound.cup
     scene sfr4ri13b #Riley flips her cup
     with dissolve
 
@@ -12258,9 +12258,9 @@ label rileyhocodate:
 
     u "Yeah, let's go!"
 
-    play music "music/mhoco1.mp3"
+    play music music.ck1.mhoco1
 
-    queue music [ "music/mhoco2.mp3", "music/mhoco3.mp3", "music/mhoco4.mp3"]
+    queue music [music.ck1.mhoco2, music.ck1.mhoco3, music.ck1.mhoco4]
 
     scene sfr4ri25 # ryan, lauren , riley and mc arrive in the gym
     with fade
@@ -12327,9 +12327,9 @@ label rileyhocodate:
 ############# SCENE 45 HOMECOMING FREE ROAM
 
 label fr4:
-    play music "music/mhoco1.mp3"
+    play music music.ck1.mhoco1
 
-    queue music [ "music/mhoco2.mp3", "music/mhoco3.mp3", "music/mhoco4.mp3"]
+    queue music [music.ck1.mhoco2, music.ck1.mhoco3, music.ck1.mhoco4]
 
     jump labelfr4dancefloor
 
@@ -12776,9 +12776,9 @@ label fr4chloedate:
         u "Finally, haha."
 
 label chloe_dance:
-    play music "music/mlove2.mp3"
+    play music music.ck1.mlove2
 
-    queue music [ "music/mlove.mp3", "music/mlove1.mp3"]
+    queue music [music.ck1.mlove, music.ck1.mlove1]
 
     scene sfr4cl45 # dancing with chloe she's smiling pose 1
     with Dissolve(1)
@@ -13258,9 +13258,9 @@ label fr4laurendate:
 
             ro "Well, let's just start the dance back up then!"
 
-    play music "music/mlove2.mp3"
+    play music music.ck1.mlove2
 
-    queue music [ "music/mlove.mp3", "music/mlove1.mp3"]
+    queue music [music.ck1.mlove, music.ck1.mlove1]
 
     scene sfr4la20a # showing lauren and mc slow dancing, lauren mouth closed, lauren smiling pose 1
     with Dissolve(1)
@@ -13319,9 +13319,9 @@ label fr4laurendate:
 
     u "Haha, deal."
 
-    play music "music/m16punk.mp3"
+    play music music.ck1.m16punk
 
-    queue music [ "music/mchill1.mp3", "music/m7punk.mp3" ]
+    queue music [music.ck1.mchill1, music.ck1.m7punk]
 
     scene sfr4la21 # mc and lauren walking back holding hands through the park
     with fade
@@ -13360,7 +13360,7 @@ label fr4laurendate:
 
     scene sfr4la23 #Lauren and Mc arrive at Lauren's dorm.
     with fade
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
 
     pause 0.5
 
@@ -13528,9 +13528,9 @@ label fr4penelopedate:
 
             ro "Well, let's just start the dance back up then!"
 
-    play music "music/mlove2.mp3"
+    play music music.ck1.mlove2
 
-    queue music [ "music/mlove.mp3", "music/mlove1.mp3"]
+    queue music [music.ck1.mlove, music.ck1.mlove1]
 
     scene sfr4pe15 # penelope and mc slow dancing pose 1, penelope cute smiling
     with Dissolve(1)
@@ -13789,9 +13789,9 @@ label fr4penelopedate:
 
         ri "Cool!"
 
-        play music "music/m16punk.mp3"
+        play music music.ck1.m16punk
 
-        queue music [ "music/mchill1.mp3", "music/m7punk.mp3" ]
+        queue music [music.ck1.mchill1, music.ck1.m7punk]
 
         jump fr4rileyending2
 
@@ -13823,9 +13823,9 @@ label fr4penelopedate:
 
         ri "Cool!"
 
-        play music "music/m16punk.mp3"
+        play music music.ck1.m16punk
 
-        queue music [ "music/mchill1.mp3", "music/m7punk.mp3" ]
+        queue music [music.ck1.mchill1, music.ck1.m7punk]
 
         jump fr4rileyending2
 
@@ -14040,7 +14040,7 @@ label fr4nora1:
 
     pause 0.5
 
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         scene sfr4no2c
         with dissolve
 
@@ -14398,7 +14398,7 @@ label fr4aaron1:
         "Back up Aaron":
             $ reputation.add_point(RepComponent.BRO)
 
-            if joinwolves or hcGirl == "chloe":
+            if mc.frat == Frat.WOLVES or hcGirl == "chloe":
                 u "Trust me, Aaron's a great guy and any girl would be lucky to go home with him."
 
                 scene sfr4aa3 # close up aaron smiling at you
@@ -14477,7 +14477,7 @@ label fr4aaron1:
         "Side with Lindsey":
             $ reputation.add_point(RepComponent.BOYFRIEND)
 
-            if joinwolves or hcGirl == "chloe":
+            if mc.frat == Frat.WOLVES or hcGirl == "chloe":
                 u "You guys should stay. It's fun!"
 
                 scene sfr4aa3f # close up aaron looking at you annoyed
@@ -15471,7 +15471,7 @@ label fr4cameron1:
 
     ca "God, all you do is complain."
 
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         scene sfr4ca2b # cameron looking at you pissed
         with dissolve
 
@@ -15817,7 +15817,7 @@ label fr4imre1:
 
     unknown "*Moans* Fuck Mhmmm, yes!"
 
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         menu:
             "Say something to Imre":
                 $ reputation.add_point(RepComponent.BRO)
@@ -15878,7 +15878,7 @@ label fr4penelope1:
     scene sfr4pe24b #Penelope hangs up.
     with dissolve
 
-    play sound "sounds/rejectcall.mp3"
+    play sound sound.reject_call
 
     pause 0.5
 
@@ -16173,7 +16173,7 @@ label fr4grayson1:
 
     scene sfr4gr1 # grayson about to spray the wall
 
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         u "What are you doing, Grayson?"
 
         scene sfr4gr1b # grayson looking at you annoyed intense
@@ -16767,7 +16767,7 @@ label fr4samantha1:
     scene sfr4sa5b # sam unsure
     with dissolve
 
-    if not joinwolves:
+    if mc.frat == Frat.APES:
         sa "Wait, I know you... or... do I know you?"
 
         scene sfr4sa4d # sebastian looking at sam
@@ -16844,7 +16844,7 @@ label fr4samantha1:
 
             u "No."
 
-            if not joinwolves:
+            if mc.frat == Frat.APES:
                 scene sfr4sa5c
                 with dissolve
 
@@ -17039,9 +17039,9 @@ label fr4rileyending:
     scene sfr4ri52 #MC and Riley are walking back through the dorm hallways.
     with fade
 
-    play music "music/m16punk.mp3"
+    play music music.ck1.m16punk
 
-    queue music [ "music/mchill1.mp3", "music/m7punk.mp3" ]
+    queue music [music.ck1.mchill1, music.ck1.m7punk]
 
     if (Moods.TEASED in riley.mood or CharacterService.is_fwb(riley)):
         ri "Sooo homecoming was pretty fun... but I bet the night could get even better."
@@ -17150,9 +17150,9 @@ label fr4chloeending:
     scene sfr4cl56 #tpp  mc and chloe walking through the park
     with fade
 
-    play music "music/m16punk.mp3"
+    play music music.ck1.m16punk
 
-    queue music [ "music/mchill1.mp3", "music/m7punk.mp3" ]
+    queue music [music.ck1.mchill1, music.ck1.m7punk]
 
     $ ending = "chloe"
 
@@ -17204,7 +17204,7 @@ label fr4chloeending:
 
     u "Sure."
 
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
     scene sfr4cl60 # fpp showing chloe slightly opening a door inside her room  about to walk inside
     with dissolve
 
@@ -17215,7 +17215,7 @@ label fr4chloeending:
 
     cl "*Chuckles* I'll be back in a minute."
 
-    play sound "sounds/doorclose.mp3"
+    play sound sound.door_close
 
     scene sfr4cl61 # tpp mc walking towards her night stand with a book on it."
     with dissolve
@@ -17232,14 +17232,14 @@ label fr4chloeending:
 
     u "(Hmm... Colony Crisis. Interesting.)"
 
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
     scene sfr4cl61c #showing mc, mc looks up at the door
     with dissolve
 
     "*Door opening*"
 
     # towel drop sound #check - add towel.mp3 sound file
-    play sound "sounds/towel.mp3"
+    play sound sound.towel
 
     if is_censored:
         call screen censored_popup("v8s2_nsfwSkipLabel1")

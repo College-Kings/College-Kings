@@ -4,9 +4,9 @@
 # Time: Evening 
 
 label v14s05:
-    play music "music/v13/Track Scene 40_3.mp3" fadein 2
+    play music music.v13_Track_Scene_40_3 fadein 2
 
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
     pause 0.51
 
     scene v14s05_1 # TPP. MC, mouth closed, worried, enters through his hotel room door.
@@ -153,7 +153,7 @@ label v14s05:
         scene v14s05_7 # TPP. Close up (head shot), Chloe kissing MC while he is laying in bed.
         with dissolve
 
-        play sound "sounds/kiss.mp3"
+        play sound sound.kiss
 
         pause 0.75
 
@@ -180,7 +180,7 @@ label v14s05:
     scene v14s05_9a # TPP. Chloe touching the light switch (lights are on).
     with dissolve
 
-    play sound "sounds/switch.mp3"
+    play sound sound.switch
 
     pause 0.75
 

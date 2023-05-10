@@ -9,7 +9,7 @@ label v13s61:
 
     pause 0.75
 
-    play music "music/v13/Track Scene 61.mp3" fadein 2
+    play music music.ck1.v13.Track_Scene_61 fadein 2
 
     scene v13s61_2 # TPP. Show Aubrey helping MC into bed, MC pain expression, mouth closed, Aubrey worried expresion, mouth closed.
     with dissolve
@@ -99,7 +99,7 @@ label v13s61:
     scene v13s61_4a # FPP. Same as v13s61_4, MC looking at door to his room
     with fade
 
-    play sound "sounds/knock.mp3"
+    play sound sound.knock
 
     pause 1.5
 

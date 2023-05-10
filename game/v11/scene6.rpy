@@ -2,10 +2,10 @@
 # Locations: MC bedroom,
 # Characters: MC (smart outfit from scene 1)
 # Time: Thursday night
-
 label v11_thurs_night_room:
-    play music "music/v11/Track Scene 6.mp3" fadein 2
-    if joinwolves:
+    play music music.v11_Track_Scene_6 fadein 2
+    if mc.frat == Frat.WOLVES:
+
         scene v11tnr1 # TPP. Show MC walking into his wolves bedroom.
         with fade
         

@@ -9,14 +9,14 @@ label v10_avoid_fight:
         scene v10frr1 # TPP. Show MC leaving the warehouse.(camera from inside wearhouse positioned behind mc)
         with dissolve
 
-        play music "music/v10/Track Scene 8a.mp3" fadein 2
+        play music music.ck1.v10.Track_Scene_8a fadein 2
 
         pause 0.75
 
         scene v10frr2 # TPP. Show MC having just left the warehouse (camera from outside, mc facing camera)        
         with dissolve
 
-        if joinwolves:
+        if mc.frat == Frat.WOLVES:
             scene v10frr2a # TPP. same camera as v10frr2, Show MC having just left the warehouse (camera from outside, mc facing camera), Show chris just exiting the warehouse. MC mouth closed, Chris mouth open
             with dissolve
 

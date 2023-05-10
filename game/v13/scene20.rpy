@@ -7,9 +7,9 @@ label v13s20:
     scene v13s20_1 # TPP. Show MC walking into Charli's room, smirking, mouth closed
     with dissolve
 
-    play music "music/v13/Track Scene 20.mp3" fadein 2
+    play music music.ck1.v13.Track_Scene_20 fadein 2
 
-    play sound "sounds/doorclose.mp3"
+    play sound sound.door_close
 
     u "(Ohhhh shit... I'm gonna fuck some shit up.) *Laughs*"
 

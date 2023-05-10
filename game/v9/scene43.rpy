@@ -7,7 +7,7 @@ label v9_warehouse_josh:
     scene v9jka1 # FPP. Show Josh, Kim and Amber slightly in the distance, all looking at camera smling. (Sat at the end of the Balcony within the warehouse).
     with fade
 
-    play music "music/v9/Track Scene 30.mp3" fadein 2
+    play music music.ck1.v9.Track_Scene_30 fadein 2
 
     pause 1
 

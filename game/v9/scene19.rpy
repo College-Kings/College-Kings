@@ -8,11 +8,11 @@ label v9_lau_dorm:
     scene v9lau1 # TPP. Show MC walking up the hallway to Lauren's dorm.
     with fade
 
-    play music "music/v9/Track Scene 8_1.mp3" fadein 2
+    play music music.ck1.v9.Track_Scene_8_1 fadein 2
 
     pause 0.8
 
-    play sound "sounds/knock.mp3"
+    play sound sound.knock
 
     scene v9lau2 # TPP. Show MC knocking on Lauren's dorm door.
     with dissolve
@@ -308,7 +308,7 @@ label v9_lau_dorm:
     scene v9lau6c
     with dissolve
 
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         u "Five bucks to punch Grayson in the face-"
 
     else:
@@ -630,7 +630,7 @@ label v9_lau_dorm_kiss:
     scene v9lau17 # TPP. Show Lauren and MC kissing.
     with dissolve
 
-    play sound "sounds/kiss.mp3"
+    play sound sound.kiss
 
     pause 1
 

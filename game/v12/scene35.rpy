@@ -10,7 +10,7 @@ label v12_chris_nora_room:
 
     pause 0.75
 
-    play music "music/v12/Track Scene 35.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_35 fadein 2
 
     scene v12cnr2 # TPP. Show MC walking into his room, mouth closed, neutral expression
     with dissolve
@@ -57,7 +57,7 @@ label v12_chris_nora_room:
 
     ch "I'm not gonna keep feeling bad all the time like all this shit is my fault. Enjoy your fucking night. I'll go sleep somewhere else!"
 
-    play sound "sounds/slam.mp3"
+    play sound sound.slam
 
     scene v12cnr7a # TPP. Same as v12cnr7, MC startled, mouth closed
     with dissolve
@@ -84,7 +84,7 @@ label v12_chris_nora_room:
 
             scene v12cnr12 # TPP. Show MC knocking on Nora's door, MC slightly worried, mouth open
             with dissolve
-            play sound "sounds/knock.mp3"
+            play sound sound.knock
 
             u "Nora, I... Are you alright?"
 
@@ -119,7 +119,7 @@ label v12_chris_nora_room:
 
                 pause 0.75
 
-                play sound "sounds/doorclose.mp3"
+                play sound sound.door_close
                 scene v12cnr4
                 with dissolve
 
@@ -133,7 +133,7 @@ label v12_chris_nora_room:
                 jump v12_game_roommate
 
             else:
-                play sound "sounds/dooropen.mp3"
+                play sound sound.door_open
                 scene v12cnr12a # TPP. Same as v12cnr12, Door open, Nora inside the room, looking at MC who is outside, Nora crying, mouth closed, MC worried, mouth closed
                 with dissolve
 

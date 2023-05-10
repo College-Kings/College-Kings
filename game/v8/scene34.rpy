@@ -56,7 +56,7 @@ label v8_tues_noon:
         v8s34_reply2.add_reply(_("Did you finish studying?"), v8s34_reply4)
 
     if CharacterService.is_mad(chloe):
-        if joinwolves:
+        if mc.frat == Frat.WOLVES:
             scene v8room20 # TPP. MC laying on bed in his room in Wolves house, looking at his phone, smiling a little, mouth closed
             with Fade(0.75, 0.25, 0.75)
             pause 0.5
@@ -68,7 +68,7 @@ label v8_tues_noon:
             u "(I should check in with Julia.)"
         jump v8_julia_call
 
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         scene v8room20
         with Fade(0.75, 0.25, 0.75)
         pause 0.5

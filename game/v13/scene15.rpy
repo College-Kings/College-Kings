@@ -9,7 +9,7 @@ label v13s15:
 
     pause 0.75
 
-    play music "music/v13/Track Scene 15.mp3" fadein 2
+    play music music.v13_Track_Scene_15 fadein 2
 
     scene v13s15_2 # TPP. Show MC standing in front of the door, in the room, MC neutral expression, mouth closed, room is dark
     with dissolve
@@ -99,7 +99,7 @@ label v13s15:
             v13s15_Reply2.add_reply("Sorry babe, I'm just so tired.")
             v13s15_Reply2.new_message("It's okay, night.")
 
-        play sound "sounds/vibrate.mp3"
+        play sound sound.vibrate
 
         scene v13s15_10 # TPP. MC looking down at his phone, he is standing in same place as v13s15_6, slightly surprised, mouth closed
         with dissolve

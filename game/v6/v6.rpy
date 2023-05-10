@@ -65,7 +65,7 @@ label imrecona: # Find Imre
 
     scene s443 # you entering dorm
     with fade
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
     pause 0.5
 
     scene s444 # Imre packing his bag
@@ -360,9 +360,9 @@ label imrecond: # Meet Chloe
 
     scene s451 ## FIRST PERSON: you see chloe sitting in bikini at the pool staring at the water
     with Fade (1,0,1)
-    play music "music/m16punk.mp3"
+    play music music.ck1.m16punk
 
-    queue music [ "music/mchill1.mp3", "music/m7punk.mp3" ]
+    queue music [music.ck1.mchill1, music.ck1.m7punk]
 
     pause 0.5
 
@@ -471,7 +471,7 @@ label imrecond: # Meet Chloe
 
     pause 0.5
 
-    play sound "sounds/splash2.mp3"
+    play sound sound.splash2
     scene s457e2 # chloe moves a bit away and splashes wateer
     with vpunch
 
@@ -598,7 +598,7 @@ label imrecond: # Meet Chloe
 
     cl "Yeah, haha. Bye."
 
-    play sound "sounds/rejectcall.mp3"
+    play sound sound.reject_call
 
     scene s463 # mc sitting on the side of the pool with a towel as Chloe walks back to him with towel, mc looking at the water
     with dissolve
@@ -743,7 +743,7 @@ label imrecond: # Meet Chloe
 
                     cl "Exactly."
 
-                    play sound "sounds/twig.mp3"
+                    play sound sound.twig
 
                     scene s469b # both girls look in your direction but not directly at you
                     with dissolve
@@ -833,7 +833,7 @@ label imrecond: # Meet Chloe
 
 # opening the room of your dorm after not choosing Imre, if imre mad, find a note of him moved out, if = False, he's gone and you call imre and he tells you that ADAM wasnt in his dorm, you have the same talk as if you had visited him over the phone
 label fs_bd:
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
     scene s476 # you Entering your dorm room # cant look inside yet
     with Fade (1,0,1)
 
@@ -939,7 +939,7 @@ label fs_bd:
 
         u "Yeah, bye."
 
-        play sound "sounds/rejectcall.mp3"
+        play sound sound.reject_call
 
 label continuebb:
     scene s482 # transition slide from your dorm, you doing something
@@ -1034,7 +1034,7 @@ label continuebd:
     stop music fadeout 3
     scene s484 # MC NO LONGER HAS BLACK EYE  in bed
     with Fade (1,0,1)
-    play music "music/m15punk.mp3"
+    play music music.ck1.punk15
     pause 0.5
 
     scene s484a # mc yawns
@@ -1103,7 +1103,7 @@ label continuebd:
             scene clocka
             with fade
 
-            play sound "sounds/clock2.mp3"
+            play sound sound.clock2
 
             pause (0.5)
 
@@ -1190,7 +1190,7 @@ label continuebd:
             scene clocka
             with fade
 
-            play sound "sounds/clock2.mp3"
+            play sound sound.clock2
 
             pause (0.5)
 
@@ -1291,7 +1291,7 @@ label continuebd:
             scene clocka
             with fade
 
-            play sound "sounds/clock2.mp3"
+            play sound sound.clock2
 
             pause (0.5)
 
@@ -1397,7 +1397,7 @@ label continuebd:
         scene clocka
         with fade
 
-        play sound "sounds/clock2.mp3"
+        play sound sound.clock2
 
         pause (0.5)
 
@@ -1473,9 +1473,9 @@ label continuebd:
 
             u "Thanks, Riley."
 
-    play music "music/m4punk.mp3"
+    play music music.ck1.m4punk
 
-    queue music [ "music/m9punk.mp3"]
+    queue music [music.ck1.m9punk]
 
     label afterclass: #for compatibility only
     scene s494 # showing your and rileys backs leaving the classroom
@@ -1531,14 +1531,14 @@ label continuebd:
     scene s498 #FIRST PERSON:  Ryan opens a door, perspective so you can't look inside much
     with dissolve
 
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
 
     ry "In here."
 
     scene s499 #FIRST PERSON: Graysons inside the small, dark room ,sitting on a chair,
     with dissolve
 
-    play sound "sounds/doorclose.mp3"
+    play sound sound.door_close
 
     u "What the fuck is this?!"
 
@@ -1654,9 +1654,9 @@ label continuebd:
     with fade
 
     pause 0.5
-    play music "music/mindie1.mp3"
+    play music music.ck1.mindie1
 
-    queue music [ "music/mindie2.mp3", "music/mindie3.mp3" ]
+    queue music [music.ck1.mindie2, music.ck1.mindie3]
 
     scene s504a # Mc walking past open classroom door
     with dissolve
@@ -2027,7 +2027,7 @@ label continuebd:
 
                 ev "I'm sure you'll find someone else, good bye."
 
-                play sound "sounds/rejectcall.mp3"
+                play sound sound.reject_call
 
                 "*Evelyn hangs up*"
 
@@ -2090,7 +2090,7 @@ label continuebd:
 
                 ev "Yes..."
 
-                play sound "sounds/rejectcall.mp3"
+                play sound sound.reject_call
 
                 "*Evelyn hangs up*"
 
@@ -2120,11 +2120,11 @@ label continuebd:
         play sound sound.swoosh
         scene s388e #you press lever
         with flash
-        play sound "sounds/lever.mp3"
+        play sound sound.lever
 
         pause 0.5
 
-        play sound "sounds/splat.mp3"
+        play sound sound.splat
 
         scene s390a # your face full of blood
         with vpunch
@@ -2139,7 +2139,7 @@ label continuebd:
         u "*Breathing heavily*"
 
     label runback: #for compatibility only
-    play music "music/mindie5.mp3"
+    play music music.ck1.mindie5
 
     scene s526 # you running back to your dorm
     with fade
@@ -2191,12 +2191,12 @@ label continuebd:
     scene s530  # FIrst person: Looking at phone: Emily callingL
     with dissolve
 
-    play music "music/m16punk.mp3"
+    play music music.ck1.m16punk
 
     menu:
         "Accept call":
             stop sound
-            play sound "sounds/answercall.mp3"
+            play sound sound.answer_call
             $ reputation.add_point(RepComponent.BOYFRIEND)
 
             # aceept call sound
@@ -2258,7 +2258,7 @@ label continuebd:
                         scene s531d # mc looks at phone, away from ear
                         with dissolve
 
-                        play sound "sounds/rejectcall.mp3"
+                        play sound sound.reject_call
 
                         "*You hang up*"
 
@@ -2342,7 +2342,7 @@ label continuebd:
                         scene s531d # mc looks at phone, away from ear
                         with dissolve
 
-                        play sound "sounds/rejectcall.mp3"
+                        play sound sound.reject_call
 
                         "*You hang up*"
 
@@ -2379,7 +2379,7 @@ label continuebd:
                 scene s531d # mc looks at phone, away from ear
                 with dissolve
 
-                play sound "sounds/rejectcall.mp3"
+                play sound sound.reject_call
 
                 "*You hang up*"
 
@@ -2453,13 +2453,13 @@ label continuebd:
 
         "Reject call":
             stop sound
-            play sound "sounds/rejectcall.mp3"
+            play sound sound.reject_call
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             scene s531d
             with dissolve
 
-            play sound "sounds/rejectcall.mp3"
+            play sound sound.reject_call
 
             pause 0.5
 
@@ -2685,7 +2685,7 @@ label fz_b:
 
     #### SEX SCENE EMILY
 label emsex_c:
-    play music "music/msexy.mp3"
+    play music music.ck1.sexy
 
     scene emvid1
     with dissolve
@@ -2720,7 +2720,7 @@ label emsex_a:
     scene emvid2
     with dissolve
 
-    play music "music/msexy.mp3"
+    play music music.ck1.sexy
 
     $ grant_achievement("reignition")
     
@@ -2902,7 +2902,7 @@ label emhead:
     hide screen emilysexoverlay
     $ renpy.end_replay()
 
-    play music "music/m7punk.mp3"
+    play music music.ck1.m7punk
 
     scene em17
     with fade
@@ -2992,7 +2992,7 @@ label fy_bd: # not gone to Emily's
     scene s540 # you working on your desk
     with Fade (1,0,1)
 
-    play music "music/mfunk.mp3"
+    play music music.ck1.mfunk
 
     if imreforgives:
         $ CharacterService.set_relationship(imre, Relationship.FRIEND, mc)
@@ -3028,7 +3028,7 @@ label fy_bd: # not gone to Emily's
         u "(I really hope Imre comes back at some point.)"
 
     else:
-        play sound "sounds/dooropen.mp3"
+        play sound sound.door_open
 
         scene s540a
         with dissolve
@@ -3119,8 +3119,8 @@ label fy_bd: # not gone to Emily's
     pause 0.5
 
     if CharacterService.is_dating(evelyn):
-        play music "music/mlove1.mp3"
-        queue music ["music/mlove2.mp3"]
+        play music music.ck1.mlove1
+        queue music [music.ck1.mlove2]
 
         scene s546a # phone close up, it's 7:30
         with dissolve
@@ -3728,9 +3728,9 @@ label fy_bd: # not gone to Emily's
 
             jump afteraubrey
 
-    play music "music/mindie1.mp3"
+    play music music.ck1.mindie1
 
-    queue music [ "music/mindie2.mp3", "music/mindie3.mp3" ]
+    queue music [music.ck1.mindie2, music.ck1.mindie3]
 
     scene s566 # you knock on aubrey's door
     with Fade(1,0,1)
@@ -3741,7 +3741,7 @@ label fy_bd: # not gone to Emily's
 
     scene s567 # Close Up: Aubrey opens the door
     with dissolve
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
 
     au "Heyy."
 
@@ -3788,7 +3788,7 @@ label fy_bd: # not gone to Emily's
 
     scene s570a # you toast
     with dissolve
-    play sound "sounds/toast.mp3"
+    play sound sound.toast
 
     u "Cheers."
 
@@ -3996,7 +3996,7 @@ label aubreysexb: # aubreysex scene
     $ sceneList.add("v6_aubrey")
 
     stop music fadeout 3
-    play music "music/msexy.mp3"
+    play music music.ck1.sexy
 
     scene naubvid0
     with dissolve
@@ -4360,7 +4360,7 @@ label naubclimax:
 
     u "That was amazing."
 
-    play music "music/m16punk.mp3"
+    play music music.ck1.m16punk
     scene naub21
     with dissolve
 
@@ -4471,9 +4471,9 @@ label afteraubrey:
             scene s575 # mc sits alone at midnight on the front stairs of the college waiting.
             with fade
 
-            play music "music/m3punk.mp3"
+            play music music.ck1.m3punk
 
-            queue music [ "music/m4punk.mp3", "music/m12punk.mp3", "music/m13punk.mp3" ]
+            queue music [music.ck1.m4punk, music.ck1.m12punk, music.ck1.m13punk]
 
             pause 1.0
 
@@ -4514,7 +4514,7 @@ label afteraubrey:
 
             #### Car scene
 
-            play music "sounds/driving1.mp3"
+            play ambience ambience.driving
 
             show carbacknight
 
@@ -4719,7 +4719,7 @@ label afteraubrey:
                     gr "We're here."
 
             label wehere: #for compatibility only
-            stop music fadeout 3
+            stop ambience fadeout 3
 
             scene s580 # Showing you and Grayson At night on a ledge, overlooking the city??? Or something else cool, Grayson looking into the distance
             with fade
@@ -4886,7 +4886,7 @@ label afteraubrey:
 
                     # back in the car, already rendered
                     # car sound and background
-                    play music "sounds/driving1.mp3"
+                    play ambience ambience.driving
                     scene carbacknight
 
                     show s579a
@@ -4929,7 +4929,7 @@ label afteraubrey:
                     with dissolve
 
                     gr "Good. Trust me, this will change everything."
-                    stop music fadeout 3
+                    stop ambience fadeout 3
 
                 "I'm not in":
                     $ reputation.add_point(RepComponent.BRO)
@@ -5013,7 +5013,7 @@ label afteraubrey:
 
     pause 0.5
     #### Nightmare
-    play music "music/mhorror.mp3"
+    play music music.horror
     play sound sound.swoosh
     scene s587 # Showing you, lauren and Riley running through the forest terrified like someone's after them
     with flash
@@ -5056,7 +5056,7 @@ label afteraubrey:
             with dissolve
 
             unknown "1..."
-            play sound "sounds/fall.mp3"
+            play sound sound.fall
 
             scene s593 # Mc and Lauren on the ground terrified
             with vpunch
@@ -5079,7 +5079,7 @@ label afteraubrey:
             with dissolve
 
             unknown "1..."
-            play sound "sounds/fall.mp3"
+            play sound sound.fall
 
             scene s595 # Mc and Riley on the ground terrified
             with vpunch
@@ -5116,9 +5116,9 @@ label wakeupa:
     with flash
 
     u "*Breathing heavily* (Holy shit... thank god that was just a dream.)"
-    play music "music/m15punk.mp3"
+    play music music.ck1.punk15
 
-    queue music ["music/mfunk.mp3"]
+    queue music [music.ck1.mfunk]
 
     if CharacterService.is_mad(imre):
         scene s604 # Mc wakes up in bed,
@@ -5258,7 +5258,7 @@ label wakeupa:
         with dissolve
 
         pause 0.5
-        play sound "sounds/bs.mp3"
+        play sound sound.hit
         scene s599a # Imre throws uppercut, bag barely moves
         with vpunch
 
@@ -5305,7 +5305,7 @@ label wakeupa:
         with fade
 
         pause 0.5
-        play sound "sounds/bs.mp3"
+        play sound sound.hit
         scene s600a # mc throws an uppercut successfully
         with vpunch
 
@@ -5316,7 +5316,7 @@ label wakeupa:
 
         imre "Nice! Try again."
 
-        play sound "sounds/bs.mp3"
+        play sound sound.hit
         scene s600a
         with vpunch
 
@@ -5326,7 +5326,7 @@ label wakeupa:
         with dissolve
 
         pause 0.5
-        play sound "sounds/bs.mp3"
+        play sound sound.hit
         scene s600a
         with vpunch
 
@@ -5471,11 +5471,11 @@ label wakeupa:
 
     stop sound
 
-    play sound "sounds/answercall.mp3"
+    play sound sound.answer_call
 
-    play music "music/mindie1.mp3"
+    play music music.ck1.mindie1
 
-    queue music [ "music/mindie2.mp3", "music/mindie3.mp3" ]
+    queue music [music.ck1.mindie2, music.ck1.mindie3]
 
     scene s611 # close up mc on phone mouth open
     with dissolve
@@ -6181,9 +6181,9 @@ label wakeupa:
     stop music fadeout 3
 
     if bowling: # Penelope bowling scene
-        play music "music/m16punk.mp3"
+        play music music.ck1.m16punk
 
-        queue music [ "music/mchill1.mp3", "music/m7punk.mp3" ]
+        queue music [music.ck1.mchill1, music.ck1.m7punk]
         scene s630 # you walking towards bowling
         with Fade (1,0,1)
 
@@ -6316,7 +6316,7 @@ label wakeupa:
         with dissolve
 
         pause 0.5
-        play sound "sounds/strike.mp3"
+        play sound sound.strike
         scene s641 # hits 7 or so pins
         with vpunch
 
@@ -6432,7 +6432,7 @@ label wakeupa:
 
         pause 0.5
 
-        play sound "sounds/strike.mp3"
+        play sound sound.strike
 
         scene s651 # all pins knocked down
         with vpunch
@@ -6629,7 +6629,7 @@ label wakeupa:
 
     label readywolf: #for compatibility only
     stop music fadeout 3
-    play music "music/m6punk.mp3"
+    play music music.ck1.m6punk
 
     if CharacterService.is_mad(imre):
         scene s660 # Mc getting ready for the party by himself
@@ -6991,9 +6991,9 @@ label wolvesfr:
 
 ### WOLVES RUSH PARTY FREE ROAM freeroam3 freeroam 3 free roam 3
 label wolvesfr2:
-    play music "music/mparty2.mp3"
+    play music music.ck1.mparty2
 
-    queue music [ "music/mparty3.mp3", "music/mparty4.mp3"]
+    queue music [music.ck1.mparty3, music.ck1.mparty4]
 
     #### room labels Navigation:
     call screen v6_fr3garden
@@ -10403,7 +10403,7 @@ label upstairsamber: # upstairs with amber
 
     am "Hold up."
 
-    play sound "sounds/answercall.mp3"
+    play sound sound.answer_call
 
     scene sufr3am2h # amber on phone mouth open serious
     with dissolve

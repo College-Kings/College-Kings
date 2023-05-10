@@ -8,8 +8,8 @@ label s26:
     with Fade(0.75, 0.25, 0.75)
     pause 0.5
 
-    play music "music/mindie4.mp3" fadein 2
-    queue music "music/mchill2.mp3"
+    play music music.ck1.mindie4 fadein 2
+    queue music music.ck1.mchill2
 
     if CharacterService.is_girlfriend(lauren):
         u "(Ahhh, there's Aubrey and Riley')"

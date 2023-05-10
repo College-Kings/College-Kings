@@ -9,7 +9,7 @@ label v12_paris_hotel:
     
     pause 0.75
 
-    play music "music/v12/Track Scene 11.mp3" fadein 2
+    play music music.v12_Track_Scene_11 fadein 2
 
     scene v12pht2 # FPP. Looking at imre, mouth opened
     with dissolve
@@ -44,7 +44,7 @@ label v12_paris_hotel:
     scene v12pht3 # FPP. Chris and Imre high five
     with dissolve
 
-    play sound "sounds/ks.mp3"
+    play sound sound.hit
 
     pause 0.75
 
@@ -412,7 +412,7 @@ label v12_paris_hotel:
 
     scene v12pht12 # TPP. MC at his hotel door
     with dissolve
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
 
     pause 0.75
     stop music fadeout 3

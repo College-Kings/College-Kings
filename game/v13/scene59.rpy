@@ -9,7 +9,7 @@ label v13s59:
 
     pause 0.75
 
-    play music "music/v13/Track Scene 59_1.mp3" fadein 2
+    play music music.v13_Track_Scene_59_1 fadein 2
 
     scene v13s59_1a # TPP. same as v13s59_1 show mc and aubrey standing in front of the rental stanb waiting for the shop clerk, shop clerk not visible, looking at each other, mc rings a service bell
     with dissolve
@@ -312,18 +312,18 @@ label v13s59:
 
                 scene v13s59_7 # TPP. Aubrey and MC romantically kiss
                 with dissolve
-                play sound "sounds/kiss.mp3"
+                play sound sound.kiss
 
                 pause 1.25
 
-                play sound "sounds/lick.mp3"
+                play sound sound.lick
                 scene v13s59_7a # TPP. the cow licks aubrey and the mc's faces, aubrey and mc slight shock, they are both looking at the cow
                 with dissolve
 
                 pause 1.25
 
                 stop music fadeout 3
-                play music "music/v13/Track Scene 59_2.mp3" fadein 2
+                play music music.ck1.v13.Track_Scene_59_2 fadein 2
 
                 scene v13s59_7b # TPP. the cow has walked away, aubrey and mc look at each other
                 with dissolve

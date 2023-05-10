@@ -6,7 +6,7 @@
 label v11_chloe_bathroom:
     scene v11chb1 # TPP. Show MC walking into the room, confused, mouth closed
     with dissolve
-    play music "music/v10/Track Scene 40_3.mp3" fadein 2
+    play music music.ck1.v10.Track_Scene_40_3 fadein 2
     cl "*Crying*"
 
     scene v11chb2 # TPP. Show MC walking up to the bathroom door, worried expression, mouth closed
@@ -114,7 +114,7 @@ label v11_chloe_bathroom:
 
     pause 0.75
 
-    play sound "sounds/kiss.mp3"
+    play sound sound.kiss
 
     scene v11chb9 # TPP. Show MC and Chloe making out in the room
     with dissolve
@@ -186,7 +186,7 @@ label v11_chloe_bathroom:
             if CharacterService.is_fwb(chloe) or CharacterService.is_girlfriend(chloe):
                 scene v11chb12b # TPP. Same as v11chb12a, MC and Chloe kissing (just a peck on the lips)
                 with dissolve
-                play sound "sounds/kiss.mp3"
+                play sound sound.kiss
 
                 pause 0.75
             

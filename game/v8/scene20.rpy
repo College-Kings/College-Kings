@@ -1,21 +1,14 @@
 # SCENE20: ARCADE WITH EMILY
 # Locations: Slot Machine Arcade, Emily's dorm
 # Characters: MC (outfit 2), Emily (outfit 3 or better put together something more skimpier), arcade room employee, two random extras
-# Time: Sunday evening
-
-### Extra audio files needed (coded but commented out for now) ###
-# arcade_amb.mp3 - Arcade room ambience, arcade_win.mp3 - A short arcade game winning sound, arcade_lose.mp3 - A short arcade game losing sound
-
-init python:
-    renpy.music.register_channel("ambience", mixer="sfx", loop=True)
+# Time: Sunday evening    
 
 label emily_arcade:
-    
     $ renpy.music.set_volume(1, channel="ambience")
 
     scene v8arcade1 # TPP. MC walking into the arcade building, Emily can be seen waiting for him inside
     with Fade(0.75, 0.25, 0.75)
-    play ambience "sounds/arcade_amb.mp3" fadein 2
+    play ambience ambience.arcade fadein 2
     pause 1
 
     if CharacterService.is_fwb(emily):
@@ -190,7 +183,7 @@ label em_arcade_2:
     with dissolve
     pause 1
 
-    play sound "sounds/arcade_win.mp3"
+    play sound sound.arcade_win
 
     scene v8arcade5b # Emily celebrating victory, same arcade screen as v8arcade5a
     with dissolve
@@ -208,7 +201,7 @@ label em_arcade_2:
     with dissolve
     pause 1
 
-    play sound "sounds/arcade_lose.mp3"
+    play sound sound.arcade_lose
 
     scene v8arcade7a # Different shot of MC playing the six shooter game, "You lose" screen on the arcade machine (show a low score if it can be done). Emily looking at the arcade machine, neutral expression, mouth closed
     with dissolve
@@ -221,7 +214,7 @@ label em_arcade_2:
 
     scene v8arcade9 # TPP. MC kissing on Emily's cheek. Emily looking happy, mouth closed
     with dissolve
-    play sound "sounds/kiss.mp3"
+    play sound sound.kiss
     pause 1
 
     scene v8arcade8a # Emily looking happy, mouth closed
@@ -240,7 +233,7 @@ label em_arcade_2:
     with dissolve
     pause 1
 
-    play sound "sounds/arcade_lose.mp3"
+    play sound sound.arcade_lose
 
     scene v8arcade11a # Different shot of MC playing "chase the wheel" game, "You lose" screen on the arcade machine. Emily laughing a little, mouth closed
     with dissolve
@@ -262,7 +255,7 @@ label em_arcade_2:
     with dissolve
     pause 1
 
-    play sound "sounds/arcade_win.mp3"
+    play sound sound.arcade_win
 
     scene v8arcade13a # Different shot of Emily playing "chase the wheel" game, "You win" screen on the arcade machine
     with dissolve
@@ -287,7 +280,7 @@ label em_arcade_2:
 
     scene v8arcade14 # TPP. Close up of MC shoving his face between Emily's boobs while holding them.
     with dissolve
-    play sound "sounds/kiss.mp3"
+    play sound sound.kiss
     pause 1
 
     scene v8arcade12a
@@ -319,14 +312,14 @@ label em_arcade_2:
     with dissolve
     u "You're underestimating me ma'am. Watch me."
 
-    play sound "sounds/arcade_coin.mp3"
+    play sound sound.arcade_coin
     pause
 
     scene v8arcade17a # TPP. MC putting a token in the machine or pressing the start button, however that is activated. Emily just standing, neutral expression, mouth closed
     with dissolve
     em "My turn now."
 
-    play sound "sounds/arcade_coin.mp3"
+    play sound sound.arcade_coin
     pause
 
     scene v8arcade17b # MC wins (Not sure how you would show it in this case. Maybe green lights?) Emily surprised but smiling, mouth open. MC happy, mouth open
@@ -350,7 +343,7 @@ label em_arcade_2:
 
     scene v8arcade18 # TPP. Emily kissing MC's neck. MC smiling like an idiot, mouth closed
     with dissolve
-    play sound "sounds/kiss.mp3"
+    play sound sound.kiss
     pause 1
 
     scene v8arcade18a # Same as v8arcade18 but MC mouth open
@@ -396,7 +389,7 @@ label em_arcade_2:
     with dissolve
     em "Get ready to lose."
 
-    play sound "sounds/arcade_lose.mp3"
+    play sound sound.arcade_lose
 
     scene v8arcade20a # Show Emily losing (Not sure how you would show it. Maybe red lights?). MC not in the frame
     with hpunch
@@ -406,7 +399,7 @@ label em_arcade_2:
     with dissolve
     u "Let me show you how it's done."
 
-    play sound "sounds/arcade_lose.mp3"
+    play sound sound.arcade_lose
 
     scene v8arcade20c # Show MC losing. Emily not in the frame
     with hpunch
@@ -417,7 +410,7 @@ label em_arcade_2:
     with dissolve
     pause 1
 
-    play sound "sounds/arcade_lose.mp3"
+    play sound sound.arcade_lose
 
     scene v8arcade20a
     with hpunch
@@ -427,7 +420,7 @@ label em_arcade_2:
     with dissolve
     pause 1
 
-    play sound "sounds/arcade_lose.mp3"
+    play sound sound.arcade_lose
 
     scene v8arcade20c
     with hpunch
@@ -437,7 +430,7 @@ label em_arcade_2:
     with dissolve
     pause 1
 
-    play sound "sounds/arcade_lose.mp3"
+    play sound sound.arcade_lose
 
     scene v8arcade20a
     with hpunch
@@ -447,7 +440,7 @@ label em_arcade_2:
     with dissolve
     pause 1
 
-    play sound "sounds/arcade_win.mp3"
+    play sound sound.arcade_win
 
     scene v8arcade20d # Show MC winning (green lights?) and celebrating, mouth open
     with hpunch
@@ -490,7 +483,7 @@ label em_arcade_2:
 
     scene v8arcade24 # TPP. MC and Emily passionate kiss
     with dissolve
-    play sound "sounds/kiss.mp3"
+    play sound sound.kiss
     pause 1
 
     scene v8arcade23a # Same as v8arcade23 but Emily mouth closed
@@ -509,7 +502,7 @@ label em_arcade_2:
     with dissolve
     em "Goodnight, [name]."
 
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
 
     scene v8arcade23b # Emily opened the door and is walking in while looking back at the MC, smiling, mouth closed
     with dissolve
@@ -517,7 +510,7 @@ label em_arcade_2:
 
     scene v8arcade23c # Emily went inside, so just the door closed
     with dissolve
-    play sound "sounds/doorclose.mp3"
+    play sound sound.door_close
     pause 0.5
 
     scene v8arcade28 # TPP. continuation of v8arcade23. MC starts walking away, smiling, mouth closed
@@ -555,7 +548,7 @@ label em_arcade_1:
     with dissolve
     pause 1
 
-    play sound "sounds/arcade_win.mp3"
+    play sound sound.arcade_win
 
     scene v8arcade5b
     with dissolve
@@ -573,7 +566,7 @@ label em_arcade_1:
     with dissolve
     pause 0.5
 
-    play sound "sounds/arcade_lose.mp3"
+    play sound sound.arcade_lose
 
     scene v8arcade7a
     with dissolve
@@ -600,7 +593,7 @@ label em_arcade_1:
     with dissolve
     pause 0.5
 
-    play sound "sounds/arcade_lose.mp3"
+    play sound sound.arcade_lose
 
     scene v8arcade11a
     with dissolve
@@ -622,7 +615,7 @@ label em_arcade_1:
     with dissolve
     pause 0.5
 
-    play sound "sounds/arcade_win.mp3"
+    play sound sound.arcade_win
 
     scene v8arcade13a
     with dissolve
@@ -660,14 +653,14 @@ label em_arcade_1:
     with dissolve
     u "You're underestimating me ma'am. Watch me."
 
-    play sound "sounds/arcade_coin.mp3"
+    play sound sound.arcade_coin
     pause
 
     scene v8arcade17a # TPP. MC putting a token in the machine or pressing the start button, however that is activated. Emily just standing, neutral expression, mouth closed
     with dissolve
     em "My turn now."
 
-    play sound "sounds/arcade_coin.mp3"
+    play sound sound.arcade_coin
     pause
 
     scene v8arcade17b
@@ -712,7 +705,7 @@ label em_arcade_1:
     with dissolve
     em "Get ready to lose."
 
-    play sound "sounds/arcade_lose.mp3"
+    play sound sound.arcade_lose
 
     scene v8arcade20a
     with hpunch
@@ -722,7 +715,7 @@ label em_arcade_1:
     with dissolve
     u "Let me show you how it's done."
 
-    play sound "sounds/arcade_lose.mp3"
+    play sound sound.arcade_lose
 
     scene v8arcade20c
     with hpunch
@@ -733,7 +726,7 @@ label em_arcade_1:
     with dissolve
     pause 1
 
-    play sound "sounds/arcade_lose.mp3"
+    play sound sound.arcade_lose
 
     scene v8arcade20a
     with hpunch
@@ -743,7 +736,7 @@ label em_arcade_1:
     with dissolve
     pause 1
 
-    play sound "sounds/arcade_lose.mp3"
+    play sound sound.arcade_lose
 
     scene v8arcade20c
     with hpunch
@@ -753,7 +746,7 @@ label em_arcade_1:
     with dissolve
     pause 1
 
-    play sound "sounds/arcade_lose.mp3"
+    play sound sound.arcade_lose
 
     scene v8arcade20a
     with hpunch
@@ -763,7 +756,7 @@ label em_arcade_1:
     with dissolve
     pause 1
 
-    play sound "sounds/arcade_win.mp3"
+    play sound sound.arcade_win
 
     scene v8arcade20d
     with hpunch
@@ -809,7 +802,7 @@ label em_arcade_1:
 
             scene v8arcade24
             with dissolve
-            play sound "sounds/kiss.mp3"
+            play sound sound.kiss
             pause 1
 
             scene v8arcade23
@@ -832,13 +825,13 @@ label em_arcade_1:
             with dissolve
             em "Goodnight, [name]."
 
-            play sound "sounds/dooropen.mp3"
+            play sound sound.door_open
 
             scene v8arcade23b
             with dissolve
             u "Night."
 
-            play sound "sounds/doorclose.mp3"
+            play sound sound.door_close
 
             scene v8arcade23c
             with dissolve
@@ -862,13 +855,13 @@ label em_arcade_1:
             with dissolve
             em "Me too, goodnight."
 
-            play sound "sounds/dooropen.mp3"
+            play sound sound.door_open
 
             scene v8arcade23b
             with dissolve
             u "Night."
 
-            play sound "sounds/doorclose.mp3"
+            play sound sound.door_close
 
             scene v8arcade23c
             with dissolve
@@ -930,7 +923,7 @@ label em_arcade_4:
     with dissolve
     pause 1
 
-    play sound "sounds/arcade_win.mp3"
+    play sound sound.arcade_win
 
     scene v8arcade5b
     with dissolve
@@ -948,7 +941,7 @@ label em_arcade_4:
     with dissolve
     pause 0.5
 
-    play sound "sounds/arcade_lose.mp3"
+    play sound sound.arcade_lose
 
     scene v8arcade7a
     with dissolve
@@ -996,7 +989,7 @@ label em_arcade_4:
     with dissolve
     pause 0.5
 
-    play sound "sounds/arcade_lose.mp3"
+    play sound sound.arcade_lose
 
     scene v8arcade11a
     with dissolve
@@ -1018,7 +1011,7 @@ label em_arcade_4:
     with dissolve
     pause 0.5
 
-    play sound "sounds/arcade_win.mp3"
+    play sound sound.arcade_win
 
     scene v8arcade13a
     with dissolve
@@ -1085,14 +1078,14 @@ label em_arcade_4:
     with dissolve
     u "You're underestimating me ma'am. Watch me."
 
-    play sound "sounds/arcade_coin.mp3"
+    play sound sound.arcade_coin
     pause
 
     scene v8arcade17a
     with dissolve
     em "My turn now."
 
-    play sound "sounds/arcade_coin.mp3"
+    play sound sound.arcade_coin
     pause
 
     scene v8arcade17b
@@ -1167,7 +1160,7 @@ label v8s20_nsfwSkipLabel1:
     with dissolve
     em "Get ready to lose."
 
-    play sound "sounds/arcade_lose.mp3"
+    play sound sound.arcade_lose
 
     scene v8arcade20a
     with hpunch
@@ -1177,7 +1170,7 @@ label v8s20_nsfwSkipLabel1:
     with dissolve
     u "Let me show you how it's done."
 
-    play sound "sounds/arcade_lose.mp3"
+    play sound sound.arcade_lose
 
     scene v8arcade20c
     with hpunch
@@ -1188,7 +1181,7 @@ label v8s20_nsfwSkipLabel1:
     with dissolve
     pause 1
 
-    play sound "sounds/arcade_lose.mp3"
+    play sound sound.arcade_lose
 
     scene v8arcade20a
     with hpunch
@@ -1198,7 +1191,7 @@ label v8s20_nsfwSkipLabel1:
     with dissolve
     pause 1
 
-    play sound "sounds/arcade_lose.mp3"
+    play sound sound.arcade_lose
 
     scene v8arcade20c
     with hpunch
@@ -1208,7 +1201,7 @@ label v8s20_nsfwSkipLabel1:
     with dissolve
     pause 1
 
-    play sound "sounds/arcade_lose.mp3"
+    play sound sound.arcade_lose
 
     scene v8arcade20a
     with hpunch
@@ -1218,7 +1211,7 @@ label v8s20_nsfwSkipLabel1:
     with dissolve
     pause 1
 
-    play sound "sounds/arcade_win.mp3"
+    play sound sound.arcade_win
 
     scene v8arcade20d
     with hpunch
@@ -1263,7 +1256,7 @@ label v8s20_nsfwSkipLabel1:
 
             scene v8arcade24
             with dissolve
-            play sound "sounds/kiss.mp3"
+            play sound sound.kiss
             pause 1
 
             scene v8arcade23
@@ -1286,13 +1279,13 @@ label v8s20_nsfwSkipLabel1:
             with dissolve
             em "Goodnight, [name]."
 
-            play sound "sounds/dooropen.mp3"
+            play sound sound.door_open
 
             scene v8arcade23b
             with dissolve
             u "Night."
 
-            play sound "sounds/doorclose.mp3"
+            play sound sound.door_close
 
             scene v8arcade23c
             with dissolve
@@ -1316,13 +1309,13 @@ label v8s20_nsfwSkipLabel1:
             with dissolve
             em "Me too, thanks for coming. Goodnight."
 
-            play sound "sounds/dooropen.mp3"
+            play sound sound.door_open
 
             scene v8arcade23b
             with dissolve
             u "Night."
 
-            play sound "sounds/doorclose.mp3"
+            play sound sound.door_close
 
             scene v8arcade23c
             with dissolve
@@ -1363,7 +1356,7 @@ label em_arcade_3:
     with dissolve
     pause 1
 
-    play sound "sounds/arcade_win.mp3"
+    play sound sound.arcade_win
 
     scene v8arcade5b
     with dissolve
@@ -1381,7 +1374,7 @@ label em_arcade_3:
     with dissolve
     pause 0.5
 
-    play sound "sounds/arcade_lose.mp3"
+    play sound sound.arcade_lose
 
     scene v8arcade7a
     with dissolve
@@ -1408,7 +1401,7 @@ label em_arcade_3:
     with dissolve
     pause 0.5
 
-    play sound "sounds/arcade_lose.mp3"
+    play sound sound.arcade_lose
 
     scene v8arcade11a
     with dissolve
@@ -1430,7 +1423,7 @@ label em_arcade_3:
     with dissolve
     pause 0.5
 
-    play sound "sounds/arcade_win.mp3"
+    play sound sound.arcade_win
 
     scene v8arcade13a
     with dissolve
@@ -1468,14 +1461,14 @@ label em_arcade_3:
     with dissolve
     u "You're underestimating me ma'am. Watch me."
 
-    play sound "sounds/arcade_coin.mp3"
+    play sound sound.arcade_coin
     pause
 
     scene v8arcade17a
     with dissolve
     em "My turn now."
 
-    play sound "sounds/arcade_coin.mp3"
+    play sound sound.arcade_coin
     pause
 
     scene v8arcade17b
@@ -1520,7 +1513,7 @@ label em_arcade_3:
     with dissolve
     em "Get ready to lose."
 
-    play sound "sounds/arcade_lose.mp3"
+    play sound sound.arcade_lose
 
     scene v8arcade20a
     with hpunch
@@ -1530,7 +1523,7 @@ label em_arcade_3:
     with dissolve
     u "Let me show you how it's done."
 
-    play sound "sounds/arcade_lose.mp3"
+    play sound sound.arcade_lose
 
     scene v8arcade20c
     with hpunch
@@ -1541,7 +1534,7 @@ label em_arcade_3:
     with dissolve
     pause 1
 
-    play sound "sounds/arcade_lose.mp3"
+    play sound sound.arcade_lose
 
     scene v8arcade20a
     with hpunch
@@ -1551,7 +1544,7 @@ label em_arcade_3:
     with dissolve
     pause 1
 
-    play sound "sounds/arcade_lose.mp3"
+    play sound sound.arcade_lose
 
     scene v8arcade20c
     with hpunch
@@ -1561,7 +1554,7 @@ label em_arcade_3:
     with dissolve
     pause 1
 
-    play sound "sounds/arcade_lose.mp3"
+    play sound sound.arcade_lose
 
     scene v8arcade20a
     with hpunch
@@ -1571,7 +1564,7 @@ label em_arcade_3:
     with dissolve
     pause 1
 
-    play sound "sounds/arcade_win.mp3"
+    play sound sound.arcade_win
 
     scene v8arcade20d
     with hpunch
@@ -1612,13 +1605,13 @@ label em_arcade_3:
     with dissolve
     em "Me too, thanks for coming. Goodnight."
 
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
 
     scene v8arcade23b
     with dissolve
     u "Night."
 
-    play sound "sounds/doorclose.mp3"
+    play sound sound.door_close
 
     scene v8arcade23c
     with dissolve

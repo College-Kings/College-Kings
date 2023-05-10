@@ -4,7 +4,7 @@
 # Time: Night
 
 label v14s03a:
-    play music "music/v13/Track Scene 4.mp3" fadein 2
+    play music music.ck1.v13.Track_Scene_4 fadein 2
     
     scene v14s03a_1 # TPP. MC with Imre and Ryan right behind him, far away, walking towards the night gambler, MC/Gambler neutral expression, mouth closed,Ryan/Imre, smile, mouth closed
     with dissolve
@@ -137,7 +137,7 @@ label v14s03a:
             pause 0.75
             
             stop music fadeout 3
-            play music "music/v13/Track Scene 29_2.mp3" fadein 2
+            play music music.ck1.v13.Track_Scene_29_2 fadein 2
 
             scene v14s03a_5a # TPP. Gambler grabs MC's arm to prevent him from leaving. 
             with dissolve
@@ -210,7 +210,7 @@ label v14s03a:
 
         "Give it a try": # -If Give it a try
             stop music fadeout 3
-            play music "music/v13/Track Scene 29_2.mp3" fadein 2
+            play music music.ck1.v13.Track_Scene_29_2 fadein 2
 
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
             scene v14s03a_2
