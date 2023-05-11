@@ -331,12 +331,12 @@ label v12_slumber_party:
     au "*Laughs* Let's have fun, guys."
 
     $ kiwii_post = KiwiiService.new_post(lindsey, "phone/kiwii/Posts/v12/lindsey_aubrey_pjs.webp", _("Couldn't have asked for a better night... <3"), number_likes=571) # Lindsey Selfie with Aubrey in pajamas
-    $ KiwiiService.new_comment(kiwii_post, aubrey, _("You're so welcome boo... Girls night again ASAP!"), mentions=[lindsey], number_likes=renpy.random.randint(250,350))
-    $ KiwiiService.new_comment(kiwii_post, imre, _("Even more beautiful in person, ladies..."), mentions=[lindsey], number_likes=renpy.random.randint(150,300))
-    $ KiwiiService.new_comment(kiwii_post, chloe, _("Yesss! We have to do this again."), mentions=[aubrey], number_likes=renpy.random.randint(250,400))
+    $ KiwiiService.new_comment(kiwii_post, aubrey, _("You're so welcome boo... Girls night again ASAP!"), number_likes=renpy.random.randint(250,350), mentions=[lindsey])
+    $ KiwiiService.new_comment(kiwii_post, imre, _("Even more beautiful in person, ladies..."), number_likes=renpy.random.randint(150,300), mentions=[lindsey])
+    $ KiwiiService.new_comment(kiwii_post, chloe, _("Yesss! We have to do this again."), number_likes=renpy.random.randint(250,400), mentions=[aubrey])
     $ KiwiiService.add_replies(kiwii_post,
-        KiwiiReply(_("Just say when and where! Had a lot of fun :)"), mentions=[aubrey], number_likes=renpy.random.randint(250, 330)),
-        KiwiiReply(_("You deserve the best! Glad you enjoyed it ;)"), mentions=[lindsey], number_likes=renpy.random.randint(250, 330))
+        KiwiiReply(_("Just say when and where! Had a lot of fun :)"), number_likes=renpy.random.randint(250, 330), mentions=[aubrey]),
+        KiwiiReply(_("You deserve the best! Glad you enjoyed it ;)"), number_likes=renpy.random.randint(250, 330), mentions=[lindsey])
     )
     $ KiwiiService.new_comment(kiwii_post, lindsey, _("Haha, thank you guys <3"), number_likes=renpy.random.randint(150,300))
     call screen v12s18_room1

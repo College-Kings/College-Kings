@@ -771,25 +771,25 @@ label v12s32:
         v12s32_kiwii_reply1 = KiwiiBuilder(kiwii_post)
         v12s32_kiwii_reply1.new_comment(naomi, _("Hehe, you too! Hope to see you soon...;)"), number_likes=renpy.random.randint(583, 912))
         v12s32_kiwii_reply1.new_comment(chloe, _("OMG!?!?!?!"), number_likes=renpy.random.randint(124,354))
-        v12s32_kiwii_reply1.new_comment(imre, _("Bro... Is that you?!"), mentions=[mc], number_likes=renpy.random.randint(53,93))
+        v12s32_kiwii_reply1.new_comment(imre, _("Bro... Is that you?!"), number_likes=renpy.random.randint(53,93), mentions=[mc])
     
         v12s32_kiwii_reply2 = KiwiiBuilder(kiwii_post)
         v12s32_kiwii_reply2.new_comment(aubrey, _("You're so welcome... Today was amazing. <3"), number_likes=renpy.random.randint(253, 462))
         v12s32_kiwii_reply2.new_comment(chloe, _("OMG!?!?!?!"), number_likes=renpy.random.randint(124,354))
-        v12s32_kiwii_reply2.new_comment(imre, _("Bro... Is that you?!"), mentions=[mc], number_likes=renpy.random.randint(53,93))
+        v12s32_kiwii_reply2.new_comment(imre, _("Bro... Is that you?!"), number_likes=renpy.random.randint(53,93), mentions=[mc])
 
         KiwiiService.new_comment(kiwii_post, naomi, _("That's my baby sis! <3"), number_likes=renpy.random.randint(952, 1512))
         KiwiiService.new_comment(kiwii_post, aubrey, _("Thank you so much for having us! Can't wait for the future..."), number_likes=renpy.random.randint(367, 526))
         KiwiiService.new_comment(kiwii_post, chloe, _("OMG!?!?!?!"), number_likes=renpy.random.randint(124,354))
-        KiwiiService.new_comment(kiwii_post, imre, _("Bro... Is that you?!"), mentions=[mc], number_likes=renpy.random.randint(53,93))
+        KiwiiService.new_comment(kiwii_post, imre, _("Bro... Is that you?!"), number_likes=renpy.random.randint(53,93) mentions=[mc])
         KiwiiService.add_replies(kiwii_post,
-            KiwiiReply(_("Thanks for the invite! It was really nice to meet you..."), v12s32_kiwii_reply1, mentions=[naomi], number_likes=renpy.random.randint(278,421)),
-            KiwiiReply(_("Had an amazing time today... Thank you, gorgeous!"), v12s32_kiwii_reply2, mentions=[aubrey])
+            KiwiiReply(_("Thanks for the invite! It was really nice to meet you..."), number_likes=renpy.random.randint(278,421), mentions=[naomi], v12s32_kiwii_reply1),
+            KiwiiReply(_("Had an amazing time today... Thank you, gorgeous!"), mentions=[aubrey], v12s32_kiwii_reply2)
         )
 
         kiwii_post: KiwiiPost = KiwiiService.new_post(naomi, "phone/kiwii/Posts/v12/v12s32_24.webp", _("When little sis visits you at work and leaves with your JOB! #ProudBigSis"), number_likes=2107)
-        KiwiiService.new_comment(kiwii_post, aubrey, _("Haha! I love you boo... Thank you for today :)"), mentions=[naomi], number_likes=renpy.random.randint(278, 363))
-        KiwiiService.new_comment(kiwii_post, naomi, _("You're sooo welcome sissy. #ItRunsInTheFamily"), mentions=[aubrey], number_likes=renpy.random.randint(747, 973)) 
+        KiwiiService.new_comment(kiwii_post, aubrey, _("Haha! I love you boo... Thank you for today :)"), number_likes=renpy.random.randint(278, 363))
+        KiwiiService.new_comment(kiwii_post, naomi, _("You're sooo welcome sissy. #ItRunsInTheFamily"), number_likes=renpy.random.randint(747, 973), mentions=[aubrey]) 
         KiwiiService.new_comment(kiwii_post, nora, _("Hotties!! Hope you had an amazing time... Can't wait to see all the pics!"), number_likes=renpy.random.randint(253, 462))
         KiwiiService.new_comment(kiwii_post, chloe, _("JOB?!?!?!"), number_likes=renpy.random.randint(245, 587))
         KiwiiService.new_comment(kiwii_post, naomi, _("Thank you... <3"), number_likes=renpy.random.randint(346, 579))
@@ -801,7 +801,7 @@ label v12s32:
         KiwiiService.new_comment(kiwii_post, aubrey, _("Haha, thank you babes <3"), number_likes=renpy.random.randint(253, 462))
         KiwiiService.add_reply(kiwii_post, _("Absolutely deserved."), number_likes=renpy.random.randint(126, 367))
         KiwiiService.new_comment(kiwii_post, ryan, _("Holy..."), number_likes=renpy.random.randint(78, 153))
-        KiwiiService.new_comment(kiwii_post, imre, _("Pick up your jaw idiot! LOL"), mentions=[ryan], number_likes=renpy.random.randint(69, 178))
+        KiwiiService.new_comment(kiwii_post, imre, _("Pick up your jaw idiot! LOL"), number_likes=renpy.random.randint(69, 178), mentions=[ryan])
 
     scene v12s32_33b # same 33, -Aubrey starts walking away-
     with dissolve

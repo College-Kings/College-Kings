@@ -20,16 +20,16 @@ label after_apes_ceremony:
     $ KiwiiService.new_comment(kiwii_post, caleb, _("GO APES!!!"), number_likes=renpy.random.randint(60, 70))
     $ KiwiiService.new_comment(kiwii_post, parker, _("Congrats guys!"), number_likes=renpy.random.randint(40, 50))
     if apesVids == 4:
-        $ KiwiiService.new_comment(kiwii_post, aubrey, _("Damn, perfect score? Would love to see you in action in the ring ;)"), mentions=[mc], number_likes=renpy.random.randint(80, 90))
+        $ KiwiiService.new_comment(kiwii_post, aubrey, _("Damn, perfect score? Would love to see you in action in the ring ;)"), number_likes=renpy.random.randint(80, 90), mentions=[mc])
     else:
         $ KiwiiService.new_comment(kiwii_post, aubrey, _("Congrats guys! Couldn't be at the ceremony cause of some stupid shit :/"), number_likes=renpy.random.randint(50, 60))
-    $ KiwiiService.new_comment(kiwii_post, mason, _("So proud of you guys especially my man"), mentions=[caleb], number_likes=renpy.random.randint(40, 50))
-    $ KiwiiService.new_comment(kiwii_post, emily, _("Yaayyy! Congrats"), mentions=[mc], number_likes=renpy.random.randint(25, 35))
+    $ KiwiiService.new_comment(kiwii_post, mason, _("So proud of you guys especially my man"), number_likes=renpy.random.randint(40, 50), mentions=[caleb])
+    $ KiwiiService.new_comment(kiwii_post, emily, _("Yaayyy! Congrats"), number_likes=renpy.random.randint(25, 35), mentions=[mc])
     if apesVids == 4:
         $ KiwiiService.new_comment(kiwii_post, elijah, _("Hmph ridiculous! Like those are the perfect scores that matter..."), number_likes=renpy.random.randint(3, 6))
-        $ KiwiiService.new_comment(kiwii_post, cameron, _("Just shut the fuck up and never come back"), mentions=[elijah], number_likes=renpy.random.randint(75, 85))
-        $ KiwiiService.new_comment(kiwii_post, cameron, _("That is unless you want me to kick your ass, then of course knock yourself out"), mentions=[elijah], number_likes=renpy.random.randint(110, 120))
-    $ KiwiiService.new_comment(kiwii_post, amber, _("Congrats people!!!"), mentions=[mc, ryan, caleb], number_likes=renpy.random.randint(50, 60))
+        $ KiwiiService.new_comment(kiwii_post, cameron, _("Just shut the fuck up and never come back"), number_likes=renpy.random.randint(75, 85), mentions=[elijah])
+        $ KiwiiService.new_comment(kiwii_post, cameron, _("That is unless you want me to kick your ass, then of course knock yourself out"), number_likes=renpy.random.randint(110, 120), mentions=[elijah])
+    $ KiwiiService.new_comment(kiwii_post, amber, _("Congrats people!!!"), number_likes=renpy.random.randint(50, 60), mentions=[mc, ryan, caleb])
     $ KiwiiService.new_comment(kiwii_post, caleb, _("Thanks everyone!"), number_likes=renpy.random.randint(20, 30))
 
     python:

@@ -39,8 +39,8 @@ label mc_wolves_sun_aft:
         $ KiwiiService.new_comment(kiwii_post, cameron, _("Teacher's pet!"), number_likes=renpy.random.randint(15, 35))
         $ KiwiiService.new_comment(kiwii_post, ryan, _("Booba"), number_likes=renpy.random.randint(15, 35))
         $ KiwiiService.add_replies(kiwii_post,
-            KiwiiReply(_("I'm glad you guys had fun"), v8s16_kiwii_reply1, number_likes=320),
-            KiwiiReply(_("Wow, you two look great!"), v8s16_kiwii_reply2, number_likes=343)
+            KiwiiReply(_("I'm glad you guys had fun"), number_likes=320, v8s16_kiwii_reply1),
+            KiwiiReply(_("Wow, you two look great!"), number_likes=343, v8s16_kiwii_reply2)
         )
 
     $ kiwii_post = KiwiiService.new_post(riley, "phone/kiwii/Posts/v8/riclothpost1.webp", _("Nothing like a good day of shopping"), number_likes=330) # Picture of Riley outside a clothing store.
@@ -54,8 +54,8 @@ label mc_wolves_sun_aft:
     $ KiwiiService.new_comment(kiwii_post, aubrey, _("Wish I could of been there to try things with you"), number_likes=renpy.random.randint(15, 35))
     $ KiwiiService.new_comment(kiwii_post, imre, _("Looking good"), number_likes=renpy.random.randint(15, 35))
     $ KiwiiService.add_replies(kiwii_post,
-        KiwiiReply(_("How many bikinis did you buy? Haha."), v8s16_kiwii_reply3, number_likes=350),
-        KiwiiReply(_("Did you buy me anything?"), v8s16_kiwii_reply4, number_likes=337)
+        KiwiiReply(_("How many bikinis did you buy? Haha."), number_likes=350, v8s16_kiwii_reply3),
+        KiwiiReply(_("Did you buy me anything?"), number_likes=337, v8s16_kiwii_reply4)
     )
 
     jump msrose_moving
@@ -97,8 +97,8 @@ label mc_apes_sun_aft:
         $ KiwiiService.new_comment(kiwii_post, cameron, _("Teacher's pet!"), number_likes=renpy.random.randint(15, 35))
         $ KiwiiService.new_comment(kiwii_post, ryan, _("Booba"), number_likes=renpy.random.randint(15, 35))
         $ KiwiiService.add_replies(kiwii_post,
-            KiwiiReply(_("I'm glad you guys had fun"), v8s16_kiwiiReply1, number_likes=320),
-            KiwiiReply(_("Wow, you two look great!"), v8s16_kiwiiReply2, number_likes=343)
+            KiwiiReply(_("I'm glad you guys had fun"), number_likes=320, v8s16_kiwiiReply1),
+            KiwiiReply(_("Wow, you two look great!"), number_likes=343, v8s16_kiwiiReply2)
         )
 
     $ kiwii_post = KiwiiService.new_post(riley, "phone/kiwii/Posts/v8/riclothpost1.webp", _("Nothing like a good day of shopping"), number_likes=330) # Picture of Riley outside a clothing store.
@@ -112,8 +112,8 @@ label mc_apes_sun_aft:
     $ KiwiiService.new_comment(kiwii_post, aubrey, _("Wish I could of been there to try things with you"), number_likes=renpy.random.randint(15, 35))
     $ KiwiiService.new_comment(kiwii_post, imre, _("Looking good"), number_likes=renpy.random.randint(15, 35))
     $ KiwiiService.add_replies(kiwii_post,
-        KiwiiReply(_("How many bikinis did you buy? Haha."), v8s16_kiwiiReply3, number_likes=350),
-        KiwiiReply(_("Did you buy me anything?"), v8s16_kiwiiReply4, number_likes=337)
+        KiwiiReply(_("How many bikinis did you buy? Haha."), number_likes=350, v8s16_kiwiiReply3),
+        KiwiiReply(_("Did you buy me anything?"), number_likes=337, v8s16_kiwiiReply4)
     )
 
     jump sun_aft_apes_house

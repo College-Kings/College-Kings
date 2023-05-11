@@ -23,10 +23,10 @@ label v13s49:
     
     $ kiwii_post = KiwiiService.new_post(aubrey, "phone/kiwii/Posts/v13/aubrey_beach.webp", _("Swimming up the ladder! #ScheveningenBeach"), number_likes=4218)
     $ KiwiiService.new_comment(kiwii_post, imre, _("Hot as fuck Aubrey!!"), number_likes=renpy.random.randint(1800, 3600))
-    $ KiwiiService.new_comment(kiwii_post, chloe, _("This is the hottest pic I've ever seen of you!"), mentions=[aubrey], number_likes=renpy.random.randint(1800, 3600))
+    $ KiwiiService.new_comment(kiwii_post, chloe, _("This is the hottest pic I've ever seen of you!"), number_likes=renpy.random.randint(1800, 3600), mentions=[aubrey])
     $ KiwiiService.add_replies(kiwii_post,
         KiwiiReply(_("Wow, they turned out great!"), number_likes=renpy.random.randint(1800, 3600)),
-        KiwiiReply(_("Ah, beautiful. But even better in person ;)"), mentions=[aubrey], number_likes=renpy.random.randint(1800, 3600))
+        KiwiiReply(_("Ah, beautiful. But even better in person ;)"), number_likes=renpy.random.randint(1800, 3600), mentions=[aubrey])
     )
     $ KiwiiService.new_comment(kiwii_post, aubrey, _("Thank you! <3"), number_likes=renpy.random.randint(2400, 3800))
     $ KiwiiService.new_comment(kiwii_post, naomi, _("OMG! You look just like me! <3"), number_likes=renpy.random.randint(3800, 6000))
