@@ -783,8 +783,8 @@ label v12s32:
         KiwiiService.new_comment(kiwii_post, chloe, _("OMG!?!?!?!"), number_likes=renpy.random.randint(124,354))
         KiwiiService.new_comment(kiwii_post, imre, _("Bro... Is that you?!"), number_likes=renpy.random.randint(53,93) mentions=[mc])
         KiwiiService.add_replies(kiwii_post,
-            KiwiiReply(_("Thanks for the invite! It was really nice to meet you..."), number_likes=renpy.random.randint(278,421), mentions=[naomi], next_message=v12s32_kiwii_reply1),
-            KiwiiReply(_("Had an amazing time today... Thank you, gorgeous!"), mentions=[aubrey], next_message=v12s32_kiwii_reply2)
+            KiwiiReply(_("Thanks for the invite! It was really nice to meet you..."), number_likes=renpy.random.randint(278,421), mentions=[naomi], next_comment=v12s32_kiwii_reply1),
+            KiwiiReply(_("Had an amazing time today... Thank you, gorgeous!"), mentions=[aubrey], next_comment=v12s32_kiwii_reply2)
         )
 
         kiwii_post: KiwiiPost = KiwiiService.new_post(naomi, "phone/kiwii/Posts/v12/v12s32_24.webp", _("When little sis visits you at work and leaves with your JOB! #ProudBigSis"), number_likes=2107)
