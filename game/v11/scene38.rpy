@@ -20,8 +20,8 @@ label v11_amber_bar:
     $ KiwiiService.new_comment(kiwii_post, caleb, _("Damn... looking good"), number_likes=renpy.random.randint(150,300))
     $ KiwiiService.new_comment(kiwii_post, charli, _("I told you that outfit was made for you... absolutely stunning."), number_likes=renpy.random.randint(150,300))
     $ KiwiiService.add_replies(kiwii_post,
-        KiwiiReply(_("Woah! Hot as always"), number_likes=renpy.random.randint(260, 340), v11s38_kiwii_reply1),
-        KiwiiReply(_("Thanks for the invite... lol"), number_likes=renpy.random.randint(250, 330), v11s38_kiwii_reply2)
+        KiwiiReply(_("Woah! Hot as always"), number_likes=renpy.random.randint(260, 340), next_message=v11s38_kiwii_reply1),
+        KiwiiReply(_("Thanks for the invite... lol"), number_likes=renpy.random.randint(250, 330), next_message=v11s38_kiwii_reply2)
     )
 
     play music music.ck1.v11.Track_Scene_3 fadein 2

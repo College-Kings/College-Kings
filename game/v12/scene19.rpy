@@ -199,12 +199,12 @@ label v12_party_wake_up:
     $ v12s19_kiwii_reply1.new_comment(amber, _("Hahahaha"), number_likes=renpy.random.randint(250,350))
     $ v12s19_kiwii_reply1.new_comment(imre, _("Karma's a bitch..."), number_likes=renpy.random.randint(250,350))
 
-    $ KiwiiService.new_comment(kiwii_post, chris, _("Oh no... What did you guys do to him?"), mentions=[amber], number_likes=renpy.random.randint(250,350))
-    $ KiwiiService.new_comment(kiwii_post, amber, _("\"We\" taught him why we shouldn't get too drunk at slumber parties... Hehe"), mentions=[chris], number_likes=renpy.random.randint(150,300))
-    $ KiwiiService.new_comment(kiwii_post, imre, _("\"We\"??? Who is we?!?!"), mentions=[amber], number_likes=renpy.random.randint(250,400))
+    $ KiwiiService.new_comment(kiwii_post, chris, _("Oh no... What did you guys do to him?"), number_likes=renpy.random.randint(250,350), mentions=[amber])
+    $ KiwiiService.new_comment(kiwii_post, amber, _("\"We\" taught him why we shouldn't get too drunk at slumber parties... Hehe"), number_likes=renpy.random.randint(150,300), mentions=[chris])
+    $ KiwiiService.new_comment(kiwii_post, imre, _("\"We\"??? Who is we?!?!"), number_likes=renpy.random.randint(250,400), mentions=[amber])
     $ KiwiiService.add_replies(kiwii_post,
-        KiwiiReply(_("Not cool, Amber... Not cool... ;)"),number_likes=renpy.random.randint(250, 330), mentions=[amber], v12s19_kiwii_reply1),
-        KiwiiReply(_("It's just a prank bro!"), number_likes=renpy.random.randint(250, 330), mentions=[imre], v12s19_kiwii_reply1)
+        KiwiiReply(_("Not cool, Amber... Not cool... ;)"),number_likes=renpy.random.randint(250, 330), mentions=[amber], next_message=v12s19_kiwii_reply1),
+        KiwiiReply(_("It's just a prank bro!"), number_likes=renpy.random.randint(250, 330), mentions=[imre], next_message=v12s19_kiwii_reply1)
     )
     
     scene v12pwu13 # TPP. Show MC removing his pajama shirt, pajama pants still on, neutral expression, mouth closed
