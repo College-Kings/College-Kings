@@ -1384,9 +1384,9 @@ label conyourdorm:
             if MessengerService.has_replies(riley):
                 u "(I need to respond to some of these messages.)"
 
-        while KiwiiService.has_replies(Emily):
+        while KiwiiService.has_replies(kiwii_post):
             call screen phone
-            if KiwiiService.has_replies(Emily):
+            if KiwiiService.has_replies(kiwii_post):
                 u "(I should check out what Emily posted on Kiwii.)"
 
         while MessengerService.has_replies(penelope):

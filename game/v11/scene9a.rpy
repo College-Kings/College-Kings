@@ -205,9 +205,9 @@ label v11_wolves_seb_prank:
                 KiwiiReply(_("Someone's got \"balls\""), number_likes=334)
             )
 
-            while KiwiiService.has_replies(caleb):
+            while KiwiiService.has_replies(kiwii_post):
                 call screen phone
-                if KiwiiService.has_replies(caleb):
+                if KiwiiService.has_replies(kiwii_post):
                     u "(I should reply on Kiwii)"
 
             scene v11wsp4b
@@ -501,9 +501,9 @@ label v11_wolves_seb_prank:
                 KiwiiReply(_("Someone's got \"balls\""), number_likes=218)
             )
 
-            while KiwiiService.has_replies(caleb):
+            while KiwiiService.has_replies(kiwii_post):
                 call screen phone
-                if KiwiiService.has_replies(caleb):
+                if KiwiiService.has_replies(kiwii_post):
                     u "(I should reply on Kiwii)"
 
             scene v11wsp4b

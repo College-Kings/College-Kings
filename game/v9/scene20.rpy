@@ -26,9 +26,9 @@ label v9_room_fri_aft:
 
         pause 0.5
 
-        while KiwiiService.has_replies(chris):
+        while KiwiiService.has_replies(kiwii_post):
             call screen phone
-            if KiwiiService.has_replies(chris):
+            if KiwiiService.has_replies(kiwii_post):
                 u "(I should reply to that post on Kiwii.)"
 
         jump v9_room_fri_aft_contW
@@ -55,9 +55,9 @@ label v9_room_fri_aft:
 
         pause 0.5
 
-        while KiwiiService.has_replies(grayson):
+        while KiwiiService.has_replies(kiwii_post):
             call screen phone
-            if KiwiiService.has_replies(grayson):
+            if KiwiiService.has_replies(kiwii_post):
                 u "(I should reply to that post on Kiwii.)"
 
         jump v9_room_fri_aft_contA
