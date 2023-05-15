@@ -1,4 +1,3 @@
-define config.developer = True
 define config.enable_steam = False
 define config.console = True
 define config_debug = False # Automatic Testing
