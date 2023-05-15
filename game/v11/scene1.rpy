@@ -1295,12 +1295,14 @@ label v11_case_verdict:
     scene v11coc27 # TPP. Third person view of MC, he is alone and has a tired expression, mouth closed, in the hallway
     with dissolve
 
-    $ v11s1_kiwiiPost = KiwiiPost(autumn, "phone/kiwii/Posts/v11/v11_autumn_kiwii.webp", _("Best charity event yet, thanks for all the donations!"), number_likes=556)
-    $ v11s1_kiwiiPost.newComment(aubrey, _("So psyched!"), number_likes=renpy.random.randint(200, 500))
-    $ v11s1_kiwiiPost.newComment(cameron, _("What you doing later? ;)"), number_likes=renpy.random.randint(200, 500))
-    $ v11s1_kiwiiPost.newComment(lindsey, _("It was an awesome day!"), number_likes=renpy.random.randint(200, 500))
-    $ v11s1_kiwiiPost.addReply(_("Wish I could see more mud wrestling!"), number_likes=321)
-    $ v11s1_kiwiiPost.addReply(_("Thanks for doing the event Autumn!"), number_likes=518)
+    $ kiwii_post = KiwiiService.new_post(autumn, "phone/kiwii/Posts/v11/v11_autumn_kiwii.webp", _("Best charity event yet, thanks for all the donations!"), number_likes=556)
+    $ KiwiiService.new_comment(kiwii_post, aubrey, _("So psyched!"), number_likes=renpy.random.randint(200, 500))
+    $ KiwiiService.new_comment(kiwii_post, cameron, _("What you doing later? ;)"), number_likes=renpy.random.randint(200, 500))
+    $ KiwiiService.new_comment(kiwii_post, lindsey, _("It was an awesome day!"), number_likes=renpy.random.randint(200, 500))
+    $ KiwiiService.add_replies(kiwii_post,
+        KiwiiReply(_("Wish I could see more mud wrestling!"), number_likes=321),
+        KiwiiReply(_("Thanks for doing the event Autumn!"), number_likes=518)
+    )
 
     u "(Wow, what a way to start my day. *Phew* Let's see who's going to Europe.)"
     stop music fadeout 3

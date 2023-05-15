@@ -191,26 +191,6 @@ default is_censored = False
 default label_history = []
 default real_life_mode = False
 
-# Recap 
-default recap_first_run = True # used by the ending scene for each girl narraitive to determine if to return to the recap_girl_summary or to continue to the next girl. Jenny's last scene changes this to false.
-default girl_info = {} # Empty
-default recap_choose_threesome = False # True = During Aubrey or Riley intereview, player choose to have 3 some/ Falase == Player decided not to have threesome or has yet to decide 
-
-#region Phone
-default messenger = Messenger()
-default achievement_app = Application(_("Achievements"))
-default kiwii = Kiwii()
-default simplr_app = Simplr()
-default relationship_app = Application(_("Relationships"))
-default tracker = Application(_("Tracker"))
-default reputation_app = Application(_("Reputation"))
-default calendar = Application(_("Calendar"))
-
-#region Kiwii
-default kiwii_posts = []
-#endregion Kiwii
-#endregion Phone
-
     ## Fight Vars
 default fight_tutorial = False
 default fight_type = "normal" # normal / simReal / simWin
@@ -222,21 +202,12 @@ default enemyhealth = 0
     ## Free Roam
 default previous_location = ""
 
-    ## Path Builder
-default pb_reputation_notification = False
-default path_builder = False
-default pb_name_set = False
-default pb_reputation_shown = False
-
     # Voice Acting
 default voice_acted = True
 
-# KCT
-default reputation = Reputation()
-default locked_reputation = False
-
 # Scenes
 default sceneList = set()
+default viewed_scenes = set()
 
 # Screens
 default screen_options = []
