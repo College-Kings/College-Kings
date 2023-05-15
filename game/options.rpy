@@ -184,6 +184,7 @@ init python:
 
     ## To archive files, classify them as 'archive'.
 
+    build.classify('game/**.py', 'archive')
     build.classify('game/**.rpy', "archive")
     build.classify("game/**.rpyc", "archive")
 
