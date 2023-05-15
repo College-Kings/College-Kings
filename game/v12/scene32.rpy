@@ -781,7 +781,7 @@ label v12s32:
         KiwiiService.new_comment(kiwii_post, naomi, _("That's my baby sis! <3"), number_likes=renpy.random.randint(952, 1512))
         KiwiiService.new_comment(kiwii_post, aubrey, _("Thank you so much for having us! Can't wait for the future..."), number_likes=renpy.random.randint(367, 526))
         KiwiiService.new_comment(kiwii_post, chloe, _("OMG!?!?!?!"), number_likes=renpy.random.randint(124,354))
-        KiwiiService.new_comment(kiwii_post, imre, _("Bro... Is that you?!"), number_likes=renpy.random.randint(53,93) mentions=[mc])
+        KiwiiService.new_comment(kiwii_post, imre, _("Bro... Is that you?!"), number_likes=renpy.random.randint(53,93), mentions=[mc])
         KiwiiService.add_replies(kiwii_post,
             KiwiiReply(_("Thanks for the invite! It was really nice to meet you..."), number_likes=renpy.random.randint(278,421), mentions=[naomi], next_comment=v12s32_kiwii_reply1),
             KiwiiReply(_("Had an amazing time today... Thank you, gorgeous!"), mentions=[aubrey], next_comment=v12s32_kiwii_reply2)
