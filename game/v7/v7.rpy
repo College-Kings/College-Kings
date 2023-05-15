@@ -1305,12 +1305,12 @@ label conyourdorm:
 
     $ v7_kiwii_reply1 = KiwiiBuilder(kiwii_post)
     $ v7_kiwii_reply1.new_comment(cameron, _("Lol, pussy"), number_likes=renpy.random.randint(1, 10), mentions=[mc])
-    $ v7_kiwii_reply1.set_variable(reputation.add_point, RepComponent.BOYFRIEND)
+    $ v7_kiwii_reply1.add_function(reputation.add_point, RepComponent.BOYFRIEND)
 
     $ v7_kiwii_reply2 = KiwiiBuilder(kiwii_post)
     $ v7_kiwii_reply2.new_comment(imre, _("Slide into her DMs bro!"), number_likes=renpy.random.randint(5, 15), mentions=[mc])
-    $ v7_kiwii_reply2.set_variable(reputation.add_point, RepComponent.BRO)
-    $ v7_kiwii_reply2.set_variable(reputation.add_point, RepComponent.TROUBLEMAKER)
+    $ v7_kiwii_reply2.add_function(reputation.add_point, RepComponent.BRO)
+    $ v7_kiwii_reply2.add_function(reputation.add_point, RepComponent.TROUBLEMAKER)
 
     $ KiwiiService.new_comment(kiwii_post, grayson, _("Check your DMs"), 14)
     $ KiwiiService.new_comment(kiwii_post, ryan, _("Whore."), 1)
@@ -1327,7 +1327,7 @@ label conyourdorm:
     $ kiwii_post = KiwiiService.new_post(lauren, "phone/kiwii/Posts/v7/lapost1.webp", _("Wishing I could go back..."), number_likes=39)
 
     $ v7_kiwii_reply3 = KiwiiBuilder(kiwii_post)
-    $ v7_kiwii_reply3.set_variable(reputation.add_point, RepComponent.BOYFRIEND)
+    $ v7_kiwii_reply3.add_function(reputation.add_point, RepComponent.BOYFRIEND)
 
     $ v7_kiwii_reply4 = KiwiiBuilder(kiwii_post)
     $ v7_kiwii_reply4.new_comment(autumn, _("Yeah, they really are"), number_likes=renpy.random.randint(8, 18), mentions=[mc])
@@ -1342,7 +1342,7 @@ label conyourdorm:
     $ kiwii_post = KiwiiService.new_post(aubrey, "phone/kiwii/Posts/v7/aupost1.webp", _("Finally changed my profile pic!"), number_likes=133)
 
     $ v7_kiwii_reply5 = KiwiiBuilder(kiwii_post)
-    $ v7_kiwii_reply5.set_variable(reputation.add_point, RepComponent.BRO)
+    $ v7_kiwii_reply5.add_function(reputation.add_point, RepComponent.BRO)
     $ v7_kiwii_reply5.new_comment(aubrey, _("Bring it on!"), number_likes=renpy.random.randint(15, 35), mentions=[mc])
 
     $ KiwiiService.new_comment(kiwii_post, cameron, _("You put the hot into thot"), 2)
@@ -1355,7 +1355,7 @@ label conyourdorm:
         $ kiwii_post = KiwiiService.new_post(emily, "phone/kiwii/Posts/v7/empost1.webp", _("Finally fate brings us back together. What doesn't kill us only makes us stronger."), number_likes=82)
 
         $ v7_kiwii_reply6 = KiwiiBuilder(kiwii_post)
-        $ v7_kiwii_reply6.set_variable(reputation.add_point, RepComponent.TROUBLEMAKER)
+        $ v7_kiwii_reply6.add_function(reputation.add_point, RepComponent.TROUBLEMAKER)
         $ v7_kiwii_reply6.new_comment(josh, _("lol"), number_likes=renpy.random.randint(3, 7), mentions=[mc])
 
         $ KiwiiService.new_comment(kiwii_post, riley, _("You guys are so cute"), 5)
