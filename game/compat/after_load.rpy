@@ -1,51 +1,19 @@
 python early:
-    old_files = (
-        "bugTesting/bugTesting_Overwrite.rpy",
-        "bugTesting/bugTesting_typoNotes.rpy",
-        "bugTesting/bugTesting_cheats.rpy",
-        "bugTesting/styles.rpy",
-        "fights/fight_labels.rpy",
-        "main_menu/path_builder/path_builder_setup.rpy",
-        "phone/applications.rpy",
-        "phone/phonescript.rpy",
-        "phone/phone_msg.rpy",
-        "phone/phone_script.rpy",
-        "phone/phoneStyle.rpy",
-        "sceneGallery/sceneGallery.rpy",
-        "v14/chicks_presidency_race/planning_board.rpy",
-        "before_main_menu.rpy",
-        "customCharacters.rpy",
-        "customLabels.rpy",
-        "customATL.rpy",
-        "customScreens.rpy",
-        "functions.rpy",
-        "path_builder.rpy",
-        "scriptv06.rpy",
-        "scriptv07.rpy",
-        "screen.rpy",
-        "sex_overlay.rpy",
-        "after_load.rpy",
-        "items.rpy",
-        "kct.rpy",
-        "setup.rpy",
-    )
-
     restart_game = False  # NEVER CHANGE
     rpy_files = set()
-    
-    if config.developer:
-        for file in renpy.list_files().copy():
-            if file in old_files:
-                restart_game = True
-                os.remove(os.path.join(config.gamedir, file))
 
-            if file.endswith(".rpy") or file.endswith("_ren.py"):
-                rpy_files.add(file)
+    for file in renpy.list_files().copy():
+        if file in old_files:
+            restart_game = True
+            os.remove(os.path.join(config.gamedir, file))
 
-        for file in renpy.list_files().copy():
-            if file.endswith(".rpyc") and not (file.replace(".rpyc", ".rpy") in rpy_files or file.replace(".rpyc", "_ren.py") in rpy_files):
-                restart_game = True
-                os.remove(os.path.join(config.gamedir, file))
+        if file.endswith(".rpy") or file.endswith("_ren.py"):
+            rpy_files.add(file)
+
+    for file in renpy.list_files().copy():
+        if file.endswith(".rpyc") and not (file.replace(".rpyc", ".rpy") in rpy_files or file.replace(".rpyc", "_ren.py") in rpy_files):
+            restart_game = True
+            os.remove(os.path.join(config.gamedir, file))
 
     if restart_game:
         renpy.quit(True)
@@ -57,20 +25,21 @@ label after_load:
     stop sound
 
     python:
-        npcs = (aaron, adam, amber, aryssa, aubrey, autumn, beth, buyer, caleb, cameron, candy, charli, chloe, chris, dean, elijah, emily, emmy, evelyn, grayson, imre, iris, jenny, josh, julia, kai, kim, kourtney, lauren, lews_official, lindsey, mason, mr_lee, ms_rose, naomi, nora, parker, penelope, polly, riley, ryan, samantha, satin, sebastian, tom, trainer, wolf)
+        npcs = (aaron, adam, amber, anon, aryssa, aubrey, autumn, beth, buyer, caleb, cameron, candy, charli, chloe, chris, dean, elijah, emily, emmy, evelyn, grayson, imre, iris, jenny, josh, julia, kai, kim, kourtney, lauren, lews_official, lindsey, mason, mr_lee, ms_rose, naomi, nora, parker, penelope, polly, riley, ryan, samantha, satin, sebastian, tom, trainer, wolf)
 
         mc.name = name
         if not mc.username:
             mc.username = name
         mc.profile_pictures = CharacterService.get_profile_pictures("mc")
 
+        lews_official.name = "Lews Official"
         ms_rose.name = "Ms Rose"
         mr_lee.name = "Mr Lee"
 
         for npc in npcs:
-            npc.profile_pictures = CharacterService.get_profile_pictures(npc.name)
+            npc.profile_pictures = CharacterService.get_profile_pictures(npc.name.lower())
 
-        if isinstance(_version, str) or _version < config.version:
+        if isinstance(_version, str) or _version < (1, 3, 3):
             if isinstance(mc.relationships, set):
                 mc.relationships = {}
 
@@ -91,13 +60,18 @@ label after_load:
             except AttributeError: pass
 
             for npc in npcs:             
-                npc.pending_text_messages = []
-                npc.text_messages = []
+                try: npc.pending_text_messages
+                except AttributeError: npc.pending_text_messages = []
+                try: npc.text_messages
+                except AttributeError: npc.text_messages = []
 
-                npc.pending_simplr_messages = []
-                npc.simplr_messages = []
+                try: npc.pending_simplr_messages
+                except AttributeError: npc.pending_simplr_messages = []
+                try: npc.simplr_messages
+                except AttributeError: npc.simplr_messages = []
 
-                npc.relationships = {}
+                try: npc.relationships
+                except AttributeError: npc.relationships = {}
 
                 try:
                     if npc._relationship == Relationship.MAD:
@@ -126,29 +100,41 @@ label after_load:
                 mc.profile_picture = mc.profile_pictures[0]
             #endregion PlayableCharacter
 
-            #region Messenger    
+            #region Messenger
             old_messenger_contacts = messenger.contacts.copy()
+            messenger.contacts = []
             for contact in old_messenger_contacts:
-                npc = contact.user
+                npc = CharacterService.get_user(contact.user)
+                
                 npc.text_messages = []
                 for message in contact.sent_messages:
+                    if hasattr(message, "message"):
+                        message.content = message.message
+                    elif hasattr(message, "image"):
+                        message.content = message.image
+                    
                     if isinstance(message, Reply):
                         npc.text_messages.append(Reply(message.content))
                     else:
                         npc.text_messages.append(Message(npc, message.content))
-
-            try:
-                messenger.contacts = list(contact.user for contact in old_messenger_contacts)
-            except AttributeError: pass
+                messenger.contacts.append(npc)
             #endregion Messenger
 
             #region Kiwii
+            try: kiwii.posts
+            except AttributeError: kiwii.posts = []
+
             for post in kiwii_posts:
-                kiwii_post = KiwiiService.new_post(post.user, post.image, post.message, post.number_likes, post.mentions)
+                kiwii_post = KiwiiService.new_post(CharacterService.get_user(post.user), post.image, post.message, post.number_likes, post.mentions)
 
                 for comment in post.sent_comments:
-                    KiwiiService.new_comment(kiwii_post, comment.user, comment.message, comment.number_likes, comment.mentions)
+                    KiwiiService.new_comment(kiwii_post, CharacterService.get_user(comment.user), comment.message, comment.number_likes, comment.mentions)
             #endregion Kiwii
+
+        try:
+            label_history = list(label_history)
+        except NameError:
+            label_history = []
 
 
         # Disable skip transitions
@@ -164,7 +150,6 @@ label after_load:
         try: mc.relationships
         except AttributeError: mc.relationships = {}
 
-        #endregion NonPlayableCharacters
         try:
             bro = reputation.components[Reputations.BRO]
             boyfriend = reputation.components[Reputations.BOYFRIEND]
