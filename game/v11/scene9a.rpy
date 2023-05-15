@@ -196,19 +196,19 @@ label v11_wolves_seb_prank:
             scene v11wsp4b
             with dissolve
 
-            $ v11s9a_kiwiiPost1 = KiwiiPost(caleb, "phone/kiwii/Posts/v11/sebnaked.webp", _("Someone had a fun time last night!"), number_likes=556) # Sebastian naked in the middle of campus stood over his sleeping bag looking confused
-            $ v11s9a_kiwiiPost1.newComment(aubrey, _("Suns out, Buns out!"), number_likes=renpy.random.randint(100, 300))
-            $ v11s9a_kiwiiPost1.newComment(samantha, _("A little early in the morning to go streaking isn't it? lol"), number_likes=renpy.random.randint(100, 300))
-            $ v11s9a_kiwiiPost1.newComment(lindsey, _("Spicy!"), number_likes=renpy.random.randint(100, 300))
-            $ v11s9a_kiwiiPost1.addReply(_("Getting ready to go skinny dipping?"), number_likes=321)
-            $ v11s9a_kiwiiPost1.addReply(_("Someone's got \"balls\""), number_likes=334)
+            $ kiwii_post = KiwiiService.new_post(caleb, "phone/kiwii/Posts/v11/sebnaked.webp", _("Someone had a fun time last night!"), number_likes=556) # Sebastian naked in the middle of campus stood over his sleeping bag looking confused
+            $ KiwiiService.new_comment(kiwii_post, aubrey, _("Suns out, Buns out!"), number_likes=renpy.random.randint(100, 300))
+            $ KiwiiService.new_comment(kiwii_post, samantha, _("A little early in the morning to go streaking isn't it? lol"), number_likes=renpy.random.randint(100, 300))
+            $ KiwiiService.new_comment(kiwii_post, lindsey, _("Spicy!"), number_likes=renpy.random.randint(100, 300))
+            $ KiwiiService.add_replies(kiwii_post,
+                KiwiiReply(_("Getting ready to go skinny dipping?"), number_likes=321),
+                KiwiiReply(_("Someone's got \"balls\""), number_likes=334)
+            )
 
-            label v11s9a_kiwiiPost1_continue:
-                if v11s9a_kiwiiPost1.replies:
-                    call screen phone
-                if v11s9a_kiwiiPost1.replies:
+            while KiwiiService.has_replies(kiwii_post):
+                call screen phone
+                if KiwiiService.has_replies(kiwii_post):
                     u "(I should reply on Kiwii)"
-                    jump v11s9a_kiwiiPost1_continue
 
             scene v11wsp4b
             with dissolve
@@ -492,19 +492,19 @@ label v11_wolves_seb_prank:
 
             imre "Check Kiwii."
 
-            $ v11s9a_kiwiiPost2 = KiwiiPost(caleb, "phone/kiwii/Posts/v11/sebnaked.webp", _("Someone had a fun time last night!"), number_likes=556) # Sebastian naked in the middle of campus stood over his sleeping bag looking confused
-            $ v11s9a_kiwiiPost2.newComment(aubrey, _("Suns out, Buns out!"), number_likes=renpy.random.randint(100, 300))
-            $ v11s9a_kiwiiPost2.newComment(samantha, _("A little early in the morning to go streaking isn't it? lol"), number_likes=renpy.random.randint(100, 300))
-            $ v11s9a_kiwiiPost2.newComment(lindsey, _("Spicy!"), number_likes=renpy.random.randint(100, 300))
-            $ v11s9a_kiwiiPost2.addReply(_("I wonder how this happened..."), number_likes=321)
-            $ v11s9a_kiwiiPost2.addReply(_("Someone's got \"balls\""), number_likes=218)
+            $ kiwii_post = KiwiiService.new_post(caleb, "phone/kiwii/Posts/v11/sebnaked.webp", _("Someone had a fun time last night!"), number_likes=556) # Sebastian naked in the middle of campus stood over his sleeping bag looking confused
+            $ KiwiiService.new_comment(kiwii_post, aubrey, _("Suns out, Buns out!"), number_likes=renpy.random.randint(100, 300))
+            $ KiwiiService.new_comment(kiwii_post, samantha, _("A little early in the morning to go streaking isn't it? lol"), number_likes=renpy.random.randint(100, 300))
+            $ KiwiiService.new_comment(kiwii_post, lindsey, _("Spicy!"), number_likes=renpy.random.randint(100, 300))
+            $ KiwiiService.add_replies(kiwii_post,
+                KiwiiReply(_("I wonder how this happened..."), number_likes=321),
+                KiwiiReply(_("Someone's got \"balls\""), number_likes=218)
+            )
 
-            label v11s9a_kiwiiPost2_continue:
-                if v11s9a_kiwiiPost2.replies:
-                    call screen phone
-                if v11s9a_kiwiiPost2.replies:
+            while KiwiiService.has_replies(kiwii_post):
+                call screen phone
+                if KiwiiService.has_replies(kiwii_post):
                     u "(I should reply on Kiwii)"
-                    jump v11s9a_kiwiiPost2_continue
 
             scene v11wsp4b
             with dissolve

@@ -207,10 +207,12 @@ label v11_roommate:
 
             cl "Goodnight."
 
-            $ v11s19_kiwiiPost2 = KiwiiPost(chloe, "phone/kiwii/Posts/v11/v11_chloemcselfie.webp", _("My Europe roommate!"), number_likes=756)
-            $ v11s19_kiwiiPost2.newComment(aubrey, _("Look at you two!"), number_likes=renpy.random.randint(100, 200))
-            $ v11s19_kiwiiPost2.addReply(_("I think I made the correct choice of roommate ;)"), number_likes=321)
-            $ v11s19_kiwiiPost2.addReply(_("Glad to have you as my roommate Chloe!"), number_likes=334)
+            $ kiwii_post = KiwiiService.new_post(chloe, "phone/kiwii/Posts/v11/v11_chloemcselfie.webp", _("My Europe roommate!"), number_likes=756)
+            $ KiwiiService.new_comment(kiwii_post, aubrey, _("Look at you two!"), number_likes=renpy.random.randint(100, 200))
+            $ KiwiiService.add_replies(kiwii_post,
+                KiwiiReply(_("I think I made the correct choice of roommate ;)"), number_likes=321),
+                KiwiiReply(_("Glad to have you as my roommate Chloe!"), number_likes=334)
+            )
 
         else:
             scene v11rm4f # FPP. Same as v11rm4, but Chloe is smiling, mouth closed
@@ -318,10 +320,12 @@ label v11_roommate:
 
             cl "Haha, just like that."
 
-            $ v11s19_kiwiiPost1 = KiwiiPost(chloe, "phone/kiwii/Posts/v11/v11_chloemcselfie.webp", _("My Europe roommate!"), number_likes=756)
-            $ v11s19_kiwiiPost1.newComment(aubrey, _("Look at you two!"), number_likes=renpy.random.randint(100, 200))
-            $ v11s19_kiwiiPost1.addReply(_("I think I made the correct choice of roommate ;)"), number_likes=321)
-            $ v11s19_kiwiiPost1.addReply(_("Glad to have you as my roommate Chloe!"), number_likes=334)
+            $ kiwii_post = KiwiiService.new_post(chloe, "phone/kiwii/Posts/v11/v11_chloemcselfie.webp", _("My Europe roommate!"), number_likes=756)
+            $ KiwiiService.new_comment(kiwii_post, aubrey, _("Look at you two!"), number_likes=renpy.random.randint(100, 200))
+            $ KiwiiService.add_replies(kiwii_post,
+                KiwiiReply(_("I think I made the correct choice of roommate ;)"), number_likes=321),
+                KiwiiReply(_("Glad to have you as my roommate Chloe!"), number_likes=334)
+            )
 
         scene v11rm7c # FPP. MC looks as Chloe is turned around with her back to him, sleeping
         with dissolve
@@ -892,10 +896,12 @@ label v11_roommate:
 
                     ri "...And all of a sudden I'm tired. *Chuckles*"
 
-        $ v11s19_kiwiiPost3 = KiwiiPost(riley, "phone/kiwii/Posts/v11/v11_rileymcselfie.webp", _("Roll on Europe!"), number_likes=456)
-        $ v11s19_kiwiiPost3.newComment(ryan, _("Good roommate pick!"), number_likes=renpy.random.randint(100, 300))
-        $ v11s19_kiwiiPost3.addReply(_("Europe's gonna be a blast!"), number_likes=321)
-        $ v11s19_kiwiiPost3.addReply(_("Glad to have you as my roommate Riley!"), number_likes=334)
+        $ kiwii_post = KiwiiService.new_post(riley, "phone/kiwii/Posts/v11/v11_rileymcselfie.webp", _("Roll on Europe!"), number_likes=456)
+        $ KiwiiService.new_comment(kiwii_post, ryan, _("Good roommate pick!"), number_likes=renpy.random.randint(100, 300))
+        $ KiwiiService.add_replies(kiwii_post,
+            KiwiiReply(_("Europe's gonna be a blast!"), number_likes=321),
+            KiwiiReply(_("Glad to have you as my roommate Riley!"), number_likes=334)
+        )
 
         pause 0.75
 
