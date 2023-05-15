@@ -3,10 +3,6 @@ python early:
     rpy_files = set()
 
     for file in renpy.list_files().copy():
-        if file in old_files:
-            restart_game = True
-            os.remove(os.path.join(config.gamedir, file))
-
         if file.endswith(".rpy") or file.endswith("_ren.py"):
             rpy_files.add(file)
 
