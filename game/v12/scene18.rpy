@@ -1702,10 +1702,10 @@ label v12s18_bet: # END OF FREE ROAM
     imre "*Drunk* I'm just scrolling through my Kiwii and-"
 
     if v11_overtake_points >= 2: # MC wins the race
-        $ kiwii_post = KiwiiService.new_post(amber, "phone/kiwii/Posts/v12/amber_bet.webp", _("A bet is a bet..."), number_likes=5) # Amber nude pic
+        $ v12s18_kiwiiPost2 = KiwiiService.new_post(amber, "phone/kiwii/Posts/v12/amber_bet.webp", _("A bet is a bet..."), number_likes=5) # Amber nude pic
 
     else: # MC loses the race
-        $ kiwii_post = KiwiiService.new_post(amber, "phone/kiwii/Posts/v12/mc_bet.webp", _("A bet is a bet..."), number_likes=5) # MC nude pic
+        $ v12s18_kiwiiPost3 = KiwiiService.new_post(amber, "phone/kiwii/Posts/v12/mc_bet.webp", _("A bet is a bet..."), number_likes=5) # MC nude pic
     
     scene v12slpbet7b # TPP. Same as v12slpbet7, Imre surprised, mouth open
     with dissolve
@@ -1868,10 +1868,10 @@ label v12s18_bet: # END OF FREE ROAM
     pause 0.75
 
     if v11_overtake_points >= 2: # MC wins the race
-        $ v12s18_kiwiiPost2.remove_post()
+        $ KiwiiService.delete_post(v12s18_kiwiiPost2)
 
     else: # MC loses the race
-        $ v12s18_kiwiiPost3.remove_post()
+        $ KiwiiService.delete_post(v12s18_kiwiiPost3)
 
     scene v12slpbet16a # TPP. Same camera as v12slpbet16, MC and Amber now lying on the bed, away from each other, both smiling, mouths closed
     with dissolve
