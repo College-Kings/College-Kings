@@ -2,9 +2,10 @@ python early:
     restart_game = False  # NEVER CHANGE
     rpy_files = set()
 
-    for file in renpy.list_files().copy():
-        if file.endswith(".rpy") or file.endswith("_ren.py") or file.endswith(".rpyc"):
-            os.remove(os.path.join(config.gamedir, file))
+    if renpy.loadable("archive.rpa"):
+        for file in renpy.list_files().copy():
+            if file.endswith(".rpy") or file.endswith("_ren.py") or file.endswith(".rpyc"):
+                os.remove(os.path.join(config.gamedir, file))
 
     # for file in renpy.list_files().copy():
     #     if file.endswith(".rpyc") and not (file.replace(".rpyc", ".rpy") in rpy_files or file.replace(".rpyc", "_ren.py") in rpy_files):
