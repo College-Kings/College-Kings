@@ -770,14 +770,10 @@ label v12s32:
 
         v12s32_kiwii_reply1 = KiwiiBuilder(kiwii_post)
         v12s32_kiwii_reply1.new_comment(naomi, _("Hehe, you too! Hope to see you soon...;)"), number_likes=renpy.random.randint(583, 912))
-        v12s32_kiwii_reply1.new_comment(chloe, _("OMG!?!?!?!"), number_likes=renpy.random.randint(124,354))
-        v12s32_kiwii_reply1.new_comment(imre, _("Bro... Is that you?!"), number_likes=renpy.random.randint(53,93), mentions=[mc])
-    
+
         v12s32_kiwii_reply2 = KiwiiBuilder(kiwii_post)
         v12s32_kiwii_reply2.new_comment(aubrey, _("You're so welcome... Today was amazing. <3"), number_likes=renpy.random.randint(253, 462))
-        v12s32_kiwii_reply2.new_comment(chloe, _("OMG!?!?!?!"), number_likes=renpy.random.randint(124,354))
-        v12s32_kiwii_reply2.new_comment(imre, _("Bro... Is that you?!"), number_likes=renpy.random.randint(53,93), mentions=[mc])
-
+        
         KiwiiService.new_comment(kiwii_post, naomi, _("That's my baby sis! <3"), number_likes=renpy.random.randint(952, 1512))
         KiwiiService.new_comment(kiwii_post, aubrey, _("Thank you so much for having us! Can't wait for the future..."), number_likes=renpy.random.randint(367, 526))
         KiwiiService.new_comment(kiwii_post, chloe, _("OMG!?!?!?!"), number_likes=renpy.random.randint(124,354))
