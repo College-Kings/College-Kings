@@ -975,9 +975,9 @@ screen v12s7_balcony_left():
     tag free_roam
     
     if nora in v12s7_killList:
-        add "v12s7_balcony_left_background_a" # No one
+        add "v12s7_balcony_left_background_b" # No one
     else:
-        add "v12s7_balcony_left_background_b" # Nora
+        add "v12s7_balcony_left_background_a" # Nora
 
     if nora not in v12s7_killList:
         imagebutton:
