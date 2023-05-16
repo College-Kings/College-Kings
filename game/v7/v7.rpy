@@ -1352,7 +1352,7 @@ label conyourdorm:
     $ KiwiiService.add_reply(kiwii_post, _("I'd destroy you in Air hockey!"), number_likes=renpy.random.randint(15, 25), mentions=[aubrey], next_comment=v7_kiwii_reply5)
 
     if CharacterService.is_fwb(emily): # first riley texts, then once you've opened the app you get 2 more messages.
-        $ kiwii_post = KiwiiService.new_post(emily, "phone/kiwii/Posts/v7/empost1.webp", _("Finally fate brings us back together. What doesn't kill us only makes us stronger."), number_likes=82)
+        $ v7_kiwii_post4 = KiwiiService.new_post(emily, "phone/kiwii/Posts/v7/empost1.webp", _("Finally fate brings us back together. What doesn't kill us only makes us stronger."), number_likes=82)
 
         $ v7_kiwii_reply6 = KiwiiBuilder(kiwii_post)
         $ v7_kiwii_reply6.add_function(reputation.add_point, RepComponent.TROUBLEMAKER)
@@ -1516,7 +1516,7 @@ label conyourdorm:
                 with dissolve
                 u "*Sighs*"
 
-                $ v7_kiwiiPost4.remove_post()
+                $ KiwiiService.delete_post(v7_kiwii_post4)
 
                 if CharacterService.is_girlfriend(lauren):
                     u "(Time to make things right with Lauren.)"
@@ -1595,7 +1595,7 @@ label conyourdorm:
 
                 u "(I forgot how fucking crazy she is...)"
 
-                $ v7_kiwiiPost4.remove_post()
+                $ KiwiiService.delete_post(v7_kiwii_post4)
 
                 if CharacterService.is_girlfriend(lauren):
                     u "(Time to make things right with Lauren.)"
