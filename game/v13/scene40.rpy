@@ -89,10 +89,10 @@ label v13s40:
     label v13s40_sg:
         if _in_replay:
             $ mc.money += 1000
-            $ mc.inventory.add_item(honey)
-            $ mc.inventory.add_item(butt_plug)
-            $ mc.inventory.add_item(spankers)
-            $ mc.inventory.add_item(feather)
+            $ mc.inventory.append(honey)
+            $ mc.inventory.append(butt_plug)
+            $ mc.inventory.append(spankers)
+            $ mc.inventory.append(feather)
 
     scene v13s40_8 # FPP. Chloe wrapping her arms around MC, looking at him, Chloe sexy look, mouth open
     with dissolve
