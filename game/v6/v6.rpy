@@ -104,6 +104,7 @@ label imrecona: # Find Imre
                 call screen reputation_popup
 
                 $ imreforgives = True
+                $ CharacterService.remove_mood(imre, Moods.MAD)
 
                 scene s445
                 with dissolve
