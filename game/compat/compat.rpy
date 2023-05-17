@@ -5,6 +5,9 @@ init 999 python:
     class SimplrContact:
         pass
 
+    class ImgReply:
+        pass
+
     class ImageMessage:
         pass
 
@@ -23,10 +26,13 @@ init 999 python:
     class Teacher(NonPlayableCharacter):
         pass
 
-    class FightCharacter(NonPlayableCharacter):
+    class FightCharacter(Fighter):
         pass
 
     class PathBuilderCatagories:
+        pass
+
+    class PathBuilderItem:
         pass
 
     v1_reply1 = None
@@ -77,6 +83,7 @@ init 999 python:
     v6_reply8 = None
     v6_reply9 = None
     v6_reply10 = None
+    v6_reply11 = None
     v7_msgReply1 = None
     v7_msgReply2 = None
     v7_msgReply3 = None
