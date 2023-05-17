@@ -26,7 +26,7 @@ init 999 python:
     class Teacher(NonPlayableCharacter):
         pass
 
-    class FightCharacter(Fighter):
+    class FightCharacter:
         pass
 
     class PathBuilderCatagories:
