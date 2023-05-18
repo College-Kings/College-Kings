@@ -1358,10 +1358,10 @@ label conyourdorm:
         $ v7_kiwii_reply6.add_function(reputation.add_point, RepComponent.TROUBLEMAKER)
         $ v7_kiwii_reply6.new_comment(josh, _("lol"), number_likes=renpy.random.randint(3, 7), mentions=[mc])
 
-        $ KiwiiService.new_comment(kiwii_post, riley, _("You guys are so cute"), 5)
-        $ KiwiiService.new_comment(kiwii_post, aubrey, _("GORGEOUS"), 8)
-        $ KiwiiService.new_comment(kiwii_post, josh, _("Woah, you guys back together??"), 3)
-        $ KiwiiService.add_reply(kiwii_post, _("No, we're not."), number_likes=renpy.random.randint(5, 15), mentions=[josh], next_comment=v7_kiwii_reply6)
+        $ KiwiiService.new_comment(v7_kiwii_post4, riley, _("You guys are so cute"), 5)
+        $ KiwiiService.new_comment(v7_kiwii_post4, aubrey, _("GORGEOUS"), 8)
+        $ KiwiiService.new_comment(v7_kiwii_post4, josh, _("Woah, you guys back together??"), 3)
+        $ KiwiiService.add_reply(v7_kiwii_post4, _("No, we're not."), number_likes=renpy.random.randint(5, 15), mentions=[josh], next_comment=v7_kiwii_reply6)
 
         play sound sound.vibrate
 
@@ -1384,9 +1384,9 @@ label conyourdorm:
             if MessengerService.has_replies(riley):
                 u "(I need to respond to some of these messages.)"
 
-        while KiwiiService.has_replies(kiwii_post):
+        while KiwiiService.has_replies(v7_kiwii_post4):
             call screen phone
-            if KiwiiService.has_replies(kiwii_post):
+            if KiwiiService.has_replies(v7_kiwii_post4):
                 u "(I should check out what Emily posted on Kiwii.)"
 
         while MessengerService.has_replies(penelope):
