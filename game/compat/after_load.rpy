@@ -2,7 +2,7 @@ python early:
     restart_game = False  # NEVER CHANGE
     rpy_files = set()
 
-    if renpy.loadable("archive.rpa") os.name == 'nt':
+    if renpy.loadable("archive.rpa") and os.name == 'nt':
         for root, dirs, files in os.walk(config.gamedir):
             for file in files:
                 if file.endswith(".rpy") or file.endswith("_ren.py") or file.endswith(".rpyc"):
