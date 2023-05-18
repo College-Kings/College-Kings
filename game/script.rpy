@@ -2,7 +2,7 @@ define config.enable_steam = False
 define config.console = True
 define config_debug = False # Automatic Testing
 
-define config.version = (1, 3, 6)
+define config.version = (1, 3, 7)
 
 define config.steam_appid = 1463120
 define config.image_cache_size_mb = 520
