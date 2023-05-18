@@ -1,5 +1,6 @@
 label load_failed:
-    renpy.execute_default_statement()
+    python:
+        renpy.execute_default_statement()
 
     call after_load
 
