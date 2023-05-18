@@ -2,7 +2,7 @@ label load_failed:
     python:
         renpy.execute_default_statement()
 
-    call after_load
+    call after_load from _call_after_load
 
     python:
         try:
