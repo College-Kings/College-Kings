@@ -531,6 +531,8 @@ label v11_cardealership:
                             pause 1
 
                     "Let's get the car back":
+                        $ CharacterService.set_relationship(chloe, Relationship.FRIEND)
+                        
                         scene v11cd39
                         with dissolve
 

@@ -233,20 +233,14 @@ label v11_chloe_bathroom:
 
             cl "*Moans*"
 
-            if CharacterService.is_fwb(chloe) or CharacterService.is_girlfriend(chloe) or reputation() == Reputations.POPULAR:
+            if CharacterService.is_fwb(chloe) or CharacterService.is_girlfriend(chloe):
                 $ sceneList.add("v11_chloe")
-
-                if CharacterService.is_friend(chloe):
-                    $ CharacterService.set_relationship(chloe, Relationship.FWB)
-                    
-                    call screen reputation_popup
+                $ CharacterService.set_relationship(chloe, Relationship.GIRLFRIEND)
 
                 stop music fadeout 3
                 jump v11_chloe_sex_scene
 
-            else:
-                call screen reputation_popup(required_reputation="popular")
-            
+            else:            
                 scene v11chb9e # TPP. Same as v11chb9a, but Chloe is the one pulling back from the kiss instead of MC
                 with dissolve
 
@@ -265,7 +259,7 @@ label v11_chloe_bathroom:
                 scene v11chb10a
                 with dissolve
 
-                cl "I'm just gonna try to get some sleep."
+                cl "I'm just gonna try to get some sleep"
 
                 scene v11chb10
                 with dissolve
