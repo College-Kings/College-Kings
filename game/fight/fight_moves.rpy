@@ -24,7 +24,7 @@ init 10 python:
             return f"<{self.__class__.__name__}>"
 
 
-    class SpecialMove(ABC):
+    class SpecialMove(ABC, object):
         def __init__(self):
             self.name = ""
             self.ideal_stance: Optional[FightStance] = None
