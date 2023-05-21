@@ -437,9 +437,9 @@ label after_load:
     hide screen simplr_reply
 
     if config.developer:
-        show screen bug_testing_overlay
+        show screen debug_overlay
     else:
-        hide screen bug_testing_overlay
+        hide screen debug_overlay
 
     if mc.frat is None:
         call screen compat_frat_is_none

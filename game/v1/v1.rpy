@@ -1,7 +1,7 @@
 label v1_start:
 label starta: #for compatibility only
     if config.developer:
-        show screen bug_testing_overlay
+        show screen debug_overlay
 
     show fantasyoverlay onlayer foreground
 
