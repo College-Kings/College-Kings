@@ -149,11 +149,11 @@ label v13s40:
 
     $ sex_overlay_options = [("Neck", "v13s40_neck"), ("Chest", "v13s40_chest"), ("Back", "v13s40_back"), ("Shoulders", "v13s40_shoulder")]
 
-    if mc.has_item(honey):
+    if honey in mc.inventory:
         $ sex_overlay_options.append((honey.name, "v13s40_honey"))
-    if mc.has_item(spankers):
+    if spankers in mc.inventory:
         $ sex_overlay_options.append((spankers.name, "v13s40_spanker"))
-    if mc.has_item(feather):
+    if feather in mc.inventory:
         $ sex_overlay_options.append((feather.name, "v13s40_feather"))
 
     call screen sex_overlay("v13s40_end_free_roam")
