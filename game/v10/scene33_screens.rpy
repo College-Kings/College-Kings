@@ -175,7 +175,7 @@ screen v10s33_toilet(): # NO
             action Call("free_roam_spoken_too", "v10cfrev1a", "v10s33_toilet")
 
     # Toilet Ryan
-    if "ryan" in freeroam6:            
+    if "ryan" in freeroam6:
         imagebutton: 
             pos (812, 253)
             idle "images/v10/scene 33/fr6toiletryan.webp"
@@ -207,7 +207,7 @@ screen v10s33_toilet(): # NO
                 actions.append(Jump("v10s33_evelyn1"))
 
             # Toilet Ryan
-            if "ryan" in freeroam6:            
+            if "ryan" in freeroam6:
                 if not "ryan2" in freeroam6:
                     actions.append(Jump("v10s33_toiletryan1"))
 
@@ -295,7 +295,7 @@ screen v10s33_thrift():
         action Jump("v10s33_deergirl41")
 
     # Riley
-    if not "riley" in freeroam6:                
+    if not "riley" in freeroam6:
         imagebutton: 
             pos (391, 388)
             idle "images/v10/scene 33/fr6riley.webp"
@@ -322,7 +322,7 @@ screen v10s33_thrift():
 
             actions.append(Jump("v10s33_deergirl41"))
 
-            if not "riley" in freeroam6:                
+            if not "riley" in freeroam6:
                 actions.append(Jump("v10s33_riley1"))
 
             actions.append(Show("v10s33_stagefromleft"))

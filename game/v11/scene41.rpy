@@ -240,7 +240,7 @@ label v11_chloe_bathroom:
                 stop music fadeout 3
                 jump v11_chloe_sex_scene
 
-            else:            
+            else:
                 scene v11chb9e # TPP. Same as v11chb9a, but Chloe is the one pulling back from the kiss instead of MC
                 with dissolve
 

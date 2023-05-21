@@ -57,7 +57,7 @@ label after_load:
                     v6_evelyn_successful_date = True
             except AttributeError: pass
 
-            for npc in npcs:             
+            for npc in npcs:
                 try: npc.pending_text_messages
                 except AttributeError: npc.pending_text_messages = []
                 try: npc.text_messages
