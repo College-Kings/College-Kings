@@ -11,7 +11,7 @@ init python:
 """
 
 
-def write_console(data) -> None:
+def write_console(data: object) -> None:
     with open("console.txt", "w") as f:
         f.write(str(data))
 
@@ -62,7 +62,7 @@ def get_angle_between_two_points(
     )
 
 
-def set_dict_values(dict_: dict[Any], value: Any = True) -> None:
+def set_dict_values(dict_: dict[Any, Any], value: Any = True) -> None:
     for key in dict_:
         dict_[key] = value
 
