@@ -35,6 +35,9 @@ init 999 python:
     class PathBuilderItem:
         pass
 
+    class PathBuilderGirl:
+        pass
+
     v1_reply1 = None
     v1_reply2 = None
     v1_reply3 = None
