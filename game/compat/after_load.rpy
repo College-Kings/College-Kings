@@ -1,22 +1,3 @@
-python early:
-    restart_game = False  # NEVER CHANGE
-    rpy_files = set()
-
-    if renpy.loadable("archive.rpa") and os.name == 'nt':
-        for root, dirs, files in os.walk(config.gamedir):
-            for file in files:
-                if file.endswith(".rpy") or file.endswith("_ren.py") or file.endswith(".rpyc"):
-                    os.remove(os.path.join(root, file))
-
-    # for file in renpy.list_files().copy():
-    #     if file.endswith(".rpyc") and not (file.replace(".rpyc", ".rpy") in rpy_files or file.replace(".rpyc", "_ren.py") in rpy_files):
-    #         restart_game = True
-    #         os.remove(os.path.join(config.gamedir, file))
-
-    if restart_game:
-        renpy.quit(True)
-
-
 label after_load:
     stop music
     stop ambience
