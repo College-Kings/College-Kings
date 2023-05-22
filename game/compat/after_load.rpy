@@ -124,6 +124,7 @@ label after_load:
 
             for post in kiwii_posts:
                 kiwii_post = KiwiiService.new_post(CharacterService.get_user(post.user), post.image, post.message, post.number_likes, post.mentions)
+                kiwii_post.liked = post.liked
 
                 for comment in post.sent_comments:
                     KiwiiService.new_comment(kiwii_post, CharacterService.get_user(comment.user), comment.message, comment.number_likes, comment.mentions)
