@@ -4,6 +4,9 @@ label after_load:
     stop sound
 
     python:
+        if isinstance(_version, str):
+            _version = tuple(_version.split("."))
+
         npcs = (aaron, adam, amber, anon, aryssa, aubrey, autumn, beth, buyer, caleb, cameron, candy, charli, chloe, chris, dean, elijah, emily, emmy, evelyn, grayson, imre, iris, jenny, josh, julia, kai, kim, kourtney, lauren, lews_official, lindsey, mason, mr_lee, ms_rose, naomi, nora, parker, penelope, polly, riley, ryan, samantha, satin, sebastian, tom, trainer, wolf)
 
         mc.name = name
@@ -18,7 +21,7 @@ label after_load:
         for npc in npcs:
             npc.profile_pictures = CharacterService.get_profile_pictures(npc.name.lower())
 
-        if isinstance(_version, str) or _version < (1, 3, 3):
+        if _version < (1, 3, 3):
             if isinstance(mc.relationships, set):
                 mc.relationships = {}
 

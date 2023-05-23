@@ -31,7 +31,7 @@ define gui.show_name = False
 ## or semicolons.
 
 define build.name = "CollegeKings"
-define build.directory_name = "CollegeKings{}".format("" if config.enable_steam else '.'.join(str(x) for x in config.version))
+define build.directory_name = "CollegeKings{}".format("" if config.enable_steam else config.version)
 define build.destination = "{}-{}-dists".format(build.name, "Steam" if config.enable_steam else "Patreon")
 
 ## Sounds and music ############################################################
