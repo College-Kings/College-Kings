@@ -267,7 +267,7 @@ label v13s16a:
 
     pause 0.75
 
-    if v13_cuddle_lauren_text: # -If told Lauren you'd come but stayed with Riley-
+    if v13_cuddle_lauren: # -If told Lauren you'd come but stayed with Riley-
         scene v13s16a_13 # FPP Dark screen
         with dissolve
 
