@@ -5,7 +5,7 @@ label after_load:
 
     python:
         if isinstance(_version, str):
-            _version = tuple(_version.split("."))
+            _version = tuple(int(i) for i in _version.split("."))
 
         npcs = (aaron, adam, amber, anon, aryssa, aubrey, autumn, beth, buyer, caleb, cameron, candy, charli, chloe, chris, dean, elijah, emily, emmy, evelyn, grayson, imre, iris, jenny, josh, julia, kai, kim, kourtney, lauren, lews_official, lindsey, mason, mr_lee, ms_rose, naomi, nora, parker, penelope, polly, riley, ryan, samantha, satin, sebastian, tom, trainer, wolf)
 
@@ -20,6 +20,9 @@ label after_load:
 
         for npc in npcs:
             npc.profile_pictures = CharacterService.get_profile_pictures(npc.name.lower())
+
+            try: npc.pending_text_messages
+            except AttributeError: npc.pending_text_messages = []
 
         if _version < (1, 3, 3):
             if isinstance(mc.relationships, set):
