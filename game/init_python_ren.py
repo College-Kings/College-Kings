@@ -23,19 +23,13 @@ def open_deluxe_folder() -> None:
     webbrowser.open("file:///" + path)
 
 
-def exception_handler(
-    short_traceback: str, long_traceback: str, path_to_traceback_file: str
-) -> bool:
-    return False
-
-
 def label_callback(label_name: str, is_reached_from_jump: bool) -> None:
     if label_name.startswith("_"):
         return
 
     try:
-        store.label_history = list(store.label_history)
-    except (NameError, AttributeError):
+        store.label_history
+    except AttributeError:
         store.label_history = []
 
     if not store.label_history or store.label_history[-1] != label_name:
