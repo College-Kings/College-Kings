@@ -163,3 +163,7 @@ init 999 python:
     v12s19_kiwiiReply1 = None
     v12s32kiwiiPost1_Reply1 = None
     v12s32kiwiiPost1_Reply2 = None
+
+label ingmenu:
+    call screen save
+    return
