@@ -1,7 +1,10 @@
 from __future__ import annotations
+from typing import Callable
 
 from renpy import store
 import renpy.exports as renpy
+
+_: Callable[[str], str]
 
 """renpy
 init python:
