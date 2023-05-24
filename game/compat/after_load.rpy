@@ -24,7 +24,10 @@ label after_load:
             try: npc.pending_text_messages
             except AttributeError: npc.pending_text_messages = []
 
-        if _version < (1, 3, 3):
+        if _version < (1, 3, 3) or _version > (2, 0, 0):
+            if not isinstance(kiwii, Kiwii):
+                kiwii = Kiwii()
+
             if isinstance(mc.relationships, set):
                 mc.relationships = {}
 
