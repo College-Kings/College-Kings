@@ -24,7 +24,11 @@ label after_load:
             try: npc.pending_text_messages
             except AttributeError: npc.pending_text_messages = []
 
-        if _version < (1, 3, 3) or _version > (2, 0, 0):
+        if _version[:2] <= (1, 3) or _version > (2, 0, 0):
+            try:
+                mc.inventory = mc.inventory.items
+            except AttributeError: pass
+
             if not isinstance(kiwii, Kiwii):
                 kiwii = Kiwii()
 
@@ -92,19 +96,25 @@ label after_load:
             old_messenger_contacts = messenger.contacts.copy()
             messenger.contacts = []
             for contact in old_messenger_contacts:
-                npc = CharacterService.get_user(contact.user)
+                npc = contact
+                if not isinstance(npc, NonPlayableCharacter):
+                    npc = CharacterService.get_user(contact.user)
                 
-                npc.text_messages = []
-                for message in contact.sent_messages:
-                    if hasattr(message, "message"):
-                        message.content = message.message
-                    elif hasattr(message, "image"):
-                        message.content = message.image
-                    
-                    if isinstance(message, Reply):
-                        npc.text_messages.append(Reply(message.content))
-                    else:
-                        npc.text_messages.append(Message(npc, message.content))
+                try: npc.text_messages
+                except AttributeError:
+                    npc.text_messages = []
+                
+                if hasattr(contact, "sent_messages"):
+                    for message in contact.sent_messages:
+                        if hasattr(message, "message"):
+                            message.content = message.message
+                        elif hasattr(message, "image"):
+                            message.content = message.image
+                        
+                        if isinstance(message, Reply):
+                            npc.text_messages.append(Reply(message.content))
+                        else:
+                            npc.text_messages.append(Message(npc, message.content))
                 messenger.contacts.append(npc)
             #endregion Messenger
 
@@ -112,13 +122,20 @@ label after_load:
             try: kiwii.posts
             except AttributeError: kiwii.posts = []
 
-            for post in kiwii_posts:
-                kiwii_post = KiwiiService.new_post(CharacterService.get_user(post.user), post.image, post.message, post.number_likes, post.mentions)
-                kiwii_post.liked = post.liked
+            if hasattr(store, "kiwii_posts"):
+                for post in kiwii_posts:
+                    kiwii_post = KiwiiService.new_post(CharacterService.get_user(post.user), post.image, post.message, post.number_likes, post.mentions)
+                    kiwii_post.liked = post.liked
 
-                for comment in post.sent_comments:
-                    KiwiiService.new_comment(kiwii_post, CharacterService.get_user(comment.user), comment.message, comment.number_likes, comment.mentions)
+                    for comment in post.sent_comments:
+                        KiwiiService.new_comment(kiwii_post, CharacterService.get_user(comment.user), comment.message, comment.number_likes, comment.mentions)
+                del kiwii_posts
             #endregion Kiwii
+        
+        if _version < (1, 3, 11):
+            for post in kiwii.posts:
+                if post.image == "images/phone/kiwii/posts/v11/v11s38_amber_kiwii.webp":
+                    post.image = "images/phone/kiwii/Posts/v11/v11s38_amber_kiwii.webp"
 
         try:
             label_history = list(label_history)
