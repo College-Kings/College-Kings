@@ -128,6 +128,9 @@ label after_load:
                     kiwii_post.liked = post.liked
 
                     for comment in post.sent_comments:
+                        if hasattr(comment, "content"):
+                            comment.message = comment.content
+
                         KiwiiService.new_comment(kiwii_post, CharacterService.get_user(comment.user), comment.message, comment.number_likes, comment.mentions)
                 del kiwii_posts
             #endregion Kiwii
