@@ -5,7 +5,7 @@ label after_load:
 
     python:
         if isinstance(_version, str):
-            _version = tuple(int(i) for i in _version.split[' '][0].split("."))
+            _version = tuple(int(i) for i in _version.split(' ')[0].split("."))
 
         npcs = (aaron, adam, amber, anon, aryssa, aubrey, autumn, beth, buyer, caleb, cameron, candy, charli, chloe, chris, dean, elijah, emily, emmy, evelyn, grayson, imre, iris, jenny, josh, julia, kai, kim, kourtney, lauren, lews_official, lindsey, mason, mr_lee, ms_rose, naomi, nora, parker, penelope, polly, riley, ryan, samantha, satin, sebastian, tom, trainer, wolf)
 
