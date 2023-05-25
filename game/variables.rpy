@@ -457,7 +457,6 @@ default v13_after_party = False
 default v13_aubrey_concert = False
 default v13_charli_exposed = False
 default v13_cuddle_lauren = False
-default v13_cuddle_lauren_text = False
 default v13_help_chloe = False
 default v13_hugged_aubrey = False
 default v13_imre_disloyal = False

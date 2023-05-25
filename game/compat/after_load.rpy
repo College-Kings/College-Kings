@@ -405,8 +405,6 @@ label after_load:
         except NameError: chloeSus = 0
         try: v13_cuddle_lauren
         except NameError: v13_cuddle_lauren = False
-        try: v13_cuddle_lauren_text
-        except NameError: v13_cuddle_lauren_text = False
         try: v13s16_lauren_points
         except NameError: v13s16_lauren_points = 0
         try: v13_smoke_weed

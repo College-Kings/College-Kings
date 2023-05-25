@@ -106,7 +106,7 @@ label v13s15a:
             if MessengerService.has_replies(lauren):
                 u "(I should check my phone.)"
 
-    if v13_cuddle_lauren_text:
+    if v13_cuddle_lauren:
         scene v13s15a_6b
         with dissolve
 
