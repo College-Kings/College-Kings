@@ -78,12 +78,16 @@ label after_load:
             #endregion NonPlayableCharacters
             
             #region PlayableCharacter
+            try: mc.frat
+            except AttributeError: mc.frat = None
+
             try:
                 if joinwolves:
                     mc.frat = Frat.WOLVES
                 else:
                     mc.frat = Frat.APES
-            except NameError: mc.frat = None
+                del joinwolves
+            except NameError: pass
 
             try: mc.profile_picture
             except AttributeError: mc.profile_picture = mc.profile_pictures[0]
