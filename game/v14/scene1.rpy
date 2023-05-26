@@ -29,9 +29,6 @@ label v14_start:
         if CharacterService.is_fwb(lindsey):
             $ sceneList.add("v12_lindsey")
 
-        if CharacterService.is_friend(lauren):
-            $ CharacterService.set_relationship(lauren, Relationship.KISSED)
-
         if CharacterService.is_fwb(aubrey):
             $ s12v32_get_aubrey_flowers = True
             $ v13s48_canoeing_as_date = True
