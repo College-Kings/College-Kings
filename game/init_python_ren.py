@@ -32,6 +32,9 @@ def label_callback(label_name: str, is_reached_from_jump: bool) -> None:
     except AttributeError:
         store.label_history = []
 
+    if not isinstance(store.label_history, list):
+        store.label_history = list(store.label_history)
+
     if not store.label_history or store.label_history[-1] != label_name:
         store.label_history.append(label_name)
 
