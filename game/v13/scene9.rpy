@@ -362,7 +362,7 @@ label v13s9:
 
                 cl "Whatever, [name]."
         
-        "Help no one": # -If No One        
+        "Help no one": # -If No One
             scene v13s9_12e
             with dissolve
 
