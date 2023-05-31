@@ -138,6 +138,8 @@ label after_load:
                     for comment in post.sent_comments:
                         if hasattr(comment, "content"):
                             comment.message = comment.content
+                        elif hasattr(comment, "text"):
+                            comment.message = comment.text
 
                         KiwiiService.new_comment(kiwii_post, CharacterService.get_user(comment.user), comment.message, comment.number_likes, comment.mentions)
                 del kiwii_posts
