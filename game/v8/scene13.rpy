@@ -15,7 +15,7 @@ label after_apes_ceremony:
     # Kiwii post pic description: Grayson popping a champagne in Apes den with MC, Ryan and Caleb around him (make sure they're wearing the same outfits as in scene 12)
     $ kiwii_post = KiwiiService.new_post(grayson, "phone/kiwii/Posts/v8/grpost1.webp", _("[name], Ryan and Caleb are the new proud Apes! I can see this fight season turning out well for us!"), number_likes=renpy.random.randint(320, 350))
     if apesVids == 4:
-        $ kiwii_post = KiwiiService.new_post(grayson, _("And congrats to the prodigal son, [name], for getting the perfect score. Looks like somebody's coming for my throne!"), number_likes=renpy.random.randint(140, 150))
+        $ kiwii_post = KiwiiService.new_comment(grayson, _("And congrats to the prodigal son, [name], for getting the perfect score. Looks like somebody's coming for my throne!"), number_likes=renpy.random.randint(140, 150))
     $ KiwiiService.new_comment(kiwii_post, ryan, _("Apes baby! Woohoooo!!!"), number_likes=renpy.random.randint(60, 70))
     $ KiwiiService.new_comment(kiwii_post, caleb, _("GO APES!!!"), number_likes=renpy.random.randint(60, 70))
     $ KiwiiService.new_comment(kiwii_post, parker, _("Congrats guys!"), number_likes=renpy.random.randint(40, 50))
