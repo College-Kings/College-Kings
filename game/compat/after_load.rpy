@@ -106,7 +106,10 @@ label after_load:
             for contact in old_messenger_contacts:
                 npc = contact
                 if not isinstance(npc, NonPlayableCharacter):
-                    npc = CharacterService.get_user(contact.user)
+                    try:
+                        npc = CharacterService.get_user(contact.user)
+                    except AttributeError:
+                        npc = CharacterService.get_user(contact)
                 
                 try: npc.text_messages
                 except AttributeError:
