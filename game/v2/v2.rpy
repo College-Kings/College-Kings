@@ -298,19 +298,19 @@ label gb:
             $ renpy.pause(0.7)
 
             scene tomhook
-            show screen fight_tutorial(stance="defend")
+            show screen old_fight_tutorial(stance="defend")
 
             tut "Now it's time to block Tom's attack."
 
-            show screen fight_tutorial(highlight="q", stance="defend")
+            show screen old_fight_tutorial(highlight="q", stance="defend")
             tut "{b}Q{/b} lets you block your head from heavy attacks such as hooks, which come from a slight angle."
-            show screen fight_tutorial(highlight="w", stance="defend")
+            show screen old_fight_tutorial(highlight="w", stance="defend")
             tut "In order to protect yourself from attacks flying straight at your face, such as jabs, press {b}W{/b}."
-            show screen fight_tutorial(highlight="r", stance="defend")
+            show screen old_fight_tutorial(highlight="r", stance="defend")
             tut "Lastly, you can protect your legs, from low kicks for example, by pressing {b}R{/b}."
-            show screen fight_tutorial(highlight="q", stance="defend")
+            show screen old_fight_tutorial(highlight="q", stance="defend")
             tut "As of right now, there's a hook flying at your head, press {b}Q{/b} in the upcoming screen in order to block it."
-            hide screen fight_tutorial
+            hide screen old_fight_tutorial
 
             call screen fight_defendTutorial
 
@@ -334,15 +334,15 @@ label gb:
 
             scene hookcounter
 
-            show screen fight_tutorial(highlight="q", stance="defend")
+            show screen old_fight_tutorial(highlight="q", stance="defend")
             tut "{b}Q{/b} lets you block your head from heavy attacks such as hooks, which come from a slight angle."
-            show screen fight_tutorial(highlight="w", stance="defend")
+            show screen old_fight_tutorial(highlight="w", stance="defend")
             tut "In order to protect yourself from attacks flying straight at your face, such as jabs, press {b}W{/b}."
-            show screen fight_tutorial(highlight="r", stance="defend")
+            show screen old_fight_tutorial(highlight="r", stance="defend")
             tut "Lastly, you can protect your legs, from low kicks for example, by pressing {b}R{/b}."
-            show screen fight_tutorial(highlight="w", stance="defend")
+            show screen old_fight_tutorial(highlight="w", stance="defend")
             tut "As of right now, there's a jab flying at your face, press {b}W{/b} in the upcoming screen in order to block it."
-            hide screen fight_tutorial
+            hide screen old_fight_tutorial
 
             call screen fight_defendTutorial
 
@@ -369,15 +369,15 @@ label gb:
 
             tut "Now it's time to block Tom's attack."
 
-            show screen fight_tutorial(highlight="q", stance="defend")
+            show screen old_fight_tutorial(highlight="q", stance="defend")
             tut "{b}Q{/b} lets you block your head from heavy attacks such as hooks, which come from a slight angle."
-            show screen fight_tutorial(highlight="w", stance="defend")
+            show screen old_fight_tutorial(highlight="w", stance="defend")
             tut "In order to protect yourself from attacks flying straight at your face, such as jabs, press {b}W{/b}."
-            show screen fight_tutorial(highlight="r", stance="defend")
+            show screen old_fight_tutorial(highlight="r", stance="defend")
             tut "Lastly, you can protect your legs, from low kicks for example, by pressing {b}R{/b}."
-            show screen fight_tutorial(highlight="w", stance="defend")
+            show screen old_fight_tutorial(highlight="w", stance="defend")
             tut "As of right now, there's a jab flying at your face, press {b}W{/b} in the upcoming screen in order to block it."
-            hide screen fight_tutorial
+            hide screen old_fight_tutorial
 
             call screen fight_defendTutorial
 
