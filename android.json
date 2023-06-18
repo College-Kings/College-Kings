@@ -1,0 +1,24 @@
+{
+    "expansion": false,
+    "google_play_key": null,
+    "google_play_salt": null,
+    "heap_size": "3",
+    "icon_name": "College Kings",
+    "include_pil": false,
+    "include_sqlite": false,
+    "layout": null,
+    "name": "College Kings",
+    "numeric_version": 1,
+    "orientation": "sensorLandscape",
+    "package": "com.collegekings.one",
+    "permissions": [
+        "VIBRATE",
+        "INTERNET"
+    ],
+    "source": false,
+    "store": "none",
+    "update_always": true,
+    "update_icons": true,
+    "update_keystores": true,
+    "version": "1.3.15"
+}
