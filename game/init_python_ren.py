@@ -1,9 +1,8 @@
 import math
 import os
-
 from typing import Any
 
-from renpy import config, store
+from renpy import config, store, ui
 import renpy.exports as renpy
 
 """renpy
@@ -40,7 +39,7 @@ def label_callback(label_name: str, is_reached_from_jump: bool) -> None:
 
 
 def write_scene_lines_to_file() -> None:
-    file_line: tuple[str, str] = renpy.get_filename_line()
+    file_line: tuple[str, str] = renpy.get_filename_line()  # type: ignore
     with open(os.path.join(config.basedir, "game_log.txt"), "a") as f:
         f.write(f"{file_line}\n")
 
@@ -64,16 +63,16 @@ def set_dict_values(dict_: dict[Any, Any], value: Any = True) -> None:
         dict_[key] = value
 
 
-inf_adj = ui.adjustment()  # type: ignore
+inf_adj = ui.adjustment()
 inf_adj.value = float("inf")
 
-renpy.add_layer("foreground", above="master")
+renpy.add_layer("foreground", above="master")  # type: ignore
 
 """renpy
 init 100 python:
 """
 
 if store.config_debug:
-    config.interact_callbacks.append(write_scene_lines_to_file)
+    config.interact_callbacks.append(write_scene_lines_to_file)  # type: ignore
 
-config.overlay_screens.append("free_roam_tutorial")
+config.overlay_screens.append("free_roam_tutorial")  # type: ignore
