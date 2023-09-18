@@ -412,8 +412,8 @@ screen trolleyProblem(option1, option2):
         pos (125, 150)
         action Jump(option2)
 
+    bar value AnimatedValue(0, 3, 3, 3) at alpha_dissolve
     timer 3 action Jump(option1)
-    use timer_bar
 
     if config_debug:
         timer 0.1 action Jump(renpy.random.choice((option1, option2)))
