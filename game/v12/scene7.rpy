@@ -1806,7 +1806,7 @@ label v12s7_lauren1:
     scene v12ferla1
     with dissolve
 
-    u "*Laughs* Wait, you're character is a killer on the run but you're saying you're not the killer? I don't know if I can believe that."
+    u "*Laughs* Wait, your character is a killer on the run but you're saying you're not the killer? I don't know if I can believe that."
 
     scene v12ferla1b # FPP. same 1, Show lauren annoyed, mouth open
     with dissolve
