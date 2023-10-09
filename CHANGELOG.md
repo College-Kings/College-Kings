@@ -15,6 +15,7 @@ All notable changes to this project will be documented in this file. This projec
 ### Fixed
 
 - Fixed missing timer_bar screen ([#427](https://github.com/College-Kings/College-Kings/issues/427))
+- Fixed missing recap jump
 
 ### Changed
 
