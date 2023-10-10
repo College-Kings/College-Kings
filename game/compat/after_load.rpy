@@ -13,9 +13,6 @@ label after_load:
 
         npcs = (aaron, adam, amber, anon, aryssa, aubrey, autumn, beth, buyer, caleb, cameron, candy, charli, chloe, chris, dean, elijah, emily, emmy, evelyn, grayson, imre, iris, jenny, josh, julia, kai, kim, kourtney, lauren, lews_official, lindsey, mason, mr_lee, ms_rose, naomi, nora, parker, penelope, polly, riley, ryan, samantha, satin, sebastian, tom, trainer, wolf)
 
-        mc.name = name
-        if not mc.username:
-            mc.username = name
         mc.profile_pictures = CharacterService.get_profile_pictures("mc")
 
         lews_official.name = "Lews Official"
@@ -198,15 +195,6 @@ label after_load:
             messenger.contacts = contacts.copy()
             del contacts
         except NameError: pass
-
-        for app in phone.applications:
-            app.home_screen = "{}_home".format(app.name.lower())
-
-        messenger.home_screen = "{}_home".format(messenger.name.lower())
-        achievement_app.home_screen = "{}_home".format(achievement_app.name.lower())
-        kiwii.home_screen = "{}_home".format(kiwii.name.lower())
-        simplr_app.home_screen = "{}_home".format(simplr_app.name.lower())
-        relationship_app.home_screen = "{}_home".format(relationship_app.name.lower())        
 
         ## RELATIONSHIP APP
         relationship_girls = [relationship_girl for relationship_girl in relationship_girls if hasattr(relationship_girl, "name")]
