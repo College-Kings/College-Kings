@@ -1,3 +1,5 @@
+# type: ignore
+
 """renpy
 python early:
 """
@@ -10,8 +12,11 @@ import os
 import random
 import re
 import requests
+import time
 import uuid
 from abc import ABC, abstractmethod
 from dataclasses import dataclass, field
 from enum import Enum, IntEnum, Flag
 from typing import Any, Callable, Optional, Union, ClassVar
+
+import pypresence
