@@ -20,6 +20,10 @@ class Achievement:
     _hidden: bool = False
     _hide_description: bool = False
 
+    def __post_init__(self) -> None:
+        self.register()
+        Achievement.all_achievements[self.id] = self
+
     @property
     def id(self) -> str:
         return self._id
