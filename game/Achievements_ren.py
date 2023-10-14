@@ -1,50 +1,69 @@
-from __future__ import annotations
-from typing import Callable
+from dataclasses import dataclass
+from typing import Callable, ClassVar
 
-from renpy import store
-import renpy.exports as renpy
+_: Callable[[str], str] = lambda x: x
 
-_: Callable[[str], str]
+path_builder: bool
+_in_replay: bool
 
 """renpy
 init python:
 """
 
 
+@dataclass
 class Achievement:
-    achievements: list[Achievement] = []
+    all_achievements: ClassVar[dict[str, "Achievement"]] = {}
 
-    """
-    Achievement data class for storing and managing the creation, syncing and managing of in-game achievements
+    _id: str
+    _description: str
+    _hidden: bool = False
+    _hide_description: bool = False
 
-    Args:
-        _achievement (str): Programic name for the achievement, should be same as steam api name
-        text (str): Short description of achievement
-    """
+    @property
+    def id(self) -> str:
+        return self._id
 
-    def __init__(self, achievement_: str, text: str) -> None:
-        self.achievement: str = achievement_
-        self.text: str = text
+    @property
+    def description(self) -> str:
+        return self._description
 
-        self.display_name: str = achievement_.replace("_", " ")
+    @property
+    def hidden(self) -> bool:
+        return self._hidden
 
-        self.achievements.append(self)
+    @hidden.setter
+    def hidden(self, value: bool) -> None:
+        self._hidden = value
+
+    @property
+    def hide_description(self) -> bool:
+        return self._hide_description
+
+    @property
+    def display_name(self) -> str:
+        return self.id.replace("_", " ")
+
+    def register(self) -> "Achievement":
+        self.all_achievements[self.id] = self
 
         # Add achievements to renpy/steam
-        achievement.register(achievement_)  # type: ignore
+        achievement.register(self.id)  # type: ignore
+        achievement.sync()  # type: ignore
+        return self
+
+    def grant(self) -> None:
+        if path_builder or _in_replay:
+            return
+
+        renpy.show(self.id, [show_achievement])  # type: ignore
+        achievement.grant(self.id)  # type: ignore
         achievement.sync()  # type: ignore
 
 
 def grant_achievement(achievement_: str) -> None:
-    if store.path_builder or store._in_replay:
-        return
-
-    renpy.show(achievement_, [store.achievementShow])
-    achievement.grant(achievement_)  # type: ignore
-    achievement.sync()  # type: ignore
-
-
-achievements: list[Achievement] = []
+    if achievement_ in Achievement.all_achievements:
+        Achievement.all_achievements[achievement_].grant()
 
 
 # ACHIEVEMENT ITEMS HERE
