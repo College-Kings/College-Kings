@@ -8,6 +8,12 @@
 
 All notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.3.20] - UNRELEASED
+
+### Fixed
+
+- Fixed blank achievements page ([#433](https://github.com/College-Kings/College-Kings/issues/433))
+
 ## [1.3.19] - 2023-10-14
 
 ### Fixed
