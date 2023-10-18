@@ -13,6 +13,7 @@ All notable changes to this project will be documented in this file. This projec
 ### Fixed
 
 - Fixed blank achievements page ([#433](https://github.com/College-Kings/College-Kings/issues/433))
+- Fixed incorrect achievement ATL name causing crash ([#435](https://github.com/College-Kings/College-Kings/issues/435))
 
 ## [1.3.19] - 2023-10-14
 
