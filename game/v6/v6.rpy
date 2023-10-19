@@ -203,7 +203,7 @@ label imrecona: # Find Imre
 
 label imreconb: # Help Imre
 
-    grant achievement("bros_before_hoes", "Help Imre")
+    grant Achievement("bros_before_hoes", "Help Imre")
 
     u "(I need to help Imre, Adam will destroy him in his current condition.)"
 
@@ -828,7 +828,7 @@ label imrecond: # Meet Chloe
         "Trust her":
             $ reputation.add_point(RepComponent.BOYFRIEND)
             
-            grant achievement("credulous", "Trust Chloe")
+            grant Achievement("credulous", "Trust Chloe")
 
             u "(I shouldn't spy on her. It's not right.)"
 
@@ -1760,7 +1760,7 @@ label continuebd:
             scene s510 # Mc arrives at his dorm, down at his door there's a flyer (Matt's design)
             with fade
 
-            grant achievement("not_my_business", "Don't disturb Ms. Rose")
+            grant Achievement("not_my_business", "Don't disturb Ms. Rose")
 
     label nr_bb: #for compatibility only
     u "(Huh, what's this?)"
@@ -2691,7 +2691,7 @@ label emsex_c:
     scene emvid1
     with dissolve
 
-    grant achievement("reignition", "Kiss Emily back")
+    grant Achievement("reignition", "Kiss Emily back")
 
     " "
 
@@ -2723,7 +2723,7 @@ label emsex_a:
 
     play music music.ck1.sexy
 
-    grant achievement("reignition", "Kiss Emily back")
+    grant Achievement("reignition", "Kiss Emily back")
     
     " "
 
@@ -4850,7 +4850,7 @@ label afteraubrey:
                     with dissolve
                     # handshake clap sound
 
-                    grant achievement("monkey_business", "Join the Apes")
+                    grant Achievement("monkey_business", "Join the Apes")
 
                     gr "That's what I'm talking about!"
 
@@ -4995,7 +4995,7 @@ label afteraubrey:
         "Stay home":
             $ reputation.add_point(RepComponent.BRO)
             
-            grant achievement("seems_fishy", "Don't meet Grayson")
+            grant Achievement("seems_fishy", "Don't meet Grayson")
 
             u "(Fuck Grayson, I'm not meeting him.)"
 
@@ -6597,7 +6597,7 @@ label wakeupa:
                 scene s658a # penelope blushing and smiling mouth closed
                 with dissolve
 
-                grant achievement("strike", "Kiss Penelope")
+                grant Achievement("strike", "Kiss Penelope")
                     
                 pe "*Giggles*"
 

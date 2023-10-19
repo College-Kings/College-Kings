@@ -818,7 +818,7 @@ label fr5aubrey1:
                     scene v9slake17vid # mc and aubrey make out animation
                     with dissolve
                     
-                    grant achievement("relaxing_day", "Have fun with Aubrey at the lake")
+                    grant Achievement("relaxing_day", "Have fun with Aubrey at the lake")
 
                     " "
 

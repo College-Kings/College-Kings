@@ -291,7 +291,7 @@ label v12_penelope_roof:
                 scene v12penr10a
                 with dissolve
 
-                grant achievement("good_vs_evil", "Penelope understands you")
+                grant Achievement("good_vs_evil", "Penelope understands you")
                 pe "I think you struggle with right and wrong just like everyone does, but that doesn't mean you're good or bad. It means you're human."
 
             else:
@@ -339,7 +339,7 @@ label v12_penelope_roof:
 
                     "Be bold":
                         $ reputation.add_point(RepComponent.BOYFRIEND)
-                        grant achievement("a_person_like_me", "You see yourself as Penelope's husband material")
+                        grant Achievement("a_person_like_me", "You see yourself as Penelope's husband material")
 
                         scene v12penr10e
                         #with dissolve

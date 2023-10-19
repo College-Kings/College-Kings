@@ -14,7 +14,7 @@ label v13s21a:
     scene v13s21a_1 # FPP. MC looking at Mr. Lee, walking around furiously, mouth open
     with dissolve
 
-    grant achievement("he_is_done", "Expose Charli")
+    grant Achievement("he_is_done", "Expose Charli")
     lee "HE IS DONE!"
 
     scene v13s21a_2 # FPP. MC looking at Mr. Lee, Mr. Lee looking at Riley angrily, mouth open (Riley out of shot)

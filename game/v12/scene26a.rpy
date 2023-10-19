@@ -215,9 +215,9 @@ label v12_follow_chris:
             $ v12_help_chris += 1
             if v12_help_chris >= 4:
                 if mc.frat == Frat.WOLVES:
-                    grant achievement("brotherhood_of_men", "Defend Chris every time as a Wolf")
+                    grant Achievement("brotherhood_of_men", "Defend Chris every time as a Wolf")
                 else:
-                    grant achievement("best_frenemies", "Defend Chris every time as an Ape")
+                    grant Achievement("best_frenemies", "Defend Chris every time as an Ape")
             
             $ reputation.add_point(RepComponent.BRO)
             scene v12chf4l # FPP. Same as v12chf4a, different pose

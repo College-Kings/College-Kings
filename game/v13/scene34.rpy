@@ -398,7 +398,7 @@ label v13s34_1:
 
     menu:
         "I'm a liar":
-            grant achievement("an_honest_liar", "Own up to Clipps")
+            grant Achievement("an_honest_liar", "Own up to Clipps")
             u "Yeah, I'm a liar. But who isn't?"
 
             clipps "Good people."

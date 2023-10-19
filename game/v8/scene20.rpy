@@ -1118,7 +1118,7 @@ label em_arcade_4:
     scene v8arcade27c # Same as v8arcade27b but she pulled her top up completely
     with dissolve
 
-    grant achievement("lucky_7", "Flashing lights at the arcade")
+    grant Achievement("lucky_7", "Flashing lights at the arcade")
 
     u "Oh, God, I miss them."
 

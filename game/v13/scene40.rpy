@@ -733,7 +733,7 @@ label v13s40_end_free_roam:
         scene v13s40end_18 # TPP. Show MC laying in bed, naked, smiling, mouth closed
         with dissolve
 
-        grant achievement("we_like_them_wild", "Reveal a new side of Chloe")
+        grant Achievement("we_like_them_wild", "Reveal a new side of Chloe")
         
         u "(This girl is gonna drive me crazy...) *Laughs*"
 

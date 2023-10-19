@@ -11,7 +11,7 @@ label v12_murder_mystery_reveal:
     with dissolve
 
     if (mc.frat == Frat.WOLVES and len(v12s7_killList) == 15) or len(v12s7_killList) == 16:
-        grant achievement("mass_casualties", "Kill everyone (including optional characters)")
+        grant Achievement("mass_casualties", "Kill everyone (including optional characters)")
 
     lee "Wow, that turned out a lot better than expected. I hope you all enjoyed yourselves. Was anyone surprised to learn [name] was my chosen murderer?"
 
@@ -73,7 +73,7 @@ label v12_murder_mystery_reveal:
     $ v12_murder_count = len(v12s7_killList)
     if len(v12s7_killList) >= 5:
     
-        grant achievement("killing_spree", "Kill enough people to win the game")
+        grant Achievement("killing_spree", "Kill enough people to win the game")
 
         lee "A total of [v12_murder_count] people were killed, so let's give our murderer a round of applause."
 

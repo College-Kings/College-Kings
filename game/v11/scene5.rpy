@@ -842,7 +842,7 @@ label v11s5_galleryScene:
     scene v11swc22 # FPP Show Candy standing above MC, Candy smiling with mouth closed
     with dissolve
 
-    grant achievement("candy_crusher", "Have fun with Candy")
+    grant Achievement("candy_crusher", "Have fun with Candy")
     u "Candy it is."
 
     if is_censored:

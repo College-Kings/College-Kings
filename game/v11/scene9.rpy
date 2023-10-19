@@ -1031,7 +1031,7 @@ label v11_apes_manhunt:
                     scene v11amh51 # TPP. Show MC on the horse, the horse is rearing, MC is in control, smiling, mouth open
                     with dissolve
 
-                    grant achievement("hold_your_horses", "Balance the horse at the end of the manhunt")
+                    grant Achievement("hold_your_horses", "Balance the horse at the end of the manhunt")
                     u "Woah! *Laughs* Guess he is having a good time."
 
                     scene v11amh44b # FPP. Same as v11amh44, Cameron is slightly annoyed, mouth open
@@ -1091,7 +1091,7 @@ label v11_apes_manhunt:
                     scene v11amh51a # TPP. Same as v11amh51, but MC is not in control, he is unbalanced on the horse, mouth closed, startled face
                     with dissolve
 
-                    grant achievement("off_your_high_horse", "Don't balance the horse at the end of the manhunt")
+                    grant Achievement("off_your_high_horse", "Don't balance the horse at the end of the manhunt")
                     hor "NEIGHHHHHH!!!"
 
                     scene v11amh51b # TPP. Same as v11amh51, but MC is midair, startled expression, mouth open

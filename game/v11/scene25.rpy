@@ -45,7 +45,7 @@ label v11_hotel_bar:
             scene v11hob2a
             with dissolve
 
-            grant achievement("fruity", "Have a cocktail at the bar")
+            grant Achievement("fruity", "Have a cocktail at the bar")
             u "Something fruity."
 
             scene v11hob2

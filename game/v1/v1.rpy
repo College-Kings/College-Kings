@@ -2861,7 +2861,7 @@ label aw_bd:
                 scene s90
                 with dissolve # kiss
                 play sound sound.kiss
-                grant achievement("romeo", "Kiss Lauren")
+                grant Achievement("romeo", "Kiss Lauren")
 
                 pause
 
@@ -3616,7 +3616,7 @@ label v1_freeRoam2_mason:
             scene fr2ma1a
             with dissolve
 
-            grant achievement("big_mouth", "Threaten Cameron")
+            grant Achievement("big_mouth", "Threaten Cameron")
                 
             u "Yeah, he better watch out, or I'll kick his ass."
 

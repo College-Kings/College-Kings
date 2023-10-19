@@ -370,7 +370,7 @@ label v10_aubrey_house:
                 scene v10auh5e
                 with dissolve
 
-                grant achievement("getting_clean", "Have fun in the bathroom")
+                grant Achievement("getting_clean", "Have fun in the bathroom")
                 au "Your turn."
 
                 scene v10auh5i

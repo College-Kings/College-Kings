@@ -348,7 +348,7 @@ label v14s03c:
             scene v14s03c_4f
             with dissolve
 
-            grant achievement("saving_ryans_privates", "Don't let Ryan catch an STD")
+            grant Achievement("saving_ryans_privates", "Don't let Ryan catch an STD")
 
             u "Please go save my friend."
 

@@ -459,7 +459,7 @@ label v11_treasure_hunt:
             scene v11th18a
             with dissolve
 
-            grant achievement("on_target", "Hit a bullseye at Duncan's")
+            grant Achievement("on_target", "Hit a bullseye at Duncan's")
 
             stop sound
 

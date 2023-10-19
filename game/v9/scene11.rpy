@@ -209,7 +209,7 @@ label v9_hc_demo:
     menu:
         "North":
             if the_king:
-                grant achievement("king_of_the_north", "The King is heading North")
+                grant Achievement("king_of_the_north", "The King is heading North")
 
             u "North, Your Majesty."
 

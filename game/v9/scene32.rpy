@@ -66,7 +66,7 @@ label v9_sat_hit_gym:
             scene v9atg3b
             with dissolve
 
-            grant achievement("second_date", "Get a second date with Evelyn")
+            grant Achievement("second_date", "Get a second date with Evelyn")
             u "Great, I'll text you."
 
             scene v9atg4 # TPP. Show MC walking away from Evelyn, evelyn still on weight bench, MC walking towards punching bag, both smiling mouth closed
