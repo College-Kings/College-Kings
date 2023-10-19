@@ -427,7 +427,7 @@ label v7start:
                 scene s683a
                 with dissolve
 
-                $ grant_achievement("true_to_self")
+                grant achievement("true_to_self", "Walk home with Riley")
                 
                 u "Uhh, yeah of course."
 
@@ -3459,7 +3459,7 @@ label afterbeach:
     if not meetgrayson:
         u "(Wolves pledging starts soon... is it stupid of me to wanna pledge now? I didn't think frat life was for me..."
 
-        $ grant_achievement("wolfpack")
+        grant achievement("wolfpack", "Pledge to the Wolves")
         u "(But after everything that happened I feel like I gotta at least try and get in, otherwise I'll miss out on too much.)"
 
     elif joinapes:
@@ -3478,13 +3478,13 @@ label afterbeach:
 
         menu:
             "Pledge to the Apes":
-                $ grant_achievement("silverback")
+                grant achievement("silverback", "Pledge to the Apes")
                 u "(Fuck it. I'm gonna be winner, no matter what it costs. Time to pledge to the Apes.)"
 
                 jump pledgeapes
 
             "Pledge to the Wolves":
-                $ grant_achievement("wolfpack")
+                grant achievement("wolfpack", "Pledge to the Wolves")
                 u "(Grayson might kill me when he finds out, but I can't join the Apes. I gotta pledge to the Wolves.)"
 
     else:
@@ -3503,13 +3503,13 @@ label afterbeach:
 
         menu:
             "Pledge to the Apes":
-                $ grant_achievement("silverback")
+                grant achievement("silverback", "Pledge to the Apes")
                 u "(Fuck it. I'm gonna be winner, no matter what it costs. I'ma go to the Apes' house and tell Grayson I changed my mind.)"
 
                 jump pledgeapes
 
             "Pledge to the Wolves":
-                $ grant_achievement("wolfpack")
+                grant achievement("wolfpack", "Pledge to the Wolves")
                 u "(Nah, Grayson's done more than enough questionable shit. The Wolves been nothing but good to me. I'ma pledge to the Wolves.)"
 
 
@@ -6457,7 +6457,7 @@ label after_history:
                 scene s907 # Camera - FPP. MC and Cameron running through the door. Cameron is in front of MC with his phone in his hand. MC is almost out of the door
                 with vpunch
 
-                $ grant_achievement("lee_way")
+                grant achievement("lee_way", "Pull down Mr. Lee's pants")
 
                 lee "Who was that? {b}WHO WAS THAT?{/b}"
                 ca "HAHAHA! FUCKIN' ACES!"
@@ -9833,7 +9833,7 @@ label amberhocodate:
     with dissolve
 
 label v7_nsfwSkipLabel5:
-    $ grant_achievement("ecstatic")
+    grant achievement("ecstatic", "Bunk homecoming with Amber")
         
     u "Now what?"
 
@@ -16942,7 +16942,7 @@ label fr4laurenending:
     scene sfr4la29
     with dissolve
 
-    $ grant_achievement("slow_and_steady")
+    grant achievement("slow_and_steady", "End homecoming with Lauren")
 
     la "I read that... if you cuddle in your underwear it increases the serotonin levels in your brain, which in turns means you live a longer, happier life."
 
@@ -17090,7 +17090,7 @@ label fr4rileyending2:
     scene sfr4ri57a #riley pats the bed,looking at you smiling
     with dissolve
 
-    $ grant_achievement("playing_with_fire")
+    grant achievement("playing_with_fire", "End homecoming with Riley")
         
     ri "Sit down with me for a second."
 
@@ -17196,7 +17196,7 @@ label fr4chloeending:
     scene sfr4cl58 # tpp from behind: chloe opens the door to her room mc following
     with fade
 
-    $ grant_achievement("homecoming_queen")
+    grant achievement("homecoming_queen", "End homecoming with Chloe")
 
     u "So this is your infamous room?"
 

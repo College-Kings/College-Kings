@@ -561,7 +561,7 @@ label v10_call_with_lauren1:
                         scene v10saow3c
                     with dissolve
                     
-                    $ grant_achievement("rawr_im_a_lion")
+                    grant achievement("rawr_im_a_lion", "Tell Lauren you like Lions")
                     u "Lion."
 
             if mc.frat == Frat.WOLVES:

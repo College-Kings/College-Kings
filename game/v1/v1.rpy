@@ -135,11 +135,11 @@ label starta: #for compatibility only
     # Emily's messages
     python:
         v1_reply1 = MessageBuilder(emily)
-        v1_reply1.add_function(grant_achievement, "no_hard_feelings")
+        v1_reply1.add_function(grant achievement, "no_hard_feelings", "Play nice with Emily")
         v1_reply1.new_message(_("Cool :)"))
 
         v1_reply2 = MessageBuilder(emily)
-        v1_reply2.add_function(grant_achievement, "open_wound")
+        v1_reply2.add_function(grant achievement, "open_wound", "Tell off Emily")
         v1_reply2.add_function(reputation.add_point, RepComponent.TROUBLEMAKER)
         v1_reply2.new_message(_("Ugh :/"))
 
@@ -1167,7 +1167,7 @@ label starta: #for compatibility only
                 scene s56no1a
                 with dissolve
 
-                $ grant_achievement("keep_it_moving")
+                grant achievement("keep_it_moving", "Hit on Nora")
 
                 u "Actually, I knew that. I just wanted to talk to you 'cause you're really cute."
 
@@ -2861,7 +2861,7 @@ label aw_bd:
                 scene s90
                 with dissolve # kiss
                 play sound sound.kiss
-                $ grant_achievement("romeo")
+                grant achievement("romeo", "Kiss Lauren")
 
                 pause
 
@@ -3616,7 +3616,7 @@ label v1_freeRoam2_mason:
             scene fr2ma1a
             with dissolve
 
-            $ grant_achievement("big_mouth")
+            grant achievement("big_mouth", "Threaten Cameron")
                 
             u "Yeah, he better watch out, or I'll kick his ass."
 

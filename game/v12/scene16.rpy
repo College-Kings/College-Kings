@@ -849,7 +849,7 @@ label v12_valentine:
                 with dissolve
 
                 $ v12s16_kissnora = True
-                $ grant_achievement("you_may_kiss_the_bride")
+                grant achievement("you_may_kiss_the_bride", "Kiss Nora at the altar")
                 bishop "That was very sweet of you, young man."
         
     scene v12val27a

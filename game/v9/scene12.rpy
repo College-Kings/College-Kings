@@ -133,7 +133,7 @@ label v9_hall_punch:
     scene v9hlw8a # TPP. Same camera as v9hlw8, show MC stepping back and looking the tough guy in the face, both angry.
     with dissolve
 
-    $ grant_achievement("back_down")
+    grant achievement("back_down", "Punch the guy in the hallway")
     u "(Nah, fuck this.)"
 
     scene v9hlw8b # TPP. Show MC swinging a punch into the tough guys stomach, the tough guy winces in pain.

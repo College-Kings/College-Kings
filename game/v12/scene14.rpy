@@ -409,7 +409,7 @@ label v12_chloe_cafe:
             with dissolve
             
             if v11_lindsey_run and v11_told_aubrey:
-                $ grant_achievement("thrown_to_the_lions")
+                grant achievement("thrown_to_the_lions", "Encourage Lindsey to run but then tell Aubrey and Chloe about it")
             
             u "Good. Now, again, don't quote me. I'm not sure of all the details and I'm not even positive if this is truly her plan, but I heard that Lindsey's been considering running for President of the Chicks, against you."
            

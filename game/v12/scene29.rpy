@@ -1068,10 +1068,10 @@ label v12_lauren_sex:
                 with dissolve
 
                 if CharacterService.is_girlfriend(lauren) and (not CharacterService.is_fwb(amber)) and CharacterService.is_friend(aubrey) and CharacterService.is_friend(candy) and CharacterService.is_friend(chloe) and CharacterService.is_friend(emily) and (not v6_evelyn_successful_date) and CharacterService.is_friend(lindsey) and (not CharacterService.is_fwb(ms_rose)) and CharacterService.is_friend(penelope) and CharacterService.is_friend(riley) and CharacterService.is_friend(samantha):
-                    $ grant_achievement("worth_the_wait")
+                    grant achievement("worth_the_wait", "Consummate an exclusive relationship with Lauren")
 
                 if not CharacterService.is_girlfriend(lauren) and CharacterService.is_girlfriend(chloe):
-                    $ grant_achievement("two_timer")
+                    grant achievement("two_timer", "Kiss Emily back")
 
                 $ CharacterService.set_relationship(lauren, Relationship.GIRLFRIEND)
 

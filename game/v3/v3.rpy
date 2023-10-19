@@ -2693,7 +2693,7 @@ label continueq:
             scene s270
             with dissolve
 
-            $ grant_achievement("not_now_mom")
+            grant achievement("not_now_mom", "Decline Julia's call")
                 
             u "(I don't really feel like talking to her right now.)"
 
@@ -3070,7 +3070,7 @@ label continueq:
                     pause 1
                     play sound sound.kiss
 
-                    $ grant_achievement("lips_dont_lie")
+                    grant achievement("lips_dont_lie", "Kiss Riley at the Park")
                         
                     " "
 
@@ -3241,7 +3241,7 @@ label continueq:
                     scene s287f # Lauren gone
                     with dissolve
 
-                    $ grant_achievement("truth_hurts")
+                    grant achievement("truth_hurts", "Tell Lauren about Aubrey")
                         
                     u "(Fuck me... I guess that's what honesty gets you.)"
 

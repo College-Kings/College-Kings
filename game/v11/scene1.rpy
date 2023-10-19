@@ -1103,7 +1103,7 @@ label v11_case_verdict:
         scene v11coc14b
         with dissolve
 
-        $ grant_achievement("perry_mason")
+        grant achievement("perry_mason", "Successfully defend Penelope")
         lee "Don't thank us, thank your friend. He did a very good job representing you. We may just have a future lawyer in our midst."
 
         scene v11coc14c

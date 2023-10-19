@@ -72,7 +72,7 @@ label v11_museum_tour:
             scene v11tm5a # FPP. Same as v11tm5, but Riley looking at MC, mouth closed, slightly annoyed
             with dissolve
 
-            $ grant_achievement("just_a_theory")
+            grant achievement("just_a_theory", "Tell Riley dinosaurs aren't real")
             u "Sorry Riley, they definitely aren't real."
 
             scene v11tm5b # FPP. Same as v11tm5a, Riley mouth open, slightly annoyed

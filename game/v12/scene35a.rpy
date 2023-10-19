@@ -697,7 +697,7 @@ label v12_nora_sex:
         with dissolve
 
         if "v12_lindsey" in sceneList and "v12_nora" in sceneList and "v12_lauren" in sceneList and "v12_rose" in sceneList:
-            $ grant_achievement("city_of_love")
+            grant achievement("city_of_love", "Have sex with Lauren, Nora, Ms. Rose and Lindsey")
 
         u "You too..."
 
@@ -730,9 +730,9 @@ label v12_nora_sex:
         with dissolve
 
         if mc.frat == Frat.WOLVES:
-            $ grant_achievement("inside_job")
+            grant achievement("inside_job", "Have sex with Nora as a Wolf")
         else:
-            $ grant_achievement("all_is_fair_in_love_and_war")
+            grant achievement("all_is_fair_in_love_and_war", "Have sex with Nora as an Ape")
 
         u "(I just had sex with Nora. NORA!!! I fucked Chris' girl! Wow... Gonna have to sleep on this one.)"
 

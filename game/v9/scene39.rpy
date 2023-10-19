@@ -324,7 +324,7 @@ label v9_hang_w_linds:
                     scene v9hwl5h # FPP. Same camera as v9hwl5, quite sad, mouth open.
                     with dissolve
 
-                    $ grant_achievement("the_wrong_time")
+                    grant achievement("the_wrong_time", "Don't kiss Lindsey")
                     li "What's wrong?"
 
                     scene v9hwl5i # FPP. Same camera as v9hwl5, quite sad, mouth closed.

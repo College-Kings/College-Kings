@@ -25,7 +25,7 @@ label v10_fight_result:
             with dissolve
 
             if reaction == 0.5:
-                $ grant_achievement("lights_out")
+                grant achievement("lights_out", "Beat Ryan on Hard difficulty at the Brawl")
 
             u "This wasn't just a fight for me, it was a fight for me and my brothers."
 
@@ -123,7 +123,7 @@ label v10_fight_result:
             with dissolve
 
             if reaction == 0.5:
-                $ grant_achievement("golden_boy")
+                grant achievement("golden_boy", "Beat Imre on Hard difficulty at the Brawl")
 
             u "This wasn't just a fight for me, it was a fight for me and my brothers."
 
