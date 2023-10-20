@@ -1135,7 +1135,7 @@ label v11_horse_fall:
     scene v11amh51a
     with dissolve
 
-    grant achievement("off_your_high_horse", "Don't balance the horse at the end of the manhunt")
+    grant Achievement("off_your_high_horse", "Don't balance the horse at the end of the manhunt")
     u "(I can't balance.)"
 
     scene v11amh51b
