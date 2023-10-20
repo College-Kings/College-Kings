@@ -129,7 +129,7 @@ label v10_chloe_hallway:
                                     $ reputation.add_point(RepComponent.BOYFRIEND)
                                     $ CharacterService.set_relationship(chloe, Relationship.FRIEND, mc)
                                     $ CharacterService.remove_mood(chloe, Moods.MAD)
-                                    $ grant_achievement("on_the_court")
+                                    grant Achievement("on_the_court", "Have a rematch with Chloe")
 
                                     u "Yeah let's go."
 
@@ -276,7 +276,7 @@ label v10_chloe_hallway:
                 $ reputation.add_point(RepComponent.BOYFRIEND)
                 $ chloe.points += 1
                 
-                $ grant_achievement("on_the_court")
+                grant Achievement("on_the_court", "Have a rematch with Chloe")
 
                 u "Let's do it, but I won't be going easy on you."
 

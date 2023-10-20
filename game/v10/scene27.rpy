@@ -239,7 +239,7 @@ label v10_econ_class:
 
                 ro "*Sighs* When she came in right after you left I wondered if you'd seen her."
 
-                $ grant_achievement("family_secrets")
+                grant Achievement("family_secrets", "Find out Nora and Ms. Rose are family")
 
                 ro "It's true, she's my stepdaughter. But since we both attend SVC we do our best to keep our relationship unknown."
 

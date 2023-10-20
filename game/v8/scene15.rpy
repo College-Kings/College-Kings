@@ -98,7 +98,7 @@ label penelope_dorm_hack:
             jump no_help_pen
 
 label help_pen:
-    $ grant_achievement("thick_and_thin")
+    grant Achievement("thick_and_thin", "Help Penelope")
 
     u "If you want, I can talk to the dean on Monday on your behalf. I'm sure we could work something out if we tried and be smart about it."
 

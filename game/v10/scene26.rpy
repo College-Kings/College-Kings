@@ -413,7 +413,7 @@ label v10_amber_skatepark:
                     scene v10ambbj # ignore
                     with dissolve
 
-                    $ grant_achievement("rough_rider")
+                    grant Achievement("rough_rider", "Have fun at the skatepark")
                     u "Damn Amber!"
 
                     scene v10ambbj
@@ -724,7 +724,7 @@ label v10_amber_skatepark:
                             scene v10ambbj
                             with dissolve
 
-                            $ grant_achievement("rough_rider")
+                            grant Achievement("rough_rider", "Have fun at the skatepark")
 
                             u "Damn Amber!"
 

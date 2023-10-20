@@ -151,7 +151,7 @@ label v2start:
         v2_reply5.new_message(_("Great, I'll see you then :)"))
 
         v2_reply6 = MessageBuilder(lauren)
-        v2_reply6.add_function(grant_achievement, "mixed_feelings")
+        v2_reply6.add_function(mixed_feelings.grant)
         v2_reply6.add_function(reputation.add_point, RepComponent.TROUBLEMAKER)
         v2_reply6.new_message(_("Is everything okay?"))
         v2_reply6.add_reply(_("Yeah, I'm fine."))
@@ -1009,7 +1009,7 @@ label tomFightStart:
 
 label youfinish:
     if reaction == 0.5:
-        $ grant_achievement("the_notorious")
+        grant Achievement("the_notorious", "Win your first fight")
             
     $ wintom = True
 
@@ -1165,7 +1165,7 @@ label meet_lauren2:
                 scene s130d # Lauren romancing at you holding your hand
                 with dissolve
 
-                $ grant_achievement("a_new_beginning")
+                grant Achievement("a_new_beginning", "Lauren likes you")
                     
                 la "Maybe you're right."
 
@@ -2077,7 +2077,7 @@ label bo_ad:
             scene s148b
             with dissolve
 
-            $ grant_achievement("over_it")
+            grant Achievement("over_it", "Let Benjamin make a move")
                 
             u "Sure, knock yourself out, man. We're not an item."
 

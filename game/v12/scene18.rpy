@@ -1548,7 +1548,7 @@ label v12s18_bet: # END OF FREE ROAM
         scene v12slpbet5b # TPP. Same as v12slpbet5a, different pose
         with flash
 
-        $ grant_achievement("a_bet_is_a_bet")
+        grant Achievement("a_bet_is_a_bet", "Embarrassing Kiwii picture for losing the race")
         pause
 
         scene v12slpbet5 
