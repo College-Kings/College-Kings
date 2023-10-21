@@ -2110,6 +2110,8 @@ label at_bd:
     scene sdakisso
     with dissolve
 
+    $ Lovense.vibrate(2)
+
     " "
 
     u "(Okay, this is definitely a dream, but I do like where this is going.)"
@@ -2122,6 +2124,9 @@ label at_bd:
             with fade
 
             ri "*Chuckles* You're hard already."
+            
+            $ Lovense.vibrate(3)
+            $ lovense.rotate(2)
 
             scene sda3
             with dissolve
@@ -2138,6 +2143,10 @@ label at_bd:
 
             ri "Tell me what you want."
 
+            $ Lovense.vibrate(3)
+            $ lovense.rotate(2)
+            $ lovense.thrust(2)
+            
             menu:
                 "Blowjob":
                     scene sda3b
@@ -2166,6 +2175,10 @@ label at_bd:
                     show sdabjf
                     with dissolve
 
+                    $ Lovense.vibrate(4)
+                    $ lovense.rotate(3)
+                    $ lovense.thrust(3)
+
                     ri "*Gasp* Like this?"
 
                     u "Fuuuuck. Yes, exactly like that."
@@ -2188,6 +2201,11 @@ label at_bd:
 
                     show sdafj
                     with fade
+                    
+                    $ Lovense.vibrate(4)
+                    $ lovense.rotate(3)
+                    $ lovense.thrust(3)
+
                     ri "Wow, I've never done this before. Does it feel good?"
 
                     u "Yes, it feels fantastic, Riley."
@@ -2219,6 +2237,10 @@ label at_bd:
 
             scene sda4c ## turning her around
             with dissolve
+
+            $ Lovense.vibrate(4)
+            $ lovense.rotate(3)
+            $ lovense.thrust(3)
 
             u "Bend over."
 
@@ -2275,6 +2297,10 @@ label at_bd:
 
             ri "Oh my god!"
 
+            $ Lovense.vibrate(6)
+            $ lovense.rotate(4)
+            $ lovense.thrust(4)
+
             show sdasex
             with dissolve
 
@@ -2293,6 +2319,10 @@ label at_bd:
             scene sda7a
             with dissolve
 
+            $ Lovense.vibrate(8)
+            $ lovense.rotate(6)
+            $ lovense.thrust(6)
+
             ri "Cum inside me, [name]! Please fill me up!"
 
             scene aftercum
@@ -2304,6 +2334,8 @@ label at_bd:
             with dissolve
 
             ri "My legs are shaking."
+
+            $ lovense.stop()
 
         "Wake up":
             pass
