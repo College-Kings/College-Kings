@@ -8967,6 +8967,9 @@ label rileysexscene:
     if is_censored:
         call screen censored_popup("v7_nsfwSkipLabel1")
 
+    $ lovense.vibrate(2)
+    $ lovense.rotate(1)
+
     scene ridrm4 # Riley close up in her dorm, talking mouth open, single slightly raise brow (first person)
     with dissolve
     ri "I think we have some unfinished business."
@@ -9019,6 +9022,9 @@ label rileysexscene:
 
     pause 0.5
 
+    $ lovense.vibrate(3)
+    $ lovense.rotate(1)
+    
     scene risex4
     with dissolve
 
@@ -9034,6 +9040,10 @@ label rileysexscene:
 
     pause 0.5
     label riblowjob:
+    
+    $ lovense.vibrate(4)
+    $ lovense.rotate(2)
+    $ lovense.suction(2)
 
     scene risexvid2s # Riley giving MC a blowjob whilst mc is stood up, MC pleasure expression
     with dissolve
@@ -9078,6 +9088,11 @@ label rileysexscene:
     pause 0.5
 
 label rifingering:
+
+    $ lovense.vibrate(6)
+    $ lovense.rotate(3)
+    $ lovense.suction(3)
+    $ lovense.thrust(1)
     scene risexvid3s
     with dissolve
     ri "*Moans* Mhmmmm..."
@@ -9099,6 +9114,11 @@ label rimissionary:
     ri "*Moans louder* Holy shit!"
     " "
 
+    $ lovense.vibrate(8)
+    $ lovense.rotate(4)
+    $ lovense.suction(4)
+    $ lovense.thrust(3)
+
     scene risexvid6f # Riley cowgirl on MC, Riley pleasure expression
     with dissolve
     ri "*Moans very loud* Oh my god!"
@@ -9108,6 +9128,11 @@ label rimissionary:
     ri "Yesss! Me too!"
 
 label riclimax:
+    $ lovense.vibrate(10)
+    $ lovense.rotate(5)
+    $ lovense.suction(5)
+    $ lovense.thrust(5)
+
     scene risexvid8 # Riley cowgirl on MC, Riley pleasure expression
     with dissolve
 
@@ -9137,6 +9162,8 @@ label riclimax:
     ri "I'll see you tomorrow [name]."
 
 label v7_nsfwSkipLabel1:
+    $ lovense.stop()
+    
     scene risex15a # MC leaving Riley's dorm
     with dissolve
     u "Yeah, see you tomorrow."
