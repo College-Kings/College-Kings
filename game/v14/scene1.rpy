@@ -67,6 +67,11 @@ label v14s01:
     if is_censored:
         call screen censored_popup("v14s01_nsfwSkipLabel1")
 
+    $ lovense.vibrate(2)
+    $ lovense.rotate(1)
+    $ lovense.suction(1)
+    $ lovense.thrust(1)
+
     scene v14s01_1b # FPP. Same as v14s01_1a, Riley and Aubrey topless, looking at MC seductively, both mouths closed
     with dissolve
 
@@ -92,6 +97,11 @@ label v14s01:
 
             u "Yes, ma'am... That I can do."
 
+            $ lovense.vibrate(3)
+            $ lovense.rotate(2)
+            $ lovense.suction(2)
+            $ lovense.thrust(2)
+
             scene v14s01_2 # TPP. Show Riley helping MC remove his shirt while Aubrey is removing her panties
             with dissolve
 
@@ -111,6 +121,11 @@ label v14s01:
             image v14auridbjf = Movie(play="images/v14/Scene 1/v14auridbjf.webm", loop=True, image="images/v14/Scene 1/v14auridbjStart.webp", start_image="images/v14/Scene 1/v14auridbjStart.webp") # double blowjob spedup
             image v14auridbj2 = Movie(play="images/v14/Scene 1/v14auridbj2.webm", loop=True, image="images/v14/Scene 1/v14auridbj2Start.webp", start_image="images/v14/Scene 1/v14auridbj2Start.webp") # double blowjob FPP
             image v14auridbj2f = Movie(play="images/v14/Scene 1/v14auridbj2f.webm", loop=True, image="images/v14/Scene 1/v14auridbj2Start.webp", start_image="images/v14/Scene 1/v14auridbj2Start.webp") # double blowjob FPP spedup
+
+            $ lovense.vibrate(4)
+            $ lovense.rotate(3)
+            $ lovense.suction(3)
+            $ lovense.thrust(3)
 
             scene v14auridbj # Ignore as animation
             with dissolve
@@ -153,6 +168,11 @@ label v14s01:
 
             pause
 
+            $ lovense.vibrate(5)
+            $ lovense.rotate(4)
+            $ lovense.suction(4)
+            $ lovense.thrust(4)
+
             image v14aurircg = Movie(play="images/v14/Scene 1/v14aurircg.webm", loop=True, image="images/v14/Scene 1/v14aurircgStart.webp", start_image="images/v14/Scene 1/v14aurircgStart.webp") # Chloe Table top
             image v14aurircgf = Movie(play="images/v14/Scene 1/v14aurircgf.webm", loop=True, image="images/v14/Scene 1/v14aurircgStart.webp", start_image="images/v14/Scene 1/v14aurircgStart.webp") # Chloe Table top spedup
             image v14aurircg2 = Movie(play="images/v14/Scene 1/v14aurircg2.webm", loop=True, image="images/v14/Scene 1/v14aurircg2Start.webp", start_image="images/v14/Scene 1/v14aurircg2Start.webp") # Chloe Table top FPP
@@ -174,6 +194,11 @@ label v14s01:
             if voice_acted:
                 play voice music.ck1.v14.Scene_1_rcg_fast_4loops loop
             pause
+
+            $ lovense.vibrate(6)
+            $ lovense.rotate(5)
+            $ lovense.suction(5)
+            $ lovense.thrust(5)
 
             au "Look at you, babe. You've definitely done this before."
 
@@ -216,6 +241,11 @@ label v14s01:
             with dissolve
 
             pause
+
+            $ lovense.vibrate(7)
+            $ lovense.rotate(6)
+            $ lovense.suction(6)
+            $ lovense.thrust(6)
 
             image v14auridcg = Movie(play="images/v14/Scene 1/v14auridcg.webm", loop=True, image="images/v14/Scene 1/v14auridcgStart.webp", start_image="images/v14/Scene 1/v14auridcgStart.webp") # Chloe Table top
             image v14auridcgf = Movie(play="images/v14/Scene 1/v14auridcgf.webm", loop=True, image="images/v14/Scene 1/v14auridcgStart.webp", start_image="images/v14/Scene 1/v14auridcgStart.webp") # Chloe Table top spedup
@@ -276,6 +306,11 @@ label v14s01:
 
             pause
 
+            $ lovense.vibrate(7)
+            $ lovense.rotate(6)
+            $ lovense.suction(6)
+            $ lovense.thrust(6)
+
             image v14aurido = Movie(play="images/v14/Scene 1/v14aurido.webm", loop=True, image="images/v14/Scene 1/v14auridoStart.webp", start_image="images/v14/Scene 1/v14auridoStart.webp") # Chloe Table top
             image v14auridof = Movie(play="images/v14/Scene 1/v14auridof.webm", loop=True, image="images/v14/Scene 1/v14auridoStart.webp", start_image="images/v14/Scene 1/v14auridoStart.webp") # Chloe Table top spedup
             image v14aurido2 = Movie(play="images/v14/Scene 1/v14aurido2.webm", loop=True, image="images/v14/Scene 1/v14aurido2Start.webp", start_image="images/v14/Scene 1/v14aurido2Start.webp") # Chloe Table top FPP
@@ -316,6 +351,11 @@ label v14s01:
             au "Mmm! *Gags*"
 
             u "Fuck..."
+
+            $ lovense.vibrate(8)
+            $ lovense.rotate(7)
+            $ lovense.suction(7)
+            $ lovense.thrust(7)
 
             stop sound
             scene v14s01_11 # FPP. MC looking at Aubrey, Aubrey with his dick fully in her mouth, Riley sucking MC's balls
@@ -385,6 +425,8 @@ label v14s01:
 
             au "*Laughs* Good."
 
+            $ lovense.stop()
+            
             scene v14s01_11b
             with dissolve
 
