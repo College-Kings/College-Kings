@@ -1,7 +1,5 @@
 from dataclasses import dataclass
-from typing import Callable, ClassVar
-
-_: Callable[[str], str] = lambda x: x
+from typing import ClassVar
 
 path_builder: bool
 _in_replay: bool
@@ -19,10 +17,6 @@ class Achievement:
     _description: str
     _hidden: bool = False
     _hide_description: bool = False
-
-    def __post_init__(self) -> None:
-        self.register()
-        Achievement.all_achievements[self.id] = self
 
     @property
     def id(self) -> str:
@@ -63,8 +57,3 @@ class Achievement:
         renpy.show(self.id, [show_achievement])  # type: ignore
         achievement.grant(self.id)  # type: ignore
         achievement.sync()  # type: ignore
-
-
-def grant_achievement(achievement_: str) -> None:
-    if achievement_ in Achievement.all_achievements:
-        Achievement.all_achievements[achievement_].grant()
