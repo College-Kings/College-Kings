@@ -68,37 +68,3 @@ class Achievement:
 def grant_achievement(achievement_: str) -> None:
     if achievement_ in Achievement.all_achievements:
         Achievement.all_achievements[achievement_].grant()
-
-
-# ACHIEVEMENT ITEMS HERE
-open_wound = Achievement("open_wound", _("Tell off Emily"))
-no_hard_feelings = Achievement("no_hard_feelings", _("Play nice with Emily"))
-romeo = Achievement("romeo", _("Kiss Lauren"))
-
-# v2
-mixed_feelings = Achievement("mixed_feelings", _("Decline Lauren"))
-
-# v3
-
-# v4
-
-# v5
-
-# v6
-
-# v7
-
-# v8
-text_with_an_s = Achievement("text_with_an_s", _("Return to sender"))
-
-# v9
-
-# v10
-
-# v11
-
-# v12
-
-# v13
-
-# v14

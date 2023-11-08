@@ -8,11 +8,12 @@
 
 All notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning](http://semver.org/).
 
-## [1.3.20] - UNRELEASED
+## [1.3.20] - 2023-11-04
 
 ### Fixed
 
 - Fixed blank achievements page ([#433](https://github.com/College-Kings/College-Kings/issues/433))
+- Fixed incorrect achievement ATL name causing crash ([#435](https://github.com/College-Kings/College-Kings/issues/435))
 
 ## [1.3.19] - 2023-10-14
 
