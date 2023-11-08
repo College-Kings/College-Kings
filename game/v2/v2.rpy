@@ -3040,8 +3040,8 @@ label try3new:
                         $ lovense.stop()
                     
                     else:
-                
-                    $ lovense.stop()                        jump caughtc
+                        $ lovense.stop()
+                        jump caughtc
 
                 "Stop peeking":
                     pass
