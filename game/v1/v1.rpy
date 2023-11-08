@@ -2110,7 +2110,7 @@ label at_bd:
     scene sdakisso
     with dissolve
 
-    $ Lovense.vibrate(2)
+    $ lovense.vibrate(2)
 
     " "
 
@@ -2125,7 +2125,7 @@ label at_bd:
 
             ri "*Chuckles* You're hard already."
             
-            $ Lovense.vibrate(3)
+            $ lovense.vibrate(3)
             $ lovense.rotate(2)
 
             scene sda3
@@ -2143,7 +2143,7 @@ label at_bd:
 
             ri "Tell me what you want."
 
-            $ Lovense.vibrate(3)
+            $ lovense.vibrate(3)
             $ lovense.rotate(2)
             $ lovense.thrust(2)
             
@@ -2175,7 +2175,7 @@ label at_bd:
                     show sdabjf
                     with dissolve
 
-                    $ Lovense.vibrate(4)
+                    $ lovense.vibrate(4)
                     $ lovense.rotate(3)
                     $ lovense.thrust(3)
 
@@ -2202,7 +2202,7 @@ label at_bd:
                     show sdafj
                     with fade
                     
-                    $ Lovense.vibrate(4)
+                    $ lovense.vibrate(4)
                     $ lovense.rotate(3)
                     $ lovense.thrust(3)
 
@@ -2238,7 +2238,7 @@ label at_bd:
             scene sda4c ## turning her around
             with dissolve
 
-            $ Lovense.vibrate(4)
+            $ lovense.vibrate(4)
             $ lovense.rotate(3)
             $ lovense.thrust(3)
 
@@ -2297,7 +2297,7 @@ label at_bd:
 
             ri "Oh my god!"
 
-            $ Lovense.vibrate(6)
+            $ lovense.vibrate(6)
             $ lovense.rotate(4)
             $ lovense.thrust(4)
 
@@ -2319,7 +2319,7 @@ label at_bd:
             scene sda7a
             with dissolve
 
-            $ Lovense.vibrate(8)
+            $ lovense.vibrate(8)
             $ lovense.rotate(6)
             $ lovense.thrust(6)
 
