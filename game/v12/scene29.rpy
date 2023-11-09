@@ -830,10 +830,10 @@ label v12_lauren_sex:
 
                 show screen v12s29_lauren_sex_overlay
 
-                $ lovense.vibrate(2)
-                $ lovense.rotate(1)
-                $ lovense.suction(1)
-                $ lovense.thrust(1)
+                lovense vibrate 2
+                lovense rotate 1
+                lovense suction 1
+                lovense thrust 1
 
                 scene v12las53a # TPP. Same as v12las53, Show Lauren in her panties, stopping MC from removing his shirt, Lauren smiling, mouth open, MC smiling, mouth closed
                 with dissolve
@@ -866,10 +866,11 @@ label v12_lauren_sex:
                 pause
 
                 label v12s29_lauren_fingering: 
-                    $ lovense.vibrate(3)
-                    $ lovense.rotate(2)
-                    $ lovense.suction(2)
-                    $ lovense.thrust(2)
+                    lovense vibrate 3
+                    lovense rotate 2 
+                    lovense suction 2
+                    lovense thrust 2
+                    lovense finger 2
 
                     scene v12las54c # TPP. Same as v12las54b, MC kissing Lauren's lips, hand over her pussy
                     with dissolve
@@ -900,10 +901,11 @@ label v12_lauren_sex:
 
                     la "Mmm, fuck... That feels good."
 
-                    $ lovense.vibrate(5)
-                    $ lovense.rotate(3)
-                    $ lovense.suction(3)
-                    $ lovense.thrust(3)
+                    lovense vibrate 5
+                    lovense rotate 3
+                    lovense suction 3
+                    lovense thrust 3
+                    lovense finger 3
 
                     scene v12laufi2f # Ignore as animation
                     with dissolve
@@ -922,10 +924,10 @@ label v12_lauren_sex:
                     pause
 
                 label v12s29_lauren_blowjob:
-                    $ lovense.vibrate(7)
-                    $ lovense.rotate(5)
-                    $ lovense.suction(5)
-                    $ lovense.thrust(5)
+                    lovense vibrate 7
+                    lovense rotate 5
+                    lovense suction 5
+                    lovense thrust 5
 
                     image v12laubj = Movie(play="images/v12/Scene 29/v12laubj.webm", loop=True, image="images/v12/Scene 29/v12laubjStart.webp", start_image="images/v12/Scene 29/v12laubjStart.webp") # Lauren blowjob
                     image v12laubjf = Movie(play="images/v12/Scene 29/v12laubjf.webm", loop=True, image="images/v12/Scene 29/v12laubjStart.webp", start_image="images/v12/Scene 29/v12laubjStart.webp") # Lauren blowjob spedup
@@ -944,10 +946,10 @@ label v12_lauren_sex:
 
                     u "Damn... you're so fucking good at this, Lauren..."
 
-                    $ lovense.vibrate(9)
-                    $ lovense.rotate(6)
-                    $ lovense.suction(6)
-                    $ lovense.thrust(6)
+                    lovense vibrate 9
+                    lovense rotate 6
+                    lovense suction 6
+                    lovense thrust 6
 
                     scene v12laubj2 # Ignore as animation
                     with dissolve
@@ -993,10 +995,10 @@ label v12_lauren_sex:
                     u "I will."
 
                 label v12s29_lauren_legs_up:
-                    $ lovense.vibrate(10)
-                    $ lovense.rotate(8)
-                    $ lovense.suction(8)
-                    $ lovense.thrust(8)
+                    lovense vibrate 10
+                    lovense rotate 8
+                    lovense suction 8
+                    lovense thrust 8
 
                     image v12laumi = Movie(play="images/v12/Scene 29/v12laumi.webm", loop=True, image="images/v12/Scene 29/v12laumiStart.webp", start_image="images/v12/Scene 29/v12laumiStart.webp") # Lauren missionary
                     image v12laumif = Movie(play="images/v12/Scene 29/v12laumif.webm", loop=True, image="images/v12/Scene 29/v12laumiStart.webp", start_image="images/v12/Scene 29/v12laumiStart.webp") # Lauren missionary spedup
@@ -1023,10 +1025,10 @@ label v12_lauren_sex:
 
                     la "Mhmm! Yes... Please, keep going!"
 
-                    $ lovense.vibrate(13)
-                    $ lovense.rotate(10)
-                    $ lovense.suction(10)
-                    $ lovense.thrust(10)
+                    lovense vibrate 13
+                    lovense rotate 10
+                    lovense suction 10
+                    lovense thrust 10
 
                     scene v12laumi2f # Ignore as animation
                     with dissolve
@@ -1045,10 +1047,10 @@ label v12_lauren_sex:
                     pause
 
                 label v12s29_lauren_cowgirl:
-                    $ lovense.vibrate(15)
-                    $ lovense.rotate(12)
-                    $ lovense.suction(12)
-                    $ lovense.thrust(12)
+                    lovense vibrate 15
+                    lovense rotate 12
+                    lovense suction 12
+                    lovense thrust 12
 
                     image v12laucg = Movie(play="images/v12/Scene 29/v12laucg.webm", loop=True, image="images/v12/Scene 29/v12laucgStart.webp", start_image="images/v12/Scene 29/v12laucgStart.webp") # Lauren cowgirl
                     image v12laucgf = Movie(play="images/v12/Scene 29/v12laucgf.webm", loop=True, image="images/v12/Scene 29/v12laucgStart.webp", start_image="images/v12/Scene 29/v12laucgStart.webp") # Lauren cowgirl spedup
@@ -1079,10 +1081,10 @@ label v12_lauren_sex:
                     
                     u "Damn it Lauren, you're so fucking tight..."
 
-                    $ lovense.vibrate(17)
-                    $ lovense.rotate(15)
-                    $ lovense.suction(15)
-                    $ lovense.thrust(15)
+                    lovense vibrate 17
+                    lovense rotate 15
+                    lovense suction 15
+                    lovense thrust 15
 
                     scene v12laucg2f # Ignore as animation
                     with dissolve
@@ -1109,7 +1111,7 @@ label v12_lauren_sex:
 
                 pause
 
-                $ lovense.stop()
+                lovense stop
 
                 scene v12las66 # FPP. MC and Lauren lieing down next to each other, looking at each other, Lauren smiling, mouth open, make her body a bit sweaty if possible
                 with dissolve

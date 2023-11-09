@@ -2110,7 +2110,7 @@ label at_bd:
     scene sdakisso
     with dissolve
 
-    $ lovense.vibrate(2)
+    lovense vibrate 2
 
     " "
 
@@ -2125,8 +2125,8 @@ label at_bd:
 
             ri "*Chuckles* You're hard already."
             
-            $ lovense.vibrate(3)
-            $ lovense.rotate(2)
+            lovense vibrate 3
+            lovense rotate 2
 
             scene sda3
             with dissolve
@@ -2143,9 +2143,9 @@ label at_bd:
 
             ri "Tell me what you want."
 
-            $ lovense.vibrate(3)
-            $ lovense.rotate(2)
-            $ lovense.thrust(2)
+            lovense vibrate 3
+            lovense rotate 2
+            lovense thrust 2
             
             menu:
                 "Blowjob":
@@ -2175,9 +2175,9 @@ label at_bd:
                     show sdabjf
                     with dissolve
 
-                    $ lovense.vibrate(4)
-                    $ lovense.rotate(3)
-                    $ lovense.thrust(3)
+                    lovense vibrate 4
+                    lovense rotate 3
+                    lovense thrust 3
 
                     ri "*Gasp* Like this?"
 
@@ -2202,9 +2202,9 @@ label at_bd:
                     show sdafj
                     with fade
                     
-                    $ lovense.vibrate(4)
-                    $ lovense.rotate(3)
-                    $ lovense.thrust(3)
+                    lovense vibrate 4 
+                    lovense rotate 3
+                    lovense thrust 3
 
                     ri "Wow, I've never done this before. Does it feel good?"
 
@@ -2238,9 +2238,9 @@ label at_bd:
             scene sda4c ## turning her around
             with dissolve
 
-            $ lovense.vibrate(4)
-            $ lovense.rotate(3)
-            $ lovense.thrust(3)
+            lovense vibrate 4
+            lovense rotate 3
+            lovense thrust 3
 
             u "Bend over."
 
@@ -2297,9 +2297,9 @@ label at_bd:
 
             ri "Oh my god!"
 
-            $ lovense.vibrate(6)
-            $ lovense.rotate(4)
-            $ lovense.thrust(4)
+            lovense vibrate 6
+            lovense rotate 4
+            lovense thrust 4
 
             show sdasex
             with dissolve
@@ -2319,9 +2319,9 @@ label at_bd:
             scene sda7a
             with dissolve
 
-            $ lovense.vibrate(8)
-            $ lovense.rotate(6)
-            $ lovense.thrust(6)
+            lovense vibrate 8
+            lovense rotate 6
+            lovense thrust 6
 
             ri "Cum inside me, [name]! Please fill me up!"
 
@@ -2335,7 +2335,7 @@ label at_bd:
 
             ri "My legs are shaking."
 
-            $ lovense.stop()
+            lovense stop
 
         "Wake up":
             pass

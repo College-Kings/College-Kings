@@ -1811,8 +1811,8 @@ label conl:
                 if is_censored:
                     call screen censored_popup("aubsexad")
 
-                $ lovense.vibrate(2)
-                $ lovense.rotate(1)
+                lovense vibrate 2
+                lovense rotate 1
 
                 scene s254aa ## aubrey and you standing
                 with dissolve
@@ -1833,7 +1833,7 @@ label conl:
                 with dissolve
 
                 au "Yeah..."
-                $ lovense.stop()
+                lovense stop
 
     else: # you didn't meet aubrey
         python:
@@ -2046,7 +2046,7 @@ label conl:
 
         u "I can't just-"
 
-        $ lovense.vibrate(2)
+        lovense vibrate 2
 
         scene s254l
         with dissolve
@@ -2066,8 +2066,8 @@ label conl:
 
         pause 0.5
 
-        $ lovense.vibrate(4)
-        $ lovense.rotate(2)
+        lovense vibrate 4
+        lovense rotate 2
 
         scene s254ac # your pants down aubrey forward
         with dissolve
@@ -2144,8 +2144,8 @@ label conl:
 
                 au "Fuck..."
 
-                $ lovense.vibrate(5)
-                $ lovense.rotate(3)
+                lovense vibrate 5
+                lovense rotate 3
 
                 scene anew5 # you grab her pants
                 with dissolve
@@ -2176,8 +2176,8 @@ label conl:
 
                 pause 1.5
 
-                $ lovense.vibrate(6)
-                $ lovense.rotate(3)
+                lovense vibrate 6
+                lovense rotate 3
 
                 scene anew6
                 with dissolve
@@ -2201,7 +2201,7 @@ label conl:
 
         "Stop it":
 
-            $ lovense.stop()
+            lovense stop
 
             scene s254c
             with dissolve
@@ -2249,9 +2249,11 @@ label conl:
 
 label abj:
 
-    $ lovense.vibrate(6)
-    $ lovense.rotate(4)
-    $ lovense.thrust(3)
+    lovense vibrate 6
+    lovense rotate 4
+    lovense thrust 3
+    lovense depth 1
+    lovense finger 3
 
     show screen aubsex
     scene asexnew2start # aub bj start
@@ -2320,9 +2322,12 @@ label abj:
 
     au "*Whispers* Fuck me, [name]."
 
-    $ lovense.vibrate(6)
-    $ lovense.rotate(4)
-    $ lovense.thrust(3)
+    lovense vibrate 6
+    lovense rotate 4
+    lovense thrust 3
+    lovense depth 1
+    lovense finger 3
+
     scene s259d
     with dissolve
 
@@ -2358,9 +2363,11 @@ label amiss:
 
     " "
 
-    $ lovense.vibrate(6)
-    $ lovense.rotate(4)
-    $ lovense.thrust(3)
+    lovense vibrate 6
+    lovense rotate 4
+    lovense thrust 3
+    lovense depth 1
+    lovense finger 3
 
     scene anew7 # aubrey close up seductive
     with dissolve
@@ -2383,9 +2390,11 @@ label acow:
     au "Fuck yes!"
 
     " "
-    $ lovense.vibrate(7)
-    $ lovense.rotate(5)
-    $ lovense.thrust(4)
+    lovense vibrate 7
+    lovense rotate 5
+    lovense thrust 4
+    lovense depth 1
+    lovense finger 4
 
     scene asexnew11 # slow sex angle 2
 
@@ -2467,7 +2476,7 @@ label acream:
 
     pause 0.5
 
-    $ lovense.stop()
+    lovense stop
     stop music fadeout 3
 
     scene s264 # you going back to your dorm

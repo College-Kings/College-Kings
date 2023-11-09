@@ -848,10 +848,10 @@ label v11s5_galleryScene:
     if is_censored:
         call screen censored_popup("v11s5_nsfwSkipLabel1")
 
-    $ lovense.vibrate(2)
-    $ lovense.rotate(1)
-    $ lovense.suction(1)
-    $ lovense.thrust(1)
+    lovense vibrate 2
+    lovense rotate 1
+    lovense suction 1
+    lovense thrust 1
 
     scene v11swc21a # TPP Same angle as v11swc21, Candy removing her clothing
     with dissolve
@@ -875,10 +875,11 @@ label v11s5_galleryScene:
 
     u "Oh fuck."
 
-    $ lovense.vibrate(5)
-    $ lovense.rotate(3)
-    $ lovense.suction(3)
-    $ lovense.thrust(3)
+    lovense vibrate 5
+    lovense rotate 3
+    lovense suction 3
+    lovense thrust 3
+    lovense depth 1
 
     scene v11cbjf
     with dissolve
@@ -895,10 +896,11 @@ label v11s5_galleryScene:
 
     u "Oh my god, come here."
 
-    $ lovense.vibrate(7)
-    $ lovense.rotate(4)
-    $ lovense.suction(4)
-    $ lovense.thrust(4)
+    lovense vibrate 7
+    lovense rotate 4
+    lovense suction 4
+    lovense thrust 4
+    lovense depth 1
 
     scene v11swc22a # FPP. candy getting on top of MC ready to ride MC
     with dissolve
@@ -910,10 +912,10 @@ label v11s5_galleryScene:
 
     u "I'm glad I went out tonight."
 
-    $ lovense.vibrate(9)
-    $ lovense.rotate(5)
-    $ lovense.suction(5)
-    $ lovense.thrust(5)
+    lovense vibrate 9
+    lovense rotate 5
+    lovense suction 5
+    lovense thrust 5
 
     image v11ccg = Movie(play="images/v11/Scene 5/v11cancg.webm", loop=True, image="images/v11/Scene 5/v11cancgStart.webp", start_image="images/v11/Scene 5/v11cancgStart.webp") # TPP Candy riding MC, their faces near each other
     image v11ccgf = Movie(play="images/v11/Scene 5/v11cancgf.webm", loop=True, image="images/v11/Scene 5/v11cancgStart.webp", start_image="images/v11/Scene 5/v11cancgStart.webp")
@@ -933,10 +935,11 @@ label v11s5_galleryScene:
 
     candy "Oh yes!"
 
-    $ lovense.vibrate(11)
-    $ lovense.rotate(7)
-    $ lovense.suction(7)
-    $ lovense.thrust(7)
+    lovense vibrate 11
+    lovense rotate 7
+    lovense suction 7
+    lovense thrust 7
+    lovense depth 2
 
     scene v11ccg2
     with dissolve
@@ -959,10 +962,11 @@ label v11s5_galleryScene:
 
     candy "YESSSSS!"
 
-    $ lovense.vibrate(13)
-    $ lovense.rotate(9)
-    $ lovense.suction(9)
-    $ lovense.thrust(9)
+    lovense vibrate 13
+    lovense rotate 9
+    lovense suction 9
+    lovense thrust 9
+    lovense depth 2
 
     scene v11cmif
     with dissolve
@@ -977,10 +981,11 @@ label v11s5_galleryScene:
 
     u "Turn around for me."
 
-    $ lovense.vibrate(15)
-    $ lovense.rotate(11)
-    $ lovense.suction(11)
-    $ lovense.thrust(11)
+    lovense vibrate 15
+    lovense rotate 11
+    lovense suction 11
+    lovense thrust 11
+    lovense depth 3
 
     scene v11cdg # MC and Candy having sex doggy style
     with dissolve
@@ -997,10 +1002,11 @@ label v11s5_galleryScene:
 
     u "Me too."
 
-    $ lovense.vibrate(17)
-    $ lovense.rotate(13)
-    $ lovense.suction(13)
-    $ lovense.thrust(13)
+    lovense vibrate 17
+    lovense rotate 13
+    lovense suction 13
+    lovense thrust 13
+    lovense depth 3
 
     scene v11swc23
     with dissolve
@@ -1022,7 +1028,7 @@ label v11s5_galleryScene:
 
     candy "That was exactly what I needed."
     
-    $ lovense.stop()
+    lovense stop
 
     label v11s5_nsfwSkipLabel1:
 

@@ -232,10 +232,10 @@ label v10_chloe_gym:
                 if is_censored:
                     call screen censored_popup("v10s30_nsfwSkipLabel1")
 
-                $ lovense.vibrate(2)
-                $ lovense.rotate(1)
-                $ lovense.suction(1)
-                $ lovense.thrust(1)
+                lovense vibrate 2
+                lovense rotate 1
+                lovense suction 1
+                lovense thrust 1
 
                 scene v10chg10 # FPP Close up on Chloe, laying on her back on the bench, small smile and mouth closed, mc reaching to pull off her top.
                 with dissolve
@@ -251,10 +251,10 @@ label v10_chloe_gym:
 
                 cl "Oh, [name]!"
 
-                $ lovense.vibrate(4)
-                $ lovense.rotate(2)
-                $ lovense.suction(2)
-                $ lovense.thrust(2)
+                lovense vibrate 4
+                lovense rotate 2
+                lovense suction 2
+                lovense thrust 2
 
                 scene v10chgfpf
                 with dissolve
@@ -272,10 +272,10 @@ label v10_chloe_gym:
                 image v10chgeof = Movie(play="images/v10/Scene 30/v10chgeof.webm", loop=True, image="images/v10/Scene 30/v10chgeoStart.webp", start_image="images/v10/Scene 30/v10chgeoStart.webp")
 
                 label v10s30_chloeLicking:
-                    $ lovense.vibrate(5)
-                    $ lovense.rotate(3)
-                    $ lovense.suction(3)
-                    $ lovense.thrust(3)
+                    lovense vibrate 5
+                    lovense rotate 3
+                    lovense suction 3
+                    lovense thrust 3
 
                     scene v10chgeo # MC eating Chloe out
                     with dissolve
@@ -303,10 +303,10 @@ label v10_chloe_gym:
                 u "Oh God!"
 
                 label v10s30_chloeBlowjob:
-                    $ lovense.vibrate(8)
-                    $ lovense.rotate(4)
-                    $ lovense.suction(4)
-                    $ lovense.thrust(4)
+                    lovense vibrate 8
+                    lovense rotate 4
+                    lovense suction 4
+                    lovense thrust 4
 
                     scene v10chg10c # FPP Same angle as v10chg10b, Chloe moving to give MC a blowjob
                     with dissolve
@@ -331,10 +331,10 @@ label v10_chloe_gym:
 
                     u "Ahh fuck... I'm cumming!"
 
-                    $ lovense.vibrate(8)
-                    $ lovense.rotate(4)
-                    $ lovense.suction(4)
-                    $ lovense.thrust(4)
+                    lovense vibrate 8
+                    lovense rotate 4
+                    lovense suction 4
+                    lovense thrust 4
 
                     scene v10chg10e # FPP Same angle as v10chg10b, Chloe smiling, mouth open, cum in her mouth
                     with dissolve
@@ -346,7 +346,7 @@ label v10_chloe_gym:
 
                     cl "*gulp*"
                 
-                $ lovense.stop()
+                lovense stop
                 
                 hide screen v10s30_chloeSexOverlay
 

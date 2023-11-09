@@ -15,8 +15,8 @@ label hoco_amb_night:
 
     am "This will feel amazing."
 
-    $ lovense.vibrate(2)
-    $ lovense.rotate(1)
+    lovense vibrate 2
+    lovense rotate 1
     scene v8samb2 # FPP. Show Amber taking off her shirt, Amber smile, mouth closed.
     with dissolve
 
@@ -25,10 +25,10 @@ label hoco_amb_night:
     play music music.ck1.sexy
 
 label v8s5_amberBlowjob:
-    $ lovense.vibrate(4)
-    $ lovense.rotate(2)
-    $ lovense.suction(1)
-    $ lovense.thrust(1)
+    lovense vibrate 4
+    lovense rotate 2
+    lovense suction 1
+    lovense thrust 1
 
     scene v8samb3 # FPP. Show Amber starting to give MC a blowjob. MC legs spread enough for Amber to fit in-between, Amber looking at MC (Camera). (If needed, place the camera slightly above MC's head to give a clear view, so need not be technically FPP. Just should look first person)
     with dissolve
@@ -55,10 +55,10 @@ label v8s5_amberBlowjob:
     with dissolve
     pause
 
-    $ lovense.vibrate(5)
-    $ lovense.rotate(2)
-    $ lovense.suction(2)
-    $ lovense.thrust(2)
+    lovense vibrate 5
+    lovense rotate 2
+    lovense suction 2
+    lovense thrust 2
 
     scene v8samb4 # FPP. Show MC and Amber standing up, MC begins to remove Amber's underwear. Amber removing MC's shirt so they are now both naked. Both smiling.
     with dissolve
@@ -76,10 +76,10 @@ label v8s5_amberMissonary:
 
     am "Ah that feels... ah so good. Ah.. Fuck me."
 
-    $ lovense.vibrate(7)
-    $ lovense.rotate(3)
-    $ lovense.suction(3)
-    $ lovense.thrust(3)
+    lovense vibrate 7
+    lovense rotate 3
+    lovense suction 3
+    lovense thrust 3
 
     scene v8samb6a # TPP. Same camera as v8samb6, MC mouth open, Amber mouth closed.
     with dissolve
@@ -122,10 +122,10 @@ label v8s5_amberMissonary:
     pause 0.5
 
 label v8s5_amberFacefuck:
-    $ lovense.vibrate(7)
-    $ lovense.rotate(3)
-    $ lovense.suction(3)
-    $ lovense.thrust(3)
+    lovense vibrate 7
+    lovense rotate 3
+    lovense suction 3
+    lovense thrust 3
 
     scene v8samb9 # TPP. Show a closeup of Amber putting her mouth on MC's penis. MC places his hands on Amber's head to start banging her mouth.
     with dissolve
@@ -178,7 +178,7 @@ label v8s5_amberFacefuck:
 
     am "Haha."
 
-    $ lovense.stop()
+    lovense stop()
     stop music fadeout 3
 
     scene v8samb11 # TPP. Show Amber lying back down on the floor, MC joins her, they both look tired.

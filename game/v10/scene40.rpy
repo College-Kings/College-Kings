@@ -263,10 +263,10 @@ label v10_riley_sex:
 
                         u "Come here."
 
-                        $ lovense.vibrate(2)
-                        $ lovense.rotate(1)
-                        $ lovense.suction(1)
-                        $ lovense.thrust(1)
+                        lovense vibrate 2
+                        lovense rotate 1
+                        lovense suction 1
+                        lovense thrust 1
 
                         scene v10srds5c
                         with dissolve
@@ -281,10 +281,10 @@ label v10_riley_sex:
 
                             ri "Squeeze my thighs."
 
-                            $ lovense.vibrate(4)
-                            $ lovense.rotate(2)
-                            $ lovense.suction(2)
-                            $ lovense.thrust(2)
+                            lovense vibrate 4
+                            lovense rotate 2
+                            lovense suction 2
+                            lovense thrust 2
 
                             scene v10rircgf
                             with dissolve
@@ -304,10 +304,10 @@ label v10_riley_sex:
                         ri "My turn."
 
                         label v10s40_rileyCowgirl:
-                            $ lovense.vibrate(5)
-                            $ lovense.rotate(3)
-                            $ lovense.suction(3)
-                            $ lovense.thrust(3)
+                            lovense vibrate 5
+                            lovense rotate 3
+                            lovense suction 3
+                            lovense thrust 3
 
                             scene v10riot
                             with dissolve
@@ -316,10 +316,10 @@ label v10_riley_sex:
 
                             ri "You like it huh?"
 
-                            $ lovense.vibrate(7)
-                            $ lovense.rotate(4)
-                            $ lovense.suction(3)
-                            $ lovense.thrust(3)
+                            lovense vibrate 7
+                            lovense rotate 4
+                            lovense suction 3
+                            lovense thrust 3
 
                             scene v10riotf
                             with dissolve
@@ -341,7 +341,7 @@ label v10_riley_sex:
 
                         hide screen v10s40_rileySexOverlay
 
-                        $ lovense.stop()
+                        lovense stop
 
                         scene v10srds6a
                         with dissolve
@@ -374,10 +374,10 @@ label v10_riley_sex:
 
                 ri "I like where this is going."
 
-                $ lovense.vibrate(2)
-                $ lovense.rotate(1)
-                $ lovense.suction(1)
-                $ lovense.thrust(1)
+                lovense vibrate 2
+                lovense rotate 1
+                lovense suction 1
+                lovense thrust 1
 
                 scene v10srds5b # FPP. Same camera as v10srds5. Show Riley naked, standing close with her arms wrapped around MC. Smiling, mouth closed.
                 with dissolve
@@ -397,10 +397,10 @@ label v10_riley_sex:
 
                 # -Move to position 2 (refer to Miro)-
 
-                $ lovense.vibrate(3)
-                $ lovense.rotate(2)
-                $ lovense.suction(2)
-                $ lovense.thrust(2)
+                lovense vibrate 3
+                lovense rotate 2
+                lovense suction 2
+                lovense thrust 2
 
                 scene v10rircg
                 with dissolve
@@ -433,10 +433,10 @@ label v10_riley_sex:
                 image v10riot = Movie(play="images/v10/Scene 40/v10riot.webm", loop=True, image="images/v10/Scene 40/v10riotStart.webp", start_image="images/v10/Scene 40/v10riotStart.webp")
                 image v10riotf = Movie(play="images/v10/Scene 40/v10riot.webm", loop=True, image="images/v10/Scene 40/v10riotStart.webp", start_image="images/v10/Scene 40/v10riotStart.webp")
 
-                $ lovense.vibrate(5)
-                $ lovense.rotate(3)
-                $ lovense.suction(3)
-                $ lovense.thrust(3)
+                lovense vibrate 5
+                lovense rotate 3
+                lovense suction 3
+                lovense thrust 3
 
                 scene v10riot
                 with dissolve
@@ -463,7 +463,7 @@ label v10_riley_sex:
 
                 pause 0.75
 
-                $ lovense.stop()
+                lovense stop
 
                 stop music fadeout 3
                 play music music.ck1.v10.Track_Scene_40_3 fadein 2
@@ -639,10 +639,10 @@ label v10_riley_sex:
 
                 ri "Someone's confident."
 
-                $ lovense.vibrate(2)
-                $ lovense.rotate(1)
-                $ lovense.suction(1)
-                $ lovense.thrust(1)
+                lovense vibrate 2
+                lovense rotate 1
+                lovense suction 1
+                lovense thrust 1 
 
                 scene v10srds5b
                 with dissolve
@@ -664,10 +664,10 @@ label v10_riley_sex:
 
                 ri "Squeeze my thighs."
 
-                $ lovense.vibrate(4)
-                $ lovense.rotate(2)
-                $ lovense.suction(2)
-                $ lovense.thrust(2)
+                lovense vibrate 4
+                lovense rotate 2
+                lovense suction 2
+                lovense thrust 2
 
                 scene v10rircgf
                 with dissolve
@@ -693,10 +693,10 @@ label v10_riley_sex:
 
                 ri "You like it huh?"
 
-                $ lovense.vibrate(6)
-                $ lovense.rotate(4)
-                $ lovense.suction(4)
-                $ lovense.thrust(4)
+                lovense vibrate 6
+                lovense rotate 4
+                lovense suction 4
+                lovense thrust 4
 
                 scene v10riotf
                 with dissolve
@@ -716,7 +716,7 @@ label v10_riley_sex:
 
                 ri "That was nice."
                 
-                $ lovense.stop()
+                lovense stop
 
                 stop music fadeout 3
                 play music music.ck1.v10.Track_Scene_40_3 fadein 2
@@ -907,10 +907,10 @@ label v10_riley_sex:
 
                         ri "Someone's confident."
 
-                        $ lovense.vibrate(2)
-                        $ lovense.rotate(1)
-                        $ lovense.suction(1)
-                        $ lovense.thrust(1)
+                        lovense vibrate 2
+                        lovense rotate 1
+                        lovense suction 1
+                        lovense thrust 1
 
                         scene v10srds5b
                         with dissolve
@@ -929,10 +929,10 @@ label v10_riley_sex:
 
                         ri "Squeeze my thighs."
 
-                        $ lovense.vibrate(4)
-                        $ lovense.rotate(3)
-                        $ lovense.suction(3)
-                        $ lovense.thrust(3)
+                        lovense vibrate 4
+                        lovense rotate 3
+                        lovense suction 3
+                        lovense thrust 3
 
                         scene v10rircgf
                         with dissolve
@@ -958,10 +958,10 @@ label v10_riley_sex:
 
                         ri "You like it huh?"
                         
-                        $ lovense.vibrate(7)
-                        $ lovense.rotate(4)
-                        $ lovense.suction(4)
-                        $ lovense.thrust(4)
+                        lovense vibrate 7
+                        lovense rotate 4
+                        lovense suction 4
+                        lovense thrust 4
 
                         scene v10riotf
                         with dissolve
@@ -981,7 +981,7 @@ label v10_riley_sex:
 
                         pause 0.75
 
-                        $ lovense.stop()
+                        lovense stop
                         
                         scene v10srds6a
                         with dissolve

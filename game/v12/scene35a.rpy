@@ -398,10 +398,10 @@ label v12_nora_sex:
         if is_censored:
             call screen censored_popup("v12s35a_nsfwSkipLabel1")
 
-        $ lovense.vibrate(2)
-        $ lovense.rotate(1)
-        $ lovense.suction(1)
-        $ lovense.thrust(1)
+        lovense vibrate 2
+        lovense rotate 1
+        lovense suction 1
+        lovense thrust 1
 
         scene v12nos19 # TPP. Show MC and Nora taking off their shirts
         with dissolve
@@ -468,10 +468,10 @@ label v12_nora_sex:
 
         pause
 
-        $ lovense.vibrate(5)
-        $ lovense.rotate(3)
-        $ lovense.suction(3)
-        $ lovense.thrust(3)
+        lovense vibrate 5
+        lovense rotate 3
+        lovense suction 3
+        lovense thrust 3
 
         image v12norsb = Movie(play="images/v12/Scene 35a/v12norsb.webm", loop=True, image="images/v12/Scene 35a/v12norsbStart.webp", start_image="images/v12/Scene 35a/v12norsbStart.webp") # Nora spooning
         image v12norsbf = Movie(play="images/v12/Scene 35a/v12norsbf.webm", loop=True, image="images/v12/Scene 35a/v12norsbStart.webp", start_image="images/v12/Scene 35a/v12norsbStart.webp") # Nora spooning spedup
@@ -524,10 +524,10 @@ label v12_nora_sex:
 
         pause
 
-        $ lovense.vibrate(7)
-        $ lovense.rotate(5)
-        $ lovense.suction(5)
-        $ lovense.thrust(5)
+        lovense vibrate 7
+        lovense rotate 5
+        lovense suction 5
+        lovense thrust 5
 
         image v12norst = Movie(play="images/v12/Scene 35a/v12norst.webm", loop=True, image="images/v12/Scene 35a/v12norstStart.webp", start_image="images/v12/Scene 35a/v12norstStart.webp") # Nora sit on throne
         image v12norstf = Movie(play="images/v12/Scene 35a/v12norstf.webm", loop=True, image="images/v12/Scene 35a/v12norstStart.webp", start_image="images/v12/Scene 35a/v12norstStart.webp") # Nora sit on throne spedup
@@ -548,10 +548,10 @@ label v12_nora_sex:
 
         no "Mmm, yes [name]!"
 
-        $ lovense.vibrate(9)
-        $ lovense.rotate(7)
-        $ lovense.suction(7)
-        $ lovense.thrust(7)
+        lovense vibrate 9
+        lovense rotate 7
+        lovense suction 7
+        lovense thrust 7
 
         scene v12norst2 # Ignore as animation
         with dissolve
@@ -577,10 +577,10 @@ label v12_nora_sex:
 
         pause
 
-        $ lovense.vibrate(11)
-        $ lovense.rotate(9)
-        $ lovense.suction(9)
-        $ lovense.thrust(9)
+        lovense vibrate 11
+        lovense rotate 9
+        lovense suction 9
+        lovense thrust 9
 
         image v12norcw = Movie(play="images/v12/Scene 35a/v12norcw.webm", loop=True, image="images/v12/Scene 35a/v12norcwStart.webp", start_image="images/v12/Scene 35a/v12norcwStart.webp") # Nora Candle on Wall
         image v12norcwf = Movie(play="images/v12/Scene 35a/v12norcwf.webm", loop=True, image="images/v12/Scene 35a/v12norcwStart.webp", start_image="images/v12/Scene 35a/v12norcwStart.webp") # Nora Candle on Wall spedup
@@ -617,10 +617,10 @@ label v12_nora_sex:
 
         no "*Moans* Don't... stop... I'm- *Gasps*"
         
-        $ lovense.vibrate(13)
-        $ lovense.rotate(11)
-        $ lovense.suction(11)
-        $ lovense.thrust(11)
+        lovense vibrate 13
+        lovense rotate 11
+        lovense suction 11
+        lovense thrust 11
 
         scene v12nos32 # TPP. Show MC and Nora switching places, MC's back towards the wall, MC and Nora kissing, Nora giving MC a handjob
         with dissolve
@@ -652,10 +652,10 @@ label v12_nora_sex:
 
         u "Ahh, fuck, Nora! I'm gonna cum..."
 
-        $ lovense.vibrate(15)
-        $ lovense.rotate(13)
-        $ lovense.suction(13)
-        $ lovense.thrust(13)
+        lovense vibrate 15
+        lovense rotate 13
+        lovense suction 13
+        lovense thrust 13
 
         scene v12norkhj2f # Ignore as animation
         with dissolve
@@ -673,7 +673,7 @@ label v12_nora_sex:
 
         pause
 
-        $ lovense.stop()
+        lovense stop
         
         scene v12nos35 # FPP. Same positioning as v12nos35, MC and Nora looking at each other, Nora smiling, mouth closed
         with dissolve

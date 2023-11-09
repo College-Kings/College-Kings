@@ -789,10 +789,10 @@ label fr5aubrey1:
                     if is_censored:
                         call screen censored_popup("v9s7_nsfwSkipLabel1")
 
-                    $ lovense.vibrate(2)
-                    $ lovense.rotate(1)
-                    $ lovense.suction(1)
-                    $ lovense.thrust(1)
+                    lovense vibrate 2
+                    lovense rotate 1
+                    lovense suction 1
+                    lovense thrust 1
 
                     scene v9slake8 # same as 8a, mouth open
                     with dissolve
@@ -814,10 +814,10 @@ label fr5aubrey1:
                     
                     au "Now, where were we?"
 
-                    $ lovense.vibrate(3)
-                    $ lovense.rotate(2)
-                    $ lovense.suction(2)
-                    $ lovense.thrust(2)
+                    lovense vibrate 3
+                    lovense rotate 2
+                    lovense suction 2
+                    lovense thrust 2
 
                     image v9slake17vid = Movie (play="images/v9/scene 7/v9slake17vid.webm", loop = True, image = "images/v9/scene 7/v9slake17vidend.webp", start_image = "images/v9/scene 7/v9slake17vidstart.webp")
                     image v9slake18vid = Movie (play="images/v9/scene 7/v9slake18vid.webm", loop = True, image = "images/v9/scene 7/v9slake18vidend.webp", start_image = "images/v9/scene 7/v9slake18vidstart.webp")
@@ -837,10 +837,10 @@ label fr5aubrey1:
 
                     au "Let's see what we got here."
 
-                    $ lovense.vibrate(4)
-                    $ lovense.rotate(3)
-                    $ lovense.suction(3)
-                    $ lovense.thrust(3)
+                    lovense vibrate 4
+                    lovense rotate 3
+                    lovense suction 3
+                    lovense thrust 3
 
                     scene v9slake18vid # aubrey handjob slow, TPP
                     with fade
@@ -856,10 +856,10 @@ label fr5aubrey1:
 
                     " "
 
-                    $ lovense.vibrate(6)
-                    $ lovense.rotate(4)
-                    $ lovense.suction(4)
-                    $ lovense.thrust(4)
+                    lovense vibrate 6
+                    lovense rotate 4
+                    lovense suction 4
+                    lovense thrust 4
 
                     scene v9slake18vidfast # aubrey handjob fast, TPP (Not rendered again)
                     with dissolve
@@ -874,10 +874,10 @@ label fr5aubrey1:
                     au "You like this?"
 
                     " "
-                    $ lovense.vibrate(8)
-                    $ lovense.rotate(5)
-                    $ lovense.suction(5)
-                    $ lovense.thrust(5)
+                    lovense vibrate 8
+                    lovense rotate 5
+                    lovense suction 5
+                    lovense thrust 5
 
                     scene v9slake20 # close up mc cumshot
                     with flash
@@ -906,6 +906,8 @@ label fr5aubrey1:
 
                     u "You sure you don't want me to do you?"
 
+                    lovense stop
+                    
                     scene v9slake21 
                     with dissolve
 
