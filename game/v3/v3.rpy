@@ -1811,8 +1811,8 @@ label conl:
                 if is_censored:
                     call screen censored_popup("aubsexad")
 
-                lovense vibrate(2)
-                lovense rotate(1)
+                lovense vibrate 2
+                lovense rotate 1
 
                 scene s254aa ## aubrey and you standing
                 with dissolve

@@ -2110,7 +2110,7 @@ label at_bd:
     scene sdakisso
     with dissolve
 
-    lovense vibrate(2)
+    lovense vibrate 2
 
     " "
 
