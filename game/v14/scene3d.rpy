@@ -59,10 +59,10 @@ label v14s03d:
     if is_censored:
         call screen censored_popup("v14s03d_nsfwSkipLabel1")
 
-    $ lovense.vibrate(2)
-    $ lovense.rotate(1)
-    $ lovense.suction(1)
-    $ lovense.thrust(1)
+    lovense vibrate 2
+    lovense rotate 1
+    lovense suction 1
+    lovense thrust 1
 
     scene v14s03d_4 # FPP Show Satin removing her clothes
     with dissolve
@@ -101,10 +101,10 @@ label v14s03d:
 
     # -Start of Sex Scene
 
-    $ lovense.vibrate(4)
-    $ lovense.rotate(3)
-    $ lovense.suction(3)
-    $ lovense.thrust(3)
+    lovense vibrate 4
+    lovense rotate 3
+    lovense suction 3
+    lovense thrust 3
 
     # -Satin begins deep throating Mc's dick-
     # From scene animations folder v14satdtFPP
@@ -161,7 +161,7 @@ label v14s03d:
 
             u "*Chuckles* Hey, you get what you pay for right?"
 
-            $ lovense.stop()
+            lovense stop
 
             scene v14s03d_4d # FPP Same angle as 4, Satin standing back looking offended, mouth open
             with dissolve
@@ -221,10 +221,10 @@ label v14s03d:
         "Yes I do":
             u "Yes... I... do..."
 
-            $ lovense.vibrate(6)
-            $ lovense.rotate(5)
-            $ lovense.suction(5)
-            $ lovense.thrust(5)
+            lovense vibrate 6
+            lovense rotate 5
+            lovense suction 5
+            lovense thrust 5
 
             scene v14s03d_4i # FPP Same angle as 4, Satin leaning forward, her handson either side of MC's face, she's smiling with her mouth open, looking seductive
             with dissolve
@@ -260,10 +260,10 @@ label v14s03d:
 
             u "I can't even fucking concentrate right now..."
 
-            $ lovense.vibrate(8)
-            $ lovense.rotate(7)
-            $ lovense.suction(7)
-            $ lovense.thrust(7)
+            lovense vibrate 8
+            lovense rotate 7
+            lovense suction 7
+            lovense thrust 7
 
             # From scene animations folder v14satcgTPP2
             image v14satcgTPP2 = Movie(play="images/v14/Scene 3d/v14satcgTPP2.webm", loop=True, image="images/v14/Scene 3d/v14satcgTPP2.webp", start_image="images/v14/Scene 3d/v14satcgTPP2.webp")
@@ -296,10 +296,10 @@ label v14s03d:
             image v14satrcgTPP1 = Movie(play="images/v14/Scene 3d/v14satrcgTPP1.webm", loop=True, image="images/v14/Scene 3d/v14satrcgTPP1.webp", start_image="images/v14/Scene 3d/v14satrcgTPP1.webp")
             image v14satrcgTPP1f = Movie(play="images/v14/Scene 3d/v14satrcgTPP1f.webm", loop=True, image="images/v14/Scene 3d/v14satrcgTPP1.webp", start_image="images/v14/Scene 3d/v14satrcgTPP1.webp")
 
-            $ lovense.vibrate(9)
-            $ lovense.rotate(8)
-            $ lovense.suction(8)
-            $ lovense.thrust(8)
+            lovense vibrate 9
+            lovense rotate 8
+            lovense suction 8
+            lovense thrust 8
 
             scene v14satrcgTPP1 # Ignore as animation
             with dissolve
@@ -356,10 +356,10 @@ label v14s03d:
 
             satin "C'mon over here. What are you waiting for? *Chuckles*"
 
-            $ lovense.vibrate(10)
-            $ lovense.rotate(9)
-            $ lovense.suction(9)
-            $ lovense.thrust(9)
+            lovense vibrate 10
+            lovense rotate 9
+            lovense suction 9
+            lovense thrust 9
 
             scene v14s03d_14a # TPP Same angle as 14, MC climbing on top of Satin and getting ready to enter her, Satin's eyes closed, smiling with mouth open
             with dissolve
@@ -396,10 +396,10 @@ label v14s03d:
 
             satin "Yesss... *Moans* I'm fine."
 
-            $ lovense.vibrate(11)
-            $ lovense.rotate(10)
-            $ lovense.suction(10)
-            $ lovense.thrust(10)
+            lovense vibrate 11
+            lovense rotate 10
+            lovense suction 10
+            lovense thrust 10
 
             # -MC starts fucking Satin in prone position
             # From scene animations folder v14satbpTPP1
@@ -445,10 +445,10 @@ label v14s03d:
 
             u "Mmm... AH I-, YES SATIN, YES!"
 
-            $ lovense.vibrate(12)
-            $ lovense.rotate(11)
-            $ lovense.suction(11)
-            $ lovense.thrust(11)
+            lovense vibrate 12
+            lovense rotate 11
+            lovense suction 11
+            lovense thrust 11
 
             stop sound
             scene v14s03d_16a # FPP Same angle as 16, MC cumming in Satin
@@ -466,7 +466,7 @@ label v14s03d:
 
             u "I was thinking the same thing, ha."
             
-            $ lovense.stop()
+            lovense stop()
             
             scene v14s03d_15c
             with dissolve

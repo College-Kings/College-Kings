@@ -195,10 +195,10 @@ label v12_ms_rose_sex: #can only get here if mc.frat == Frat.WOLVES
                 if is_censored:
                     call screen censored_popup("v12s23_nsfwSkipLabel1")
 
-                $ lovense.vibrate(2)
-                $ lovense.rotate(1)
-                $ lovense.suction(1)
-                $ lovense.thrust(1)
+                lovense vibrate 2
+                lovense rotate 1
+                lovense suction 1
+                lovense thrust 1
 
                 scene v12msr15a # FPP. Same as v12msr15, Ms. Rose topless, seductive look, mouth open
                 with dissolve
@@ -225,10 +225,10 @@ label v12_ms_rose_sex: #can only get here if mc.frat == Frat.WOLVES
 
                 pause
                 
-                $ lovense.vibrate(3)
-                $ lovense.rotate(2)
-                $ lovense.suction(2)
-                $ lovense.thrust(2)
+                lovense vibrate 3
+                lovense rotate 2
+                lovense suction 2
+                lovense thrust 2
 
                 image v12rosso = Movie(play="images/v12/Scene 23/v12rosso.webm", loop=True, image="images/v12/Scene 23/v12rossoStart.webp", start_image="images/v12/Scene 23/v12rossoStart.webp") # Rose standing oral
                 image v12rossof = Movie(play="images/v12/Scene 23/v12rossof.webm", loop=True, image="images/v12/Scene 23/v12rossoStart.webp", start_image="images/v12/Scene 23/v12rossoStart.webp") # Rose standing oral spedup
@@ -247,10 +247,10 @@ label v12_ms_rose_sex: #can only get here if mc.frat == Frat.WOLVES
 
                 ro "Ahhh... Haha, definitely getting an A for this. Mmm..."
 
-                $ lovense.vibrate(6)
-                $ lovense.rotate(4)
-                $ lovense.suction(4)
-                $ lovense.thrust(4)
+                lovense vibrate 6
+                lovense rotate 4
+                lovense suction 4
+                lovense thrust 4
 
                 scene v12rosso2 # Ignore as animation
                 with dissolve
@@ -283,10 +283,10 @@ label v12_ms_rose_sex: #can only get here if mc.frat == Frat.WOLVES
 
                 ro "Someone's eager..."
 
-                $ lovense.vibrate(8)
-                $ lovense.rotate(6)
-                $ lovense.suction(6)
-                $ lovense.thrust(6)
+                lovense vibrate 8
+                lovense rotate 6
+                lovense suction 6
+                lovense thrust 6
 
                 scene v12rossmf # Ignore as animation
                 with dissolve
@@ -306,10 +306,10 @@ label v12_ms_rose_sex: #can only get here if mc.frat == Frat.WOLVES
 
                 u "*Grunts*"
 
-                $ lovense.vibrate(10)
-                $ lovense.rotate(8)
-                $ lovense.suction(8)
-                $ lovense.thrust(8)
+                lovense vibrate 10
+                lovense rotate 8
+                lovense suction 8
+                lovense thrust 8
 
                 scene v12msr20 # TPP. Show MC moving Ms. Rose to the back of the white sofa
                 with dissolve
@@ -345,10 +345,10 @@ label v12_ms_rose_sex: #can only get here if mc.frat == Frat.WOLVES
 
                 u "Ah ah ah... We're not anywhere near being finished."
 
-                $ lovense.vibrate(13)
-                $ lovense.rotate(10)
-                $ lovense.suction(10)
-                $ lovense.thrust(10)
+                lovense vibrate 13
+                lovense rotate 10
+                lovense suction 10
+                lovense thrust 10
 
                 scene v12rossd2f # Ignore as animation
                 with dissolve
@@ -398,10 +398,10 @@ label v12_ms_rose_sex: #can only get here if mc.frat == Frat.WOLVES
 
                 ro "Do it inside, [name]! Fill me up... Please... I..."
 
-                $ lovense.vibrate(15)
-                $ lovense.rotate(12)
-                $ lovense.suction(12)
-                $ lovense.thrust(12)
+                lovense vibrate 15
+                lovense rotate 12
+                lovense suction 12
+                lovense thrust 12
 
                 scene v12msr23 # TPP. Show MC cumming in Ms. Rose
                 with vpunch
@@ -431,10 +431,10 @@ label v12_ms_rose_sex: #can only get here if mc.frat == Frat.WOLVES
 
                 u "I don't know where all that energy came from..."
 
-                $ lovense.vibrate(16)
-                $ lovense.rotate(13)
-                $ lovense.suction(13)
-                $ lovense.thrust(13)
+                lovense vibrate 16
+                lovense rotate 13
+                lovense suction 13
+                lovense thrust 13
 
                 scene v12msr27a # FPP. Same as v12msr27, Ms. Rose smiling, mouth open
                 with dissolve
@@ -487,7 +487,7 @@ label v12_ms_rose_sex: #can only get here if mc.frat == Frat.WOLVES
                 play music music.ck1.v12.Track_Scene_23_3 fadein 2
 
                 label v12s23_nsfwSkipLabel1:
-                $ lovense.stop()
+                lovense stop
                 
                 scene black
                 with dissolve

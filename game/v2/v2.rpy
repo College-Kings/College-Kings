@@ -2852,7 +2852,7 @@ label try2new:
 
     u "(Aubrey is changing right next to me...)"
 
-    $ lovense.vibrate(2)
+    lovense vibrate(2)
 
     menu:
         "Peek":
@@ -2880,9 +2880,9 @@ label try2new:
 
                         u "(I should stop peeking now, or I risk getting caught.)"
 
-                        $ lovense.stop()
+                        lovense stop()
                     else:
-                        $ lovense.stop()
+                        lovense stop()
 
                         jump caughtb
 
@@ -3011,7 +3011,7 @@ label try3new:
 
     u "(I can hear Aubrey sliding her clothes off...)"
     
-    $ lovense.vibrate(2)
+    lovense vibrate(2)
 
     menu:
         "Peek":
@@ -3037,11 +3037,11 @@ label try3new:
 
                         u "(Still... I better stop peeking now, it's too risky.)"
 
-                        $ lovense.stop()
+                        lovense stop()
                     
                     else:
                 
-                    $ lovense.stop()                        jump caughtc
+                    lovense stop()                        jump caughtc
 
                 "Stop peeking":
                     pass
@@ -3063,7 +3063,7 @@ label v2_nsfwSkipLabel3:
     au "This costume is literally just historic lingerie."
 
     au "I'm not showing you this, haha."
-    $ lovense.vibrate(2)
+    lovense vibrate(2)
 
     menu:
         "Oh come on":
@@ -3111,12 +3111,12 @@ label v2_nsfwSkipLabel3:
 
             au "So let's get out of these outfits."
 
-            $ lovense.stop()
+            lovense stop()
 
             call screen costumes
 
         "Fine":
-            $ lovense.stop()
+            lovense stop()
 
             $ reputation.add_point(RepComponent.BOYFRIEND)
 
@@ -3255,7 +3255,7 @@ label try4new:
 
     u "(I wonder what Penelope is changing in to.)"
 
-    $ lovense.vibrate(2)
+    lovense vibrate 2
     menu:
         "Peek":
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
@@ -3282,10 +3282,10 @@ label try4new:
 
                         u "(I should stop peeking now, or I'll get caught.)"
                         
-                        $ lovense.stop()
+                        lovense stop
 
                     else:
-                        $ lovense.stop()
+                        lovense stop
                         jump caughtd
 
                 "Stop peeking":
@@ -3303,7 +3303,7 @@ label v2_nsfwSkipLabel4:
     scene s179far # showing u and pen in costume
     with Fade (1,0,1)
 
-    $ lovense.vibrate(2)
+    lovense vibrate 2
 
     pause 0.5
 
@@ -3349,7 +3349,7 @@ label v2_nsfwSkipLabel4:
 
             pe "Yeah, it's kinda cool."
 
-            $ lovense.stop()
+            lovense stop
             if v2_outfits < 3:
                 pe "Should we try some other outfits?"
 
@@ -3357,7 +3357,7 @@ label v2_nsfwSkipLabel4:
                 pe "Are you ready to buy an outfit?"
 
         "I guess it's nice":
-            $ lovense.stop()
+            lovense stop
 
             $ reputation.add_point(RepComponent.BRO)
 
@@ -3411,7 +3411,7 @@ label try5new:
 
     u "(Penelope is changing right next to me...)"
 
-    $ lovense.vibrate(2)
+    lovense vibrate 2
 
     menu:
         "Peek":
@@ -3436,15 +3436,15 @@ label try5new:
                         u "(Damn, what I wouldn't give to touch her ass right now.)"
 
                         u "(I should stop peeking now, or I risk getting caught.)"
-                        $ lovense.stop()
+                        lovense stop
 
                     else:
-                        $ lovense.stop()
+                        lovense stop
 
                         jump caughte
 
                 "Stop peeking":
-                    $ lovense.stop()
+                    lovense stop
                     
                     pass
 

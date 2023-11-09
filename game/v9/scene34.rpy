@@ -98,10 +98,10 @@ label v9_ri_sex:
 
     stop music fadeout 3
 
-    $ lovense.vibrate(2)
-    $ lovense.rotate(1)
-    $ lovense.suction(1)
-    $ lovense.thrust(1)
+    lovense vibrate 2
+    lovense rotate 1
+    lovense suction 1
+    lovense thrust 1
 
     scene v9ris7a # TPP. Same camera as v9ris7a, MC now wearing no pants, Riley looking at MC seductively.
     with dissolve
@@ -128,10 +128,10 @@ label v9_ri_sex:
     show screen v9s34_rileySexOverlay
 
 label v9s34_rileyBlowjob:
-    $ lovense.vibrate(3)
-    $ lovense.rotate(2)
-    $ lovense.suction(2)
-    $ lovense.thrust(2)
+    lovense vibrate 3
+    lovense rotate 2
+    lovense suction 2
+    lovense thrust 2
 
     scene v9rilbj # Pls ignore as animation
     with dissolve
@@ -176,10 +176,10 @@ label v9s34_rileyBlowjob:
     pause 1
 
 label v9s34_rileyLicking:
-    $ lovense.vibrate(5)
-    $ lovense.rotate(3)
-    $ lovense.suction(3)
-    $ lovense.thrust(3)
+    lovense vibrate 5
+    lovense rotate 3
+    lovense suction 3
+    lovense thrust 3
 
     scene v9rilli # Pls ignore as animation
     with dissolve
@@ -245,11 +245,11 @@ label v9s34_rileyLicking:
     pause 0.75
 
 label v9s34_rileyMissionary:
-    $ lovense.vibrate(7)
-    $ lovense.rotate(4)
-    $ lovense.suction(4)
-    $ lovense.thrust(4)
-    $ lovense.pump(2)
+    lovense vibrate 7
+    lovense rotate 4
+    lovense suction 4
+    lovense thrust 4
+    lovense pump 2
 
     scene v9rilmi # Pls ignore as animation
     with dissolve
@@ -301,11 +301,11 @@ label v9s34_rileyCowgirl:
     ri "Ahhh, fuck! Yes! I'm gonna cum."
     " "
 
-    $ lovense.vibrate(9)
-    $ lovense.rotate(5)
-    $ lovense.suction(5)
-    $ lovense.thrust(5)
-    $ lovense.pump(3)
+    lovense vibrate 9
+    lovense rotate 5
+    lovense suction 5
+    lovense thrust 5
+    lovense pump 3
 
     scene v9rilcgf # Pls ignore as animation
     with dissolve
@@ -341,11 +341,11 @@ label v9s34_rileyCowgirl:
     u "Riley that feels so good."
     " "
 
-    $ lovense.vibrate(10)
-    $ lovense.rotate(6)
-    $ lovense.suction(6)
-    $ lovense.thrust(6)
-    $ lovense.pump(3)
+    lovense vibrate 10
+    lovense rotate 6
+    lovense suction 6
+    lovense thrust 6
+    lovense pump 3
 
     scene v9rilhjf # Pls ignore as animation
     with dissolve
@@ -382,7 +382,7 @@ label v9s34_rileyCowgirl:
     pause 1
 
     stop music fadeout 3
-    $ lovense.stop()
+    lovense stop
     
     scene v9ris23 # FPP. Show Riley, now lying next to MC, smile, mouth closed.
     with dissolve

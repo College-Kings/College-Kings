@@ -493,7 +493,7 @@ label v11s28a_galleryScene:
     if is_censored:
         call screen censored_popup("v11s28a_nsfwSkipLabel1")
 
-    $ lovense.vibrate(2)
+    lovense vibrate 2
 
     scene v11sas13d # FPP. Same as v11sas13c, Samantha with no bra, seductive look, mouth closed
     with dissolve
@@ -848,7 +848,7 @@ label v11s28a_galleryScene:
 
     u "(I should've known she'd do me like that. It was nice to learn a bit about her though.)"
 
-    $ lovense.stop()
+    lovense stop
 
     scene v11sas22 # TPP. Show MC grabbing his clothes
     with dissolve

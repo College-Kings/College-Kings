@@ -1032,10 +1032,10 @@ label v12_lindsey_sex:
     show screen v12s17_lindsey_sex_overlay
 
     label v12s17_lindsey_handjob:
-        $ lovense.vibrate(2)
-        $ lovense.rotate(1)
-        $ lovense.suction(1)
-        $ lovense.thrust(1)
+        lovense vibrate 2
+        lovense rotate 1
+        lovense suction 1
+        lovense thrust 1
 
         scene v12esr37c # FPP. Same as v12esr37b, MC's pants removed, Lindsey looking at MC's dick, Lindsey slight smile, mouth open
         with dissolve
@@ -1077,10 +1077,10 @@ label v12_lindsey_sex:
         li "*Chuckles* I'm not sure how much time we have left but... I'll give you all that I can, okay?"
 
     label v12s17_lindsey_blowjob:
-        $ lovense.vibrate(3)
-        $ lovense.rotate(2)
-        $ lovense.suction(2)
-        $ lovense.thrust(2)
+        lovense vibrate 3
+        lovense rotate 2
+        lovense suction 2
+        lovense thrust 2
 
         image v12linbj = Movie(play="images/v12/Scene 17/v12linbj.webm", loop=True, image="images/v12/Scene 17/v12linbjStart.webp", start_image="images/v12/Scene 17/v12linbjStart.webp") # Lindsey blowjob
         image v12linbjf = Movie(play="images/v12/Scene 17/v12linbjf.webm", loop=True, image="images/v12/Scene 17/v12linbjStart.webp", start_image="images/v12/Scene 17/v12linbjStart.webp") # Lindsey blowjob spedup
@@ -1136,10 +1136,10 @@ label v12_lindsey_sex:
 
         pause
     label v12s17_lindsey_sixty_nine:
-        $ lovense.vibrate(4)
-        $ lovense.rotate(3)
-        $ lovense.suction(3)
-        $ lovense.thrust(3)
+        lovense vibrate 4
+        lovense rotate 3
+        lovense suction 3
+        lovense thrust 3
 
         image v12linsn = Movie(play="images/v12/Scene 17/v12linsn.webm", loop=True, image="images/v12/Scene 17/v12linsnStart.webp", start_image="images/v12/Scene 17/v12linsnStart.webp") # Lindsey handjob
         image v12linsnf = Movie(play="images/v12/Scene 17/v12linsnf.webm", loop=True, image="images/v12/Scene 17/v12linsnStart.webp", start_image="images/v12/Scene 17/v12linsnStart.webp") # Lindsey handjob spedup
@@ -1172,10 +1172,10 @@ label v12_lindsey_sex:
 
         u "Tell me Linds... I'm cumming! Tell me how good it fucking feels."
 
-        $ lovense.vibrate(6)
-        $ lovense.rotate(5)
-        $ lovense.suction(5)
-        $ lovense.thrust(5)
+        lovense vibrate 6
+        lovense rotate 5
+        lovense suction 5
+        lovense thrust 5
 
         scene v12esr40 # TPP. Show MC cumming in lindsey's mouth in 69 position
         with vpunch
@@ -1197,10 +1197,10 @@ label v12_lindsey_sex:
 
         li "Oh, [name], FUCK!"
 
-        $ lovense.vibrate(8)
-        $ lovense.rotate(6)
-        $ lovense.suction(6)
-        $ lovense.thrust(6)
+        lovense vibrate 8
+        lovense rotate 6
+        lovense suction 6
+        lovense thrust 6
 
         scene v12esr41b # TPP. Same as v12esr41a, Lindsey holding the back of MC's head, she is moaning, mouth open
         with dissolve
@@ -1230,7 +1230,7 @@ label v12_lindsey_sex:
     pause
     
     label v12s17_nsfwSkipLabel1:
-    $ lovense.stop()
+    lovense stop
     
     scene v12esr44 # FPP. MC and Lindsey standing in front of each other, Lindsey smiling, mouth closed, looking at MC
     with dissolve

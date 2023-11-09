@@ -14,10 +14,10 @@ label v8_ri_start:
     if is_censored:
         call screen censored_popup("v8s3_nsfwSkipLabel1")
 
-    $ lovense.vibrate(3)
-    $ lovense.rotate(1)
-    $ lovense.suction(1)
-    $ lovense.thrust(1)
+    lovense vibrate 3
+    lovense rotate 1
+    lovense suction 1
+    lovense thrust 1
 
     scene v8s26 # FPP (MC still sitting on the bed). Riley stands up and is looking into the camera and talking seductively, about to take her dress off. She should be visible at least down until her knees
     with dissolve
@@ -73,10 +73,10 @@ label v8_ri_start:
     with fade
     pause 1
 
-    $ lovense.vibrate(4)
-    $ lovense.rotate(2)
-    $ lovense.suction(2)
-    $ lovense.thrust(1)
+    lovense vibrate 4
+    lovense rotate 2
+    lovense suction 2
+    lovense thrust 1
 
     scene v8s28 # TPP. MC crouched and has his hands on her panties, about to remove it. Close up shot so that MC's face, hands and Riley's bottom is visible
     with dissolve
@@ -110,10 +110,10 @@ label v8_ri_start:
     # with dissolve
     # ri "...ride you so badly right now!"
 
-    $ lovense.vibrate(6)
-    $ lovense.rotate(2)
-    $ lovense.suction(2)
-    $ lovense.thrust(2)
+    lovense vibrate 6
+    lovense rotate 2
+    lovense suction 2
+    lovense thrust 2
 
     scene v8s29 # TPP. MC is in the bed, turned towards Riley who is still standing and hand gesturing her to come. Camera behind Riley's ass and focus on it (DOF blur on MC). Note: s29 will be leading up to the posture in Animation 1 in three frames. Check at the end for reference (just posture, camera angle is different)
     with fade
@@ -148,10 +148,10 @@ label v8s3_rileyCowgirl:
     u "(She's so wet, she slipped right through.)"
     pause
 
-    $ lovense.vibrate(7)
-    $ lovense.rotate(3)
-    $ lovense.suction(3)
-    $ lovense.thrust(2)
+    lovense vibrate 7
+    lovense rotate 3
+    lovense suction 3
+    lovense thrust 2
 
     scene v8ricg2
     with dissolve
@@ -206,10 +206,10 @@ label v8s3_rileyLiftDoggy:
     ri "Fuck yes! Just like that!"
     pause
 
-    $ lovense.vibrate(8)
-    $ lovense.rotate(3)
-    $ lovense.suction(3)
-    $ lovense.thrust(2)
+    lovense vibrate 8
+    lovense rotate 3
+    lovense suction 3
+    lovense thrust 2
 
     scene v8ridg3f
     with dissolve
@@ -219,10 +219,10 @@ label v8s3_rileyLiftDoggy:
 
 label v8s3_rileyDoggy:
 
-    $ lovense.vibrate(10)
-    $ lovense.rotate(4)
-    $ lovense.suction(4)
-    $ lovense.thrust(3)
+    lovense vibrate 10
+    lovense rotate 4
+    lovense suction 4
+    lovense thrust 3
 
     scene v8ridg2
     with dissolve
@@ -234,10 +234,10 @@ label v8s3_rileyDoggy:
     ri "...fucking good!!!"
     u "It's about to feel better now."
 
-    $ lovense.vibrate(14)
-    $ lovense.rotate(5)
-    $ lovense.suction(5)
-    $ lovense.thrust(4)
+    lovense vibrate 14
+    lovense rotate 5
+    lovense suction 5
+    lovense thrust 4
 
     scene v8ridg2f
     with dissolve
@@ -276,7 +276,7 @@ label v8s3_rileyDoggy:
 
     $ renpy.end_replay()
 
-    $ lovense.stop()
+    lovense stop
     
     play music music.ck1.mlove fadein 2
 

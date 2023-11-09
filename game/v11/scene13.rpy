@@ -62,10 +62,10 @@ label v11_aubrey_plane_sex:
 
                 u "Oh wow, someone's moving fast."
 
-                $ lovense.vibrate(1)
-                $ lovense.rotate(1)
-                $ lovense.suction(1)
-                $ lovense.thrust(1)
+                lovense vibrate 1
+                lovense rotate 1
+                lovense suction 1
+                lovense thrust 1
 
                 scene v11aub8a # FPP. Same as v11aub8, but Aubrey mouth open
                 with dissolve
@@ -82,10 +82,10 @@ label v11_aubrey_plane_sex:
                 
                 pause 1.25
 
-                $ lovense.vibrate(4)
-                $ lovense.rotate(3)
-                $ lovense.suction(3)
-                $ lovense.thrust(3)
+                lovense vibrate 4
+                lovense rotate 3
+                lovense suction 3
+                lovense thrust 3
 
                 scene v11aub11 # FPP. MC is now sitting on the toilet, pants off, Aubrey is kneeled between his legs, looking at his dick
                 with dissolve
@@ -110,10 +110,10 @@ label v11_aubrey_plane_sex:
                 image v11auban = Movie(play="images/v11/Scene 13/v11auanTPP1.webm", loop=True, image="images/v11/Scene 13/v11auanTPP1Start.webp", start_image="images/v11/Scene 13/v11auanTPP1Start.webp") # Aubrey and MC anal doggy
                 image v11aubanf = Movie(play="images/v11/Scene 13/v11auanTPP1f.webm", loop=True, image="images/v11/Scene 13/v11auanTPP1Start.webp", start_image="images/v11/Scene 13/v11auanTPP1Start.webp") # Aubrey and MC anal doggy sped up
 
-                $ lovense.vibrate(7)
-                $ lovense.rotate(5)
-                $ lovense.suction(5)
-                $ lovense.thrust(5)
+                lovense vibrate 7
+                lovense rotate 5
+                lovense suction 5
+                lovense thrust 5
 
                 scene v11aubbj # Ignore as animation
                 with dissolve
@@ -139,10 +139,10 @@ label v11_aubrey_plane_sex:
 
                 u "Mhmmmm..."
 
-                $ lovense.vibrate(8)
-                $ lovense.rotate(6)
-                $ lovense.suction(6)
-                $ lovense.thrust(6)
+                lovense vibrate 8
+                lovense rotate 6
+                lovense suction 6
+                lovense thrust 6 
 
                 scene v11aub12 # FPP. Aubrey stops giving MC head, she is looking up at him, smiling, mouth closed
                 with dissolve
@@ -175,10 +175,10 @@ label v11_aubrey_plane_sex:
 
                 au "Damn [name]!"
 
-                $ lovense.vibrate(10)
-                $ lovense.rotate(7)
-                $ lovense.suction(7)
-                $ lovense.thrust(7)
+                lovense vibrate 10
+                lovense rotate 7
+                lovense suction 7
+                lovense thrust 7
 
                 scene v11aubof # Ignore as animation
                 with dissolve
@@ -206,10 +206,10 @@ label v11_aubrey_plane_sex:
 
                 pause 1.25
 
-                $ lovense.vibrate(11)
-                $ lovense.rotate(8)
-                $ lovense.suction(8)
-                $ lovense.thrust(8)
+                lovense vibrate 11
+                lovense rotate 8
+                lovense suction 8
+                lovense thrust 8
 
                 scene v11aub15a # TPP. Same cam as v11aub15, MC grabbing Aubrey's thigh and raising her leg, MC is also grabbing her waist, both smiling, mouths closed
                 with dissolve
@@ -245,10 +245,10 @@ label v11_aubrey_plane_sex:
 
                 la "Uhm... Are you okay in there?"
 
-                $ lovense.vibrate(13)
-                $ lovense.rotate(9)
-                $ lovense.suction(9)
-                $ lovense.thrust(9)
+                lovense vibrate 13
+                lovense rotate 9
+                lovense suction 9
+                lovense thrust 9
 
                 scene v11aubll2f
                 with dissolve
@@ -266,10 +266,10 @@ label v11_aubrey_plane_sex:
 
                 pause 1
                 
-                $ lovense.vibrate(14)
-                $ lovense.rotate(10)
-                $ lovense.suction(10)
-                $ lovense.thrust(10)
+                lovense vibrate 14
+                lovense rotate 10
+                lovense suction 10
+                lovense thrust 10
 
                 scene v11auban
                 with dissolve
@@ -303,7 +303,7 @@ label v11_aubrey_plane_sex:
 
                 play sound sound.car_door_open
 
-                $ lovense.stop()
+                lovense stop
                 
                 pause 0.75
                 stop music fadeout 3

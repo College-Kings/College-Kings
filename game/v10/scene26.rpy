@@ -406,19 +406,19 @@ label v10_amber_skatepark:
 
                 stop music fadeout 3
                 play music music.ck1.v10.Track_Scene_26_2 fadein 2
-                $ lovense.vibrate(2)
-                $ lovense.rotate(1)
-                $ lovense.suction(1)
-                $ lovense.thrust(1)
+                lovense vibrate 2
+                lovense rotate 1
+                lovense suction 1
+                lovense thrust 1
 
                 image v10ambbj = Movie(play="images/v10/Scene 26/v10ambbj.webm", loop=True, image="images/v10/Scene 26/v10ambbjStart.webp", start_image="images/v10/Scene 26/v10ambbjStart.webp") # TPP Amber sucking MC's cock on the top of the quater pipe
                 image v10ambbjf = Movie(play="images/v10/Scene 26/v10ambbjf.webm", loop=True, image="images/v10/Scene 26/v10ambbjStart.webp", start_image="images/v10/Scene 26/v10ambbjStart.webp")
 
                 label v10s26_amberBlowjob:
-                    $ lovense.vibrate(4)
-                    $ lovense.rotate(2)
-                    $ lovense.suction(2)
-                    $ lovense.thrust(2)
+                    lovense vibrate 4
+                    lovense rotate 2
+                    lovense suction 2
+                    lovense thrust 2
 
                     scene v10ambbj # ignore
                     with dissolve
@@ -450,19 +450,19 @@ label v10_amber_skatepark:
 
                 am "Fuck me."
 
-                $ lovense.vibrate(5)
-                $ lovense.rotate(3)
-                $ lovense.suction(3)
-                $ lovense.thrust(3)
+                lovense vibrate 5
+                lovense rotate 3
+                lovense suction 3
+                lovense thrust 3
 
                 image v10ambrf = Movie(play="images/v10/Scene 26/v10ambrf.webm", loop=True, image="images/v10/Scene 26/v10ambrfStart.webp", start_image="images/v10/Scene 26/v10ambrfStart.webp") # TPP laying behind amber fucking her from behind.
                 image v10ambrff = Movie(play="images/v10/Scene 26/v10ambrff.webm", loop=True, image="images/v10/Scene 26/v10ambrfStart.webp", start_image="images/v10/Scene 26/v10ambrfStart.webp")
 
                 label v10s26_amberLying:
-                    $ lovense.vibrate(6)
-                    $ lovense.rotate(4)
-                    $ lovense.suction(4)
-                    $ lovense.thrust(4)
+                    lovense vibrate 6
+                    lovense rotate 4
+                    lovense suction 4
+                    lovense thrust 4
 
                     scene v10ambrf
                     with dissolve
@@ -483,10 +483,10 @@ label v10_amber_skatepark:
                 image v10ambdaf = Movie(play="images/v10/Scene 26/v10ambdaf.webm", loop=True, image="images/v10/Scene 26/v10ambdaStart.webp", start_image="images/v10/Scene 26/v10ambdaStart.webp")
 
                 label v10s26_amberDoggy:
-                    $ lovense.vibrate(8)
-                    $ lovense.rotate(5)
-                    $ lovense.suction(5)
-                    $ lovense.thrust(5)
+                    lovense vibrate 8
+                    lovense rotate 5
+                    lovense suction 5
+                    lovense thrust 5
 
                     scene v10ambda
                     with dissolve
@@ -506,10 +506,10 @@ label v10_amber_skatepark:
                 image v10ambcgf = Movie(play="images/v10/Scene 26/v10ambcgf.webm", loop=True, image="images/v10/Scene 26/v10ambcgStart.webp", start_image="images/v10/Scene 26/v10ambcgStart.webp")
 
                 label v10s26_amberCowgirl:
-                    $ lovense.vibrate(10)
-                    $ lovense.rotate(7)
-                    $ lovense.suction(7)
-                    $ lovense.thrust(7)
+                    lovense vibrate 10
+                    lovense rotate 7
+                    lovense suction 7
+                    lovense thrust 7
 
                     scene v10ambcg
                     with dissolve
@@ -526,10 +526,10 @@ label v10_amber_skatepark:
 
                     am "Oh shit I'm gonna cum!"
 
-                    $ lovense.vibrate(12)
-                    $ lovense.rotate(9)
-                    $ lovense.suction(9)
-                    $ lovense.thrust(9)
+                    lovense vibrate 12
+                    lovense rotate 9
+                    lovense suction 9
+                    lovense thrust 9
 
                     scene v10ambcgf
                     with dissolve
@@ -548,7 +548,7 @@ label v10_amber_skatepark:
 
                 am "That was exciting!"
 
-                $ lovense.stop()
+                lovense stop
 
                 scene v10sasp12a # FPP. Same camera as v10sasp12. Show Amber nude, smiling, mouth closed.
                 with dissolve
@@ -758,10 +758,10 @@ label v10_amber_skatepark:
                             if is_censored:
                                 call screen censored_popup("v10s26_nsfwSkipLabel1")
                             
-                            $ lovense.vibrate(2)
-                            $ lovense.rotate(1)
-                            $ lovense.suction(1)
-                            $ lovense.thrust(1)
+                            lovense vibrate 2
+                            lovense rotate 1
+                            lovense suction 1
+                            lovense thrust 1
 
                             scene v10ambbj
                             with dissolve
@@ -789,10 +789,10 @@ label v10_amber_skatepark:
 
                             pause 0.75
 
-                            $ lovense.vibrate(4)
-                            $ lovense.rotate(2)
-                            $ lovense.suction(2)
-                            $ lovense.thrust(2)
+                            lovense vibrate 4
+                            lovense rotate 2
+                            lovense suction 2
+                            lovense thrust 2
 
                             scene v10sasp8a
                             with dissolve
@@ -824,10 +824,10 @@ label v10_amber_skatepark:
 
                             am "YESSSS!"
 
-                            $ lovense.vibrate(6)
-                            $ lovense.rotate(3)
-                            $ lovense.suction(3)
-                            $ lovense.thrust(3)
+                            lovense vibrate 6
+                            lovense rotate 3
+                            lovense suction 3
+                            lovense thrust 3
 
                             scene v10ambdaf
                             with dissolve
@@ -874,10 +874,10 @@ label v10_amber_skatepark:
 
                             u "I'm glad you hit me up."
 
-                            $ lovense.vibrate(8)
-                            $ lovense.rotate(5)
-                            $ lovense.suction(5)
-                            $ lovense.thrust(5)
+                            lovense vibrate 8
+                            lovense rotate 5
+                            lovense suction 5
+                            lovense thrust 5
 
                             scene v10sasp12
                             with dissolve
@@ -894,7 +894,7 @@ label v10_amber_skatepark:
 
                             pause 0.75
 
-                            $ lovense.stop()
+                            lovense stop
 
                             scene v10sasp5a
                             with fade
