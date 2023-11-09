@@ -3041,7 +3041,8 @@ label try3new:
                     
                     else:
                 
-                    lovense stop                      jump caughtc
+                        lovense stop
+                        jump caughtc
 
                 "Stop peeking":
                     pass
