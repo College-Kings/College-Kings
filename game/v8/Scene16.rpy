@@ -46,7 +46,7 @@ label mc_wolves_sun_aft:
     $ kiwii_post = KiwiiService.new_post(riley, "phone/kiwii/Posts/v8/riclothpost1.webp", _("Nothing like a good day of shopping"), number_likes=330) # Picture of Riley outside a clothing store.
     
     $ v8s16_kiwii_reply3 = KiwiiBuilder(kiwii_post)
-    $ v8s16_kiwii_reply3.new_comment(riley, _("You will have to find out some times :)"), number_likes=renpy.random.randint(15, 35))
+    $ v8s16_kiwii_reply3.new_comment(riley, _("You will have to find out sometimes :)"), number_likes=renpy.random.randint(15, 35))
 
     $ v8s16_kiwii_reply4 = KiwiiBuilder(kiwii_post)
     $ v8s16_kiwii_reply4.new_comment(riley, _("Not this time, but maybe next time you can join me ;)"), number_likes=renpy.random.randint(15, 35))
@@ -104,7 +104,7 @@ label mc_apes_sun_aft:
     $ kiwii_post = KiwiiService.new_post(riley, "phone/kiwii/Posts/v8/riclothpost1.webp", _("Nothing like a good day of shopping"), number_likes=330) # Picture of Riley outside a clothing store.
     
     $ v8s16_kiwii_reply3 = KiwiiBuilder(kiwii_post)
-    $ v8s16_kiwii_reply3.new_comment(riley, _("You will have to find out some times :)"), number_likes=renpy.random.randint(15, 35))
+    $ v8s16_kiwii_reply3.new_comment(riley, _("You will have to find out sometimes :)"), number_likes=renpy.random.randint(15, 35))
 
     $ v8s16_kiwii_reply4 = KiwiiBuilder(kiwii_post)
     $ v8s16_kiwii_reply4.new_comment(riley, _("Not this time, but maybe next time you can join me ;)"), number_likes=renpy.random.randint(15, 35))

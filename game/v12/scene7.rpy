@@ -1098,7 +1098,7 @@ label v12s7_chloe1:
     scene v12ferch1
     with dissolve
 
-    u "Being poor is nothing more than a setting stone to being rich, because no one chooses to be poor. That's why I donate half of all my fight proceeds to those in need."
+    u "Being poor is nothing more than a stepping stone to being rich, because no one chooses to be poor. That's why I donate half of all my fight proceeds to those in need."
 
     scene v12ferch1a
     with dissolve
