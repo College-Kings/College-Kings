@@ -8,6 +8,12 @@
 
 All notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.3.21] - 2023-11-16
+
+### Fixed
+
+- Fixed various typos (Thanks to @MenehuneP99green)
+
 ## [1.3.20] - 2023-11-04
 
 ### Fixed
