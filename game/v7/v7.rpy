@@ -9381,7 +9381,7 @@ label signs_with_autumn:
 
             u "Thanks."
 
-        "Same something direct":
+        "Say something direct":
             $ reputation.add_point(RepComponent.BOYFRIEND)
 
             u "Men against misogyny."
