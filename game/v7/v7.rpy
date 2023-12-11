@@ -16151,6 +16151,13 @@ label fr4chloe2:
 
                     jump fr4penelopedatechloe
 
+                elif hcGirl == "emily":
+                    u "(I should probably get back to Emily.)"
+
+                    scene sfr4em20
+                    with fade
+                    jump fr4emilydate
+
             "Or we could just leave":
                 $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
