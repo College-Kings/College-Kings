@@ -1,5 +1,4 @@
 from renpy import config
-import renpy.exports as renpy
 
 """renpy
 python early:
