@@ -8,6 +8,16 @@
 
 All notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.3.22] - 2024-01-28
+
+### Added
+
+- Added gallery unlock button to steam edition
+
+### Changed
+
+- Updated dependencies and submodules
+
 ## [1.3.21] - 2023-11-16
 
 ### Fixed
