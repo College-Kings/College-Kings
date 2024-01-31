@@ -28,3 +28,6 @@
 [submodule "game/lovense"]
 	path = game/lovense
 	url = https://github.com/College-Kings/college-kings-lovense.git
+[submodule "renpy"]
+	path = renpy
+	url = https://github.com/KiloOscarSix/renpy-stubs.git
