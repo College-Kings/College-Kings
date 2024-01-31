@@ -7,7 +7,7 @@ label v13s29:
     play music music.ck1.v13.Track_Scene_29_1 fadein 2
 
     if not v13_invite_samantha:
-        scene v13s29_1: # TPP. Show Amber and MC on sidewalk in front of The AmsterDamn, all smiling, all mouths closed (Weed Bus)
+        scene v13s29_1 # TPP. Show Amber and MC on sidewalk in front of The AmsterDamn, all smiling, all mouths closed (Weed Bus)
         with dissolve
 
         pause 0.75
@@ -53,7 +53,7 @@ label v13s29:
         #pause 0.75
 
     else:
-        scene v13s29_1a: # TPP. Show Samantha, Amber and MC on sidewalk in front of The AmsterDamn, all smiling, all mouths closed (AmsterDamn = Weed Bus)
+        scene v13s29_1a # TPP. Show Samantha, Amber and MC on sidewalk in front of The AmsterDamn, all smiling, all mouths closed (AmsterDamn = Weed Bus)
         with dissolve
 
         pause 0.75
