@@ -14,7 +14,7 @@ python early:
 """
 
 
-def parse_grant(lexer: Lexer) -> PyExpr:
+def parse_grant(lexer: "Lexer") -> "PyExpr":
     achievement: Optional[PyExpr] = lexer.simple_expression()
     if not achievement:
         renpy.error("Expected achievement")  # type: ignore
@@ -22,7 +22,7 @@ def parse_grant(lexer: Lexer) -> PyExpr:
     return achievement  # type: ignore
 
 
-def lint_grant(achievement_expr: PyExpr) -> None:
+def lint_grant(achievement_expr: "PyExpr") -> None:
     try:
         achievement_: Achievement = eval(achievement_expr)
     except Exception:
@@ -33,7 +33,7 @@ def lint_grant(achievement_expr: PyExpr) -> None:
         renpy.error(f"Missing achievement image: {achievement_.id}")  # type: ignore
 
 
-def execute_grant(achievement_expr: PyExpr) -> None:
+def execute_grant(achievement_expr: "PyExpr") -> None:
     if path_builder or _in_replay:
         return
 
@@ -44,7 +44,7 @@ def execute_grant(achievement_expr: PyExpr) -> None:
     achievement.sync()  # type: ignore
 
 
-def execute_init_grant(achievement_expr: PyExpr) -> None:
+def execute_init_grant(achievement_expr: "PyExpr") -> None:
     achievement_: Achievement = eval(achievement_expr)
 
     Achievement.all_achievements[achievement_.id] = achievement_
@@ -54,7 +54,7 @@ def execute_init_grant(achievement_expr: PyExpr) -> None:
     achievement.sync()  # type: ignore
 
 
-def translation_strings(achievement_expr: PyExpr) -> list[str]:
+def translation_strings(achievement_expr: "PyExpr") -> list[str]:
     _achievement: Achievement = eval(achievement_expr)
     return [_achievement.id, _achievement.description]
 
