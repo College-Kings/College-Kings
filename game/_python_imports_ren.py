@@ -4,7 +4,6 @@
 python early:
 """
 
-from __future__ import annotations
 import datetime
 import enum
 import math
