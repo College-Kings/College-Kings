@@ -16,4 +16,13 @@ import uuid
 from abc import ABC, abstractmethod
 from dataclasses import dataclass, field
 from enum import Enum, IntEnum, Flag
-from typing import Any, Callable, Iterable, Optional, Union, ClassVar, Protocol
+from typing import (
+    Any,
+    Callable,
+    Iterable,
+    Optional,
+    Union,
+    ClassVar,
+    Protocol,
+    runtime_checkable,
+)
