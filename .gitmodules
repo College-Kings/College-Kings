@@ -31,3 +31,6 @@
 [submodule "renpy"]
 	path = renpy
 	url = https://github.com/KiloOscarSix/renpy-stubs.git
+[submodule "game/items"]
+	path = game/items
+	url = https://github.com/College-Kings/college-kings-items.git
