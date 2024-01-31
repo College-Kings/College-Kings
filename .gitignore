@@ -1,18 +1,17 @@
 .idea/
-.vscode/
+**/.vscode/**
 lib/
-renpy/
 
 **/.DS_Store
 
 **/__pycache__/
+**/.mypy_cache/
 
 game/bugTesting/_bugTesting.txt
 game/cache/
 game/saves/
 game/lovense_qr_code.jpg
 game/script_version.txt
-game/version.txt
 
 CollegeKings.py
 CollegeKings.sh
@@ -22,16 +21,19 @@ log.txt
 Stored Script.txt
 traceback.txt
 project.json
+steam_appid.txt
 game_log.txt
 
 screenshot*
 
+*.bak
 *.bat
 *.docx
+*.exe
+*.keystore
 *.rpa
 *.rpyc
 *.zip
-*.exe
-*.bak
 
 !old-game/**
+!.vscode/extensions.json
