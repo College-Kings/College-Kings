@@ -24,5 +24,6 @@ from typing import (
     Union,
     ClassVar,
     Protocol,
+    Sequence,
     runtime_checkable,
 )
