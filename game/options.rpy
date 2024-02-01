@@ -102,12 +102,6 @@ define config.end_game_transition = None
 define config.window = "auto"
 
 
-## Transitions used to show and hide the dialogue window
-
-define config.window_show_transition = Dissolve(.2)
-define config.window_hide_transition = Dissolve(.2)
-
-
 ## Preference defaults #########################################################
 
 ## Controls the default text speed. The default, 0, is infinite, while any other
