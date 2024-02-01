@@ -13,18 +13,6 @@ label after_load:
 
         npcs = (aaron, adam, amber, anon, aryssa, aubrey, autumn, beth, buyer, caleb, cameron, candy, charli, chloe, chris, dean, elijah, emily, emmy, evelyn, grayson, imre, iris, jenny, josh, julia, kai, kim, kourtney, lauren, lews_official, lindsey, mason, mr_lee, ms_rose, naomi, nora, parker, penelope, polly, riley, ryan, samantha, satin, sebastian, tom, trainer, wolf)
 
-        mc.profile_pictures = CharacterService.get_profile_pictures("mc")
-
-        lews_official.name = "Lews Official"
-        ms_rose.name = "Ms Rose"
-        mr_lee.name = "Mr Lee"
-
-        for npc in npcs:
-            npc.profile_pictures = CharacterService.get_profile_pictures(npc.name.lower())
-
-            try: npc.pending_text_messages
-            except AttributeError: npc.pending_text_messages = []
-
         if _version[:2] <= (1, 3) or _version > (2, 0, 0):
             try:
                 mc.inventory = mc.inventory.items
@@ -199,13 +187,6 @@ label after_load:
         ## RELATIONSHIP APP
         relationship_girls = [relationship_girl for relationship_girl in relationship_girls if hasattr(relationship_girl, "name")]
 
-        # Items
-        honey.insensitive_image = "images/v13/Scene 35/sex_shop/honey_insensitive.webp"
-        butt_plug.insensitive_image = "images/v13/Scene 35/sex_shop/butt_plug_insensitive.webp"
-        spankers.insensitive_image = "images/v13/Scene 35/sex_shop/spankers_insensitive.webp"
-        cuffs.insensitive_image = "images/v13/Scene 35/sex_shop/cuffs_insensitive.webp"
-        feather.insensitive_image = "images/v13/Scene 35/sex_shop/feather_insensitive.webp"
-
         # Variables
         try: 
             real_life_mode = realmode
@@ -294,25 +275,6 @@ label after_load:
             if v15_emily_sext: sceneList.add("v15_emily")
             del v15_emily_sext
         except NameError: pass
-
-
-        # v12 Renpy Fixes:
-        chloe.name = "Chloe"
-        amber.name = "Amber"
-        penelope.name = "Penelope"
-        riley.name = "Riley"
-        lindsey.name = "Lindsey"
-        lauren.name = "Lauren"
-        samantha.name = "Samantha"
-        emily.name = "Emily"
-        nora.name = "Nora"
-        aubrey.name = "Aubrey"
-        ryan.name = "Ryan"
-        imre.name = "Imre"
-        chris.name = "Chris"
-        charli.name = "Charli"
-        cameron.name = "Cameron"
-        josh.name = "Josh"
 
         try: v7_emily_bowling
         except NameError: v7_emily_bowling = False
