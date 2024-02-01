@@ -1,4 +1,4 @@
-# type: ignore
+# pyright: reportUnusedImport=false
 
 """renpy
 python early:
