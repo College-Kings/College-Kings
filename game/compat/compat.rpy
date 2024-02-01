@@ -20,9 +20,6 @@ init 999 python:
     class CustomCharacter(NonPlayableCharacter):
         pass
 
-    class MainCharacter(PlayableCharacter):
-        pass
-
     class Teacher(NonPlayableCharacter):
         pass
 
