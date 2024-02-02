@@ -1,4 +1,6 @@
 label after_load:
+    stop music
+
     python:
         if isinstance(_version, str):
             _verison = _version.split(' ')[0]
@@ -6,8 +8,6 @@ label after_load:
             if _verison[-1].endswith("s"):
                 _verison[-1] = _verison[-1][:-1]
             _version = tuple(int(i) for i in _verison)
-
-        npcs = (aaron, adam, amber, anon, aryssa, aubrey, autumn, beth, buyer, caleb, cameron, candy, charli, chloe, chris, dean, elijah, emily, emmy, evelyn, grayson, imre, iris, jenny, josh, julia, kai, kim, kourtney, lauren, lews_official, lindsey, mason, mr_lee, ms_rose, naomi, nora, parker, penelope, polly, riley, ryan, samantha, satin, sebastian, tom, trainer, wolf)
 
         kiwii_post_map = {
             "images/phone/kiwii/Posts/v11/v11_autumn_kiwii.webp": "ck1_v11_autumn_post",
@@ -38,6 +38,58 @@ label after_load:
             "images/phone/kiwii/Posts/v8/red_square.webp": "ck1_v8_red_square",
         }
 
+        npc_map = {
+            "Aaron": Aaron,
+            "Adam": Adam,
+            "Amber": Amber,
+            "Anon": Anon,
+            "Aryssa": Aryssa,
+            "Aubrey": Aubrey,
+            "Autumn": Autumn,
+            "Beth": Beth,
+            "Buyer": Buyer,
+            "Caleb": Caleb,
+            "Cameron": Cameron,
+            "Candy": Candy,            
+            "Charli": Charlie,
+            "Chloe": Chloe,
+            "Chris": Chris,
+            "Dean": Dean,
+            "Elijah": Elijah,
+            "Emily": Emily,
+            "Emmy": Emmy,
+            "Evelyn": Evelyn,
+            "Grayson": Grayson,
+            "Imre": Imre,
+            "Iris": Iris,
+            "Jenny": Jenny,
+            "Josh": Josh,
+            "Julia": Julia,
+            "Kai": Kai,
+            "Kim": Kim,
+            "Kourtney": Kourtney,
+            "Lauren": Lauren,
+            "Lews Official": LewsOfficial,
+            "Lindsey": Lindsey,
+            "Mason": Mason,
+            "Mr Lee": MrLee,
+            "Ms Rose": MsRose,
+            "Naomi": Naomi,
+            "Nora": Nora,
+            "Parker": Parker,
+            "Penelope": Penelope,
+            "Polly": Polly,
+            "Riley": Riley,
+            "Ryan": Ryan,
+            "Samantha": Samantha,
+            "Satin": Satin,
+            "Sebastian": Sebastian,
+            "SVC Housing Officer": SVCHousingOfficer,
+            "Tom": Tom,
+            "Trainer": Trainer,
+            "Wolf": Wolf,
+        }
+
         if _version[:2] <= (1, 3) or _version > (2, 0, 0):
             try:
                 mc.inventory = mc.inventory.items
@@ -64,31 +116,6 @@ label after_load:
                 if evelyn._relationship == Relationship.LIKES:
                     v6_evelyn_successful_date = True
             except AttributeError: pass
-
-            for npc in npcs:
-                try: npc.pending_text_messages
-                except AttributeError: npc.pending_text_messages = []
-                try: npc.text_messages
-                except AttributeError: npc.text_messages = []
-
-                try: npc.pending_simplr_messages
-                except AttributeError: npc.pending_simplr_messages = []
-                try: npc.simplr_messages
-                except AttributeError: npc.simplr_messages = []
-
-                try: npc.relationships
-                except AttributeError: npc.relationships = {}
-
-                try:
-                    if npc._relationship == Relationship.MAD:
-                        CharacterService.set_mood(npc, Moods.MAD)
-                        CharacterService.set_relationship(npc, Relationship.FRIEND)
-                except AttributeError: pass
-
-                try:
-                    CharacterService.set_relationship(npc, npc._relationship)
-                    del npc._relationship
-                except AttributeError: pass
             #endregion NonPlayableCharacters
             
             #region PlayableCharacter
@@ -158,29 +185,41 @@ label after_load:
                 del kiwii_posts
             #endregion Kiwii
         
-        if _version[:2] <= (1, 4):
+        if _version < (1, 4, 0):
             for post in kiwii.posts:
                 if post.image in kiwii_post_map:
                     post.image = kiwii_post_map[post.image]
+
+            old_mc_vars = mc.__dict__.copy()
+            mc = MainCharacter()
+            mc.relationships = old_mc_vars["relationships"]
+            mc.money = old_mc_vars["money"]
+            mc.inventory = list(set(old_mc_vars["inventory"]))
+            mc.frat = old_mc_vars["frat"]
+
+            for npc_name in npc_map:
+                old_npc = getattr(store, npc_name.lower().replace(' ', '_'))
+                old_npc_vars = old_npc.__dict__.copy()
+                npc = npc_map[npc_name]()
+                setattr(store, npc_name.lower().replace(' ', '_'), npc)
+                try:
+                    npc.relationships = old_npc_vars["relationships"]
+                except KeyError:
+                    npc.relationships[mc] = old_npc_vars.get("_relationship", Relationship.FRIEND) 
+                npc.mood = old_npc.mood
+                npc.pending_text_messages = old_npc_vars.get("pending_text_messages", [])
+                npc.text_messages = old_npc_vars.get("text_messages", [])
+                npc.pending_simplr_messages = old_npc_vars.get("pending_simplr_messages", [])
+                npc.simplr_messages = old_npc_vars.get("simplr_messages", [])
+                npc.points = old_npc_vars.get("points", 0)
 
         try:
             label_history = list(label_history)
         except NameError:
             label_history = []
 
-
         # Disable skip transitions
         preferences.transitions = 2
-
-        ## PLAYABLE CHARACTERS
-        if not isinstance(mc, PlayableCharacter):
-            mc = PlayableCharacter()
-
-        try: mc.username
-        except AttributeError: mc.username = name
-
-        try: mc.relationships
-        except AttributeError: mc.relationships = {}
 
         try:
             bro = reputation.components[Reputations.BRO]

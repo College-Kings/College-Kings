@@ -1,4 +1,7 @@
 init 999 python:
+    class Inventory:
+        pass
+
     class Checklist:
         pass
 
