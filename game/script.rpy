@@ -1,5 +1,5 @@
 define config.enable_steam = True
-define config_debug = True # Automatic Testing
+define config_debug = False # Automatic Testing
 
 define config.version = "1.4.0"
 
