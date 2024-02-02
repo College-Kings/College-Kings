@@ -89,103 +89,11 @@ label after_load:
             "Trainer": Trainer,
             "Wolf": Wolf,
         }
-
-        if _version[:2] <= (1, 3) or _version > (2, 0, 0):
-            try:
-                mc.inventory = mc.inventory.items
-            except AttributeError: pass
-
-            if not isinstance(kiwii, Kiwii):
-                kiwii = Kiwii()
-
-            if isinstance(mc.relationships, set):
-                mc.relationships = {}
-
-            #region NonPlayableCharacters
-            try:
-                if elijah._relationship == Relationship.MAKEFUN:
-                    CharacterService.set_mood(elijah, Moods.HURT)
-            except AttributeError: pass
-
-            try:
-                if evelyn._relationship == Relationship.MOVE:
-                    v2_made_a_move_on_evelyn = True
-            except AttributeError: pass
-
-            try:
-                if evelyn._relationship == Relationship.LIKES:
-                    v6_evelyn_successful_date = True
-            except AttributeError: pass
-            #endregion NonPlayableCharacters
-            
-            #region PlayableCharacter
-            try: mc.frat
-            except AttributeError: mc.frat = None
-
-            try:
-                if joinwolves:
-                    mc.frat = Frat.WOLVES
-                else:
-                    mc.frat = Frat.APES
-                del joinwolves
-            except NameError: pass
-
-            try: mc.profile_picture
-            except AttributeError: mc.profile_picture = mc.profile_pictures[0]
-
-            if not mc.profile_picture:
-                mc.profile_picture = mc.profile_pictures[0]
-            #endregion PlayableCharacter
-
-            #region Messenger
-            old_messenger_contacts = messenger.contacts.copy()
-            messenger.contacts = []
-            for contact in old_messenger_contacts:
-                npc = contact
-                if not isinstance(npc, NonPlayableCharacter):
-                    try:
-                        npc = CharacterService.get_user(contact.user)
-                    except AttributeError:
-                        npc = CharacterService.get_user(contact)
-                
-                try: npc.text_messages
-                except AttributeError:
-                    npc.text_messages = []
-                
-                if hasattr(contact, "sent_messages"):
-                    for message in contact.sent_messages:
-                        if hasattr(message, "message"):
-                            message.content = message.message
-                        elif hasattr(message, "image"):
-                            message.content = message.image
-                        
-                        if isinstance(message, Reply):
-                            npc.text_messages.append(Reply(message.content))
-                        else:
-                            npc.text_messages.append(Message(npc, message.content))
-                messenger.contacts.append(npc)
-            #endregion Messenger
-
-            #region Kiwii
-            try: kiwii.posts
-            except AttributeError: kiwii.posts = []
-
-            if hasattr(store, "kiwii_posts"):
-                for post in kiwii_posts:
-                    kiwii_post = KiwiiService.new_post(CharacterService.get_user(post.user), post.image, post.message, post.number_likes, post.mentions)
-                    kiwii_post.liked = post.liked
-
-                    for comment in post.sent_comments:
-                        if hasattr(comment, "content"):
-                            comment.message = comment.content
-                        elif hasattr(comment, "text"):
-                            comment.message = comment.text
-
-                        KiwiiService.new_comment(kiwii_post, CharacterService.get_user(comment.user), comment.message, comment.number_likes, comment.mentions)
-                del kiwii_posts
-            #endregion Kiwii
         
         if _version < (1, 4, 0):
+            if isinstance(kiwii, Application):
+                kiwii = Kiwii()
+
             for post in kiwii.posts:
                 if post.image in kiwii_post_map:
                     post.image = kiwii_post_map[post.image]
@@ -194,7 +102,13 @@ label after_load:
             mc = MainCharacter()
             mc.relationships = old_mc_vars["relationships"]
             mc.money = old_mc_vars["money"]
-            mc.inventory = list(set(old_mc_vars["inventory"]))
+
+            old_inventory = old_mc_vars["inventory"]
+            if isinstance(old_inventory, Inventory):
+                mc.inventory = list(set(old_inventory.items))
+            else:
+                mc.inventory = list(set(old_inventory))
+
             mc.frat = old_mc_vars["frat"]
 
             for npc_name in npc_map:
@@ -202,273 +116,22 @@ label after_load:
                 old_npc_vars = old_npc.__dict__.copy()
                 npc = npc_map[npc_name]()
                 setattr(store, npc_name.lower().replace(' ', '_'), npc)
+
                 try:
                     npc.relationships = old_npc_vars["relationships"]
                 except KeyError:
                     npc.relationships[mc] = old_npc_vars.get("_relationship", Relationship.FRIEND) 
+
                 npc.mood = old_npc.mood
                 npc.pending_text_messages = old_npc_vars.get("pending_text_messages", [])
                 npc.text_messages = old_npc_vars.get("text_messages", [])
                 npc.pending_simplr_messages = old_npc_vars.get("pending_simplr_messages", [])
                 npc.simplr_messages = old_npc_vars.get("simplr_messages", [])
                 npc.points = old_npc_vars.get("points", 0)
+                
+                if npc.text_messages:
+                    messenger.contacts.append(npc)
 
-        try:
-            label_history = list(label_history)
-        except NameError:
-            label_history = []
-
-        # Disable skip transitions
-        preferences.transitions = 2
-
-        try:
-            bro = reputation.components[Reputations.BRO]
-            boyfriend = reputation.components[Reputations.BOYFRIEND]
-            troublemaker = reputation.components[Reputations.TROUBLEMAKER]
-        except KeyError: pass
-
-        ## KCT
-        try:
-            reputation.components = {
-                RepComponent.BRO: bro,
-                RepComponent.BOYFRIEND: boyfriend,
-                RepComponent.TROUBLEMAKER: troublemaker,
-            }
-        except NameError: pass
-
-        try:
-            locked_reputation = locked_kct
-        except NameError: pass
-
-        ### APPLICATIONS
-        messenger.name = "Messenger"
-
-        try:
-            messenger.contacts = contacts.copy()
-            del contacts
-        except NameError: pass
-
-        ## RELATIONSHIP APP
-        relationship_girls = [relationship_girl for relationship_girl in relationship_girls if hasattr(relationship_girl, "name")]
-
-        # Variables
-        try: 
-            real_life_mode = realmode
-            del realmode
-        except NameError:
-            pass
-
-        try:
-            if chlorers: chloers = True
-        except NameError: pass
-
-        try:
-            if v13s40fromgame: sceneList.add("v13_chloe")
-        except NameError: pass
-        try:
-            if v14s51_closet: freeroam12.add("closet")
-        except NameError: pass
-        try:
-            if v14s51_purse: freeroam12.add("purse")
-        except NameError: pass
-        try:
-            if v14s51_take_cash_large: freeroam12stolen.add("cash_large")
-        except NameError: pass
-        try:
-            if v14s51_take_cash_small: freeroam12stolen.add("cash_small")
-        except NameError: pass
-        try:
-            if v14s51_take_diary: freeroam12stolen.add("diary")
-        except NameError: pass
-        
-        try:
-            if rileysex: sceneList.add("v7_riley")
-        except NameError: pass
-        try:
-            if v8_riley_lewd_ending: sceneList.add("v8_riley")
-        except NameError: pass
-        try:
-            if v11_aubrey_sex: sceneList.add("v11_aubrey")
-        except NameError: pass
-        try:
-            if v11_fucked_candy: sceneList.add("v11_candy")
-        except NameError: pass
-        try:
-            if v11_msrose_scene: sceneList.add("v11_rose")
-        except NameError: pass
-        try:
-            if v12_lauren_sex: sceneList.add("v12_lauren")
-        except NameError: pass
-        try:
-            if v12_lindsey_sex: sceneList.add("v12_lindsey")
-        except NameError: pass
-        try:
-            if v12_nora_sex: sceneList.add("v12_nora")
-        except NameError: pass
-        try:
-            if v12_msrose_sex: sceneList.add("v12_rose")
-        except NameError: pass
-        try:
-            if v13_emilysex: sceneList.add("v13_emily")
-        except NameError: pass
-        try:
-            if v13_emmysex: sceneList.add("v13_emmy")
-        except NameError: pass
-        try:
-            if v13_FirstThreesome: sceneList.add("v14_threesome")
-        except NameError: pass
-        try:
-            if v14_amber_sex: sceneList.add("v14_amber")
-        except NameError: pass
-        try:
-            if v14_jenny_sex: sceneList.add("v14_jenny")
-        except NameError: pass
-        try:
-            if v14_samantha_sex: sceneList.add("v14_samantha")
-        except NameError: pass
-        try:
-            if v7_seencrowning: freeroam4.add("crowning")
-        except NameError: pass
-        try:
-            if v13s37_frnora: freeroam11.add("nora")
-        except NameError: pass
-        try:
-            if v9_sex_with_riley: sceneList.add("v9_riley")
-        except NameError: pass
-        try:
-            if v15_emily_sext: sceneList.add("v15_emily")
-            del v15_emily_sext
-        except NameError: pass
-
-        try: v7_emily_bowling
-        except NameError: v7_emily_bowling = False
-        try: v8_dodged_pipe
-        except NameError: v8_dodged_pipe = False
-        try: v11_underground_rose
-        except NameError: v11_underground_rose = False
-        try: v12_told_chloe
-        except NameError: v12_told_chloe = False
-        try: v12_fight_win
-        except NameError: v12_fight_win = False
-        try: v12_chase_robber
-        except NameError: v12_chase_robber = False
-        try: v12s7_seenList
-        except NameError: v12s7_seenList = []
-        try: v12s7_endtalkList
-        except NameError: v12s7_endtalkList = []
-        try: v12s7_killList
-        except NameError: v12s7_killList = set()
-        try: v11_lindsey_run
-        except NameError: v11_lindsey_run = False
-        try: v12_help_chris
-        except NameError: v12_help_chris = 0
-        try: v12s7_riley_moved
-        except NameError: v12s7_riley_moved = False
-        try: v12s7_lindsey_moved
-        except NameError: v12s7_lindsey_moved = False
-        try: v12s7_aubrey_moved
-        except NameError: v12s7_aubrey_moved = False
-        try: v12_lauren_points
-        except NameError: v12_lauren_points = 0
-        try: v12s32_Aubrey_Boost
-        except NameError: v12s32_Aubrey_Boost = False
-        try: v12_murder_count
-        except NameError: v12_murder_count = 0
-        try: v12s7_victims
-        except NameError: v12s7_victims = 12
-        try: v12s23a_sam
-        except NameError: v12s23a_sam = False
-        try: v12_nora_points
-        except NameError: v12_nora_points = 0
-        try: v12s24_emmymatch
-        except NameError: v12s24_emmymatch = False
-        try: v12_sauna_sneak1
-        except NameError: v12_sauna_sneak1 = False
-        try: v12_girl
-        except NameError: v12_girl = "na"
-
-        #v11 variables
-        try: v11_pen_goes_europe
-        except NameError: v11_pen_goes_europe = False
-        try: v11s1_courtpoints
-        except NameError: v11s1_courtpoints = 0
-        try: v11_invite_sam_europe
-        except NameError: v11_invite_sam_europe = False
-        try: v11_josh_nightclub
-        except NameError: v11_josh_nightclub = False
-        try: v11_tease_amber
-        except NameError: v11_tease_amber = 0
-        try: v11_manhunt_winner
-        except NameError: v11_manhunt_winner = "Ryan"
-        try: v11_riley_roomate
-        except NameError: v11_riley_roomate = False
-        try: v11s25_beer
-        except NameError: v11s25_beer = True
-        try: v11_solo_question
-        except NameError: v11_solo_question = False
-        try: v11_kiss_nora
-        except NameError: v11_kiss_nora = False
-        try: v11_told_aubrey
-        except NameError: v11_told_aubrey = False
-        try: v11_lindsey_slogan
-        except NameError: v11_lindsey_slogan = 0 
-        try: v11_linds_inv_imre
-        except NameError: v11_linds_inv_imre = False 
-        try: v11_overtake_points
-        except NameError: v11_overtake_points = 0
-        try: v11_hp_points
-        except NameError: v11_hp_points = 0
-        try: emily_europe
-        except NameError: emily_europe = False
-        try: v11_check_on_nora
-        except NameError: v11_check_on_nora = False
-
-        # v13 Errors
-        try: v13_penelope_concert
-        except NameError: v13_penelope_concert = False
-        try: v13_aubrey_concert
-        except NameError: v13_aubrey_concert = False
-        try: chloeSus
-        except NameError: chloeSus = 0
-        try: v13_cuddle_lauren
-        except NameError: v13_cuddle_lauren = False
-        try: v13s16_lauren_points
-        except NameError: v13s16_lauren_points = 0
-        try: v13_smoke_weed
-        except NameError: v13_smoke_weed = False
-        try: v13_lauren_smoke
-        except NameError: v13_lauren_smoke = False
-        try: v13_charli_exposed
-        except NameError: v13_charli_exposed = False
-        try: v13_invite_samantha
-        except NameError: v13_invite_samantha = False
-        try: v13_after_party
-        except NameError: v13_after_party = False
-        try: v13s48_get_aubrey_chocolate
-        except NameError: v13s48_get_aubrey_chocolate = False
-        try: v13s48_ryan_double_date
-        except NameError: v13s48_ryan_double_date = False
-        try: v13s48_canoeing_as_date
-        except NameError: v13s48_canoeing_as_date = False
-        try: v13_help_chloe
-        except NameError: v13_help_chloe = False
-        try: v13_imre_disloyal
-        except NameError: v13_imre_disloyal = False
-        try: v13_perfume
-        except NameError: v13_perfume = False
-        try: v13_hugged_aubrey
-        except NameError: v13_hugged_aubrey = False
-        try: v13s9_go_to_concert
-        except NameError: v13s9_go_to_concert = False
-        try: v13s41_lindsey_points
-        except NameError: v13s41_lindsey_points = 0
-        try: v13s20_bleach_suitcase
-        except NameError: v13s20_bleach_suitcase = False
-        try: v13_aubrey_vote
-        except NameError: v13_aubrey_vote = "na"
-        try: v14_ryan_satin
-        except NameError: v14_ryan_satin = False
-    
     hide screen reply
     hide screen simplr_reply
 
