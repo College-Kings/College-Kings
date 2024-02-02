@@ -1,8 +1,4 @@
 label after_load:
-    stop music
-    stop ambience
-    stop sound
-
     python:
         if isinstance(_version, str):
             _verison = _version.split(' ')[0]
@@ -12,6 +8,35 @@ label after_load:
             _version = tuple(int(i) for i in _verison)
 
         npcs = (aaron, adam, amber, anon, aryssa, aubrey, autumn, beth, buyer, caleb, cameron, candy, charli, chloe, chris, dean, elijah, emily, emmy, evelyn, grayson, imre, iris, jenny, josh, julia, kai, kim, kourtney, lauren, lews_official, lindsey, mason, mr_lee, ms_rose, naomi, nora, parker, penelope, polly, riley, ryan, samantha, satin, sebastian, tom, trainer, wolf)
+
+        kiwii_post_map = {
+            "images/phone/kiwii/Posts/v11/v11_autumn_kiwii.webp": "ck1_v11_autumn_post",
+            "images/phone/kiwii/Posts/v11/sebnaked.webp": "ck1_v11_sebastian_naked",
+            "images/phone/kiwii/Posts/v11/v11_chloemcselfie.webp": "ck1_v11_chloe_mc_selfie",
+            "images/phone/kiwii/Posts/v11/v11_caleb.webp": "ck1_v11_caleb_post",
+            "images/phone/kiwii/Posts/v11/v11_imrebunny.webp": "ck1_v11_imre_bunny",
+            "images/phone/kiwii/Posts/v11/v11s38_amber_kiwii.webp": "ck1_v11_amber_post",
+            "images/phone/kiwii/Posts/v12/impost1.webp": "ck1_v12_imre_post",
+            "images/phone/kiwii/Posts/v12/lindsey_aubrey_pjs.webp": "ck1_v12_lindsey_aubrey_pjs",
+            "images/phone/kiwii/Posts/v12/imre_raccoon.webp": "ck1_v12_imre_raccoon",
+            "images/phone/kiwii/Posts/v12/roastedape.webp": "ck1_v12_roasted_ape",
+            "images/phone/kiwii/Posts/v12/v12s32_15g.webp": "ck1_v12_lews_post_1",
+            "images/phone/kiwii/Posts/v12/v12s32_24.webp": "ck1_v12_lews_post_2",
+            "images/phone/kiwii/Posts/v12/v12s32_33.webp": "ck1_v12_lews_post_3",
+            "images/phone/kiwii/Posts/v13/aubrey_beach.webp": "ck1_v13_aubrey_beach",
+            "images/phone/kiwii/Posts/v7/clpost1.webp": "ck1_v7_chloe_post",
+            "images/phone/kiwii/Posts/v7/lapost1.webp": "ck1_v7_lauren_post",
+            "images/phone/kiwii/Posts/v7/aupost1.webp": "ck1_v7_aubrey_post",
+            "images/phone/kiwii/Posts/v7/empost1.webp": "ck1_v7_emily_post",
+            "images/phone/kiwii/Posts/v7/chpost1.webp": "ck1_v7_chris_post",
+            "images/phone/kiwii/Posts/v8/grpost1.webp": "ck1_v8_grayson_post",
+            "images/phone/kiwii/Posts/v8/chlaubpost1.webp": "ck1_v8_chloe_aubrey_post",
+            "images/phone/kiwii/Posts/v8/laurosepost1.webp": "ck1_v8_lauren_rose_post",
+            "images/phone/kiwii/Posts/v8/riclothpost1.webp": "ck1_v8_riley_post",
+            "images/phone/kiwii/Posts/v8/mcpost1w.webp": "ck1_v8_mc_wolves_post",
+            "images/phone/kiwii/Posts/v8/mcpost1a.webp": "ck1_v8_mc_apes_post",
+            "images/phone/kiwii/Posts/v8/red_square.webp": "ck1_v8_red_square",
+        }
 
         if _version[:2] <= (1, 3) or _version > (2, 0, 0):
             try:
@@ -133,10 +158,10 @@ label after_load:
                 del kiwii_posts
             #endregion Kiwii
         
-        if _version < (1, 3, 11):
+        if _version[:2] <= (1, 4):
             for post in kiwii.posts:
-                if post.image == "images/phone/kiwii/posts/v11/v11s38_amber_kiwii.webp":
-                    post.image = "images/phone/kiwii/Posts/v11/v11s38_amber_kiwii.webp"
+                if post.image in kiwii_post_map:
+                    post.image = kiwii_post_map[post.image]
 
         try:
             label_history = list(label_history)

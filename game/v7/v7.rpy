@@ -1301,7 +1301,7 @@ label conyourdorm:
 
     pause 0.5
 
-    $ kiwii_post = KiwiiService.new_post(chloe, "phone/kiwii/Posts/v7/clpost1.webp", _("I'll always follow the sun :)"), number_likes=186)
+    $ kiwii_post = KiwiiService.new_post(chloe, "ck1_v7_chloe_post", _("I'll always follow the sun :)"), number_likes=186)
 
     $ v7_kiwii_reply1 = KiwiiBuilder(kiwii_post)
     $ v7_kiwii_reply1.new_comment(cameron, _("Lol, pussy"), number_likes=renpy.random.randint(1, 10), mentions=[mc])
@@ -1324,7 +1324,7 @@ label conyourdorm:
         KiwiiReply(_("I got some sun in my room..."), number_likes=renpy.random.randint(20, 30), next_comment=v7_kiwii_reply2)
     )
 
-    $ kiwii_post = KiwiiService.new_post(lauren, "phone/kiwii/Posts/v7/lapost1.webp", _("Wishing I could go back..."), number_likes=39)
+    $ kiwii_post = KiwiiService.new_post(lauren, "ck1_v7_lauren_post", _("Wishing I could go back..."), number_likes=39)
 
     $ v7_kiwii_reply3 = KiwiiBuilder(kiwii_post)
     $ v7_kiwii_reply3.add_function(reputation.add_point, RepComponent.BOYFRIEND)
@@ -1339,7 +1339,7 @@ label conyourdorm:
         KiwiiReply(_("Winter vacations are the best"), number_likes=renpy.random.randint(10, 17), next_comment=v7_kiwii_reply4)
     )
 
-    $ kiwii_post = KiwiiService.new_post(aubrey, "phone/kiwii/Posts/v7/aupost1.webp", _("Finally changed my profile pic!"), number_likes=133)
+    $ kiwii_post = KiwiiService.new_post(aubrey, "ck1_v7_aubrey_post", _("Finally changed my profile pic!"), number_likes=133)
 
     $ v7_kiwii_reply5 = KiwiiBuilder(kiwii_post)
     $ v7_kiwii_reply5.add_function(reputation.add_point, RepComponent.BRO)
@@ -1352,7 +1352,7 @@ label conyourdorm:
     $ KiwiiService.add_reply(kiwii_post, _("I'd destroy you in Air hockey!"), number_likes=renpy.random.randint(15, 25), mentions=[aubrey], next_comment=v7_kiwii_reply5)
 
     if CharacterService.is_fwb(emily): # first riley texts, then once you've opened the app you get 2 more messages.
-        $ v7_kiwii_post4 = KiwiiService.new_post(emily, "phone/kiwii/Posts/v7/empost1.webp", _("Finally fate brings us back together. What doesn't kill us only makes us stronger."), number_likes=82)
+        $ v7_kiwii_post4 = KiwiiService.new_post(emily, "ck1_v7_emily_post", _("Finally fate brings us back together. What doesn't kill us only makes us stronger."), number_likes=82)
 
         $ v7_kiwii_reply6 = KiwiiBuilder(kiwii_post)
         $ v7_kiwii_reply6.add_function(reputation.add_point, RepComponent.TROUBLEMAKER)
@@ -5462,7 +5462,7 @@ label after_pledges:
     with Fade(1,0,1)
 
     if mc.frat == Frat.WOLVES:
-        $ kiwii_post = KiwiiService.new_post(chris, "phone/kiwii/Posts/v7/chpost1.webp", _("One of us!"), number_likes=133, mentions=[mc])
+        $ kiwii_post = KiwiiService.new_post(chris, "ck1_v7_chris_post", _("One of us!"), number_likes=133, mentions=[mc])
         $ KiwiiService.new_comment(kiwii_post, cameron, _("Losers"), 3)
         $ KiwiiService.new_comment(kiwii_post, imre, _("Hell yeah bro!"), 14)
         $ KiwiiService.new_comment(kiwii_post, aubrey, _("Woohoo!"), 35)

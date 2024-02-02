@@ -4,7 +4,7 @@
 # Time: Afternoon
 label v11_amber_bar:
 
-    $ kiwii_post = KiwiiService.new_post(amber, "phone/kiwii/Posts/v11/v11s38_amber_kiwii.webp", _("Living the London life"), number_likes=312) # Amber sitting at the bar with a drink in her hand, smiling at the camera, hers legs are crossed, sexy pose
+    $ kiwii_post = KiwiiService.new_post(amber, "ck1_v11_amber_post", _("Living the London life"), number_likes=312) # Amber sitting at the bar with a drink in her hand, smiling at the camera, hers legs are crossed, sexy pose
 
     $ v11s38_kiwii_reply1 = KiwiiBuilder(kiwii_post)
     $ v11s38_kiwii_reply1.add_function(reputation.add_point, RepComponent.BOYFRIEND)

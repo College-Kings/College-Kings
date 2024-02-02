@@ -330,7 +330,7 @@ label v12_slumber_party:
 
     au "*Laughs* Let's have fun, guys."
 
-    $ kiwii_post = KiwiiService.new_post(lindsey, "phone/kiwii/Posts/v12/lindsey_aubrey_pjs.webp", _("Couldn't have asked for a better night... <3"), number_likes=571) # Lindsey Selfie with Aubrey in pajamas
+    $ kiwii_post = KiwiiService.new_post(lindsey, "ck1_v12_lindsey_aubrey_pjs", _("Couldn't have asked for a better night... <3"), number_likes=571) # Lindsey Selfie with Aubrey in pajamas
     $ KiwiiService.new_comment(kiwii_post, aubrey, _("You're so welcome boo... Girls night again ASAP!"), number_likes=renpy.random.randint(250,350), mentions=[lindsey])
     $ KiwiiService.new_comment(kiwii_post, imre, _("Even more beautiful in person, ladies..."), number_likes=renpy.random.randint(150,300), mentions=[lindsey])
     $ KiwiiService.new_comment(kiwii_post, chloe, _("Yesss! We have to do this again."), number_likes=renpy.random.randint(250,400), mentions=[aubrey])
@@ -1702,10 +1702,10 @@ label v12s18_bet: # END OF FREE ROAM
     imre "*Drunk* I'm just scrolling through my Kiwii and-"
 
     if v11_overtake_points >= 2: # MC wins the race
-        $ v12s18_kiwii_post2 = KiwiiService.new_post(amber, "phone/kiwii/Posts/v12/amber_bet.webp", _("A bet is a bet..."), number_likes=5) # Amber nude pic
+        $ v12s18_kiwii_post2 = KiwiiService.new_post(amber, "ck1_v12_amber_bet", _("A bet is a bet..."), number_likes=5) # Amber nude pic
 
     else: # MC loses the race
-        $ v12s18_kiwii_post3 = KiwiiService.new_post(amber, "phone/kiwii/Posts/v12/mc_bet.webp", _("A bet is a bet..."), number_likes=5) # MC nude pic
+        $ v12s18_kiwii_post3 = KiwiiService.new_post(amber, "ck1_v12_mc_bet", _("A bet is a bet..."), number_likes=5) # MC nude pic
     
     scene v12slpbet7b # TPP. Same as v12slpbet7, Imre surprised, mouth open
     with dissolve

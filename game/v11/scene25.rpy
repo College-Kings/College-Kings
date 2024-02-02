@@ -4,11 +4,11 @@
 # Time: Evening
 
 label v11_hotel_bar:
-    $ kiwii_post = KiwiiService.new_post(sebastian, "phone/kiwii/Posts/v11/v11_caleb.webp", _("Who's laughing now!"), number_likes=374)
+    $ kiwii_post = KiwiiService.new_post(sebastian, "ck1_v11_caleb_post", _("Who's laughing now!"), number_likes=374)
     $ KiwiiService.new_comment(kiwii_post, chris, _("Someone's gonna be upset in the morning!"), number_likes=renpy.random.randint(100, 200))
     $ KiwiiService.new_comment(kiwii_post, nora, _("Sebastian that's cruel!!"), number_likes=renpy.random.randint(100, 200))
 
-    $ kiwii_post = KiwiiService.new_post(imre, "phone/kiwii/Posts/v11/v11_imrebunny.webp", _("Say hello to our newest Wolf recruit"), number_likes=306)
+    $ kiwii_post = KiwiiService.new_post(imre, "ck1_v11_imre_bunny", _("Say hello to our newest Wolf recruit"), number_likes=306)
     $ KiwiiService.new_comment(kiwii_post, aubrey, _("Awww cute!!"), number_likes=renpy.random.randint(100, 200))
     $ KiwiiService.new_comment(kiwii_post, nora, _("That thing stinks!"), number_likes=renpy.random.randint(100, 200))
     

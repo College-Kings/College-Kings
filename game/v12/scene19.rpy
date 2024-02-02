@@ -193,7 +193,7 @@ label v12_party_wake_up:
 
         pause 0.75
     
-    $ kiwii_post = KiwiiService.new_post(amber, "phone/kiwii/Posts/v12/imre_raccoon.webp", _("Happy Birthday, Lindsey!"), number_likes=419) # Picture of Imre with the raccoon drawing from scene 18 on his face
+    $ kiwii_post = KiwiiService.new_post(amber, "ck1_v12_imre_raccoon", _("Happy Birthday, Lindsey!"), number_likes=419) # Picture of Imre with the raccoon drawing from scene 18 on his face
 
     $ v12s19_kiwii_reply1 = KiwiiBuilder(kiwii_post)
     $ v12s19_kiwii_reply1.new_comment(amber, _("Hahahaha"), number_likes=renpy.random.randint(250,350))

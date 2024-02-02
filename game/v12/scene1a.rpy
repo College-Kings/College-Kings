@@ -522,7 +522,7 @@ label v12_chase_robber:
 
     pause 0.75
 
-    $ kiwii_post = KiwiiService.new_post(imre, "phone/kiwii/Posts/v12/impost1.webp", _("Would your man chase a robber down in the middle of the night? If not, you don't have a real man..."), number_likes=216)
+    $ kiwii_post = KiwiiService.new_post(imre, "ck1_v12_imre_post", _("Would your man chase a robber down in the middle of the night? If not, you don't have a real man..."), number_likes=216)
     $ KiwiiService.new_comment(kiwii_post, charli, _("If you want a man Imre I can take you to a few bars... All you had to do was ask."), number_likes=14)
     $ KiwiiService.new_comment(kiwii_post, ryan, _("LMAO"), number_likes=1, mentions=[imre])
 

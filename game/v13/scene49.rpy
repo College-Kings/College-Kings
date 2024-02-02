@@ -21,7 +21,7 @@ label v13s49:
 
     pause 0.75
     
-    $ kiwii_post = KiwiiService.new_post(aubrey, "phone/kiwii/Posts/v13/aubrey_beach.webp", _("Swimming up the ladder! #ScheveningenBeach"), number_likes=4218)
+    $ kiwii_post = KiwiiService.new_post(aubrey, "ck1_v13_aubrey_beach", _("Swimming up the ladder! #ScheveningenBeach"), number_likes=4218)
     $ KiwiiService.new_comment(kiwii_post, imre, _("Hot as fuck Aubrey!!"), number_likes=renpy.random.randint(1800, 3600))
     $ KiwiiService.new_comment(kiwii_post, chloe, _("This is the hottest pic I've ever seen of you!"), number_likes=renpy.random.randint(1800, 3600), mentions=[aubrey])
     $ KiwiiService.add_replies(kiwii_post,
