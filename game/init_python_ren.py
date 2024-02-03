@@ -10,6 +10,12 @@ init python:
 """
 
 
+def search_store(var_name: str) -> None:
+    for var in store.__dict__.copy():
+        if var_name in var:
+            print(var)
+
+
 def write_console(data: object) -> None:
     with open("console.txt", "w") as f:
         f.write(str(data))
