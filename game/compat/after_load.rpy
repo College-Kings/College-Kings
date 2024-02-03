@@ -25,10 +25,14 @@ label after_load:
             "images/phone/kiwii/Posts/v12/v12s32_33.webp": "ck1_v12_lews_post_3",
             "images/phone/kiwii/Posts/v13/aubrey_beach.webp": "ck1_v13_aubrey_beach",
             "images/phone/kiwii/Posts/v7/clpost1.webp": "ck1_v7_chloe_post",
+            "images/phone/kiwii/posts/v7/clpost1.webp": "ck1_v7_chloe_post",
             "images/phone/kiwii/Posts/v7/lapost1.webp": "ck1_v7_lauren_post",
+            "images/phone/kiwii/posts/v7/lapost1.webp": "ck1_v7_lauren_post",
             "images/phone/kiwii/Posts/v7/aupost1.webp": "ck1_v7_aubrey_post",
+            "images/phone/kiwii/posts/v7/aupost1.webp": "ck1_v7_aubrey_post",
             "images/phone/kiwii/Posts/v7/empost1.webp": "ck1_v7_emily_post",
             "images/phone/kiwii/Posts/v7/chpost1.webp": "ck1_v7_chris_post",
+            "images/phone/kiwii/posts/v7/chpost1.webp": "ck1_v7_chris_post",
             "images/phone/kiwii/Posts/v8/grpost1.webp": "ck1_v8_grayson_post",
             "images/phone/kiwii/Posts/v8/chlaubpost1.webp": "ck1_v8_chloe_aubrey_post",
             "images/phone/kiwii/Posts/v8/laurosepost1.webp": "ck1_v8_lauren_rose_post",
@@ -90,17 +94,37 @@ label after_load:
             "Wolf": Wolf,
         }
         
-        if _version < (1, 4, 0):
+        if _version < (1, 4, 0) or _version > (2, 0, 0):
             if isinstance(kiwii, Application):
+                old_kiwii_vars = kiwii.__dict__.copy()
                 kiwii = Kiwii()
 
-            for post in kiwii.posts:
-                if post.image in kiwii_post_map:
-                    post.image = kiwii_post_map[post.image]
+            if isinstance(kiwii, bool):
+                old_kiwii_vars = kiwiiApp.__dict__.copy()
+                kiwii = Kiwii()
+
+            if kiwii.posts:
+                for post in kiwii.posts:
+                    if post.image in kiwii_post_map:
+                        post.image = kiwii_post_map[post.image]
+
+            if isinstance(messenger, Application):
+                old_messenger_vars = messenger.__dict__.copy()
+                messenger = Messenger()
+
+            phone.applications = (
+                messenger,
+                achievement_app,
+                relationship_app,
+                kiwii,
+                reputation_app,
+                tracker,
+                calendar,
+            )
 
             old_mc_vars = mc.__dict__.copy()
             mc = MainCharacter()
-            mc.relationships = old_mc_vars["relationships"]
+            mc.relationships = old_mc_vars.get("relationships", {})
             mc.money = old_mc_vars["money"]
 
             old_inventory = old_mc_vars["inventory"]
@@ -109,10 +133,16 @@ label after_load:
             else:
                 mc.inventory = list(set(old_inventory))
 
-            mc.frat = old_mc_vars["frat"]
+            try:
+                if joinwolves:
+                    mc.frat = Frat.WOLVES
+                else:
+                    mc.frat = Frat.APES
+            except AttributeError:
+                mc.frat = old_mc_vars["frat"]
 
             for npc_name in npc_map:
-                old_npc = getattr(store, npc_name.lower().replace(' ', '_'))
+                old_npc = CharacterService.get_user(npc_name)
                 old_npc_vars = old_npc.__dict__.copy()
                 npc = npc_map[npc_name]()
                 setattr(store, npc_name.lower().replace(' ', '_'), npc)
@@ -120,7 +150,15 @@ label after_load:
                 try:
                     npc.relationships = old_npc_vars["relationships"]
                 except KeyError:
-                    npc.relationships[mc] = old_npc_vars.get("_relationship", Relationship.FRIEND) 
+                    npc.relationships[mc] = old_npc_vars.get("_relationship", Relationship.FRIEND)
+
+                if npc.relationships.setdefault(mc, Relationship.FRIEND) == Relationship.FRIEND:
+                    try:
+                        if getattr(store, f"{npc_name.lower().replace(' ', '')}rs"):
+                            npc.relationships[mc] = Relationship.FWB
+                    except AttributeError: pass
+                
+                mc.relationships[npc] = npc.relationships[mc]
 
                 npc.mood = old_npc.mood
                 npc.pending_text_messages = old_npc_vars.get("pending_text_messages", [])
@@ -128,10 +166,49 @@ label after_load:
                 npc.pending_simplr_messages = old_npc_vars.get("pending_simplr_messages", [])
                 npc.simplr_messages = old_npc_vars.get("simplr_messages", [])
                 npc.points = old_npc_vars.get("points", 0)
-                
+
+                messenger.contacts = []
                 if npc.text_messages:
                     messenger.contacts.append(npc)
 
+            for contact in old_messenger_vars.get("contacts", []):
+                npc = CharacterService.get_user(contact.name)
+                if hasattr(contact, "messages"):
+                    npc.text_messages = contact.messages
+                if hasattr(contact, "sentMessages"):
+                    npc.text_messages = contact.sentMessages
+                npc.pending_text_messages = contact.pending_messages
+
+                messenger.contacts.append(npc)
+
+            for npc in messenger.contacts:
+                npc_text_messages = npc.text_messages.copy()
+                npc.text_messages = []
+                seen = set()
+                for message in npc_text_messages:
+                    old_message_vars = message.__dict__.copy()
+                    content = old_message_vars.get("msg") or old_message_vars.get("message") or old_message_vars.get("image")
+                    if content in seen or content is None:
+                        continue
+                    seen.add(content)
+
+                    if isinstance(message, Reply):
+                        npc.text_messages.append(Reply(old_message_vars.get("content") or old_message_vars.get("message")))
+                    elif isinstance(message, ImgReply):
+                        npc.text_messages.append(Reply(old_message_vars["image"]))
+                    else:
+                        contact = old_message_vars.get("contact") or old_message_vars.get("npc")
+                        npc.text_messages.append(Message(CharacterService.get_user(contact.name), content))
+                        if old_message_vars.get("reply"):
+                            npc.text_messages.append(Reply(old_message_vars["reply"]))
+
+            if hasattr(store, "kiwiiPosts"):
+                for post in kiwiiPosts:
+                    post_image = post.__dict__.get("image") or post.__dict__.get("img")
+                    kiwii.posts.append(KiwiiPost(CharacterService.get_user(post.user), kiwii_post_map[post_image], post.message, [CharacterService.get_user(mention) for mention in post.mentions], post.numberLikes))
+                del kiwiiPosts
+
+    show screen phone_icon
     hide screen reply
     hide screen simplr_reply
 
