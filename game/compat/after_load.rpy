@@ -127,18 +127,20 @@ label after_load:
             mc.relationships = old_mc_vars.get("relationships", {})
             mc.money = old_mc_vars["money"]
 
-            old_inventory = old_mc_vars["inventory"]
-            if isinstance(old_inventory, Inventory):
-                mc.inventory = list(set(old_inventory.items))
-            else:
-                mc.inventory = list(set(old_inventory))
+            try:
+                old_inventory = old_mc_vars["inventory"]
+                if isinstance(old_inventory, Inventory):
+                    mc.inventory = list(set(old_inventory.items))
+                else:
+                    mc.inventory = list(set(old_inventory))
+            except KeyError: pass
 
             try:
                 if joinwolves:
                     mc.frat = Frat.WOLVES
                 else:
                     mc.frat = Frat.APES
-            except AttributeError:
+            except NameError:
                 mc.frat = old_mc_vars["frat"]
 
             for npc_name in npc_map:
