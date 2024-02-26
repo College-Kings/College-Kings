@@ -350,13 +350,13 @@ image v12s7_left_walkway_front_background_a = "images/v12/Scene 7/Screens/Naviga
 image v12s7_left_walkway_front_background_b = "images/v12/Scene 7/Screens/Navigation 12b.webp"
 
 image v12s7_left_walkway_front_door_idle = Transform("v12s7_left_walkway_front_door_hover", alpha=0.0)
-image v12s7_left_walkway_front_door_hover = "images/v12/Scene 7/Buttons/v12s7_left_walkway_front_door.png"
+image v12s7_left_walkway_front_door_hover = "images/v12/Scene 7/Buttons/v12s7_left_walkway_front_door.webp"
 
 image v12s7_left_walkway_front_penelope_idle = Transform("v12s7_left_walkway_front_penelope_hover", alpha=0.0)
-image v12s7_left_walkway_front_penelope_hover = "images/v12/Scene 7/Buttons/v12s7_left_walkway_front_penelope.png"
+image v12s7_left_walkway_front_penelope_hover = "images/v12/Scene 7/Buttons/v12s7_left_walkway_front_penelope.webp"
 
 image v12s7_left_walkway_front_right_idle = Transform("v12s7_left_walkway_front_right_hover", alpha=0.0)
-image v12s7_left_walkway_front_right_hover = "images/v12/Scene 7/Buttons/v12s7_left_walkway_front_right.png"
+image v12s7_left_walkway_front_right_hover = "images/v12/Scene 7/Buttons/v12s7_left_walkway_front_right.webp"
 #endregion Left Walkway Front
 
 #region Balcony Left
@@ -364,6 +364,6 @@ image v12s7_balcony_left_background_a = "images/v12/Scene 7/Screens/Navigation 2
 image v12s7_balcony_left_background_b = "images/v12/Scene 7/Screens/Navigation 21b.webp"
 
 image v12s7_balcony_left_nora_idle = Transform("v12s7_balcony_left_nora_hover", alpha=0.0)
-image v12s7_balcony_left_nora_hover = "images/v12/Scene 7/Buttons/v12s7_balcony_left_nora.png"
+image v12s7_balcony_left_nora_hover = "images/v12/Scene 7/Buttons/v12s7_balcony_left_nora.webp"
 #endregion Balcony Left
 #endregion v12.0
