@@ -150,7 +150,11 @@ label starta: #for compatibility only
             Reply(_("You cheated on me.\nGo to hell!"), v1_reply2)
         )
 
-    call screen phone
+    while MessengerService.has_replies(emily):
+        call screen phone
+        if MessengerService.has_replies(emily):
+            u "(I should see who is texting me.)"
+
 
     stop music fadeout 3
     scene s11

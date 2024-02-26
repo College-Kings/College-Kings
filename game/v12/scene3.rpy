@@ -17,7 +17,7 @@ label v12_penelope_roof:
 
     u "(It's Penelope.)"
 
-    call screen phone
+    call screen messenger(penelope)
 
     menu:
         "Reply":

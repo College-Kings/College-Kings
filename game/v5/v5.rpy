@@ -4287,7 +4287,10 @@ label findimre:
         $ MessengerService.new_message(amber, _("Go somewhere where you're completely alone xx"))
         $ MessengerService.new_message(amber, _("I got a surprise for you ;)"))
 
-        call screen phone
+        while MessengerService.has_replies(amber):
+            call screen phone
+            if MessengerService.has_replies(amber):
+                u "(I should reply to Amber.)"
 
         pause 0.5
 
@@ -4304,7 +4307,10 @@ label findimre:
         $ MessengerService.add_reply(chloe, _("Any chance we could do it later? Or tomorrow?"))
         $ MessengerService.new_message(chloe, _("I'm busy later tonight and I'm pretty much booked for the entire week :/"))
 
-        call screen phone
+        while MessengerService.has_replies(chloe):
+            call screen phone
+            if MessengerService.has_replies(chloe):
+                u "(I should reply to Chloe.)"
 
         pause 0.5
 

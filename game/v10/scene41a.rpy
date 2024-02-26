@@ -27,7 +27,7 @@ label v10_waking_up_end:
 
         u "(Oh shit, Penelope has been blowing me up.)"
         
-        call screen phone
+        call screen messenger(penelope)
 
         stop music fadeout 3
         play music music.ck1.v10.Track_Scene_41a_2 fadein 2
@@ -64,7 +64,7 @@ label v10_waking_up_end:
 
         u "(Oh shit, Penelope has been blowing me up.)"
 
-        call screen phone
+        call screen messenger(penelope)
 
         stop music fadeout 3
         play music music.ck1.v10.Track_Scene_41a_2 fadein 2

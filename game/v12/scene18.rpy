@@ -1722,7 +1722,7 @@ label v12s18_bet: # END OF FREE ROAM
 
     u "Oh my god... *Chuckles*"
 
-    call screen phone
+    call screen kiwii_home
 
     scene v12slpbet3b
     with dissolve

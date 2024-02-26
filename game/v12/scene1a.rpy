@@ -528,12 +528,6 @@ label v12_chase_robber:
 
     $ MessengerService.new_message(imre, "Check Kiwii... you're welcome. :)")
     $ MessengerService.add_reply(imre, "Haha okay")
-
-    call screen phone
-
-    # MC checks Kiwii and there's a picture of MC running after the robber posted by Imre 
-    # caption "Would your man chase a robber down in the middle of the night? If not, you don't have a real man..."
-    # There's a comment from Charli that says "If you want a man Imre I can take you to a few bars, all you had to do was ask."
     
     # MC replies back to Imre-
     $ MessengerService.add_reply(imre, "Boosting me huh?")
@@ -543,10 +537,10 @@ label v12_chase_robber:
     $ MessengerService.new_message(imre, "I'm gonna beat his ass")
     $ MessengerService.add_reply(imre, "Haha")
 
-    scene v12car30a
-    with dissolve
-    pause 0.75
-    call screen phone
+    while MessengerService.has_replies(imre):
+        call screen phone
+        if MessengerService.has_replies(imre):
+            u "(I should check my phone.)"
     
     scene v12car30b # TPP Same angle as v12car30, MC sitting on bed, putting his phone away in his pocket
     with dissolve

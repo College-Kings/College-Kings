@@ -22,7 +22,11 @@ label v10_amber_skatepark:
         Reply("Condoms or beer?", v10s26_reply1),
         Reply("Alright sure")
     )
-    call screen phone
+
+    while MessengerService.has_replies(amber):
+        call screen phone
+        if MessengerService.has_replies(amber):
+            u "(I should reply to amber.)"
 
     scene v10sasp1 # FPP. Show Amber, smiling, mouth closed.
     with fade

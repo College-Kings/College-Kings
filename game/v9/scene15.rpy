@@ -60,7 +60,7 @@ label v9_thur_room_w_cam_punch:
     $ KiwiiService.new_comment(kiwii_post, cameron, "Fuckin' A!", number_likes=renpy.random.randint(100, 200))
     $ KiwiiService.new_comment(kiwii_post, riley, "Knew he had it in him!", number_likes=renpy.random.randint(200, 250))
 
-    call screen phone
+    call screen kiwii_home
 
     menu:
         "Brag":
@@ -255,7 +255,7 @@ label v9_thur_room_w_cam_no_punch:
     $ KiwiiService.new_comment(kiwii_post, chris, "Wow, hope he's OK!", number_likes=renpy.random.randint(100, 200))
     $ KiwiiService.new_comment(kiwii_post, cameron, "Ahhhh! Preview of Saturday's Freshman Brawl!", number_likes=renpy.random.randint(150, 170))
 
-    call screen phone
+    call screen kiwii_home
     
     menu:
         "Shrug it off":
