@@ -2658,7 +2658,7 @@ label v12s7_imre_kill:
 
     call screen v12s7_foyer
 
-label v12s7_lindsey_charlie1:
+label v12s7_lindsey_charli1:
     $ freeroam9.add("lindsey")
     $ v12s7_seenList = [lindsey, charli]
 

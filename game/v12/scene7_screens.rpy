@@ -1149,7 +1149,7 @@ screen v12s7_captains_room():
                 if "lindsey" in freeroam9:
                     action Call("v12s7_free_roam_spoken", backgroundImg="v12ferlich1", returnScreen="v12s7_captains_room", seenList=[lindsey, charli], victim=lindsey)
                 else:
-                    action Jump("v12s7_lindsey_charlie1") # Lindsey & Charli
+                    action Jump("v12s7_lindsey_charli1") # Lindsey & Charli
             hotspot (1824, 79, 95, 957) action Show("v12s7_left_gallery_front")
 
         elif charli not in v12s7_killList:
@@ -1181,7 +1181,7 @@ screen v12s7_captains_room():
 
             if not v12s7_lindsey_moved:
                 if "lindsey" not in freeroam9:
-                    actions.append(Jump("v12s7_lindsey_charlie1")) # Lindsey & Charli
+                    actions.append(Jump("v12s7_lindsey_charli1")) # Lindsey & Charli
 
             elif charli not in v12s7_killList:
                 if "charli" not in freeroam9:

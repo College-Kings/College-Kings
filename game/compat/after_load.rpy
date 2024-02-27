@@ -55,7 +55,7 @@ label after_load:
             "Caleb": Caleb,
             "Cameron": Cameron,
             "Candy": Candy,            
-            "Charli": Charlie,
+            "Charli": Charli,
             "Chloe": Chloe,
             "Chris": Chris,
             "Dean": Dean,

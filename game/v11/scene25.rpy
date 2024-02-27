@@ -181,4 +181,4 @@ label v11_hotel_bar:
 
         u "(Damn, left so fast I couldn't even say bye.)"
     stop music fadeout 3
-    jump v11_hotel_charlie_bar
+    jump v11_hotel_charli_bar
