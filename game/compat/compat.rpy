@@ -1,4 +1,7 @@
 init 999 python:
+    class Charlie(Charli):
+        pass
+
     class Inventory:
         pass
 
