@@ -210,6 +210,13 @@ label after_load:
                     kiwii.posts.append(KiwiiPost(CharacterService.get_user(post.user), kiwii_post_map[post_image], post.message, [CharacterService.get_user(mention) for mention in post.mentions], post.numberLikes))
                 del kiwiiPosts
 
+        if _version < (1, 4, 4):
+            old_vars = charli.__dict__.copy()
+            charli = Charli()
+            charli.relationships = old_vars.get("relationships", {})
+            charli.pending_text_messages = old_vars.get("pending_text_messages", [])
+            charli.text_messages = old_vars.get("text_messages", [])
+
     show screen phone_icon
     hide screen reply
     hide screen simplr_reply
