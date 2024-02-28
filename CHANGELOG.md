@@ -13,6 +13,7 @@ All notable changes to this project will be documented in this file. This projec
 ### Fixed
 
 - Fixed path builder starting location grid
+- Attempted fix for UI lag
 
 ## [1.4.4] - 2024-02-01
  
