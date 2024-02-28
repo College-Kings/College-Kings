@@ -375,6 +375,7 @@ label v11_cardealership:
     scene v11cd24 # TPP. Show's the car parking in location c (artist chooses location)
     with dissolve
 
+    stop ambience
     stop sound
     pause 0.75
 
@@ -480,6 +481,8 @@ label v11_cardealership:
                             with dissolve
 
                             pause 1
+
+                            stop ambience
                                 
                             scene v11cd29 # TPP. MC and chloe getting out of the car infront of the car dealership, mouth closed
                             with dissolve
@@ -524,6 +527,8 @@ label v11_cardealership:
                             with dissolve
 
                             pause 1
+
+                            stop ambience
                                 
                             scene v11cd29 # TPP. MC and chloe getting out of the car infront of the car dealership, mouth closed
                             with dissolve
@@ -543,6 +548,8 @@ label v11_cardealership:
 
                         pause 0.75
                         
+                        stop ambience
+
                         scene v11cd29 # TPP. MC and chloe getting out of the car infront of the car dealership, mouth closed
                         with dissolve
 
@@ -616,6 +623,8 @@ label v11_cardealership:
                 with dissolve
 
                 pause 0.75
+
+                stop ambience
                 
                 scene v11cd29 # TPP. MC and chloe getting out of the car infront of the car dealership, mouth closed
                 with dissolve
@@ -688,6 +697,8 @@ label v11_cardealership:
         with dissolve
 
         pause 1
+
+        stop ambience
         
         scene v11cd29 # TPP. MC and chloe getting out of the car infront of the car dealership, mouth closed
         with dissolve
