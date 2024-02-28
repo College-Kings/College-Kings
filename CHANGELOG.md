@@ -21,6 +21,7 @@ All notable changes to this project will be documented in this file. This projec
 
 - Fixed path builder starting location grid
 - Attempted fix for UI lag
+- Fixed Car Ambience bleed in v11 scene 34
 
 ## [1.4.4] - 2024-02-01
  
