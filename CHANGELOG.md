@@ -8,7 +8,14 @@
 
 All notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning](http://semver.org/).
 
-## [1.4.5] - UNRELEASED
+## [1.4.6] - 2024-02-28
+
+### Fixed
+
+- Fixed relationships showing as Friend in the phone app
+
+
+## [1.4.5] - 2024-02-28
 
 ### Fixed
 
