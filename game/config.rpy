@@ -8,8 +8,8 @@ define config.load_failed_label = "load_failed"
 define config.label_callback = label_callback
 define _quit_slot = "99-1"
 
-define _scene_show_hide_transition = dissolve
-define config.window_show_transition = dissolve
-define config.window_hide_transition = dissolve
+# define _scene_show_hide_transition = dissolve
+# define config.window_show_transition = dissolve
+# define config.window_hide_transition = dissolve
 define config.defer_tl_scripts = True
 define config.check_conflicting_properties = True
