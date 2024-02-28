@@ -89,10 +89,10 @@ label v13s40:
     label v13s40_sg:
         if _in_replay:
             $ mc.money += 1000
-            $ mc.inventory.add_item(honey)
-            $ mc.inventory.add_item(butt_plug)
-            $ mc.inventory.add_item(spankers)
-            $ mc.inventory.add_item(feather)
+            $ mc.inventory.append(honey)
+            $ mc.inventory.append(butt_plug)
+            $ mc.inventory.append(spankers)
+            $ mc.inventory.append(feather)
 
     scene v13s40_8 # FPP. Chloe wrapping her arms around MC, looking at him, Chloe sexy look, mouth open
     with dissolve
@@ -122,6 +122,11 @@ label v13s40:
     if is_censored:
         call screen censored_popup("v13s40_nsfwSkipLabel1")
 
+    lovense vibrate 2
+    lovense rotate 1
+    lovense suction 1
+    lovense thrust 1
+
     scene v13s40_11 # TPP. Show MC removing Chloe's top, both slight smiles, mouths closed, Chloe's eyes closed
     with dissolve
 
@@ -137,6 +142,11 @@ label v13s40:
 
     pause
 
+    lovense vibrate 3
+    lovense rotate 2
+    lovense suction 2
+    lovense thrust 2
+
     scene v13s40_12 # FPP. Chloe same as v13s40_11b, MC standing next to bed, looking at Chloe, Chloe slight smile, mouth open
     with dissolve
 
@@ -149,16 +159,21 @@ label v13s40:
 
     $ sex_overlay_options = [("Neck", "v13s40_neck"), ("Chest", "v13s40_chest"), ("Back", "v13s40_back"), ("Shoulders", "v13s40_shoulder")]
 
-    if mc.has_item(honey):
+    if honey in mc.inventory:
         $ sex_overlay_options.append((honey.name, "v13s40_honey"))
-    if mc.has_item(spankers):
+    if spankers in mc.inventory:
         $ sex_overlay_options.append((spankers.name, "v13s40_spanker"))
-    if mc.has_item(feather):
+    if feather in mc.inventory:
         $ sex_overlay_options.append((feather.name, "v13s40_feather"))
 
     call screen sex_overlay("v13s40_end_free_roam")
 
 label v13s40_honey:
+    lovense vibrate 5
+    lovense rotate 4
+    lovense suction 4
+    lovense thrust 4
+
     $ chloeturnedon.add("honey")
 
     scene v13s40ho_1 # TPP. Show MC pouring the honey on Chloe's breasts, Chloe slight smile, mouth closed
@@ -191,6 +206,11 @@ label v13s40_honey:
     with dissolve
 
     pause
+
+    lovense vibrate 6
+    lovense rotate 5
+    lovense suction 5
+    lovense thrust 5
 
     scene v13s40ho_3b # FPP. Same as v13s40ho_3a, Chloe sexy look, mouth open, no more honey on her boobs
     with dissolve
@@ -231,6 +251,11 @@ label v13s40_feather:
 
     u "Want me to stop?"
 
+    lovense vibrate 7
+    lovense rotate 6
+    lovense suction 6
+    lovense thrust 6
+
     scene v13s40fe_1b
     with dissolve
 
@@ -265,6 +290,11 @@ label v13s40_spanker:
 
     pause
     
+    lovense vibrate 8
+    lovense rotate 7
+    lovense suction 7
+    lovense thrust 7
+
     scene v13s40sp_2 # TPP. Show MC turning Chloe around, both smiling, mouths closed
     with dissolve
 
@@ -294,6 +324,11 @@ label v13s40_spanker:
     with dissolve
 
     pause
+
+    lovense vibrate 9
+    lovense rotate 8
+    lovense suction 8
+    lovense thrust 8
 
     scene v13s40sp_5b # TPP. MC spanking Chloe's ass
     with vpunch
@@ -351,6 +386,11 @@ label v13s40_neck:
     scene v13s40neck_1 # TPP. Close up of Chloe's neck
     #with dissolve
 
+    lovense vibrate 10
+    lovense rotate 9
+    lovense suction 9
+    lovense thrust 9
+
     menu:
         "Choke":
             $ chloeturnedon.add("neck")
@@ -371,6 +411,11 @@ label v13s40_neck:
 label v13s40_chest:
     scene v13s40chest_1 # TPP. Close up of Chloe's boobs
     #with dissolve
+
+    lovense vibrate 11
+    lovense rotate 10
+    lovense suction 10
+    lovense thrust 10
 
     menu:
         "Kiss":
@@ -413,6 +458,11 @@ label v13s40_back:
     scene v13s40back_1 # TPP. Close up of Chloe's back
     #with dissolve
 
+    lovense vibrate 12
+    lovense rotate 11
+    lovense suction 11
+    lovense thrust 11
+
     menu:
         "Massage":
             $ chloeturnedon.add("back")
@@ -454,6 +504,11 @@ label v13s40_shoulder:
     scene v13s40shoulder_1 # TPP. Close up of Chloe's shoulder
     #with dissolve
 
+    lovense vibrate 13
+    lovense rotate 12
+    lovense suction 12
+    lovense thrust 12
+
     menu:
         "Massage":
             $ chloeturnedon.add("shoulder")
@@ -484,7 +539,12 @@ label v13s40_shoulder:
         
 label v13s40_end_free_roam:
     if len(chloeturnedon) >= 2:
-    
+        
+        lovense vibrate 14
+        lovense rotate 13
+        lovense suction 13
+        lovense thrust 13
+
         scene v13s40end_1 # FPP. MC standing next to Chloe, Chloe looking up at MC, Chloe smiling, mouth open
         #with dissolve
 
@@ -525,6 +585,11 @@ label v13s40_end_free_roam:
 
         pause
 
+        lovense vibrate 15
+        lovense rotate 14
+        lovense suction 14
+        lovense thrust 14
+
         image v13chlsd = Movie(play="images/v13/Scene 40/v13chlsd.webm", loop=True, image="images/v13/Scene 40/v13chlsdStart.webp", start_image="images/v13/Scene 40/v13chlsdStart.webp") # Chloe squatting
         image v13chlsdf = Movie(play="images/v13/Scene 40/v13chlsdf.webm", loop=True, image="images/v13/Scene 40/v13chlsdStart.webp", start_image="images/v13/Scene 40/v13chlsdStart.webp") # Chloe squatting spedup
         image v13chlsd2 = Movie(play="images/v13/Scene 40/v13chlsd2.webm", loop=True, image="images/v13/Scene 40/v13chlsd2Start.webp", start_image="images/v13/Scene 40/v13chlsd2Start.webp") # Chloe squatting FPP
@@ -564,6 +629,11 @@ label v13s40_end_free_roam:
 
         pause
 
+        lovense vibrate 16
+        lovense rotate 15
+        lovense suction 15
+        lovense thrust 15
+
         image v13chlf0 = Movie(play="images/v13/Scene 40/v13chlf0.webm", loop=True, image="images/v13/Scene 40/v13chlfStart.webp", start_image="images/v13/Scene 40/v13chlfStart.webp") # Chloe flatiron
         image v13chlf0f = Movie(play="images/v13/Scene 40/v13chlf0f.webm", loop=True, image="images/v13/Scene 40/v13chlfStart.webp", start_image="images/v13/Scene 40/v13chlfStart.webp") # Chloe flatiron spedup
         image v13chlf02 = Movie(play="images/v13/Scene 40/v13chlf02.webm", loop=True, image="images/v13/Scene 40/v13chlf2Start.webp", start_image="images/v13/Scene 40/v13chlf2Start.webp") # Chloe flatiron FPP
@@ -602,6 +672,11 @@ label v13s40_end_free_roam:
         with dissolve
 
         pause
+
+        lovense vibrate 17
+        lovense rotate 16
+        lovense suction 16
+        lovense thrust 16
 
         image v13chlff = Movie(play="images/v13/Scene 40/v13chlff.webm", loop=True, image="images/v13/Scene 40/v13chlffStart.webp", start_image="images/v13/Scene 40/v13chlffStart.webp") # Chloe face fuck
         image v13chlfff = Movie(play="images/v13/Scene 40/v13chlfff.webm", loop=True, image="images/v13/Scene 40/v13chlffStart.webp", start_image="images/v13/Scene 40/v13chlffStart.webp") # Chloe face fuck spedup
@@ -677,6 +752,7 @@ label v13s40_end_free_roam:
 
         pause
 
+        lovense stop
         stop music fadeout 3
         play music music.v13_Track_Scene_40_3 fadein 2
 
@@ -733,7 +809,7 @@ label v13s40_end_free_roam:
         scene v13s40end_18 # TPP. Show MC laying in bed, naked, smiling, mouth closed
         with dissolve
 
-        $ grant_achievement("we_like_them_wild")
+        grant Achievement("we_like_them_wild", "Reveal a new side of Chloe")
         
         u "(This girl is gonna drive me crazy...) *Laughs*"
 

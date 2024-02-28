@@ -257,6 +257,10 @@ label v10_lauren_room:
 
         if is_censored:
             call screen censored_popup("v10s24_nsfwSkipLabel1")
+        lovense vibrate 2
+        lovense rotate 1
+        lovense suction 1
+        lovense thrust 1
 
         scene v10lar7 # TPP Show Lauren on MC's lap facing him, MC arms around her waist, Lauren eyes closed and mouth open
         with dissolve
@@ -282,6 +286,10 @@ label v10_lauren_room:
         menu:
             "Suck on her tits":
                 $ sceneList.add("v10_lauren")
+                lovense vibrate 4
+                lovense rotate 2
+                lovense suction 2
+                lovense thrust 2
 
                 # MC starts kissing around her boobs and nipples. Ensure this scene is detailed and long, kissing all over her upper body
                 image v10lautk = Movie(play="images/v10/Scene 24/v10lautk.webm", loop=True, image="images/v10/Scene 24/v10lautkStart.webp", start_image="images/v10/Scene 24/v10lautkStart.webp") # TPP MC tenderly kissing Lauren on upper chest, holding her breast and playing with her nipple
@@ -326,6 +334,8 @@ label v10_lauren_room:
 
                     u "*Smiles* Yeah."
 
+                    lovense stop
+
                     scene v10lar9 # FPP Show Lauren standing up and beginning to put her bra and shirt back on, Lauren smiling
                     with dissolve
 
@@ -352,6 +362,8 @@ label v10_lauren_room:
                     with dissolve
 
                     stop music fadeout 3
+
+                    lovense stop
 
                     play music music.ck1.v10.Track_Scene_24_3 fadein 2
                     
@@ -389,6 +401,8 @@ label v10_lauren_room:
                     la "Thanks for understanding. Maybe we could uhm-"
 
             "Kiss her":
+                lovense stop
+                
                 # Lauren and MC contine making out
                 scene v10lar7d
                 with dissolve

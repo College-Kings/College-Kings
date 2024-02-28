@@ -427,7 +427,7 @@ label v7start:
                 scene s683a
                 with dissolve
 
-                $ grant_achievement("true_to_self")
+                grant Achievement("true_to_self", "Walk home with Riley")
                 
                 u "Uhh, yeah of course."
 
@@ -1301,16 +1301,16 @@ label conyourdorm:
 
     pause 0.5
 
-    $ kiwii_post = KiwiiService.new_post(chloe, "phone/kiwii/Posts/v7/clpost1.webp", _("I'll always follow the sun :)"), number_likes=186)
+    $ kiwii_post = KiwiiService.new_post(chloe, "ck1_v7_chloe_post", _("I'll always follow the sun :)"), number_likes=186)
 
     $ v7_kiwii_reply1 = KiwiiBuilder(kiwii_post)
     $ v7_kiwii_reply1.new_comment(cameron, _("Lol, pussy"), number_likes=renpy.random.randint(1, 10), mentions=[mc])
-    $ v7_kiwii_reply1.set_variable(reputation.add_point, RepComponent.BOYFRIEND)
+    $ v7_kiwii_reply1.add_function(reputation.add_point, RepComponent.BOYFRIEND)
 
     $ v7_kiwii_reply2 = KiwiiBuilder(kiwii_post)
     $ v7_kiwii_reply2.new_comment(imre, _("Slide into her DMs bro!"), number_likes=renpy.random.randint(5, 15), mentions=[mc])
-    $ v7_kiwii_reply2.set_variable(reputation.add_point, RepComponent.BRO)
-    $ v7_kiwii_reply2.set_variable(reputation.add_point, RepComponent.TROUBLEMAKER)
+    $ v7_kiwii_reply2.add_function(reputation.add_point, RepComponent.BRO)
+    $ v7_kiwii_reply2.add_function(reputation.add_point, RepComponent.TROUBLEMAKER)
 
     $ KiwiiService.new_comment(kiwii_post, grayson, _("Check your DMs"), 14)
     $ KiwiiService.new_comment(kiwii_post, ryan, _("Whore."), 1)
@@ -1324,10 +1324,10 @@ label conyourdorm:
         KiwiiReply(_("I got some sun in my room..."), number_likes=renpy.random.randint(20, 30), next_comment=v7_kiwii_reply2)
     )
 
-    $ kiwii_post = KiwiiService.new_post(lauren, "phone/kiwii/Posts/v7/lapost1.webp", _("Wishing I could go back..."), number_likes=39)
+    $ kiwii_post = KiwiiService.new_post(lauren, "ck1_v7_lauren_post", _("Wishing I could go back..."), number_likes=39)
 
     $ v7_kiwii_reply3 = KiwiiBuilder(kiwii_post)
-    $ v7_kiwii_reply3.set_variable(reputation.add_point, RepComponent.BOYFRIEND)
+    $ v7_kiwii_reply3.add_function(reputation.add_point, RepComponent.BOYFRIEND)
 
     $ v7_kiwii_reply4 = KiwiiBuilder(kiwii_post)
     $ v7_kiwii_reply4.new_comment(autumn, _("Yeah, they really are"), number_likes=renpy.random.randint(8, 18), mentions=[mc])
@@ -1339,10 +1339,10 @@ label conyourdorm:
         KiwiiReply(_("Winter vacations are the best"), number_likes=renpy.random.randint(10, 17), next_comment=v7_kiwii_reply4)
     )
 
-    $ kiwii_post = KiwiiService.new_post(aubrey, "phone/kiwii/Posts/v7/aupost1.webp", _("Finally changed my profile pic!"), number_likes=133)
+    $ kiwii_post = KiwiiService.new_post(aubrey, "ck1_v7_aubrey_post", _("Finally changed my profile pic!"), number_likes=133)
 
     $ v7_kiwii_reply5 = KiwiiBuilder(kiwii_post)
-    $ v7_kiwii_reply5.set_variable(reputation.add_point, RepComponent.BRO)
+    $ v7_kiwii_reply5.add_function(reputation.add_point, RepComponent.BRO)
     $ v7_kiwii_reply5.new_comment(aubrey, _("Bring it on!"), number_likes=renpy.random.randint(15, 35), mentions=[mc])
 
     $ KiwiiService.new_comment(kiwii_post, cameron, _("You put the hot into thot"), 2)
@@ -1352,16 +1352,16 @@ label conyourdorm:
     $ KiwiiService.add_reply(kiwii_post, _("I'd destroy you in Air hockey!"), number_likes=renpy.random.randint(15, 25), mentions=[aubrey], next_comment=v7_kiwii_reply5)
 
     if CharacterService.is_fwb(emily): # first riley texts, then once you've opened the app you get 2 more messages.
-        $ v7_kiwii_post4 = KiwiiService.new_post(emily, "phone/kiwii/Posts/v7/empost1.webp", _("Finally fate brings us back together. What doesn't kill us only makes us stronger."), number_likes=82)
+        $ v7_kiwii_post4 = KiwiiService.new_post(emily, "ck1_v7_emily_post", _("Finally fate brings us back together. What doesn't kill us only makes us stronger."), number_likes=82)
 
         $ v7_kiwii_reply6 = KiwiiBuilder(kiwii_post)
-        $ v7_kiwii_reply6.set_variable(reputation.add_point, RepComponent.TROUBLEMAKER)
+        $ v7_kiwii_reply6.add_function(reputation.add_point, RepComponent.TROUBLEMAKER)
         $ v7_kiwii_reply6.new_comment(josh, _("lol"), number_likes=renpy.random.randint(3, 7), mentions=[mc])
 
-        $ KiwiiService.new_comment(kiwii_post, riley, _("You guys are so cute"), 5)
-        $ KiwiiService.new_comment(kiwii_post, aubrey, _("GORGEOUS"), 8)
-        $ KiwiiService.new_comment(kiwii_post, josh, _("Woah, you guys back together??"), 3)
-        $ KiwiiService.add_reply(kiwii_post, _("No, we're not."), number_likes=renpy.random.randint(5, 15), mentions=[josh], next_comment=v7_kiwii_reply6)
+        $ KiwiiService.new_comment(v7_kiwii_post4, riley, _("You guys are so cute"), 5)
+        $ KiwiiService.new_comment(v7_kiwii_post4, aubrey, _("GORGEOUS"), 8)
+        $ KiwiiService.new_comment(v7_kiwii_post4, josh, _("Woah, you guys back together??"), 3)
+        $ KiwiiService.add_reply(v7_kiwii_post4, _("No, we're not."), number_likes=renpy.random.randint(5, 15), mentions=[josh], next_comment=v7_kiwii_reply6)
 
         play sound sound.vibrate
 
@@ -1384,9 +1384,9 @@ label conyourdorm:
             if MessengerService.has_replies(riley):
                 u "(I need to respond to some of these messages.)"
 
-        while KiwiiService.has_replies(kiwii_post):
+        while KiwiiService.has_replies(v7_kiwii_post4):
             call screen phone
-            if KiwiiService.has_replies(kiwii_post):
+            if KiwiiService.has_replies(v7_kiwii_post4):
                 u "(I should check out what Emily posted on Kiwii.)"
 
         while MessengerService.has_replies(penelope):
@@ -3459,7 +3459,7 @@ label afterbeach:
     if not meetgrayson:
         u "(Wolves pledging starts soon... is it stupid of me to wanna pledge now? I didn't think frat life was for me..."
 
-        $ grant_achievement("wolfpack")
+        grant Achievement("wolfpack", "Pledge to the Wolves")
         u "(But after everything that happened I feel like I gotta at least try and get in, otherwise I'll miss out on too much.)"
 
     elif joinapes:
@@ -3478,13 +3478,13 @@ label afterbeach:
 
         menu:
             "Pledge to the Apes":
-                $ grant_achievement("silverback")
+                grant Achievement("silverback", "Pledge to the Apes")
                 u "(Fuck it. I'm gonna be winner, no matter what it costs. Time to pledge to the Apes.)"
 
                 jump pledgeapes
 
             "Pledge to the Wolves":
-                $ grant_achievement("wolfpack")
+                grant Achievement("wolfpack", "Pledge to the Wolves")
                 u "(Grayson might kill me when he finds out, but I can't join the Apes. I gotta pledge to the Wolves.)"
 
     else:
@@ -3503,13 +3503,13 @@ label afterbeach:
 
         menu:
             "Pledge to the Apes":
-                $ grant_achievement("silverback")
+                grant Achievement("silverback", "Pledge to the Apes")
                 u "(Fuck it. I'm gonna be winner, no matter what it costs. I'ma go to the Apes' house and tell Grayson I changed my mind.)"
 
                 jump pledgeapes
 
             "Pledge to the Wolves":
-                $ grant_achievement("wolfpack")
+                grant Achievement("wolfpack", "Pledge to the Wolves")
                 u "(Nah, Grayson's done more than enough questionable shit. The Wolves been nothing but good to me. I'ma pledge to the Wolves.)"
 
 
@@ -5462,7 +5462,7 @@ label after_pledges:
     with Fade(1,0,1)
 
     if mc.frat == Frat.WOLVES:
-        $ kiwii_post = KiwiiService.new_post(chris, "phone/kiwii/Posts/v7/chpost1.webp", _("One of us!"), number_likes=133, mentions=[mc])
+        $ kiwii_post = KiwiiService.new_post(chris, "ck1_v7_chris_post", _("One of us!"), number_likes=133, mentions=[mc])
         $ KiwiiService.new_comment(kiwii_post, cameron, _("Losers"), 3)
         $ KiwiiService.new_comment(kiwii_post, imre, _("Hell yeah bro!"), 14)
         $ KiwiiService.new_comment(kiwii_post, aubrey, _("Woohoo!"), 35)
@@ -6457,7 +6457,7 @@ label after_history:
                 scene s907 # Camera - FPP. MC and Cameron running through the door. Cameron is in front of MC with his phone in his hand. MC is almost out of the door
                 with vpunch
 
-                $ grant_achievement("lee_way")
+                grant Achievement("lee_way", "Pull down Mr. Lee's pants")
 
                 lee "Who was that? {b}WHO WAS THAT?{/b}"
                 ca "HAHAHA! FUCKIN' ACES!"
@@ -8967,6 +8967,9 @@ label rileysexscene:
     if is_censored:
         call screen censored_popup("v7_nsfwSkipLabel1")
 
+    lovense vibrate 2
+    lovense rotate 1
+
     scene ridrm4 # Riley close up in her dorm, talking mouth open, single slightly raise brow (first person)
     with dissolve
     ri "I think we have some unfinished business."
@@ -9019,6 +9022,9 @@ label rileysexscene:
 
     pause 0.5
 
+    lovense vibrate 3
+    lovense rotate 1
+    
     scene risex4
     with dissolve
 
@@ -9034,6 +9040,10 @@ label rileysexscene:
 
     pause 0.5
     label riblowjob:
+    
+    lovense vibrate 4
+    lovense rotate 2
+    lovense suction 2
 
     scene risexvid2s # Riley giving MC a blowjob whilst mc is stood up, MC pleasure expression
     with dissolve
@@ -9078,6 +9088,11 @@ label rileysexscene:
     pause 0.5
 
 label rifingering:
+
+    lovense vibrate 6
+    lovense rotate 3
+    lovense suction 3
+    lovense thrust 1
     scene risexvid3s
     with dissolve
     ri "*Moans* Mhmmmm..."
@@ -9099,6 +9114,11 @@ label rimissionary:
     ri "*Moans louder* Holy shit!"
     " "
 
+    lovense vibrate 8
+    lovense rotate 4
+    lovense suction 4
+    lovense thrust 3
+
     scene risexvid6f # Riley cowgirl on MC, Riley pleasure expression
     with dissolve
     ri "*Moans very loud* Oh my god!"
@@ -9108,6 +9128,11 @@ label rimissionary:
     ri "Yesss! Me too!"
 
 label riclimax:
+    lovense vibrate 10
+    lovense rotate 5
+    lovense suction 5
+    lovense thrust 5
+
     scene risexvid8 # Riley cowgirl on MC, Riley pleasure expression
     with dissolve
 
@@ -9137,6 +9162,8 @@ label riclimax:
     ri "I'll see you tomorrow [name]."
 
 label v7_nsfwSkipLabel1:
+    lovense stop
+    
     scene risex15a # MC leaving Riley's dorm
     with dissolve
     u "Yeah, see you tomorrow."
@@ -9833,7 +9860,7 @@ label amberhocodate:
     with dissolve
 
 label v7_nsfwSkipLabel5:
-    $ grant_achievement("ecstatic")
+    grant Achievement("ecstatic", "Bunk homecoming with Amber")
         
     u "Now what?"
 
@@ -16942,7 +16969,7 @@ label fr4laurenending:
     scene sfr4la29
     with dissolve
 
-    $ grant_achievement("slow_and_steady")
+    grant Achievement("slow_and_steady", "End homecoming with Lauren")
 
     la "I read that... if you cuddle in your underwear it increases the serotonin levels in your brain, which in turns means you live a longer, happier life."
 
@@ -17090,7 +17117,7 @@ label fr4rileyending2:
     scene sfr4ri57a #riley pats the bed,looking at you smiling
     with dissolve
 
-    $ grant_achievement("playing_with_fire")
+    grant Achievement("playing_with_fire", "End homecoming with Riley")
         
     ri "Sit down with me for a second."
 
@@ -17196,7 +17223,7 @@ label fr4chloeending:
     scene sfr4cl58 # tpp from behind: chloe opens the door to her room mc following
     with fade
 
-    $ grant_achievement("homecoming_queen")
+    grant Achievement("homecoming_queen", "End homecoming with Chloe")
 
     u "So this is your infamous room?"
 

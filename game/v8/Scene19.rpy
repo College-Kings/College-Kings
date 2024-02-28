@@ -5,7 +5,7 @@
 label sun_eve_room:
     python:
         v8s19_reply1 = MessageBuilder(amber)
-        v8s19_reply1.add_function(grant_achievement, "text_with_an_s")
+        v8s19_reply1.add_function(text_with_an_s.grant)
         v8s19_reply1.new_message(_("It's only fair, right? Make us even"))
 
         if is_censored:

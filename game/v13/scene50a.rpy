@@ -141,7 +141,7 @@ label v13s50a:
     scene v13s50a_6a # FPP Same angle as 6, Emily turning her head to look back at MC, Emily smiling with her mouth open
     with dissolve
 
-    $ grant_achievement("dammit_emily")
+    grant Achievement("dammit_emily", "Angry bathroom sex")
     em "Did you enjoy yourself? *Chuckles*"
 
     scene v13s50a_6b # FPP Same as 6a, Emily's mouth closed

@@ -362,11 +362,11 @@ label v13s9:
 
                 cl "Whatever, [name]."
         
-        "Help no one": # -If No One        
+        "Help no one": # -If No One
             scene v13s9_12e
             with dissolve
 
-            $ grant_achievement("indecisive")
+            grant Achievement("indecisive", "Help neither Chloe nor Lindsey")
             u "Honestly, I'm going into the grey-zone on this one. I don't want anyone, you or her, to feel betrayed."
 
             scene v13s9_12f

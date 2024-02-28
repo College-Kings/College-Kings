@@ -1,7 +1,7 @@
 label v1_start:
 label starta: #for compatibility only
     if config.developer:
-        show screen bug_testing_overlay
+        show screen debug_overlay
 
     show fantasyoverlay onlayer foreground
 
@@ -135,11 +135,11 @@ label starta: #for compatibility only
     # Emily's messages
     python:
         v1_reply1 = MessageBuilder(emily)
-        v1_reply1.add_function(grant_achievement, "no_hard_feelings")
+        v1_reply1.add_function(no_hard_feelings.grant)
         v1_reply1.new_message(_("Cool :)"))
 
         v1_reply2 = MessageBuilder(emily)
-        v1_reply2.add_function(grant_achievement, "open_wound")
+        v1_reply2.add_function(open_wound.grant)
         v1_reply2.add_function(reputation.add_point, RepComponent.TROUBLEMAKER)
         v1_reply2.new_message(_("Ugh :/"))
 
@@ -150,7 +150,11 @@ label starta: #for compatibility only
             Reply(_("You cheated on me.\nGo to hell!"), v1_reply2)
         )
 
-    call screen phone
+    while MessengerService.has_replies(emily):
+        call screen phone
+        if MessengerService.has_replies(emily):
+            u "(I should see who is texting me.)"
+
 
     stop music fadeout 3
     scene s11
@@ -1167,7 +1171,7 @@ label starta: #for compatibility only
                 scene s56no1a
                 with dissolve
 
-                $ grant_achievement("keep_it_moving")
+                grant Achievement("keep_it_moving", "Hit on Nora")
 
                 u "Actually, I knew that. I just wanted to talk to you 'cause you're really cute."
 
@@ -2110,6 +2114,8 @@ label at_bd:
     scene sdakisso
     with dissolve
 
+    lovense vibrate 2
+
     " "
 
     u "(Okay, this is definitely a dream, but I do like where this is going.)"
@@ -2122,6 +2128,9 @@ label at_bd:
             with fade
 
             ri "*Chuckles* You're hard already."
+            
+            lovense vibrate 3
+            lovense rotate 2
 
             scene sda3
             with dissolve
@@ -2138,6 +2147,10 @@ label at_bd:
 
             ri "Tell me what you want."
 
+            lovense vibrate 3
+            lovense rotate 2
+            lovense thrust 2
+            
             menu:
                 "Blowjob":
                     scene sda3b
@@ -2166,6 +2179,10 @@ label at_bd:
                     show sdabjf
                     with dissolve
 
+                    lovense vibrate 4
+                    lovense rotate 3
+                    lovense thrust 3
+
                     ri "*Gasp* Like this?"
 
                     u "Fuuuuck. Yes, exactly like that."
@@ -2188,6 +2205,11 @@ label at_bd:
 
                     show sdafj
                     with fade
+                    
+                    lovense vibrate 4 
+                    lovense rotate 3
+                    lovense thrust 3
+
                     ri "Wow, I've never done this before. Does it feel good?"
 
                     u "Yes, it feels fantastic, Riley."
@@ -2219,6 +2241,10 @@ label at_bd:
 
             scene sda4c ## turning her around
             with dissolve
+
+            lovense vibrate 4
+            lovense rotate 3
+            lovense thrust 3
 
             u "Bend over."
 
@@ -2275,6 +2301,10 @@ label at_bd:
 
             ri "Oh my god!"
 
+            lovense vibrate 6
+            lovense rotate 4
+            lovense thrust 4
+
             show sdasex
             with dissolve
 
@@ -2293,6 +2323,10 @@ label at_bd:
             scene sda7a
             with dissolve
 
+            lovense vibrate 8
+            lovense rotate 6
+            lovense thrust 6
+
             ri "Cum inside me, [name]! Please fill me up!"
 
             scene aftercum
@@ -2304,6 +2338,8 @@ label at_bd:
             with dissolve
 
             ri "My legs are shaking."
+
+            lovense stop
 
         "Wake up":
             pass
@@ -2861,7 +2897,7 @@ label aw_bd:
                 scene s90
                 with dissolve # kiss
                 play sound sound.kiss
-                $ grant_achievement("romeo")
+                grant Achievement("romeo", "Kiss Lauren")
 
                 pause
 
@@ -3616,7 +3652,7 @@ label v1_freeRoam2_mason:
             scene fr2ma1a
             with dissolve
 
-            $ grant_achievement("big_mouth")
+            grant Achievement("big_mouth", "Threaten Cameron")
                 
             u "Yeah, he better watch out, or I'll kick his ass."
 

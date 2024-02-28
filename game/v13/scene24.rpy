@@ -940,7 +940,7 @@ label v13s24_kourtney_date:
     scene v13s24_26a # FPP same as v13s24_26 kourtney instead of emmy
     with dissolve
 
-    $ grant_achievement("romantic_heart")
+    grant Achievement("romantic_heart", "Score a date with Kourtney")
     u "Let's go, Kourtney."
 
     scene v13s24_28a # TPP. same as v13s24_28 kourtney instead of emmy

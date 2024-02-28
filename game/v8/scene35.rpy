@@ -129,7 +129,7 @@ label steak_w_chloe:
 
 label steak_flirt_w_chloe:
 
-    $ grant_achievement("up_for_more")
+    grant Achievement("up_for_more", "Flirt with Chloe at the Steakhouse")
 
     u "Unlesssss..."
 

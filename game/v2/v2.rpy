@@ -151,7 +151,7 @@ label v2start:
         v2_reply5.new_message(_("Great, I'll see you then :)"))
 
         v2_reply6 = MessageBuilder(lauren)
-        v2_reply6.add_function(grant_achievement, "mixed_feelings")
+        v2_reply6.add_function(mixed_feelings.grant)
         v2_reply6.add_function(reputation.add_point, RepComponent.TROUBLEMAKER)
         v2_reply6.new_message(_("Is everything okay?"))
         v2_reply6.add_reply(_("Yeah, I'm fine."))
@@ -298,19 +298,19 @@ label gb:
             $ renpy.pause(0.7)
 
             scene tomhook
-            show screen fight_tutorial(stance="defend")
+            show screen old_fight_tutorial(stance="defend")
 
             tut "Now it's time to block Tom's attack."
 
-            show screen fight_tutorial(highlight="q", stance="defend")
+            show screen old_fight_tutorial(highlight="q", stance="defend")
             tut "{b}Q{/b} lets you block your head from heavy attacks such as hooks, which come from a slight angle."
-            show screen fight_tutorial(highlight="w", stance="defend")
+            show screen old_fight_tutorial(highlight="w", stance="defend")
             tut "In order to protect yourself from attacks flying straight at your face, such as jabs, press {b}W{/b}."
-            show screen fight_tutorial(highlight="r", stance="defend")
+            show screen old_fight_tutorial(highlight="r", stance="defend")
             tut "Lastly, you can protect your legs, from low kicks for example, by pressing {b}R{/b}."
-            show screen fight_tutorial(highlight="q", stance="defend")
+            show screen old_fight_tutorial(highlight="q", stance="defend")
             tut "As of right now, there's a hook flying at your head, press {b}Q{/b} in the upcoming screen in order to block it."
-            hide screen fight_tutorial
+            hide screen old_fight_tutorial
 
             call screen fight_defendTutorial
 
@@ -334,15 +334,15 @@ label gb:
 
             scene hookcounter
 
-            show screen fight_tutorial(highlight="q", stance="defend")
+            show screen old_fight_tutorial(highlight="q", stance="defend")
             tut "{b}Q{/b} lets you block your head from heavy attacks such as hooks, which come from a slight angle."
-            show screen fight_tutorial(highlight="w", stance="defend")
+            show screen old_fight_tutorial(highlight="w", stance="defend")
             tut "In order to protect yourself from attacks flying straight at your face, such as jabs, press {b}W{/b}."
-            show screen fight_tutorial(highlight="r", stance="defend")
+            show screen old_fight_tutorial(highlight="r", stance="defend")
             tut "Lastly, you can protect your legs, from low kicks for example, by pressing {b}R{/b}."
-            show screen fight_tutorial(highlight="w", stance="defend")
+            show screen old_fight_tutorial(highlight="w", stance="defend")
             tut "As of right now, there's a jab flying at your face, press {b}W{/b} in the upcoming screen in order to block it."
-            hide screen fight_tutorial
+            hide screen old_fight_tutorial
 
             call screen fight_defendTutorial
 
@@ -369,15 +369,15 @@ label gb:
 
             tut "Now it's time to block Tom's attack."
 
-            show screen fight_tutorial(highlight="q", stance="defend")
+            show screen old_fight_tutorial(highlight="q", stance="defend")
             tut "{b}Q{/b} lets you block your head from heavy attacks such as hooks, which come from a slight angle."
-            show screen fight_tutorial(highlight="w", stance="defend")
+            show screen old_fight_tutorial(highlight="w", stance="defend")
             tut "In order to protect yourself from attacks flying straight at your face, such as jabs, press {b}W{/b}."
-            show screen fight_tutorial(highlight="r", stance="defend")
+            show screen old_fight_tutorial(highlight="r", stance="defend")
             tut "Lastly, you can protect your legs, from low kicks for example, by pressing {b}R{/b}."
-            show screen fight_tutorial(highlight="w", stance="defend")
+            show screen old_fight_tutorial(highlight="w", stance="defend")
             tut "As of right now, there's a jab flying at your face, press {b}W{/b} in the upcoming screen in order to block it."
-            hide screen fight_tutorial
+            hide screen old_fight_tutorial
 
             call screen fight_defendTutorial
 
@@ -1009,7 +1009,7 @@ label tomFightStart:
 
 label youfinish:
     if reaction == 0.5:
-        $ grant_achievement("the_notorious")
+        grant Achievement("the_notorious", "Win your first fight")
             
     $ wintom = True
 
@@ -1165,7 +1165,7 @@ label meet_lauren2:
                 scene s130d # Lauren romancing at you holding your hand
                 with dissolve
 
-                $ grant_achievement("a_new_beginning")
+                grant Achievement("a_new_beginning", "Lauren likes you")
                     
                 la "Maybe you're right."
 
@@ -2077,7 +2077,7 @@ label bo_ad:
             scene s148b
             with dissolve
 
-            $ grant_achievement("over_it")
+            grant Achievement("over_it", "Let Benjamin make a move")
                 
             u "Sure, knock yourself out, man. We're not an item."
 
@@ -2852,6 +2852,8 @@ label try2new:
 
     u "(Aubrey is changing right next to me...)"
 
+    lovense vibrate 2
+
     menu:
         "Peek":
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
@@ -2872,11 +2874,16 @@ label try2new:
                         scene s168a # Aubrey changing good view
                         with dissolve
 
+                        
+
                         u "(Damn, what I wouldn't give to touch her ass right now.)"
 
                         u "(I should stop peeking now, or I risk getting caught.)"
 
+                        lovense stop
                     else:
+                        lovense stop
+
                         jump caughtb
 
                 "Stop peeking":
@@ -3003,6 +3010,8 @@ label try3new:
     u "(Yeehaw!)"
 
     u "(I can hear Aubrey sliding her clothes off...)"
+    
+    lovense vibrate 2
 
     menu:
         "Peek":
@@ -3027,7 +3036,12 @@ label try3new:
                         u "(In all fairness, whenever I watch porn, the person getting caught spying gets to fuck the girl right afterwards.)"
 
                         u "(Still... I better stop peeking now, it's too risky.)"
+
+                        lovense stop
+                    
                     else:
+                
+                        lovense stop
                         jump caughtc
 
                 "Stop peeking":
@@ -3050,6 +3064,7 @@ label v2_nsfwSkipLabel3:
     au "This costume is literally just historic lingerie."
 
     au "I'm not showing you this, haha."
+    lovense vibrate 2
 
     menu:
         "Oh come on":
@@ -3097,9 +3112,13 @@ label v2_nsfwSkipLabel3:
 
             au "So let's get out of these outfits."
 
+            lovense stop
+
             call screen costumes
 
         "Fine":
+            lovense stop
+
             $ reputation.add_point(RepComponent.BOYFRIEND)
 
             u "Alright, fine."
@@ -3237,6 +3256,7 @@ label try4new:
 
     u "(I wonder what Penelope is changing in to.)"
 
+    lovense vibrate 2
     menu:
         "Peek":
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
@@ -3257,11 +3277,16 @@ label try4new:
                         scene s183a # pen changing good view
                         with dissolve
 
+                       
+
                         u "(Oh my god, her ass is so nice.)"
 
                         u "(I should stop peeking now, or I'll get caught.)"
+                        
+                        lovense stop
 
                     else:
+                        lovense stop
                         jump caughtd
 
                 "Stop peeking":
@@ -3278,6 +3303,8 @@ label v2_nsfwSkipLabel4:
 
     scene s179far # showing u and pen in costume
     with Fade (1,0,1)
+
+    lovense vibrate 2
 
     pause 0.5
 
@@ -3323,6 +3350,7 @@ label v2_nsfwSkipLabel4:
 
             pe "Yeah, it's kinda cool."
 
+            lovense stop
             if v2_outfits < 3:
                 pe "Should we try some other outfits?"
 
@@ -3330,6 +3358,8 @@ label v2_nsfwSkipLabel4:
                 pe "Are you ready to buy an outfit?"
 
         "I guess it's nice":
+            lovense stop
+
             $ reputation.add_point(RepComponent.BRO)
 
             scene s179a
@@ -3382,6 +3412,8 @@ label try5new:
 
     u "(Penelope is changing right next to me...)"
 
+    lovense vibrate 2
+
     menu:
         "Peek":
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
@@ -3405,10 +3437,16 @@ label try5new:
                         u "(Damn, what I wouldn't give to touch her ass right now.)"
 
                         u "(I should stop peeking now, or I risk getting caught.)"
+                        lovense stop
+
                     else:
+                        lovense stop
+
                         jump caughte
 
                 "Stop peeking":
+                    lovense stop
+                    
                     pass
 
         "Don't peek":

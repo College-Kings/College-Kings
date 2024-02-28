@@ -104,6 +104,7 @@ label imrecona: # Find Imre
                 call screen reputation_popup
 
                 $ imreforgives = True
+                $ CharacterService.remove_mood(imre, Moods.MAD)
 
                 scene s445
                 with dissolve
@@ -202,7 +203,7 @@ label imrecona: # Find Imre
 
 label imreconb: # Help Imre
 
-    $ grant_achievement("bros_before_hoes")
+    grant Achievement("bros_before_hoes", "Help Imre")
 
     u "(I need to help Imre, Adam will destroy him in his current condition.)"
 
@@ -827,7 +828,7 @@ label imrecond: # Meet Chloe
         "Trust her":
             $ reputation.add_point(RepComponent.BOYFRIEND)
             
-            $ grant_achievement("credulous")
+            grant Achievement("credulous", "Trust Chloe")
 
             u "(I shouldn't spy on her. It's not right.)"
 
@@ -1759,7 +1760,7 @@ label continuebd:
             scene s510 # Mc arrives at his dorm, down at his door there's a flyer (Matt's design)
             with fade
 
-            $ grant_achievement("not_my_business")
+            grant Achievement("not_my_business", "Don't disturb Ms. Rose")
 
     label nr_bb: #for compatibility only
     u "(Huh, what's this?)"
@@ -2690,7 +2691,7 @@ label emsex_c:
     scene emvid1
     with dissolve
 
-    $ grant_achievement("reignition")
+    grant Achievement("reignition", "Kiss Emily back")
 
     " "
 
@@ -2722,7 +2723,7 @@ label emsex_a:
 
     play music music.ck1.sexy
 
-    $ grant_achievement("reignition")
+    grant Achievement("reignition", "Kiss Emily back")
     
     " "
 
@@ -2733,6 +2734,8 @@ label emsex_a:
 
     if is_censored:
         call screen censored_popup("v6_nsfwSkipLabel1")
+    
+    lovense vibrate 2
 
     scene em6
     with dissolve
@@ -2744,6 +2747,10 @@ label emsex_a:
 
     em "I haven't been eaten out in so long..."
 
+    lovense vibrate 4 
+    lovense rotate 2
+    lovense pump 1
+    lovense suction 4
     scene em7a
     with dissolve
 
@@ -2752,6 +2759,12 @@ label emsex_a:
     show screen emilysexoverlay
 
 label emhead:
+    lovense vibrate 5
+    lovense rotate 3
+    lovense thrust 1 
+    lovense pump 1
+    lovense suction 4
+
     scene emvid3
     with dissolve
 
@@ -2827,6 +2840,11 @@ label emhead:
 
     u "You wanna be fucked you little slut?"
 
+    lovense vibrate 6
+    lovense rotate 4
+    lovense thrust 2
+    lovense suction 1
+
     scene em14a
     with dissolve
 
@@ -2863,6 +2881,10 @@ label emhead:
     with dissolve
 
     u "Fucking turn around."
+    lovense vibrate 8
+    lovense rotate 4
+    lovense thrust 3
+    lovense suction 3
 
     scene em16a
     with dissolve
@@ -2886,6 +2908,11 @@ label emhead:
 
     " "
 
+    lovense vibrate 10
+    lovense rotate 5
+    lovense thrust 4
+    lovense suction 4
+
     u "Fuuuck!"
 
     em "Cum inside me! Please! Fill me up!"
@@ -2904,6 +2931,7 @@ label emhead:
 
     play music music.ck1.m7punk
 
+    lovense stop
     scene em17
     with fade
 
@@ -3998,6 +4026,8 @@ label aubreysexb: # aubreysex scene
     stop music fadeout 3
     play music music.ck1.sexy
 
+    lovense vibrate 2
+
     scene naubvid0
     with dissolve
 
@@ -4050,6 +4080,9 @@ label aubreysexb: # aubreysex scene
 
     pause 1.0
 
+    lovense vibrate 3
+    lovense rotate 1
+    
     scene naub5a
     with vpunch
 
@@ -4068,6 +4101,10 @@ label aubreysexb: # aubreysex scene
     with dissolve
 
     au "I can't fucking wait, let's get you undressed."
+
+    lovense vibrate 5
+    lovense rotate 2
+    lovense thrust 1
 
     scene naub7
     with dissolve
@@ -4107,6 +4144,11 @@ label aubreysexb: # aubreysex scene
 label naubblowjob:
     show screen aubreysexoverlay
 
+    lovense vibrate 6
+    lovense rotate 4
+    lovense thrust 2
+    lovense suction 3
+
     scene naubvid4
     with dissolve
 
@@ -4127,6 +4169,11 @@ label naubblowjob:
     with dissolve
 
     au "You wanna have some fun too, huh?"
+
+    lovense vibrate 7
+    lovense rotate 5
+    lovense thrust 3
+    lovense suction 4
 
     scene naub11
     with dissolve
@@ -4156,6 +4203,11 @@ label naub69:
     au "Ahhhhh! Yes, [name]!"
 
     au "Oh my god!"
+
+    lovense vibrate 8
+    lovense rotate 6
+    lovense thrust 4
+    lovense suction 5
 
     scene naub12
     with dissolve
@@ -4224,6 +4276,11 @@ label naub69:
 
     " "
 
+    lovense vibrate 10
+    lovense rotate 6
+    lovense thrust 4
+    lovense suction 5
+
     scene naub16
     with dissolve
 
@@ -4259,6 +4316,10 @@ label naub69:
 
     u "*Wets fingers*"
 
+    lovense vibrate 12
+    lovense rotate 7 
+    lovense thrust 4 
+    lovense suction 6
     scene naub17c
     with vpunch
 
@@ -4279,6 +4340,10 @@ label naubfingering:
     au "Fuck me! I need your dick inside of me!"
 
     " "
+    lovense vibrate 13
+    lovense rotate 7
+    lovense thrust 5
+    lovense suction 7
 
     scene naub18
     with dissolve
@@ -4299,6 +4364,11 @@ label naubmissionary:
     au "*Moans* Fuck me!"
 
     " "
+
+    lovense vibrate 15
+    lovense rotate 9
+    lovense thrust 6 
+    lovense suction 8
 
     scene naubvid10
     with dissolve
@@ -4333,6 +4403,11 @@ label naubbehind:
     au "*Moans louder* Yes, [name]! Don't stop!"
 
     " "
+
+    lovense vibrate 17
+    lovense rotate 10
+    lovense thrust 8
+    lovense suction 7
 
     scene naubvid12
     with dissolve
@@ -4371,6 +4446,7 @@ label naubclimax:
 
     u "Yeah, me too."
 
+    lovense stop 
     scene naub21b
     with dissolve
 
@@ -4849,7 +4925,7 @@ label afteraubrey:
                     with dissolve
                     # handshake clap sound
 
-                    $ grant_achievement("monkey_business")
+                    grant Achievement("monkey_business", "Join the Apes")
 
                     gr "That's what I'm talking about!"
 
@@ -4994,7 +5070,7 @@ label afteraubrey:
         "Stay home":
             $ reputation.add_point(RepComponent.BRO)
             
-            $ grant_achievement("seems_fishy")
+            grant Achievement("seems_fishy", "Don't meet Grayson")
 
             u "(Fuck Grayson, I'm not meeting him.)"
 
@@ -6596,7 +6672,7 @@ label wakeupa:
                 scene s658a # penelope blushing and smiling mouth closed
                 with dissolve
 
-                $ grant_achievement("strike")
+                grant Achievement("strike", "Kiss Penelope")
                     
                 pe "*Giggles*"
 

@@ -1,8 +1,17 @@
 init 999 python:
+    class Charlie(Charli):
+        pass
+
+    class Inventory:
+        pass
+
     class Checklist:
         pass
 
     class SimplrContact:
+        pass
+
+    class ImgReply:
         pass
 
     class ImageMessage:
@@ -17,16 +26,19 @@ init 999 python:
     class CustomCharacter(NonPlayableCharacter):
         pass
 
-    class MainCharacter(PlayableCharacter):
-        pass
-
     class Teacher(NonPlayableCharacter):
         pass
 
-    class FightCharacter(NonPlayableCharacter):
+    class FightCharacter:
         pass
 
     class PathBuilderCatagories:
+        pass
+
+    class PathBuilderItem:
+        pass
+
+    class PathBuilderGirl:
         pass
 
     v1_reply1 = None
@@ -77,6 +89,7 @@ init 999 python:
     v6_reply8 = None
     v6_reply9 = None
     v6_reply10 = None
+    v6_reply11 = None
     v7_msgReply1 = None
     v7_msgReply2 = None
     v7_msgReply3 = None
@@ -85,6 +98,7 @@ init 999 python:
     v7_msgReply6 = None
     v7_msgReply7 = None
     v7_msgReply8 = None
+    v7_msgReply9 = None
     v8s13_reply1 = None
     v8s13_reply2 = None
     v8s19_reply1 = None
@@ -111,6 +125,14 @@ init 999 python:
     v9s16_reply6 = None
     v9s32_reply1 = None
     v9s32_reply2 = None
+    v9s35_reply1 = None
+    v9s35_reply2 = None
+    v9s35_reply3 = None
+    v9s35_reply4 = None
+    v9s35_reply5 = None
+    v9s35_reply5a = None
+    v9s35_reply6 = None
+    v9s35_reply7 = None
     v9s35_reply8 = None
     v9s38_reply1 = None
     v9s38_reply2 = None
@@ -127,8 +149,24 @@ init 999 python:
     v13s15a_Reply1 = None
     v13s15a_Reply2 = None
 
-    def v7_msgReply9():
-        pass
+    v14_emmy_simplr1 = None
 
-    def v14_emmy_simplr1():
-        pass
+    v7_kiwiiReply1 = None
+    v7_kiwiiReply2 = None
+    v7_kiwiiReply3 = None
+    v7_kiwiiReply4 = None
+    v7_kiwiiReply5 = None
+    v7_kiwiiReply6 = None
+    v8s16_kiwiiReply1 = None
+    v8s16_kiwiiReply2 = None
+    v8s16_kiwiiReply3 = None
+    v8s16_kiwiiReply4 = None
+    v11s38_kiwiiReply1 = None
+    v11s38_kiwiiReply2 = None
+    v12s19_kiwiiReply1 = None
+    v12s32kiwiiPost1_Reply1 = None
+    v12s32kiwiiPost1_Reply2 = None
+
+label ingmenu:
+    call screen save
+    return

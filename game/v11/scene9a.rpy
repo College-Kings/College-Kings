@@ -196,7 +196,7 @@ label v11_wolves_seb_prank:
             scene v11wsp4b
             with dissolve
 
-            $ kiwii_post = KiwiiService.new_post(caleb, "phone/kiwii/Posts/v11/sebnaked.webp", _("Someone had a fun time last night!"), number_likes=556) # Sebastian naked in the middle of campus stood over his sleeping bag looking confused
+            $ kiwii_post = KiwiiService.new_post(caleb, "ck1_v11_sebastian_naked", _("Someone had a fun time last night!"), number_likes=556) # Sebastian naked in the middle of campus stood over his sleeping bag looking confused
             $ KiwiiService.new_comment(kiwii_post, aubrey, _("Suns out, Buns out!"), number_likes=renpy.random.randint(100, 300))
             $ KiwiiService.new_comment(kiwii_post, samantha, _("A little early in the morning to go streaking isn't it? lol"), number_likes=renpy.random.randint(100, 300))
             $ KiwiiService.new_comment(kiwii_post, lindsey, _("Spicy!"), number_likes=renpy.random.randint(100, 300))
@@ -492,7 +492,7 @@ label v11_wolves_seb_prank:
 
             imre "Check Kiwii."
 
-            $ kiwii_post = KiwiiService.new_post(caleb, "phone/kiwii/Posts/v11/sebnaked.webp", _("Someone had a fun time last night!"), number_likes=556) # Sebastian naked in the middle of campus stood over his sleeping bag looking confused
+            $ kiwii_post = KiwiiService.new_post(caleb, "ck1_v11_sebastian_naked", _("Someone had a fun time last night!"), number_likes=556) # Sebastian naked in the middle of campus stood over his sleeping bag looking confused
             $ KiwiiService.new_comment(kiwii_post, aubrey, _("Suns out, Buns out!"), number_likes=renpy.random.randint(100, 300))
             $ KiwiiService.new_comment(kiwii_post, samantha, _("A little early in the morning to go streaking isn't it? lol"), number_likes=renpy.random.randint(100, 300))
             $ KiwiiService.new_comment(kiwii_post, lindsey, _("Spicy!"), number_likes=renpy.random.randint(100, 300))

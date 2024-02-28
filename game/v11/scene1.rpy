@@ -1103,7 +1103,7 @@ label v11_case_verdict:
         scene v11coc14b
         with dissolve
 
-        $ grant_achievement("perry_mason")
+        grant Achievement("perry_mason", "Successfully defend Penelope")
         lee "Don't thank us, thank your friend. He did a very good job representing you. We may just have a future lawyer in our midst."
 
         scene v11coc14c
@@ -1295,7 +1295,7 @@ label v11_case_verdict:
     scene v11coc27 # TPP. Third person view of MC, he is alone and has a tired expression, mouth closed, in the hallway
     with dissolve
 
-    $ kiwii_post = KiwiiService.new_post(autumn, "phone/kiwii/Posts/v11/v11_autumn_kiwii.webp", _("Best charity event yet, thanks for all the donations!"), number_likes=556)
+    $ kiwii_post = KiwiiService.new_post(autumn, "ck1_v11_autumn_post", _("Best charity event yet, thanks for all the donations!"), number_likes=556)
     $ KiwiiService.new_comment(kiwii_post, aubrey, _("So psyched!"), number_likes=renpy.random.randint(200, 500))
     $ KiwiiService.new_comment(kiwii_post, cameron, _("What you doing later? ;)"), number_likes=renpy.random.randint(200, 500))
     $ KiwiiService.new_comment(kiwii_post, lindsey, _("It was an awesome day!"), number_likes=renpy.random.randint(200, 500))

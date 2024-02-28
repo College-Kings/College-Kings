@@ -549,7 +549,7 @@ label dodged_pipe:
     scene v8sdd14 # TPP. Show MC looking up at Joe who is in shock, MC starts to stand up in preparation to plant a huge uppercut on Joe's chin. Lars on the ground. MC focused expression, MC mouth open.
     with dissolve
 
-    $ grant_achievement("ip_man")
+    grant Achievement("ip_man", "Win the alley fight")
 
     u "Fuck you!"
 

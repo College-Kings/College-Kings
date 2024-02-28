@@ -207,7 +207,7 @@ label v11_roommate:
 
             cl "Goodnight."
 
-            $ kiwii_post = KiwiiService.new_post(chloe, "phone/kiwii/Posts/v11/v11_chloemcselfie.webp", _("My Europe roommate!"), number_likes=756)
+            $ kiwii_post = KiwiiService.new_post(chloe, "ck1_v11_chloe_mc_selfie", _("My Europe roommate!"), number_likes=756)
             $ KiwiiService.new_comment(kiwii_post, aubrey, _("Look at you two!"), number_likes=renpy.random.randint(100, 200))
             $ KiwiiService.add_replies(kiwii_post,
                 KiwiiReply(_("I think I made the correct choice of roommate ;)"), number_likes=321),
@@ -320,7 +320,7 @@ label v11_roommate:
 
             cl "Haha, just like that."
 
-            $ kiwii_post = KiwiiService.new_post(chloe, "phone/kiwii/Posts/v11/v11_chloemcselfie.webp", _("My Europe roommate!"), number_likes=756)
+            $ kiwii_post = KiwiiService.new_post(chloe, "ck1_v11_chloe_mc_selfie", _("My Europe roommate!"), number_likes=756)
             $ KiwiiService.new_comment(kiwii_post, aubrey, _("Look at you two!"), number_likes=renpy.random.randint(100, 200))
             $ KiwiiService.add_replies(kiwii_post,
                 KiwiiReply(_("I think I made the correct choice of roommate ;)"), number_likes=321),
@@ -896,7 +896,7 @@ label v11_roommate:
 
                     ri "...And all of a sudden I'm tired. *Chuckles*"
 
-        $ kiwii_post = KiwiiService.new_post(riley, "phone/kiwii/Posts/v11/v11_rileymcselfie.webp", _("Roll on Europe!"), number_likes=456)
+        $ kiwii_post = KiwiiService.new_post(riley, "ck1_v11_riley_mc_selfie", _("Roll on Europe!"), number_likes=456)
         $ KiwiiService.new_comment(kiwii_post, ryan, _("Good roommate pick!"), number_likes=renpy.random.randint(100, 300))
         $ KiwiiService.add_replies(kiwii_post,
             KiwiiReply(_("Europe's gonna be a blast!"), number_likes=321),

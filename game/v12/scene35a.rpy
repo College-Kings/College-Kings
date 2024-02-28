@@ -398,6 +398,11 @@ label v12_nora_sex:
         if is_censored:
             call screen censored_popup("v12s35a_nsfwSkipLabel1")
 
+        lovense vibrate 2
+        lovense rotate 1
+        lovense suction 1
+        lovense thrust 1
+
         scene v12nos19 # TPP. Show MC and Nora taking off their shirts
         with dissolve
 
@@ -463,6 +468,11 @@ label v12_nora_sex:
 
         pause
 
+        lovense vibrate 5
+        lovense rotate 3
+        lovense suction 3
+        lovense thrust 3
+
         image v12norsb = Movie(play="images/v12/Scene 35a/v12norsb.webm", loop=True, image="images/v12/Scene 35a/v12norsbStart.webp", start_image="images/v12/Scene 35a/v12norsbStart.webp") # Nora spooning
         image v12norsbf = Movie(play="images/v12/Scene 35a/v12norsbf.webm", loop=True, image="images/v12/Scene 35a/v12norsbStart.webp", start_image="images/v12/Scene 35a/v12norsbStart.webp") # Nora spooning spedup
         image v12norsb2 = Movie(play="images/v12/Scene 35a/v12norsb2.webm", loop=True, image="images/v12/Scene 35a/v12norsb2Start.webp", start_image="images/v12/Scene 35a/v12norsb2Start.webp") # Nora spooning TPP 2
@@ -514,6 +524,11 @@ label v12_nora_sex:
 
         pause
 
+        lovense vibrate 7
+        lovense rotate 5
+        lovense suction 5
+        lovense thrust 5
+
         image v12norst = Movie(play="images/v12/Scene 35a/v12norst.webm", loop=True, image="images/v12/Scene 35a/v12norstStart.webp", start_image="images/v12/Scene 35a/v12norstStart.webp") # Nora sit on throne
         image v12norstf = Movie(play="images/v12/Scene 35a/v12norstf.webm", loop=True, image="images/v12/Scene 35a/v12norstStart.webp", start_image="images/v12/Scene 35a/v12norstStart.webp") # Nora sit on throne spedup
         image v12norst2 = Movie(play="images/v12/Scene 35a/v12norst2.webm", loop=True, image="images/v12/Scene 35a/v12norst2Start.webp", start_image="images/v12/Scene 35a/v12norst2Start.webp") # Nora sit on throne TPP 2
@@ -532,6 +547,11 @@ label v12_nora_sex:
         u "From now on..."
 
         no "Mmm, yes [name]!"
+
+        lovense vibrate 9
+        lovense rotate 7
+        lovense suction 7
+        lovense thrust 7
 
         scene v12norst2 # Ignore as animation
         with dissolve
@@ -556,6 +576,11 @@ label v12_nora_sex:
         with dissolve
 
         pause
+
+        lovense vibrate 11
+        lovense rotate 9
+        lovense suction 9
+        lovense thrust 9
 
         image v12norcw = Movie(play="images/v12/Scene 35a/v12norcw.webm", loop=True, image="images/v12/Scene 35a/v12norcwStart.webp", start_image="images/v12/Scene 35a/v12norcwStart.webp") # Nora Candle on Wall
         image v12norcwf = Movie(play="images/v12/Scene 35a/v12norcwf.webm", loop=True, image="images/v12/Scene 35a/v12norcwStart.webp", start_image="images/v12/Scene 35a/v12norcwStart.webp") # Nora Candle on Wall spedup
@@ -591,6 +616,11 @@ label v12_nora_sex:
         no "Yes, [name]! FUCK!"
 
         no "*Moans* Don't... stop... I'm- *Gasps*"
+        
+        lovense vibrate 13
+        lovense rotate 11
+        lovense suction 11
+        lovense thrust 11
 
         scene v12nos32 # TPP. Show MC and Nora switching places, MC's back towards the wall, MC and Nora kissing, Nora giving MC a handjob
         with dissolve
@@ -622,6 +652,11 @@ label v12_nora_sex:
 
         u "Ahh, fuck, Nora! I'm gonna cum..."
 
+        lovense vibrate 15
+        lovense rotate 13
+        lovense suction 13
+        lovense thrust 13
+
         scene v12norkhj2f # Ignore as animation
         with dissolve
         pause
@@ -638,6 +673,8 @@ label v12_nora_sex:
 
         pause
 
+        lovense stop
+        
         scene v12nos35 # FPP. Same positioning as v12nos35, MC and Nora looking at each other, Nora smiling, mouth closed
         with dissolve
 
@@ -697,7 +734,7 @@ label v12_nora_sex:
         with dissolve
 
         if "v12_lindsey" in sceneList and "v12_nora" in sceneList and "v12_lauren" in sceneList and "v12_rose" in sceneList:
-            $ grant_achievement("city_of_love")
+            grant Achievement("city_of_love", "Have sex with Lauren, Nora, Ms. Rose and Lindsey")
 
         u "You too..."
 
@@ -730,9 +767,9 @@ label v12_nora_sex:
         with dissolve
 
         if mc.frat == Frat.WOLVES:
-            $ grant_achievement("inside_job")
+            grant Achievement("inside_job", "Have sex with Nora as a Wolf")
         else:
-            $ grant_achievement("all_is_fair_in_love_and_war")
+            grant Achievement("all_is_fair_in_love_and_war", "Have sex with Nora as an Ape")
 
         u "(I just had sex with Nora. NORA!!! I fucked Chris' girl! Wow... Gonna have to sleep on this one.)"
 

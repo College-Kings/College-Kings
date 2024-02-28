@@ -31,8 +31,8 @@ define gui.show_name = False
 ## or semicolons.
 
 define build.name = "CollegeKings"
-define build.directory_name = "CollegeKings{}".format("" if config.enable_steam else '.'.join(str(x) for x in config.version))
-define build.destination = "{}-{}-dists".format(build.name, "Steam" if config.enable_steam else "Patreon")
+define build.directory_name = "CollegeKings{}".format("" if config.enable_steam else f"-{config.version}")
+define build.destination = "{}-dists".format(build.name)
 
 ## Sounds and music ############################################################
 
@@ -100,12 +100,6 @@ define config.end_game_transition = None
 ## "window hide", and "window auto" statements.
 
 define config.window = "auto"
-
-
-## Transitions used to show and hide the dialogue window
-
-define config.window_show_transition = Dissolve(.2)
-define config.window_hide_transition = Dissolve(.2)
 
 
 ## Preference defaults #########################################################
@@ -184,6 +178,7 @@ init python:
 
     ## To archive files, classify them as 'archive'.
 
+    build.classify('game/**.py', 'archive')
     build.classify('game/**.rpy', "archive")
     build.classify("game/**.rpyc", "archive")
 

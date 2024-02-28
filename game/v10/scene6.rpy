@@ -424,7 +424,7 @@ label v10_mc_vs_ryan_fight:
             scene v10mvr6a
             with dissolve
 
-            $ grant_achievement("fright_club")
+            grant Achievement("fright_club", "Don't fight Ryan at the Brawl")
             
             u "I don't think I can do this. Sorry guys."
 

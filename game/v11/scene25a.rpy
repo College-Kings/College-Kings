@@ -3,7 +3,7 @@
 # Characters: MC (Outfit 1), charli (Outfit 1)
 # Time: Evening
 
-label v11_hotel_charlie_bar:
+label v11_hotel_charli_bar:
     scene v11cmb1 # TPP. Show Charli approaching MC at the bar.
     with dissolve
     play music music.ck1.v11.Track_Scene_5_6 fadein 2

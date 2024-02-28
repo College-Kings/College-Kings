@@ -109,7 +109,7 @@ label v9_thur_w_punch:
     
     pause 1
 
-    call screen phone
+    call screen kiwii_home
 
     scene v9trs5
     with dissolve

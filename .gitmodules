@@ -1,6 +1,3 @@
-[submodule "game/tl"]
-	path = game/tl
-	url = https://github.com/College-Kings/college-kings-translations.git
 [submodule "game/phone"]
 	path = game/phone
 	url = https://github.com/College-Kings/college-kings-phone.git
@@ -28,3 +25,15 @@
 [submodule "game/tutorials"]
 	path = game/tutorials
 	url = https://github.com/College-Kings/college-kings-tutorials.git
+[submodule "game/lovense"]
+	path = game/lovense
+	url = https://github.com/College-Kings/college-kings-lovense.git
+[submodule "renpy"]
+	path = renpy
+	url = https://github.com/KiloOscarSix/renpy-stubs.git
+[submodule "game/items"]
+	path = game/items
+	url = https://github.com/College-Kings/college-kings-items.git
+[submodule "game/_lovense"]
+	path = game/_lovense
+	url = https://github.com/College-Kings/college-kings-lovense.git

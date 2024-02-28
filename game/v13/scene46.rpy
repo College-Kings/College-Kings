@@ -41,7 +41,7 @@ label v13s46:
             with dissolve
 
             if emmy.points >= 2:
-                $ grant_achievement("urbanizer_womanizer")
+                grant Achievement("urbanizer_womanizer", "Tell Emmy and Lauren you're a city man")
 
             u "I don't hate being outside, but... *Chuckles* I'm definitely a city person."
 
@@ -437,7 +437,7 @@ label v13s46:
 
         "Haha, okay":
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
-            $ grant_achievement("voyeur")
+            grant Achievement("voyeur", "What are they doing over there?")
 
             u "Okay, lead the way. *Chuckles*"
 

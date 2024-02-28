@@ -46,6 +46,8 @@ label v13s62a:
 
     pause
 
+    lovense vibrate 2
+
     scene v13s62a_7 # TPP. Show LIndsey taking off her pants (she has panties on, no bra), sexy expression, mouth closed
     with dissolve
 
@@ -88,6 +90,7 @@ label v13s62a:
 
     #pause
 
+    lovense stop
     stop music fadeout 3
 
     jump v14_start

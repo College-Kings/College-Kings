@@ -490,6 +490,11 @@ label v9_emily_dorm:
     show screen v9s16_emilySexOverlay
 
 label v9s16_emilyBlowjob:
+    lovense vibrate 4
+    lovense rotate 3
+    lovense suction 3
+    lovense thrust 3
+
     scene v9emibj
     with dissolve
     pause 
@@ -551,6 +556,11 @@ label v9s16_emilyBlowjob:
 
     pause 1
 
+    lovense vibrate 6
+    lovense rotate 4
+    lovense suction 4
+    lovense thrust 4
+
     scene v9emi23 # FPP. Show Emily looking at camera, Emily, flirty grin, mouth open.
     with dissolve
 
@@ -567,6 +577,12 @@ label v9s16_emilyBlowjob:
     em "YES!"
 
 label v9s16_emilyMissionary:
+    lovense vibrate 7 
+    lovense rotate 4
+    lovense suction 4
+    lovense thrust 4
+    lovense pump 1
+
     scene v9emi24 # TPP. Show MC getting into missionary with Emily, Emily biting her lip slightly. MC penis just outside of Emily's pussy.
     with dissolve
 
@@ -613,6 +629,12 @@ label v9s16_emilyMissionary:
     pause 1
 
 label v9s16_emilyCowgirl:
+    lovense vibrate 8
+    lovense rotate 5
+    lovense suction 4
+    lovense thrust 4
+    lovense pump 1
+
     scene v9emi27a # FPP. Same camera as v9emi27, Emily now fully sat on MC's penis.
     with vpunch
 
@@ -666,6 +688,12 @@ label v9s16_emilyCowgirl:
     u "Perfect."
 
 label v9s16_emilyDoggy:
+    lovense vibrate 8
+    lovense rotate 5
+    lovense suction 5
+    lovense thrust 5
+    lovense pump 2
+
     scene v9emi31 # TPP. Show MC grabbing Emily's waist from behind and lifting her up so she is in a doggy style position.
     with dissolve
     
@@ -715,6 +743,8 @@ label v9s16_emilyDoggy:
 
     pause 1
 
+    lovense stop
+    
     scene v9emi34 # FPP. Show Emily, tired smile, mouth open.
     with dissolve
 

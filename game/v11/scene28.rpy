@@ -111,6 +111,11 @@ label v11_ms_rose_sex_sg:
     if is_censored:
         call screen censored_popup("v11s28_nsfwSkipLabel1")
 
+    lovense vibrate 2
+    lovense rotate 1
+    lovense suction 1
+    lovense thrust 1
+
     scene v11ros5 # TPP. Show Ms Rose removing MC's pants, show her ass appearing from under the bathrobe while she's bending over to remove his pants
     with dissolve
 
@@ -140,6 +145,11 @@ label v11_ms_rose_sex_sg:
     with dissolve
 
     u "Yes."
+
+    lovense vibrate 3
+    lovense rotate 2
+    lovense suction 2
+    lovense thrust 2
 
     scene v11ros7b # FPP. MC is looking as Ms Rose slides down, she is kissing his abs
     with dissolve
@@ -173,6 +183,11 @@ label v11_ms_rose_sex_sg:
 
     pause 1
 
+    lovense vibrate 5
+    lovense rotate 4
+    lovense suction 4
+    lovense thrust 4
+
     image v11roscgc = Movie(play="images/v11/Scene 28/v11roscgc.webm", loop=True, image="images/v11/Scene 28/v11roscgcStart.webp", start_image="images/v11/Scene 28/v11roscgcStart.webp") # Ms Rose cowgirl choking
     image v11roscgcf = Movie(play="images/v11/Scene 28/v11roscgcf.webm", loop=True, image="images/v11/Scene 28/v11roscgcStart.webp", start_image="images/v11/Scene 28/v11roscgcStart.webp") # Ms Rose cowgirl choking spedup
 
@@ -204,6 +219,11 @@ label v11_ms_rose_sex_sg:
     pause
 
     ro "Harder."
+
+    lovense vibrate 7
+    lovense rotate 6
+    lovense suction 6
+    lovense thrust 6
 
     scene v11rosmf # Ignore as animation
     with dissolve
@@ -240,6 +260,11 @@ label v11_ms_rose_sex_sg:
 
     ro "Do it."
 
+    lovense vibrate 9
+    lovense rotate 7
+    lovense suction 7
+    lovense thrust 7
+
     scene v11ros13 # TPP. Close up shot of Ms Rose's pussy filled with cum (she's doggystyle position)
     with dissolve
 
@@ -264,6 +289,8 @@ label v11_ms_rose_sex_sg:
     with dissolve
 
     ro "If you want this to happen again, the answer is no."
+
+    lovense stop
 
     scene v11ros15a
     with dissolve

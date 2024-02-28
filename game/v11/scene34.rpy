@@ -463,7 +463,7 @@ label v11_cardealership:
                             play sound sound.kiss
 
                             if CharacterService.is_girlfriend(lauren) and not v11_lauren_caught_aubrey:
-                                $ grant_achievement("two_timer")
+                                grant Achievement("two_timer", "Date both Lauren and Chloe")
 
                             pause 2.5
 
@@ -536,6 +536,8 @@ label v11_cardealership:
                             pause 1
 
                     "Let's get the car back":
+                        $ CharacterService.set_relationship(chloe, Relationship.FRIEND)
+                        
                         scene v11cd39
                         with dissolve
 

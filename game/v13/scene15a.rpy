@@ -106,7 +106,7 @@ label v13s15a:
             if MessengerService.has_replies(lauren):
                 u "(I should check my phone.)"
 
-    if v13_cuddle_lauren_text:
+    if v13_cuddle_lauren:
         scene v13s15a_6b
         with dissolve
 
@@ -165,7 +165,7 @@ label v13s15a:
 
         menu:
             "Stay with Riley":
-                $ grant_achievement("gentlemen_prefer_gingers")
+                grant Achievement("gentlemen_prefer_gingers", "Bail on Lauren's cuddles")
                 u "Is that even a question?"
 
                 scene v13s15a_9 # TPP. Show MC removing his pants, shirt already off, smiling, mouth closed

@@ -1811,6 +1811,9 @@ label conl:
                 if is_censored:
                     call screen censored_popup("aubsexad")
 
+                lovense vibrate 2
+                lovense rotate 1
+
                 scene s254aa ## aubrey and you standing
                 with dissolve
 
@@ -1830,6 +1833,7 @@ label conl:
                 with dissolve
 
                 au "Yeah..."
+                lovense stop
 
     else: # you didn't meet aubrey
         python:
@@ -2042,6 +2046,8 @@ label conl:
 
         u "I can't just-"
 
+        lovense vibrate 2
+
         scene s254l
         with dissolve
 
@@ -2059,6 +2065,9 @@ label conl:
         with dissolve
 
         pause 0.5
+
+        lovense vibrate 4
+        lovense rotate 2
 
         scene s254ac # your pants down aubrey forward
         with dissolve
@@ -2135,6 +2144,9 @@ label conl:
 
                 au "Fuck..."
 
+                lovense vibrate 5
+                lovense rotate 3
+
                 scene anew5 # you grab her pants
                 with dissolve
 
@@ -2164,6 +2176,9 @@ label conl:
 
                 pause 1.5
 
+                lovense vibrate 6
+                lovense rotate 3
+
                 scene anew6
                 with dissolve
 
@@ -2185,6 +2200,9 @@ label conl:
                 au "*Kiss*"
 
         "Stop it":
+
+            lovense stop
+
             scene s254c
             with dissolve
 
@@ -2230,6 +2248,13 @@ label conl:
 
 
 label abj:
+
+    lovense vibrate 6
+    lovense rotate 4
+    lovense thrust 3
+    lovense depth 1
+    lovense finger 3
+
     show screen aubsex
     scene asexnew2start # aub bj start
     with dissolve
@@ -2297,6 +2322,12 @@ label abj:
 
     au "*Whispers* Fuck me, [name]."
 
+    lovense vibrate 6
+    lovense rotate 4
+    lovense thrust 3
+    lovense depth 1
+    lovense finger 3
+
     scene s259d
     with dissolve
 
@@ -2332,6 +2363,12 @@ label amiss:
 
     " "
 
+    lovense vibrate 6
+    lovense rotate 4
+    lovense thrust 3
+    lovense depth 1
+    lovense finger 3
+
     scene anew7 # aubrey close up seductive
     with dissolve
 
@@ -2353,6 +2390,11 @@ label acow:
     au "Fuck yes!"
 
     " "
+    lovense vibrate 7
+    lovense rotate 5
+    lovense thrust 4
+    lovense depth 1
+    lovense finger 4
 
     scene asexnew11 # slow sex angle 2
 
@@ -2434,6 +2476,7 @@ label acream:
 
     pause 0.5
 
+    lovense stop
     stop music fadeout 3
 
     scene s264 # you going back to your dorm
@@ -2693,7 +2736,7 @@ label continueq:
             scene s270
             with dissolve
 
-            $ grant_achievement("not_now_mom")
+            grant Achievement("not_now_mom", "Decline Julia's call")
                 
             u "(I don't really feel like talking to her right now.)"
 
@@ -3070,7 +3113,7 @@ label continueq:
                     pause 1
                     play sound sound.kiss
 
-                    $ grant_achievement("lips_dont_lie")
+                    grant Achievement("lips_dont_lie", "Kiss Riley at the Park")
                         
                     " "
 
@@ -3241,7 +3284,7 @@ label continueq:
                     scene s287f # Lauren gone
                     with dissolve
 
-                    $ grant_achievement("truth_hurts")
+                    grant Achievement("truth_hurts", "Tell Lauren about Aubrey")
                         
                     u "(Fuck me... I guess that's what honesty gets you.)"
 

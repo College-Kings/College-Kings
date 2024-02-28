@@ -43,12 +43,12 @@ label v8_ending:
         $ MessengerService.add_reply(imre, _("No, what?"))
         $ MessengerService.new_message(imre, _("IDK, it's crazy"))
 
-        $ kiwii_post = KiwiiService.new_post(chris, "phone/kiwii/Posts/v8/red_square.webp", "", number_likes=renpy.random.randint(100, 200))
-        $ kiwii_post = KiwiiService.new_post(grayson, "phone/kiwii/Posts/v8/red_square.webp", "", number_likes=renpy.random.randint(100, 200))
-        $ kiwii_post = KiwiiService.new_post(aaron, "phone/kiwii/Posts/v8/red_square.webp", "", number_likes=renpy.random.randint(100, 200))
-        $ kiwii_post = KiwiiService.new_post(cameron, "phone/kiwii/Posts/v8/red_square.webp", "", number_likes=renpy.random.randint(100, 200))
-        $ kiwii_post = KiwiiService.new_post(aubrey, "phone/kiwii/Posts/v8/red_square.webp", "", number_likes=renpy.random.randint(100, 200))
-        $ kiwii_post = KiwiiService.new_post(samantha, "phone/kiwii/Posts/v8/red_square.webp", "", number_likes=renpy.random.randint(100, 200))
+        $ kiwii_post = KiwiiService.new_post(chris, "ck1_v8_red_square", "", number_likes=renpy.random.randint(100, 200))
+        $ kiwii_post = KiwiiService.new_post(grayson, "ck1_v8_red_square", "", number_likes=renpy.random.randint(100, 200))
+        $ kiwii_post = KiwiiService.new_post(aaron, "ck1_v8_red_square", "", number_likes=renpy.random.randint(100, 200))
+        $ kiwii_post = KiwiiService.new_post(cameron, "ck1_v8_red_square", "", number_likes=renpy.random.randint(100, 200))
+        $ kiwii_post = KiwiiService.new_post(aubrey, "ck1_v8_red_square", "", number_likes=renpy.random.randint(100, 200))
+        $ kiwii_post = KiwiiService.new_post(samantha, "ck1_v8_red_square", "", number_likes=renpy.random.randint(100, 200))
         
         scene v8send4 # TPP. Show MC, MC looks really confused.
         with dissolve
@@ -96,12 +96,12 @@ label v8_ending:
         $ MessengerService.add_reply(ryan, _("I don't know. What is it?"))
         $ MessengerService.new_message(ryan, _("Fuckin check it out man. Crazy shit"))
 
-        $ kiwii_post = KiwiiService.new_post(chris, "phone/kiwii/Posts/v8/red_square.webp", "", number_likes=renpy.random.randint(100, 200))
-        $ kiwii_post = KiwiiService.new_post(grayson, "phone/kiwii/Posts/v8/red_square.webp", "", number_likes=renpy.random.randint(100, 200))
-        $ kiwii_post = KiwiiService.new_post(aaron, "phone/kiwii/Posts/v8/red_square.webp", "", number_likes=renpy.random.randint(100, 200))
-        $ kiwii_post = KiwiiService.new_post(cameron, "phone/kiwii/Posts/v8/red_square.webp", "", number_likes=renpy.random.randint(100, 200))
-        $ kiwii_post = KiwiiService.new_post(aubrey, "phone/kiwii/Posts/v8/red_square.webp", "", number_likes=renpy.random.randint(100, 200))
-        $ kiwii_post = KiwiiService.new_post(samantha, "phone/kiwii/Posts/v8/red_square.webp", "", number_likes=renpy.random.randint(100, 200))
+        $ kiwii_post = KiwiiService.new_post(chris, "ck1_v8_red_square", "", number_likes=renpy.random.randint(100, 200))
+        $ kiwii_post = KiwiiService.new_post(grayson, "ck1_v8_red_square", "", number_likes=renpy.random.randint(100, 200))
+        $ kiwii_post = KiwiiService.new_post(aaron, "ck1_v8_red_square", "", number_likes=renpy.random.randint(100, 200))
+        $ kiwii_post = KiwiiService.new_post(cameron, "ck1_v8_red_square", "", number_likes=renpy.random.randint(100, 200))
+        $ kiwii_post = KiwiiService.new_post(aubrey, "ck1_v8_red_square", "", number_likes=renpy.random.randint(100, 200))
+        $ kiwii_post = KiwiiService.new_post(samantha, "ck1_v8_red_square", "", number_likes=renpy.random.randint(100, 200))
 
         while MessengerService.has_replies(ryan):
             call screen phone

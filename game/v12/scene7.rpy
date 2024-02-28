@@ -668,7 +668,7 @@ label v12s7_aubrey2:
             scene v12ferauh2a # TPP. same 2, mc mouth open
             with dissolve
             
-            $ grant_achievement("doctors_orders")
+            grant Achievement("doctors_orders", "Accept Nurse Aubrey's advances")
             u "Oh... Yeah, this is definitely more interesting than a murder."
 
             scene v12ferauh3 # TPP. Show aubrey kissing mc, placing his hand on her ass.
@@ -905,7 +905,7 @@ label v12s7_riley1:
             scene v12ferri4a
             with dissolve
 
-            $ grant_achievement("zero_to_hero")
+            grant Achievement("zero_to_hero", "Tell Riley you are poor")
             u "I'm actually quite poor myself. My manager takes nearly all of my winnings and after expenses, I'm usually left with hardly anything."
 
             scene v12ferri4
@@ -1098,7 +1098,7 @@ label v12s7_chloe1:
     scene v12ferch1
     with dissolve
 
-    u "Being poor is nothing more than a setting stone to being rich, because no one chooses to be poor. That's why I donate half of all my fight proceeds to those in need."
+    u "Being poor is nothing more than a stepping stone to being rich, because no one chooses to be poor. That's why I donate half of all my fight proceeds to those in need."
 
     scene v12ferch1a
     with dissolve
@@ -1806,7 +1806,7 @@ label v12s7_lauren1:
     scene v12ferla1
     with dissolve
 
-    u "*Laughs* Wait, you're character is a killer on the run but you're saying you're not the killer? I don't know if I can believe that."
+    u "*Laughs* Wait, your character is a killer on the run but you're saying you're not the killer? I don't know if I can believe that."
 
     scene v12ferla1b # FPP. same 1, Show lauren annoyed, mouth open
     with dissolve
@@ -2630,7 +2630,7 @@ label v12s7_imre_kill:
     scene v12ferim1b
     with dissolve
 
-    $ grant_achievement("mercy_killing")
+    grant Achievement("mercy_killing", "Kill Imre")
     imre "FREEDOM!!!"
 
     scene v12ferim1c
@@ -2658,7 +2658,7 @@ label v12s7_imre_kill:
 
     call screen v12s7_foyer
 
-label v12s7_lindsey_charlie1:
+label v12s7_lindsey_charli1:
     $ freeroam9.add("lindsey")
     $ v12s7_seenList = [lindsey, charli]
 
@@ -3267,7 +3267,7 @@ label v12s7_charli_kill:
     with dissolve
 
     if len(v12s7_killList) == v12s7_victims:
-        $ grant_achievement("best_for_last")
+        grant Achievement("best_for_last", "Charli is your final kill")
 
     u "Boom."
 
@@ -4888,7 +4888,7 @@ label v12s7_samantha_kill:
     scene v12fersam4 # TPP. Show mc, mouth open, pointing finger fun at sam.
     with dissolve
 
-    $ grant_achievement("talk_murder_to_me")
+    grant Achievement("talk_murder_to_me", "Kill Samantha")
     u "Boom."
 
     stop music fadeout 3
@@ -6217,7 +6217,7 @@ label v12s7_mc_caught:
     play music music.ck1.v12.Track_Scene_7_7 fadein 2
 
     if len(v12s7_killList) == 0:
-        $ grant_achievement("weapons_down")
+        grant Achievement("weapons_down", "Don't kill anyone")
 
     unknown "I found the murderer!"
 

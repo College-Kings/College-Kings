@@ -788,7 +788,7 @@ label continuez:
                     "Sorry, not in public":
                         $ reputation.add_point(RepComponent.TROUBLEMAKER)
                         
-                        $ grant_achievement("on_the_low")
+                        grant Achievement("on_the_low", "Deny PDA with Lauren")
 
                         u "Sorry, but can we just make sure we're alone before we do stuff like that. I just feel uncomfortable even just kissing in public."
 
@@ -1321,7 +1321,7 @@ label trolleybb: # you do press the lever
     with vpunch
 
     if "q2" in laurentest:
-        $ grant_achievement("peta_public_enemy")
+        grant Achievement("peta_public_enemy", "Kill dog as animal lover")
 
     u "Ahh fuck!"
 
@@ -2149,7 +2149,7 @@ label continueaf:
                 "Sorry, not in public":
                     $ reputation.add_point(RepComponent.TROUBLEMAKER)
                     
-                    $ grant_achievement("on_the_low")
+                    grant Achievement("on_the_low", "Deny PDA with Lauren")
 
                     u "Sorry, but can we just make sure we're alone before we do stuff like that. I just feel uncomfortable even just kissing in public."
 
@@ -3560,7 +3560,7 @@ label fl_a:  # tell the school
 
     stop music fadeout 3
 
-    $ grant_achievement("snitch")
+    grant Achievement("snitch", "Tell the school")
 
     u "(I need to tell the school, it's the only way to sort this out.)"
 
@@ -4287,7 +4287,10 @@ label findimre:
         $ MessengerService.new_message(amber, _("Go somewhere where you're completely alone xx"))
         $ MessengerService.new_message(amber, _("I got a surprise for you ;)"))
 
-        call screen phone
+        while MessengerService.has_replies(amber):
+            call screen phone
+            if MessengerService.has_replies(amber):
+                u "(I should reply to Amber.)"
 
         pause 0.5
 
@@ -4304,7 +4307,10 @@ label findimre:
         $ MessengerService.add_reply(chloe, _("Any chance we could do it later? Or tomorrow?"))
         $ MessengerService.new_message(chloe, _("I'm busy later tonight and I'm pretty much booked for the entire week :/"))
 
-        call screen phone
+        while MessengerService.has_replies(chloe):
+            call screen phone
+            if MessengerService.has_replies(chloe):
+                u "(I should reply to Chloe.)"
 
         pause 0.5
 

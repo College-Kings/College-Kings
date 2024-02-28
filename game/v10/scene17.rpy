@@ -303,6 +303,11 @@ label v10_aubrey_house:
                         if is_censored:
                             call screen censored_popup("v10s17_nsfwSkipLabel1")
 
+                        lovense vibrate 2
+                        lovense rotate 1
+                        lovense suction 1
+                        lovense thrust 1
+
                         scene v10auh5b # FPP Same angle as v10auh5, Aubrey removing top with bottoms still on while smiling, mouth open
                         with dissolve
 
@@ -337,6 +342,11 @@ label v10_aubrey_house:
                         if is_censored:
                             call screen censored_popup("v10s17_nsfwSkipLabel1")
 
+                        lovense vibrate 2
+                        lovense rotate 1
+                        lovense suction 1
+                        lovense thrust 1
+
                         scene v10auh5f # FPP Same angle as v10auh5, Aubrey removing bottoms while top still on, smiling, mouth open
                         with dissolve
 
@@ -361,6 +371,11 @@ label v10_aubrey_house:
                         with dissolve
 
                         au "I'm enjoying the audience."
+                
+                lovense vibrate 3
+                lovense rotate 2
+                lovense suction 2 
+                lovense thrust 2
 
                 scene v10auh5i # FPP Same angle and expression as v10auh5e, Aubrey mouth closed
                 with dissolve
@@ -370,7 +385,7 @@ label v10_aubrey_house:
                 scene v10auh5e
                 with dissolve
 
-                $ grant_achievement("getting_clean")
+                grant Achievement("getting_clean", "Have fun in the bathroom")
                 au "Your turn."
 
                 scene v10auh5i
@@ -399,6 +414,11 @@ label v10_aubrey_house:
                 image v10aubfaf = Movie(play="images/v10/Scene 17/v10aubfaf.webm", loop=True, image= "images/v10/Scene 17/v10aubfaStart.webp", start_image="images/v10/Scene 17/v10aubfaStart.webp")
                 
                 label v10s17_aubreyBlowjob:
+                    lovense vibrate 3
+                    lovense rotate 2
+                    lovense suction 2
+                    lovense thrust 2
+
                     scene v10aubbj # Aubrey starts giving MC a blowjob while he's sitting on the toilet.
                     with dissolve
                     pause
@@ -415,6 +435,11 @@ label v10_aubrey_house:
 
                     u "Fuck, Aubrey!"
 
+                    lovense vibrate 4
+                    lovense rotate 3
+                    lovense suction 3
+                    lovense thrust 2
+
                     scene v10aubbjtpp
                     with dissolve
                     pause
@@ -428,6 +453,11 @@ label v10_aubrey_house:
                     u "That's fucking amazing."
 
                 label v10s17_aubreyCowgirl:
+                    lovense vibrate 5
+                    lovense rotate 4
+                    lovense suction 4
+                    lovense thrust 4
+
                     scene v10aubcg # Aubrey then gets up and rides MC
                     with dissolve
                     pause
@@ -453,6 +483,11 @@ label v10_aubrey_house:
 
                     au "OH MY GOD!"
 
+                    lovense vibrate 7
+                    lovense rotate 5
+                    lovense suction 5
+                    lovense thrust 5
+
                     scene v10aubllf
                     with dissolve
                     pause
@@ -475,6 +510,11 @@ label v10_aubrey_house:
 
                     au "This feels so good!"
 
+                lovense vibrate 9
+                lovense rotate 6
+                lovense suction 6
+                lovense thrust 6
+
                 scene v10aubfa # Aubrey gets on her knees in front MC while he's standing to finish him off
                 with dissolve
                 pause
@@ -495,7 +535,9 @@ label v10_aubrey_house:
                 with flash
 
                 pause 
-
+                
+                lovense stop
+                
                 scene v10auh9 # FPP. Show Aubrey, inside bathroom, facing the door/camera, arms out towards camera as if pushing. Mouth open
                 with dissolve
 

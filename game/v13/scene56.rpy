@@ -145,7 +145,7 @@ label v13s56:
             scene v13s56_99 # FPP. same as v13s56_5 MC looks down at his crotch
             with dissolve
 
-            $ grant_achievement("calm_down_big_fella")
+            grant Achievement("calm_down_big_fella", "Respect Nora")
             u "(Calm down big fella.)"
 
     scene v13s56_5f

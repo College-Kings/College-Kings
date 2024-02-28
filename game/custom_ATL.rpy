@@ -4,9 +4,8 @@ transform alpha_dissolve:
     on hide:
         linear 0.5 alpha 0
 
-transform achievementShow:
+transform show_achievement:
     ypos -200
     linear 0.5 xpos 0 ypos 0
     2.0
     linear 0.5 xpos 0 ypos -200
-    
