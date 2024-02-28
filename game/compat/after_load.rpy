@@ -1,14 +1,17 @@
+init python:
+    def get_version(version: Union[str, list[str]]) -> tuple[int, int, int]:
+        if isinstance(version, str):
+            version = version.split(' ')[0]
+            version = version.split(".")
+            if version[-1].endswith("s"):
+                version[-1] = version[-1][:-1]
+        version = tuple(int(i) for i in version)
+        return version
+
 label after_load:
     stop music
 
     python:
-        if isinstance(_version, str):
-            _verison = _version.split(' ')[0]
-            _verison = _verison.split(".")
-            if _verison[-1].endswith("s"):
-                _verison[-1] = _verison[-1][:-1]
-            _version = tuple(int(i) for i in _verison)
-
         kiwii_post_map = {
             "images/phone/kiwii/Posts/v11/v11_autumn_kiwii.webp": "ck1_v11_autumn_post",
             "images/phone/kiwii/Posts/v11/sebnaked.webp": "ck1_v11_sebastian_naked",
@@ -94,7 +97,7 @@ label after_load:
             "Wolf": Wolf,
         }
         
-        if _version < (1, 4, 0) or _version > (2, 0, 0):
+        if get_version(_verison) < (1, 4, 0) or get_version(_verison) > (2, 0, 0):
             if isinstance(kiwii, Application):
                 old_kiwii_vars = kiwii.__dict__.copy()
                 kiwii = Kiwii()
@@ -179,7 +182,10 @@ label after_load:
                     npc.text_messages = contact.messages
                 if hasattr(contact, "sentMessages"):
                     npc.text_messages = contact.sentMessages
-                npc.pending_text_messages = contact.pending_messages
+                if hasattr(contact, "pending_messages"):
+                    npc.pending_text_messages = contact.pending_messages
+                if hasattr(contact, "pending_text_messages"):
+                    npc.pending_text_messages = contact.pending_text_messages
 
                 messenger.contacts.append(npc)
 
@@ -210,12 +216,20 @@ label after_load:
                     kiwii.posts.append(KiwiiPost(CharacterService.get_user(post.user), kiwii_post_map[post_image], post.message, [CharacterService.get_user(mention) for mention in post.mentions], post.numberLikes))
                 del kiwiiPosts
 
-        if _version < (1, 4, 4):
+        if get_version(_verison) < (1, 4, 4):
             old_vars = charli.__dict__.copy()
             charli = Charli()
             charli.relationships = old_vars.get("relationships", {})
             charli.pending_text_messages = old_vars.get("pending_text_messages", [])
             charli.text_messages = old_vars.get("text_messages", [])
+
+        if get_version(_verison) < (1, 4, 5):
+            mc_relationships = tuple(mc.relationships.items())
+            mc.relationships = {CharacterService.get_user(npc): rel for npc, rel in mc_relationships}
+
+            for npc, rel in mc.relationships.items():
+                npc.relationships = {mc: rel}
+
 
     show screen phone_icon
     hide screen reply
