@@ -174,6 +174,9 @@ init python:
     build.classify('**/#**', None)
     build.classify('**/thumbs.db', None)
     build.classify("README.md", None)
+    build.classify("game_log.txt", None)
+    build.classify("LICENSE", None)
+    build.classify("pyrightconfig.json", None)
     build.classify("**/ck2/**", None)
 
     ## To archive files, classify them as 'archive'.
