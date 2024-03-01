@@ -23,3 +23,9 @@ def get_registered_image_size(image_name: str) -> tuple[Optional[int], Optional[
 
 def get_image_size(image_path: str) -> tuple[int, int]:
     return renpy.display.im.load_surface(image_path).get_size()
+
+
+def search_store(name: str) -> None:
+    for key in store.__dict__:
+        if name in key:
+            print(key)
