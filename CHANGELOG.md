@@ -8,6 +8,12 @@
 
 All notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.4.7] - 2024-03-01
+
+### Fixed
+
+- Fixed lag due to phone screen prediction. We have had to remove the notification system for now. We will work on fixing the lag and re-adding the notification system in a future update.
+
 ## [1.4.6] - 2024-02-28
 
 ### Fixed
