@@ -97,7 +97,9 @@ label after_load:
             "Wolf": Wolf,
         }
         
-        if get_version(_verison) < (1, 4, 0) or get_version(_verison) > (2, 0, 0):
+        version = get_version(store.__dict__["_version"])
+
+        if version < (1, 4, 0) or version > (2, 0, 0):
             if isinstance(kiwii, Application):
                 old_kiwii_vars = kiwii.__dict__.copy()
                 kiwii = Kiwii()
@@ -216,14 +218,14 @@ label after_load:
                     kiwii.posts.append(KiwiiPost(CharacterService.get_user(post.user), kiwii_post_map[post_image], post.message, [CharacterService.get_user(mention) for mention in post.mentions], post.numberLikes))
                 del kiwiiPosts
 
-        if get_version(_verison) < (1, 4, 4):
+        if version < (1, 4, 4):
             old_vars = charli.__dict__.copy()
             charli = Charli()
             charli.relationships = old_vars.get("relationships", {})
             charli.pending_text_messages = old_vars.get("pending_text_messages", [])
             charli.text_messages = old_vars.get("text_messages", [])
 
-        if get_version(_verison) < (1, 4, 5):
+        if version < (1, 4, 5):
             mc_relationships = tuple(mc.relationships.items())
             mc.relationships = {CharacterService.get_user(npc): rel for npc, rel in mc_relationships}
 
