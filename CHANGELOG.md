@@ -8,6 +8,16 @@
 
 All notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.4.8] - UNRELEASED
+
+### Changed
+
+- Changed how the phone handles notifications to reduce lag and improve user experience
+
+### Fixed
+
+- Fixed character object inheritance causing weird save issues
+
 ## [1.4.7] - 2024-03-01
 
 ### Fixed
