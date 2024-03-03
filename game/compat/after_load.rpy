@@ -98,8 +98,10 @@ label after_load:
         }
         
         version = get_version(store.__dict__["_version"])
+        if version > (2, 0, 0):
+            version = (0, 0, 0)
 
-        if version < (1, 4, 0) or version > (2, 0, 0):
+        if version < (1, 4, 0):
             if isinstance(kiwii, Application):
                 old_kiwii_vars = kiwii.__dict__.copy()
                 kiwii = Kiwii()
@@ -116,16 +118,6 @@ label after_load:
             if isinstance(messenger, Application):
                 old_messenger_vars = messenger.__dict__.copy()
                 messenger = Messenger()
-
-            phone.applications = (
-                messenger,
-                achievement_app,
-                relationship_app,
-                kiwii,
-                reputation_app,
-                tracker,
-                calendar,
-            )
 
             old_mc_vars = mc.__dict__.copy()
             mc = MainCharacter()
@@ -232,6 +224,14 @@ label after_load:
             for npc, rel in mc.relationships.items():
                 npc.relationships = {mc: rel}
 
+        if version < (1, 4, 9):
+            achievements_app = Achievements()
+            calendar = Calendar()
+            relationship_app = Relationships()
+            reputation_app = ReputationApp()
+            tracker = Tracker()
+
+            phone.applications = [messenger, achievements_app, relationship_app, kiwii, reputation_app, simplr_app, tracker, calendar]
 
     show screen phone_icon
     hide screen reply
