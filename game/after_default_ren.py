@@ -1,3 +1,4 @@
+from game.phone.simplr.simplr_ren import Simplr
 from renpy import store, config
 from renpy.exports import ToggleVariable
 
@@ -5,22 +6,15 @@ from game.characters.Relationship_ren import Relationship
 from game.characters.Frat_ren import Frat
 from game.reputation.Reputations_ren import Reputations
 
+simplr_app = Simplr()
+
 """renpy
 init python:
 """
 
 
 def phone_setup() -> None:
-    store.phone.applications = (
-        store.messenger,
-        store.achievement_app,
-        store.relationship_app,
-        store.kiwii,
-        store.reputation_app,
-        store.simplr_app,
-    )
-
-    store.simplr_app.pending_contacts = [
+    simplr_app.pending_contacts = [
         store.beth,
         store.iris,
         store.samantha,
