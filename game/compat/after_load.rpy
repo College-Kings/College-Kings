@@ -226,12 +226,10 @@ label after_load:
 
         if version < (1, 4, 9):
             achievements_app = Achievements()
-            calendar = Calendar()
+            calendar_app = CalendarApp()
             relationship_app = Relationships()
             reputation_app = ReputationApp()
             tracker = Tracker()
-
-            phone.applications = [messenger, achievements_app, relationship_app, kiwii, reputation_app, simplr_app, tracker, calendar]
 
     show screen phone_icon
     hide screen reply
