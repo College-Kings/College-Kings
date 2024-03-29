@@ -1,4 +1,8 @@
+from game.phone.Phone_ren import Phone
 from game.phone.simplr.simplr_ren import Simplr
+from game.phone.tracker.tracker_ren import tracker
+from game.phone.calendar.calendar_ren import calendar_app
+
 from renpy import store, config
 from renpy.exports import ToggleVariable
 
@@ -6,6 +10,7 @@ from game.characters.Relationship_ren import Relationship
 from game.characters.Frat_ren import Frat
 from game.reputation.Reputations_ren import Reputations
 
+phone = Phone()
 simplr_app = Simplr()
 
 """renpy
@@ -14,6 +19,15 @@ init python:
 
 
 def phone_setup() -> None:
+    try:
+        phone.applications.remove(tracker)
+    except ValueError:
+        pass
+    try:
+        phone.applications.remove(calendar_app)
+    except ValueError:
+        pass
+
     simplr_app.pending_contacts = [
         store.beth,
         store.iris,
