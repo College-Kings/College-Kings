@@ -184,7 +184,7 @@ label starta: #for compatibility only
     ju "You're not planning on joining one of those, are you?"
     
     menu:
-        "Could be fun":
+        "Could be fun" (troublemaker=True):
             hide s14
             show s14a
             with dissolve
@@ -192,7 +192,7 @@ label starta: #for compatibility only
 
             u "I don't know... it might be fun."
 
-        "No":
+        "No" (boyfriend=True):
             hide s14
             show s14a
             with dissolve
@@ -596,7 +596,7 @@ label starta: #for compatibility only
     ro "It seems that Elijah here fixed the laptop and we can start the induction. Thank you, Elijah."
 
     menu:
-        "Make fun of Elijah":
+        "Make fun of Elijah" (elijah=False):
             $ CharacterService.set_mood(elijah, Moods.HURT)
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
@@ -686,7 +686,7 @@ label starta: #for compatibility only
     la "Sorry... I overheard you guys talking and I just wanted to say that... this fighting thing? It's really stupid."
 
     menu:
-        "Agree":
+        "Agree" (boyfriend=True):
             $ reputation.add_point(RepComponent.BOYFRIEND)
 
             scene s50a
@@ -701,7 +701,7 @@ label starta: #for compatibility only
 
             la "Not at all, pretty much any girl that's part of the Deer hates it."
 
-        "Disagree":
+        "Disagree" (troublemaker=True):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             scene s50a
@@ -769,7 +769,7 @@ label starta: #for compatibility only
 
             la "I bet you think she's cute, don't you?"
 
-        "Defend Autumn":
+        "Defend Autumn" (boyfriend=True):
             $ reputation.add_point(RepComponent.BOYFRIEND)
 
             scene s50a
@@ -799,7 +799,7 @@ label starta: #for compatibility only
 
             u "Only for the right girl."
 
-        "Yeah, kinda":
+        "Yeah, kinda" (boyfriend=True):
             $ reputation.add_point(RepComponent.BOYFRIEND)
 
             scene s53a
@@ -912,7 +912,7 @@ label starta: #for compatibility only
         ri "So what did you think of Ms. Rose?"
 
         menu:
-            "She's hot":
+            "She's hot" (troublemaker=True):
                 $ reputation.add_point(RepComponent.BRO)
 
                 scene s50ri2a
@@ -1051,7 +1051,7 @@ label starta: #for compatibility only
         el "Only the brightest of minds are allowed to join."
 
         menu:
-            "So... the nerds?":
+            "So... the nerds?" (troublemaker=True):
                 $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
                 scene s50el2a
@@ -1066,7 +1066,7 @@ label starta: #for compatibility only
 
                 el "Just get out of my face."
 
-            "That's cool":
+            "That's cool" (boyfriend=True):
                 $ reputation.add_point(RepComponent.BOYFRIEND)
 
                 scene s50el2a
@@ -1164,7 +1164,7 @@ label starta: #for compatibility only
         no "They're right through the doors behind you."
 
         menu:
-            "Flirt":
+            "Flirt" (troublemaker=True):
                 $ reputation.add_point(RepComponent.TROUBLEMAKER)
                 $ CharacterService.set_mood(nora, Moods.AWKWARD)
 
@@ -1341,7 +1341,7 @@ label efra:
     imre "Yeah they did, but that doesn't mean shit. The Wolves have won 5 out of the last 10 years."
 
     menu:
-        "So, they're equally good?":
+        "So, they're equally good?" (troublemaker=True):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             scene s63a
@@ -1362,7 +1362,7 @@ label efra:
             scene s63d
             with dissolve
 
-        "The Wolves sound sick":
+        "The Wolves sound sick" (bro=True):
             $ reputation.add_point(RepComponent.BRO)
 
             scene s64a
@@ -1743,7 +1743,7 @@ label efra:
 
             la "I guess we'll never know."
 
-        "Dodged a bullet there":
+        "Dodged a bullet there" (troublemaker=True):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             scene s73gr
@@ -1814,7 +1814,7 @@ label efra:
     ri "Take your shirt off."
 
     menu:
-        "Take your shirt off":
+        "Take your shirt off" (troublemaker=True):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             scene s76
@@ -1872,7 +1872,7 @@ label efra:
     ri "So I feel like that dare is kinda unfair."
 
     menu:
-        "Do it, or drink":
+        "Do it, or drink" (bro=True):
             $ reputation.add_point(RepComponent.BRO)
 
             scene s71ef
@@ -1890,7 +1890,7 @@ label efra:
 
             " "
 
-        "You're right":
+        "You're right" (boyfriend=True):
             $ reputation.add_point(RepComponent.BOYFRIEND)
             
             scene s71ef
@@ -1929,7 +1929,7 @@ label efra:
     imre "Man, I can't wait to bang this Riley chick."
 
     menu:
-        "Riley's mine":
+        "Riley's mine" (troublemaker=True, bro=None):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             scene s79b
@@ -1943,7 +1943,7 @@ label efra:
             imre "What the hell man?! I invited Riley. Back off."
 
             menu:
-                "You're right, sorry":
+                "You're right, sorry" (bro=True):
                     $ reputation.add_point(RepComponent.BRO)
 
                     scene s79a
@@ -1956,7 +1956,7 @@ label efra:
 
                     imre "It's fine bro, I get it. She is really cute."
 
-                "She wants me":
+                "She wants me" (troublemaker=True):
                     $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
                     scene s79b
@@ -1988,7 +1988,7 @@ label efra:
 
                     jump at_bd
 
-        "They're both hot":
+        "They're both hot" (bro=True):
             $ reputation.add_point(RepComponent.BRO)
 
             scene s79
@@ -2121,7 +2121,7 @@ label at_bd:
     u "(Okay, this is definitely a dream, but I do like where this is going.)"
 
     menu:
-        "Keep dreaming":
+        "Keep dreaming" (True):
             $ sceneList.add("v1_riley")
 
             scene sda3a
@@ -2522,7 +2522,7 @@ label v1_nsfwSkipLabel1:
     la "Yep... she's just so annoying. I wish I could still move dorms."
 
     menu:
-        "Move in with me?":
+        "Move in with me?" (boyfriend=True):
             $ reputation.add_point(RepComponent.BOYFRIEND)
 
             scene s87a
@@ -2542,7 +2542,7 @@ label v1_nsfwSkipLabel1:
 
             u "How about we go to the park this afternoon? I'll bring some sandwiches and we'll make your day better."
 
-        "Bad roommates suck":
+        "Bad roommates suck" (bro=True):
             $ reputation.add_point(RepComponent.BRO)
 
             scene s87a
@@ -2656,7 +2656,7 @@ label v1_nsfwSkipLabel1:
 
             la "Uhm... thanks. Not really though, haha."
 
-        "Yet, you're here with me":
+        "Yet, you're here with me" (lauren=True):
             $ v1_laurenPoints += 1
 
             scene s89d
@@ -2737,7 +2737,7 @@ label v1_nsfwSkipLabel1:
 
             u "Now it's time for your secret."
 
-        "I've broken into an Ikea":
+        "I've broken into an Ikea" (lauren=True):
             $ v1_laurenPoints += 1
             scene s89d
             with dissolve
@@ -2863,7 +2863,7 @@ label aw_bd:
     u "It's not weird, it's just..."
 
     menu:
-        "You're really beautiful":
+        "You're really beautiful" (boyfriend=True):
             $ reputation.add_point(RepComponent.BOYFRIEND)
 
             u "You know... you're really beautiful."
@@ -2873,7 +2873,7 @@ label aw_bd:
 
             la "Awww."
 
-        "You're not ugly":
+        "You're not ugly" (bro=True):
             $ reputation.add_point(RepComponent.BRO)
 
             u "You know... you're not ugly."
@@ -2890,7 +2890,7 @@ label aw_bd:
     u "(Is this the moment to kiss her?)"
 
     menu:
-        "Kiss her":
+        "Kiss her" (lauren=True):
             if v1_laurenPoints == 2:
                 $ CharacterService.set_relationship(lauren, Relationship.KISSED)
 
@@ -3407,7 +3407,7 @@ label v1_freeRoam2_josh:
             au "Nothing wrong with warming up the new batch of fighters, is there?"
 
             menu:
-                "Say you're a fighter":
+                "Say you're a fighter" (troublemaker=True):
                     $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
                     scene fr2jo2d
@@ -3481,7 +3481,7 @@ label v1_freeRoam2_josh:
 
                     u "Alright, I'll leave you guys alone and look around a bit more."
 
-        "Ask if she likes fighters":
+        "Ask if she likes fighters" (boyfriend=True):
             $ reputation.add_point(RepComponent.BOYFRIEND)
 
             scene fr2jo2b
@@ -3499,7 +3499,7 @@ label v1_freeRoam2_josh:
             au "Why are you asking? Are you planning on becoming a fighter?"
 
             menu:
-                "I'll be the next Fight King":
+                "I'll be the next Fight King" (troublemaker=True):
                     $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
                     scene fr2jo2d
@@ -3645,7 +3645,7 @@ label v1_freeRoam2_mason:
     jeremy "Damn, that takes balls, kid!"
 
     menu:
-        "Yeah, he better watch out":
+        "Yeah, he better watch out" (troublemaker=True, bro=True):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
             $ reputation.add_point(RepComponent.BRO)
 
@@ -3969,7 +3969,7 @@ label fr2end: #for compatibility only
     ry "Man, I don't know. Why don't you just go ask her yourself?"
 
     menu:
-        "You're right, I'll talk to her":
+        "You're right, I'll talk to her" (bro=True):
             $ reputation.add_point(RepComponent.BRO)
 
             scene s108e
@@ -4075,7 +4075,7 @@ label fr2end: #for compatibility only
     with dissolve
 
     menu:
-        "Apologize":
+        "Apologize" (boyfriend=True):
             $ reputation.add_point(RepComponent.BOYFRIEND)
 
             u "I'm really sorry for interrupting your conversation."
@@ -4090,7 +4090,7 @@ label fr2end: #for compatibility only
 
             u "In that case, you're very welcome."
 
-        "Make fun of him":
+        "Make fun of him" (bro=True):
             $ reputation.add_point(RepComponent.BRO)
 
             u "Don't worry, I'm not gonna start talking about my rock collection."
@@ -4180,7 +4180,7 @@ label fr2end: #for compatibility only
     with dissolve
 
     menu:
-        "Empathize":
+        "Empathize" (boyfriend=True):
             $ reputation.add_point(RepComponent.BOYFRIEND)
 
             u "Wow, that sounds awful."
@@ -4190,7 +4190,7 @@ label fr2end: #for compatibility only
 
             cl "It really was."
 
-        "Poke fun":
+        "Poke fun" (troublemaker=True):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             u "Hahaha, sounds like the Dean was into you."
