@@ -14,12 +14,18 @@ label after_load:
     python:
         kiwii_post_map = {
             "images/phone/kiwii/Posts/v11/v11_autumn_kiwii.webp": "ck1_v11_autumn_post",
+            "images/phone/kiwii/posts/v11/v11_autumn_kiwii.webp": "ck1_v11_autumn_post",
+            "images/phone/kiwii/posts/v11/v11_rileymcselfie.webp": "ck1_v11_riley_mc_selfie",
             "images/phone/kiwii/Posts/v11/sebnaked.webp": "ck1_v11_sebastian_naked",
             "images/phone/kiwii/Posts/v11/v11_chloemcselfie.webp": "ck1_v11_chloe_mc_selfie",
             "images/phone/kiwii/Posts/v11/v11_caleb.webp": "ck1_v11_caleb_post",
+            "images/phone/kiwii/posts/v11/v11_caleb.webp": "ck1_v11_caleb_post",
             "images/phone/kiwii/Posts/v11/v11_imrebunny.webp": "ck1_v11_imre_bunny",
+            "images/phone/kiwii/posts/v11/v11_imrebunny.webp": "ck1_v11_imre_bunny",
             "images/phone/kiwii/Posts/v11/v11s38_amber_kiwii.webp": "ck1_v11_amber_post",
+            "images/phone/kiwii/posts/v11/v11s38_amber_kiwii.webp": "ck1_v11_amber_post",
             "images/phone/kiwii/Posts/v12/impost1.webp": "ck1_v12_imre_post",
+            "images/phone/kiwii/posts/v12/impost1.webp": "ck1_v12_imre_post",
             "images/phone/kiwii/Posts/v12/lindsey_aubrey_pjs.webp": "ck1_v12_lindsey_aubrey_pjs",
             "images/phone/kiwii/Posts/v12/imre_raccoon.webp": "ck1_v12_imre_raccoon",
             "images/phone/kiwii/Posts/v12/roastedape.webp": "ck1_v12_roasted_ape",
@@ -97,6 +103,19 @@ label after_load:
             "Wolf": Wolf,
         }
         
+        try:
+            phone.applications.remove(tracker)
+        except ValueError:
+            pass
+        try:
+            phone.applications.remove(calendar_app)
+        except ValueError:
+            pass
+
+        for var_name, var_value in store.__dict__.copy().items():
+            if type(var_value) == NonPlayableCharacter:
+                del store.__dict__[var_name]
+
         version = get_version(store.__dict__["_version"])
         if version > (2, 0, 0):
             version = (0, 0, 0)
@@ -230,6 +249,9 @@ label after_load:
             relationship_app = Relationships()
             reputation_app = ReputationApp()
             tracker = Tracker()
+
+            phone.applications = [app for app in phone.applications if isinstance(app, Application)]
+
 
     show screen phone_icon
     hide screen reply
