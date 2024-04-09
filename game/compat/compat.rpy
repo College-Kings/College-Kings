@@ -1,4 +1,7 @@
 init 999 python:
+    class Calendar:
+        pass
+
     class Charlie(Charli):
         pass
 
