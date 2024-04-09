@@ -29,3 +29,15 @@ def search_store(name: str) -> None:
     for key in store.__dict__:
         if name in key:
             print(key)
+
+
+def interpolate_color_to_white(hex_color: str, factor: float) -> str:
+    factor = min(max(factor, 0.0), 1.0)
+
+    r, g, b = int(hex_color[1:3], 16), int(hex_color[3:5], 16), int(hex_color[5:7], 16)
+
+    r_white = int(r + (255 - r) * (1 - factor))
+    g_white = int(g + (255 - g) * (1 - factor))
+    b_white = int(b + (255 - b) * (1 - factor))
+
+    return f"#{r_white:02x}{g_white:02x}{b_white:02x}"
