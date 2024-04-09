@@ -2,6 +2,7 @@ from typing import Optional
 
 from renpy.display.im import Image
 from renpy.display.pgrender import Surface
+from renpy import store
 import renpy
 
 reputation: int
