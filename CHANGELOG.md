@@ -8,6 +8,15 @@
 
 All notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.4.10] - 2024-04-15
+
+### Fixed
+
+- Fixed old kiwii image missing from image remap
+- Fixed applications missing app icon image
+- Fixed CharacterService.get_user_by_str not returning a user
+- Fixed notification error in Messenger
+
 ## [1.4.9] - 2024-04-09
 
 ### Added

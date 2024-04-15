@@ -33,8 +33,9 @@ label after_load:
             "images/phone/kiwii/Posts/v12/v12s32_24.webp": "ck1_v12_lews_post_2",
             "images/phone/kiwii/Posts/v12/v12s32_33.webp": "ck1_v12_lews_post_3",
             "images/phone/kiwii/Posts/v13/aubrey_beach.webp": "ck1_v13_aubrey_beach",
-            "images/phone/kiwii/Posts/v7/clpost1.webp": "ck1_v7_chloe_post",
+            "images/clpost1.png": "ck1_v7_chloe_post",
             "images/phone/kiwii/posts/v7/clpost1.webp": "ck1_v7_chloe_post",
+            "images/phone/kiwii/Posts/v7/clpost1.webp": "ck1_v7_chloe_post",
             "images/phone/kiwii/Posts/v7/lapost1.webp": "ck1_v7_lauren_post",
             "images/phone/kiwii/posts/v7/lapost1.webp": "ck1_v7_lauren_post",
             "images/phone/kiwii/Posts/v7/aupost1.webp": "ck1_v7_aubrey_post",
@@ -251,6 +252,14 @@ label after_load:
             tracker = Tracker()
 
             phone.applications = [app for app in phone.applications if isinstance(app, Application)]
+
+        if version < (1, 4, 10):
+            indexes = [(i, app.__dict__["name"]) for i, app in enumerate(phone.applications) if type(app) is Application]
+            for index, app_name in indexes:
+                try:
+                    phone.applications[index] = getattr(store, app_name + "App")()
+                except AttributeError:
+                    phone.applications[index] = getattr(store, app_name)()
 
 
     show screen phone_icon
