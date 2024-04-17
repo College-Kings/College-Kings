@@ -8,6 +8,12 @@
 
 All notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.4.11] - UNRELEASED
+
+### Fixed
+
+- Fixed bold text in alert popup being unreadable
+
 ## [1.4.10] - 2024-04-15
 
 ### Fixed
