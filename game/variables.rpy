@@ -1,6 +1,7 @@
 #region Init
 #region Constants
 define is_CK2 = False
+define SERVER_URL = "http://82.9.123.190:8080"
 define flash = Fade(.25, 0, .75, color="#fff")
 define config.default_music_volume = 1
 define config.default_sfx_volume = 1
