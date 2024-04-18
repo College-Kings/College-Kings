@@ -1,15 +1,17 @@
+from typing import Any
+
 from game.phone.Phone_ren import Phone
 from game.phone.simplr.simplr_ren import Simplr
 from game.phone.tracker.tracker_ren import tracker
 from game.phone.calendar.calendar_ren import calendar_app
-
-from renpy import store, config
-from renpy.exports import ToggleVariable
-
 from game.characters.Relationship_ren import Relationship
 from game.characters.Frat_ren import Frat
 from game.reputation.Reputations_ren import Reputations
 
+from renpy import store, config
+import renpy.exports as renpy
+
+ToggleVariable: Any = None
 phone = Phone()
 simplr_app = Simplr()
 
@@ -27,6 +29,9 @@ def phone_setup() -> None:
         phone.applications.remove(calendar_app)
     except ValueError:
         pass
+
+    if renpy.seen_label("v10_room_mon_night") and simplr_app not in phone.applications:
+        phone.applications.append(simplr_app)
 
     simplr_app.pending_contacts = [
         store.beth,

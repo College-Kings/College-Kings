@@ -14,6 +14,7 @@ All notable changes to this project will be documented in this file. This projec
 
 - Fixed bold text in alert popup being unreadable
 - Fixed server url causing lovense crash
+- Fixed simplr missing from phone
 
 ## [1.4.10] - 2024-04-15
 
