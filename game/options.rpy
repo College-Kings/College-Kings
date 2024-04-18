@@ -21,19 +21,6 @@ define config.name = _("College Kings")
 define gui.show_name = False
 
 
-## The version of the game.
-
-### Moved to script.rpy ###
-
-
-## A short name for the game used for executables and directories in the built
-## distribution. This must be ASCII-only, and must not contain spaces, colons,
-## or semicolons.
-
-define build.name = "CollegeKings"
-define build.directory_name = "CollegeKings{}".format("" if config.enable_steam else f"-{config.version}")
-define build.destination = "{}-dists".format(build.name)
-
 ## Sounds and music ############################################################
 
 ## These three variables control which mixers are shown to the player by
@@ -139,57 +126,6 @@ define config.save_directory = "CollegeKings"
 
 define config.window_icon = "gui/window_icon.webp"
 
-
-## Build configuration #########################################################
-##
-## This section controls how Ren'Py turns your project into distribution files.
-
-init python:
-
-    ## The following functions take file patterns. File patterns are case-
-    ## insensitive, and matched against the path relative to the base directory,
-    ## with and without a leading /. If multiple patterns match, the first is
-    ## used.
-    ##
-    ## In a pattern:
-    ##
-    ## / is the directory separator.
-    ##
-    ## * matches all characters, except the directory separator.
-    ##
-    ## ** matches all characters, including the directory separator.
-    ##
-    ## For example, "*.txt" matches txt files in the base directory, "game/
-    ## **.ogg" matches ogg files in the game directory or any of its
-    ## subdirectories, and "**.psd" matches psd files anywhere in the project.
-
-    build.include_i686 = False
-    build.include_old_themes = False
-
-    ## Classify files as None to exclude them from the built distributions.
-
-    build.classify('**~', None)
-    build.classify('**.bak', None)
-    build.classify('**/.**', None)
-    build.classify('**/#**', None)
-    build.classify('**/thumbs.db', None)
-    build.classify("README.md", None)
-    build.classify("game_log.txt", None)
-    build.classify("LICENSE", None)
-    build.classify("pyrightconfig.json", None)
-    build.classify("**/ck2/**", None)
-
-    ## To archive files, classify them as 'archive'.
-
-    build.classify('game/**.py', 'archive')
-    build.classify('game/**.rpy', "archive")
-    build.classify("game/**.rpyc", "archive")
-
-    ## Files matching documentation patterns are duplicated in a mac app build,
-    ## so they appear in both the app and the zip file.
-
-    build.documentation('*.html')
-    build.documentation('*.txt')
 
 
 ## A Google Play license key is required to download expansion files and perform
