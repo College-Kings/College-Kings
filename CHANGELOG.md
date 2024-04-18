@@ -8,11 +8,12 @@
 
 All notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning](http://semver.org/).
 
-## [1.4.11] - UNRELEASED
+## [1.4.11] - 2024-04-18
 
 ### Fixed
 
 - Fixed bold text in alert popup being unreadable
+- Fixed server url causing lovense crash
 
 ## [1.4.10] - 2024-04-15
 
