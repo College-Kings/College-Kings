@@ -261,6 +261,9 @@ label after_load:
                 except AttributeError:
                     phone.applications[index] = getattr(store, app_name)()
 
+        if version < (1, 4, 11):
+            if renpy.seen_label("v10_room_mon_night") and simplr_app not in phone.applications:
+                phone.applications.append(simplr_app)
 
     show screen phone_icon
     hide screen reply
