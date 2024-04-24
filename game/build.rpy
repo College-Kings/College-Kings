@@ -1,3 +1,5 @@
+init offset = 1
+
 define build.name = "CollegeKings"
 define build.directory_name = "CollegeKings{}".format("" if config.enable_steam else f"-{config.version}")
 define build.destination = "{}-dists".format(build.name)
