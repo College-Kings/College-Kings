@@ -34,4 +34,6 @@
 [submodule "game/items"]
 	path = game/items
 	url = https://github.com/College-Kings/college-kings-items.git
-
+[submodule "game/_lovense"]
+	path = game/_lovense
+	url = https://github.com/College-Kings/renpy-lovense.git
