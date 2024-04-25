@@ -14,6 +14,10 @@ All notable changes to this project will be documented in this file. This projec
 
 - Added Lovense intergration
 
+### Fixed
+
+- Fixed crash during phone_setup
+
 ## [1.4.11] - 2024-04-18
 
 ### Fixed

@@ -21,6 +21,9 @@ init python:
 
 
 def phone_setup() -> None:
+    if isinstance(phone.applications, tuple):
+        phone.applications = list(phone.applications)
+
     try:
         phone.applications.remove(tracker)
     except ValueError:
