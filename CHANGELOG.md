@@ -8,6 +8,12 @@
 
 All notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.4.12] - UNRELEASED
+
+### Added
+
+- Added Lovense intergration
+
 ## [1.4.11] - 2024-04-18
 
 ### Fixed
