@@ -3604,7 +3604,7 @@ label v1_freeRoam2_camp:
         call screen v1_freeRoam2_2
 
     else:
-        if MessengerService.find_message(lauren, _("Hey :)\nSorry about today.\n\nCan we talk tomorrow?")):
+        if not MessengerService.find_message(lauren, _("Hey :)\nSorry about today.\n\nCan we talk tomorrow?")):
             play sound sound.vibrate
 
             python:

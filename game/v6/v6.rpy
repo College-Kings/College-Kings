@@ -3023,7 +3023,7 @@ label fy_bd: # not gone to Emily's
     play music music.ck1.mfunk
 
     if imreforgives:
-        $ CharacterService.set_relationship(imre, Relationship.FRIEND, mc)
+        $ CharacterService.remove_mood(imre, Moods.MAD)
 
     pause 1.0
 
