@@ -18,7 +18,7 @@ All notable changes to this project will be documented in this file. This projec
 
 ### Added
 
-- Added Lovense intergration
+- Added Lovense integration
 
 ### Fixed
 
