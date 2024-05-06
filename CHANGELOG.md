@@ -8,6 +8,12 @@
 
 All notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.4.13] - 2024-05-06
+
+### Fixed
+
+- Fixed relationship app not showing the correct relationship status
+
 ## [1.4.12] - 2024-04-25
 
 ### Added

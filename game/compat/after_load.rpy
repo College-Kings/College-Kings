@@ -265,6 +265,10 @@ label after_load:
             if renpy.seen_label("v10_room_mon_night") and simplr_app not in phone.applications:
                 phone.applications.append(simplr_app)
 
+        if version < (1, 4, 12):
+            for npc, rel in mc.relationships.items():
+                npc.relationships = {mc: rel}
+
     show screen phone_icon
     hide screen reply
     hide screen simplr_reply
