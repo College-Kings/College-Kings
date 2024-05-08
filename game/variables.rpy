@@ -1,6 +1,9 @@
+#region Persistent
+default persistent.uuid = "ck_" + str(uuid.uuid4())
+#endregion Persistent
+
 #region Init
 #region Constants
-init offset = -99
 define is_CK2 = False
 define SERVER_URL = "http://82.9.123.190:8080"
 define flash = Fade(.25, 0, .75, color="#fff")
