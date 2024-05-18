@@ -1,6 +1,11 @@
+#region Persistent
+default persistent.uuid = "ck_" + str(uuid.uuid4())
+#endregion Persistent
+
 #region Init
 #region Constants
 define is_CK2 = False
+define SERVER_URL = "http://82.9.123.190:8080"
 define flash = Fade(.25, 0, .75, color="#fff")
 define config.default_music_volume = 1
 define config.default_sfx_volume = 1
@@ -8,7 +13,7 @@ define config.default_sfx_volume = 1
 #region Path Builder
 define pb_starting_locations = (("Act 1 Start", "start"), ("Act 2 Start", "v7_homecoming"), ("Act 3 Start", "v11_start"))
 #endregion Path Builder
-
+init offset = 0
 #region Scene Gallery
 define scene_gallery_items = (
     SceneGallery(
@@ -183,8 +188,8 @@ define scene_gallery_items = (
     ),  # 3d, Satin, xx
 )
 #endregion Scene Gallery
-
 #endregion Constants
+
 default menu_set = set()
 
 default is_censored = False

@@ -41,6 +41,8 @@ label v10_room_mon_night:
             if MessengerService.has_replies(josh):
                 u "(I should reply to Josh.)"
 
+        $ phone.applications.append(simplr_app)
+        
         if v10_simplr_known:
             u "(Okay let's check this out.)"
 

@@ -8,13 +8,82 @@
 
 All notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning](http://semver.org/).
 
-## [1.4.5] - UNRELEASED
+## [1.4.13] - 2024-05-06
+
+### Fixed
+
+- Fixed relationship app not showing the correct relationship status
+
+## [1.4.12] - 2024-04-25
+
+### Added
+
+- Added Lovense integration
+
+### Fixed
+
+- Fixed crash during phone_setup
+
+## [1.4.11] - 2024-04-18
+
+### Fixed
+
+- Fixed bold text in alert popup being unreadable
+- Fixed server url causing lovense crash
+- Fixed simplr missing from phone
+
+## [1.4.10] - 2024-04-15
+
+### Fixed
+
+- Fixed old kiwii image missing from image remap
+- Fixed applications missing app icon image
+- Fixed CharacterService.get_user_by_str not returning a user
+- Fixed notification error in Messenger
+
+## [1.4.9] - 2024-04-09
+
+### Added
+
+- Added choice guide to V1
+
+### Removed
+
+- Removed Calendar and Tracker from the phone
+
+### Fixed
+
+- Fixed various minor issues
+
+## [1.4.8] - 2024-03-17
+
+### Changed
+
+- Changed how the phone handles notifications to reduce lag and improve user experience
+
+### Fixed
+
+- Fixed character object inheritance causing weird save issues
+
+## [1.4.7] - 2024-03-01
+
+### Fixed
+
+- Fixed lag due to phone screen prediction. We have had to remove the notification system for now. We will work on fixing the lag and re-adding the notification system in a future update.
+
+## [1.4.6] - 2024-02-28
+
+### Fixed
+
+- Fixed relationships showing as Friend in the phone app
+- Fixed Car Ambience bleed in v11 scene 34
+
+## [1.4.5] - 2024-02-28
 
 ### Fixed
 
 - Fixed path builder starting location grid
 - Attempted fix for UI lag
-- Fixed Car Ambience bleed in v11 scene 34
 
 ## [1.4.4] - 2024-02-01
  

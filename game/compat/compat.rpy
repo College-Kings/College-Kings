@@ -1,4 +1,7 @@
 init 999 python:
+    class Calendar:
+        pass
+
     class Charlie(Charli):
         pass
 
@@ -23,10 +26,10 @@ init 999 python:
     class CheatItem:
         pass
 
-    class CustomCharacter(NonPlayableCharacter):
+    class CustomCharacter(NonPlayableCharacter, object):
         pass
 
-    class Teacher(NonPlayableCharacter):
+    class Teacher(NonPlayableCharacter, object):
         pass
 
     class FightCharacter:

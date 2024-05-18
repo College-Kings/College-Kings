@@ -9381,7 +9381,7 @@ label signs_with_autumn:
 
             u "Thanks."
 
-        "Same something direct":
+        "Say something direct":
             $ reputation.add_point(RepComponent.BOYFRIEND)
 
             u "Men against misogyny."
@@ -16150,6 +16150,13 @@ label fr4chloe2:
                     with fade
 
                     jump fr4penelopedatechloe
+
+                elif hcGirl == "emily":
+                    u "(I should probably get back to Emily.)"
+
+                    scene sfr4em20
+                    with fade
+                    jump fr4emilydate
 
             "Or we could just leave":
                 $ reputation.add_point(RepComponent.TROUBLEMAKER)

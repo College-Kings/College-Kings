@@ -60,7 +60,7 @@ label v2start:
     imre "If you knew how to fight, maybe he wouldn't fuck with you."
 
     menu:
-        "Hmm... maybe":
+        "Hmm... maybe" (bro=True):
             $ reputation.add_point(RepComponent.BRO)
 
             scene s123d
@@ -71,7 +71,7 @@ label v2start:
             with dissolve
             imre "Just think about it, okay? I'll see you later."
 
-        "I'm not fighting":
+        "I'm not fighting" (boyfriend=True, bro=None):
             $ reputation.add_point(RepComponent.BOYFRIEND)
 
             scene s123d
@@ -86,7 +86,7 @@ label v2start:
             imre "If he sees you looking at him wrong from now on, you'll end up in the hospital."
 
             menu:
-                "I'll think about it":
+                "I'll think about it" (bro=True):
                     $ reputation.add_point(RepComponent.BRO)
 
                     scene s123d
@@ -97,7 +97,7 @@ label v2start:
                     with dissolve
                     imre "That's all I'm asking for. I'll see you later."
 
-                "I won't fight":
+                "I won't fight" (boyfriend=True):
                     $ reputation.add_point(RepComponent.BOYFRIEND)
 
                     scene s123d

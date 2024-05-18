@@ -36,4 +36,7 @@
 	url = https://github.com/College-Kings/college-kings-items.git
 [submodule "game/_lovense"]
 	path = game/_lovense
-	url = https://github.com/College-Kings/college-kings-lovense.git
+	url = https://github.com/College-Kings/renpy-lovense.git
+[submodule "game/fonts"]
+	path = game/fonts
+	url = https://github.com/College-Kings/college-kings-fonts.git

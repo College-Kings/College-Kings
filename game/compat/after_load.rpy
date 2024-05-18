@@ -1,22 +1,31 @@
+init python:
+    def get_version(version: Union[str, list[str]]) -> tuple[int, int, int]:
+        if isinstance(version, str):
+            version = version.split(' ')[0]
+            version = version.split(".")
+            if version[-1].endswith("s"):
+                version[-1] = version[-1][:-1]
+        version = tuple(int(i) for i in version)
+        return version
+
 label after_load:
     stop music
 
     python:
-        if isinstance(_version, str):
-            _verison = _version.split(' ')[0]
-            _verison = _verison.split(".")
-            if _verison[-1].endswith("s"):
-                _verison[-1] = _verison[-1][:-1]
-            _version = tuple(int(i) for i in _verison)
-
         kiwii_post_map = {
             "images/phone/kiwii/Posts/v11/v11_autumn_kiwii.webp": "ck1_v11_autumn_post",
+            "images/phone/kiwii/posts/v11/v11_autumn_kiwii.webp": "ck1_v11_autumn_post",
+            "images/phone/kiwii/posts/v11/v11_rileymcselfie.webp": "ck1_v11_riley_mc_selfie",
             "images/phone/kiwii/Posts/v11/sebnaked.webp": "ck1_v11_sebastian_naked",
             "images/phone/kiwii/Posts/v11/v11_chloemcselfie.webp": "ck1_v11_chloe_mc_selfie",
             "images/phone/kiwii/Posts/v11/v11_caleb.webp": "ck1_v11_caleb_post",
+            "images/phone/kiwii/posts/v11/v11_caleb.webp": "ck1_v11_caleb_post",
             "images/phone/kiwii/Posts/v11/v11_imrebunny.webp": "ck1_v11_imre_bunny",
+            "images/phone/kiwii/posts/v11/v11_imrebunny.webp": "ck1_v11_imre_bunny",
             "images/phone/kiwii/Posts/v11/v11s38_amber_kiwii.webp": "ck1_v11_amber_post",
+            "images/phone/kiwii/posts/v11/v11s38_amber_kiwii.webp": "ck1_v11_amber_post",
             "images/phone/kiwii/Posts/v12/impost1.webp": "ck1_v12_imre_post",
+            "images/phone/kiwii/posts/v12/impost1.webp": "ck1_v12_imre_post",
             "images/phone/kiwii/Posts/v12/lindsey_aubrey_pjs.webp": "ck1_v12_lindsey_aubrey_pjs",
             "images/phone/kiwii/Posts/v12/imre_raccoon.webp": "ck1_v12_imre_raccoon",
             "images/phone/kiwii/Posts/v12/roastedape.webp": "ck1_v12_roasted_ape",
@@ -24,8 +33,9 @@ label after_load:
             "images/phone/kiwii/Posts/v12/v12s32_24.webp": "ck1_v12_lews_post_2",
             "images/phone/kiwii/Posts/v12/v12s32_33.webp": "ck1_v12_lews_post_3",
             "images/phone/kiwii/Posts/v13/aubrey_beach.webp": "ck1_v13_aubrey_beach",
-            "images/phone/kiwii/Posts/v7/clpost1.webp": "ck1_v7_chloe_post",
+            "images/clpost1.png": "ck1_v7_chloe_post",
             "images/phone/kiwii/posts/v7/clpost1.webp": "ck1_v7_chloe_post",
+            "images/phone/kiwii/Posts/v7/clpost1.webp": "ck1_v7_chloe_post",
             "images/phone/kiwii/Posts/v7/lapost1.webp": "ck1_v7_lauren_post",
             "images/phone/kiwii/posts/v7/lapost1.webp": "ck1_v7_lauren_post",
             "images/phone/kiwii/Posts/v7/aupost1.webp": "ck1_v7_aubrey_post",
@@ -94,7 +104,24 @@ label after_load:
             "Wolf": Wolf,
         }
         
-        if _version < (1, 4, 0) or _version > (2, 0, 0):
+        try:
+            phone.applications.remove(tracker)
+        except ValueError:
+            pass
+        try:
+            phone.applications.remove(calendar_app)
+        except ValueError:
+            pass
+
+        for var_name, var_value in store.__dict__.copy().items():
+            if type(var_value) == NonPlayableCharacter:
+                del store.__dict__[var_name]
+
+        version = get_version(store.__dict__["_version"])
+        if version > (2, 0, 0):
+            version = (0, 0, 0)
+
+        if version < (1, 4, 0):
             if isinstance(kiwii, Application):
                 old_kiwii_vars = kiwii.__dict__.copy()
                 kiwii = Kiwii()
@@ -111,16 +138,6 @@ label after_load:
             if isinstance(messenger, Application):
                 old_messenger_vars = messenger.__dict__.copy()
                 messenger = Messenger()
-
-            phone.applications = (
-                messenger,
-                achievement_app,
-                relationship_app,
-                kiwii,
-                reputation_app,
-                tracker,
-                calendar,
-            )
 
             old_mc_vars = mc.__dict__.copy()
             mc = MainCharacter()
@@ -179,7 +196,10 @@ label after_load:
                     npc.text_messages = contact.messages
                 if hasattr(contact, "sentMessages"):
                     npc.text_messages = contact.sentMessages
-                npc.pending_text_messages = contact.pending_messages
+                if hasattr(contact, "pending_messages"):
+                    npc.pending_text_messages = contact.pending_messages
+                if hasattr(contact, "pending_text_messages"):
+                    npc.pending_text_messages = contact.pending_text_messages
 
                 messenger.contacts.append(npc)
 
@@ -210,12 +230,44 @@ label after_load:
                     kiwii.posts.append(KiwiiPost(CharacterService.get_user(post.user), kiwii_post_map[post_image], post.message, [CharacterService.get_user(mention) for mention in post.mentions], post.numberLikes))
                 del kiwiiPosts
 
-        if _version < (1, 4, 4):
+        if version < (1, 4, 4):
             old_vars = charli.__dict__.copy()
             charli = Charli()
             charli.relationships = old_vars.get("relationships", {})
             charli.pending_text_messages = old_vars.get("pending_text_messages", [])
             charli.text_messages = old_vars.get("text_messages", [])
+
+        if version < (1, 4, 5):
+            mc_relationships = tuple(mc.relationships.items())
+            mc.relationships = {CharacterService.get_user(npc): rel for npc, rel in mc_relationships}
+
+            for npc, rel in mc.relationships.items():
+                npc.relationships = {mc: rel}
+
+        if version < (1, 4, 9):
+            achievements_app = Achievements()
+            calendar_app = CalendarApp()
+            relationship_app = Relationships()
+            reputation_app = ReputationApp()
+            tracker = Tracker()
+
+            phone.applications = [app for app in phone.applications if isinstance(app, Application)]
+
+        if version < (1, 4, 10):
+            indexes = [(i, app.__dict__["name"]) for i, app in enumerate(phone.applications) if type(app) is Application]
+            for index, app_name in indexes:
+                try:
+                    phone.applications[index] = getattr(store, app_name + "App")()
+                except AttributeError:
+                    phone.applications[index] = getattr(store, app_name)()
+
+        if version < (1, 4, 11):
+            if renpy.seen_label("v10_room_mon_night") and simplr_app not in phone.applications:
+                phone.applications.append(simplr_app)
+
+        if version < (1, 4, 12):
+            for npc, rel in mc.relationships.items():
+                npc.relationships = {mc: rel}
 
     show screen phone_icon
     hide screen reply
