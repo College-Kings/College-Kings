@@ -1578,22 +1578,22 @@ label efra:
 
     imre "Speak of the devil..."
 
-    scene s69a
+    scene s69
     with fade
 
     u "Hey Lauren!"
 
-    scene s69
+    scene s69a
     with dissolve
 
     la "Heyyy..."
 
-    scene s69a
+    scene s69
     with dissolve
 
     u "I wasn't sure if you were gonna come."
 
-    scene s69
+    scene s69a
     with dissolve
 
     la "I was only 2 minutes late."
