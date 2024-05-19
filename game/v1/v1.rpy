@@ -1,5 +1,4 @@
 label v1_start:
-label starta: #for compatibility only
     if config.developer:
         show screen debug_overlay
 
@@ -200,7 +199,6 @@ label starta: #for compatibility only
 
             u "No, I don't think so, Julia."
 
-    label aa_db: #for compatibility only
     hide s14a
     show s15
     with dissolve
