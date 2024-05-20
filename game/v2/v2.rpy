@@ -1119,7 +1119,7 @@ label meet_lauren2:
     la "About yesterday in the park..."
 
     menu:
-        "There was something there" (boyfriend=1.0):
+        "There was something there" (Lauren=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
             
             if CharacterService.is_kissed(lauren):
@@ -1781,7 +1781,7 @@ label history2:
     em "Can we please just hang out?"
 
     menu:
-        "Okay, I guess" (boyfriend=1.0):
+        "Okay, I guess" (emily=1.0):
             $ forgiveemily = True
             $ reputation.add_point(RepComponent.BOYFRIEND)
 
@@ -1807,7 +1807,7 @@ label history2:
 
             jump bo_ad
 
-        "No, sorry" (troublemaker=1.0):
+        "No, sorry" (emily=-1.0):
             $ emilyandben = True
             $ forgiveemily = False
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
@@ -2070,7 +2070,7 @@ label bo_ad:
     ben "What? I'm 24."
 
     menu:
-        "Sure, knock yourself out" (bro=1.0):
+        "Sure, knock yourself out" (emily=-1.0):
             $ emilyandben = True
             $ reputation.add_point(RepComponent.BRO)
 
@@ -2091,7 +2091,7 @@ label bo_ad:
 
             u "Please don't..."
 
-        "Stay away from her" (boyfriend=1.0):
+        "Stay away from her" (ben=-1.0):
             $ emilyandben = False
             $ reputation.add_point(RepComponent.BOYFRIEND)
 
@@ -2723,7 +2723,7 @@ label try1new:
             u "(Holy shit, if I could just stick my head through a bit further, I could get a way better view.)"
 
             menu:
-                "Risk it":
+                "Risk it" (aubrey=0.0):
                     if is_censored:
                         call screen censored_popup("v2_nsfwSkipLabel1")
 
@@ -2864,7 +2864,7 @@ label try2new:
             u "(Wow... if I could just stick my head through a bit further, I could get a way better view.)"
 
             menu:
-                "Risk it":
+                "Risk it" (aubrey=0.0):
                     if is_censored:
                         call screen censored_popup("v2_nsfwSkipLabel2")
 
@@ -3023,7 +3023,7 @@ label try3new:
             u "(Fuck... if I could just stick my head through a bit further, I could get a way better view.)"
 
             menu:
-                "Risk it":
+                "Risk it" (aubrey=0.0):
                     if is_censored:
                         call screen censored_popup("v2_nsfwSkipLabel3")
 
@@ -3267,7 +3267,7 @@ label try4new:
             u "(Holy shit, if I could just stick my head through a bit further, I could get a way better view.)"
 
             menu:
-                "Risk it":
+                "Risk it" (penelope=0.0):
                     if is_censored:
                         call screen censored_popup("v2_nsfwSkipLabel4")
 
@@ -3424,7 +3424,7 @@ label try5new:
             u "(Wow... if I could just stick my head through a bit further, I could get a way better view.)"
 
             menu:
-                "Risk it":
+                "Risk it" (penelope=0.0):
                     if is_censored:
                         call screen censored_popup("v2_nsfwSkipLabel5")
 
@@ -3567,7 +3567,7 @@ label try6new:
             u "(Fuck... if I could just stick my head through a bit further, I could get a way better view.)"
 
             menu:
-                "Risk it":
+                "Risk it" (penelope=0.0):
                     if is_censored:
                         call screen censored_popup("v2_nsfwSkipLabel6")
 
@@ -3709,7 +3709,7 @@ label v1_caughtContinue:
     au "[name]? Did you just peek on me?"
 
     menu:
-        "Apologize" (boyfriend=1.0):
+        "Apologize" (aubrey=-1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
             $ v2_caughtpeekingcounter = True
 
@@ -3727,7 +3727,7 @@ label v1_caughtContinue:
 
             au "How about we just buy a costume and get going?"
 
-        "Deny it" (troublemaker=1.0):
+        "Deny it" (aubrey=0.0):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             scene s177e
@@ -3823,7 +3823,7 @@ label v1_caughtContinue_pen:
     pe "[name]! What were you thinking?!"
 
     menu:
-        "Apologize" (boyfriend=1.0):
+        "Apologize" (penelope=-1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
 
             scene s186a
@@ -3847,7 +3847,7 @@ label v1_caughtContinue_pen:
 
             u "(And I still need to buy a costume...)"
 
-        "Deny it" (troublemaker=1.0):
+        "Deny it" (penelope=0.0):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             scene s186
@@ -4086,7 +4086,7 @@ label eve1:
     ev "Alright, here you go."
 
     menu:
-        "Make a move" (bro=1.0):
+        "Make a move" (evelyn=0.0):
             $ v2_made_a_move_on_evelyn = True
             $ reputation.add_point(RepComponent.BRO)
 
@@ -4115,7 +4115,7 @@ label eve1:
             with dissolve
 
             menu:
-                "Be smart":
+                "Be smart" (evelyn=1.0):
                     $ evelynnumber = True
 
                     scene s188h
@@ -4153,7 +4153,7 @@ label eve1:
 
                     u "(I'm getting really good at this flirting thing...)"
 
-                "Be funny":
+                "Be funny" (evelyn=-1.0):
                     $ evelynnumber = False
 
                     scene s188h
