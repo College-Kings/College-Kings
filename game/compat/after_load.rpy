@@ -177,7 +177,16 @@ label after_load:
                             npc.relationships[mc] = Relationship.FWB
                     except AttributeError: pass
                 
-                mc.relationships[npc] = npc.relationships[mc]
+                if isinstance(mc.relationships, set):
+                    mc.relationships = {CharacterService.get_user(npc_name): Relationship.FWB for npc in mc.relationships}
+
+                if isinstance(npc.relationships, set):
+                    npc.relationships = {c: Relationship.FWB for c in npc.relationships}
+
+                if mc.relationships.get(npc, Relationship.FRIEND).value > npc.relationships.get(mc, Relationship.FRIEND).value:
+                    npc.relationships[mc] = mc.relationships[npc]
+                else: 
+                    mc.relationships[npc] = npc.relationships[mc]
 
                 npc.mood = old_npc.mood
                 npc.pending_text_messages = old_npc_vars.get("pending_text_messages", [])

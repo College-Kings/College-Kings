@@ -13,6 +13,8 @@ All notable changes to this project will be documented in this file. This projec
 ### Fixed
 
 - Fixed missing `points` attribute causing crash
+- Fixed missing `mood` attribute causing crash
+- Handle instances where `relationship` is not the expected data type
 
 ## [1.4.14] - 2024-06-02
 
