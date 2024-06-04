@@ -8,6 +8,12 @@
 
 All notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.4.15] - 2024-06-04
+
+### Fixed
+
+- Fixed missing `points` attribute causing crash
+
 ## [1.4.14] - 2024-06-02
 
 ### Added
