@@ -278,7 +278,7 @@ label after_load:
             for npc, rel in mc.relationships.items():
                 npc.relationships = {mc: rel}
 
-        if version < (1, 4, 13):
+        if version < (1, 4, 17):
             old_kiwii = phone.applications[3].__dict__.copy()
 
             if phone.applications[3] is not kiwii:
