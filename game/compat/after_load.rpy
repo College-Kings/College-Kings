@@ -278,6 +278,27 @@ label after_load:
             for npc, rel in mc.relationships.items():
                 npc.relationships = {mc: rel}
 
+        if version < (1, 4, 13):
+            old_kiwii = phone.applications[3].__dict__.copy()
+
+            if phone.applications[3] is not kiwii:
+                kiwii = Kiwii()
+                kiwii.posts = old_kiwii.get("posts") or old_kiwii.get("_posts", [])
+                phone.applications[3] = kiwii 
+
+            for post in kiwii.posts:
+                if post.image in kiwii_post_map:
+                    post.image = kiwii_post_map[post.image]
+
+            for npc_name in npc_map:
+                npc = getattr(store, npc_name.lower().replace(' ', '_'))
+                
+                try: npc.points
+                except AttributeError: npc.points = 0
+
+                try: npc.moods
+                except AttributeError: npc.moods = Moods.NORMAL
+
     show screen phone_icon
     hide screen reply
     hide screen simplr_reply

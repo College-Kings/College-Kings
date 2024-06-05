@@ -8,6 +8,14 @@
 
 All notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.4.16] - 2024-06-05
+
+### Fixed
+
+- Fixed missing `points` (on save) causing crash
+- Fixed missing `mood` (on save) causing crash
+- Fixed instances where `kiwii` was crashing due to old data
+
 ## [1.4.15] - 2024-06-04
 
 ### Fixed
