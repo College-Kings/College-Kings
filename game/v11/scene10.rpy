@@ -208,7 +208,7 @@ label v11_airport_arrival:
 
             ri "Oh hush, quit trying to ruin the fun."
 
-        "Be excited":
+        "Be excited" (bro=1.0):
             $ reputation.add_point(RepComponent.BRO)
             $ riley.points += 1
 

@@ -178,7 +178,7 @@ label v12_urban_exploring:
     with dissolve
 
     menu:
-        "Of course":
+        "Of course" (troublemaker=1.0):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             u "*Chuckles* Of course I can."
@@ -362,7 +362,7 @@ label v12_urban_exploring:
 
             u "Ha, don't worry about it."
 
-        "Move":
+        "Move" (troublemaker=1.0):
             label v12s20_faillabel:
                 $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
@@ -460,7 +460,7 @@ label v12_urban_exploring:
     with dissolve
 
     menu:
-        "Walk Aubrey back to hotel":
+        "Walk Aubrey back to hotel" (boyfriend=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
 
             u "Of course, c'mon Aubrey. I'll walk you back."
@@ -504,7 +504,7 @@ label v12_urban_exploring:
             
             jump v12_nursing_aubrey #scene 21a
 
-        "Share a drink with Nora":
+        "Share a drink with Nora" (troublemaker=1.0):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             u "Gotta be honest, cold drinks in the sun sounds pretty fucking nice. Imre, you're gonna have to walk Aubrey back."

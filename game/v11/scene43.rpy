@@ -138,7 +138,7 @@ label v11_at_the_bank:
 
             bank "Ahh, I see. Let's begin."
 
-        "A little":
+        "A little" (troublemaker=1.0):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             u "A little... I'm just not interested in all this kind of stuff I guess."
@@ -266,7 +266,7 @@ label v11_at_the_bank:
 
             am "Yes! Stealth is definitely the way to go here."
         
-        "Chaos":
+        "Chaos" (troublemaker=1.0):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
             u "I'm more of a guns blazing, lots of action guy. Go in hard or don't go at all."
 
@@ -527,7 +527,7 @@ label v11_at_the_bank:
     with dissolve
 
     menu:
-        "Yep":
+        "Yep" (troublemaker=1.0):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
             u "I guess so, and to think I had such a bright future. Fuck..."
 

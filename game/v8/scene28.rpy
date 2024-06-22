@@ -100,7 +100,7 @@ label drug_deal_w_josh:
     je "If I were you, I'd just hand over the shit now before you end up with a nice, shiny dent in your skull. Save Lars the effort. You dig?"
 
     menu:
-        "Intervene":
+        "Intervene" (bro=1.0):
             $ reputation.add_point(RepComponent.BRO)
             jump int_deal_w_josh
         "Don't intervene":
@@ -572,7 +572,7 @@ label dodged_pipe:
     with dissolve
 
     menu:
-        "Kick Joe":
+        "Kick Joe" (troublemaker=1.0):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
             jump volley_joe
 

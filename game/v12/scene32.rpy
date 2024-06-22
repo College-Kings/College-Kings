@@ -259,7 +259,7 @@ label v12s32:
     u "Oh umm..."
 
     menu:
-        "Turn your back to Aubrey":
+        "Turn your back to Aubrey" (bro=1.0):
             $ reputation.add_point(RepComponent.BRO)
             scene v12s32_15a #same 15, MC crosses his arms and puts his back to Aubrey, aubrey a bit dissapointed, mouth upen
             with dissolve
@@ -281,7 +281,7 @@ label v12s32:
 
             pg "I wouldn't call that sexy but, alright..."
 
-        "Put your arms around Aubrey":
+        "Put your arms around Aubrey" (boyfriend=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
             scene v12s32_15c #same 15, Aubrey has her back to MC and he wraps his arms around her, squeezing her in tight, Aubrey smiles at him, mouth closed
             with dissolve
@@ -469,7 +469,7 @@ label v12s32:
     u "(I think she's jealous of her sister or something, maybe I should boost her up.)"
 
     menu:
-        "Boost Aubrey":
+        "Boost Aubrey" (troublemaker=1.0):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
             $ v12s32_Aubrey_Boost = True
             $ aubrey.points += 1
@@ -492,7 +492,7 @@ label v12s32:
 
             u "*Whisper* You got this, just be yourself."
 
-        "Leave it alone":
+        "Leave it alone" (bro=1.0):
             $ reputation.add_point(RepComponent.BRO)
             scene v12s32_21c 
             with dissolve
@@ -803,7 +803,7 @@ label v12s32:
     with dissolve
 
     menu: 
-        "Get Aubrey flowers":
+        "Get Aubrey flowers" (boyfriend=1.0):
             $ s12v32_get_aubrey_flowers = True
             $ reputation.add_point(RepComponent.BOYFRIEND)
             u "Wait a minute, Aubrey."

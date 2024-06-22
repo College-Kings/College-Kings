@@ -108,14 +108,14 @@ label v11_lindsey_park:
     with dissolve
 
     menu:
-        "Defend Chloe":
+        "Defend Chloe" (lindsey=-1.0):
             $ lindsey.points -= 1
             scene v11lip3b
             with dissolve
 
             u "Is it possible that with all the responsibility she has, it's hard for her to see her mistakes?"
 
-        "Don't defend Chloe":
+        "Don't defend Chloe" (lindsey=1.0):
             $ lindsey.points += 1
             scene v11lip3d
             with dissolve
@@ -131,7 +131,7 @@ label v11_lindsey_park:
     with dissolve
 
     menu:
-        "Support Chloe":
+        "Support Chloe" (lindsey=-1.0):
             $ lindsey.points -= 1
             scene v11lip3b
             with dissolve
@@ -165,7 +165,7 @@ label v11_lindsey_park:
 
             li "Always down for being held accountable."
 
-        "Support Lindsey":
+        "Support Lindsey" (lindsey=1.0):
             $ v11_lindsey_run = True
             $ lindsey.points += 1
 

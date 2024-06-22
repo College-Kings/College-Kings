@@ -158,7 +158,7 @@ label v10_cafe_w_jenny:
         with dissolve
 
         menu:
-            "Reassure her":
+            "Reassure her" (boyfriend=1.0):
                 $ reputation.add_point(RepComponent.BOYFRIEND)
                 $ jenny.points += 1
 
@@ -203,7 +203,7 @@ label v10_cafe_w_jenny:
         with dissolve
 
         menu:
-            "Flirt":
+            "Flirt" (boyfriend=1.0):
                 $ reputation.add_point(RepComponent.BOYFRIEND)
                 if reputation() == Reputations.POPULAR:
                     $ jenny.points += 1
@@ -284,7 +284,7 @@ label v10_cafe_w_jenny:
         with dissolve
 
         menu:
-            "Be helpful":
+            "Be helpful" (bro=1.0):
                 $ reputation.add_point(RepComponent.BRO)
 
                 scene v10scwj11
@@ -301,7 +301,7 @@ label v10_cafe_w_jenny:
 
                 u "And if they don't then I'll just rob a bank for you."
 
-            "Be supportive":
+            "Be supportive" (boyfriend=1.0):
                 $ reputation.add_point(RepComponent.BOYFRIEND)
                 $ penelope.points += 1
 

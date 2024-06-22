@@ -202,13 +202,13 @@ label v14s05a:
         with dissolve
 
         menu:
-            "I think you should":
+            "I think you should" (bro=1.0):
                 $ v14s5a_riley_should_join_chicks = True
                 $ reputation.add_point(RepComponent.BRO)
 
                 u "I think you should. You'd really fit in there."
 
-            "You sure it's for you?":
+            "You sure it's for you?" (boyfriend=1.0):
                 $ reputation.add_point(RepComponent.BOYFRIEND)
 
                 u "Hmm, are you sure it's for you?"

@@ -146,7 +146,7 @@ label phn_penelope6_done:
     u "(Ms. Rose is so upset, but we also really need to hurry if we're gonna finish this before her husband shows up.)"
 
     menu:
-        "Stay to console her":
+        "Stay to console her" (boyfriend=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
             $ consoledRose = True
 
@@ -197,7 +197,7 @@ label phn_penelope6_done:
             with dissolve
             ro "Awww, this was from before the accident. Before everything... How did this happen?"
 
-        "Focus on moving the boxes":
+        "Focus on moving the boxes" (bro=1.0):
             $ reputation.add_point(RepComponent.BRO)
 
             u "Don't worry. We'll be out of here in no time."

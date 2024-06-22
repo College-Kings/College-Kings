@@ -53,7 +53,7 @@ label v4start:
     imre "Yeah whatever... *winces in pain* he caught me by surprise, it wasn't a fair fight."
 
     menu:
-        "You should be more careful":
+        "You should be more careful" (boyfriend=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
 
             scene s297a
@@ -69,7 +69,7 @@ label v4start:
             imre "I told you, it wasn't a fair fight! I'll fuck him up when I get out."
 
             menu:
-                "Let me help":
+                "Let me help" (bro=1.0):
                     $ reputation.add_point(RepComponent.BRO)
 
                     scene s297a
@@ -99,7 +99,7 @@ label v4start:
 
                     u "I'll see you then, get better soon."
 
-                "That's a dumb idea":
+                "That's a dumb idea" (boyfriend=1.0):
                     $ reputation.add_point(RepComponent.BOYFRIEND)
 
                     scene s297a
@@ -129,7 +129,7 @@ label v4start:
 
                     u "I'll see you then, get better soon."
 
-        "Let's fuck him up":
+        "Let's fuck him up" (bro=1.0, troublemaker=1.0):
             $ reputation.add_point(RepComponent.BRO)
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
@@ -285,7 +285,7 @@ label v4start:
     ri "I mean you did seem quite angry at the park today..."
 
     menu:
-        "Take responsibility":
+        "Take responsibility" (bro=1.0, boyfriend=1.0):
             $ reputation.add_point(RepComponent.BRO)
             $ reputation.add_point(RepComponent.BOYFRIEND)
 
@@ -302,7 +302,7 @@ label v4start:
             scene s303a
             with dissolve
 
-        "Blame Ryan":
+        "Blame Ryan" (troublemaker=1.0):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             scene s303c
@@ -543,7 +543,7 @@ label v4start:
         ju "Oh my god, honey! What happened to your eye??"
 
         menu:
-            "Someone punched me":
+            "Someone punched me" (boyfriend=1.0):
                 $ reputation.add_point(RepComponent.BOYFRIEND)
 
                 scene s315a
@@ -578,7 +578,7 @@ label v4start:
 
                 ju "Okay honey, let's go shopping then."
 
-            "It was an accident":
+            "It was an accident" (troublemaker=1.0):
                 $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
                 scene s315a
@@ -1081,7 +1081,7 @@ label v4start:
         aut "Please leave me alone..."
 
         menu:
-            "Apologize":
+            "Apologize" :
                 scene s334c
                 with dissolve
 
@@ -1449,7 +1449,7 @@ label readmontagea:
     u "(Oh shit, there's Ryan.)"
 
     menu:
-        "Talk to him":
+        "Talk to him" (bro=1.0):
             $ reputation.add_point(RepComponent.BRO)
 
             scene s339 #you walking closer to Ryan
@@ -1474,7 +1474,7 @@ label readmontagea:
 
             ry "Yeah, man. I messed up, I'm sorry."
 
-        "Ignore him":
+        "Ignore him" (troublemaker=1.0):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             scene s339 #you walking closer to Ryan
@@ -1608,7 +1608,7 @@ label readmontagea:
         pe "How did you know I was gonna be here?"
 
         menu:
-            "Magic Powers":
+            "Magic Powers" (bro=1.0):
                 $ reputation.add_point(RepComponent.BRO)
 
                 scene s349d
@@ -1631,7 +1631,7 @@ label readmontagea:
 
                 u "Yeah, sure."
 
-            "I didn't":
+            "I didn't" (boyfriend=1.0):
                 $ reputation.add_point(RepComponent.BOYFRIEND)
 
                 scene s349d
@@ -1659,7 +1659,7 @@ label readmontagea:
         clerk "Hello sir, what I can do for you?"
 
         menu:
-            "Buy Penelope a muffin":
+            "Buy Penelope a muffin" (boyfriend=1.0) :
                 $ reputation.add_point(RepComponent.BOYFRIEND)
                 $ muffin = True
                 $ v2_caughtpeekingcounter = True
@@ -1743,7 +1743,7 @@ label readmontagea:
             u "Again, I'm really sorry."
 
             menu:
-                "Grab her hand":
+                "Grab her hand" (penelope=0.0):
                     $ reputation.add_point(RepComponent.BOYFRIEND)
 
                     scene s347 # your hand grabbing her hand
@@ -1760,7 +1760,7 @@ label readmontagea:
                     with dissolve
 
                     menu:
-                        "Kiss her":
+                        "Kiss her" (penelope=-1.0):
                             $ reputation.add_point(RepComponent.TROUBLEMAKER)
                             $ penelopekiss = True
 
@@ -1854,7 +1854,7 @@ label readmontagea:
         pe "How did you know I was gonna be here?"
 
         menu:
-            "Magic Powers":
+            "Magic Powers" (bro=1.0):
                 $ reputation.add_point(RepComponent.BRO)
 
                 scene s345g
@@ -1874,7 +1874,7 @@ label readmontagea:
 
                 u "Yeah, sure."
 
-            "I didn't":
+            "I didn't" (boyfriend=1.0):
                 $ reputation.add_point(RepComponent.BOYFRIEND)
 
                 scene s345g
@@ -1984,7 +1984,7 @@ label ef_bd:
     u "Now we're getting into an interesting topic."
 
     menu:
-        "We should watch some":
+        "We should watch some" (troublemaker=1.0):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             u "You know, we should watch some together sometime."
@@ -2004,7 +2004,7 @@ label ef_bd:
 
             pe "Right, thank you."
 
-        "You should try it":
+        "You should try it" (bro=1.0):
             $ reputation.add_point(RepComponent.BRO)
 
             u "You know, you should try it sometime."
@@ -2026,7 +2026,7 @@ label ef_bd:
     pe "I have to go now and meet my friend. It uhm, it was nice to see you though."
 
     menu:
-        "You wanna go bowling?":
+        "You wanna go bowling?" (boyfriend=0.0, bro=0.0):
             scene s350a
             with dissolve
 
@@ -2040,7 +2040,7 @@ label ef_bd:
             pe "I don't know, I have sooo much studying to do..."
 
             menu:
-                "Encourage her":
+                "Encourage her" (boyfriend=1.0):
                     $ reputation.add_point(RepComponent.BOYFRIEND)
                     $ bowling = True
 
@@ -2066,7 +2066,7 @@ label ef_bd:
 
                     jump el_ad
 
-                "Tease her":
+                "Tease her" (bro=1.0):
                     $ reputation.add_point(RepComponent.BRO)
                     $ bowling = False
 
@@ -2282,7 +2282,7 @@ label continueab:
     jo "I see you've taken my spot."
 
     menu:
-        "I can move":
+        "I can move" (boyfriend=1.0, bro=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
             $ reputation.add_point(RepComponent.BRO)
 
@@ -2296,7 +2296,7 @@ label continueab:
 
             jo "Hahaha, buddy I'm just kidding, stay put."
 
-        "It's my spot now":
+        "It's my spot now" (troublemaker=1.0):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             scene s359a
@@ -2344,7 +2344,7 @@ label continueab:
     with dissolve
 
     menu:
-        "I'll join the Wolves":
+        "I'll join the Wolves" (bro=1.0):
             $ reputation.add_point(RepComponent.BRO)
 
             u "I'll join the Wolves."
@@ -2354,7 +2354,7 @@ label continueab:
 
             jo "See? I knew he was a fighter."
 
-        "I don't know yet":
+        "I don't know yet" (boyfriend=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
 
             u "I don't know yet."
@@ -2403,7 +2403,7 @@ label continueab:
     jo "The rules are simple. The phone gives us tasks and how many sips to drink if we lose or are selected in some way or another."
 
     menu:
-        "Sounds good":
+        "Sounds good" (bro=1.0):
             $ reputation.add_point(RepComponent.BRO)
 
             scene s361g
@@ -2411,7 +2411,7 @@ label continueab:
 
             u "Cool, sounds good."
 
-        "I should stop here":
+        "I should stop here" (boyfriend=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
 
             scene s361f
@@ -2471,10 +2471,10 @@ label continueab:
     u "Uhhh..."
 
     menu:
-        "Do a handstand":
+        "Do a handstand" (bro=1.0):
             $ reputation.add_point(RepComponent.BRO)
 
-        "Drink three sips":
+        "Drink three sips" (boyfriend=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
             
             u "I'll drink."
@@ -2661,7 +2661,7 @@ label continueab:
     u "*Drunk* Uhh..."
 
     menu:
-        "Amber":
+        "Amber" (amber=0.0):
             scene jomon14 # amber in bra ready for shot of her body
             with fade
 
@@ -2686,7 +2686,7 @@ label continueab:
             with dissolve
 
             menu:
-                "Kiss her":
+                "Kiss her" (amber=1.0):
                     $ reputation.add_point(RepComponent.TROUBLEMAKER)
                     $ CharacterService.set_relationship(amber, Relationship.KISSED)
 
@@ -2711,7 +2711,7 @@ label continueab:
 
                     pause 0.5
 
-                "Don't kiss her":
+                "Don't kiss her" (troublemaker=1.0):
                     $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
                     play sound sound.spit
@@ -2728,7 +2728,7 @@ label continueab:
 
                     "*Phone alarm ringing*"
 
-        "Kim":
+        "Kim" (kim=0.0):
             scene jomon16 # kim in bra ready for shot of her body
             with fade
 
@@ -2753,7 +2753,7 @@ label continueab:
             with dissolve
 
             menu:
-                "Kiss her":
+                "Kiss her" (troublemaker=-1.0):
                     $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
                     play sound sound.spit
@@ -2780,7 +2780,7 @@ label continueab:
 
                     pause 0.5
 
-                "Don't kiss her":
+                "Don't kiss her" (troublemaker=1.0):
                     $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
                     play sound sound.spit
@@ -2883,7 +2883,7 @@ label continueab:
     $ CharacterService.set_mood(chloe, Moods.MAD)
 
     menu:
-        "Accuse her of lying":
+        "Accuse her of lying" (troublemaker=1.0):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             scene s370c

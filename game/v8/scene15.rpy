@@ -90,7 +90,7 @@ label penelope_dorm_hack:
     with dissolve
 
     menu:
-        "Help Penelope":
+        "Help Penelope" (boyfriend=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
             jump help_pen
 

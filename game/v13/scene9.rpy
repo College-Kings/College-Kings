@@ -605,7 +605,7 @@ label v13s9:
         with dissolve
         
         menu:
-            "Go with Ryan":
+            "Go with Ryan" (bro=1.0):
                 $ reputation.add_point(RepComponent.BRO) # only give points for the decision; not the else (default) flow.   
                 jump v13s9_no_concert
 

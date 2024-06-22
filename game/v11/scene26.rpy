@@ -218,7 +218,7 @@ label v11_hotel_bar_wolves: #can only get here if mc.frat == Frat.WOLVES
         u "(10 minutes.)"
 
         menu:
-            "Go to her room":
+            "Go to her room" (troublemaker=1.0):
                 $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
                 scene v11hrs5a # TPP Same angle as v11hrs5, MC alone at bar, getting off of bar stool to leave

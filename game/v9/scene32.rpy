@@ -39,7 +39,7 @@ label v9_sat_hit_gym:
         ev "Is that so? I'm a very busy woman with a lot of responsibilities, I barely have enough time to workout and here you are interrupting that."
 
         menu:
-            "Convince her":
+            "Convince her" (boyfriend=1.0):
                 $ reputation.add_point(RepComponent.BOYFRIEND)
                 jump v9_sat_hit_gym_convince
             "Forget it":

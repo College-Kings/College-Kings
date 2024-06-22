@@ -150,7 +150,7 @@ label v9_dinner_w_rose:
     with dissolve
 
     menu:
-        "Talk about working out":
+        "Talk about working out" (bro=1.0):
             $ reputation.add_point(RepComponent.BRO)
 
             scene v9damr9
@@ -305,7 +305,7 @@ label v9_dinner_w_rose:
     ro "Good! I'll go get it."
 
     menu:
-        "Offer to help":
+        "Offer to help" (boyfriend=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
 
             scene v9damr12f # FPP. Same camera as v9damr12, Show Ms. Rose now stood at the end of table, Imre seated to MC's right,neutral expressions, Ms. Rose mouth closed, Imre mouth closed

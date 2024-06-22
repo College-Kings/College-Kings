@@ -3369,7 +3369,7 @@ label continueq:
         label dl_a: #for compatibility only
         label dl_b: #for compatibility only
         menu:
-            "Kiss her" (lauren=0.5):
+            "Kiss her" (lauren=0.0):
                 scene laurenkiss2 #self explanatory, same camera as s289
                 with dissolve
 

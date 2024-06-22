@@ -146,7 +146,7 @@ label v12_mc_chilling:
         sa "*Drunk* Do you think I'm pretty?"
 
         menu:
-            "What?":
+            "What?" (troublemaker=1.0):
                 $ reputation.add_point(RepComponent.TROUBLEMAKER)
                 scene v12mor9
                 with dissolve
@@ -163,7 +163,7 @@ label v12_mc_chilling:
 
                 u "No, Sam. I mean, yeah. Of course you're pretty. I just wasn't expecting that question I guess."
 
-            "Yes":
+            "Yes" (boyfriend=1.0):
                 $ reputation.add_point(RepComponent.BOYFRIEND)
                 scene v12mor9
                 with dissolve
@@ -303,7 +303,7 @@ label v12_mc_chilling:
 
                 sa "*Drunk* Good... Right answer."
 
-            "No":
+            "No" (troublemaker=1.0):
                 $ reputation.add_point(RepComponent.TROUBLEMAKER)
                 scene v12mor13a
                 with dissolve
@@ -345,7 +345,7 @@ label v12_mc_chilling:
             
                 u "Yeah. Of course I can take him. He may be a lunatic, but I can handle that."
 
-            "Not fighting your brother":
+            "Not fighting your brother" (bro=1.0):
                 $ reputation.add_point(RepComponent.BRO)
                 scene v12mor13a 
                 with dissolve
@@ -471,7 +471,7 @@ label v12_mc_chilling:
         with dissolve
 
         menu:
-            "Call Cameron":
+            "Call Cameron" (bro=1.0):
                 $ reputation.add_point(RepComponent.BRO)
 
                 scene v12mor23 # TPP. MC holding his phone, mouth closed
@@ -565,7 +565,7 @@ label v12_mc_chilling:
 
                 pause 0.75
 
-            "Don't call Cameron":
+            "Don't call Cameron" (boyfriend=1.0):
                 $ reputation.add_point(RepComponent.BOYFRIEND)
                 scene v12mor22
                 with dissolve
@@ -650,7 +650,7 @@ label v12_mc_chilling:
                 sa "*Drunk* Awww, I wish I was there too."
 
 
-            "No, I don't miss you (Joke)":
+            "No, I don't miss you (Joke)" (troublemaker=1.0):
                 $ reputation.add_point(RepComponent.TROUBLEMAKER)
                 scene v12mor24a
                 with dissolve
@@ -768,7 +768,7 @@ label v12_mc_chilling:
         with dissolve
 
         menu:
-            "Call Cameron":
+            "Call Cameron" (bro=1.0):
                 $ reputation.add_point(RepComponent.BRO)
 
                 scene v12mor24d
@@ -859,7 +859,7 @@ label v12_mc_chilling:
 
                 pause 0.75
 
-            "Don't call Cameron":
+            "Don't call Cameron" (boyfriend=1.0):
                 $ reputation.add_point(RepComponent.BOYFRIEND)
                 scene v12mor22
                 with dissolve

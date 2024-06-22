@@ -76,7 +76,7 @@ label v10_riley_sex:
         with dissolve
 
         menu:
-            "Offer to turn around":
+            "Offer to turn around" (riley=0.0):
                 scene v10srds3a
                 with dissolve
 
@@ -226,7 +226,7 @@ label v10_riley_sex:
 
                         jump v10_mc_pen_call # -Transition to Scene 41-
 
-                    "Peek":
+                    "Peek" (riley=1.0):
                         $ CharacterService.set_relationship(riley, Relationship.FWB)
                         $ sceneList.add("v10_riley")
 
@@ -352,7 +352,7 @@ label v10_riley_sex:
                         with dissolve
 
                         u "It was."
-            "Make a move":
+            "Make a move" (riley=1.0):
                 $ CharacterService.set_relationship(riley, Relationship.FWB)
                 $ sceneList.add("v10_riley")
 
@@ -607,7 +607,7 @@ label v10_riley_sex:
         scene v10srds3a
         with dissolve
         menu:
-            "Make a move":
+            "Make a move" (chloe=1.0):
                 $ CharacterService.set_relationship(riley, Relationship.FWB)
                 $ sceneList.add("v10_riley")
 
@@ -725,7 +725,7 @@ label v10_riley_sex:
 
                 u "It was."
 
-            "Offer to turn around":
+            "Offer to turn around" (riley=0.0):
                 scene v10srds3a
                 with dissolve
 
@@ -875,7 +875,7 @@ label v10_riley_sex:
 
                         jump v10_mc_pen_call # -Transition to Scene 41-
                     
-                    "Peek":
+                    "Peek" (riley=1.0):
                         $ CharacterService.set_relationship(riley, Relationship.FWB)
                         $ sceneList.add("v10_riley")
 

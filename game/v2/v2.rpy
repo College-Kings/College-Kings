@@ -1014,7 +1014,7 @@ label youfinish:
     $ wintom = True
 
     menu:
-        "Kick him" (troublemaker=1.0):
+        "Kick him"(troublemaker=1.0):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             play sound sound.hit

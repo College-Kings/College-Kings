@@ -60,7 +60,7 @@ label mr_aft_class:
         with dissolve
 
         menu:
-            "Ask more questions":
+            "Ask more questions" (boyfriend=1.0):
                 $ reputation.add_point(RepComponent.BOYFRIEND)
                 jump ask_rose_more_q
             "Leave":

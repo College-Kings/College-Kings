@@ -298,7 +298,7 @@ label v11_treasure_hunt:
     with dissolve
 
     menu:
-        "She will miss":
+        "She will miss" (troublemaker=1.0):
             $ v11_she_will_miss = True
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
             scene v11th14d # FPP. Same as v11th14, MC and Riley looking at each other, Riley holding the gun, Riley mouth closed, slight smirk
@@ -396,7 +396,7 @@ label v11_treasure_hunt:
 
             ri "I guess it just comes naturally... *Chuckles*"
 
-        "She won't miss":
+        "She won't miss" (bro=1.0):
             $ reputation.add_point(RepComponent.BRO)
             scene v11th14g # FPP. Same as v11th14d, Riley smiling, mouth closed, different pose
             with dissolve

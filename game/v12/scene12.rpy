@@ -43,7 +43,7 @@ label v12_room_chloe_riley:
         u "Goodness, you really didn't like acting poor. *Chuckles*"
 
         menu:
-            "Truth":
+            "Truth" (boyfriend=1.0):
                 $ reputation.add_point(RepComponent.BOYFRIEND)
                 scene v12crm2
                 with dissolve
@@ -55,7 +55,7 @@ label v12_room_chloe_riley:
 
                 cl "Mhmm, sure. I'll be keeping my eyes on you."
 
-            "Lie":
+            "Lie" (troublemaker=1.0):
                 $ reputation.add_point(RepComponent.TROUBLEMAKER)
                 scene v12crm2 
                 with dissolve
