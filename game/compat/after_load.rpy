@@ -177,7 +177,16 @@ label after_load:
                             npc.relationships[mc] = Relationship.FWB
                     except AttributeError: pass
                 
-                mc.relationships[npc] = npc.relationships[mc]
+                if isinstance(mc.relationships, set):
+                    mc.relationships = {CharacterService.get_user(npc_name): Relationship.FWB for npc in mc.relationships}
+
+                if isinstance(npc.relationships, set):
+                    npc.relationships = {c: Relationship.FWB for c in npc.relationships}
+
+                if mc.relationships.get(npc, Relationship.FRIEND).value > npc.relationships.get(mc, Relationship.FRIEND).value:
+                    npc.relationships[mc] = mc.relationships[npc]
+                else: 
+                    mc.relationships[npc] = npc.relationships[mc]
 
                 npc.mood = old_npc.mood
                 npc.pending_text_messages = old_npc_vars.get("pending_text_messages", [])
@@ -268,6 +277,27 @@ label after_load:
         if version < (1, 4, 12):
             for npc, rel in mc.relationships.items():
                 npc.relationships = {mc: rel}
+
+        if version < (1, 4, 17):
+            old_kiwii = phone.applications[3].__dict__.copy()
+
+            if phone.applications[3] is not kiwii:
+                kiwii = Kiwii()
+                kiwii.posts = old_kiwii.get("posts") or old_kiwii.get("_posts", [])
+                phone.applications[3] = kiwii 
+
+            for post in kiwii.posts:
+                if post.image in kiwii_post_map:
+                    post.image = kiwii_post_map[post.image]
+
+            for npc_name in npc_map:
+                npc = getattr(store, npc_name.lower().replace(' ', '_'))
+                
+                try: npc.points
+                except AttributeError: npc.points = 0
+
+                try: npc.moods
+                except AttributeError: npc.moods = Moods.NORMAL
 
     show screen phone_icon
     hide screen reply
