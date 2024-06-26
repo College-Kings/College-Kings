@@ -1119,7 +1119,7 @@ label meet_lauren2:
     la "About yesterday in the park..."
 
     menu:
-        "There was something there" (Lauren=1.0):
+        "There was something there" (lauren=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
             
             if CharacterService.is_kissed(lauren):
@@ -3727,7 +3727,7 @@ label v1_caughtContinue:
 
             au "How about we just buy a costume and get going?"
 
-        "Deny it" (aubrey=0.0):
+        "Deny it" (aubrey=(1.0 if reputation() == Reputations.CONFIDENT else -1.0)):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             scene s177e
@@ -3847,7 +3847,7 @@ label v1_caughtContinue_pen:
 
             u "(And I still need to buy a costume...)"
 
-        "Deny it" (penelope=0.0):
+        "Deny it" ((penelope=(1.0 if reputation() == Reputations.CONFIDENT else -1.0))):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             scene s186

@@ -2734,7 +2734,7 @@ label hospitala:
 
                     jump fk_a
 
-                "Talk to him" (adam=0.0):
+                "Talk to him" (boyfriend=1.0):
                     $ reputation.add_point(RepComponent.BOYFRIEND)
 
                     scene s398a

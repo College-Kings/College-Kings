@@ -1081,7 +1081,7 @@ label v4start:
         aut "Please leave me alone..."
 
         menu:
-            "Apologize" :
+            "Apologize" (autumn = (0.5 if reputaiton() == Reputations.LOYAL else None)):
                 scene s334c
                 with dissolve
 
@@ -1659,7 +1659,7 @@ label readmontagea:
         clerk "Hello sir, what I can do for you?"
 
         menu:
-            "Buy Penelope a muffin" (boyfriend=1.0) :
+            "Buy Penelope a muffin" (penelope=0.5) :
                 $ reputation.add_point(RepComponent.BOYFRIEND)
                 $ muffin = True
                 $ v2_caughtpeekingcounter = True
@@ -1743,7 +1743,7 @@ label readmontagea:
             u "Again, I'm really sorry."
 
             menu:
-                "Grab her hand" (penelope=0.0):
+                "Grab her hand" (boyfriend=1.0):
                     $ reputation.add_point(RepComponent.BOYFRIEND)
 
                     scene s347 # your hand grabbing her hand
@@ -2026,7 +2026,7 @@ label ef_bd:
     pe "I have to go now and meet my friend. It uhm, it was nice to see you though."
 
     menu:
-        "You wanna go bowling?" (boyfriend=0.0, bro=0.0):
+        "You wanna go bowling?" (penelope=1.0):
             scene s350a
             with dissolve
 
@@ -2661,7 +2661,7 @@ label continueab:
     u "*Drunk* Uhh..."
 
     menu:
-        "Amber" (amber=0.0):
+        "Amber" (amber=0.5):
             scene jomon14 # amber in bra ready for shot of her body
             with fade
 

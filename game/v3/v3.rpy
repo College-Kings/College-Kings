@@ -1162,7 +1162,7 @@ label conl:
         u "(Isn't that the cute store clerk from the costume shop?)"
 
         menu:
-            "Approach her" (bro=1.0):
+            "Approach her" (evelyn=0.5):
                 $ reputation.add_point(RepComponent.BRO)
                 label cx_a: #for compatibility only
 
@@ -3369,7 +3369,7 @@ label continueq:
         label dl_a: #for compatibility only
         label dl_b: #for compatibility only
         menu:
-            "Kiss her" (lauren=0.0):
+            "Kiss her" (lauren=0.5):
                 scene laurenkiss2 #self explanatory, same camera as s289
                 with dissolve
 
