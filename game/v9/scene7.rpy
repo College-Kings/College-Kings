@@ -221,7 +221,7 @@ label fr5ryan1:
         with dissolve
 
         menu:
-            "Talk about your dream":
+            "Talk about your dream" (boyfriend=1.0):
                 $ reputation.add_point(RepComponent.BOYFRIEND)
 
                 u "I'm not so sure about that. Last night I had a fucked up dream."
@@ -325,7 +325,7 @@ label fr5ryan1:
 
                 u "Right as fuck, my man."
 
-            "Talk about the brawl":
+            "Talk about the brawl" (bro=1.0):
                 $ reputation.add_point(RepComponent.BRO)
 
                 # -if MC chooses to tell Ryan how excited he is about the Brawl-
@@ -451,7 +451,7 @@ label fr5riley1:
         with dissolve
 
         menu:
-            "Kiss her":
+            "Kiss her" (troublemaker=1.0):
                 $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
                 play sound sound.kiss
@@ -647,7 +647,7 @@ label fr5aubrey1:
     with dissolve
 
     menu: 
-        "Don't join her":
+        "Don't join her" (troublemaker=1.0):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             u "That was a nice try, miss. But you must be mistaking me for a child, if you thought that would work."
@@ -682,7 +682,7 @@ label fr5aubrey1:
 
             u "Sounds interesting. I guess we will see."
 
-        "Join her":
+        "Join her" (boyfriend=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
 
             u "Fine, let me just take my clothes off."

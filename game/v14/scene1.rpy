@@ -76,7 +76,7 @@ label v14s01:
     with dissolve
 
     menu:
-        "We're doing this":
+        "We're doing this" (troublemaker=1.0):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
             
             $ sceneList.add("v14_threesome")
@@ -470,7 +470,7 @@ label v14s01:
             u "(Now that I'm awake I might as well go see what's going on.)"
             u "(My sleep schedule is gonna be all fucked now, though. Feeling energized at night isn't a good thing...) *Sighs*"
 
-        "Stop them":
+        "Stop them" (boyfriend=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
             scene v14s01_1e # FPP. Same as v14s01_1b, Aubrey and Riley shocked, mouths closed
             with dissolve

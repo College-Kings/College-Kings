@@ -29,7 +29,7 @@ label v10_aft_walk_home:
     scene v10smwh2b # FPP. Same camera as v10smwh2. Show Josh alone in the alley after the fishy guy rushes off.
     with dissolve
     menu:
-        "Check it out":
+        "Check it out" (bro=1.0):
             $ reputation.add_point(RepComponent.BRO)
             scene v10smwh3 # FPP. POV is MC and Josh close in the alley, talking. Show Josh, normal expression, mouth closed.
             with fade
@@ -265,7 +265,7 @@ label v10_aft_walk_home:
 
             pause 0.5
         
-        "Keep walking":
+        "Keep walking" (troublemaker=1.0):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
             scene v10smwh2b
             with dissolve

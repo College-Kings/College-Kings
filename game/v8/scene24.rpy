@@ -44,7 +44,7 @@ label josh_room:
     u "Fuck, ummm..."
 
     menu:
-        "Agree to help":
+        "Agree to help" (troublemaker=1.0, bro=1.0):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
             $ reputation.add_point(RepComponent.BRO)
             $ helpJosh = True
@@ -79,7 +79,7 @@ label josh_room:
             with dissolve
             jo "Yeah, see you then, bro!"
 
-        "Say no":
+        "Say no" (boyfriend=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
 
             u "Honestly, man, I don't think so. This isn't me and I don't want to get caught, especially with that shit."

@@ -192,10 +192,10 @@ label v13_ticket_transfer:
             with dissolve
 
             menu:
-                "Aubrey":
+                "Aubrey" (aubrey=1.0):
                     $ aubrey.points += 1
 
-                "Penelope":
+                "Penelope" (penelope=1.0):
                     $ penelope.points += 1
                     $ v13_penelope_concert = True
 

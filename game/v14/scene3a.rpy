@@ -57,7 +57,7 @@ label v14s03a:
     ngam "Sure deal brother man! Real simple. Three cups and a ball. Heard of it?"
 
     menu:
-        "Yes, of course":
+        "Yes, of course" (troublemaker=1.0):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
             scene v14s03a_2
             with dissolve
@@ -69,7 +69,7 @@ label v14s03a:
 
             ngam "My man!"
         
-        "Never heard of it":
+        "Never heard of it" (boyfriend=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
             scene v14s03a_2
             with dissolve
@@ -112,7 +112,7 @@ label v14s03a:
     ngam "Ready to try your luck?"
 
     menu: # Play the game 
-        "I'll pass":
+        "I'll pass" (boyfriend=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
             scene v14s03a_2e # FPP. Gambler, slightly sad, mouth closed.
             with dissolve
@@ -208,7 +208,7 @@ label v14s03a:
 
             u "*Chuckles*"
 
-        "Give it a try": # -If Give it a try
+        "Give it a try" (troublemaker=1.0): # -If Give it a try
             stop music fadeout 3
             play music music.ck1.v13.Track_Scene_29_2 fadein 2
 
@@ -473,7 +473,7 @@ label v14s03a:
             imre "Shut the hell up! [name], tell him."
                 
             menu:
-                "Take the wallet": # -If Take the wallet
+                "Take the wallet" (troublemaker=1.0): # -If Take the wallet
                     $ reputation.add_point(RepComponent.TROUBLEMAKER)
                     $ v14s03a_take_wallet = True
                     
@@ -526,7 +526,7 @@ label v14s03a:
 
                     imre "Maybe after today you'll make money the right way."
 
-                "Don't take the wallet": # -If Don't take the wallet
+                "Don't take the wallet" (boyfriend=1.0): # -If Don't take the wallet
                     $ reputation.add_point(RepComponent.BOYFRIEND)
                     scene v14s03a_4e
                     with dissolve

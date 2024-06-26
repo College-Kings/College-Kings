@@ -303,7 +303,7 @@ label v12_paris_hotel:
     no "Yeah, it's just a lot, you know? Never thought I'd be in a situation like this."
 
     menu:
-        "Support her choice":
+        "Support her choice" (boyfriend=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
             scene v12pht9d
             with dissolve
@@ -321,7 +321,7 @@ label v12_paris_hotel:
 
             u "That's what FRIENDS are for. *Chuckles*"
 
-        "Help Chris":
+        "Help Chris" (bro=1.0):
             $ v12_help_chris += 1
             $ reputation.add_point(RepComponent.BRO)
             scene v12pht9d
@@ -361,7 +361,7 @@ label v12_paris_hotel:
     no "Should I turn the tables and have a little \"mind your own business\" talk with him?"
 
     menu:
-        "Yes":
+        "Yes" (troublemaker=1.0):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
             scene v12pht9h
             with dissolve
@@ -373,7 +373,7 @@ label v12_paris_hotel:
 
             no "Haha, I'll think about it."
 
-        "No":
+        "No" (boyfriend=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
             scene v12pht9h 
             with dissolve

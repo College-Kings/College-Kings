@@ -111,7 +111,7 @@ label v11_lauren_airport_convo:
                 with dissolve
 
                 menu:
-                    "Yes":
+                    "Yes" (troublemaker=1.0):
                         $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
                         scene v11laac2e
@@ -213,7 +213,7 @@ label v11_lauren_airport_convo:
             la "If it doesn't interfere with your plans with Aubrey..."
 
             menu:
-                "Play it cool":
+                "Play it cool" (bro=1.0):
                     $ reputation.add_point(RepComponent.BRO)
 
                     scene v11laac2h # FPP. Same as v11laac2e, Lauren has a slightly seductive look, mouth closed
@@ -221,7 +221,7 @@ label v11_lauren_airport_convo:
 
                     u "*Smirks* Sounds nice."
 
-                "Act clueless":
+                "Act clueless" (boyfriend=1.0):
                     $ reputation.add_point(RepComponent.BOYFRIEND)
 
                     scene v11laac2h

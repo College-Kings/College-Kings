@@ -57,7 +57,7 @@ label v13s24:
     barh "There's three other singles, but they're all girls. One for each of you maybe? *Laughs*"
 
     menu:
-        "I already have a girl":
+        "I already have a girl" (boyfriend=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
 
             scene v13s24_3a
@@ -95,7 +95,7 @@ label v13s24:
 
             barh "Awkward..."
 
-        "Fuck yeah, let's mingle":
+        "Fuck yeah, let's mingle" (bro=1.0):
             $ reputation.add_point(RepComponent.BRO)
             if CharacterService.is_girlfriend(chloe) or CharacterService.is_girlfriend(lauren):
                 $ reputation.add_point(RepComponent.TROUBLEMAKER)
@@ -370,7 +370,7 @@ label v13s24:
     ry "Well, I'll be honest. I'm not interested in having kids at this very moment, but I do want children in the future... And many of them. *Chuckles*"
 
     menu:
-        "No kids for me":
+        "No kids for me" (bro=1.0):
             $ reputation.add_point(RepComponent.BRO)
             $ emmy.points = 1
             
@@ -384,7 +384,7 @@ label v13s24:
 
             pause 0.75
 
-        "I'm a family man":
+        "I'm a family man" (boyfriend=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
             $ emmy.points = 0
             
@@ -559,7 +559,7 @@ label v13s24:
     ry "I do like to spoil my girl, so maybe."
 
     menu:
-        "Yes, I'm a romantic":
+        "Yes, I'm a romantic" (boyfriend=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
             $ kourtney.points = 1
             
@@ -568,7 +568,7 @@ label v13s24:
 
             u "I feel like I'm a romantic, so of course."
 
-        "No, that's too old school":
+        "No, that's too old school" (troublemaker=0.0):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
             $ kourtney.points = 0
 
@@ -683,7 +683,7 @@ label v13s24:
     ry "Well, I wouldn't wanna be doing nothing. So, probably."
 
     menu:
-        "Work":
+        "Work" (boyfriend=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
             $ aryssa.points = 1
             
@@ -692,7 +692,7 @@ label v13s24:
 
             u "I'd still be working in some way, shape or form. Don't have time for boredom."
 
-        "Retired life":
+        "Retired life" (bro=1.0, troublemaker=1.0):
             $ reputation.add_point(RepComponent.BRO)
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
             $ aryssa.points = 0

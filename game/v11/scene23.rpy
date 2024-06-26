@@ -242,7 +242,7 @@ label v11s23_mrlee1:
     lee "No, no it isn't. Come to find out this sculpture is of a man she was cheating on me with and to think I'm actually the one that gifted it to the museum where it's been for 36 years."
 
     menu:
-        "Laugh":
+        "Laugh" (troublemaker=1.0):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
             scene v11frmlee1a
             with dissolve
@@ -254,7 +254,7 @@ label v11s23_mrlee1:
 
             lee "It wasn't so funny back then."
 
-        "Feel bad":
+        "Feel bad" (bro=1.0):
             $ reputation.add_point(RepComponent.BRO)
             scene v11frmlee1b
             with dissolve
@@ -374,7 +374,7 @@ label v11s23_riley1:
     ri "*Mocking voice* You're gonna get us kicked out of here! *Laughs*"
 
     menu:
-        "Seek revenge":
+        "Seek revenge" (troublemaker=1.0):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             scene v11frmri3a # FPP Same angle as v11frmri3, Riley smiling with mouth closed
@@ -731,7 +731,7 @@ label v11s23_penelope1:
 
     if CharacterService.is_dating(penelope):
         menu:
-            "Flirt":
+            "Flirt" (boyfriend=1.0):
                 $ v11s23_penelope_date = True
                 $ reputation.add_point(RepComponent.BOYFRIEND)
 
@@ -1137,7 +1137,7 @@ label v11s23_freeroamend:
             # Transition to Scene 25
             jump v11_hotel_bar
 
-        "Sneak out":
+        "Sneak out" (troublemaker=1.0):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             scene v11frm1b

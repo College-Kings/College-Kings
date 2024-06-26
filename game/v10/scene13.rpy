@@ -83,7 +83,7 @@ label v10_wolves_redec:
     with dissolve
 
     menu:
-        "Accept help":
+        "Accept help" (bro=1.0):
             $ reputation.add_point(RepComponent.BRO)
 
             u "Yeah I'd love some help. Will go much faster haha."

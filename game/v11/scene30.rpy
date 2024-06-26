@@ -555,7 +555,7 @@ label v11_quiz_q2:
         "13":
             jump v11_answer_13
 
-        "29":
+        "29" :
             $ lauren.points += 1
             $ v11_hp_points += 1
 
@@ -1357,7 +1357,7 @@ label v11_quiz_bonus:
         with dissolve
 
         menu:
-            "I love you too":
+            "I love you too" (boyfriend=1.0):
                 $ CharacterService.set_relationship(lauren, Relationship.GIRLFRIEND)
                 $ reputation.add_point(RepComponent.BOYFRIEND)
                 $ lauren.points += 2
@@ -1374,7 +1374,7 @@ label v11_quiz_bonus:
 
                 pause 1
 
-            "Play it off":
+            "Play it off" (bro=1.0):
                 $ reputation.add_point(RepComponent.BRO)
                 $ lauren.points -= 2
 

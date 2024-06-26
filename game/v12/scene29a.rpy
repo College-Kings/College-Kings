@@ -401,7 +401,7 @@ label v12_late_night_workout:
     pause 0.75
 
     menu:
-        "Show off":
+        "Show off" (troublemaker=1.0):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             scene v12lnw9b
@@ -580,7 +580,7 @@ label v12_late_night_workout:
 
                     li "*Chuckles*"
                 
-                "Best spot ever":
+                "Best spot ever" (troublemaker=1.0):
                     $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
                     scene v12lnw21d
@@ -839,7 +839,7 @@ label v12_late_night_workout:
     with dissolve
 
     menu:
-        "Hard":
+        "Hard" (troublemaker=1.0):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
             play sound sound.hit
             scene v12lnw25c # TPP Same angle as v12lnw25, MC kicking back at the punching bag, missing, and losing his balance

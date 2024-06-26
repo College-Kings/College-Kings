@@ -86,7 +86,7 @@ label v10_emily_course:
                 with dissolve
 
                 menu:
-                    "Join Emily":
+                    "Join Emily" (emily=1.0):
                         $ reputation.add_point(RepComponent.BOYFRIEND)
                         $ emily.points += 1
 
@@ -136,14 +136,14 @@ label v10_emily_course:
                         with dissolve
 
                         menu:
-                            "Save Emily":
+                            "Save Emily" (boyfriend=1.0):
                                 $ reputation.add_point(RepComponent.BOYFRIEND)
 
                                 u "Don't you die on us!"
 
                                 be "Looks like you two are really getting into it."                                
 
-                            "Don't save Emily":
+                            "Don't save Emily" (troubelmaker=1.0):
                                 $ reputation.add_point(RepComponent.TROUBLEMAKER)
                             
                                 u "Oh no, if only someone could save her."
@@ -167,7 +167,7 @@ label v10_emily_course:
                         with dissolve
 
                         menu:
-                            "Agree with Emily":
+                            "Agree with Emily" (emily=1.0):
                                 $ reputation.add_point(RepComponent.BOYFRIEND)
                                 $ emily.points += 1
 
@@ -223,7 +223,7 @@ label v10_emily_course:
 
                         jump v10_late_alley
 
-                    "Leave":
+                    "Leave" (troubelmaker=1.0):
                         $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
                         u "Shoot, what time is it?"
@@ -307,7 +307,7 @@ label v10_emily_course:
                 with dissolve
 
                 menu:
-                    "Join Emily":
+                    "Join Emily" (emily=1.0):
                         $ reputation.add_point(RepComponent.BOYFRIEND)
                         $ emily.points += 1
                         $ forgiveemily = True
@@ -358,14 +358,14 @@ label v10_emily_course:
                         with dissolve
 
                         menu:
-                            "Save Emily":
+                            "Save Emily" (boyfriend=1.0):
                                 $ reputation.add_point(RepComponent.BOYFRIEND)
 
                                 u "Don't you die on us!"
 
                                 be "Looks like you two are really getting into it."                                
 
-                            "Don't save Emily":
+                            "Don't save Emily" (troubelmaker=1.0):
                                 $ reputation.add_point(RepComponent.TROUBLEMAKER)
                             
                                 u "Oh no, if only someone could save her."
@@ -389,7 +389,7 @@ label v10_emily_course:
                         with dissolve
 
                         menu:
-                            "Agree with Emily":
+                            "Agree with Emily" (emily=1.0):
                                 $ reputation.add_point(RepComponent.BOYFRIEND)
                                 $ emily.points += 1
 
@@ -445,7 +445,7 @@ label v10_emily_course:
 
                         jump v10_late_alley
 
-                    "Leave":
+                    "Leave" (troubelmaker=1.0):
                         $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
                         u "Shoot, what time is it?"

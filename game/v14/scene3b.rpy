@@ -137,13 +137,13 @@ label v14s03b:
 
     menu:
 
-        "Take him seriously":
+        "Take him seriously" (bro=1.0):
             
             $ reputation.add_point(RepComponent.BRO)
 
             u "Oh shit."
 
-        "Take it as a joke":
+        "Take it as a joke" (troublemaker=1.0):
 
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
@@ -239,7 +239,7 @@ label v14s03b:
     with dissolve
 
     menu:
-        "Go for it":
+        "Go for it" (troublemaker=1.0):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
             u "Well, no. Honestly, if it's just for practice then there's probably no better place than this. Just make sure that's really what you want to do."
 
@@ -253,7 +253,7 @@ label v14s03b:
 
             u "Not at all. I think you should go for it."
 
-        "Don't ruin your first time":
+        "Don't ruin your first time" (bro=1.0):
             $ reputation.add_point(RepComponent.BRO)
             u "Well, honestly... I wouldn't want my first time to be in a brothel."
 

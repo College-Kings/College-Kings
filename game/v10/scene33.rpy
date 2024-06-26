@@ -107,7 +107,7 @@ label v10s33_autumn1:
     with dissolve
 
     menu:
-        "Ask why":
+        "Ask why" (boyfriend=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
             $ autumn.points += 1
             u "Why wouldn't you expect her to pledge?"
@@ -122,7 +122,7 @@ label v10s33_autumn1:
 
             u "(I doubt she's told many people everything she's told me.)"
 
-        "Leave it be":
+        "Leave it be" (bro=1.0):
             $ reputation.add_point(RepComponent.BRO)
             u "(Not really my business.)"
 
@@ -145,11 +145,11 @@ label v10s33_autumn1:
     with dissolve
 
     menu:
-        "That's the main reason":
+        "That's the main reason" (bro=1.0):
             $ reputation.add_point(RepComponent.BRO)
             u "I'll be sure to try the other things too, but it's definitely the main attraction."
         
-        "I'd be here without it":
+        "I'd be here without it" (boyfriend=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
             $ autumn.points += 1
             u "I didn't even know about the mud wrestling until recently, I'd be here with or without it."
@@ -508,7 +508,7 @@ label v10s33_deergirl11:
     with dissolve
 
     menu:
-        "Sure":
+        "Sure" (boyfriend=1.0):
             u "Sure."
             $ reputation.add_point(RepComponent.BOYFRIEND)
             $ aubrey.points += 1
@@ -584,7 +584,7 @@ label v10s33_deergirl11:
 
             au "I don't, high school prom date. *Laughs*"
 
-        "No way":
+        "No way" (bro=1.0):
             $ aubrey.points -= 1
             $ reputation.add_point(RepComponent.BRO)
             u "Oh no way, I don't wanna be an embarrassment. *Laughs*"
@@ -654,7 +654,7 @@ label v10s33_deergirl11:
     with dissolve
 
     menu:
-        "Hot":
+        "Hot" (bro=1.0):
             $ reputation.add_point(RepComponent.BRO)
             u "Hot."
 
@@ -663,7 +663,7 @@ label v10s33_deergirl11:
 
             au "Of course she is!"
        
-        "Not":
+        "Not" (troublemaker=1.0):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             u "Not."
@@ -682,7 +682,7 @@ label v10s33_deergirl11:
     with dissolve
 
     menu:
-        "Hot":
+        "Hot" (troublemaker=1.0):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
             u "Hot."
 
@@ -691,7 +691,7 @@ label v10s33_deergirl11:
 
             au "Not gonna lie, if I ever went for a girl from the Chicks... Whew!"
 
-        "Not":
+        "Not" (bro=1.0):
             $ reputation.add_point(RepComponent.BRO)
             u "Not."
 
@@ -709,7 +709,7 @@ label v10s33_deergirl11:
     with dissolve
 
     menu:
-        "Hot":
+        "Hot" (bro=1.0):
             $ reputation.add_point(RepComponent.BRO)
             u "Hot."
 
@@ -718,7 +718,7 @@ label v10s33_deergirl11:
 
             au "Cute, but I don't know about hot."
         
-        "Not":
+        "Not" (troublemaker=1.0):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
             u "Not."
 
@@ -746,7 +746,7 @@ label v10s33_deergirl11:
     with dissolve
 
     menu:
-        "Hot":
+        "Hot" (boyfriend=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
             if CharacterService.is_girlfriend(lauren):
                 u "Hot, obviously."
@@ -764,7 +764,7 @@ label v10s33_deergirl11:
 
                 au "Her little innocent attitude is pretty hot."
 
-        "Not":
+        "Not" (bro=1.0):
             $ reputation.add_point(RepComponent.BRO)
             u "Not."
 
@@ -787,7 +787,7 @@ label v10s33_deergirl11:
     with dissolve
 
     menu:
-        "Hot":
+        "Hot" (bro=1.0):
             $ aubrey.points += 1
             $ reputation.add_point(RepComponent.BRO)
             u "Hot."
@@ -798,7 +798,7 @@ label v10s33_deergirl11:
             au "Exactly!"
             au "It seems we both have good taste."
 
-        "Not":
+        "Not" (troublemaker=1.0):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
             u "Not."
 
@@ -834,7 +834,7 @@ label v10s33_deergirl11:
 
     else:
         menu:
-            "Hot":
+            "Hot" (bro=1.0):
                 $ reputation.add_point(RepComponent.BRO)
                 u "Hot."
 
@@ -843,7 +843,7 @@ label v10s33_deergirl11:
 
                 au "Definitely too cute to be a Professor."
 
-            "Not":
+            "Not" (boyfriend=1.0):
                 $ reputation.add_point(RepComponent.BOYFRIEND)
 
                 u "Not."
@@ -868,7 +868,7 @@ label v10s33_deergirl11:
 
     if v10_help_nora_freeroam:
         menu:
-            "Invite her to Europe":
+            "Invite her to Europe" (boyfriend=1.0):
                 $ aubrey.points += 1
                 $ reputation.add_point(RepComponent.BOYFRIEND)
 
@@ -914,7 +914,7 @@ label v10s33_deergirl11:
 
                 u "Great!"
 
-            "Don't invite her":
+            "Don't invite her" (troublemaker=1.0):
                 $ aubrey.points -= 1
                 $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
@@ -1263,7 +1263,7 @@ label v10s33_deergirl21:
     with dissolve
 
     menu:
-        "Make a joke":
+        "Make a joke" (bro=1.0):
             $ reputation.add_point(RepComponent.BRO)
 
             u "If I win the lingerie I get to see you in it right? *Chuckles*"
@@ -1278,7 +1278,7 @@ label v10s33_deergirl21:
 
             u "My bad, I didn't mean to... I'm just gonna go."
 
-        "Play the game":
+        "Play the game" (boyfriend=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
 
             u "Mind if I play a game?"
@@ -1372,7 +1372,7 @@ label v10s33_deergirl21:
     with dissolve
 
     menu:
-        "Get a lottery ticket":
+        "Get a lottery ticket" (boyfriend=1.0):
             $ freeroam6.add("karen_ticket")
             $ reputation.add_point(RepComponent.BOYFRIEND)
             u "Well I'll take one."
@@ -1387,7 +1387,7 @@ label v10s33_deergirl21:
 
             u "Thanks."
 
-        "Don't get a ticket":
+        "Don't get a ticket" (troublemaker=1.0):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
             u "Well, good luck."
 
@@ -1594,7 +1594,7 @@ label v10s33_deergirl21:
     else:
         if v10_help_nora_freeroam:
             menu:
-                "Invite her to Europe":
+                "Invite her to Europe" (boyfriend=1.0):
                     $ reputation.add_point(RepComponent.BOYFRIEND)
 
                     u "Oh I wanted to ask, I'm planning on going on this year's Europe trip. Would you want to go?"
@@ -1623,7 +1623,7 @@ label v10s33_deergirl21:
 
                         u "No problem, you still have some time to decide."
 
-                "Don't invite her":
+                "Don't invite her" (bro=1.0):
                     $ reputation.add_point(RepComponent.BRO)
                     u "(I don't really feel like inviting Lauren.)"
 
@@ -1659,7 +1659,7 @@ label v10s33_deergirl21:
     with dissolve
 
     menu:
-        "Say you're sorry":
+        "Say you're sorry" (boyfriend=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
             u "It is, I'm sorry. Maybe it's not a good idea to follow my ideas from now on."
 
@@ -1693,7 +1693,7 @@ label v10s33_deergirl21:
 
             u "*Laughs*"
 
-        "Joke around":
+        "Joke around" (troublemaker=1.0):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
             u "Oh my gosh, did that statue just talk to me? Everyone, that statue just talked!"
 
@@ -1794,7 +1794,7 @@ label v10s33_deergirl21:
     else:
         if v10_help_nora_freeroam:
             menu:
-                "Invite her to Europe":
+                "Invite her to Europe" (boyfriend=1.0):
                     $ reputation.add_point(RepComponent.BOYFRIEND)
 
                     u "Oh I wanted to ask, I'm planning on going on this year's Europe trip. Would you want to go?"
@@ -1823,7 +1823,7 @@ label v10s33_deergirl21:
 
                         u "No problem, you still have some time to decide."
 
-                "Don't invite her":
+                "Don't invite her" (bro=1.0):
                     $ reputation.add_point(RepComponent.BRO)
                     u "(I don't really feel like inviting Lauren.)"
 
@@ -1842,7 +1842,7 @@ label v10s33_deergirl21:
         scene v10cfrfrli1 # FPP. Show Lindsey stood by the body paint stand in a bikini. Lindsey looking at camera, smile, mouth closed.
 
         menu:
-            "Compliment":
+            "Compliment" (boyfriend=1.0):
                 $ reputation.add_point(RepComponent.BOYFRIEND)
                 $ lindsey.points += 1
                 u "Look at you! This alone is a reason to give all my money away."
@@ -2142,7 +2142,7 @@ label v10s33_deergirl21:
                         "Don't invite her":
                             u "(I'm sure Nora will ask her if she wants her to go.)"
                         
-            "Side with Ms. Rose":
+            "Side with Ms. Rose" (ms rose=1.0):
                 $ ms_rose.points += 1
             
                 u "I overheard your conversation and I have to be honest, body paint is sort of a kids game nowadays."
@@ -2959,7 +2959,7 @@ label v10s33_riley2:
     with dissolve
 
     menu:
-        "Witty retort":
+        "Witty retort" (troublemaker=1.0):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
             u "Ha, you just wanna see me shirtless wrestling other guys."
 
@@ -2983,7 +2983,7 @@ label v10s33_riley2:
 
             u "*Chuckles* You know that's not what I meant."
 
-        "Flirt":
+        "Flirt" (boyfriend=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
             u "And here I was thinking you wanted to put on a little show for me."
 
@@ -3204,7 +3204,7 @@ label v10s33_riley2:
     with dissolve
 
     menu:
-        "Show me what you got":
+        "Show me what you got" (bro=1.0):
             $ reputation.add_point(RepComponent.BRO)
 
             u "You should show me what you got... since you're such a pro."
@@ -3284,7 +3284,7 @@ label v10s33_riley2:
 
             u "Ahh, not my business."
 
-        "Ask about sorority life":
+        "Ask about sorority life" (boyfriend=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
             $ v10_nora_bitch_about_chloe = True
             u "How's sorority life?"
@@ -3318,7 +3318,7 @@ label v10s33_riley2:
             with dissolve
 
             menu:
-                "What do you mean?":
+                "What do you mean?" (bro=1.0):
                     $ reputation.add_point(RepComponent.BRO)
                     u "What do you mean by that?"
 
@@ -3333,7 +3333,7 @@ label v10s33_riley2:
 
                     u "She can be a little... extra sometimes."
 
-                "Defend Chloe":
+                "Defend Chloe" (boyfriend=1.0):
                     $ reputation.add_point(RepComponent.BOYFRIEND)
                     u "Well, she might be acting that way because of all the pressure she's under. Conversations behind her back probably aren't helping with that."
 
@@ -3428,7 +3428,7 @@ label v10s33_riley2:
         with dissolve
 
         menu:
-            "It's okay":
+            "It's okay" (bro=1.0):
                 $ reputation.add_point(RepComponent.BRO)
                 $ ryan.points += 1
                 $ v10s33_ryan_flirt_emily = True
@@ -3470,7 +3470,7 @@ label v10s33_riley2:
 
                 ry "Yeah yeah, uhm... that's cool. See you around."
 
-            "It's not okay": 
+            "It's not okay" (troublemaker=1.0): 
                 $ reputation.add_point(RepComponent.TROUBLEMAKER)
                 u "You would really ask me that? Why would I be cool with my friend dating my ex?!"
 
@@ -3735,7 +3735,7 @@ label v10s33_emily1:
         scene v10cfrev1c
         with dissolve
         menu:
-            "Let's do it right now":
+            "Let's do it right now" (boyfriend=1.0):
                 $ reputation.add_point(RepComponent.BOYFRIEND)
                 $ v10s33_ev_date_now = True
                 u "Wanna go now?"
@@ -3745,7 +3745,7 @@ label v10s33_emily1:
 
                 ev "Someone's eager. *Chuckles* Soon, but let's enjoy the event for today."
 
-            "I'll think about it":
+            "I'll think about it" (troublemaker=1.0):
                 $ reputation.add_point(RepComponent.TROUBLEMAKER)
                 u "I'll think about it. *Chuckles*"
 

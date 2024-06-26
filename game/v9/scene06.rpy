@@ -287,7 +287,7 @@ label drive_to_lake:
     with dissolve
 
     menu:
-        "Flirt":
+        "Flirt" (boyfriend=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
             jump dtl_f
 

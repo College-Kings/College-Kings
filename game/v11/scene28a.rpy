@@ -63,7 +63,7 @@ label v11_sam_spa:
     with dissolve
 
     menu:
-        "Check her out":
+        "Check her out" (bro=1.0):
             $ reputation.add_point(RepComponent.BRO)
 
             scene v11sas3d # FPP. Same as v11sas3, but Samantha only in underwear
@@ -714,7 +714,7 @@ label v11s28a_galleryScene:
     with dissolve
 
     menu:
-        "Massage her boob":
+        "Massage her boob" (troublemaker=1.0):
             $ CharacterService.set_relationship(samantha, Relationship.FWB)
             $ sceneList.add("v11_samantha")
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
@@ -744,7 +744,7 @@ label v11s28a_galleryScene:
 
             u "Oh."
 
-        "Don't massage her boob":
+        "Don't massage her boob" (boyfriend=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
 
             scene v11sas18

@@ -81,7 +81,7 @@ label v12_ms_rose_sex: #can only get here if mc.frat == Frat.WOLVES
 
                 pause 0.75
 
-            "Let's go":
+            "Let's go" (troublemaker=1.0):
                 $ reputation.add_point(RepComponent.TROUBLEMAKER)
                 
                 $ sceneList.add("v12_rose")

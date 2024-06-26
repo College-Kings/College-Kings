@@ -435,7 +435,7 @@ label v13s46:
 
             u "Let's go ahead and head back before they see us creepin', you weirdo."
 
-        "Haha, okay":
+        "Haha, okay" (troublemaker=1.0):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
             grant Achievement("voyeur", "What are they doing over there?")
 

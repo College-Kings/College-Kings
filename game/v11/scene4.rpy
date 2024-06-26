@@ -156,7 +156,7 @@ label v11_emily_park:
 
             u "Ugh, obviously your mind is made up."
         
-        "Be friends":
+        "Be friends" (boyfriend=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
             scene v11seap4d
             with dissolve

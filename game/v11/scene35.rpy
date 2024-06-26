@@ -88,7 +88,7 @@ label v11_riley_sex:
         with dissolve
 
         menu:
-            "Ladies love me":
+            "Ladies love me" (bro=1.0):
                 $ reputation.add_point(RepComponent.BRO)
 
                 scene v11ris3e # FPP. Same as v11ris3d, different pose
@@ -146,7 +146,7 @@ label v11_riley_sex:
 
                 u "*Chuckles* Night Riley."
 
-            "Wasn't a ladies man":
+            "Wasn't a ladies man" (boyfriend=1.0):
                 $ reputation.add_point(RepComponent.BOYFRIEND)
 
                 scene v11ris3e
@@ -301,7 +301,7 @@ label v11_riley_sex:
         with dissolve
 
         menu:
-            "Not tonight":
+            "Not tonight" (riley=-1.0):
                 $ riley.points -= 1
 
                 u "Sorry Riley, I'm not really in the mood for anything like that right now."
@@ -456,7 +456,7 @@ label v11_riley_sex:
 
                 jump v11_imre_ryan_grapple
 
-            "Do something about it":
+            "Do something about it" (riley=1.0):
                 $ sceneList.add("v11_riley")
                 $ riley.points += 1
 

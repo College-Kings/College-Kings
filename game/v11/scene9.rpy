@@ -164,7 +164,7 @@ label v11_apes_manhunt:
     with dissolve
 
     menu:
-        "Ready":
+        "Ready" (bro=1.0):
             $ reputation.add_point(RepComponent.BRO)
 
             scene v11amh7
@@ -172,7 +172,7 @@ label v11_apes_manhunt:
 
             u "Yeah man, I'm ready!"
 
-        "One last question":
+        "One last question" (troublemaker=1.0):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             scene v11amh7
@@ -534,7 +534,7 @@ label v11_apes_manhunt:
                             with dissolve
 
                             menu:
-                                "Run":
+                                "Run" (troublemaker=1.0):
                                     $ v11_manhunt_winner = "Caleb"
                                     $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
@@ -580,7 +580,7 @@ label v11_apes_manhunt:
 
                                     ca "Time for the horse."
 
-                                "Warn him":
+                                "Warn him" (bro=1.0):
                                     $ v11_manhunt_winner = "Caleb"
                                     $ reputation.add_point(RepComponent.BRO)
 

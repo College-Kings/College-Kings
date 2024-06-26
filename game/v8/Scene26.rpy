@@ -149,7 +149,7 @@ label s26:
     with dissolve
 
     menu:
-        "Take the glasses":
+        "Take the glasses" (boyfriend=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
             jump take_aub_glasses
         "Find a better pair":

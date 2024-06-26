@@ -8,7 +8,7 @@ label v11_Amber_Penelope:
     with dissolve
     play music music.ck1.v11.Track_Scene_11 fadein 2
     menu:
-        "Tease her":
+        "Tease her" (troublemaker=1.0):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
             $ v11_tease_amber += 1
             scene v11amp1
@@ -238,7 +238,7 @@ label v11_Amber_Penelope:
         with dissolve
 
         menu:
-            "Kiss her":
+            "Kiss her" (penelope=1.0):
                 $ CharacterService.set_relationship(penelope, Relationship.DATING)
                 $ reputation.add_point(RepComponent.BOYFRIEND)
 

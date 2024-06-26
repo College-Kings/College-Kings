@@ -24,10 +24,10 @@ label for_w_gray:
     with dissolve
 
     menu:
-        "Ask questions":
+        "Ask questions" (troublemaker=1.0):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
             jump for_w_gray_q
-        "Don't say anything":
+        "Don't say anything" (boyfriend=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
             jump for_w_gray_no_q
 
@@ -66,10 +66,10 @@ label for_w_gray_cont:
     with dissolve
 
     menu:
-        "Go along with it":
+        "Go along with it" (bro=1.0):
             $ reputation.add_point(RepComponent.BRO)
             jump forest_fugazi
-        "Stay quiet":
+        "Stay quiet" (boyfriend=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
             jump forest_no_fugazi
 
@@ -176,7 +176,7 @@ label for_w_gray_cont_2:
         with dissolve
 
         menu:
-            "I definitely want to be an Ape":
+            "I definitely want to be an Ape" (bro=1.0):
                 $ reputation.add_point(RepComponent.BRO)
                 jump deffo_be_ape_for
             "I think I want to be an Ape":
@@ -252,10 +252,10 @@ label for_w_gray_cont_3:
     with dissolve
 
     menu:
-        "Agree with Grayson":
+        "Agree with Grayson" (bro=1.0):
             $ reputation.add_point(RepComponent.BRO)
             jump for_w_gray_agree
-        "I joined for the fights":
+        "I joined for the fights" (troublemaker=1.0):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
             jump for_w_gray_fights
 
@@ -344,7 +344,7 @@ label for_w_gray_cont_4:
     with dissolve
 
     menu:
-        "Agree with Grayson":
+        "Agree with Grayson" (bro=1.0):
             $ reputation.add_point(RepComponent.BRO)
             jump for_w_gray_agree_2
         "Hesitate":

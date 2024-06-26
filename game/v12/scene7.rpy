@@ -453,14 +453,14 @@ label v12s7_aubrey1:
     au "If you say so. *Chuckles* So, tell me about that last fight of yours. I don't get to see much of the outside world since I'm always working on the ship. Was it a pretty big fight?"
 
     menu:
-        "Major fight":
+        "Major fight" (bro=1.0):
             $ reputation.add_point(RepComponent.BRO)
             scene v12ferau1a
             with dissolve
 
             u "It was a serious fight. I'm surprised you haven't heard about it yet. It feels as if the whole world watched it."
 
-        "Light work":
+        "Light work" (troublemaker=1.0):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
             scene v12ferau1a
             with dissolve
@@ -546,7 +546,7 @@ label v12s7_aubrey1:
     au "I think I'd like to see exactly how tough you actually are. I... I think I see some bruising. Oh my gosh, and your eye is cut! I'm gonna need to patch that up immediately."
 
     menu:
-        "It does hurt pretty bad":
+        "It does hurt pretty bad" (boyfriend=1.0):
             $ v12s7_aubrey_moved = True
             $ reputation.add_point(RepComponent.BOYFRIEND)
             scene v12ferau1
@@ -583,7 +583,7 @@ label v12s7_aubrey1:
 
             call screen v12s7_balcony_right
             
-        "Didn't even feel it":
+        "Didn't even feel it" (bro=1.0):
             $ reputation.add_point(RepComponent.BRO)
             scene v12ferau1a
             with dissolve
@@ -663,7 +663,7 @@ label v12s7_aubrey2:
     with dissolve
 
     menu:
-        "Let her":
+        "Let her" (boyfriend=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
             scene v12ferauh2a # TPP. same 2, mc mouth open
             with dissolve
@@ -720,7 +720,7 @@ label v12s7_aubrey2:
 
             call screen v12s7_bathroom
 
-        "Kill her":
+        "Kill her" (troublemaker=1.0):
             $ v12s7_killList.add(aubrey)
             label v12s7_aubrey_kill:
             hide screen murder_button_overlay
@@ -901,7 +901,7 @@ label v12s7_riley1:
     ri "*Southern accent* That's to be expected. Those of the lower classes aren't familiar with as many social topics as the wealthy. Isn't that right, Mr. Boxer?"
 
     menu:
-        "I'm poor":
+        "I'm poor" (riley=1.0):
             scene v12ferri4a
             with dissolve
 
@@ -1178,7 +1178,7 @@ label v12s7_chloe1:
 
             cl "Exactly. So, I don't know. I'm doing my best to not think about it..."
 
-        "Enjoy Europe":
+        "Enjoy Europe" (troublemaker=1.0):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
             scene v12ferch1c
             with dissolve
@@ -1608,7 +1608,7 @@ label v12s7_riley3a:
     ri "*Southern accent* Well, wait a minute. You were here with Chloe when I left, what'd she say while I was gone?"
 
     menu:
-        "Me":
+        "Me" (bro=1.0):
             $ reputation.add_point(RepComponent.BRO)
             scene v12ferril1
             with dissolve
@@ -1620,7 +1620,7 @@ label v12s7_riley3a:
 
             ri "*Southern accent* Someone else must come by when neither of us were with her."
 
-        "You":
+        "You" (troublemaker=1.0):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
             scene v12ferril1
             with dissolve
@@ -1731,7 +1731,7 @@ label v12s7_lauren1:
         la "Don't try an use the game as a way of talking to me."
 
         menu:
-            "Apologize":
+            "Apologize" (boyfriend=1.0):
                 $ reputation.add_point(RepComponent.BOYFRIEND)
                 scene v12ferla1
                 with dissolve
@@ -1740,7 +1740,7 @@ label v12s7_lauren1:
 
                 u "(Damn, she's still really pissed.)"
 
-            "Kill her":
+            "Kill her" (troublemaker=1.0):
                 $ reputation.add_point(RepComponent.TROUBLEMAKER)
                 $ v12s7_killList.add(lauren)
                 scene v12ferla1
@@ -2134,7 +2134,7 @@ label v12s7_ryan_imre1:
     ry "Yep, we're proud newlyweds."
 
     menu:
-        "Tease Imre":
+        "Tease Imre" (troublemaker=1.0):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
             scene v12ferryi9a
             with dissolve
@@ -2156,7 +2156,7 @@ label v12s7_ryan_imre1:
 
             u "Oh, that's unfortunate."
 
-        "Tell Ryan to cool it":
+        "Tell Ryan to cool it" (bro=1.0):
             $ reputation.add_point(RepComponent.BRO)
             
             scene v12ferryi9a
@@ -2794,7 +2794,7 @@ label v12s7_lindsey_charli1:
     li "Good, [name]. You sure there's nothing you've seen?"
 
     menu:
-        "Ryan is suspicious":
+        "Ryan is suspicious" (troublemaker=1.0):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
             scene v12ferlich2a
             with dissolve
@@ -3017,14 +3017,14 @@ label v12s7_lindsey2:
     li "*Chuckles* I considered that, but I'm having a hard time choosing who."
 
     menu:
-        "Me":
+        "Me" (boyfriend=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
             scene v12ferli3
             with dissolve
             
             u "I can be your distraction. I'll just try and separate them... then see if I get murked or not."
 
-        "Charli":
+        "Charli" (troublemaker=1.0):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
             scene v12ferli3
             with dissolve
@@ -3438,14 +3438,14 @@ label v12s7_msrose1:
     with dissolve
 
     menu:
-        "Not really":
+        "Not really" (bro=1.0):
             $ reputation.add_point(RepComponent.BRO)
             scene v12fermsr1a
             with dissolve
             
             u "No not really, if anyone runs up on me I have two guns waiting for them."
 
-        "Who wouldn't be":
+        "Who wouldn't be" (boyfriend=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
             scene v12fermsr1a
             with dissolve
@@ -3613,7 +3613,7 @@ label v12s7_penelope1:
     pe "I could've enjoyed a nice ride without being bothered if I had just kept my mouth shut. I said that I couldn't wait to get on the ferry and relax and he heard me... now here we are."
 
     menu:
-        "Let her work":
+        "Let her work" (bro=1.0):
             $ reputation.add_point(RepComponent.BRO)
             scene v12ferpen1
             with dissolve
@@ -3632,7 +3632,7 @@ label v12s7_penelope1:
 
             call screen v12s7_left_walkway_front
 
-        "Help her out":
+        "Help her out" (boyfriend=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
             scene v12ferpen1
             with dissolve
@@ -3990,7 +3990,7 @@ label v12s7_amber1:
     am "Oh shit, that's your... why are you hard right now? Are you turned on by this?"
 
     menu:
-        "A little":
+        "A little" (bro=1.0):
             $ reputation.add_point(RepComponent.BRO)
             scene v12feram7
             with dissolve
@@ -4002,7 +4002,7 @@ label v12s7_amber1:
 
             am "Hmmm, good to know. I'll remember that for future reference."
 
-        "No":
+        "No" (boyfriend=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
             scene v12feram7
             with dissolve
@@ -4521,7 +4521,7 @@ label v12s7_sam_cameron:
     ca "'Cause they don't know where home is."
 
     menu:
-        "Laugh":
+        "Laugh" (bro=1.0):
             $ reputation.add_point(RepComponent.BRO)
             scene v12fersaca2a
             with dissolve
@@ -4533,7 +4533,7 @@ label v12s7_sam_cameron:
 
             sa "His jokes aren't funny."
 
-        "Don't laugh":
+        "Don't laugh" (boyfriend=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
             scene v12fersaca2a
             with dissolve
@@ -4682,14 +4682,14 @@ label v12s7_sam2:
     sa "Besides distracting my mind with something else? *Chuckles*"
 
     menu:
-        "Focus on the game":
+        "Focus on the game" (bro=1.0):
             $ reputation.add_point(RepComponent.BRO)
             scene v12fersam1b # FPP. same 1, new pose, mouth closed
             with dissolve
 
             u "Wanna focus on the game? That's the point of all of this, I think... To make us focus on something else for a while."
 
-        "Go for the kiss":
+        "Go for the kiss" (boyfriend=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
 
             scene v12fersam1b
@@ -5172,7 +5172,7 @@ label v12s7_nora1:
     no "Alright, sorry. I'm not trying to be a bitch. I'm just not in the mood for this."
 
     menu:
-        "See you later":
+        "See you later" (bro=1.0):
             $ reputation.add_point(RepComponent.BRO)
             scene v12fernor1
             with dissolve
@@ -5189,7 +5189,7 @@ label v12s7_nora1:
 
             call screen v12s7_balcony_left
 
-        "Want some company?":
+        "Want some company?" (boyfriend=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
             scene v12fernor1b # FPP. same 1, new pose,annoyed look, mouth closed
             with dissolve
@@ -5222,7 +5222,7 @@ label v12s7_nora1:
             no "*Chuckles* It's alright. At least you actually asked. It's nice to know that someone cares."
 
             menu:
-                "Chris cares about you":
+                "Chris cares about you" (bro=1.0):
                     $ v12_help_chris += 1
                     $ reputation.add_point(RepComponent.BRO)
                     scene v12fernor1b
@@ -5270,7 +5270,7 @@ label v12s7_nora1:
 
                     call screen v12s7_balcony_left
 
-                "Of course I care":
+                "Of course I care" (boyfriend=1.0):
                     $ reputation.add_point(RepComponent.BOYFRIEND)
 
                     scene v12fernor1b
@@ -5293,7 +5293,7 @@ label v12s7_nora1:
                 no "Nevermind, I already know you're going to say him."
 
             menu:
-                "Sounds like you're dumping him":
+                "Sounds like you're dumping him" (troublemaker=1.0):
                     $ reputation.add_point(RepComponent.TROUBLEMAKER)
                     scene v12fernor1b
                     with dissolve
@@ -5337,7 +5337,7 @@ label v12s7_nora1:
                     
                     call screen v12s7_balcony_left
                     
-                "I'd choose you":
+                "I'd choose you" (boyfriend=1.0):
                     $ reputation.add_point(RepComponent.BOYFRIEND)
                     $ v8_nora_likes_mc = True
 
@@ -5811,7 +5811,7 @@ label v12s7_josh1:
     jo "No one cared about that wrinkly old man, it's a shame the leopards had to eat his crusty ass."
 
     menu:
-        "Really care about cats, huh?":
+        "Really care about cats, huh?" (troublemaker=1.0):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
             $ CharacterService.set_mood(josh, Moods.MAD)
             
@@ -5830,7 +5830,7 @@ label v12s7_josh1:
 
             u "*Laughs* Have you seen yourself?"
 
-        "You're the best actor here":
+        "You're the best actor here" (bro=1.0):
             $ reputation.add_point(RepComponent.BRO)
             scene v12ferjo1
             with dissolve

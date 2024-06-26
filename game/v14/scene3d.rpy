@@ -156,7 +156,7 @@ label v14s03d:
     with dissolve
 
     menu:
-        "You get what you pay for":
+        "You get what you pay for" (troublemaker=1.0):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             u "*Chuckles* Hey, you get what you pay for right?"

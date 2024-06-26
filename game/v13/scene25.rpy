@@ -72,7 +72,7 @@ label v13s25:
     emmy "Oh, wow... So, do you like to fight? Like, you enjoy it?"
 
     menu:
-        "Yes":
+        "Yes" (troublemaker=1.0):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
           
             scene v13s25_3d # FPP. Same as v13s25_3c Emmy's finger has moved from corner of lip to just under the lip, mouth closed
@@ -155,7 +155,7 @@ label v13s25:
                 emmy "Right here, right now."
 
                 menu:
-                    "Let her":
+                    "Let her" (troublemaker=1.0):
                         $ reputation.add_point(RepComponent.TROUBLEMAKER)
                         label v13s25_emmysg:
 
@@ -176,7 +176,7 @@ label v13s25:
 
                         jump v13_emmy_sex
 
-                    "Stop her":
+                    "Stop her" (boyfriend=1.0):
                         $ reputation.add_point(RepComponent.BOYFRIEND)
 
                         scene v13s25_9
@@ -272,7 +272,7 @@ label v13s25:
                 
                 jump v13s25_no_sex
 
-        "No":
+        "No" (boyfriend=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
             scene v13s25_3
             with dissolve

@@ -41,7 +41,7 @@ label v14s03e:
         with dissolve
 
         menu: 
-            "Good to hear":
+            "Good to hear" (bro=1.0):
                 $ reputation.add_point(RepComponent.BRO)
                 
                 u "Oh, good to hear..."
@@ -51,7 +51,7 @@ label v14s03e:
 
                 ry "Damn right it's good!" 
 
-            "Oof, poor Satin":
+            "Oof, poor Satin" (troublemaker=1.0):
                 $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
                 scene v14s03e_3
@@ -126,7 +126,7 @@ label v14s03e:
         with dissolve
 
         menu:
-            "I'm glad you waited":
+            "I'm glad you waited" (bro=1.0):
                 $ reputation.add_point(RepComponent.BRO)
                 u "I'm glad you did."
 
@@ -140,7 +140,7 @@ label v14s03e:
 
                 u "That girl you were talking to... She had herpes."
 
-            "You should've done it":
+            "You should've done it" (troublemaker=1.0):
                 $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
                 u "I don't know man, I think you should've done it."
@@ -326,11 +326,11 @@ label v14s03e:
 
     menu:
 
-        "Laugh":
+        "Laugh" (troublemaker=1.0):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
             u "*Laughs* Oh god."
 
-        "Get mad":
+        "Get mad" (bro=1.0):
             $ reputation.add_point(RepComponent.BRO)
             u "What the fuck?!"
 
@@ -421,7 +421,7 @@ label v14s03e:
     with dissolve
 
     menu:
-        "That was hilarious":
+        "That was hilarious" (troublemaker=1.0):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
             u "Haha, that was hilarious."
 
@@ -430,7 +430,7 @@ label v14s03e:
 
             ry "Right???"
 
-        "Not cool, Ryan":
+        "Not cool, Ryan" (boyfriend=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
             
             scene v14s03e_20a

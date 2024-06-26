@@ -84,7 +84,7 @@ label v10_autumn_announcement:
     scene v10samw6 # FPP. Show Chloe and Nora in the line-up of girls competing, both smiling, mouths closed.
     with fade
     menu:
-        "Root for Chloe":
+        "Root for Chloe" (boyfriend=1.0):
             $ chloe.points += 1
             $ nora.points -= 1
             $ reputation.add_point(RepComponent.BOYFRIEND)
@@ -138,7 +138,7 @@ label v10_autumn_announcement:
 
             u "Okay Aubrey!"
 
-        "Root for Emily":
+        "Root for Emily" (boyfriend=1.0):
             $ forgiveemily = True
             $ emily.points += 1
             $ reputation.add_point(RepComponent.BOYFRIEND)
@@ -155,7 +155,7 @@ label v10_autumn_announcement:
     scene v10samw6b # FPP. Same camera as v10samw6. Show Riley and Amber in the line-up of girls competing, both smiling, mouths closed.
     with fade
     menu:
-        "Root for Riley":
+        "Root for Riley" (boyfriend=1.0):
             $ amber.points -= 1
             $ riley.points += 1
             $ reputation.add_point(RepComponent.BOYFRIEND)

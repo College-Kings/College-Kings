@@ -63,7 +63,7 @@ label v9_thur_room_w_cam_punch:
     call screen kiwii_home
 
     menu:
-        "Brag":
+        "Brag" (troublemaker=1.0):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
             jump v9_thur_room_w_cam_brag
         "Be humble":
@@ -154,7 +154,7 @@ label v9_thur_room_w_cam_cont1:
     with dissolve
 
     menu:
-        "Drink":
+        "Drink" (bro=1.0):
             $ reputation.add_point(RepComponent.BRO)
             jump v9_thur_room_w_cam_drink
         "Don't drink":
@@ -260,7 +260,7 @@ label v9_thur_room_w_cam_no_punch:
     menu:
         "Shrug it off":
             jump v9_thur_room_w_cam_shrugg_off
-        "Get defensive":
+        "Get defensive" (troublemaker=1.0):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
             jump v9_thur_room_w_cam_defensive
 
@@ -324,7 +324,7 @@ label v9_thur_room_w_cam_cont3:
     ca "Gross!"
 
     menu:
-        "Protest":
+        "Protest" (troublemaker=1.0):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
             jump v9_thur_room_w_cam_protest
         "Follow orders":

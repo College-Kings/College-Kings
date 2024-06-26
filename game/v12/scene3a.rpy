@@ -24,7 +24,7 @@ label v12_penelope_call:
     u "(It's Penelope.)"
 
     menu:
-        "Answer":
+        "Answer" (boyfriend=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
 
             scene v12pec2b # FPP. Same as v11pec2, show MC clicking to accept the call
@@ -173,7 +173,7 @@ label v12_penelope_call:
             pe "Yeah?"
 
             menu:
-                "Never mind":
+                "Never mind" (bro=1.0):
                     $ reputation.add_point(RepComponent.BRO)
                     scene v12pec3c
                     with dissolve
@@ -185,7 +185,7 @@ label v12_penelope_call:
 
                     pe "*Chuckles* Alrighty, bye."
 
-                "I miss you":
+                "I miss you" (penelope=1.0):
                     $ reputation.add_point(RepComponent.BOYFRIEND)
                     $ penelope.points += 1
 
@@ -218,7 +218,7 @@ label v12_penelope_call:
 
             jump v12_roomate_talk #scene 4
             
-        "Don't answer":
+        "Don't answer" (bro=1.0):
             $ reputation.add_point(RepComponent.BRO)
             scene v12pec2a # FPP. Same as v12pec2, show MC clicking to reject the call
             with dissolve

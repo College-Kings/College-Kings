@@ -824,7 +824,7 @@ label v12_escape_room:
         with dissolve
 
         menu:
-            "You're right, we shouldn't do this":
+            "You're right, we shouldn't do this" (boyfriend=1.0):
                 $ reputation.add_point(RepComponent.BOYFRIEND)
                 scene v12esr29f # FPP. Same as v12esr29d, Lindsey slightly worried, mouth closed
                 with dissolve
@@ -853,7 +853,7 @@ label v12_escape_room:
 
                 jump v12_after_sex
 
-            "Is it? I want this...":
+            "Is it? I want this..." (troublemaker=1.0):
                 $ reputation.add_point(RepComponent.TROUBLEMAKER)
                 scene v12esr29f
                 with dissolve
@@ -885,7 +885,7 @@ label v12_lindsey_kiss_or_not:
     with dissolve
 
     menu:
-        "Kiss her":
+        "Kiss her" (boyfriend=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
             scene v12esr30 # TPP. Show MC and Lindsey kissing
             with dissolve
@@ -904,7 +904,7 @@ label v12_lindsey_kiss_or_not:
             
                 jump v12_after_sex
                 
-        "Don't kiss her":
+        "Don't kiss her" (bro=1.0):
             $ reputation.add_point(RepComponent.BRO)
             scene v12esr29e
             with dissolve

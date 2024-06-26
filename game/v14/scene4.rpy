@@ -25,12 +25,12 @@ label v14s04:
     with dissolve
 
     menu:
-        "I'll talk to him later":
+        "I'll talk to him later" (bro=1.0):
             $ v14s4_tell_imre = True
             $ reputation.add_point(RepComponent.BRO)
             u "(Fuck it, I'll talk to him later I guess.)"
 
-        "It's not that important":
+        "It's not that important" (troublemaker=1.0):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
             u "(Fuck it, I'll talk to him later I guess.)"
 

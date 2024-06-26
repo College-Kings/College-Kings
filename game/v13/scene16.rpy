@@ -130,7 +130,7 @@ label v13s16:
     with dissolve
 
     menu:
-        "Of course":
+        "Of course" (boyfriend=1.0):
             $ v13s16_lauren_points += 1
             $ reputation.add_point(RepComponent.BOYFRIEND)
             scene v13s16_7b
@@ -174,7 +174,7 @@ label v13s16:
     with dissolve
 
     menu:
-        "I don't see why not":
+        "I don't see why not" (boyfriend=1.0):
             $ v13s16_lauren_points += 1
             $ reputation.add_point(RepComponent.BOYFRIEND)
             scene v13s16_7f

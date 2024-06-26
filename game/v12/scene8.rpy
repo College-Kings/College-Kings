@@ -180,7 +180,7 @@ label v12_murder_mystery_reveal:
     with dissolve
 
     menu:
-        "Let Chris help her":
+        "Let Chris help her" (bro=1.0):
             $ v12_help_chris += 1
             $ reputation.add_point(RepComponent.BRO)
 
@@ -206,7 +206,7 @@ label v12_murder_mystery_reveal:
 
             pause 0.75
 
-        "Hurry to help her":
+        "Hurry to help her" (boyfriend=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
             $ v8_nora_likes_mc = True
             

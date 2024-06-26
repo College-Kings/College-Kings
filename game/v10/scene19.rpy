@@ -36,7 +36,7 @@ label v10_walk_jenny_text:
     u "(Hmm, maybe I should invite Penelope too, otherwise it's just me and Jenny.)"
 
     menu:
-        "Invite Penelope":
+        "Invite Penelope" (boyfriend=1.0):
             $ penelope.points += 1
             $ v10_inv_pen_cafe = True
             $ reputation.add_point(RepComponent.BOYFRIEND)

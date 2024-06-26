@@ -57,7 +57,7 @@ label v9_hc_cont1:
     with dissolve
 
     menu:
-        "Heckle":
+        "Heckle" (troublemaker=1.0):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
             jump v9_hc_heckle
         "Stay quiet":
@@ -128,7 +128,7 @@ label v9_hc_cont2:
     with dissolve
 
     menu:
-        "Grumble with Cameron":
+        "Grumble with Cameron" (bro=1.0):
             $ reputation.add_point(RepComponent.BRO)
             jump v9_hc_grumble
         "Be happy with Penelope":
@@ -236,7 +236,7 @@ label v9_hc_cont3:
     menu:
         "Be scared":
             jump v9_hc_scared
-        "Be ready":
+        "Be ready" (bro=1.0):
             $ reputation.add_point(RepComponent.BRO)
             jump v9_hc_ready
         

@@ -51,7 +51,7 @@ label v10_lauren_room:
     with dissolve
 
     menu:
-        "Agree":
+        "Agree" (boyfriend=1.0):
             $ v10s33_laurenBakeSale = True
 
             $ reputation.add_point(RepComponent.BOYFRIEND)
@@ -170,7 +170,7 @@ label v10_lauren_room:
     la "Just not really my thing you know..."
 
     menu:
-        "Encourage her":
+        "Encourage her" (troublemaker=1.0):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
             scene v10lar3c
             with dissolve

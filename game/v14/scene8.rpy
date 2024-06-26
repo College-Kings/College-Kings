@@ -31,7 +31,7 @@ label v14s08:
     u "(I mean, for normal girls I'd just ask what's wrong but, with Amber... I don't want to get stabbed today, you know?)"
 
     menu:
-        "Ask her what's wrong":
+        "Ask her what's wrong" (boyfriend=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
             u "Hey, what's wrong?"
 
@@ -71,7 +71,7 @@ label v14s08:
 
             pause 0.75
 
-        "Leave her alone":
+        "Leave her alone" (bro=1.0):
             $ reputation.add_point(RepComponent.BRO)
             scene v14s08_3
             with dissolve

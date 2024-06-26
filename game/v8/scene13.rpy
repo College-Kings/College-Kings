@@ -117,7 +117,7 @@ label phn_chloe11_done:
     gr "And some of the Chicks are here too..."
 
     menu:
-        "Party":
+        "Party" (troublemaker=1.0):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             scene v8apes25d
@@ -132,7 +132,7 @@ label phn_chloe11_done:
             with dissolve
             pause 0.5
 
-        "Stay back and study":
+        "Stay back and study" (boyfriend=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
 
             scene v8apes25d
@@ -287,7 +287,7 @@ label phn_chloe11_done:
     ca "Nothing's up. Just lame hanging out with you new kids."
 
     menu:
-        "Press it":
+        "Press it" (bro=1.0):
             $ reputation.add_point(RepComponent.BRO)
 
             scene v8apes34c
@@ -298,7 +298,7 @@ label phn_chloe11_done:
             with dissolve
             ca "It's just..."
 
-        "Let it go":
+        "Let it go" (boyfriend=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
 
             scene v8apes34c

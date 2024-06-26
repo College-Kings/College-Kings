@@ -321,7 +321,7 @@ label v13s41:
     with dissolve
 
     menu:
-        "What about you":
+        "What about you" (boyfriend=1.0):
             $ v13s41_lindsey_points += 1
             $ reputation.add_point(RepComponent.BOYFRIEND)
 
@@ -340,7 +340,7 @@ label v13s41:
 
             u "Always."
 
-        "Agree":
+        "Agree" (bro=1.0):
             $ reputation.add_point(RepComponent.BRO)
 
             scene v13s41_14c
@@ -392,7 +392,7 @@ label v13s41:
     with dissolve
 
     menu:
-        "They should":
+        "They should" (troublemaker=1.0):
             $ v13s41_lindsey_points += 1
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
@@ -448,7 +448,7 @@ label v13s41:
     with dissolve
 
     menu:
-        "Then back out the race":
+        "Then back out the race" (bro=1.0):
             $ reputation.add_point(RepComponent.BRO)
 
             scene v13s41_14c
@@ -471,7 +471,7 @@ label v13s41:
 
             li "Not everything."
 
-        "You did right":
+        "You did right" (boyfriend=1.0):
             $ v13s41_lindsey_points += 1
             $ reputation.add_point(RepComponent.BOYFRIEND)
 
@@ -524,7 +524,7 @@ label v13s41:
     with dissolve
 
     menu:
-        "You're beautiful":
+        "You're beautiful" (boyfriend=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
             scene v13s41_14l # FPP. same as v13s41_14g lindsey mouth closed slight smile
             with dissolve
@@ -559,7 +559,7 @@ label v13s41:
 
                 li "Yes you are."
 
-        "Of course":
+        "Of course" (bro=1.0):
             $ reputation.add_point(RepComponent.BRO)
             scene v13s41_14g
             with dissolve

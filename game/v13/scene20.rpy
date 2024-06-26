@@ -36,7 +36,7 @@ label v13s20_closet:
     u "(They low-key smell good, though. It'd be a shame if someone pissed on his shit...)"
 
     menu:
-        "Soak that shit":
+        "Soak that shit" (troublemaker=1.0):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
             u "(Guess I gotta be that someone...)"
 
@@ -81,7 +81,7 @@ label v13s20_bleach:
     u "What can we do with this?"
 
     menu:
-        "Bleach his suitcase":
+        "Bleach his suitcase" (troublemaker=1.0):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
             $ v13s20_bleach_suitcase = True
             u "(Riley said this suitcase is special to him, and that bleach would be a good addition to it... Let's find out.) *Laughs*"
@@ -155,7 +155,7 @@ label v13s20_toothbrush:
     u "Ha... The classic \"toothbrush in the toilet\" trick, shall we?"
 
     menu:
-        "Flush, flush, motherfucker!":
+        "Flush, flush, motherfucker!" (troublemaker=1.0):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
             scene v13s20brush_4 # TPP. Show MC bending over the toilet, sticking the toothbrush in the toilet, smirking, mouth closed
             with dissolve

@@ -142,7 +142,7 @@ label v13s59:
     with dissolve
 
     menu:
-        "Agree":
+        "Agree" (aubrey=1.0):
             $ aubrey.points += 1
             $ reputation.add_point(RepComponent.BOYFRIEND)
             scene v13s59_4a
@@ -150,7 +150,7 @@ label v13s59:
 
             u "It is a little hard... I'm not gonna lie."
 
-        "Disagree":
+        "Disagree" (troublemaker=1.0):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
             scene v13s59_4a
             with dissolve
@@ -266,7 +266,7 @@ label v13s59:
     with dissolve
 
     menu:
-        "Teach her":
+        "Teach her" (boyfriend=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
             scene v13s59_6a
             with dissolve
@@ -360,7 +360,7 @@ label v13s59:
 
                 au "Hmm... Many reasons."
 
-        "Let her figure it out":
+        "Let her figure it out" (bro=1.0):
             $ reputation.add_point(RepComponent.BRO)
             scene v13s59_6a
             with dissolve

@@ -60,7 +60,7 @@ label v9_fri_training_w_wolves:
     with dissolve
 
     menu: 
-        "Answer": 
+        "Answer" (bro=1.0): 
             $ reputation.add_point(RepComponent.BRO)
 
             u "The Brawl."
@@ -70,7 +70,7 @@ label v9_fri_training_w_wolves:
 
             ch "Right."
 
-        "Keep quiet":
+        "Keep quiet" (troublemaker=1.0):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
     
             pause 1
@@ -105,7 +105,7 @@ label v9_fri_training_w_wolves:
     with dissolve
 
     menu: 
-        "Make joke": 
+        "Make joke" (troublemaker=1.0): 
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             u "I think punching an Ape's thick skull is gonna be like hitting a wall."
@@ -115,7 +115,7 @@ label v9_fri_training_w_wolves:
 
             ch "Yes, I'm sure it will be."
 
-        "Agree":
+        "Agree" (bro=1.0):
             $ reputation.add_point(RepComponent.BRO)
 
             u "(I don't want to interrupt.)"
@@ -272,7 +272,7 @@ label v9_fri_training_w_wolves:
         with dissolve
         
         menu: 
-            "Be cocky": 
+            "Be cocky" (troublemaker=1.0): 
                 $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
                 u "Never know."
@@ -287,7 +287,7 @@ label v9_fri_training_w_wolves:
 
                 u "What's that?"
 
-            "Agree":
+            "Agree" (bro=1.0):
                 $ reputation.add_point(RepComponent.BRO)
 
                 u "Yeah that was kinda lucky."
@@ -356,7 +356,7 @@ label v9_fri_training_w_wolves:
         with dissolve
 
         menu: 
-            "Hit first": 
+            "Hit first" (bro=1.0): 
                 $ reputation.add_point(RepComponent.BRO)
 
                 u "Hit first."
@@ -376,7 +376,7 @@ label v9_fri_training_w_wolves:
 
                 ch "So you have to be ready for it."
 
-            "Run":
+            "Run" (troublemaker=1.0):
                 $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
                 u "Run!"
@@ -439,7 +439,7 @@ label v9_fri_training_w_wolves:
         u "Nah, I'm not in my head."
 
         menu:
-            "Act cool":
+            "Act cool" (troublemaker=1.0):
                 $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
                 scene v9tww15a
@@ -452,7 +452,7 @@ label v9_fri_training_w_wolves:
 
                 u "How?"
 
-            "Ask for help":
+            "Ask for help" (bro=1.0):
                 $ reputation.add_point(RepComponent.BRO)
 
                 u "I need it. I don't know what happened."
@@ -528,7 +528,7 @@ label v9_fri_training_w_wolves:
         with dissolve
     
         menu:
-            "Agree":
+            "Agree" (bro=1.0):
                 $ reputation.add_point(RepComponent.BRO)
 
                 u "Yeah, I know."
@@ -538,7 +538,7 @@ label v9_fri_training_w_wolves:
 
                 ch "So we use that to our advantage."
 
-            "Defend yourself":
+            "Defend yourself" (troublemaker=1.0):
                 $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
                 u "I mean, it's not my first fight ever. I can still have some tricks up my sleeve."

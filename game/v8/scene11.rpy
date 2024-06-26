@@ -59,7 +59,7 @@ label work_with_seb:
     with dissolve
 
     menu:
-        "Open up to Sebastian":
+        "Open up to Sebastian" (bro=1.0):
             $ reputation.add_point(RepComponent.BRO)
             jump wolves_gym_conf
 

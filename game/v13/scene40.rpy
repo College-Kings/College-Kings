@@ -392,7 +392,7 @@ label v13s40_neck:
     lovense thrust 9
 
     menu:
-        "Choke":
+        "Choke" (chloe=1.0):
             $ chloeturnedon.add("neck")
 
             scene v13s40neck_2 # TPP. Close up of MC's hand choking Chloe's neck, Chloe smiling, mouth closed
@@ -434,7 +434,7 @@ label v13s40_chest:
 
             pause
 
-        "Massage":
+        "Massage" (chloe=1.0):
             $ chloeturnedon.add("chest")
 
             scene v13s40chest_3 # TPP. Show MC massaging Chloe's boobs, Chloe smiling, mouth closed
@@ -464,7 +464,7 @@ label v13s40_back:
     lovense thrust 11
 
     menu:
-        "Massage":
+        "Massage" (chloe=1.0):
             $ chloeturnedon.add("back")
 
             scene v13s40back_2 # TPP. MC massaging Chloe's back, Chloe smiling, mouth closed
@@ -510,7 +510,7 @@ label v13s40_shoulder:
     lovense thrust 12
 
     menu:
-        "Massage":
+        "Massage" (chloe=1.0):
             $ chloeturnedon.add("shoulder")
 
             scene v13s40shoulder_2 # TPP. Show MC massaging Chloe's shoulder, Chloe smiling, mouth closed
@@ -523,7 +523,7 @@ label v13s40_shoulder:
 
             pause
 
-        "Kiss":
+        "Kiss" (chloe=1.0):
             $ chloeturnedon.add("shoulder")
             scene v13s40shoulder_3 # TPP. Show MC kissing Chloe left shoulder, Chloe slight smile, mouth closed
             with dissolve

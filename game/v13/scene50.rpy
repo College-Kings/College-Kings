@@ -165,7 +165,7 @@ label v13s50:
     em "Isn't that right, [name]?"
 
     menu:
-        "He knows more":
+        "He knows more" (bro=1.0):
             $ reputation.add_point(RepComponent.BRO)
             scene v13s50_9a
             with dissolve

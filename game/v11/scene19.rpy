@@ -613,7 +613,7 @@ label v11_roommate:
             with dissolve
 
             menu:
-                "Just tell her":
+                "Just tell her" (boyfriend=1.0):
                     $ reputation.add_point(RepComponent.BOYFRIEND)
                     $ riley.points += 1
 
@@ -627,7 +627,7 @@ label v11_roommate:
 
                     ri "You're probably right."
 
-                "Ease into it":
+                "Ease into it" (bro=1.0):
                     $ reputation.add_point(RepComponent.BRO)
 
                     scene v11rm21c
@@ -828,7 +828,7 @@ label v11_roommate:
             with dissolve
 
             menu:
-                "Just tell her":
+                "Just tell her" (boyfriend=1.0):
                     $ reputation.add_point(RepComponent.BOYFRIEND)
                     $ riley.points += 1
                     
@@ -845,7 +845,7 @@ label v11_roommate:
                     scene v11rm21c
                     with dissolve
 
-                "Ease into it":
+                "Ease into it" (bro=1.0):
                     $ reputation.add_point(RepComponent.BRO)
 
                     scene v11rm21c

@@ -173,7 +173,7 @@ label v11_rose_underground:
 
             ro "We'll sit here for who knows how long. *Sighs*"
 
-        "Comfort her":
+        "Comfort her" (ms rose=1.0):
             $ ms_rose.points += 1
             scene v11sub3
             with dissolve

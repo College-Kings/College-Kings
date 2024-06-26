@@ -126,7 +126,7 @@ label v12_follow_chris:
     with dissolve
 
     menu:
-        "She wasn't overreacting":
+        "She wasn't overreacting" (boyfriend=1.0, troublemaker=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
             $ CharacterService.set_mood(chris, Moods.MAD)
@@ -211,7 +211,7 @@ label v12_follow_chris:
 
             driver "Don't worry, I can take you back."
 
-        "You're right":
+        "You're right" (bro=1.0):
             $ v12_help_chris += 1
             if v12_help_chris >= 4:
                 if mc.frat == Frat.WOLVES:

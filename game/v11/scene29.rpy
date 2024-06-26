@@ -38,7 +38,7 @@ label v11_hotel_room:
     u "2..."
 
     menu (fail_label="v11timera"):
-        "Save Lauren":
+        "Save Lauren" (boyfriend=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
             $ v11save = 1
 
@@ -66,7 +66,7 @@ label v11_hotel_room:
 
             jump v11wakeupa
 
-        "Save Riley":
+        "Save Riley" (bro=1.0):
             $ reputation.add_point(RepComponent.BRO)
             $ v11save = 2
 

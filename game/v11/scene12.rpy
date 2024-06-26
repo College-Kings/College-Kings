@@ -87,7 +87,7 @@ label v11_sit_ryan_convo:
 
                 u "Uhm, I'm pretty tired, so I think I'm going to sleep."
             
-            "Like what?":
+            "Like what?" (bro=1.0):
                 $ reputation.add_point(RepComponent.BRO)
 
                 scene v11src4j # FPP Same angle as v11src4, Ryan smiling slightly, mouth closed
@@ -222,7 +222,7 @@ label v11_sit_ryan_convo:
         ry "Since you know her so well... Do you think you could tell me some things about her?"
 
         menu:
-            "Give blessing":
+            "Give blessing" (bro=1.0):
                 $ reputation.add_point(RepComponent.BRO)
                 scene v11src4d
                 with dissolve
@@ -367,7 +367,7 @@ label v11_sit_ryan_convo:
         ry "Aye man, do you mind if I use the armrest?"
 
         menu:
-            "Be a dick":
+            "Be a dick" (troublemaker=1.0):
                 $ reputation.add_point(RepComponent.TROUBLEMAKER)
                 scene v11src4a
                 with dissolve
@@ -404,7 +404,7 @@ label v11_sit_ryan_convo:
 
                 u "Keep telling yourself that man, I'm going to sleep."
 
-            "Let him":
+            "Let him" (bro=1.0):
                 $ reputation.add_point(RepComponent.BRO)
                 scene v11src4a
                 with dissolve

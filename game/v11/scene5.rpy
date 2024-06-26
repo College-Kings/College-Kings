@@ -103,7 +103,7 @@ label v11_nightclub_with_josh:
     jo "Yeah, that's the name I put on your ID. Cool right?"
 
     menu:
-        "Cool":
+        "Cool" (bro=1.0):
             $ reputation.add_point(RepComponent.BRO)
 
             scene v11swc3
@@ -160,7 +160,7 @@ label v11_nightclub_with_josh:
 
     if not josh_europe:
         menu:
-            "Invite to Europe":
+            "Invite to Europe" (bro=1.0):
                 $ reputation.add_point(RepComponent.BRO)
                 $ josh_europe = True
 
@@ -251,7 +251,7 @@ label v11_nightclub_with_josh:
     bartender "And for you?"
 
     menu:
-        "Henny":
+        "Henny" (bro=1.0):
             $ reputation.add_point(RepComponent.BRO)
 
             scene v11swc6c # FPP Same angle as v11swc6b, Bartender mouth closed
