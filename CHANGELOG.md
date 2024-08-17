@@ -8,6 +8,52 @@
 
 All notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.4.18] - 2024-06-23
+
+### Fixed
+
+- Various bug fixes to the phone and characters
+
+## [1.4.17] - 2024-06-05
+
+### Fixed
+
+- Fixed missing `points` (on save) causing crash
+- Fixed missing `mood` (on save) causing crash
+- Fixed instances where `kiwii` was crashing due to old data
+
+## [1.4.15] - 2024-06-04
+
+### Fixed
+
+- Fixed missing `points` attribute causing crash
+- Fixed missing `mood` attribute causing crash
+- Handle instances where `relationship` is not the expected data type
+
+## [1.4.14] - 2024-06-02
+
+### Added
+
+- Added clear persistent data button to settings
+
+### Changed
+
+- Updated uuid format to comply with latest server updates
+- Various optimisations to the phone
+- Various optimisations to the Character classes
+
+### Fixed
+
+- Fixed phone missing applications
+- Fixed messenger missing contacts
+- Fixed NPCs missing text messages
+- Fixed relationship app showing Friend for all girls
+- Fixed missing kiwii.posts causing game crash on saves
+- Fixed missing "mood" property on characters causing crash
+- Fixed npc relationships being the wrong data type
+- Fixed server infinitely retrying connection causing lag during H-scenes
+- Various save compat fixes
+
 ## [1.4.13] - 2024-05-06
 
 ### Fixed
