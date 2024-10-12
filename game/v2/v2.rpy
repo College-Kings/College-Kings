@@ -1008,8 +1008,7 @@ label tomFightStart:
     jump v1_tom_walk_away
 
 label youfinish:
-    if reaction == 0.5:
-        grant Achievement("the_notorious", "Win your first fight")
+    grant Achievement("the_notorious", "Win your first fight")
             
     $ wintom = True
 
