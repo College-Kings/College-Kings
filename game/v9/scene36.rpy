@@ -66,7 +66,7 @@ label v9_run_w_imre:
 
         if winadam:
             imre "You fought Adam though, and you won."
-        else
+        else:
             imre "You fought Adam though, and well you did more damage than I did."
 
         scene v9rwi5
