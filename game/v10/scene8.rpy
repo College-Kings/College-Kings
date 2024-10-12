@@ -24,8 +24,7 @@ label v10_fight_result:
             scene v10fr2 # TPP. Show close up of MC hands in the air above head, excited face, mouth closed
             with dissolve
 
-            if reaction == 0.5:
-                grant Achievement("lights_out", "Beat Ryan on Hard difficulty at the Brawl")
+            grant Achievement("lights_out", "Beat Ryan at the Brawl")
 
             u "This wasn't just a fight for me, it was a fight for me and my brothers."
 
@@ -122,8 +121,7 @@ label v10_fight_result:
             scene v10fr2
             with dissolve
 
-            if reaction == 0.5:
-                grant Achievement("golden_boy", "Beat Imre on Hard difficulty at the Brawl")
+            grant Achievement("golden_boy", "Beat Imre on Hard difficulty at the Brawl")
 
             u "This wasn't just a fight for me, it was a fight for me and my brothers."
 
