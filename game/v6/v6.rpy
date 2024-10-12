@@ -7183,7 +7183,7 @@ label v6_fr3josh1:
     scene sfr3jo3
     with dissolve
 
-    jo "Checking out the Wolves. Just wanna see what the fuzz is all about, you know."
+    jo "Checking out the Wolves. Just wanna see what the fuss is all about, you know."
 
     jo "Maybe join if they're cool."
 

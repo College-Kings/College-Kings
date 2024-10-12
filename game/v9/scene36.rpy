@@ -59,21 +59,30 @@ label v9_run_w_imre:
     scene v9rwi5a
     with dissolve
 
-    if winadam:
-        imre "You fought Adam though, and you won."
+    if winadam or adamdmg > 0:
 
-    elif adamdmg > 0:
-        imre "You fought Adam though, and well you did more damage than I did."
+        scene v9rwi5a
+        with dissolve
 
-    scene v9rwi5
-    with dissolve
+        if winadam:
+            imre "You fought Adam though, and you won."
+        else:
+            imre "You fought Adam though, and well you did more damage than I did."
 
-    u "All luck."
+        scene v9rwi5
+        with dissolve
+
+        u "All luck."
+
+        scene v9rwi5a
+        with dissolve
+
+        imre "Sure it was."
 
     scene v9rwi5a
     with dissolve
 
-    imre "Sure it was. But I'm not worried about you. If I get the shit beat out of me my pussy getting days are over."
+    imre "But I'm not worried about you. If I get the shit beat out of me my pussy getting days are over."
 
     scene v9rwi5
     with dissolve
