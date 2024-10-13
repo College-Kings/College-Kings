@@ -99,8 +99,8 @@ label tue_night_in_room:
         $ MessengerService.new_message(grayson, _("Yo Ape, still ready for the surprise?"))
         $ MessengerService.add_reply(grayson, _("Are we still doing this?"))
         $ MessengerService.new_message(grayson, _("It's just so damn tempting. But you won't regret it."))
-        $ MessengerService.add_reply(grayson, _("Now I'm fucking couting on it!"))
-        $ MessengerService.new_message(grayson, _("Couting on it or not, [name], it's happening!"))
+        $ MessengerService.add_reply(grayson, _("Now I'm fucking counting on it!"))
+        $ MessengerService.new_message(grayson, _("Counting on it or not, [name], it's happening!"))
         $ MessengerService.add_reply(grayson, _(":P"))
 
         while MessengerService.has_replies(grayson):
