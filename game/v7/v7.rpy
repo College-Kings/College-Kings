@@ -851,7 +851,7 @@ label hd_bd:
             scene s702f
             with dissolve
 
-            no "Yeah I just wanna explore another girls body and maybe oil each other up completely naked."
+            no "Yeah I just wanna explore another girl's body and maybe oil each other up completely naked."
 
             scene s702g
             with dissolve

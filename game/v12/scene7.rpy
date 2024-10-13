@@ -4049,7 +4049,7 @@ label v12s7_amber1:
     scene v12feram3a
     with dissolve
 
-    am "I'm just doing my job and should just learn to comply."
+    am "I'm just doing my job and you should just learn to comply."
 
     scene v12feram3
     with dissolve

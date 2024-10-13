@@ -1420,7 +1420,7 @@ label history2:
         scene s136f # Imre angry
         with dissolve
 
-        imre "Was it another ape??? Tell me who, I'll fuck them up!"
+        imre "Was it another Ape??? Tell me who, I'll fuck them up!"
 
         if meetlauren:
             scene s136g
