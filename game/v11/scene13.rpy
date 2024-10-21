@@ -32,7 +32,7 @@ label v11_aubrey_plane_sex:
             "Go after her":
                 label v11_aubrey_plane_sex_sg:
                 $ sceneList.add("v11_aubrey")
-                if CharacterService.is_girlfriend(lauren):
+                if (CharacterService.is_girlfriend(lauren)) and not harem_mode:
                     $ CharacterService.set_mood(lauren, Moods.MAD)
                     $ v11_lauren_caught_aubrey = True
                     $ CharacterService.set_relationship(lauren, Relationship.FRIEND)
