@@ -184,7 +184,7 @@ label v13_start:
     with dissolve
 
     menu:
-        "Don't let it happen again":
+        "Don't let it happen again" (bro=1.0, troublemaker=1.0):
             $ reputation.add_point(RepComponent.BRO)
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
             u "Just don't let it happen again, okay? I don't like being blamed for shit I didn't do."
@@ -194,7 +194,7 @@ label v13_start:
 
             ri "Of course, and I know you're a true friend. I won't jump to conclusions so quickly in the future."
 
-        "Apology accepted":
+        "Apology accepted" (boyfriend=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
             $ riley.points += 1
 

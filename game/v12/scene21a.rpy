@@ -186,7 +186,7 @@ label v12_nursing_aubrey:
     with dissolve
 
     menu:
-        "If I was your boyfriend...":
+        "If I was your boyfriend..." (boyfriend=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
             $ v12_aubrey_gf = True
 

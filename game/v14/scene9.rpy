@@ -130,7 +130,7 @@ label v14s09:
         with dissolve
 
         menu:
-            "Scare him":
+            "Scare him" (troublemaker=1.0):
                 $ reputation.add_point(RepComponent.TROUBLEMAKER)
                 u "(This should be fun.)"
 
@@ -189,7 +189,7 @@ label v14s09:
 
                 u "Ha... Good to hear, pal."
 
-            "I've done enough":
+            "I've done enough" (boyfriend=1.0):
                 $ reputation.add_point(RepComponent.BOYFRIEND)
                 scene v14s09_5f # FPP. same as v14s09_5b charli has a relieved expression on his face
                 with dissolve

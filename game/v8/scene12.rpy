@@ -300,7 +300,7 @@ label apes_faceoff_task:
     pause
 
     menu:
-        "Wish them good luck":
+        "Wish them good luck" (bro=1.0):
             $ reputation.add_point(RepComponent.BRO)
 
             u "Good luck, guys!"
@@ -310,7 +310,7 @@ label apes_faceoff_task:
             kai "Thanks brother! To you too."
             coop "Let the best man win."
 
-        "Just get to the task":
+        "Just get to the task" (troublemaker=1.0):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
     scene black

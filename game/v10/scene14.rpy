@@ -80,7 +80,7 @@ label v10_apes_samantha:
     with dissolve
 
     menu:
-        "I can be a hothead":
+        "I can be a hothead" (troublemaker=1.0):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             scene v10ssap2c
@@ -150,7 +150,7 @@ label v10_apes_samantha:
 
             u "Haha, I'll remember that."
        
-        "What's that supposed to mean?":
+        "What's that supposed to mean?" (bro=1.0):
             $ reputation.add_point(RepComponent.BRO)
             
             scene v10ssap2c
@@ -212,7 +212,7 @@ label v10_apes_samantha:
     with dissolve
 
     menu:
-        "Maybe":
+        "Maybe" (troublemaker=1.0):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
             
             scene v10ssap3a

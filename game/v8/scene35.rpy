@@ -120,7 +120,7 @@ label steak_w_chloe:
         with dissolve
 
         menu:
-            "Flirt with Chloe":
+            "Flirt with Chloe" (boyfriend=1.0):
                 $ reputation.add_point(RepComponent.BOYFRIEND)
                 jump steak_flirt_w_chloe
 
@@ -235,7 +235,7 @@ label steak_w_chloe_cont:
     with dissolve
 
     menu:
-        "Ask to see Chloe's muscles":
+        "Ask to see Chloe's muscles" (boyfriend=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
             jump steak_w_chloe_muscles
 
@@ -436,7 +436,7 @@ label steak_w_chloe_cont_2:
 
     if CharacterService.is_fwb(chloe):
         menu:
-            "Say a dirty joke":
+            "Say a dirty joke" (troublemaker=1.0):
                 $ reputation.add_point(RepComponent.TROUBLEMAKER)
                 jump steak_w_chloe_dirty
                 

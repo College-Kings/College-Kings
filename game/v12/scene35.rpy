@@ -70,7 +70,7 @@ label v12_chris_nora_room:
     u "(It really seems like those two are coming to a crossroads. I'm sure she's pretty heated right now, I wonder if I should go talk to her.)"
 
     menu:
-        "Go to Nora":
+        "Go to Nora" (boyfriend=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
             scene v12cnr10 # TPP. Show MC walking towards his hotel room door to the hallway, neutral expression, mouth closed
             with dissolve
@@ -153,7 +153,7 @@ label v12_chris_nora_room:
 
                 jump v12_nora_room #scene 35a
 
-        "Leave her alone":
+        "Leave her alone" (bro=1.0):
             $ reputation.add_point(RepComponent.BRO)
             scene v12cnr5
             with dissolve

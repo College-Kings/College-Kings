@@ -122,7 +122,7 @@ label v11_cafe_with_riley:
     ri "And although one of those would be nice, it won't be happening... So I really hope the plane doesn't crash."
 
     menu:
-        "Scare her":
+        "Scare her" (troublemaker=1.0):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
             scene v11s3bris9
             with dissolve
@@ -152,7 +152,7 @@ label v11_cafe_with_riley:
             u "Just download some movies on your phone to watch and for most of it, you'll probably be asleep anyway... You really have nothing to worry about."
             u "I'm pretty sure Imre is scared of heights, but he has no problem with the plane."
 
-        "Reassure her":
+        "Reassure her" (boyfriend=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
             scene v11s3bris9c
             with dissolve

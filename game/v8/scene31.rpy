@@ -138,7 +138,7 @@ label v8_tues_eco_class:
         with dissolve
 
         menu:
-            "Confide in Ryan":
+            "Confide in Ryan" (bro=1.0):
                 $ reputation.add_point(RepComponent.BRO)
                 jump tec_conf_ryan
             "Play it cool":
@@ -197,7 +197,7 @@ label tec_cont:
         u "Sorry, I just can't focus."
 
         menu:
-            "Flirt with Lauren":
+            "Flirt with Lauren" (boyfriend=1.0):
                 $ reputation.add_point(RepComponent.BOYFRIEND)
                 jump fl_w_lau
 

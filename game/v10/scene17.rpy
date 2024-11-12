@@ -17,7 +17,7 @@ label v10_aubrey_house:
         au "Just walking me home, huh? No ulterior motive?"
 
         menu:
-            "Maybe":
+            "Maybe" (troublemaker=1.0):
                 $ reputation.add_point(RepComponent.TROUBLEMAKER)
                 scene v10auh1b # FPP Same angle and expression as v10auh1a,, Aubrey mouth closed
                 with dissolve
@@ -122,7 +122,7 @@ label v10_aubrey_house:
     with dissolve
 
     menu:
-        "Compliment her":
+        "Compliment her" (boyfriend=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
 
             scene v10auh1f # FPP Same angle as v10auh1, Aubrey has a big smile, mouth closed
@@ -140,7 +140,7 @@ label v10_aubrey_house:
 
             u "*Laughs*"
 
-        "Make a joke":
+        "Make a joke" (troublemaker=1.0):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             scene v10auh1b
@@ -209,7 +209,7 @@ label v10_aubrey_house:
     with dissolve
 
     menu:
-        "Ask about her":
+        "Ask about her" (boyfriend=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
             
             scene v10auh1
@@ -234,7 +234,7 @@ label v10_aubrey_house:
 
                 au "Not too bad. *Chuckles*"
 
-        "Ask about her sister":
+        "Ask about her sister" (troublemaker=1.0):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             scene v10auh1h
@@ -256,7 +256,7 @@ label v10_aubrey_house:
     with dissolve
 
     menu:
-        "Ask to watch":
+        "Ask to watch" (troublemaker=1.0):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
             if CharacterService.is_fwb(aubrey): # Aubrey relationship check
                 label v10s17_galleryScene:
@@ -581,7 +581,7 @@ label v10_aubrey_house:
 
                         u "(Yup. Classic day in my life.) *Chuckles*"
 
-                    "Make a joke":
+                    "Make a joke" (troublemaker=1.0):
                         $ reputation.add_point(RepComponent.TROUBLEMAKER)
                         scene v10auh6a
                         with dissolve
@@ -741,7 +741,7 @@ label v10_aubrey_house:
     with dissolve
 
     menu:
-        "Compliment":
+        "Compliment" (boyfriend=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
             scene v10auh2e
             with dissolve

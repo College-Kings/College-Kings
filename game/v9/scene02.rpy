@@ -24,7 +24,7 @@ label v9_start_apes:
     with dissolve
 
     menu:
-        "Not a pledge anymore":
+        "Not a pledge anymore" (troublemaker=1.0):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             u "Not a pledge anymore."
@@ -57,7 +57,7 @@ label v9_start_apes:
             with dissolve
             u "Something's going on. I just don't know what."
 
-        "Let it slide":
+        "Let it slide" (bro=1.0):
             $ reputation.add_point(RepComponent.BRO)
 
             u "(Cam's just a dick. Not worth it.)"
@@ -108,7 +108,7 @@ label v9_start_apes:
     with dissolve
 
     menu:
-        "Defend your honor":
+        "Defend your honor" (troublemaker=1.0):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             u "I do fine. And they ALL call me Big Daddy."
@@ -129,7 +129,7 @@ label v9_start_apes:
             with dissolve
             ca "That's for the Freshman Brawl! It's gonna be epic!"
 
-        "Just ask him about the red square":
+        "Just ask him about the red square" (bro=1.0):
             $ reputation.add_point(RepComponent.BRO)
 
             u "What's up with the red square? That's all I wanna know."
@@ -155,7 +155,7 @@ label v9_start_apes:
     with dissolve
 
     menu:
-        "Excited reply":
+        "Excited reply" (troublemaker=1.0):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             u "Pledge vs pledge!?"
@@ -189,7 +189,7 @@ label v9_start_apes:
 
             pause
 
-        "Hesitant reply":
+        "Hesitant reply" (boyfriend=1.0):
             $ v9_brawl_hesitant = True
             $ reputation.add_point(RepComponent.BOYFRIEND)
 

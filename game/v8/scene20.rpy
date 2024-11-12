@@ -61,13 +61,13 @@ label emily_arcade:
         with dissolve
 
         menu:
-            "Take the bet":
+            "Take the bet" (boyfriend=1.0):
                 $ reputation.add_point(RepComponent.BOYFRIEND)
                 $ emilyArcade = 1
 
                 jump em_arcade_1
 
-            "Make it more interesting":
+            "Make it more interesting" (troublemaker=1.0):
                 $ reputation.add_point(RepComponent.TROUBLEMAKER)
                 $ emilyArcade = 2
 
@@ -118,13 +118,13 @@ label emily_arcade:
         with dissolve
 
         menu:
-            "Take the bet":
+            "Take the bet" (bro=1.0):
                 $ reputation.add_point(RepComponent.BRO)
                 $ emilyArcade = 3
 
                 jump em_arcade_3
 
-            "Make it more fun":
+            "Make it more fun" (troublemaker=1.0):
                 $ reputation.add_point(RepComponent.TROUBLEMAKER)
                 $ emilyArcade = 4
 

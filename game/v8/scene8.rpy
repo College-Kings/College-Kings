@@ -72,11 +72,11 @@ label prot_w_au:
     with dissolve
 
     menu:
-        "Pretend you know what you're doing":
+        "Pretend you know what you're doing" (troublemaker=1.0):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
             jump prot_w_au_wing
 
-        "Ask what you need to do":
+        "Ask what you need to do" (boyfriend=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
             jump prot_w_au_no_wing
 
@@ -189,7 +189,7 @@ label prot_w_au_1:
     with dissolve
 
     menu:
-        "Pretend you know about it":
+        "Pretend you know about it" (troublemaker=1.0):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
             jump prot_w_au_leg
         "Admit you don't know":

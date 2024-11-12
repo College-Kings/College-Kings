@@ -166,14 +166,14 @@ label v12_penelope_roof:
             with dissolve
 
             menu:
-                "Sure is":
+                "Sure is" (bro=1.0):
                     $ reputation.add_point(RepComponent.BRO)
                     scene v12penr11 # FPP View of MC, who is laying on his back looking up at the stars
                     with dissolve
 
                     u "It really is."
 
-                "You sure are":
+                "You sure are" (boyfriend=1.0):
                     $ reputation.add_point(RepComponent.BOYFRIEND)
                     u "Yes, you are."
 
@@ -317,7 +317,7 @@ label v12_penelope_roof:
                 with dissolve
 
                 menu:
-                    "Be shocked":
+                    "Be shocked" (bro=1.0):
                         $ reputation.add_point(RepComponent.BRO)
 
                         u "*Gulp*"
@@ -337,7 +337,7 @@ label v12_penelope_roof:
 
                         pe "*Laughs* Yeah, you've got a few other things to figure out before you start thinking about tying the knot."
 
-                    "Be bold":
+                    "Be bold" (penelope=1.0):
                         $ reputation.add_point(RepComponent.BOYFRIEND)
                         grant Achievement("a_person_like_me", "You see yourself as Penelope's husband material")
 

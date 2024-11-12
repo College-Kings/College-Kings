@@ -56,7 +56,7 @@ label v10_avoid_fight:
             ch "If this is how you're going to act when push comes to shove then think real hard about if this is even for you."
 
             menu:
-                "Apologize":
+                "Apologize" (bro=1.0):
                     $ reputation.add_point(RepComponent.BRO)
                     scene v10frr3b # FPP. same camera as v10frr3, Show Chris, mouth closed, serious look.
                     with dissolve

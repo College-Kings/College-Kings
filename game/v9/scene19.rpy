@@ -97,7 +97,7 @@ label v9_lau_dorm:
 
     if CharacterService.is_kissed(lauren) or CharacterService.is_girlfriend(lauren):
         menu:
-            "Offer Lauren a back rub":
+            "Offer Lauren a back rub" (boyfriend=1.0):
                 $ reputation.add_point(RepComponent.BOYFRIEND)
 
                 u "Here, let me help."
@@ -122,7 +122,7 @@ label v9_lau_dorm:
 
                 la "Yeah! Let's get to work."
 
-            "Offer Lauren a hug":
+            "Offer Lauren a hug" (boyfriend=1.0):
                 $ reputation.add_point(RepComponent.BOYFRIEND)
             
                 u "Aww, come here."
@@ -154,7 +154,7 @@ label v9_lau_dorm:
 
     else:
         menu:
-            "Offer guidance":
+            "Offer guidance" (bro=1.0):
                 $ reputation.add_point(RepComponent.BRO)
 
                 u "It's simple. Start with your main goal and work your way back to what to do now."
@@ -179,7 +179,7 @@ label v9_lau_dorm:
 
                 u "(Whew!)"
 
-            "Just listen":
+            "Just listen" (boyfriend=1.0):
                 $ reputation.add_point(RepComponent.BOYFRIEND)
 
                 u "What part's giving you the most trouble? How can I help?"
@@ -236,7 +236,7 @@ label v9_lau_dorm:
 
             u "No! We can top that!"
 
-        "Support Lauren":
+        "Support Lauren" (boyfriend=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
         
             u "Hmm. I see why you're stressed. But don't worry. We can come up with something just as awesome."
@@ -514,7 +514,7 @@ label v9_lau_dorm:
 
         if CharacterService.is_girlfriend(lauren):
             menu:
-                "Flirt":
+                "Flirt" (boyfriend=1.0):
                     $ reputation.add_point(RepComponent.BOYFRIEND)
 
                     u "One might say, your hero?"
@@ -524,7 +524,7 @@ label v9_lau_dorm:
 
                     la "One might."
 
-                "Be romantic":
+                "Be romantic" (boyfriend=1.0):
                     $ reputation.add_point(RepComponent.BOYFRIEND)
 
                     u "I just want you to know you can count on me. Always."
@@ -570,7 +570,7 @@ label v9_lau_dorm:
                 call screen reputation_popup
 
             menu:
-                "Kiss Lauren":
+                "Kiss Lauren" (boyfriend=1.0):
                     $ reputation.add_point(RepComponent.BOYFRIEND)
 
                     jump v9_lau_dorm_kiss
@@ -591,7 +591,7 @@ label v9_lau_dorm:
         with dissolve
 
         menu:
-            "Credit Lauren":
+            "Credit Lauren" (boyfriend=1.0):
                 $ reputation.add_point(RepComponent.BOYFRIEND)
 
                 u "It's gonna be a great event. Those Deer will be begging you to host every event from now on."

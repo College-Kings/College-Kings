@@ -102,7 +102,7 @@ label v11_samantha_packing:
     sa "No, but I just wasn't expecting you to just leave. Rude."
 
     menu:
-        "Invite her":
+        "Invite her" (samantha=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
             $ samantha.points += 1
             $ v11_invite_sam_europe = True

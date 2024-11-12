@@ -143,7 +143,7 @@ label v3start:
     imre "Well... Not exactly, but I did manage to hide inside the girls' locker room."
 
     menu:
-        "You're crazy":
+        "You're crazy" (bro=1.0):
             $ reputation.add_point(RepComponent.BRO)
 
             scene s206c
@@ -151,7 +151,7 @@ label v3start:
 
             u "Hahaha, man you're crazy."
 
-        "That's not cool":
+        "That's not cool"  (boyfriend=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
             $ notcool = True
 
@@ -203,7 +203,7 @@ label v3start:
     imre "Oh shit, is she hot?"
 
     menu:
-        "Hell yeah":
+        "Hell yeah" (bro=1.0):
             $ reputation.add_point(RepComponent.BRO)
 
             scene s208a
@@ -503,7 +503,7 @@ label conl:
     u "(I wonder if she had more in mind when she said she wanted to make it up to me.)"
 
     menu:
-        "Ask her about it":
+        "Ask her about it" (troublemaker=1.0):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
             label cq_a: #for compatibility only
 
@@ -537,7 +537,7 @@ label conl:
 
             cl "Haha, good."
 
-        "Don't question it":
+        "Don't question it" (boyfriend=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
             label cq_b: #for compatibility only
 
@@ -599,7 +599,7 @@ label conl:
     with dissolve
 
     menu:
-        "Win the game":
+        "Win the game" (troublemaker=1.0):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             # volleybal hit sounds
@@ -631,7 +631,7 @@ label conl:
 
             u "I'm sure you'll get me next time."
 
-        "Let her win":
+        "Let her win" (boyfriend=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
 
             scene s218c # you missing the ball
@@ -1058,7 +1058,7 @@ label conl:
     imre "Now, show me what you've got."
 
     menu:
-        "Show off":
+        "Show off" (bro=1.0):
             $ reputation.add_point(RepComponent.BRO)
             label cw_a: #for compatibility only
 
@@ -1162,7 +1162,7 @@ label conl:
         u "(Isn't that the cute store clerk from the costume shop?)"
 
         menu:
-            "Approach her":
+            "Approach her" (evelyn=0.5):
                 $ reputation.add_point(RepComponent.BRO)
                 label cx_a: #for compatibility only
 
@@ -1201,7 +1201,7 @@ label conl:
                 ev "Give me one good reason to give you a chance."
 
                 menu:
-                    "Be smart":
+                    "Be smart" (evelyn=1.0):
                         $ evelynnumber = True
 
                         scene s245a
@@ -1242,7 +1242,7 @@ label conl:
 
                         u "(I'm getting really good at this flirting thing...)"
 
-                    "Be funny":
+                    "Be funny" (evelyn=-1.0):
                         $ evelynnumber = False
 
                         scene s245a
@@ -1267,7 +1267,7 @@ label conl:
 
                         u "(Damn, that didn't go as planned...)"
 
-            "Leave it":
+            "Leave it" (boyfriend=1.0):
                 $ reputation.add_point(RepComponent.BOYFRIEND)
                 label cx_ad: #for compatibility only
 
@@ -1522,7 +1522,7 @@ label conl:
                 label cy_a: #for compatibility only
                 label cy_b: #for compatibility only
                 menu:
-                    "Take off your clothes":
+                    "Take off your clothes" (boyfriend=1.0, bro=1.0):
                         $ reputation.add_point(RepComponent.BOYFRIEND)
                         $ reputation.add_point(RepComponent.BRO)
 
@@ -1541,7 +1541,7 @@ label conl:
 
                         pause 0.5
 
-                    "Refuse":
+                    "Refuse" (troublemaker=1.0):
                         $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
                         scene s254e
@@ -1707,7 +1707,7 @@ label conl:
                 au "Your turn."
 
                 menu:
-                    "Truth":
+                    "Truth" (boyfriend=1.0):
                         $ reputation.add_point(RepComponent.BOYFRIEND)
 
                         scene s254h
@@ -1772,7 +1772,7 @@ label conl:
                             au "Okay, now it's your turn again."
 
 
-                    "Dare":
+                    "Dare" (troublemaker=1.0, bro=1.0):
                         $ reputation.add_point(RepComponent.TROUBLEMAKER)
                         $ reputation.add_point(RepComponent.BRO)
 
@@ -1955,7 +1955,7 @@ label conl:
         au "Your turn."
 
         menu:
-            "Truth":
+            "Truth" (boyfriend=1.0):
                 $ reputation.add_point(RepComponent.BOYFRIEND)
 
                 scene s254h
@@ -2015,7 +2015,7 @@ label conl:
 
                 au "Okay, now it's your turn again."
 
-            "Dare":
+            "Dare" (troublemaker=1.0, bro=1.0):
                 $ reputation.add_point(RepComponent.TROUBLEMAKER)
                 $ reputation.add_point(RepComponent.BRO)
 
@@ -2083,7 +2083,7 @@ label conl:
     with dissolve
 
     menu:
-        "Kiss her":
+        "Kiss her" (aubrey=1.0):
             label continuem:
                 $ CharacterService.set_relationship(aubrey, Relationship.FWB)
                 $ sceneList.add("v3_aubrey")
@@ -2573,7 +2573,7 @@ label continuen:
     la "Would you wanna be my test subject?"
 
     menu:
-        "I'd love to":
+        "I'd love to" (boyfriend=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
 
             scene s268a
@@ -2581,7 +2581,7 @@ label continuen:
 
             u "Yeah, I'd love to."
 
-        "I don't know...":
+        "I don't know..." (troublemaker=1.0):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             scene s268a
@@ -2649,7 +2649,7 @@ label continueq:
     u "Huh? Julia's calling me."
 
     menu:
-        "Answer":
+        "Answer" (boyfriend=1.0):
             stop sound
             play sound sound.answer_call
             $ reputation.add_point(RepComponent.BOYFRIEND)
@@ -2684,7 +2684,7 @@ label continueq:
             u "(Shit... if I meet her, she'll see my bruises and get really worried.)"
 
             menu:
-                "Shopping sounds great":
+                "Shopping sounds great" (boyfriend=1.0):
                     $ meetjulia = True
                     $ reputation.add_point(RepComponent.BOYFRIEND)
 
@@ -2709,7 +2709,7 @@ label continueq:
 
                     play sound sound.reject_call
 
-                "I can't, sorry":
+                "I can't, sorry" (troublemaker=1.0):
                     $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
                     u "Sorry, Julia... I'm really busy this weekend."
@@ -2726,7 +2726,7 @@ label continueq:
 
                     play sound sound.reject_call
 
-        "Don't answer":
+        "Don't answer" (julia=-1.0):
             stop sound
             play sound sound.reject_call
 
@@ -2788,7 +2788,7 @@ label continueq:
     ri "Is that all you think about, Ryan?"
 
     menu:
-        "Compliment Riley":
+        "Compliment Riley" (boyfriend=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
 
             scene s273d # Riley looking at ryan joking annoyed but her mouth is closed, ryan looking at her with a grin
@@ -2813,7 +2813,7 @@ label continueq:
 
             u "Yeah, alright. Let me just change out of my gym clothes."
 
-        "Agree with Ryan":
+        "Agree with Ryan" (bro=1.0):
             $ reputation.add_point(RepComponent.BRO)
 
             scene s273d
@@ -2955,7 +2955,7 @@ label continueq:
     u "You don't know what you're talking about! Chloe likes me. She went after Grayson 'cause someone needed to."
 
     menu:
-        "Insult Ryan":
+        "Insult Ryan" (troublemaker=1.0):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
             
             u "Cause you were too fucking pussy to do it yourself."
@@ -2972,7 +2972,7 @@ label continueq:
 
             u "You don't know Chloe at all! You're just fucking jealous!"
 
-        "Walk away":
+        "Walk away" (bro=1.0):
             $ reputation.add_point(RepComponent.BRO)
 
     scene s276b #RIley sad and concerned
@@ -3064,7 +3064,7 @@ label continueq:
     ri "So what's going on between you and Chloe? She's the President of the Chicks, right?"
 
     menu:
-        "I like her":
+        "I like her" (boyfriend=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
 
             scene s281a
@@ -3079,7 +3079,7 @@ label continueq:
 
             ri "Oh uhm... yeah, that sounds really good. I'm happy for you."
 
-        "She's into me":
+        "She's into me" (riley=0.5):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             scene s281a
@@ -3105,7 +3105,7 @@ label continueq:
             ri "You're attractive and charismatic and-"
 
             menu:
-                "Kiss her":
+                "Kiss her" (riley=1.0):
                     $ CharacterService.set_relationship(riley, Relationship.KISSED)
                     $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
@@ -3132,7 +3132,7 @@ label continueq:
 
                     ri "I'm glad you did."
 
-                "Don't kiss her":
+                "Don't kiss her" (boyfriend=1.0):
                     $ reputation.add_point(RepComponent.BOYFRIEND)
 
                     ri "Just a really great guy."
@@ -3223,7 +3223,7 @@ label continueq:
             u "(Okay, time to make a decision. Should I tell her about what happened with Aubrey?)"
 
             menu:
-                "Tell her what happened":
+                "Tell her what happened" (lauren=-1.0):
                     $ toldlauren = True
                     $ reputation.add_point(RepComponent.BOYFRIEND)
                     $ CharacterService.set_mood(lauren, Moods.MAD)
@@ -3290,7 +3290,7 @@ label continueq:
 
                     jump dk_ad
 
-                "Don't tell her":
+                "Don't tell her" (troublemaker=1.0):
                     $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
                     u "(Lauren seems to value loyalty, she might be upset if she finds out and I don't wanna ruin our date before it even started.)"
@@ -3369,14 +3369,14 @@ label continueq:
         label dl_a: #for compatibility only
         label dl_b: #for compatibility only
         menu:
-            "Kiss her":
+            "Kiss her" (lauren=0.5):
                 scene laurenkiss2 #self explanatory, same camera as s289
                 with dissolve
 
                 pause 2.0
 
                 menu:
-                    "Reach under her skirt":
+                    "Reach under her skirt" (troublemaker=1.0):
                         $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
                         scene s291a # same camera angle but your hand is under her skirt
@@ -3387,7 +3387,7 @@ label continueq:
                         la "[name], I don't think I want to do this."
 
                         menu:
-                            "Keep going":
+                            "Keep going" (lauren=-1.0):
                                 $ reputation.add_point(RepComponent.TROUBLEMAKER)
                                 $ laurentoofar = True
                                 $ CharacterService.set_mood(lauren, Moods.MAD)
@@ -3429,7 +3429,7 @@ label continueq:
 
                                 jump dk_ad
 
-                            "Stop":
+                            "Stop" (lauren=1.0):
                                 $ reputation.add_point(RepComponent.BOYFRIEND)
 
                                 scene s290b
@@ -3444,7 +3444,7 @@ label continueq:
 
                                 pause 0.5
 
-                    "Keep hands to yourself":
+                    "Keep hands to yourself" (boyfriend=1.0):
                         $ reputation.add_point(RepComponent.BOYFRIEND)
 
                         pause 1.0

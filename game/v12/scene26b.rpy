@@ -99,7 +99,7 @@ label v12_chase_nora:
     with dissolve
 
     menu:
-        "Support Nora":
+        "Support Nora" (nora=1.0):
             $ nora.points += 1
 
             u "I'll be honest, I have nothing against Chris as a person. But since we've been in Europe, I've gotten to see into your relationship a bit more, and it makes me look at him a little differently."
@@ -173,7 +173,7 @@ label v12_chase_nora:
 
             u "I think you were right to be upset, what you've been asking for is more than reasonable."
 
-        "Support Chris":
+        "Support Chris" (bro=1.0):
             $ reputation.add_point(RepComponent.BRO)
 
             u "I try to play the safe zone, so I'm not gonna point fingers at anyone. I will say this though, nothing you're asking of him is unreasonable and nothing he's doing is unreasonable."

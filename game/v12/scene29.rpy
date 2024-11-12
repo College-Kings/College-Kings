@@ -338,7 +338,7 @@ label v12_lauren_sex:
     with dissolve
 
     menu:
-        "Let her vent":
+        "Let her vent" (bro=1.0):
             $ reputation.add_point(RepComponent.BRO)
             scene v12las23b
             with dissolve
@@ -355,7 +355,7 @@ label v12_lauren_sex:
 
             u "It's not a problem madam. Thank you."
 
-        "Comfort her":
+        "Comfort her" (boyfriend=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
             $ v12_lauren_points += 1
 
@@ -471,7 +471,7 @@ label v12_lauren_sex:
     with dissolve
 
     menu:
-        "Talk to her":
+        "Talk to her" (bro=1.0):
             $ reputation.add_point(RepComponent.BRO)
 
             u "I'm not. What actually matters to me is the amount of effort you've put into the night, not the way it's going. What's the saying? \"It's the thought that counts\"? *Chuckles*"
@@ -491,7 +491,7 @@ label v12_lauren_sex:
 
             la "That means a lot... Thank you, [name]."
 
-        "Hold her":
+        "Hold her" (boyfriend=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
             $ v12_lauren_points += 1
 
@@ -602,7 +602,7 @@ label v12_lauren_sex:
     with dissolve
 
     menu:
-        "We'll do this another day":
+        "We'll do this another day" (bro=1.0):
             $ reputation.add_point(RepComponent.BRO)
 
             u "Lauren, you tried your best to make tonight special and I respect and love you for that. Just the fact that you did all of this proves how much you care about me and our relationship."
@@ -644,7 +644,7 @@ label v12_lauren_sex:
 
             jump v12_room_sneak
 
-        "A little extra effort...":
+        "A little extra effort..." (boyfriend=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
             $ v12_lauren_points += 1
 

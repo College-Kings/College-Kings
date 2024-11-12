@@ -231,7 +231,7 @@ label jorepb:
     cl "I didn't do anything shady. Grayson is just spreading lies like he always is."
 
     menu:
-        "I believe you":
+        "I believe you" (boyfriend=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
 
             scene s370
@@ -300,7 +300,7 @@ label jorepb:
 
             jump newchloec
 
-        "You're lying":
+        "You're lying" (chloe=-1.0):
             $ CharacterService.set_mood(chloe, Moods.MAD)
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
@@ -735,7 +735,7 @@ label continuez:
         u "(If we kiss in public, other girls are bound to find out that I'm dating Lauren.)"
 
         menu:
-            "Complaints? I love it":
+            "Complaints? I love it" (lauren=1.0):
                 $ laurenpublic = True
                 $ reputation.add_point(RepComponent.BOYFRIEND)
 
@@ -751,7 +751,7 @@ label continuez:
 
                 u "Hahaha, oops."
 
-            "I don't like kissing in public":
+            "I don't like kissing in public" (troublemaker=1.0):
                 $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
                 u "Uhm, actually do you mind if we don't do that in public?"
@@ -785,7 +785,7 @@ label continuez:
                 u "(Shit, she's pushing back. But if I want to avoid other girls finding out about us, I can't just kiss her in public.)"
 
                 menu:
-                    "Sorry, not in public":
+                    "Sorry, not in public" (troublemaker=1.0):
                         $ reputation.add_point(RepComponent.TROUBLEMAKER)
                         
                         grant Achievement("on_the_low", "Deny PDA with Lauren")
@@ -800,7 +800,7 @@ label continuez:
                         scene s380c
                         with dissolve
 
-                    "Actually, a kiss is fine":
+                    "Actually, a kiss is fine" (lauren=1.0):
                         $ laurenpublic = True
 
                         u "Actually, you're right, sorry. A kiss is fine."
@@ -884,7 +884,7 @@ label gokissb:
     la "Statement one: I struggle making difficult decisions."
 
     menu:
-        "Agree":
+        "Agree" (boyfriend=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
             $ laurentest.add("q1")
 
@@ -893,7 +893,7 @@ label gokissb:
 
             u "Agree."
 
-        "Disagree":
+        "Disagree" (troublemaker=1.0):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             scene s382a
@@ -907,7 +907,7 @@ label gokissb:
     la "Two: I consider myself an animal lover."
 
     menu:
-        "Agree":
+        "Agree" (boyfriend=1.0, bro=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
             $ reputation.add_point(RepComponent.BRO)
             $ laurentest.add("q2")
@@ -917,7 +917,7 @@ label gokissb:
 
             u "Uhm... agree I guess."
 
-        "Disagree":
+        "Disagree" (troublemaker=1.0):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             scene s382a
@@ -936,7 +936,7 @@ label gokissb:
     la "Three: I consider myself a relationship person."
 
     menu:
-        "Agree":
+        "Agree" (boyfriend=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
             $ laurentest.add("q3")
 
@@ -1007,7 +1007,7 @@ label gokissb:
 
                 pause 0.5
 
-        "Disagree":
+        "Disagree" (bro=1.0):
             $ reputation.add_point(RepComponent.BRO)
 
             scene s382a
@@ -1454,7 +1454,7 @@ label continueao:
     la "Sorry, I had to ask around in order to find a weak spot. My psych professor said this was essential for the last problem to work."
 
     menu:
-        "At least we're done now":
+        "At least we're done now" (boyfriend=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
 
             scene s382a
@@ -1525,7 +1525,7 @@ label continueao:
 
             jump hospitala
 
-        "That was too far":
+        "That was too far" (troublemaker=1.0):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             scene s382a
@@ -1681,7 +1681,7 @@ label continueaf:
                 unknown "Oh, you're the fucker that tried to molest her, right?"
 
                 menu:
-                    "I'm someone else":
+                    "I'm someone else" (troublemaker=1.0):
                         $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
                         u "What? No, I'm just a friend looking for her, where is she?"
@@ -1704,7 +1704,7 @@ label continueaf:
 
                             jump hospitala
 
-                    "I didn't mean to":
+                    "I didn't mean to" (boyfriend=1.0):
                         $ reputation.add_point(RepComponent.BOYFRIEND)
 
                         u "I didn't mean to... it was a misunderstanding!"
@@ -2096,7 +2096,7 @@ label continueaf:
     u "(If we kiss in public, other girls are bound to find out that I'm dating Lauren.)"
 
     menu:
-        "Complaints? I love it":
+        "Complaints? I love it" (lauren=1.0):
             $ laurenpublic = True
             $ reputation.add_point(RepComponent.BOYFRIEND)
 
@@ -2112,7 +2112,7 @@ label continueaf:
             jump gokissb
 
 
-        "I don't like kissing in public":
+        "I don't like kissing in public" (troublemaker=1.0):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             u "Uhm, actually do you mind if we don't do that in public?"
@@ -2146,7 +2146,7 @@ label continueaf:
             u "(Shit, she's pushing back. But if I want to avoid other girls finding out about us, I can't just kiss her in public.)"
 
             menu:
-                "Sorry, not in public":
+                "Sorry, not in public" (troublemaker=1.0):
                     $ reputation.add_point(RepComponent.TROUBLEMAKER)
                     
                     grant Achievement("on_the_low", "Deny PDA with Lauren")
@@ -2162,7 +2162,7 @@ label continueaf:
 
                     jump gokissb
 
-                "Actually, a kiss is fine":
+                "Actually, a kiss is fine" (lauren=1.0):
                     $ laurenpublic = True
 
                     u "Actually, you're right, sorry. A kiss is fine."
@@ -2710,7 +2710,7 @@ label hospitala:
     label fj_b: #for compatibility only
 
     menu:
-        "Confront Adam":
+        "Confront Adam" (bro=1.0):
             $ reputation.add_point(RepComponent.BRO)
 
             scene s397
@@ -2728,13 +2728,13 @@ label hospitala:
             ad "Wrong dorm, pissbag. Now fuck off."
 
             menu:
-                "Punch him":
+                "Punch him" (adam=-1.0):
                     $ fightadam = True
                     $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
                     jump fk_a
 
-                "Talk to him":
+                "Talk to him" (boyfriend=1.0):
                     $ reputation.add_point(RepComponent.BOYFRIEND)
 
                     scene s398a
@@ -2753,13 +2753,13 @@ label hospitala:
                     ad "So what are you gonna do about it, bitch?"
 
                     menu:
-                        "Punch him":
+                        "Punch him" (adam=-1.0):
                             $ fightadam = True
                             $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
                             jump fk_a
 
-                        "Threaten to tell school":
+                        "Threaten to tell school" (boyfriend=1.0):
                             $ reputation.add_point(RepComponent.BOYFRIEND)
 
                             scene s398a
@@ -2784,18 +2784,18 @@ label hospitala:
                             u "(Great, if I tell the school about this, Imre will be pissed at me and Adam will try to fucking kill me, but if I don't, Imre is gonna get himself killed trying to get revenge.)"
 
                             menu:
-                                "Tell the school":
+                                "Tell the school" (imre=-1.0):
                                     $ tellschool = True
                                     $ reputation.add_point(RepComponent.BOYFRIEND)
 
                                     jump fl_a
 
-                                "Keep it to yourself":
+                                "Keep it to yourself" (bro=1.0):
                                     $ reputation.add_point(RepComponent.BRO)
 
                                     jump fl_b
 
-        "Leave it":
+        "Leave it" (boyfriend=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
 
             scene s397b
@@ -2806,12 +2806,12 @@ label hospitala:
             u "(On the other hand, if I don't tell the school Imre might actually get himself killed trying to get revenge.)"
 
             menu:
-                "Tell the school":
+                "Tell the school" (imre=-1.0):
                     $ tellschool = True
                     $ reputation.add_point(RepComponent.BOYFRIEND)
                     jump fl_a
 
-                "Keep it to yourself":
+                "Keep it to yourself" (bro=1.0):
                     $ reputation.add_point(RepComponent.BRO)
                     jump fl_b
 
@@ -3730,7 +3730,7 @@ label youfinishadam: #### You beat adam
     ch "Christ man, you're a natural. Have you considered joining a frat?"
 
     menu:
-        "Yeah, I'm interested":
+        "Yeah, I'm interested" (bro=1.0):
             $ reputation.add_point(RepComponent.BRO)
 
             scene s428a
@@ -3767,7 +3767,7 @@ label youfinishadam: #### You beat adam
 
             jump findimre
 
-        "Not really":
+        "Not really" (boyfriend=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
 
             scene s428a

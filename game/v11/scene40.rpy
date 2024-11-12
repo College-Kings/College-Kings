@@ -162,7 +162,7 @@ label v11_carriage_ride:
     with dissolve
 
     menu:
-        "Tease":
+        "Tease" (troublemaker=1.0):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
             scene v11car4m # FPP. Same as v11car4l, different pose, Lindsey slightly sad, mouth closed
             with dissolve
@@ -500,7 +500,7 @@ label v11_carriage_ride:
     with dissolve
 
     menu:
-        "Side with Nora":
+        "Side with Nora" (nora=1.0, chloe=1.0):
             $ nora.points += 1
             $ chloe.points -= 1
 
@@ -509,7 +509,7 @@ label v11_carriage_ride:
 
             u "I actually think it's really cool, too. I'm sure the benefits would outweigh the negatives. I already have nicknames for some of my frat bros in mind... *Chuckles*"
 
-        "Side with Chloe":
+        "Side with Chloe" (nora=-1.0, chloe=1.0):
             $ nora.points -= 1
             $ chloe.points += 1
 
@@ -855,7 +855,7 @@ label v11_carriage_ride:
     with dissolve
 
     menu:
-        "Tell her about Lindsey":
+        "Tell her about Lindsey" (troublemaker=1.0):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
             $ v11_told_aubrey = True
 
