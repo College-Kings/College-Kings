@@ -16,7 +16,7 @@ label v12_amber_after_spa:
     with dissolve
 
     menu:
-        "Tease Amber":
+        "Tease Amber" (troublemaker=1.0):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
             $ v11_tease_amber += 1
 
@@ -95,7 +95,7 @@ label v12_amber_after_spa:
         with dissolve
 
         menu:
-            "Pull away":
+            "Pull away" (bro=1.0):
                 $ reputation.add_point(RepComponent.BRO)
                 scene v12ams4
                 with dissolve

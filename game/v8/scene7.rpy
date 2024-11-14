@@ -250,7 +250,7 @@ label au_prot_call:
     with dissolve
 
     menu:
-        "Go to the protest":
+        "Go to the protest" (boyfriend=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
             jump caf_prot_au
 

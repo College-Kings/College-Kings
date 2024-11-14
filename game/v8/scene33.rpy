@@ -64,7 +64,7 @@ label cont_nora_hall:
     with dissolve
 
     menu:
-        "Act excited":
+        "Act excited" (boyfriend=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
             jump nora_trip_exc
 
@@ -152,7 +152,7 @@ label cont_nora_hall_2:
     with dissolve
 
     menu:
-        "Accept invitation":
+        "Accept invitation" (boyfriend=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
             jump nora_hall_eu_go
         "Consider it":
@@ -194,7 +194,7 @@ label cont_nora_hall_3:
     with dissolve
 
     menu:
-        "Help Nora":
+        "Help Nora" (boyfriend=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
             $ helpedNora = True
             jump hallway_help_nora

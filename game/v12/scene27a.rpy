@@ -402,7 +402,7 @@ label v12s27a:
     with dissolve
 
     menu:
-        "It's not a bad look":
+        "It's not a bad look" (bro=1.0):
             $ reputation.add_point(RepComponent.BRO)
             u "Honestly Ryan, it's not a bad look. It's actually pretty cool."
 
@@ -411,7 +411,7 @@ label v12s27a:
 
             ry "*Sighs* I hope you're not just saying that..."
 
-        "It's not your best look":
+        "It's not your best look" (troublemaker=1.0):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             scene v12s27a_8a

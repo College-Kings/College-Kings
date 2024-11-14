@@ -78,7 +78,7 @@ label v9_hang_w_linds:
         with dissolve
 
         menu:
-            "Play it cool":
+            "Play it cool" (bro=1.0):
                 $ playCoolWLins = True
                 $ reputation.add_point(RepComponent.BRO)
 
@@ -109,7 +109,7 @@ label v9_hang_w_linds:
 
                 li "Sure do." 
 
-            "Get real":
+            "Get real" (boyfriend=1.0):
                 $ reputation.add_point(RepComponent.BOYFRIEND)
 
                 u "I'm sure everyone's expecting me to fall in my first fight."

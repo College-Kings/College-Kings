@@ -17,7 +17,7 @@ label v12_nora_robbed:
     with dissolve
     
     menu:
-        "Go to Nora":
+        "Go to Nora" (boyfriend=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
             
             scene v12nrb2 # TPP. MC runs to nora, Nora shocked, MC worries, mouths closed
@@ -325,7 +325,7 @@ label v12_nora_robbed:
 
             jump v12_nora_checks_mc #scene 2
 
-        "Chase after robber":
+        "Chase after robber" (troublemaker=1.0):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
             stop music fadeout 3
 

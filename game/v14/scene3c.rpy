@@ -115,7 +115,7 @@ label v14s03c:
     with dissolve
 
     menu:
-        "Good genes":
+        "Good genes" (bro=1.0):
             $ reputation.add_point(RepComponent.BRO)
 
             u "Good genes. *Chuckles*"
@@ -125,7 +125,7 @@ label v14s03c:
 
             satin "Same here."
 
-        "My friends dragged me here":
+        "My friends dragged me here" (boyfriend=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
 
             u "My friends dragged me in here."
@@ -231,11 +231,11 @@ label v14s03c:
     with dissolve
 
     menu:
-        "Yes, kinda":
+        "Yes, kinda" (bro=1.0):
             $ reputation.add_point(RepComponent.BRO)
             u "Yeah, but I don't have that kind of money."
 
-        "No, not really":
+        "No, not really" (boyfriend=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
             u "Oh, no. I don't have that kind of money."
 
@@ -301,7 +301,7 @@ label v14s03c:
     satin "If you're feeling generous enough, you can let me slide in and help out your virgin friend."
 
     menu:
-        "Go with her":
+        "Go with her" (troublemaker=1.0):
             $ sceneList.add("v14_satin")
             $ CharacterService.set_relationship(satin, Relationship.FWB)
             label v14s03c_sg:
@@ -336,7 +336,7 @@ label v14s03c:
             stop music fadeout 3
             jump v14s03d
            
-        "Help Ryan":
+        "Help Ryan" (bro=1.0):
             $ reputation.add_point(RepComponent.BRO)
             $ v14_ryan_satin = True
 

@@ -252,7 +252,7 @@ label v13s14b:
     with dissolve
 
     menu:
-        "Be a gentleman":
+        "Be a gentleman" (boyfriend=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
             u "Penelope, you're pretty drunk. *Chuckles* I should get you back so you can get a good night's worth of sleep."
 
@@ -286,7 +286,7 @@ label v13s14b:
 
             u "You could say that. *Chuckles*"
 
-        "Have fun":
+        "Have fun" (troublemaker=1.0):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
             u "I may just let you..."
 

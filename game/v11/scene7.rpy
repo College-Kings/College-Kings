@@ -407,7 +407,7 @@ label v11_room_aubrey_shopping:
     with dissolve
 
     menu:
-        "Of course":
+        "Of course" (amber=1.0):
             $ amber.points += 1
             $ reputation.add_point(RepComponent.BOYFRIEND)
 
@@ -431,7 +431,7 @@ label v11_room_aubrey_shopping:
 
             am "Thanks, Aubrey."
 
-        "Tease":
+        "Tease" (amber=-1.0):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
             $ amber.points -= 1
             $ v11_tease_amber += 1

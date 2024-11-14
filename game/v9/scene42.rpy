@@ -16,7 +16,7 @@ label v9_at_warehouse:
         with dissolve
 
         menu:
-            "Be upset":
+            "Be upset" (boyfriend=1.0):
                 $ reputation.add_point(RepComponent.BOYFRIEND)
 
                 u "Shit, Sebastian, was that really necessary?"
@@ -26,7 +26,7 @@ label v9_at_warehouse:
 
                 se "You tell me."
 
-            "Be excited":
+            "Be excited" (bro=1.0):
                 $ reputation.add_point(RepComponent.BRO)
 
                 u "Mysterious! I like it."
@@ -117,7 +117,7 @@ label v9_at_warehouse:
         with dissolve
 
         menu:
-            "Talk about Ryan":
+            "Talk about Ryan" (troublemaker=1.0):
                 $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
                 u "*Whispers* Hey, Im, if I draw Ryan first, want me to warm him up for you?"
@@ -202,7 +202,7 @@ label v9_at_warehouse:
         with dissolve
 
         menu:
-            "Tell Chris about Ryan":
+            "Tell Chris about Ryan" (troublemaker=1.0):
                 $ reputation.add_point(RepComponent.TROUBLEMAKER)
                 
                 u "(If I don't say something, this could get out of hand.)"
@@ -220,7 +220,7 @@ label v9_at_warehouse:
                 with dissolve
 
 
-            "Keep quiet":
+            "Keep quiet" (bro=1.0):
                 $ reputation.add_point(RepComponent.BRO)
 
                 u "(Not my place.)"
@@ -247,7 +247,7 @@ label v9_at_warehouse:
         with dissolve
 
         menu:
-            "Complain":
+            "Complain" (troublemaker=1.0):
                 $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
                 u "What the fuck, man?"
@@ -262,7 +262,7 @@ label v9_at_warehouse:
 
                 u "Geez."
 
-            "Deal with it":
+            "Deal with it" (bro=1.0):
                 $ reputation.add_point(RepComponent.BRO)
 
                 u "(A bit over the top with the ambiance, bro.)"
@@ -338,7 +338,7 @@ label v9_at_warehouse:
         with dissolve
 
         menu:
-            "Say something":
+            "Say something" (troublemaker=1.0):
                 $ reputation.add_point(RepComponent.TROUBLEMAKER)
                 u "Um... what's up with Cam?"
 
@@ -395,7 +395,7 @@ label v9_at_warehouse:
         with dissolve
 
         menu:
-            "Get pumped":
+            "Get pumped" (bro=1.0):
                 $ reputation.add_point(RepComponent.BRO)
 
                 u "They're going down!"

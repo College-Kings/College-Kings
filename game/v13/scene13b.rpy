@@ -146,7 +146,7 @@ label v13s13b:
     with dissolve
 
     menu:
-        "Encourage her":
+        "Encourage her" (boyfriend=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
             $ penelope.points += 1
 
@@ -258,7 +258,7 @@ label v13s13b:
 
             polly "Could've fooled me."
 
-        "Thanks":
+        "Thanks" (boyfriend=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
             u "Haha, thanks."
 
@@ -357,7 +357,7 @@ label v13s13b:
 
             polly "Oh, okay. Gotcha..."
 
-        "Hell yeah!":
+        "Hell yeah!" (troublemaker=1.0):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
             $ v13_after_party = True
 

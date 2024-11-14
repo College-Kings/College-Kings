@@ -59,7 +59,7 @@ label v13s14a:
     with dissolve
 
     menu:
-        "Plead the fifth": 
+        "Plead the fifth" (troublemaker=1.0): 
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             u "I plead the fifth. *Chuckles*"
@@ -69,7 +69,7 @@ label v13s14a:
 
             polly "I think I got my answer. *Laughs*"
 
-        "I'm a one woman man":
+        "I'm a one woman man" (boyfriend=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
 
             u "I'm a one woman-man."

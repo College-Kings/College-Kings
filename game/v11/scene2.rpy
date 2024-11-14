@@ -64,7 +64,7 @@ label v11_nora_chloe_hallway:
     with dissolve
 
     menu:
-        "I'll be there":
+        "I'll be there" (nora=1.0):
             $ nora.points += 1
             $ reputation.add_point(RepComponent.BOYFRIEND)
 
@@ -85,7 +85,7 @@ label v11_nora_chloe_hallway:
 
                 no "I just wish he'd make more of an effort."
 
-        "Have a good time":
+        "Have a good time" (bro=1.0):
             $ reputation.add_point(RepComponent.BRO)
 
             scene v11nohall2d
@@ -119,7 +119,7 @@ label v11_nora_chloe_hallway:
     with dissolve
 
     menu:
-        "Defend Chloe":
+        "Defend Chloe" (nora=-1.0):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
             $ nora.points -= 1
 
@@ -138,7 +138,7 @@ label v11_nora_chloe_hallway:
 
             u "No I just... nevermind."
 
-        "Don't defend Chloe":
+        "Don't defend Chloe" (nora=1.0):
             $ nora.points += 1
 
             scene v11nohall2b
@@ -255,7 +255,7 @@ label v11_nora_chloe_hallway:
     charli "And what kind of company are you?"
 
     menu:
-        "Mellow":
+        "Mellow" (boyfriend=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
             scene v11nohall11c # same 11b, just change pose a little so conversation isn't stale
             with dissolve
@@ -274,7 +274,7 @@ label v11_nora_chloe_hallway:
     charli "Nora mentioned that we'll have some time to do our own thing and explore. Anything you're looking forward to?"
 
     menu:
-        "Hanging with the girls":
+        "Hanging with the girls" (boyfriend=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
 
             scene v11nohall11c
@@ -364,7 +364,7 @@ label v11_nora_chloe_hallway:
                 with dissolve
 
                 menu:
-                    "Apologize":
+                    "Apologize" (boyfriend=1.0):
                         $ CharacterService.set_relationship(chloe, Relationship.FRIEND, mc)
                         $ CharacterService.remove_mood(chloe, Moods.MAD)
                         $ reputation.add_point(RepComponent.BOYFRIEND)
@@ -403,7 +403,7 @@ label v11_nora_chloe_hallway:
                         with dissolve
 
                         menu:
-                            "Yes":
+                            "Yes" (chloe=1.0):
                                 $ reputation.add_point(RepComponent.BOYFRIEND)
                                 $ chloe.points += 1
 
@@ -632,7 +632,7 @@ label v11_nora_chloe_hallway:
                 cl "Haha, me too. You know, I have a few minutes before my next class. Wanna go outside and talk for a bit?"
 
                 menu:
-                    "Yes":
+                    "Yes" (chloe=1.0):
                         $ reputation.add_point(RepComponent.BOYFRIEND)
                         $ chloe.points += 1
 

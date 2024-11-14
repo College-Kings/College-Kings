@@ -290,7 +290,7 @@ label v13s34_1:
 
             clipps "Your words mean nothing."
 
-        "Push him":
+        "Push him" (troublemaker=1.0):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
             scene v13s34_18 # TPP. Show MC pushing Clipps back, MC, angry expression mouth closed, Clipps, serious expression, mouth closed 
             with dissolve
@@ -466,7 +466,7 @@ label v13s34_1:
     dun "Still blind, huh?"
 
     menu:
-        "Stop this":
+        "Stop this" (bro=1.0):
             $ reputation.add_point(RepComponent.BRO)
             scene v13s34_26 # FPP. MC starts walking over to Riley
             with dissolve
@@ -538,7 +538,7 @@ label v13s34_1:
 
             u "*Sighs*"
 
-        "Let them scare her":
+        "Let them scare her" (troublemaker=1.0):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
             scene v13s34_24
             with dissolve

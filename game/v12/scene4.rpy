@@ -23,14 +23,14 @@ label v12_roomate_talk:
         cl "What, were you worried about me? *Chuckles*"
 
         menu:
-            "Yes":
+            "Yes" (boyfriend=1.0):
                 $ reputation.add_point(RepComponent.BOYFRIEND)
                 scene v12rcr2
                 with dissolve
 
                 u "Yeah, kinda... It's not like we weren't just in the middle of a robbery or anything."
 
-            "No":
+            "No" (bro=1.0):
                 $ reputation.add_point(RepComponent.BRO)
                 scene v12rcr2
                 with dissolve
@@ -144,7 +144,7 @@ label v12_roomate_talk:
         cl "You don't think Ryan's a good fighter?"
 
         menu:
-            "He is":
+            "He is" (bro=1.0):
                 $ reputation.add_point(RepComponent.BRO)
                 scene v12rcr5a
                 with dissolve
@@ -161,7 +161,7 @@ label v12_roomate_talk:
 
                 u "Not Grayson-level crazy. *Laughs*"
 
-            "Nope":
+            "Nope" (troublemaker=1.0):
                 $ reputation.add_point(RepComponent.TROUBLEMAKER)
                 scene v12rcr5a
                 with dissolve
@@ -312,7 +312,7 @@ label v12_roomate_talk:
         ri "Someone sure has a lot of questions. *Chuckles* Were you wishing I was here with you or something?"
 
         menu:
-            "A little":
+            "A little" (boyfriend=1.0):
                 $ reputation.add_point(RepComponent.BOYFRIEND)
                 scene v12rcr12
                 with dissolve
@@ -324,7 +324,7 @@ label v12_roomate_talk:
 
                 ri "Aww. I guess I can't be upset at you for missing me. *Chuckles*"
 
-            "Not really":
+            "Not really" (bro=1.0):
                 $ reputation.add_point(RepComponent.BRO)
                 scene v12rcr12 
                 with dissolve
@@ -400,7 +400,7 @@ label v12_roomate_talk:
         ri "Well there was, but then Lindsey agreed that there was a lot of drama but promised me she was planning on running for President against Chloe."
 
         menu:
-            "I know":
+            "I know" (troublemaker=1.0):
                 $ reputation.add_point(RepComponent.TROUBLEMAKER)
                 scene v12rcr13b
                 with dissolve

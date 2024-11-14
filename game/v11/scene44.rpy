@@ -283,7 +283,7 @@ label v11_nora_lingerie:
     u "(How did she read my mind? *Laughs*)"
 
     menu:
-        "Pink":
+        "Pink" (nora=1.0):
             scene v11nol12g # FPP. Same as v11nol12e, Nora mouth closed, sexy pose, smiling
             with dissolve
 

@@ -74,7 +74,7 @@ label v11_wolves_packing_chris:
     scene v10swpc4
     with dissolve
     menu:
-        "Let him":
+        "Let him" (bro=1.0):
             $ reputation.add_point(RepComponent.BRO)
             scene v10swpc4
             with dissolve
@@ -89,7 +89,7 @@ label v11_wolves_packing_chris:
             scene v10swpc4
             with dissolve
             menu:
-                "Of course":
+                "Of course" (bro=1.0):
                     $ reputation.add_point(RepComponent.BRO)
                     scene v10swpc4
                     with dissolve
@@ -229,7 +229,7 @@ label v11_wolves_packing_chris:
 
                     ch "I hope you're right."
                 
-                "Her or the frat":
+                "Her or the frat" (troublemaker=1.0):
                     $ reputation.add_point(RepComponent.TROUBLEMAKER)
                     scene v10swpc4
                     with dissolve

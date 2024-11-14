@@ -101,7 +101,7 @@ label v13s56:
     with dissolve
 
     menu:
-        "*Accidently* bump against her":
+        "*Accidently* bump against her" (troublemaker=1.0):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
             scene v13s56_98 # TPP. MC grinds up against Nora's ass, Nora looks back slightly shocked, mouth open
             with dissolve
@@ -140,7 +140,7 @@ label v13s56:
 
                 no "Yeah... I heard you."
 
-        "Be respectful":
+        "Be respectful" (bro=1.0):
             $ reputation.add_point(RepComponent.BRO)
             scene v13s56_99 # FPP. same as v13s56_5 MC looks down at his crotch
             with dissolve

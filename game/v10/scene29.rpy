@@ -37,7 +37,7 @@ label v10_chloe_hallway:
         with dissolve
 
         menu:
-            "Cute":
+            "Cute" (boyfriend=1.0):
                 $ reputation.add_point(RepComponent.BOYFRIEND)
 
                 u "I'd say cute fits better..."
@@ -80,7 +80,7 @@ label v10_chloe_hallway:
                     with dissolve
 
                     menu:
-                        "Ask Chloe how she is":
+                        "Ask Chloe how she is" (chloe=1.0):
                             $ reputation.add_point(RepComponent.BOYFRIEND)
                             $ chloe.points += 1
 
@@ -125,7 +125,7 @@ label v10_chloe_hallway:
                             with dissolve
 
                             menu:
-                                "Have a Rematch":
+                                "Have a Rematch" (chloe=1.0):
                                     $ reputation.add_point(RepComponent.BOYFRIEND)
                                     $ CharacterService.set_relationship(chloe, Relationship.FRIEND, mc)
                                     $ CharacterService.remove_mood(chloe, Moods.MAD)
@@ -135,7 +135,7 @@ label v10_chloe_hallway:
 
                                     jump v10_chloe_gym
 
-                                "Decline a Rematch":
+                                "Decline a Rematch" (chloe=-1.0):
                                     $ reputation.add_point(RepComponent.TROUBLEMAKER)
                                     $ chloe.points -= 1
 
@@ -272,7 +272,7 @@ label v10_chloe_hallway:
         with dissolve
 
         menu:
-            "Have a Rematch":
+            "Have a Rematch" (chloe=1.0):
                 $ reputation.add_point(RepComponent.BOYFRIEND)
                 $ chloe.points += 1
                 

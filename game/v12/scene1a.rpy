@@ -74,7 +74,7 @@ label v12_chase_robber:
             with dissolve
 
             menu (fail_label="v12s1a_failed_timer"):
-                "Dodge":
+                "Dodge" (troublemaker=1.0):
                     $ reputation.add_point(RepComponent.TROUBLEMAKER)
                     $ v12_fight_win = True
                     scene v12car12 # TPP Show MC dodging robber's punch
@@ -305,7 +305,7 @@ label v12_chase_robber:
         with dissolve
 
         menu:
-            "Kick him":
+            "Kick him" (troublemaker=1.0):
                 $ reputation.add_point(RepComponent.TROUBLEMAKER)
                 scene v12car16b # TPP Same angle as v12car16, show MC kicking robber
                 with dissolve

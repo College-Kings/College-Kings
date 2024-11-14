@@ -67,7 +67,7 @@ label v9_start_wolves:
     with dissolve
 
     menu:
-        "Excited reply":
+        "Excited reply" (troublemaker=1.0):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             u "No shit! That's amazing!"
@@ -84,7 +84,7 @@ label v9_start_wolves:
             with dissolve
             ch "Great! We're gonna need it if we plan on beating the Apes."
 
-        "Hesitant reply":
+        "Hesitant reply" (boyfriend=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
             $ v9_brawl_hesitant = True
 
@@ -143,7 +143,7 @@ label v9_start_wolves:
     with dissolve
 
     menu:
-        "Try to back out":
+        "Try to back out" (boyfriend=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
             $ v9_brawl_hesitant = True
 

@@ -200,14 +200,14 @@ label v12_nora_chris_fight:
     pause 0.75
 
     menu:
-        "Go to Nora":
+        "Go to Nora" (boyfriend=1.0):
             $ reputation.add_point(RepComponent.BOYFRIEND)
             $ v12_followed_nora = True
 
             stop music fadeout 3
             jump v12_chase_nora #scene 26b
 
-        "Go to Chris":
+        "Go to Chris" (bro=1.0):
             $ v12_help_chris += 1
             $ reputation.add_point(RepComponent.BRO)
 

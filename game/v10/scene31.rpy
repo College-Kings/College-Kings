@@ -126,7 +126,7 @@ label v10_late_alley:
         jo "Haha, he's some big shot. Can't remember his name honestly, but he's a bit intimidating. Kinda reminds me of my dad, but more flexible."
 
     menu:
-        "Support him":
+        "Support him" (josh=1.0):
             $ v10_support_josh = True
             scene v10all3a
             with dissolve

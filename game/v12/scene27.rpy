@@ -429,7 +429,7 @@ label v12s27:
     with dissolve
 
     menu:
-        "It's not that bad":
+        "It's not that bad" (bro=1.0):
             $ reputation.add_point(RepComponent.BRO)
             
             u "Honestly man, you're freaking out way too much. Your tat isn't even really that bad. It's actually pretty sick if you ask me."
