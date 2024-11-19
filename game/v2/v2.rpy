@@ -71,7 +71,7 @@ label v2start:
             with dissolve
             imre "Just think about it, okay? I'll see you later."
 
-        "I'm not fighting" (boyfriend=True, bro=None):
+        "I'm not fighting" (boyfriend=1.0, bro=0.5):
             $ reputation.add_point(RepComponent.BOYFRIEND)
 
             scene s123d
