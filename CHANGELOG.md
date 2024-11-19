@@ -8,6 +8,16 @@
 
 All notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.5.0] - UNRELEASED
+
+### Added
+
+- Added in-game walkthrough
+
+### Fixed
+
+- Fix "NotImplementedError" in the phone and other NPC interactions
+
 ## [1.4.18] - 2024-06-23
 
 ### Fixed
@@ -132,7 +142,7 @@ All notable changes to this project will be documented in this file. This projec
 - Attempted fix for UI lag
 
 ## [1.4.4] - 2024-02-01
- 
+
 ### Fixed
 
 - Fixed Charli's name typo causing game crash during murder mystery
