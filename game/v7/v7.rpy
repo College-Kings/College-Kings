@@ -4416,8 +4416,14 @@ label aftercall:
     with dissolve
     pause
 
+    python:
+        renpy.dynamic("kwargs")
+        kwargs = {"troublemaker": 1.0}
+        if not lauren.is_girlfriend(mc):
+            kwargs["boyfriend"] = 1.0
+            
     menu:
-        "Kiss her back" (troublemaker=1.0, boyfriend=1.0 or troublemaker=2.0):
+        "Kiss her back" (**kwargs):
             if CharacterService.is_girlfriend(lauren):
                 $ reputation.add_point(RepComponent.TROUBLEMAKER, 2)
             else:
