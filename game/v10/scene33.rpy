@@ -2142,7 +2142,7 @@ label v10s33_deergirl21:
                         "Don't invite her":
                             u "(I'm sure Nora will ask her if she wants her to go.)"
                         
-            "Side with Ms. Rose" (ms rose=1.0):
+            "Side with Ms. Rose" (ms_rose=1.0):
                 $ ms_rose.points += 1
             
                 u "I overheard your conversation and I have to be honest, body paint is sort of a kids game nowadays."
