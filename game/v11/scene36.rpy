@@ -23,7 +23,7 @@ label v11_imre_ryan_grapple:
     with dissolve
 
     menu:
-        "Intervene" (mr lee=1.0):
+        "Intervene" (mr_lee=1.0):
             $ mr_lee.points += 1
 
             scene v11irg2 # TPP. Show MC grabbing Imre, Mr Lee grabbing Ryan, everyone angry, mouths closed
