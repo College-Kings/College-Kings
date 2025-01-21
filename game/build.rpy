@@ -16,7 +16,7 @@ init python:
     build.classify("**/thumbs.db", None)
     build.classify("README.md", None)
     build.classify("game/**.md", None)
-    build.classify("audio/music/ck1/**", None)
+    build.classify("audio/music/ck2/**", None)
 
     build.classify('game/**.py', 'archive')
     build.classify('game/**.rpy', "archive")
