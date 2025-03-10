@@ -1,7 +1,7 @@
 define config.enable_steam = False
 define config_debug = False # Automatic Testing
 
-define config.version = "1.5.0"
+define config.version = "1.5.1"
 
 label path_builder:
     $ quick_menu = False
