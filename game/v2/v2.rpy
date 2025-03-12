@@ -3818,7 +3818,7 @@ label v1_caughtContinue_pen:
     pe "Did you spy on me??"
 
     scene s186 # closeup pen outside in regular clothes upset
-    with Fade (1,0,1)
+    with Fade(1,0,1)
 
     pe "[name]! What were you thinking?!"
 
@@ -3847,7 +3847,7 @@ label v1_caughtContinue_pen:
 
             u "(And I still need to buy a costume...)"
 
-        "Deny it" ((penelope=(1.0 if reputation() == Reputations.CONFIDENT else -1.0))):
+        "Deny it" (penelope=(1.0 if reputation() == Reputations.CONFIDENT else -1.0)):
             $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             scene s186
