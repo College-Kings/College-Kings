@@ -4417,10 +4417,15 @@ label aftercall:
     pause
 
     python:
-        renpy.dynamic("kwargs")
-        kwargs = {"troublemaker": 1.0}
+        renpy.dynamic("kwargs_1")
+        kwargs_1 = {"troublemaker": 1.0}
         if not lauren.is_girlfriend(mc):
-            kwargs["boyfriend"] = 1.0
+            kwargs_1["boyfriend"] = 1.0
+
+        renpy.dynamic("kwargs_2")
+        kwargs_2 = {"bro": 1.0}
+        if lauren.is_girlfriend(mc):
+            kwargs_2["boyfriend"]: 1.0
             
     menu:
         "Kiss her back" (**kwargs):
@@ -4471,7 +4476,7 @@ label aftercall:
             with dissolve
             no "Well, enjoy the rest of your night."
 
-        "Pull away" (bro=1.0 or boyfriend=1.0):
+        "Pull away" (**kwargs_2):
             $ wolvesTasks.add("task4")
             $ reputation.add_point(RepComponent.BRO)
             if CharacterService.is_girlfriend(lauren):
