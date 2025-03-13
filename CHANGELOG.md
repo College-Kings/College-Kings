@@ -8,6 +8,12 @@
 
 All notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.5.2] - 2025-03-13
+
+### Fixed
+
+- Fixed invalid syntax during v2 and v7
+
 ## [1.5.1] - 2025-03-10
 
 ### Fixed
