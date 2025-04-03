@@ -6,7 +6,7 @@
 label v11_nora_chris_plane:
     scene v11noch1 # TPP. MC sitting on his seat and Ryan sitting next to him, MC is looking forward, Ryan is looking through the window, both mouths closed, neutral expressions
     with fade
-    play music "music/v11/Track Scene 14.mp3" fadein 2
+    play music music.v11_Track_Scene_14 fadein 2
     pause 0.75
 
     scene v11noch2 # TPP. Show Chris looking at Nora, he is slightly nervous, mouth open, tryign to reason with Nora (Nora is out of shot, sat next to him, he has the window seat)

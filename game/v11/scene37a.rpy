@@ -4,7 +4,7 @@
 # Time: Morning
 
 label v11_walk_or_ride:
-    play music "music/v10/Track Scene 17_1.mp3" fadein 2
+    play music music.ck1.v10.Track_Scene_17_1 fadein 2
     menu:
         "Ride with Mr. Lee":
             $ v11_ride_with_mrlee = True
@@ -343,7 +343,7 @@ label v11_imre_and_ryan:
 
     imre "Like I said before, if you didn't talk shit about me, we wouldn't have any issues outside of the fact that you're an Ape."
 
-    if not joinwolves:
+    if mc.frat == Frat.APES:
         scene v11wir7
         with dissolve
 
@@ -369,7 +369,7 @@ label v11_imre_and_ryan:
 
     ry "I swear you Wolves are fucking idiots."
 
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         scene v11wir7
         with dissolve
 
@@ -405,14 +405,14 @@ label v11_imre_and_ryan:
 
     menu:
         "Side with Imre":
-            if joinwolves:
-                $ add_point(KCT.BRO)
+            if mc.frat == Frat.WOLVES:
+                $ reputation.add_point(RepComponent.BRO)
 
             u "Ryan, really? You remember what he said."
 
         "Side with Ryan":
-            if not joinwolves:
-                $ add_point(KCT.BRO)
+            if mc.frat == Frat.APES:
+                $ reputation.add_point(RepComponent.BRO)
 
             u "If he doesn't even remember it must not have been that serious."
 

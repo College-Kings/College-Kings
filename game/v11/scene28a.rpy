@@ -6,7 +6,7 @@
 label v11_sam_spa:
     scene v11sas1 # TPP. Show MC and Samantha walking in a corridor, both smiling, mouths closed
     with dissolve
-    play music "music/v10/Track Scene 41_2.mp3" fadein 2
+    play music music.ck1.v10.Track_Scene_41_2 fadein 2
     pause 1
 
     scene v11sas2 # TPP. Show MC and Sam walking into the spa, both smiling, mouths closed
@@ -63,8 +63,8 @@ label v11_sam_spa:
     with dissolve
 
     menu:
-        "Check her out":
-            $ add_point(KCT.BRO)
+        "Check her out" (bro=1.0):
+            $ reputation.add_point(RepComponent.BRO)
 
             scene v11sas3d # FPP. Same as v11sas3, but Samantha only in underwear
             with dissolve
@@ -490,8 +490,10 @@ label v11s28a_galleryScene:
 
     pause 1.25
 
-    if config_censored:
+    if is_censored:
         call screen censored_popup("v11s28a_nsfwSkipLabel1")
+
+    lovense vibrate 2
 
     scene v11sas13d # FPP. Same as v11sas13c, Samantha with no bra, seductive look, mouth closed
     with dissolve
@@ -712,10 +714,10 @@ label v11s28a_galleryScene:
     with dissolve
 
     menu:
-        "Massage her boob":
-            $ samantha.relationship = Relationship.MOVE
+        "Massage her boob" (troublemaker=1.0):
+            $ CharacterService.set_relationship(samantha, Relationship.FWB)
             $ sceneList.add("v11_samantha")
-            $ add_point(KCT.TROUBLEMAKER)
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             scene v11sas18a # TPP. Same as v11sas18, MC has his hands over her boob, she is smiling, mouth closed
             with dissolve
@@ -742,8 +744,8 @@ label v11s28a_galleryScene:
 
             u "Oh."
 
-        "Don't massage her boob":
-            $ add_point(KCT.BOYFRIEND)
+        "Don't massage her boob" (boyfriend=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
 
             scene v11sas18
             with dissolve
@@ -803,7 +805,7 @@ label v11s28a_galleryScene:
     scene v11sas21 # TPP. Show Sam kissing MC on the cheek
     with dissolve
 
-    play sound "sounds/kiss.mp3"
+    play sound sound.kiss
 
     pause 1
 
@@ -845,6 +847,8 @@ label v11s28a_galleryScene:
     with dissolve
 
     u "(I should've known she'd do me like that. It was nice to learn a bit about her though.)"
+
+    lovense stop
 
     scene v11sas22 # TPP. Show MC grabbing his clothes
     with dissolve

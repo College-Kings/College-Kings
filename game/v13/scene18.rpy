@@ -9,7 +9,7 @@ label v13s18:
 
     u "Hey Luuk, please tell me you got something for me today... *Chuckles*"
 
-    play music "music/v13/Track Scene 18.mp3" fadein 2
+    play music music.v13_Track_Scene_18 fadein 2
 
     scene v13s18_2 # FPP. MC looking at Luuk, Luuk looking back at MC, slight smile, mouth open.
     with dissolve
@@ -157,16 +157,14 @@ label v13s18:
 
     menu:
         "Text Nora":
-            $ nora.messenger.addReply(_("What was that about, you guys all good now or something? "))
-            $ nora.messenger.newMessage(_("I know it's odd, but I'm trying to figure things out. Pls just... Let me handle it?"))
-            $ nora.messenger.addReply(_("Okay..."))
+            $ MessengerService.add_reply(nora, _("What was that about, you guys all good now or something?"))
+            $ MessengerService.new_message(nora, _("I know it's odd, but I'm trying to figure things out. Pls just... Let me handle it?"))
+            $ MessengerService.add_reply(nora, _("Okay..."))
             
-            label v13s18_PhoneContinueNora:
-                if nora.messenger.replies:
-                    call screen phone
-                if nora.messenger.replies:
+            while MessengerService.has_replies(nora):
+                call screen phone
+                if MessengerService.has_replies(nora):
                     u "(I should text Nora.)"
-                    jump v13s18_PhoneContinueNora
                     
             scene v13s18_4b # TPP. Show MC putting his phone away.
             with dissolve

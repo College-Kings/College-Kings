@@ -4,7 +4,7 @@
 # Time: Morning
 
 label v14s08:
-    play music "music/v11/Track Scene 20_2.mp3" fadein 2
+    play music music.ck1.v11.Track_Scene_20_2 fadein 2
 
     scene v14s08_1 # TPP. mc sees the bus and walks towards it, slight smile, mouth closed
     with dissolve
@@ -31,8 +31,8 @@ label v14s08:
     u "(I mean, for normal girls I'd just ask what's wrong but, with Amber... I don't want to get stabbed today, you know?)"
 
     menu:
-        "Ask her what's wrong":
-            $ add_point(KCT.BOYFRIEND)
+        "Ask her what's wrong" (boyfriend=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             u "Hey, what's wrong?"
 
             scene v14s08_3d
@@ -71,8 +71,8 @@ label v14s08:
 
             pause 0.75
 
-        "Leave her alone":
-            $ add_point(KCT.BRO)
+        "Leave her alone" (bro=1.0):
+            $ reputation.add_point(RepComponent.BRO)
             scene v14s08_3
             with dissolve
 

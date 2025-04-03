@@ -10,14 +10,14 @@ label v12_chloe_cafe:
 
     pause 0.75
 
-    play music "music/v12/Track Scene 14.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_14 fadein 2
 
     scene v12chc2 # TPP. Show MC and Chloe approaching their table, both smiling, mouths closed
     with dissolve
 
     pause 0.75
 
-    if chloe.relationship >= Relationship.FWB:
+    if CharacterService.is_fwb(chloe) or CharacterService.is_girlfriend(chloe):
         scene v12chc3 # TPP. Show MC pulling Chloe's chair out so she can sit down, both smiling, mouths closed
         with dissolve
 
@@ -39,7 +39,7 @@ label v12_chloe_cafe:
 
     cl "This is such a nice place! I feel like I'm underdressed... *Laughs*"
 
-    if chloe.relationship >= Relationship.FWB:
+    if CharacterService.is_fwb(chloe) or CharacterService.is_girlfriend(chloe):
         scene v12chc5a # FPP. Same as v12chc5, Chloe blushing, smiling, mouth closed, avoiding eye contact
         with dissolve
 
@@ -195,7 +195,7 @@ label v12_chloe_cafe:
 
     fwait "So, what can I get for the gorgeous couple?"
 
-    if chloe.relationship >= Relationship.GIRLFRIEND:
+    if CharacterService.is_girlfriend(chloe):
         scene v12chc5i # FPP. Same as v12chc5, Show Chloe blushing, slight smile, avoiding eye contact, putting her hair behind her ear, mouth closed
         with dissolve
 
@@ -241,15 +241,15 @@ label v12_chloe_cafe:
         with dissolve
 
         menu:
-            "It'd be nice":
-                $ add_point(KCT.BOYFRIEND)
+            "It'd be nice" (boyfriend=1.0):
+                $ reputation.add_point(RepComponent.BOYFRIEND)
                 scene v12chc5c
                 with dissolve
 
                 u "Mmm, yeah... It'd be nice. *Chuckles*"
 
-            "Not really":
-                $ add_point(KCT.BRO)
+            "Not really" (bro=1.0):
+                $ reputation.add_point(RepComponent.BRO)
                 scene v12chc5c
                 with dissolve
 
@@ -374,8 +374,8 @@ label v12_chloe_cafe:
     with dissolve
 
     menu:
-        "Tell her about Lindsey":
-            $ add_point(KCT.TROUBLEMAKER)
+        "Tell her about Lindsey" (troublemaker=1.0):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
             $ v12_told_chloe = True
 
             u "(I can't keep this from her.) *Sighs* There's something I need to tell you."
@@ -409,7 +409,7 @@ label v12_chloe_cafe:
             with dissolve
             
             if v11_lindsey_run and v11_told_aubrey:
-                $ grant_achievement("thrown_to_the_lions")
+                grant Achievement("thrown_to_the_lions", "Encourage Lindsey to run but then tell Aubrey and Chloe about it")
             
             u "Good. Now, again, don't quote me. I'm not sure of all the details and I'm not even positive if this is truly her plan, but I heard that Lindsey's been considering running for President of the Chicks, against you."
            
@@ -575,26 +575,24 @@ label v12_chloe_cafe:
     scene v12chc5c 
     with dissolve
 
-    play sound "sounds/vibrate.mp3"
+    play sound sound.vibrate
 
     u "Sorry, let me check this real quick."
 
     scene v12chc10 # TPP. Show MC sitting down, looking down at his phone, neutral expression, mouth closed
     with dissolve
 
-    $ riley.messenger.newMessage("TREASURE HUNT TIME!", force_send=True)
-    $ riley.messenger.addReply("Really... now?")
-    $ riley.messenger.newMessage("Yep, and I'm already at the spot of the next clue... I think.")
-    $ riley.messenger.newImgMessage("images/v12/Scene 14/rileycatacomb.webp") # Riley selfie at the catacomb entrance with a street sign behind her with the address of where she is at, Riley smiling, mouth closed
-    $ riley.messenger.newMessage("Meet me here :)")
-    $ riley.messenger.addReply("Okay, I'll be there soon.")
+    $ MessengerService.new_message(riley, "TREASURE HUNT TIME!")
+    $ MessengerService.add_reply(riley, "Really... now?")
+    $ MessengerService.new_message(riley, "Yep, and I'm already at the spot of the next clue... I think.")
+    $ MessengerService.new_message(riley, "images/v12/Scene 14/rileycatacomb.webp") # Riley selfie at the catacomb entrance with a street sign behind her with the address of where she is at, Riley smiling, mouth closed
+    $ MessengerService.new_message(riley, "Meet me here :)")
+    $ MessengerService.add_reply(riley, "Okay, I'll be there soon.")
 
-    label v12s14_PhoneContinueRiley:
-        if riley.messenger.replies:
-            call screen phone
-        if riley.messenger.replies:
+    while MessengerService.has_replies(riley):
+        call screen phone
+        if MessengerService.has_replies(riley):
             u "(I should check my phone.)"
-            jump v12s14_PhoneContinueRiley
 
     scene v12chc10
     with dissolve

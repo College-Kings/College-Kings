@@ -10,9 +10,9 @@ label v10_fight_result:
     
     jo "*Laughs* In the words of Smokey, \"you got knocked the fuck out!\""
 
-    play music "music/v10/Track Scene 8.mp3" fadein 2
+    play music music.ck1.v10.Track_Scene_8 fadein 2
 
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         if v10_ryan_win: # -If MC wins the fight against Ryan-
             scene v10fr1
             with dissolve
@@ -25,7 +25,7 @@ label v10_fight_result:
             with dissolve
 
             if reaction == 0.5:
-                $ grant_achievement("lights_out")
+                grant Achievement("lights_out", "Beat Ryan on Hard difficulty at the Brawl")
 
             u "This wasn't just a fight for me, it was a fight for me and my brothers."
 
@@ -123,7 +123,7 @@ label v10_fight_result:
             with dissolve
 
             if reaction == 0.5:
-                $ grant_achievement("golden_boy")
+                grant Achievement("golden_boy", "Beat Imre on Hard difficulty at the Brawl")
 
             u "This wasn't just a fight for me, it was a fight for me and my brothers."
 

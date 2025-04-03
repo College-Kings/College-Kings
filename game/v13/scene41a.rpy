@@ -9,7 +9,7 @@ label v13s41a:
 
     pause 0.75
 
-    play music "music/v13/Track Scene 41a.mp3" fadein 2
+    play music music.ck1.v13.Track_Scene_41a fadein 2
 
     scene v13s41a_2 # TPP. MC and lindsey arriving in the hotel lobby
     with dissolve

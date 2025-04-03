@@ -9,7 +9,7 @@ label v13s28:
 
     pause 0.75
 
-    play music "music/v13/Track Scene 28.mp3" fadein 2
+    play music music.ck1.v13.Track_Scene_28 fadein 2
 
     scene v13s28_1a # TPP. Show MC standing at the bus station with Amber, both slight smile, mouth closed.
     with dissolve
@@ -173,8 +173,8 @@ label v13s28:
         am "Not gonna happen, I'm officially broke. He may though."
 
         menu:
-            "Not a good idea, Sam":
-                $ add_point(KCT.BRO)
+            "Not a good idea, Sam" (bro=1.0):
+                $ reputation.add_point(RepComponent.BRO)
                 scene v13s28_7b # FPP. Same as v13s28_7, Samantha looking at MC, Samantha slight smile, mouth closed.
                 with dissolve
 

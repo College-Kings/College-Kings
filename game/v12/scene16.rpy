@@ -10,7 +10,7 @@ label v12_valentine:
 
     u "Home sweet home... *Laughs* Feeling alright?"
 
-    play music "music/v12/Track Scene 16_1.mp3" fadein 2
+    play music music.v12_Track_Scene_16_1 fadein 2
 
     scene v12val1a # FPP. Same as v12val1, Riley slight smile, mouth open
     with dissolve
@@ -153,7 +153,7 @@ label v12_valentine:
     pause 1.25
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 16_2.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_16_2 fadein 2
 
     scene v12val12 # FPP. MC, Mr. Lee and Nora standing next to each other, in front of them is the bishop, MC looking at bishop, bishop looking at Mr. lee, bishop smiling, mouth open (Only Bishop in shot)
     with dissolve
@@ -523,7 +523,7 @@ label v12_valentine:
 
     bishop "Wonderful, now do either of you-"
 
-    play sound "sounds/call.mp3"
+    play sound sound.call
 
     scene v12val24a # FPP. Same as v12val24, bishop looking at Chris, bishop startled, Chris looking at his phone, worried, mouth open, Nora looking at Chris, Nora angry, mouth closed
     with dissolve
@@ -606,8 +606,8 @@ label v12_valentine:
     with dissolve
 
     menu:
-        "Leave her be":
-            $ add_point(KCT.BRO)
+        "Leave her be" (bro=1.0):
+            $ reputation.add_point(RepComponent.BRO)
             u "(Not the time, not in front of everyone.)"
 
             scene v12val29a # FPP. Same as v12val29, Lindsey looking at Nora, Lindsey smiling, excited, mouth open (screaming)
@@ -620,16 +620,16 @@ label v12_valentine:
 
             pause 0.75
 
-        "Comfort her":
+        "Comfort her" (boyfriend=1.0):
             pause 0.5
-            $ add_point(KCT.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             scene v12val31 # TPP. Show MC leaning in a whispering in Nora's ear, holding her hand, Nora slight smile, mouth closed, MC slight smile, mouth open
             with dissolve
 
             u "*Whisper* I know that bothered you, but try and roll it off your shoulder, yeah? Worry about what's in front of you, not what's down the hall."
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 16_3.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_16_3 fadein 2
 
     scene v12val30c # FPP. Same as v12val30, Nora looking at MC, Nora slight smile, mouth closed
     with dissolve
@@ -671,7 +671,7 @@ label v12_valentine:
 
     no "You've been all of those things, and more. And still, to this day, I don't know why you do the things you do for me, but I'm so appreciative. You're like a dream..."
 
-    if nora.relationship >= Relationship.LIKES:
+    if v8_nora_likes_mc:
         scene v12val30g # FPP. Same as v12val30c, Nora eyes tearing up (not crying, just tearing up), slight smile, mouth closed
         with dissolve
 
@@ -682,7 +682,7 @@ label v12_valentine:
 
     no "And standing here now, I feel like I'm exactly where I'm supposed to be... I uh, I love you. *Chuckles*"
 
-    if chloe.relationship >= Relationship.GIRLFRIEND:
+    if CharacterService.is_girlfriend(chloe):
         scene v12val32 # FPP. Same positioning as v12val27, MC looking at Chloe, Chloe looking at Lindsey, Chloe slight smile, mouth open (Only Chloe in shot)
         with dissolve
 
@@ -717,8 +717,8 @@ label v12_valentine:
     with dissolve
 
     menu:
-        "Joke":
-            $ add_point(KCT.BRO)
+        "Joke" (bro=1.0):
+            $ reputation.add_point(RepComponent.BRO)
             scene v12val30h # FPP. Same as v12val30c, different pose
             with dissolve
 
@@ -750,8 +750,8 @@ label v12_valentine:
 
             bishop "Haven't heard any vows like that before, but... Vows are vows I suppose."
 
-        "Be serious":
-            $ add_point(KCT.BOYFRIEND)
+        "Be serious" (boyfriend=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             scene v12val30h
             with dissolve
 
@@ -762,7 +762,7 @@ label v12_valentine:
             
             u "I never saw myself settling down or living the straight and narrow life, but at this point I can't imagine what my life would be like without you... You've become the brightest light in my world. And, I love you."
 
-            if chloe.relationship >= Relationship.GIRLFRIEND:
+            if CharacterService.is_girlfriend(chloe):
                 scene v12val32a # FPP. Same as v12val32, Chloe looking at MC, Chloe slight smile, mouth open
                 with dissolve
 
@@ -808,7 +808,7 @@ label v12_valentine:
 
     bishop "As I was saying, this is normally the moment of the kiss."
 
-    if chloe.relationship >= Relationship.GIRLFRIEND:
+    if CharacterService.is_girlfriend(chloe):
         scene v12val30i
         with dissolve
 
@@ -824,8 +824,8 @@ label v12_valentine:
         with dissolve
 
         menu:
-            "Fist bump":
-                $ add_point(KCT.BRO)
+            "Fist bump" (bro=1.0):
+                $ reputation.add_point(RepComponent.BRO)
                 scene v12val30i # FPP. Same as v12val30c, MC has his fist extended, Nora slight smile, mouth closed, fist bumping MC
                 with dissolve
 
@@ -836,12 +836,12 @@ label v12_valentine:
 
                 bishop "Very sweet, you two."
 
-            "Kiss her cheek":
-                $ add_point(KCT.BOYFRIEND)
+            "Kiss her cheek" (boyfriend=1.0):
+                $ reputation.add_point(RepComponent.BOYFRIEND)
                 scene v12val35 # TPP. Show MC kissing Nora's cheek, Nora slight smile, blushing, mouth closed
                 with dissolve
 
-                play sound "sounds/kiss.mp3"
+                play sound sound.kiss
 
                 pause 1.25
 
@@ -849,7 +849,7 @@ label v12_valentine:
                 with dissolve
 
                 $ v12s16_kissnora = True
-                $ grant_achievement("you_may_kiss_the_bride")
+                grant Achievement("you_may_kiss_the_bride", "Kiss Nora at the altar")
                 bishop "That was very sweet of you, young man."
         
     scene v12val27a
@@ -953,14 +953,14 @@ label v12_valentine:
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 16_4.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_16_4 fadein 2
 
     scene v12val42 # TPP. Show Charli walking next to MC, Imre and Lindsey walking in front of them, on sidewalk, all slightly smiling, mouths closed
     with dissolve
 
     pause 0.75
 
-    if chloe.relationship >= Relationship.GIRLFRIEND and lauren.relationship < Relationship.GIRLFRIEND:
+    if CharacterService.is_girlfriend(chloe) and not CharacterService.is_girlfriend(lauren):
         scene v12val43 # FPP. Charli next to MC on the sidewalk, not walking, Charli and MC looking at each other, Charli slightly annoyed, mouth open
         with dissolve
 
@@ -981,7 +981,7 @@ label v12_valentine:
 
         u "(Fucking weirdo.)"
 
-    elif chloe.relationship >= Relationship.GIRLFRIEND:
+    elif CharacterService.is_girlfriend(chloe):
         scene v12val43
         with dissolve
 

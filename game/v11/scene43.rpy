@@ -6,7 +6,7 @@
 label v11_at_the_bank:
     scene v11bank1 # TPP Show Amber, Riley, MC, Ryan, Ms. Rose, and Nora arriving at the bank, bank teller is waiting and waiving to them
     with fade
-    play music "music/v11/Track Scene 19_1.mp3" fadein 2
+    play music music.ck1.v11.Track_Scene_19_1 fadein 2
     pause 1
     
     scene v11bank1a # TPP Same angle as v11bank1, bank teller's mouth open
@@ -138,8 +138,8 @@ label v11_at_the_bank:
 
             bank "Ahh, I see. Let's begin."
 
-        "A little":
-            $ add_point(KCT.TROUBLEMAKER)
+        "A little" (troublemaker=1.0):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             u "A little... I'm just not interested in all this kind of stuff I guess."
 
@@ -266,8 +266,8 @@ label v11_at_the_bank:
 
             am "Yes! Stealth is definitely the way to go here."
         
-        "Chaos":
-            $ add_point(KCT.TROUBLEMAKER)
+        "Chaos" (troublemaker=1.0):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
             u "I'm more of a guns blazing, lots of action guy. Go in hard or don't go at all."
 
             scene v11bank10a
@@ -527,8 +527,8 @@ label v11_at_the_bank:
     with dissolve
 
     menu:
-        "Yep":
-            $ add_point(KCT.TROUBLEMAKER)
+        "Yep" (troublemaker=1.0):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
             u "I guess so, and to think I had such a bright future. Fuck..."
 
             scene v11bank19
@@ -626,7 +626,7 @@ label v11_at_the_bank:
 
     ro "Will someone please explain to me exactly what has happened?"
 
-    if ms_rose.relationship >= Relationship.FWB and joinwolves: #sanitizing pathbuilder input
+    if CharacterService.is_fwb(ms_rose) and mc.frat == Frat.WOLVES: #sanitizing pathbuilder input
         scene v11bank18
         with dissolve
 
@@ -650,7 +650,7 @@ label v11_at_the_bank:
         scene v11bank23 # TPP Show Ms. Rose pushing MC up against a wall and making out with him
         with dissolve
 
-        play sound "sounds/kiss.mp3"
+        play sound sound.kiss
         
         pause 1
 

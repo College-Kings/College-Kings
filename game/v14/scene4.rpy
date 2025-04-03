@@ -4,7 +4,7 @@
 # Time: Night
 
 label v14s04:
-    play music "music/v13/Track Scene 16a_2.mp3" fadein 2
+    play music music.v13_Track_Scene_16a_2 fadein 2
 
     scene v14s04_1 # TPP. Show MC enteting the hotel lobby, neutral expression, mouth closed
     with dissolve
@@ -25,13 +25,13 @@ label v14s04:
     with dissolve
 
     menu:
-        "I'll talk to him later":
+        "I'll talk to him later" (bro=1.0):
             $ v14s4_tell_imre = True
-            $ add_point(KCT.BRO)
+            $ reputation.add_point(RepComponent.BRO)
             u "(Fuck it, I'll talk to him later I guess.)"
 
-        "It's not that important":
-            $ add_point(KCT.TROUBLEMAKER)
+        "It's not that important" (troublemaker=1.0):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
             u "(Fuck it, I'll talk to him later I guess.)"
 
     scene v14s04_5 # TPP. Show MC walking through the hotel corridor, slightly annoyed, mouth closed

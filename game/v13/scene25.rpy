@@ -9,7 +9,7 @@ label v13s25:
 
     pause 0.75
 
-    play music "music/v13/Track Scene 25.mp3" fadein 2
+    play music music.v13_Track_Scene_25 fadein 2
    
     scene v13s25_2 # TPP. Mc grabbing chair looking at Emmy, Mc's back turned to camera, Emmy looking at Mc, slight smile, mouth closed
     with dissolve
@@ -72,8 +72,8 @@ label v13s25:
     emmy "Oh, wow... So, do you like to fight? Like, you enjoy it?"
 
     menu:
-        "Yes":
-            $ add_point(KCT.TROUBLEMAKER)
+        "Yes" (troublemaker=1.0):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
           
             scene v13s25_3d # FPP. Same as v13s25_3c Emmy's finger has moved from corner of lip to just under the lip, mouth closed
             with dissolve
@@ -125,9 +125,9 @@ label v13s25:
 
             pause 0.5
 
-            if v12s24_emmymatch or kct == "confident": 
+            if v12s24_emmymatch or reputation() == Reputations.CONFIDENT: 
                 if not v12s24_emmymatch:
-                    call screen kct_popup
+                    call screen reputation_popup
 
                 scene v13s25_3c
                 with dissolve
@@ -155,8 +155,8 @@ label v13s25:
                 emmy "Right here, right now."
 
                 menu:
-                    "Let her":
-                        $ add_point(KCT.TROUBLEMAKER)
+                    "Let her" (troublemaker=1.0):
+                        $ reputation.add_point(RepComponent.TROUBLEMAKER)
                         label v13s25_emmysg:
 
                         scene v13s25_9
@@ -171,13 +171,13 @@ label v13s25:
 
                         stop music fadeout 3
 
-                        if config_censored:
+                        if is_censored:
                             call screen censored_popup("v13s25_nsfwSkipLabel1")
 
                         jump v13_emmy_sex
 
-                    "Stop her":
-                        $ add_point(KCT.BOYFRIEND)
+                    "Stop her" (boyfriend=1.0):
+                        $ reputation.add_point(RepComponent.BOYFRIEND)
 
                         scene v13s25_9
                         with dissolve
@@ -227,7 +227,7 @@ label v13s25:
                         jump v13s25_no_sex
 
             else:
-                call screen kct_popup(required_kct="confident")
+                call screen reputation_popup(required_reputation="confident")
                 
                 scene v13s25_3a
                 with dissolve
@@ -272,8 +272,8 @@ label v13s25:
                 
                 jump v13s25_no_sex
 
-        "No":
-            $ add_point(KCT.BOYFRIEND)
+        "No" (boyfriend=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             scene v13s25_3
             with dissolve
 

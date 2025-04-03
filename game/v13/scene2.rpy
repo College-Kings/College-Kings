@@ -9,7 +9,7 @@ label v13s2:
 
     pause 0.75
 
-    play music "music/v13/Track Scene 2_1.mp3" fadein 2
+    play music music.ck1.v13.Track_Scene_2_1 fadein 2
 
     scene v13s2_2 # TPP. Show MC walking into his hotel room, slight smile, mouth closed
     with dissolve
@@ -32,7 +32,7 @@ label v13s2:
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v13/Track Scene 2_2.mp3" fadein 2
+    play music music.ck1.v13.Track_Scene_2_2 fadein 2
 
     if v11_pen_goes_europe:
         scene v13s2_6 # FPP. MC looking at Ms. Rose, Ms. Rose looking at MC, Ms. Rose slight smile, mouth open, Penelope standing next to Ms. Rose, looking at her, Penelope slight smile, mouth closed, Penelope carrying some luggage from other students

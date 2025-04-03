@@ -1,22 +1,200 @@
-# Init
+#region Persistent
+default persistent.uuid = "ck_" + str(uuid.uuid4())
+#endregion Persistent
+
+#region Init
+#region Constants
+define is_CK2 = False
+define SERVER_URL = "http://82.9.123.190:8080"
 define flash = Fade(.25, 0, .75, color="#fff")
 define config.default_music_volume = 1
 define config.default_sfx_volume = 1
+
+#region Path Builder
+define pb_starting_locations = (("Act 1 Start", "start"), ("Act 2 Start", "v7_homecoming"), ("Act 3 Start", "v11_start"))
+#endregion Path Builder
+init offset = 0
+#region Scene Gallery
+define scene_gallery_items = (
+    SceneGallery(
+        _("Dreaming of Riley"), "images/v1/sda1.webp", "sexdream1"
+    ),  # v1, Riley, day 1
+    SceneGallery(
+        _("Fight with Tom"), "images/v2/tomhook.webp", "v1_tomShoutBack"
+    ),  # v2, Tom
+    SceneGallery(
+        _("First time with Aubrey"), "images/v3/aub1start.webp", "continuem"
+    ),  # v3, Aubrey, day 4
+    SceneGallery(_("Fight with Adam"), "images/v5/af5start.webp", "fkcon"),  # v5, Adam
+    SceneGallery(
+        _("Taking back Emily"), "images/v6/em5.webp", "emsex_a"
+    ),  # Emily, day 7
+    SceneGallery(
+        _("Fun with Aubrey"), "images/v6/naub4.webp", "aubreysexb"
+    ),  # Aubrey, day 7
+    SceneGallery(
+        _("First time with Riley"),
+        "images/v7/risex1vid20.webp",
+        "rileysexscene",
+    ),  # Riley, day 10
+    SceneGallery(
+        _("Sneaking to the stall"), "images/v7/sfr4ri42.webp", "brbj"
+    ),  # Aubrey, day 11
+    SceneGallery(
+        _("Homecoming Amber"),
+        "images/v8/scene 5/v8samb1.webp",
+        "hoco_amb_night",
+    ),  # 5, Amber, day 11
+    SceneGallery(
+        _("Homecoming Chloe"), "images/v8/scene 2/v8s16.webp", "v8_cl_start"
+    ),  # 2, Chloe, day 11
+    SceneGallery(
+        _("Homecoming Riley"), "images/v8/scene 3/v8s33_2.webp", "v8_ri_start"
+    ),  # 3, Riley, day 11
+    SceneGallery(
+        _("Fight with Lars"),
+        "images/v8/scene 28/mcbodyhookstart.webp",
+        "int_deal_w_josh",
+    ),  # 28, Lars Joe
+    SceneGallery(
+        _("With Amber at Josh's"),
+        "images/v8/scene 30/v8amber14a.webp",
+        "amber_sex_at_joshs",
+    ),  # 30, Amber, day 14
+    SceneGallery(
+        _("Lake w/ Aubrey"),
+        "images/v9/scene 7/v9slake18vidend.webp",
+        "v9_aubrey_scene_lake",
+    ),  # 7, Aubrey, day 16
+    SceneGallery(
+        _("Emily sex scene"), "images/v9/scene 16/v9emi33.webp", "v9_emily_dorm"
+    ),  # 16, Emily, day 17
+    SceneGallery(
+        _("Riley sex scene"), "images/v9/scene 34/v9ris7a.webp", "v9_ri_sex"
+    ),  # 34, Riley, day 19, v9_sex_with_riley
+    SceneGallery(
+        _("Make out with Lindsey"),
+        "images/v9/scene 39/v9linksStart.webp",
+        "v9_make_out_w_lin",
+    ),  # 39, Lindsey, day 19
+    SceneGallery(
+        _("Ryan Fight"),
+        "images/v10/scene 6/v10mvr6.webp",
+        "v10_mc_vs_ryan_fight",
+    ),  # 6, Ryan
+    SceneGallery(
+        _("Imre Fight"),
+        "images/v10/scene 7/v10mvi3.webp",
+        "v10_mc_vs_imre_fight",
+    ),  # 7, Imre
+    SceneGallery(
+        _("More with Aubrey"),
+        "images/v10/scene 17/v10aubfaStart.webp",
+        "v10s17_galleryScene",
+    ),  # 17, Aubrey, day 20
+    SceneGallery(
+        _("Make out with Lauren"),
+        "images/v10/scene 24/v10lar7d.webp",
+        "v10_lauren_room_sg",
+    ),  # 24, Lauren, day 21 (scope is Lauren GIRLFRIEND)
+    SceneGallery(
+        _("Amber Skatepark Sex"),
+        "images/v10/scene 26/v10sasp11a.webp",
+        "v10_amber_skatepark_sg",
+    ),  # 26, Amber, day 21
+    SceneGallery(
+        _("Changing with Chloe"),
+        "images/v10/scene 30/v10chg10f.webp",
+        "v10s30_galleryScene",
+    ),  # 30, Chloe, day 22
+    SceneGallery(
+        _("More with Riley"),
+        "images/v10/scene 40/v10srds6a.webp",
+        "v10s40_galleryScene",
+    ),  # 40, Riley, day 23 (scope is Riley FWB)
+    SceneGallery(
+        _("First time with Candy"),
+        "images/v11/scene 5/v11swc25.webp",
+        "v11s5_galleryScene",
+    ),  # 5, Candy, day 24
+    SceneGallery(
+        _("Airplane with Aubrey"),
+        "images/v11/scene 13/v11aub18a.webp",
+        "v11_aubrey_plane_sex_sg",
+    ),  # 13, Aubrey, day 26
+    SceneGallery(
+        _("First time w/ Ms. Rose"),
+        "images/v11/scene 28/v11ros3.webp",
+        "v11_ms_rose_sex_sg",
+    ),  # 28, Rose, day 27
+    SceneGallery(
+        _("Spa with Samantha"),
+        "images/v11/scene 28a/v11sas16a.webp",
+        "v11s28a_galleryScene",
+    ),  # 28a, Samantha, day 27
+    SceneGallery(
+        _("In London with Riley"),
+        "images/v11/scene 35/v11ris18a.webp",
+        "v11_riley_sex_sg",
+    ),  # 35, Riley, day 28
+    SceneGallery(
+        _("In London with Chloe"),
+        "images/v11/scene 41b/v11chtf2Start.webp",
+        "v11_chloe_sex_scene",
+    ),  # 41b, Chloe, day 29
+    SceneGallery(
+        _("Locked up with Lindsey"),
+        "images/v12/scene 17/v12esr33.webp",
+        "v12_lindsey_sex",
+    ),  # 17, Lindsey, day 32
+    SceneGallery(
+        _("In Paris with Ms. Rose"),
+        "images/v12/scene 23/v12msr19.webp",
+        "v12_ms_rose_sex_sg",
+    ),  # 23, Rose, day 33
+    SceneGallery(
+        _("First time with Lauren"),
+        "images/v12/scene 29/v12las58.webp",
+        "v12_lauren_sex_sg",
+    ),  # 29, Lauren, day 34
+    SceneGallery(
+        _("First time with Nora"),
+        "images/v12/scene 35a/v12nos27.webp",
+        "v12_nora_sex",
+    ),  # 35a, Nora, day 35
+    SceneGallery(
+        _("Late night with Riley"),
+        "images/v13/scene 16a/v13s16a_7.webp",
+        "v13s16a",
+    ),  # 16a, Riley, day 37
+    SceneGallery(
+        _("Fun with Emmy"), "images/v13/scene 26/v13s26_5.webp", "v13s25_emmysg"
+    ),  # 26, Emmy, day 38
+    SceneGallery(
+        _("Wild with Chloe"),
+        "images/v13/scene 40/v13s40end_1.webp",
+        "v13s40_sg",
+    ),  # 40, Chloe, day 39
+    SceneGallery(
+        _("Angry at Emily"), "images/v13/scene 50a/v13s50a_5.webp", "v13s50a"
+    ),  # 50a, Emily, day 40
+    SceneGallery(
+        _("Why not both?"), "images/v14/scene 1/v14s01_4.webp", "v14s01"
+    ),  # 1, Riley Aubrey, xx
+    SceneGallery(
+        _("Satin-ly pleased"),
+        "images/v14/scene 3d/v14s03d_5.webp",
+        "v14s03c_sg",
+    ),  # 3d, Satin, xx
+)
+#endregion Scene Gallery
+#endregion Constants
+
 default menu_set = set()
 
-default name = "Alex"
-default realmode = False
-default showkct = True
-default checklist = Checklist()
-
-# Persistent
-default persistent.previous_whats_new = None
-
-    ## Phone
-define contacts_file_path = os.path.join(config.basedir, "game", "images", "nonplayable_characters")
-
-    ## Kiwii Vars
-default kiwii_firstTime = False
+default is_censored = False
+default label_history = []
+default real_life_mode = False
 
     ## Fight Vars
 default fight_tutorial = False
@@ -29,25 +207,12 @@ default enemyhealth = 0
     ## Free Roam
 default previous_location = ""
 
-    ## Path Builder
-default path_builder = False
-default pb_name_set = False
-default pb_kct_shown = False
-
     # Voice Acting
 default voice_acted = True
 
-# KCT
-default locked_kct = False
-default kct = "confident"
-default sortedKCT = ["confident", "loyal", "popular"]
-
-default bro = 1
-default boyfriend = 2
-default troublemaker = 1
-
 # Scenes
 default sceneList = set()
+default viewed_scenes = set()
 
 # Screens
 default screen_options = []
@@ -57,6 +222,7 @@ default sex_overlay_options = []
 
 # Splashscreen
 default persistent.confirm_18 = False
+#endregion Init
 
 # 1.0 - 6.0
 # Relationship Screen
@@ -68,13 +234,13 @@ default adamfight = 5
 default adamstance = 1
 default adamtut = False
 default difficulty = None
-default e = "e"
+default e = _("e")
 default fightadam = False
 default fighttom = False
 default firstfight = True
 default moveuppercut = False
-default q = "q"
-default r = "r"
+default q = _("q")
+default r = _("r")
 default simadam = 1
 default simadamfight = True
 default simtom = 1
@@ -84,7 +250,7 @@ default stance = 0
 default tomattack = 1
 default tomdmg = 0
 default tomstance = 1
-default w = "w"
+default w = _("w")
 default winadam = False
 default wintom = False
 default youDamage = 0
@@ -95,6 +261,7 @@ default askfinn = False
 default bowling = False
 default v2_caughtpeeking = False
 default v2_caughtpeekingcounter = False
+default v4_skip_josh_party = False
 default checkonrose = False
 default chloecaught = False
 default chooseimre = True
@@ -112,7 +279,6 @@ default freeroam3asked = set()
 default girl = ""
 default imreforgives = False
 default joinapes = False
-default laawk = True
 default laurenpublic = False
 default laurentest = set()
 default laurentoofar = False
@@ -125,7 +291,6 @@ default muffin = False
 default notcool = False
 default penelopekiss = False
 default perform = 0
-default relics = 0
 default save = 0
 default simp = False
 default statsPage = 0
@@ -133,10 +298,24 @@ default takeshot = False
 default tellschool = False
 default toldlauren = False
 default trolleyb = False
-default upstairs = "nobody"
+default upstairs = _("nobody")
 default v1_laurenPoints = 0
 default v2_outfits = 0
 default volleyball = False
+
+#region v2.0
+default v2_made_a_move_on_evelyn = False
+#endregion v2.0
+
+#region v6.0
+default v6_evelyn_successful_date = False
+default v6_relics = {
+    V6_Relics.PICTURE: False,
+    V6_Relics.TROPHIES: False,
+    V6_Relics.CERTIFICATE: False,
+    V6_Relics.RELICS: False
+}
+#endregion v6.0
 
 # 7.0
 default apesVids = 0
@@ -144,11 +323,10 @@ default beachfirstkiss = False
 default v7_chloesad = False
 default cop = False
 default emilyText = False
-default ending = "riley"
+default ending = _("riley")
 default freeroam4 = set()
 default hcAsked = [] # hcAsked.append("girl_name") to add
-default hcGirl = "alone"
-default joinwolves = False
+default hcGirl = _("alone")
 default nobeach = False
 default politics = False
 default preventgrayson = False
@@ -161,7 +339,7 @@ default v7_visited_shelter = False
 default walkedRileyHome = False
 default wolvesTasks = set()
 
-# 8.0
+#region v8.0
 default amberSexOfferAtJoshs = False
 default chloeSteakHouse = False
 default climbwseb = False
@@ -171,14 +349,16 @@ default helpedNora = False
 default helpJosh = False
 default hesitantwgrayson = False
 default larsdmg = 0
-default s28_fightWinner = "MC"
+default s28_fightWinner = _("MC")
 default sideWithCameron = False
 default simLarsFight = False
 default v8_dodged_pipe = False
 default musicstop = False
+default v8_nora_likes_mc = False
+#endregion v8.0
 
 # 9.0
-default dreamFightChoice = "na"
+default dreamFightChoice = _("na")
 default freeroam5 = set()
 default hangOutWithLindsey = False
 default hl_punch = False
@@ -228,7 +408,7 @@ default v11_josh_nightclub = False
 default v11_kiss_nora = False
 default v11_linds_inv_imre = False # If true Lindsey will invite Imre, if false, Lindsey will invite Ryan
 default v11_lindsey_slogan = 1 # 1 is Lindsey, Returning The Promise // 2 is Lindsey, Say Bye To The Bullshit
-default v11_manhunt_winner = "Ryan"
+default v11_manhunt_winner = _("Ryan")
 default v11_overtake_points = 0
 default v11_pen_goes_europe = False
 default v11_riley_roomate = False
@@ -250,7 +430,7 @@ default s12v32_get_aubrey_flowers = False
 default v11_lindsey_run = False
 default v12_chase_robber = False
 default v12_fight_win = False 
-default v12_girl = "na"
+default v12_girl = _("na")
 default v12_help_chris = 0
 default v12_lauren_points = 0
 default v12_murder_count = 0
@@ -282,17 +462,15 @@ default v13_after_party = False
 default v13_aubrey_concert = False
 default v13_charli_exposed = False
 default v13_cuddle_lauren = False
-default v13_cuddle_lauren_text = False
 default v13_help_chloe = False
 default v13_hugged_aubrey = False
 default v13_imre_disloyal = False
 default v13_invite_samantha = False
 default v13_lauren_smoke = False
 default v13_penelope_concert = False
-default v13_penelope_backstage = False
+default v13_concert_backstage = False
 default v13_perfume = False
 default v13_smoke_weed = False
-default v13_emmy_points = 0
 default v13s16_lauren_points = 0
 default v13s20_bleach_suitcase = False
 default v13s41_lindsey_points = 0
@@ -300,20 +478,9 @@ default v13s48_canoeing_as_date = False
 default v13s48_get_aubrey_chocolate = False
 default v13s48_ryan_double_date = False
 default v13s9_go_to_concert = False
+default v13_cameron_and_mc_friends = False
 
 # 14.0
-## Chloe Planing Board
-default chloe_board = PlanningBoard("images/v14/chicks_presidency_race/planning_boards/chloe_background.webp", money=1500)
-default v14_chloe_wolves = False ##APPROACH A (v14_chloe_apes = v14_help_chloe and not v14_chloe_wolves)
-default v14_realwolf = False ##TASK A2A (v14_plushwolf = v14_chloe_wolves and not v14_realwolf)
-default v14_chloe_cameron = False ##TASK B2B (v14_chloe_grayson = (v14_help_chloe and not v14_chloe_wolves) and not v14_chloe_cameron)
-
-## Lindsey Planing Board
-default lindsey_board = PlanningBoard("images/v14/chicks_presidency_race/planning_boards/lindsey_background.webp", money=200, style="lindsey_board")
-default v14_lindsey_sell = False ##APPROACH A (v14_lindsey_steal = v14_help_lindsey and not v14_lindsey_sell)
-default v14_pics_with_linds = False ##TASK A1B (v14_pics_no_linds = v14_lindsey_sell and not v14_pics_with_linds)
-default v14_date_distraction = False ###APPROACH B1B (v14_concert_distraction = (v14_help_lindsey and not v14_lindsey_sell) and not v14_date_distraction)
-
 # Animated Bar
 default animated_value_percent = 0
 
@@ -362,148 +529,3 @@ default freeroam12 = set() #chloe heist
 default freeroam12stolen = set()
 default v14s5a_riley_should_join_chicks = False
 default AutumnTrust = False
-
-# 15.0 
-# Chloe Planning Board (v15s8)
-default v15_chloe_lindseysabotage = False ##Approach A. Free tuition = (v14_help_chloe and not v15_chloe_lindseysabotage)
-default v15_chloe_postkiwii = False ##Approach A3A. Dean PA System = (v15_chloe_lindseysabotage and not v15_chloe_postkiwii)
-default v15_chloe_mrleesupport = False ##Approach B1A. Ms. Rose support = (v14_help_chloe and not v15_chloe_lindseysabotage and not v15_chloe_mrleesupport)
-
-# Lindsey Planning Board (v15s12)
-default v15_lindsey_gamenight = False ##Approach A. VIP Night = (v14_help_lindsey and not v15_lindsey_gamenight)
-default v15_lindsey_mostlikelyto = False ##Approach A2A. Would You Rather = (v15_lindsey_gamenight and not v15_lindsey_mostlikelyto)
-default v15_lindsey_inviteseb = False ##Approach B2A. Invite Grayson = (v14_help_lindsey and not v15_lindsey_gamenight and not v15_lindsey_inviteseb)
-
-default aubrey_riley_awkward = False
-default dog_name = "Blue"
-default freeroam13 = set() # halloween, part 1 (18a)
-default freeroam14 = set() # halloween, part 2 (18c)
-default v15_autumn_freemug = False
-default v15_autumn_lunchbreak = False
-default v15_autumn_smoke = False
-default v15_blame_nora = False # blame_chris = (v13_imre_disloyal, or maybe not) and not v15_blame_nora
-default v15_car_sold_price = 0
-default v15_lindsey_alcohol = False
-default v15_lindsey_recording = 0 # (if recording happened in scene 35, value may be 1, 2 or 3. If recording happened in scene 39, value may be 4, 5 or 6)
-default v15_mad_at_ms_rose = False
-default v15_nora_clue_camping = False
-default v15_nora_clue_ex = False
-default v15_nora_clues = set()
-default v15_nora_locations = set()
-default v15_NoraFriendZone = True
-default v15_RileyUpset = False
-default v15_say_nothing = False
-default v15_seduce_ms_rose = False
-default v15_stay_on_topic = False
-default v15_threaten_ms_rose = False
-default v15_took_notes = False
-default v15s10_buyer_max_amount = 0
-default v15s18_LaurensBed = False
-default v15s18_mention_list_aubrey = False
-default v15s18_pumpkin = 0
-default v15s18a_aub_kiwii_smile = False
-default v15s18a_gag = False
-default v15s18a_lie = False #????
-default v15s18a_riley_bj = False
-default v15s18a_showlist_penelope_autumn = False
-default v15s18e_cum_in_lauren = False
-default v15s20_teacher_brief_open_count = 0
-default v15s21_meeting_points = 0
-default v15s22_meeting_points = 0
-default v15s24_nancy_dick = False
-default v15s25_price = 0
-default v15s33_cheese = False
-default v15s33_flirt = False
-default v15s33_naomi_broke_aubreyrs = False
-default v15s33_take_photo = False
-default v15s35_bring_up_chloe = False
-default v15s36_not_good_idea = False
-default v15s42_flirt = False
-default v15s42_grab_breakfast = False
-default v15s48_follow_your_heart = False
-default v15s48_interrupt = False
-default v15s48a_norapoints = 0
-default v15_nora_cum = False
-default v15s7_chloe_empathize = False
-default v15s33_sambuca = False
-default v15s9_wedding_date = False
-default v15s36_autumn_kiss = False
-default v1502fix = False
-default RileyLoyal = False
-default pb_kct_notification = False
-default pb_threesome = False
-
-# 16.0
-default v16_baby_name = "Baby" # Used to store the player designated name of the baby
-default v16_wintom = False
-default v16_home_riley = False
-default v16_baby_key_attempts = 0 # tracks the total times MC uses a baby key on the baby; used in s87 
-
-# Chloe Planning Board
-default v16_chloe_newspaper = False ##Approach A. Sparty = (v14_help_chloe and not v16_chloe_newspaper)
-default v16_chloe_on_cover = False ##Approach A2A. Chloe puts Lindsey on cover = (v16_chloe_newspaper and not v16_chloe_on_cover)
-default v16_chloe_real_masseuse = False ##Approach B2A. MC Masseuse = (v14_help_chloe and not v16_chloe_newspaper and not v16_chloe_real_masseuse)
-
-# Lindsey Planning Board
-default v16_lindsey_newspaper = False ##Approach A. Polly endorsement = (v16_help_lindsey and not v16_lindsey_newspaper)
-default v16_lindsey_elijah = False ##Approach A1A. Riley interview = (v16_lindsey_newspaper and not v16_lindsey_elijah)
-default v16_lindsey_roomservice = False ##Approach B2A. Show up as yourselves = (v16_help_lindsey and not v16_lindsey_newspaper and not v16_lindsey_roomservice)
-
-
-default freeroam15 = set() #Pier v16s15
-default freeroam16 = set() #Amber v16s20
-default v16s11_sign_up = False
-default v16s20_take_twazzlers = False
-default v16_amber_mention_bills = False
-default v16_amber_mention_laptop = False
-default v16s23_support_amber = False
-default v16_aubrey_date = False
-default v16s26_lindsey_donation_money = 50 # Track if MC spends any of the money lindsey gives him (can be spend in s32 and s38)
-default v16s27_parent_chloe = False  # True = Chloe, False = Nora
-# default v16s27_mc_baby_duty_night = 0 # 0 = Unselected, 1 = Wednesday_alone, 2 = Thrusday_alone, 4 = Friday_alone, 0x10 = Wednesday_shared, 0x20 = Thursday_shared, 0x40 = Friday_shared
-default v16s27_mc_baby_schedule = {
-    "wednesday": BabyDuty.PARTNER_ALONE,
-    "thursday": BabyDuty.PARTNER_ALONE,
-    "friday": BabyDuty.PARTNER_ALONE
-}
-default v16s32_birthday_reservation = 0  # 0 = neither, 1 = standard_reserveration, 2 = birthday_reservation  
-default v16s32_aubrey_cab_and_flowers = 0 #  0 = neither, 1 = cab only, 2 = cab and flowers
-default v16s32_cost_cab_and_flowers = 0 # Tracks the cost of Aubrey's cab ride to MC date
-default v16s34_joke_about_elijah = False # used and checked in v16s34 
-default v16s34_knock_on_svc_door = False # False = walk in 
-default v16s34_get_aggressive_with_elijah = False # False = Laugh
-default v16s34_chloe_kiss_elijah_for_frontpage = False # False = Tell Elijah to fuck off 
-default v16s35_mc_spa_shopping = set() # possible values are "tingle_mint_oil", "citrus_oil", "expensive_mask", "cheap_mask"  - Tracks what MC purchased during spa shopping for chloe
-default v16s38_tippped_driver = False
-default v16s39_fr_aubrey_date_list = set() # Tracks player selection during Aubrey date freeroam
-default v16s39_fr_aubrey_date_points = 0
-default v16s39_food_critic = False
-default v16s44_rubius_park_walk = False
-default v16s48_chloe_throws_baby = False
-default v16s50a_dotw = 0   # 0 = nothing, 1 = Sunday, 2 = Monday, 3 = Tuesday, 4 = Wednesday, 5 = Thursday, 6 = Friday, 7 = Saturday
-default v16s52_mc_dogshelter_kiwii_post = False
-default v16s52_aubrey_kiwii_post_for_donations = False # True = Aubrey makes kiwii post to raise donations for dog shelter/ False = Aubrey declines posting to Kiwii
-default v16s55_lindsey_question_set = set() # Possible values: three_positives  , important_quality  , random_kindness
-default v16s55_lindsey_followup_question_set = set() # Possible values: sounds_great or make_suggestion, thatll_do or expand, thats_good or ask_why, more_advice or finish_up
-default v16s57_agree_with_samantha_or_cameron = 0    # 0 = Stay out of it, 1 = Samantha, 2 = Cameron 
-default v16s59_just_knock = False  #  True == just knock on polly's door / False = Calm Lindsey down before knocking
-default v16s59_polly_endorse_lindsey = False # True == Polly will endorse Lindsey for Pres / False = Polly does not endorse Lindsey for Pres.
-default v16s61_chloe_pb_override_mc_gives_massages = False   # True = Mc says yes to helping chloe give massages as Spa night / False = Mc helps Chloe, but does not give massages.
-default v16s63_mc_wear_facial_mask  = False  # True = MC decides to wear facial mask on MC during s63 / False = MC decides not to wear mask 
-default v16s63a_mc_influence_aubreys_vote = 0  # 0 = Noobdy, 1 = Chloe, 2 = Lindsey (just in case this is used later to help decide the winner of the election Aubrey's vote)
-default v16s63a_mc_choose_keep_convo_friendly = False # True == MC chose not to talk sexy to Lindsey during massage/ False = MC chose Turn up the heat to get Lindsey all hot and bothered out
-default v16s63a_mc_choose_cool_convo = False  # True = MC chose not to take care of Lindsey's sexual needs/ False = MC chose to take care of Lindsey's sexual needs
-default v16s63x_chloe_suggestion_set = set() # Possible values:  "v16s63_compliment", "v16s63b_compliment", "v16s63_breast_reduciton", "v16s63b_breath_mint"
-default v16s64_insulted_chloe = False  # True = Added an insult to suggestion box/ False = did not add insult to suggestion box - MC insults Chloe using suggestion box during Spa night
-default v16s64_confessed_insult = False  # True = Told Truth/ False = Denied it - MC tells the truth when confronted about insults from Spa Night.
-default v16s67_mc_remains_interested_autumn_sex = 0 # 0 = MC did not get asked, 1 = Autumn asked and MC turned her down, 2 = Autumn asked and MC said he was still interested
-default v16s78_rose_ask_mc_contnue_dating = 0 # N 0 = Never asked, 1 = MC answered "If we want to", 2 = MC answered "Probably not"
-default v16_ms_rose_breakup = False
-default v16s4_dissnaomi = False
-default v16s14_focus = 0
-
-#default v16s12_chloe_planboard_decide_newspaper_cover = False # True=Decide Newspaper Cover/False = Chick's Spa Day
-#default v16s12_chloe_planboard_decide_promote_chloe_on_cover = False #  True = promote chloe on newspaper cover / False = Embarrass Lindsey on front of newspaper cover
-#default v16s12_chloe_planboard_decide_mc_gives_massages = False   # True = Hire a professional to give messages / False = MC gives massages
-# Check v16s60_chloe_pb_override_mc_gives_massages variable as well when determining if MC gives massages   
-default v16_win_range = False ### ???

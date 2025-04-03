@@ -3,11 +3,11 @@ screen v8s5_amberSexOverlay():
     default overlay = True
 
     if overlay:
-        textbutton "hide overlay":
+        textbutton _("hide overlay"):
             xpos 250
             action SetScreenVariable("overlay", False)
     else:
-        textbutton "show overlay":
+        textbutton _("show overlay"):
             xpos 10
             action SetScreenVariable("overlay", True)
 

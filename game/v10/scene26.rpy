@@ -3,26 +3,30 @@
 # Characters: MC (Outfit 9), Amber (Outfit 1), Riley (Outfit 1)
 # Time: Night
 
-init python:
-    def v10s26_reply1():
-        setattr(store, "v10_amber_condoms", True)
-        add_point(KCT.BOYFRIEND)
-        amber.messenger.newMessage("Beer, obviously")
-
-
 label v10_amber_skatepark:
-    play music "music/v10/Track Scene 26_1.mp3" fadein 2
+    play music music.ck1.v10.Track_Scene_26_1 fadein 2
 
     scene v10sasp14 # TPP. Show MC on sidewalk, walking home from rileys house.
     with fade
 
     u "(I should get that.)"
 
-    $ amber.messenger.newMessage("Skatepark behind SVC, 10pm, bring a six pack.", force_send=True)
-    $ amber.messenger.addReply("Condoms or beer?", v10s26_reply1)
-    $ amber.messenger.addReply("Alright sure")
+    python:
+        v10s26_reply1 = MessageBuilder(amber)
+        v10s26_reply1.set_variable("v10_amber_condoms", True)
+        v10s26_reply1.add_function(reputation.add_point, RepComponent.BOYFRIEND)
+        v10s26_reply1.new_message("Beer, obviously")
 
-    call screen phone
+    $ MessengerService.new_message(amber, "Skatepark behind SVC, 10pm, bring a six pack.")
+    $ MessengerService.add_replies(amber,
+        Reply("Condoms or beer?", v10s26_reply1),
+        Reply("Alright sure")
+    )
+
+    while MessengerService.has_replies(amber):
+        call screen phone
+        if MessengerService.has_replies(amber):
+            u "(I should reply to amber.)"
 
     scene v10sasp1 # FPP. Show Amber, smiling, mouth closed.
     with fade
@@ -75,7 +79,7 @@ label v10_amber_skatepark:
 
         am "I'm just kidding. *Chuckles*"
             
-        if amber.relationship >= Relationship.FWB:
+        if CharacterService.is_fwb(amber):
             scene v10sasp1c
             with dissolve
 
@@ -364,13 +368,11 @@ label v10_amber_skatepark:
 
     u "*Laughs*"
 
-    if amber.relationship >= Relationship.FWB or kct == "popular":
+    if CharacterService.is_fwb(amber):
         label v10_amber_skatepark_sg:
-        
-        if _in_replay:
-            $ amber.relationship = Relationship.FWB
+            if _in_replay:
+                $ CharacterService.set_relationship(amber, Relationship.FWB)
 
-    if amber.relationship >= Relationship.FWB:
         scene v10sasp5b # FPP. Same camera as v10sasp5. Show Amber leaning in to whisper into MC's ear, smiling, mouth open.
         with fade
 
@@ -403,19 +405,29 @@ label v10_amber_skatepark:
                 $ sceneList.add("v10_amber")
                 show screen v10s26_amberSexOverlay
 
-                if config_censored:
+                if is_censored:
                     call screen censored_popup("v10s26_nsfwSkipLabel1")
 
                 stop music fadeout 3
-                play music "music/v10/Track Scene 26_2.mp3" fadein 2
+                play music music.ck1.v10.Track_Scene_26_2 fadein 2
+                lovense vibrate 2
+                lovense rotate 1
+                lovense suction 1
+                lovense thrust 1
+
                 image v10ambbj = Movie(play="images/v10/Scene 26/v10ambbj.webm", loop=True, image="images/v10/Scene 26/v10ambbjStart.webp", start_image="images/v10/Scene 26/v10ambbjStart.webp") # TPP Amber sucking MC's cock on the top of the quater pipe
                 image v10ambbjf = Movie(play="images/v10/Scene 26/v10ambbjf.webm", loop=True, image="images/v10/Scene 26/v10ambbjStart.webp", start_image="images/v10/Scene 26/v10ambbjStart.webp")
 
-                label v10s26_amberBlowjob:                
+                label v10s26_amberBlowjob:
+                    lovense vibrate 4
+                    lovense rotate 2
+                    lovense suction 2
+                    lovense thrust 2
+
                     scene v10ambbj # ignore
                     with dissolve
 
-                    $ grant_achievement("rough_rider")
+                    grant Achievement("rough_rider", "Have fun at the skatepark")
                     u "Damn Amber!"
 
                     scene v10ambbj
@@ -442,10 +454,20 @@ label v10_amber_skatepark:
 
                 am "Fuck me."
 
+                lovense vibrate 5
+                lovense rotate 3
+                lovense suction 3
+                lovense thrust 3
+
                 image v10ambrf = Movie(play="images/v10/Scene 26/v10ambrf.webm", loop=True, image="images/v10/Scene 26/v10ambrfStart.webp", start_image="images/v10/Scene 26/v10ambrfStart.webp") # TPP laying behind amber fucking her from behind.
                 image v10ambrff = Movie(play="images/v10/Scene 26/v10ambrff.webm", loop=True, image="images/v10/Scene 26/v10ambrfStart.webp", start_image="images/v10/Scene 26/v10ambrfStart.webp")
 
                 label v10s26_amberLying:
+                    lovense vibrate 6
+                    lovense rotate 4
+                    lovense suction 4
+                    lovense thrust 4
+
                     scene v10ambrf
                     with dissolve
 
@@ -465,6 +487,11 @@ label v10_amber_skatepark:
                 image v10ambdaf = Movie(play="images/v10/Scene 26/v10ambdaf.webm", loop=True, image="images/v10/Scene 26/v10ambdaStart.webp", start_image="images/v10/Scene 26/v10ambdaStart.webp")
 
                 label v10s26_amberDoggy:
+                    lovense vibrate 8
+                    lovense rotate 5
+                    lovense suction 5
+                    lovense thrust 5
+
                     scene v10ambda
                     with dissolve
 
@@ -483,6 +510,11 @@ label v10_amber_skatepark:
                 image v10ambcgf = Movie(play="images/v10/Scene 26/v10ambcgf.webm", loop=True, image="images/v10/Scene 26/v10ambcgStart.webp", start_image="images/v10/Scene 26/v10ambcgStart.webp")
 
                 label v10s26_amberCowgirl:
+                    lovense vibrate 10
+                    lovense rotate 7
+                    lovense suction 7
+                    lovense thrust 7
+
                     scene v10ambcg
                     with dissolve
 
@@ -497,6 +529,11 @@ label v10_amber_skatepark:
                     with dissolve
 
                     am "Oh shit I'm gonna cum!"
+
+                    lovense vibrate 12
+                    lovense rotate 9
+                    lovense suction 9
+                    lovense thrust 9
 
                     scene v10ambcgf
                     with dissolve
@@ -514,6 +551,8 @@ label v10_amber_skatepark:
                 with dissolve
 
                 am "That was exciting!"
+
+                lovense stop
 
                 scene v10sasp12a # FPP. Same camera as v10sasp12. Show Amber nude, smiling, mouth closed.
                 with dissolve
@@ -658,8 +697,8 @@ label v10_amber_skatepark:
         with dissolve
         menu:
             "Place hand on her leg":
-                if kct == "popular": # kct is popular
-                    call screen kct_popup
+                if reputation() == Reputations.POPULAR: # kct is popular
+                    call screen reputation_popup
                     
                     scene v10sasp5j # FPP. Same camera as v10sasp5. Show Amber glancing down at her leg, smiling, mouth closed.
                     with dissolve
@@ -717,16 +756,21 @@ label v10_amber_skatepark:
                     with dissolve
                     menu:
                         "Let her":
-                            $ amber.relationship = Relationship.FWB
+                            $ CharacterService.set_relationship(amber, Relationship.FWB)
                             $ sceneList.add("v10_amber")
 
-                            if config_censored:
+                            if is_censored:
                                 call screen censored_popup("v10s26_nsfwSkipLabel1")
-                                
+                            
+                            lovense vibrate 2
+                            lovense rotate 1
+                            lovense suction 1
+                            lovense thrust 1
+
                             scene v10ambbj
                             with dissolve
 
-                            $ grant_achievement("rough_rider")
+                            grant Achievement("rough_rider", "Have fun at the skatepark")
 
                             u "Damn Amber!"
 
@@ -748,6 +792,11 @@ label v10_amber_skatepark:
                             with dissolve
 
                             pause 0.75
+
+                            lovense vibrate 4
+                            lovense rotate 2
+                            lovense suction 2
+                            lovense thrust 2
 
                             scene v10sasp8a
                             with dissolve
@@ -778,6 +827,11 @@ label v10_amber_skatepark:
                             with dissolve
 
                             am "YESSSS!"
+
+                            lovense vibrate 6
+                            lovense rotate 3
+                            lovense suction 3
+                            lovense thrust 3
 
                             scene v10ambdaf
                             with dissolve
@@ -824,6 +878,11 @@ label v10_amber_skatepark:
 
                             u "I'm glad you hit me up."
 
+                            lovense vibrate 8
+                            lovense rotate 5
+                            lovense suction 5
+                            lovense thrust 5
+
                             scene v10sasp12
                             with dissolve
 
@@ -838,6 +897,8 @@ label v10_amber_skatepark:
                             with dissolve
 
                             pause 0.75
+
+                            lovense stop
 
                             scene v10sasp5a
                             with fade

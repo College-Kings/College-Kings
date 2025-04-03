@@ -4,7 +4,7 @@
 # Time: Saturday Night
 
 label v10_mc_vs_ryan_fight:
-    play music "music/v10/Track Scene 6.mp3" fadein 2
+    play music music.ck1.v10.Track_Scene_6 fadein 2
     
     if False:
         scene v10mvr1 # FPP. Show imre and chris near ring, imre excited look, mouth open chris mouth closed
@@ -61,7 +61,6 @@ label v10_mc_vs_ryan_fight:
 
     ry "You ready to do this?"
 
-    # TODO: Update ryan fight
     menu:
         "Fight Ryan":
             $ v10_ryan_fight = True
@@ -78,16 +77,16 @@ label v10_mc_vs_ryan_fight:
 
             scene v10mvr6a
 
-            # call screen fight_typeMenu
+            call screen fight_typeMenu
 
             if fight_type == "normal":
                 $ simRyanFight = False
                 $ ryanStance = renpy.random.choice([1, 2, 3, 4])
                 $ ryanAttack = renpy.random.choice([1, 2, 3, 4])
 
-                # call screen fight_selectDifficulty
+                call screen fight_selectDifficulty
 
-                # call screen fight_keybindOptions
+                call screen fight_keybindOptions
 
             elif fight_type == "simReal" or fight_type == "simWin":
                 $ simRyanFight = True
@@ -110,7 +109,7 @@ label v10_mc_vs_ryan_fight:
             label ryan_McAttack:
                 $ stance = 2 # Defence
 
-                # show screen fight_overlay(stance="defend") TODO: Update fight code
+                show screen fight_overlay(stance="defend")
 
                 # Ryan hook
                 if ryanAttack == 1:
@@ -129,8 +128,7 @@ label v10_mc_vs_ryan_fight:
                             jump ryan_McKickBlock
 
                     else:
-                        pass
-                        # call screen ryanFight_MCDefend(attack="Hook")
+                        call screen ryanFight_MCDefend(attack="Hook")
 
                 # Ryan jab
                 if ryanAttack == 2:
@@ -149,8 +147,7 @@ label v10_mc_vs_ryan_fight:
                             jump ryan_McJabBlock
 
                     else:
-                        pass
-                        # call screen ryanFight_MCDefend(attack="Jab")
+                        call screen ryanFight_MCDefend(attack="Jab")
 
                 # Ryan body hook
                 if ryanAttack == 3:
@@ -169,8 +166,7 @@ label v10_mc_vs_ryan_fight:
                             jump ryan_McHookBlock
 
                     else:
-                        pass
-                        # call screen ryanFight_MCDefend(attack="BodyHook")
+                        call screen ryanFight_MCDefend(attack="BodyHook")
 
                 # Ryan kick
                 if ryanAttack == 4:
@@ -189,8 +185,7 @@ label v10_mc_vs_ryan_fight:
                             jump ryan_McBodyhookBlock
 
                     else:
-                        pass
-                        # call screen ryanFight_MCDefend(attack="Kick")
+                        call screen ryanFight_MCDefend(attack="Kick")
 
 
             # label Attacker_TargetAction
@@ -262,7 +257,7 @@ label v10_mc_vs_ryan_fight:
 
             label ryan_McKickHit: # Ryan Kicks MC (Hits/No Block)
 
-                play sound "sounds/ks.mp3"
+                play sound sound.hit
                 $ youDamage += 1
                 scene Ryan_Kick_hit
                 with hpunch
@@ -275,7 +270,7 @@ label v10_mc_vs_ryan_fight:
 
             label ryan_McKickBlock: # Ryan Kicks MC (Blocked)
 
-                play sound "sounds/ks.mp3"
+                play sound sound.hit
                 scene Ryan_Kick_block
                 with hpunch
 
@@ -287,7 +282,7 @@ label v10_mc_vs_ryan_fight:
 
             label ryan_McJabHit: # Ryan Kicks MC (Hits/No Block)
 
-                play sound "sounds/js.mp3"
+                play sound sound.hit
                 $ youDamage += 1
                 scene Ryan_Jab_hit
                 with hpunch
@@ -302,7 +297,7 @@ label v10_mc_vs_ryan_fight:
 
             label ryan_McJabBlock: # Ryan Kicks MC (Hits/No Block)
 
-                play sound "sounds/bs.mp3"
+                play sound sound.hit
                 scene Ryan_Hook_block
                 with hpunch
 
@@ -314,7 +309,7 @@ label v10_mc_vs_ryan_fight:
 
             label ryan_McHookHit: # Ryan Kicks MC (Hits/No Block)
 
-                play sound "sounds/hs.mp3"
+                play sound sound.hit
                 $ youDamage += 1
                 scene Ryan_Hook_hit
                 with hpunch
@@ -329,7 +324,7 @@ label v10_mc_vs_ryan_fight:
 
             label ryan_McHookBlock: # Ryan Kicks MC (Hits/No Block)
 
-                play sound "sounds/bs.mp3"
+                play sound sound.hit
                 scene Ryan_Hook_block
                 with hpunch
 
@@ -341,7 +336,7 @@ label v10_mc_vs_ryan_fight:
 
             label ryan_McBodyhookHit: # Ryan Kicks MC (Hits/No Block)
 
-                play sound "sounds/hs.mp3"
+                play sound sound.hit
                 $ youDamage += 1
                 scene Ryan_BodyJab_hit
                 with hpunch
@@ -354,7 +349,7 @@ label v10_mc_vs_ryan_fight:
 
             label ryan_McBodyhookBlock: # Ryan Kicks MC (Hits/No Block)
 
-                play sound "sounds/bs.mp3"
+                play sound sound.hit
                 scene Ryan_BodyJab_block
                 with hpunch
 
@@ -404,8 +399,7 @@ label v10_mc_vs_ryan_fight:
                         if simyou == 4 or simyou == 5 or simyou == 6:
                             jump mc_ryanKickHit
                 else:
-                    pass
-                    # call screen ryanFight_MCAttack
+                    call screen ryanFight_MCAttack
 
 
             label mc_ryanFightEnd: # MC wins fight against Ryan
@@ -418,9 +412,9 @@ label v10_mc_vs_ryan_fight:
                 jump ryan_fightEnd
 
             label ryan_fightEnd:
-                # hide screen ryanFight_MCAttack
-                # hide screen ryanFight_MCDefend
-                # hide screen fight_overlay TODO: Update fight code
+                hide screen ryanFight_MCAttack
+                hide screen ryanFight_MCDefend
+                hide screen fight_overlay
                 $ youDamage = 0
                 $ stance = 0
                 stop music fadeout 3
@@ -430,7 +424,7 @@ label v10_mc_vs_ryan_fight:
             scene v10mvr6a
             with dissolve
 
-            $ grant_achievement("fright_club")
+            grant Achievement("fright_club", "Don't fight Ryan at the Brawl")
             
             u "I don't think I can do this. Sorry guys."
 

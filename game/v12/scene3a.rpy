@@ -9,9 +9,9 @@ label v12_penelope_call:
 
     pause 0.75
 
-    play music "music/v12/Track Scene 3a.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_3a fadein 2
     
-    play sound "sounds/call.mp3"
+    play sound sound.call
 
     scene v12pec1a # TPP. Same as v11pec1, MC slightly startled, mouth closed
     with dissolve
@@ -24,14 +24,14 @@ label v12_penelope_call:
     u "(It's Penelope.)"
 
     menu:
-        "Answer":
-            $ add_point(KCT.BOYFRIEND)
+        "Answer" (boyfriend=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
 
             scene v12pec2b # FPP. Same as v11pec2, show MC clicking to accept the call
             with dissolve
 
             stop sound
-            play sound "sounds/answercall.mp3"
+            play sound sound.answer_call
 
             pause 0.75
 
@@ -173,8 +173,8 @@ label v12_penelope_call:
             pe "Yeah?"
 
             menu:
-                "Never mind":
-                    $ add_point(KCT.BRO)
+                "Never mind" (bro=1.0):
+                    $ reputation.add_point(RepComponent.BRO)
                     scene v12pec3c
                     with dissolve
 
@@ -185,8 +185,8 @@ label v12_penelope_call:
 
                     pe "*Chuckles* Alrighty, bye."
 
-                "I miss you":
-                    $ add_point(KCT.BOYFRIEND)
+                "I miss you" (penelope=1.0):
+                    $ reputation.add_point(RepComponent.BOYFRIEND)
                     $ penelope.points += 1
 
                     scene v12pec3c
@@ -212,19 +212,19 @@ label v12_penelope_call:
             scene v12pec2c # FPP. Same as v12pec2a, show MC clicking to end the call
             with dissolve
 
-            play sound "sounds/rejectcall.mp3"
+            play sound sound.reject_call
             pause 0.75
             stop music fadeout 3
 
             jump v12_roomate_talk #scene 4
             
-        "Don't answer":
-            $ add_point(KCT.BRO)
+        "Don't answer" (bro=1.0):
+            $ reputation.add_point(RepComponent.BRO)
             scene v12pec2a # FPP. Same as v12pec2, show MC clicking to reject the call
             with dissolve
 
             stop sound
-            play sound "sounds/rejectcall.mp3"
+            play sound sound.reject_call
 
             u "(If it's serious she'll call again or leave a message.)"
 

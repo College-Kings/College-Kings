@@ -10,7 +10,7 @@ label v12_urban_exploring:
 
     pause 0.75
 
-    play music "music/v12/Track Scene 20.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_20 fadein 2
 
     scene v12uex2 # FPP Show outside of abandoned commercial bakery
     with dissolve
@@ -178,8 +178,8 @@ label v12_urban_exploring:
     with dissolve
 
     menu:
-        "Of course":
-            $ add_point(KCT.TROUBLEMAKER)
+        "Of course" (troublemaker=1.0):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             u "*Chuckles* Of course I can."
 
@@ -362,9 +362,9 @@ label v12_urban_exploring:
 
             u "Ha, don't worry about it."
 
-        "Move":
+        "Move" (troublemaker=1.0):
             label v12s20_faillabel:
-                $ add_point(KCT.TROUBLEMAKER)
+                $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
                 scene v12uex12b # TPP Same angle as v12uex12, show MC dodging out of the way of Nora
                 with dissolve
@@ -460,8 +460,8 @@ label v12_urban_exploring:
     with dissolve
 
     menu:
-        "Walk Aubrey back to hotel":
-            $ add_point(KCT.BOYFRIEND)
+        "Walk Aubrey back to hotel" (boyfriend=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
 
             u "Of course, c'mon Aubrey. I'll walk you back."
 
@@ -504,8 +504,8 @@ label v12_urban_exploring:
             
             jump v12_nursing_aubrey #scene 21a
 
-        "Share a drink with Nora":
-            $ add_point(KCT.TROUBLEMAKER)
+        "Share a drink with Nora" (troublemaker=1.0):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             u "Gotta be honest, cold drinks in the sun sounds pretty fucking nice. Imre, you're gonna have to walk Aubrey back."
 

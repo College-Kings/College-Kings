@@ -6,7 +6,7 @@
 label v11_lindsey_park:
     scene v11lip1 # TPP. Show MC walking up to Lindsey, she is sitting down on the bench, slightly sad, mouth closed, looking at the trees, MC shown from behind
     with dissolve
-    play music "music/v11/Track Scene 9_2.mp3" fadein 2
+    play music music.ck1.v11.Track_Scene_9_2 fadein 2
     pause 0.75
 
     scene v11lip2 # TPP. Show MC midway through sitting down, MC and Lindsey now looking at each other, both slight smiles, mouths closed
@@ -108,14 +108,14 @@ label v11_lindsey_park:
     with dissolve
 
     menu:
-        "Defend Chloe":
+        "Defend Chloe" (lindsey=-1.0):
             $ lindsey.points -= 1
             scene v11lip3b
             with dissolve
 
             u "Is it possible that with all the responsibility she has, it's hard for her to see her mistakes?"
 
-        "Don't defend Chloe":
+        "Don't defend Chloe" (lindsey=1.0):
             $ lindsey.points += 1
             scene v11lip3d
             with dissolve
@@ -131,7 +131,7 @@ label v11_lindsey_park:
     with dissolve
 
     menu:
-        "Support Chloe":
+        "Support Chloe" (lindsey=-1.0):
             $ lindsey.points -= 1
             scene v11lip3b
             with dissolve
@@ -165,7 +165,7 @@ label v11_lindsey_park:
 
             li "Always down for being held accountable."
 
-        "Support Lindsey":
+        "Support Lindsey" (lindsey=1.0):
             $ v11_lindsey_run = True
             $ lindsey.points += 1
 
@@ -173,7 +173,7 @@ label v11_lindsey_park:
             with dissolve
 
             if politics:
-                $ grant_achievement("political_strategist")
+                grant Achievement("political_strategist", "Tell Autumn you're into politics and encourage Lindsey to run")
 
             u "I'm down to support you as long as all of this means a new beginning for the Chicks. I'm not in the business of switching out one problem for another, get what I'm saying?"
 

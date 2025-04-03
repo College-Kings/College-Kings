@@ -4,16 +4,16 @@
 # Time: Friday Night
 
 label v9_call_w_lindsey:
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         scene v9cwl3 # TPP. Show MC on his bed in his Wolves room, phone in hand, looking tired.
         with fade
 
-        play music "music/v9/Track Scene 3.mp3" fadein 2
+        play music music.ck1.v9.Track_Scene_3 fadein 2
 
         u "(What a jam-packed day. And this wasn't even the real deal. Tomorrow is showtime.)"
         u "(I didn't see myself going down this road when I started college, but I'm in too deep now. There's no way I'll lose, no way in hell.)"
 
-        play sound "sounds/calling.mp3"
+        play sound sound.calling
         pause 1
 
         stop sound
@@ -58,10 +58,10 @@ label v9_call_w_lindsey:
         scene v9cwl3b
         with dissolve
 
-        if kct == "confident":
+        if reputation() == Reputations.CONFIDENT:
             u "Does a fish need water? Of course I'll come out on top. When I set my mind to something that's it, mission accomplished."
 
-        elif kct == "popular":
+        elif reputation() == Reputations.POPULAR:
             u "I know there's a lot of focus on me, but I'm just really focused on bringing this home for the boys. They deserve this and I wanna make 'em proud."
 
         else:
@@ -118,7 +118,7 @@ label v9_call_w_lindsey:
 
         u "Goodnight."
 
-        play sound "sounds/rejectcall.mp3"
+        play sound sound.reject_call
 
         scene v9cwl3
         with dissolve
@@ -142,7 +142,7 @@ label v9_call_w_lindsey:
         u "(What a jam-packed day. And this wasn't even the real deal. Tomorrow is showtime.)"
         u "(I didn't see myself going down this road when I started college, but I'm in too deep now. There's no way I'll lose, no way in hell.)"
 
-        play sound "sounds/calling.mp3"
+        play sound sound.calling
         pause 1
 
         stop sound
@@ -185,10 +185,10 @@ label v9_call_w_lindsey:
         scene v9cwl1b
         with dissolve
 
-        if kct == "confident":
+        if reputation() == Reputations.CONFIDENT:
             u "Does a fish need water? Of course I'll come out on top. When I set my mind to something that's it, mission accomplished."
 
-        elif kct == "popular":
+        elif reputation() == Reputations.POPULAR:
             u "I know there's a lot of focus on me, but I'm just really focused on bringing this home for the boys. They deserve this and I wanna make 'em proud."
 
         else:
@@ -245,7 +245,7 @@ label v9_call_w_lindsey:
 
         u "Goodnight."
 
-        play sound "sounds/rejectcall.mp3"
+        play sound sound.reject_call
 
         scene v9cwl1
         with dissolve

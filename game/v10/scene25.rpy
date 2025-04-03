@@ -7,7 +7,7 @@ label v10_ms_rose_fight:
     scene v10msf1 # FPP. Show MS rose's house, MS rose stood at the door, Mr rose stood infront of house. Ms rose angry look, Ms rose mouth closed, mr rose mouth open
     with dissolve
 
-    play music "music/v10/Track Scene 25_1.mp3" fadein 2
+    play music music.ck1.v10.Track_Scene_25_1 fadein 2
 
     mrr "These things take time, how is that not clear? You can't expect a luxurious lifestyle if you're not willing to put the work in!"
 
@@ -56,8 +56,8 @@ label v10_ms_rose_fight:
     mrr "Just let me come in so we can-"
 
     menu:
-        "Speak up":
-            $ add_point(KCT.BOYFRIEND)
+        "Speak up" (boyfriend=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             $ v10_ms_r_interfere = True
             scene v10msf2 # FPP. Show MR Rose in foreground facing camera, Show MS rose at the door facing camera, Mr Rose Mouth closed, Ms rose mouth closed.
             with dissolve
@@ -99,7 +99,7 @@ label v10_ms_rose_fight:
 
             mrr "*Sighs* Fine."
             stop music fadeout 3
-            play music "music/v10/Track Scene 25_2.mp3" fadein 2
+            play music music.ck1.v10.Track_Scene_25_2 fadein 2
 
             scene v10msf3 # FPP. Show Mr Rose walking away from the house
             with dissolve
@@ -130,7 +130,7 @@ label v10_ms_rose_fight:
 
             mrr "When everything is said and done, you're gonna regret this."
             stop music fadeout 3
-            play music "music/v10/Track Scene 25_2.mp3" fadein 2
+            play music music.ck1.v10.Track_Scene_25_2 fadein 2
             scene v10msf3
             with dissolve
             pause 0.75
@@ -141,8 +141,8 @@ label v10_ms_rose_fight:
     ro "*Sighs* I'm sorry. He has no respect for anyone but himself."
 
     menu:
-        "Insult him":
-            $ add_point(KCT.TROUBLEMAKER)
+        "Insult him" (troublemaker=1.0):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
             scene v10msf4a # FPP. same camera as v10msf4, Show MS rose, crying mouth closed, FPP now from right infront of door to have conversation with ms rose.
             with dissolve
 
@@ -216,8 +216,8 @@ label v10_ms_rose_fight:
 
     menu:
         "Make a move":
-            $ ms_rose.relationship = Relationship.KISS
-            $ add_point(KCT.BOYFRIEND)
+            $ CharacterService.set_relationship(ms_rose, Relationship.KISSED)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             scene v10msf5a # TPP. same camera as v10msf5, Show MS rose. Touching MC on the cheek, smiling,MC hand on Ms Rose Waist.
             with dissolve
 
@@ -228,7 +228,7 @@ label v10_ms_rose_fight:
 
             pause 1
 
-            play sound "sounds/kiss.mp3"
+            play sound sound.kiss
 
             scene v10msf6 # FPP. Show Close up of Ms. Rose and MC kissing.
             with dissolve
@@ -238,7 +238,7 @@ label v10_ms_rose_fight:
             scene v10msf5c # TPP. same camera as v10msf5, Show MS rose. Now having stepped back, embarrased smile, mouth open
             with dissolve
 
-            $ grant_achievement("forbidden_romance")
+            grant Achievement("forbidden_romance", "Kiss Ms. Rose")
             ro "Wow uhm... thank you [name]. For everything. I need to get back to work. Really, thank you."
 
             scene v10msf4c # FPP. same camera as v10msf4, Now Show Ms Rose closing the door.

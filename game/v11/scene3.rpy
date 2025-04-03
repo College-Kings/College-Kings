@@ -6,16 +6,16 @@
 label v11_samantha_packing:
     scene v11samp1 # FPP. MC is looking at his packed luggage, the luggage is open, with some clothes on the outside, next to the luggage
     with fade
-    play music "music/v11/Track Scene 3.mp3" fadein 2
+    play music music.ck1.v11.Track_Scene_3 fadein 2
     u "(I really should get some more clothes.)"
 
     scene v11samp2 # FPP. MC is looking at his room's door, closed
     with dissolve
 
-    play sound "sounds/knock.mp3"
+    play sound sound.knock
     pause 1
 
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
     scene v11samp2a # FPP. MC is looking at Samantha at the door, which she is opening, she is moving in, neutral expression, mouth closed
     with dissolve
 
@@ -102,8 +102,8 @@ label v11_samantha_packing:
     sa "No, but I just wasn't expecting you to just leave. Rude."
 
     menu:
-        "Invite her":
-            $ add_point(KCT.BOYFRIEND)
+        "Invite her" (samantha=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             $ samantha.points += 1
             $ v11_invite_sam_europe = True
             scene v11samp2e
@@ -246,11 +246,11 @@ label v11_samantha_packing:
             scene v11samp2
             with dissolve
 
-            play sound "sounds/doorclose.mp3"
+            play sound sound.door_close
 
             u "(One more on the list.)"
 
-            play sound "sounds/dooropen.mp3"
+            play sound sound.door_open
             scene v11samp2j # FPP. Same as 2a, Samantha has her upper body appearing through the doorway, happy expression, mouth open, looking at MC
             with dissolve
 
@@ -310,14 +310,14 @@ label v11_samantha_packing:
             scene v11samp2
             with dissolve
 
-            play sound "sounds/doorclose.mp3"
+            play sound sound.door_close
 
             u "(Woah.)"
 
     scene v11samp2
     with dissolve
         
-    play sound "sounds/call.mp3"
+    play sound sound.call
     pause 2.25
             
     stop music fadeout 3

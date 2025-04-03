@@ -8,7 +8,7 @@ label v13_start:
     scene v13s1_1 # FPP. MC and Riley sitting in front of each other at the cafe table, Riley slightly angry, mouth open
     with dissolve
 
-    play music "music/v13/Track Scene 1_1.mp3" fadein 2
+    play music music.v13_Track_Scene_1_1 fadein 2
 
     ri "Since he decided to take something special from me and ruin it... Let's ruin something special of his. He thinks it's entertaining to not only frame someone, but also embarrass a so-called friend in the process."
 
@@ -148,7 +148,7 @@ label v13_start:
     ro "ALRIGHT STUDENTS! LET'S GET OUR THINGS AND GET ON THE BUS!"
 
     stop music fadeout 3
-    play music "music/v13/Track Scene 1_2.mp3" fadein 2
+    play music music.v13_Track_Scene_1_2 fadein 2
 
     scene v13s1_1b
     with dissolve
@@ -184,9 +184,9 @@ label v13_start:
     with dissolve
 
     menu:
-        "Don't let it happen again":
-            $ add_point(KCT.BRO)
-            $ add_point(KCT.TROUBLEMAKER)
+        "Don't let it happen again" (bro=1.0, troublemaker=1.0):
+            $ reputation.add_point(RepComponent.BRO)
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
             u "Just don't let it happen again, okay? I don't like being blamed for shit I didn't do."
 
             scene v13s1_3c
@@ -194,8 +194,8 @@ label v13_start:
 
             ri "Of course, and I know you're a true friend. I won't jump to conclusions so quickly in the future."
 
-        "Apology accepted":
-            $ add_point(KCT.BOYFRIEND)
+        "Apology accepted" (boyfriend=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             $ riley.points += 1
 
             scene v13s1_3d

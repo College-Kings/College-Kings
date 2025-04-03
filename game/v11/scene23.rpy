@@ -8,7 +8,7 @@
 #screen 3: Penelope(Stood at the helm display)(to the right of screen 2)
 
 label v11s23_freeroamstart: # Start of freeroam
-    play music "music/v11/Track Scene 14.mp3" fadein 2
+    play music music.v11_Track_Scene_14 fadein 2
     call screen v11s23_entrance
     
 label v11s23_chris1:
@@ -24,7 +24,7 @@ label v11s23_chris1:
 
     ch "Look man, I'm sorry but I need to handle this right now. I can't talk."
 
-    if not joinwolves: # if Apes
+    if mc.frat == Frat.APES: # if Apes
         scene v11frmch1
         with dissolve
 
@@ -242,8 +242,8 @@ label v11s23_mrlee1:
     lee "No, no it isn't. Come to find out this sculpture is of a man she was cheating on me with and to think I'm actually the one that gifted it to the museum where it's been for 36 years."
 
     menu:
-        "Laugh":
-            $ add_point(KCT.TROUBLEMAKER)
+        "Laugh" (troublemaker=1.0):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
             scene v11frmlee1a
             with dissolve
 
@@ -254,8 +254,8 @@ label v11s23_mrlee1:
 
             lee "It wasn't so funny back then."
 
-        "Feel bad":
-            $ add_point(KCT.BRO)
+        "Feel bad" (bro=1.0):
+            $ reputation.add_point(RepComponent.BRO)
             scene v11frmlee1b
             with dissolve
 
@@ -374,8 +374,8 @@ label v11s23_riley1:
     ri "*Mocking voice* You're gonna get us kicked out of here! *Laughs*"
 
     menu:
-        "Seek revenge":
-            $ add_point(KCT.TROUBLEMAKER)
+        "Seek revenge" (troublemaker=1.0):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             scene v11frmri3a # FPP Same angle as v11frmri3, Riley smiling with mouth closed
             with dissolve
@@ -392,7 +392,7 @@ label v11s23_riley1:
 
             u "Yeah, just a little bit of excitement..."
 
-            if riley.relationship < Relationship.FWB:
+            if CharacterService.is_friend(riley):
                 scene v11frmri3b # FPP Same angle as v11frmri3, Riley raising her eyebrow and smiling, mouth open
                 with dissolve
 
@@ -445,7 +445,7 @@ label v11s23_riley1:
 
             u "What's the reason then?"
 
-            if riley.relationship < Relationship.FWB:
+            if CharacterService.is_friend(riley):
                 scene v11frmri3b
                 with dissolve
 
@@ -729,11 +729,11 @@ label v11s23_penelope1:
 
     pe "No no, it's not that. I'm just not used to it. You literally go out of your way to help me."
 
-    if penelope.relationship >= Relationship.LIKES:
+    if CharacterService.is_dating(penelope):
         menu:
-            "Flirt":
+            "Flirt" (boyfriend=1.0):
                 $ v11s23_penelope_date = True
-                $ add_point(KCT.BOYFRIEND)
+                $ reputation.add_point(RepComponent.BOYFRIEND)
 
                 scene v11frmpe10
                 with dissolve
@@ -750,7 +750,7 @@ label v11s23_penelope1:
 
                 u "Pretty sure I did."
 
-                play sound "sounds/kiss.mp3"
+                play sound sound.kiss
 
                 scene v11frmpe11 # TPP Show Penelope leaning over and kissing MC on the lips
                 with dissolve
@@ -1137,8 +1137,8 @@ label v11s23_freeroamend:
             # Transition to Scene 25
             jump v11_hotel_bar
 
-        "Sneak out":
-            $ add_point(KCT.TROUBLEMAKER)
+        "Sneak out" (troublemaker=1.0):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             scene v11frm1b
             with dissolve

@@ -3,7 +3,7 @@
 # Characters: MC (Outfit 7),Josh (Outfit 2),Imre (Outfit 2),Imre (Outfit 4),Grayson (Outfit 3)
 # Time: Saturday Night
 label v10_mc_vs_imre_fight:
-    play music "music/v10/Track Scene 6.mp3" fadein 2
+    play music music.ck1.v10.Track_Scene_6 fadein 2
     scene v10mvi1 # FPP. Show imre and grayson near ring, Imre Mouth open Grayson mouth closed
     with dissolve
     ry "Hey man real quick. I'm not saying I think you would, but I know you and Imre are friends and have been close since you started college..."
@@ -50,7 +50,6 @@ label v10_mc_vs_imre_fight:
 
     imre "Ready to get your ass kicked?"
 
-    # TODO: Update Imre fight
     menu:
         "Fight Imre":
             $ v10_imre_fight = True
@@ -68,16 +67,16 @@ label v10_mc_vs_imre_fight:
                 
             scene v10mvi3
 
-            # call screen fight_typeMenu
+            call screen fight_typeMenu
 
             if fight_type == "normal":
                 $ simImreFight = False
                 $ imreStance = renpy.random.choice([1, 2, 3, 4])
                 $ imreAttack = renpy.random.choice([1, 2, 3, 4])
 
-                # call screen fight_selectDifficulty
+                call screen fight_selectDifficulty
 
-                # call screen fight_keybindOptions
+                call screen fight_keybindOptions
 
             elif fight_type == "simReal" or fight_type == "simWin":
                 $ simImreFight = True
@@ -100,7 +99,7 @@ label v10_mc_vs_imre_fight:
             label imre_McAttack:
                 $ stance = 2 # Defence
 
-                # show screen fight_overlay(stance="defend") TODO: Update fight code
+                show screen fight_overlay(stance="defend")
 
                 # Imre hook
                 if imreAttack == 1:
@@ -119,8 +118,7 @@ label v10_mc_vs_imre_fight:
                             jump imre_McKickBlock
 
                     else:
-                        pass
-                        # call screen imreFight_MCDefend(attack="Hook")
+                        call screen imreFight_MCDefend(attack="Hook")
 
                 # Imre jab
                 if imreAttack == 2:
@@ -139,8 +137,7 @@ label v10_mc_vs_imre_fight:
                             jump imre_McJabBlock
 
                     else:
-                        pass
-                        # call screen imreFight_MCDefend(attack="Jab")
+                        call screen imreFight_MCDefend(attack="Jab")
 
                 # Imre body hook
                 if imreAttack == 3:
@@ -159,8 +156,7 @@ label v10_mc_vs_imre_fight:
                             jump imre_McHookBlock
 
                     else:
-                        pass
-                        # call screen imreFight_MCDefend(attack="BodyHook")
+                        call screen imreFight_MCDefend(attack="BodyHook")
 
                 # Imre kick
                 if imreAttack == 4:
@@ -179,8 +175,7 @@ label v10_mc_vs_imre_fight:
                             jump imre_McBodyhookBlock
 
                     else:
-                        pass
-                        # call screen imreFight_MCDefend(attack="Kick")
+                        call screen imreFight_MCDefend(attack="Kick")
 
 
             # label Attacker_TargetAction
@@ -252,7 +247,7 @@ label v10_mc_vs_imre_fight:
 
             label imre_McKickHit: # Imre Kicks MC (Hits/No Block)
 
-                play sound "sounds/ks.mp3"
+                play sound sound.hit
                 $ youDamage += 1
                 scene Imre_Kick_hit
                 with hpunch
@@ -265,7 +260,7 @@ label v10_mc_vs_imre_fight:
 
             label imre_McKickBlock: # Imre Kicks MC (Blocked)
 
-                play sound "sounds/ks.mp3"
+                play sound sound.hit
                 scene Imre_Kick_block
                 with hpunch
 
@@ -277,7 +272,7 @@ label v10_mc_vs_imre_fight:
 
             label imre_McJabHit: # Imre Kicks MC (Hits/No Block)
 
-                play sound "sounds/js.mp3"
+                play sound sound.hit
                 $ youDamage += 1
                 scene Imre_Jab_hit
                 with hpunch
@@ -292,7 +287,7 @@ label v10_mc_vs_imre_fight:
 
             label imre_McJabBlock: # Imre Kicks MC (Hits/No Block)
 
-                play sound "sounds/bs.mp3"
+                play sound sound.hit
                 scene Imre_Hook_block
                 with hpunch
 
@@ -304,7 +299,7 @@ label v10_mc_vs_imre_fight:
 
             label imre_McHookHit: # Imre Kicks MC (Hits/No Block)
 
-                play sound "sounds/hs.mp3"
+                play sound sound.hit
                 $ youDamage += 1
                 scene Imre_Hook_hit
                 with hpunch
@@ -319,7 +314,7 @@ label v10_mc_vs_imre_fight:
 
             label imre_McHookBlock: # Imre Kicks MC (Hits/No Block)
 
-                play sound "sounds/bs.mp3"
+                play sound sound.hit
                 scene Imre_Hook_block
                 with hpunch
 
@@ -331,7 +326,7 @@ label v10_mc_vs_imre_fight:
 
             label imre_McBodyhookHit: # Imre Kicks MC (Hits/No Block)
 
-                play sound "sounds/hs.mp3"
+                play sound sound.hit
                 $ youDamage += 1
                 scene Imre_BodyJab_hit
                 with hpunch
@@ -344,7 +339,7 @@ label v10_mc_vs_imre_fight:
 
             label imre_McBodyhookBlock: # Imre Kicks MC (Hits/No Block)
 
-                play sound "sounds/bs.mp3"
+                play sound sound.hit
                 scene Imre_BodyJab_block
                 with hpunch
 
@@ -394,8 +389,7 @@ label v10_mc_vs_imre_fight:
                         if simyou == 4 or simyou == 5 or simyou == 6:
                             jump mc_imreKickHit
                 else:
-                    pass
-                    # call screen imreFight_MCAttack
+                    call screen imreFight_MCAttack
 
 
             label mc_imreFightEnd: # MC wins fight against Imre
@@ -408,9 +402,9 @@ label v10_mc_vs_imre_fight:
                 jump imre_fightEnd
 
             label imre_fightEnd:
-                # hide screen imreFight_MCAttack
-                # hide screen imreFight_MCDefend
-                # hide screen fight_overlay TODO: Update fight code
+                hide screen imreFight_MCAttack
+                hide screen imreFight_MCDefend
+                hide screen fight_overlay
                 $ youDamage = 0
                 $ stance = 0
                 stop music fadeout 3
@@ -421,7 +415,7 @@ label v10_mc_vs_imre_fight:
             scene v10mvi3 # FPP. Show Imre infront of camera in ring, mouth closed, hands raised ready to fight.
             with dissolve
 
-            $ grant_achievement("bros_before_blows")
+            grant Achievement("bros_before_blows", "Don't fight Imre at the Brawl")
             
             u "I don't think I can do this. I- I... I'm sorry guys."
 

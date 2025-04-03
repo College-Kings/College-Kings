@@ -4,7 +4,7 @@
 # Time: Morning 
 
 label v13_ticket_transfer:
-    play music "music/v13/Track Scene 7.mp3" fadein 2
+    play music music.ck1.v13.Track_Scene_7 fadein 2
 
     if v12_murder_count >= 5: # -If 5+ kills
         scene v13s7_1 # TPP Show MC in lobby, looking around and wondering what to do next
@@ -192,10 +192,10 @@ label v13_ticket_transfer:
             with dissolve
 
             menu:
-                "Aubrey":
+                "Aubrey" (aubrey=1.0):
                     $ aubrey.points += 1
 
-                "Penelope":
+                "Penelope" (penelope=1.0):
                     $ penelope.points += 1
                     $ v13_penelope_concert = True
 
@@ -256,11 +256,11 @@ label v13_ticket_transfer:
 
                     u "Of course. I can't wait for this."
 
-                    if penelope.relationship >= Relationship.LIKES:
+                    if CharacterService.is_dating(penelope):
                         scene v13s7_9 # TPP Show Penelope kissing MC
                         with dissolve
 
-                        play sound "sounds/kiss.mp3"
+                        play sound sound.kiss
                         pause 1.5
 
                         scene v13s7_9a # TPP Same angle as v13s7_9, Penelope leaning back after kissing MC, Penelope smiling with mouth open
@@ -453,7 +453,7 @@ label v13_ticket_transfer:
 
         u "Haha, I can do that. Thanks for inviting me by the way."
 
-        if penelope.relationship >= Relationship.LIKES:
+        if CharacterService.is_dating(penelope):
             scene v13s7_8a
             with dissolve
 

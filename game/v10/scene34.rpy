@@ -8,7 +8,7 @@ label v10_autumn_announcement:
     scene v10samw1 # FPP. Show Autumn standing near the mud wrestling pool, smiling, mouth open.
     with dissolve
     stop music fadeout 3
-    play music "music/v10/Track Scene 34.mp3" fadein 2
+    play music music.ck1.v10.Track_Scene_34 fadein 2
 
     aut "Alright everyone, if you could all gather around."
 
@@ -84,16 +84,16 @@ label v10_autumn_announcement:
     scene v10samw6 # FPP. Show Chloe and Nora in the line-up of girls competing, both smiling, mouths closed.
     with fade
     menu:
-        "Root for Chloe":
+        "Root for Chloe" (boyfriend=1.0):
             $ chloe.points += 1
             $ nora.points -= 1
-            $ add_point(KCT.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             scene v10samw6 
             with dissolve
     
             u "Let's go Chloe!"
 
-            if chloe.relationship <= Relationship.MAD: # chloe mad at mc
+            if CharacterService.is_mad(chloe): # chloe mad at mc
                 scene v10samw7 # tpp. show mc hand in air mouth open
                 with dissolve
 
@@ -138,10 +138,10 @@ label v10_autumn_announcement:
 
             u "Okay Aubrey!"
 
-        "Root for Emily":
+        "Root for Emily" (boyfriend=1.0):
             $ forgiveemily = True
             $ emily.points += 1
-            $ add_point(KCT.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             scene v10samw6a
             with dissolve
 
@@ -155,10 +155,10 @@ label v10_autumn_announcement:
     scene v10samw6b # FPP. Same camera as v10samw6. Show Riley and Amber in the line-up of girls competing, both smiling, mouths closed.
     with fade
     menu:
-        "Root for Riley":
+        "Root for Riley" (boyfriend=1.0):
             $ amber.points -= 1
             $ riley.points += 1
-            $ add_point(KCT.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             scene v10samw6b
             with dissolve
 

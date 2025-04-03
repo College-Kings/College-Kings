@@ -4,7 +4,7 @@
 # Time: Tuesday Night
 
 label v8_ending:
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         scene v8send1 # TPP. Show MC lying on his Wolves bed, looking tired.
         with fade
 
@@ -39,23 +39,23 @@ label v8_ending:
         scene v8send3a # TPP. Same camera as v8send3, MC checking his phone, looking confused.
         with dissolve
 
-        $ imre.messenger.newMessage(_("Dude, you see this shit on Kiwii?"), force_send=True)
-        $ imre.messenger.addReply(_("No, what?"))
-        $ imre.messenger.newMessage(_("IDK, it's crazy"))
+        $ MessengerService.new_message(imre, _("Dude, you see this shit on Kiwii?"))
+        $ MessengerService.add_reply(imre, _("No, what?"))
+        $ MessengerService.new_message(imre, _("IDK, it's crazy"))
 
-        $ newKiwiiPost = KiwiiPost(chris, "v8/red_square.webp", "", numberLikes=renpy.random.randint(100, 200))
-        $ newKiwiiPost = KiwiiPost(grayson, "v8/red_square.webp", "", numberLikes=renpy.random.randint(100, 200))
-        $ newKiwiiPost = KiwiiPost(aaron, "v8/red_square.webp", "", numberLikes=renpy.random.randint(100, 200))
-        $ newKiwiiPost = KiwiiPost(cameron, "v8/red_square.webp", "", numberLikes=renpy.random.randint(100, 200))
-        $ newKiwiiPost = KiwiiPost(aubrey, "v8/red_square.webp", "", numberLikes=renpy.random.randint(100, 200))
-        $ newKiwiiPost = KiwiiPost(samantha, "v8/red_square.webp", "", numberLikes=renpy.random.randint(100, 200))
+        $ kiwii_post = KiwiiService.new_post(chris, "ck1_v8_red_square", "", number_likes=renpy.random.randint(100, 200))
+        $ kiwii_post = KiwiiService.new_post(grayson, "ck1_v8_red_square", "", number_likes=renpy.random.randint(100, 200))
+        $ kiwii_post = KiwiiService.new_post(aaron, "ck1_v8_red_square", "", number_likes=renpy.random.randint(100, 200))
+        $ kiwii_post = KiwiiService.new_post(cameron, "ck1_v8_red_square", "", number_likes=renpy.random.randint(100, 200))
+        $ kiwii_post = KiwiiService.new_post(aubrey, "ck1_v8_red_square", "", number_likes=renpy.random.randint(100, 200))
+        $ kiwii_post = KiwiiService.new_post(samantha, "ck1_v8_red_square", "", number_likes=renpy.random.randint(100, 200))
         
         scene v8send4 # TPP. Show MC, MC looks really confused.
         with dissolve
 
         u "(What the...? Is this about the upcoming fight?)"
 
-        jump v8end
+        jump v9start
 
     else:
         scene v8send5 # TPP. Show MC lying on his Apes bed, looking tired.
@@ -91,36 +91,26 @@ label v8_ending:
 
         scene v8send7a # TPP. Same camera as v8send7, MC checking his phone, looking confused.
         with dissolve
-        
 
-        $ ryan.messenger.newMessage(_("What the hell's happening on Kiwii?"), force_send=True)
-        $ ryan.messenger.addReply(_("I don't know. What is it?"))
-        $ ryan.messenger.newMessage(_("Fuckin check it out man. Crazy shit"))
+        $ MessengerService.new_message(ryan, _("What the hell's happening on Kiwii?"))
+        $ MessengerService.add_reply(ryan, _("I don't know. What is it?"))
+        $ MessengerService.new_message(ryan, _("Fuckin check it out man. Crazy shit"))
 
-        $ newKiwiiPost = KiwiiPost(chris, "v8/red_square.webp", "", numberLikes=renpy.random.randint(100, 200))
-        $ newKiwiiPost = KiwiiPost(grayson, "v8/red_square.webp", "", numberLikes=renpy.random.randint(100, 200))
-        $ newKiwiiPost = KiwiiPost(aaron, "v8/red_square.webp", "", numberLikes=renpy.random.randint(100, 200))
-        $ newKiwiiPost = KiwiiPost(cameron, "v8/red_square.webp", "", numberLikes=renpy.random.randint(100, 200))
-        $ newKiwiiPost = KiwiiPost(aubrey, "v8/red_square.webp", "", numberLikes=renpy.random.randint(100, 200))
-        $ newKiwiiPost = KiwiiPost(samantha, "v8/red_square.webp", "", numberLikes=renpy.random.randint(100, 200))
+        $ kiwii_post = KiwiiService.new_post(chris, "ck1_v8_red_square", "", number_likes=renpy.random.randint(100, 200))
+        $ kiwii_post = KiwiiService.new_post(grayson, "ck1_v8_red_square", "", number_likes=renpy.random.randint(100, 200))
+        $ kiwii_post = KiwiiService.new_post(aaron, "ck1_v8_red_square", "", number_likes=renpy.random.randint(100, 200))
+        $ kiwii_post = KiwiiService.new_post(cameron, "ck1_v8_red_square", "", number_likes=renpy.random.randint(100, 200))
+        $ kiwii_post = KiwiiService.new_post(aubrey, "ck1_v8_red_square", "", number_likes=renpy.random.randint(100, 200))
+        $ kiwii_post = KiwiiService.new_post(samantha, "ck1_v8_red_square", "", number_likes=renpy.random.randint(100, 200))
 
-        label v8s46_phoneCheck:
-            if ryan.messenger.replies:
-                call screen phone
-            if ryan.messenger.replies:
+        while MessengerService.has_replies(ryan):
+            call screen phone
+            if MessengerService.has_replies(ryan):
                 u "I need to check my phone."
-                jump v8s46_phoneCheck
 
         u "(What the...? Is this about the upcoming fight?)"
 
         scene v8send8 # TPP. Show MC, MC looks really confused.
         with dissolve
 
-        jump v8end
-
-label v8end:
-    if not renpy.loadable("v9/scene01.rpy"):
-        call screen save_now(9)
-        with Fade(1, 0, 1)
-
-    jump v9start
+        jump v9start

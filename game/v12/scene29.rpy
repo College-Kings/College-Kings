@@ -10,9 +10,9 @@ label v12_lauren_sex:
 
     pause 0.75
 
-    play music "music/v12/Track Scene 29_1.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_29_1 fadein 2
 
-    if lauren.relationship >= Relationship.GIRLFRIEND:
+    if CharacterService.is_girlfriend(lauren):
         scene v12las2 # TPP. Show Lauren kissing MC, MC still sitting down
         with dissolve
 
@@ -124,7 +124,7 @@ label v12_lauren_sex:
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 29_2.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_29_2 fadein 2
 
     scene v12las9 # TPP. Show MC wearing his suit, looking at the mirror, smiling, posing seductively, mouth closed
     with dissolve
@@ -162,7 +162,7 @@ label v12_lauren_sex:
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 29_3.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_29_3 fadein 2
 
     scene v12las14 # FPP. MC and Lauren in lobby, MC and Lauren looking at each other, Lauren embarassed, mouth closed, looking at the ground, blushing
     with dissolve
@@ -277,7 +277,7 @@ label v12_lauren_sex:
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 29_4.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_29_4 fadein 2
 
     scene v12las22 # FPP. MC and Lauren inside the restaurant, standing next to each other, greeter in front of them MC looking at the greeter, greeter looking at Lauren, greeter slight smile, mouth open
     with dissolve
@@ -338,8 +338,8 @@ label v12_lauren_sex:
     with dissolve
 
     menu:
-        "Let her vent":
-            $ add_point(KCT.BRO)
+        "Let her vent" (bro=1.0):
+            $ reputation.add_point(RepComponent.BRO)
             scene v12las23b
             with dissolve
 
@@ -355,8 +355,8 @@ label v12_lauren_sex:
 
             u "It's not a problem madam. Thank you."
 
-        "Comfort her":
-            $ add_point(KCT.BOYFRIEND)
+        "Comfort her" (boyfriend=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             $ v12_lauren_points += 1
 
             u "Lauren, relax. *Chuckles* I appreciate that you planned on doing this, and no matter how it happened, it's not a big deal. Don't stress."
@@ -440,7 +440,7 @@ label v12_lauren_sex:
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 29_5.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_29_5 fadein 2
 
     scene v12las28 # FPP. MC and Lauren standing in front of the game, Lauren looking at MC, MC looking at Lauren, Lauren slightly sad, mouth open
     with dissolve
@@ -471,8 +471,8 @@ label v12_lauren_sex:
     with dissolve
 
     menu:
-        "Talk to her":
-            $ add_point(KCT.BRO)
+        "Talk to her" (bro=1.0):
+            $ reputation.add_point(RepComponent.BRO)
 
             u "I'm not. What actually matters to me is the amount of effort you've put into the night, not the way it's going. What's the saying? \"It's the thought that counts\"? *Chuckles*"
 
@@ -491,8 +491,8 @@ label v12_lauren_sex:
 
             la "That means a lot... Thank you, [name]."
 
-        "Hold her":
-            $ add_point(KCT.BOYFRIEND)
+        "Hold her" (boyfriend=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             $ v12_lauren_points += 1
 
             scene v12las31b # FPP. Same as v12las31a, one of MC's around lauren, other hand holding lauren's hand, lauren sad, mouth closed
@@ -576,7 +576,7 @@ label v12_lauren_sex:
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 29_6.mp3" fadein 2
+    play music music.v12_Track_Scene_29_6 fadein 2
 
     scene v12las36 # FPP. MC and Lauren in hotel lobby, looking at each other, Lauren slight smile, mouth open
     with dissolve
@@ -602,8 +602,8 @@ label v12_lauren_sex:
     with dissolve
 
     menu:
-        "We'll do this another day":
-            $ add_point(KCT.BRO)
+        "We'll do this another day" (bro=1.0):
+            $ reputation.add_point(RepComponent.BRO)
 
             u "Lauren, you tried your best to make tonight special and I respect and love you for that. Just the fact that you did all of this proves how much you care about me and our relationship."
 
@@ -644,8 +644,8 @@ label v12_lauren_sex:
 
             jump v12_room_sneak
 
-        "A little extra effort...":
-            $ add_point(KCT.BOYFRIEND)
+        "A little extra effort..." (boyfriend=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             $ v12_lauren_points += 1
 
             scene v12las42 # TPP. Show MC trying to budge the door open, struggling, mouth open
@@ -664,7 +664,7 @@ label v12_lauren_sex:
             pause 0.75
 
             stop music fadeout 3
-            play music "music/v12/Track Scene 29_7.mp3" fadein 2
+            play music music.ck1.v12.Track_Scene_29_7 fadein 2
 
             scene v12las44 # FPP. MC and Lauren on the roof, looking at each other, Lauren smiling, mouth open
             with dissolve
@@ -736,11 +736,11 @@ label v12_lauren_sex:
 
             u "Yes. *Chuckles* Yes, Lauren."
 
-            if v12_lauren_points >= 3 or kct == "loyal":
+            if v12_lauren_points >= 3 or reputation() == Reputations.LOYAL:
                 $ sceneList.add("v12_lauren")
 
                 if v12_lauren_points < 3:
-                    call screen kct_popup
+                    call screen reputation_popup
 
                 label v12_lauren_sex_sg:
                 
@@ -751,7 +751,7 @@ label v12_lauren_sex:
 
                 scene v12las47
                 with dissolve
-                play sound "sounds/kiss.mp3"
+                play sound sound.kiss
 
                 pause
 
@@ -818,17 +818,22 @@ label v12_lauren_sex:
                 la "*Chuckles* I'm sure he is."
 
                 stop music fadeout 3
-                play music "music/v12/Track Scene 29_8.mp3" fadein 2
+                play music music.v12_Track_Scene_29_8 fadein 2
 
                 scene v12las53 # TPP. Show Lauren removing her dress, MC starting to remove his shirt, both smiling, mouths closed
                 with dissolve
 
                 pause
 
-                if config_censored:
+                if is_censored:
                     call screen censored_popup("v12s29_nsfwSkipLabel1")
 
                 show screen v12s29_lauren_sex_overlay
+
+                lovense vibrate 2
+                lovense rotate 1
+                lovense suction 1
+                lovense thrust 1
 
                 scene v12las53a # TPP. Same as v12las53, Show Lauren in her panties, stopping MC from removing his shirt, Lauren smiling, mouth open, MC smiling, mouth closed
                 with dissolve
@@ -861,9 +866,15 @@ label v12_lauren_sex:
                 pause
 
                 label v12s29_lauren_fingering: 
+                    lovense vibrate 3
+                    lovense rotate 2 
+                    lovense suction 2
+                    lovense thrust 2
+                    lovense finger 2
+
                     scene v12las54c # TPP. Same as v12las54b, MC kissing Lauren's lips, hand over her pussy
                     with dissolve
-                    play sound "sounds/kiss.mp3"
+                    play sound sound.kiss
 
                     pause
 
@@ -890,6 +901,12 @@ label v12_lauren_sex:
 
                     la "Mmm, fuck... That feels good."
 
+                    lovense vibrate 5
+                    lovense rotate 3
+                    lovense suction 3
+                    lovense thrust 3
+                    lovense finger 3
+
                     scene v12laufi2f # Ignore as animation
                     with dissolve
                     pause
@@ -907,6 +924,11 @@ label v12_lauren_sex:
                     pause
 
                 label v12s29_lauren_blowjob:
+                    lovense vibrate 7
+                    lovense rotate 5
+                    lovense suction 5
+                    lovense thrust 5
+
                     image v12laubj = Movie(play="images/v12/Scene 29/v12laubj.webm", loop=True, image="images/v12/Scene 29/v12laubjStart.webp", start_image="images/v12/Scene 29/v12laubjStart.webp") # Lauren blowjob
                     image v12laubjf = Movie(play="images/v12/Scene 29/v12laubjf.webm", loop=True, image="images/v12/Scene 29/v12laubjStart.webp", start_image="images/v12/Scene 29/v12laubjStart.webp") # Lauren blowjob spedup
                     image v12laubj2 = Movie(play="images/v12/Scene 29/v12laubj2.webm", loop=True, image="images/v12/Scene 29/v12laubj2Start.webp", start_image="images/v12/Scene 29/v12laubj2Start.webp") # Lauren blowjob TPP 2
@@ -923,6 +945,11 @@ label v12_lauren_sex:
                     pause
 
                     u "Damn... you're so fucking good at this, Lauren..."
+
+                    lovense vibrate 9
+                    lovense rotate 6
+                    lovense suction 6
+                    lovense thrust 6
 
                     scene v12laubj2 # Ignore as animation
                     with dissolve
@@ -948,7 +975,7 @@ label v12_lauren_sex:
 
                     scene v12las58 # TPP. Show MC kissing Lauren
                     with dissolve
-                    play sound "sounds/kiss.mp3"
+                    play sound sound.kiss
 
                     pause
 
@@ -968,6 +995,11 @@ label v12_lauren_sex:
                     u "I will."
 
                 label v12s29_lauren_legs_up:
+                    lovense vibrate 10
+                    lovense rotate 8
+                    lovense suction 8
+                    lovense thrust 8
+
                     image v12laumi = Movie(play="images/v12/Scene 29/v12laumi.webm", loop=True, image="images/v12/Scene 29/v12laumiStart.webp", start_image="images/v12/Scene 29/v12laumiStart.webp") # Lauren missionary
                     image v12laumif = Movie(play="images/v12/Scene 29/v12laumif.webm", loop=True, image="images/v12/Scene 29/v12laumiStart.webp", start_image="images/v12/Scene 29/v12laumiStart.webp") # Lauren missionary spedup
                     image v12laumi2 = Movie(play="images/v12/Scene 29/v12laumi2.webm", loop=True, image="images/v12/Scene 29/v12laumi2Start.webp", start_image="images/v12/Scene 29/v12laumi2Start.webp") # Lauren missionary TPP 2
@@ -993,6 +1025,11 @@ label v12_lauren_sex:
 
                     la "Mhmm! Yes... Please, keep going!"
 
+                    lovense vibrate 13
+                    lovense rotate 10
+                    lovense suction 10
+                    lovense thrust 10
+
                     scene v12laumi2f # Ignore as animation
                     with dissolve
                     pause
@@ -1010,6 +1047,11 @@ label v12_lauren_sex:
                     pause
 
                 label v12s29_lauren_cowgirl:
+                    lovense vibrate 15
+                    lovense rotate 12
+                    lovense suction 12
+                    lovense thrust 12
+
                     image v12laucg = Movie(play="images/v12/Scene 29/v12laucg.webm", loop=True, image="images/v12/Scene 29/v12laucgStart.webp", start_image="images/v12/Scene 29/v12laucgStart.webp") # Lauren cowgirl
                     image v12laucgf = Movie(play="images/v12/Scene 29/v12laucgf.webm", loop=True, image="images/v12/Scene 29/v12laucgStart.webp", start_image="images/v12/Scene 29/v12laucgStart.webp") # Lauren cowgirl spedup
                     image v12laucg2 = Movie(play="images/v12/Scene 29/v12laucg2.webm", loop=True, image="images/v12/Scene 29/v12laucg2Start.webp", start_image="images/v12/Scene 29/v12laucg2Start.webp") # Lauren cowgirl FPP
@@ -1039,6 +1081,11 @@ label v12_lauren_sex:
                     
                     u "Damn it Lauren, you're so fucking tight..."
 
+                    lovense vibrate 17
+                    lovense rotate 15
+                    lovense suction 15
+                    lovense thrust 15
+
                     scene v12laucg2f # Ignore as animation
                     with dissolve
                     pause
@@ -1064,16 +1111,18 @@ label v12_lauren_sex:
 
                 pause
 
+                lovense stop
+
                 scene v12las66 # FPP. MC and Lauren lieing down next to each other, looking at each other, Lauren smiling, mouth open, make her body a bit sweaty if possible
                 with dissolve
 
-                if lauren.relationship >= Relationship.GIRLFRIEND and (amber.relationship < Relationship.FWB) and (aubrey.relationship < Relationship.FWB) and (candy.relationship < Relationship.FWB) and (chloe.relationship < Relationship.FWB) and (emily.relationship < Relationship.FWB) and (evelyn.relationship < Relationship.LIKES) and (lindsey.relationship < Relationship.KISS) and (ms_rose.relationship < Relationship.FWB) and (penelope.relationship < Relationship.LIKES) and (riley.relationship < Relationship.FWB) and (samantha.relationship < Relationship.MOVE):
-                    $ grant_achievement("worth_the_wait")
+                if CharacterService.is_girlfriend(lauren) and (not CharacterService.is_fwb(amber)) and CharacterService.is_friend(aubrey) and CharacterService.is_friend(candy) and CharacterService.is_friend(chloe) and CharacterService.is_friend(emily) and (not v6_evelyn_successful_date) and CharacterService.is_friend(lindsey) and (not CharacterService.is_fwb(ms_rose)) and CharacterService.is_friend(penelope) and CharacterService.is_friend(riley) and CharacterService.is_friend(samantha):
+                    grant Achievement("worth_the_wait", "Consummate an exclusive relationship with Lauren")
 
-                if lauren.relationship < Relationship.GIRLFRIEND and chloe.relationship >= Relationship.GIRLFRIEND:
-                    $ grant_achievement("two_timer")
+                if not CharacterService.is_girlfriend(lauren) and CharacterService.is_girlfriend(chloe):
+                    grant Achievement("two_timer", "Kiss Emily back")
 
-                $ lauren.relationship = Relationship.GIRLFRIEND
+                $ CharacterService.set_relationship(lauren, Relationship.GIRLFRIEND)
 
                 la "Phew! Haha... That was absolutely perfect."
 
@@ -1130,7 +1179,7 @@ label v12_lauren_sex:
                 pause 0.75
 
                 stop music fadeout 3
-                play music "music/v12/Track Scene 29_9.mp3" fadein 2
+                play music music.ck1.v12.Track_Scene_29_9 fadein 2
 
                 scene v12las71 # FPP. MC outside the room, Lauren inside, both in front of door, looking at each other, Lauren smiling, mouth open
                 with dissolve
@@ -1144,12 +1193,12 @@ label v12_lauren_sex:
 
                 scene v12las72 # TPP. Show Lauren kissing MC
                 with dissolve
-                play sound "sounds/kiss.mp3"
+                play sound sound.kiss
 
                 pause
 
                 stop music fadeout 3
-                play music "music/v12/Track Scene 29_6.mp3" fadein 2
+                play music music.v12_Track_Scene_29_6 fadein 2
 
                 scene v12las71
                 with dissolve
@@ -1194,7 +1243,7 @@ label v12_lauren_sex:
                 scene v12las46e
                 with dissolve
                 
-                call screen kct_popup(required_kct="loyal")
+                call screen reputation_popup(required_reputation="loyal")
 
                 la "Let's not rush this, okay? When all is said and done, I want our first time to be all that I've dreamed of."
 

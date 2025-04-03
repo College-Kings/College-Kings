@@ -9,14 +9,15 @@ label hallway_w_nora:
 
     pause 0.5
 
-    play music "music/mchill2.mp3"
-    queue music "music/mindie4.mp3"
+    play music music.ck1.mchill2
+    queue music music.ck1.mindie4
 
     scene v8shal2 # TPP. Show MC continuing to walk down the hallway, MC notices Nora and Nora notices MC.
     with dissolve
 
-    if nora.relationship <= Relationship.MAD:
-        $ nora.relationship = Relationship.FRIEND
+    if CharacterService.is_mad(nora):
+        $ CharacterService.remove_mood(nora, Moods.MAD)
+        
         scene v8shal3 # FPP. Close up Nora, Nora neutral expression, mouth open.
         with dissolve
         no "Hey, [name]... uh... got a sec?"
@@ -40,6 +41,8 @@ label hallway_w_nora:
         jump cont_nora_hall
 
     else:
+        $ v8_nora_likes_mc = True
+
         scene v8shal3d # FPP. Same camera as v8shal3, Nora smile, mouth open.
         with dissolve
         no "Hey! [name] I'd like to speak with you."
@@ -48,7 +51,6 @@ label hallway_w_nora:
         with dissolve
         u "Sure! What's up?"
 
-        $ nora.relationship = Relationship.LIKES
 
         jump cont_nora_hall
 
@@ -62,8 +64,8 @@ label cont_nora_hall:
     with dissolve
 
     menu:
-        "Act excited":
-            $ add_point(KCT.BOYFRIEND)
+        "Act excited" (boyfriend=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             jump nora_trip_exc
 
         "Act nervous":
@@ -150,8 +152,8 @@ label cont_nora_hall_2:
     with dissolve
 
     menu:
-        "Accept invitation":
-            $ add_point(KCT.BOYFRIEND)
+        "Accept invitation" (boyfriend=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             jump nora_hall_eu_go
         "Consider it":
             jump nora_hall_eu_no
@@ -192,8 +194,8 @@ label cont_nora_hall_3:
     with dissolve
 
     menu:
-        "Help Nora":
-            $ add_point(KCT.BOYFRIEND)
+        "Help Nora" (boyfriend=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             $ helpedNora = True
             jump hallway_help_nora
         
@@ -202,7 +204,7 @@ label cont_nora_hall_3:
 
 label hallway_help_nora:
 
-    $ grant_achievement("helping_hand")
+    grant Achievement("helping_hand", "Help Nora hand out flyers for the trip")
     u "(I kinda like this nicer Nora.)"
 
     scene v8shal3c

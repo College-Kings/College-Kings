@@ -11,14 +11,14 @@ label v12_nora_robbed:
 
     pause 1
 
-    play music "music/v12/Track Scene 1_1.mp3" fadein 2
+    play music music.v12_Track_Scene_1_1 fadein 2
 
     scene v12nrb1a # FPP. The robber is now running away, nora is on the floor
     with dissolve
     
     menu:
-        "Go to Nora":
-            $ add_point(KCT.BOYFRIEND)
+        "Go to Nora" (boyfriend=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             
             scene v12nrb2 # TPP. MC runs to nora, Nora shocked, MC worries, mouths closed
             with dissolve
@@ -138,7 +138,7 @@ label v12_nora_robbed:
             ro "Now, let's get back to the hotel."
 
             stop music fadeout 3
-            play music "music/v12/Track Scene 1_2.mp3" fadein 2
+            play music music.ck1.v12.Track_Scene_1_2 fadein 2
 
             scene v12nrb4 # TPP. MC is walking back, Chris and Nora stay behind, MC worried, looking straight ahead, Chris and Nora looking at each other, angry, mouths closed
             with dissolve
@@ -285,7 +285,7 @@ label v12_nora_robbed:
             pause 0.75
 
             stop music fadeout 3
-            play music "music/v12/Track Scene 1_3.mp3" fadein 2
+            play music music.ck1.v12.Track_Scene_1_3 fadein 2
 
             scene v12nrb11 # FPP. Looking at amber, mouth opened, smiling, in hotel lobby
             with dissolve
@@ -313,20 +313,20 @@ label v12_nora_robbed:
             pause 0.75
 
             stop music fadeout 3
-            play music "music/v11/Track Scene 6.mp3" fadein 2
+            play music music.v11_Track_Scene_6 fadein 2
 
             scene v12nrb15 # TPP. MC in his room
             with dissolve
 
             u "(Amber's tough as nails. Definitely don't wanna be on her bad side. Maybe if I would've gone after the robber I could've been the hero.)"
 
-            play sound "sounds/knock.mp3"
+            play sound sound.knock
             stop music fadeout 3
 
             jump v12_nora_checks_mc #scene 2
 
-        "Chase after robber":
-            $ add_point(KCT.TROUBLEMAKER)
+        "Chase after robber" (troublemaker=1.0):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
             stop music fadeout 3
 
             jump v12_chase_robber #scene 1a

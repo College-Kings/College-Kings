@@ -9,7 +9,7 @@ label v13s51_emily_fight:
 
     pause 0.75
 
-    play music "music/v13/Track Scene 51.mp3" fadein 2
+    play music music.ck1.v13.Track_Scene_51 fadein 2
     
     scene v13s51_2 # FPP. Same positioning as v13s51_1, Emily mouth open, mad
     with dissolve
@@ -93,7 +93,7 @@ label v13s51_emily_fight:
 
     pause 0.75
 
-    play sound "sounds/dooropen.mp3" 
+    play sound sound.door_open 
 
     scene v13s51_4 # TPP. MC pushing open the door to the bathroom (entering the bathroom).
     with dissolve
@@ -105,7 +105,7 @@ label v13s51_emily_fight:
 
     u "(She's a fucking psycho, I swear!)"
 
-    play sound "sounds/knock.mp3"
+    play sound sound.knock
 
     scene v13s51_6 # TPP. Emily in front of the bathroom door, mad, mouth open (talking through the door).
     with dissolve
@@ -117,7 +117,7 @@ label v13s51_emily_fight:
 
     u "(muffled) Emily, go chill somewhere and leave me alone."
 
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
     
     scene v13s51_6b # TPP. Emily with both arms extended out, both hands shoving open the bathroom door, mad, mouth closed.
     with dissolve
@@ -263,10 +263,10 @@ label v13s51_emily_fight:
 
             stop music fadeout 3
 
-            if chloe.relationship >= Relationship.GIRLFRIEND:
+            if CharacterService.is_girlfriend(chloe):
                 jump v13s52
 
-            elif riley.relationship >= Relationship.FWB:
+            elif CharacterService.is_fwb(riley):
                 jump v13s53
                             
             else:

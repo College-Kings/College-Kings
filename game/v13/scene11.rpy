@@ -9,7 +9,7 @@ label v13s11:
 
     pause 0.75
 
-    play music "music/v13/Track Scene 11_1.mp3" fadein 2
+    play music music.v13_Track_Scene_11_1 fadein 2
 
     scene v13s11_2 # FPP. Camera behind imre, imre is moving his head as if he was humming
     with dissolve
@@ -74,8 +74,8 @@ label v13s11:
     $ timed = True
 
     menu (fail_label="v13_push_ryan"):
-        "Pretend to tie Ryan's shoe":
-            $ add_point(KCT.BRO)
+        "Pretend to tie Ryan's shoe" (bro=1.0):
+            $ reputation.add_point(RepComponent.BRO)
             scene v13s11_7 # TPP. MC bends down and pretends to tie ryan's shoe
             with dissolve
 
@@ -123,8 +123,8 @@ label v13s11:
 
             jump v13_imre_continue
 
-        "Push Ryan in front of Imre":
-            $ add_point(KCT.TROUBLEMAKER)
+        "Push Ryan in front of Imre" (troublemaker=1.0):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
             pass
 
     label v13_push_ryan:
@@ -281,7 +281,7 @@ label v13_imre_continue:
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v13/Track Scene 11_2.mp3" fadein 2
+    play music music.ck1.v13.Track_Scene_11_2 fadein 2
 
     scene v13s11_21 # FPP. MC sitting from the other side of the table from ryan, with a view to imre, imre waiting in the back, ryan slight smiling, mouth closed
     with dissolve
@@ -489,7 +489,7 @@ label v13_imre_continue:
     imre "Yeah, whatever."
 
     stop music fadeout 3
-    play music "music/v13/Track Scene 11_3.mp3" fadein 2
+    play music music.ck1.v13.Track_Scene_11_3 fadein 2
 
     scene v13s11_27b # FPP. The bar hosts walks by, standing besides imre, mouth opened
     with dissolve
@@ -619,7 +619,7 @@ label v13_imre_continue:
     pause 0.6
 
     stop music fadeout 3
-    play music "music/v13/Track Scene 11_4.mp3" fadein 2
+    play music music.ck1.v13.Track_Scene_11_4 fadein 2
 
     scene v13s11_33a # FPP. looking at imre, mouth closed
     with dissolve
@@ -649,10 +649,10 @@ label v13_imre_continue:
             u "(I'm not getting involved in it.)"
 
         "Stick up for Ryan":
-            if joinwolves:
-                $ add_point(KCT.TROUBLEMAKER)
+            if mc.frat == Frat.WOLVES:
+                $ reputation.add_point(RepComponent.TROUBLEMAKER)
             else:
-                $ add_point(KCT.BRO)
+                $ reputation.add_point(RepComponent.BRO)
         
             scene v13s11_33a
             with dissolve

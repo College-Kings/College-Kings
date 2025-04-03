@@ -10,7 +10,7 @@ label v12_nursing_aubrey:
 
     pause 1
 
-    play music "music/v12/Track Scene 21a.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_21a fadein 2
 
     scene v12aun2 # TPP. Show MC helping Aubrey sit down on the bed, Aubrey in pain, MC worried, both mouths closed
     with dissolve
@@ -186,8 +186,8 @@ label v12_nursing_aubrey:
     with dissolve
 
     menu:
-        "If I was your boyfriend...":
-            $ add_point(KCT.BOYFRIEND)
+        "If I was your boyfriend..." (boyfriend=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             $ v12_aubrey_gf = True
 
             scene v12aun4f
@@ -236,7 +236,7 @@ label v12_nursing_aubrey:
 
             au "*Chuckles* Fucking weirdo..."
 
-    play sound "sounds/doorclose.mp3"
+    play sound sound.door_close
     scene v12aun6 # FPP. MC looking at the hotel room door to the corridor, door is open, Imre is in front of it, looking at MC, he is smiling, mouth open, very excited
     with vpunch
 

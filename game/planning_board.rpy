@@ -1,19 +1,21 @@
 init python:
     class PlanningBoardApproach:
-        def __init__(self, id, name, opinion):
+        def __init__(self, id: str, name: str, opinion: str):
             self.id = id
             self.name = name
             self.opinion = opinion
 
-            self.tasks = []
+            self.tasks: list[Union[PlanningBoardTask, list[PlanningBoardTask]]] = []
             self.completed = False
 
         @property
         def cost(self):
-            return sum(task.cost for task in self.get_tasks())
+            return sum(
+                task.cost for task in self.tasks if isinstance(task, PlanningBoardTask)
+            )
 
         def get_tasks(self):
-            tasks = []
+            tasks: list[PlanningBoardTask] = []
             for task in self.tasks:
                 if isinstance(task, PlanningBoardTask):
                     tasks.append(task)
@@ -23,39 +25,61 @@ init python:
 
 
     class PlanningBoardTask:
-        def __init__(self, name, opinion, people, cost):
+        def __init__(
+            self,
+            name: str,
+            opinion: str,
+            people: Optional[list[NonPlayableCharacter]] = None,
+            cost: int = 0,
+        ):
             self.name = name
             self.opinion = opinion
             self.cost = cost
 
-            if people is None: self.people = []
-            else: self.people = people
+            if people is None:
+                self.people = []
+            else:
+                self.people = people
 
             self.completed = False
 
 
     class PlanningBoard:
-        def __init__(self, background, money=0, style=None):
+        def __init__(self, background: str, money: int = 0, style: Optional[str] = None):
             self.background = background
             self.money = money
             self.style = style
 
-            self.approaches = {}
-            self.approach = None
-            self.selected_task = None
+            self.approaches: dict[str, PlanningBoardApproach] = {}
+            self.approach: Optional[PlanningBoardApproach] = None
+            self.selected_task: Optional[PlanningBoardTask] = None
 
-        def add_approach(self, id, name, opinion=""):
+        def add_approach(self, id: str, name: str, opinion: str = ""):
             approach = PlanningBoardApproach(id, name, opinion)
             self.approaches[id] = approach
             return approach
 
-        def add_task(self, approach_id, name, opinion="", people=None, cost=0):
+        def add_task(
+            self,
+            approach_id: str,
+            name: str,
+            opinion: str = "",
+            people: Optional[list[NonPlayableCharacter]] = None,
+            cost: int = 0,
+        ):
             approach = self.approaches[approach_id]
             task = PlanningBoardTask(name, opinion, people, cost)
             approach.tasks.append(task)
             return task
 
-        def add_subtask(self, approach_id, name, opinion="", people=None, cost=0):
+        def add_subtask(
+            self,
+            approach_id: str,
+            name: str,
+            opinion: str = "",
+            people: Optional[list[NonPlayableCharacter]] = None,
+            cost: int = 0,
+        ):
             approach = self.approaches[approach_id]
             subtask = PlanningBoardTask(name, opinion, people, cost)
             if approach.tasks and (isinstance(approach.tasks[-1], list)):
@@ -65,10 +89,16 @@ init python:
             return subtask
 
         def get_total_cost(self):
-            total_cost = 0
+            if self.approach is None or self.selected_task is None:
+                return 0
+
+            total_cost: int = 0
+
             for task in self.approach.tasks:
-                try: total_cost += task.cost
-                except AttributeError: total_cost += self.selected_task.cost
+                if isinstance(task, list):
+                    total_cost += self.selected_task.cost
+                else:
+                    total_cost += task.cost
 
             return total_cost
 
@@ -91,7 +121,7 @@ screen planning_board(planning_board):
         selected planning_board.approach == approach
         hovered Show("planning_board_approach_desc", None, approach)
         unhovered Hide("planning_board_approach_desc")
-        action [SetField(planning_board, "approach", approach), Show("planning_board_help", message="Please select optional tasks")]
+        action [SetField(planning_board, "approach", approach), Show("planning_board_help", message=_("Please select optional tasks"))]
 
     vbox:
         pos (130, 600)
@@ -102,7 +132,7 @@ screen planning_board(planning_board):
         for number, task in enumerate(approach.tasks, start=1):
             hbox:
                 spacing 20
-                text "{}.".format(number) yalign 0.5
+                text _("[number].") yalign 0.5
 
                 if isinstance(task, list):
                     vbox:
@@ -112,7 +142,7 @@ screen planning_board(planning_board):
                             hbox:
                                 spacing 15
 
-                                text "{})".format(alphabet) yalign 0.5
+                                text _("[alphabet])") yalign 0.5
                                 textbutton subtask.name:
                                     sensitive planning_board.approach == approach
                                     selected planning_board.selected_task == subtask
@@ -121,8 +151,8 @@ screen planning_board(planning_board):
                                         hovered Show("planning_board_task_desc", None, subtask)
                                         action [SetField(planning_board, "selected_task", subtask), Show("planning_board_confirm_tasks", None, planning_board)]
                                     else:
-                                        unhovered [Hide("planning_board_task_desc"), Show("planning_board_help", message="Please select an approach")]
-                                        hovered Show("planning_board_help", message="{color=#f00}Not enough money to select task.")
+                                        unhovered [Hide("planning_board_task_desc"), Show("planning_board_help", message=_("Please select an approach"))]
+                                        hovered Show("planning_board_help", message=_("{color=#f00}Not enough money to select task.{/color}"))
                                         action NullAction()
                                     if planning_board.style is not None:
                                         text_style planning_board.style
@@ -138,7 +168,7 @@ screen planning_board(planning_board):
                             text_style planning_board.style
 
 
-    text "Budget: ${}".format(planning_board.money):
+    text _("Budget: $[planning_board.money]"):
         align (0.5, 0.1)
         outlines [(1, "#000", 0, 0)]
 
@@ -153,7 +183,7 @@ screen planning_board(planning_board):
         selected planning_board.approach == approach
         hovered Show("planning_board_approach_desc", None, approach)
         unhovered Hide("planning_board_approach_desc")
-        action [SetField(planning_board, "approach", approach, None), Show("planning_board_help", message="Please select optional tasks")]
+        action [SetField(planning_board, "approach", approach, None), Show("planning_board_help", message=_("Please select optional tasks"))]
 
     vbox:
         pos (1052, 600)
@@ -164,7 +194,7 @@ screen planning_board(planning_board):
         for number, task in enumerate(approach.tasks, start=1):
             hbox:
                 spacing 20
-                text "{}.".format(number) yalign 0.5
+                text _("[number].") yalign 0.5
 
                 if isinstance(task, list):
                     vbox:
@@ -174,7 +204,7 @@ screen planning_board(planning_board):
                             hbox:
                                 spacing 15
 
-                                text "{})".format(alphabet) yalign 0.5
+                                text _("[alphabet])") yalign 0.5
                                 textbutton subtask.name:
                                     sensitive planning_board.approach == approach
                                     selected planning_board.selected_task == subtask
@@ -183,8 +213,8 @@ screen planning_board(planning_board):
                                         hovered Show("planning_board_task_desc", None, subtask)
                                         action [SetField(planning_board, "selected_task", subtask), Show("planning_board_confirm_tasks", None, planning_board)]
                                     else:
-                                        unhovered [Hide("planning_board_task_desc"), Show("planning_board_help", message="Please select an approach")]
-                                        hovered Show("planning_board_help", message="{color=#f00}Not enough money to select task.")
+                                        unhovered [Hide("planning_board_task_desc"), Show("planning_board_help", message=_("Please select an approach"))]
+                                        hovered Show("planning_board_help", message=_("{color=#f00}Not enough money to select task.{/color}"))
                                         action NullAction()
                                     if planning_board.style is not None:
                                         text_style planning_board.style
@@ -200,7 +230,19 @@ screen planning_board(planning_board):
                             text_style planning_board.style
 
     
-    on "show" action Show("planning_board_help", message="Please select an approach")
+    on "show" action Show("planning_board_help", message=_("Please select an approach"))
+
+    if config_debug:
+        $ approach = renpy.random.choice(planning_board.approaches.values())
+        timer 0.1 action [SetField(planning_board, "approach", approach, None), Show("planning_board_help", message="Please select optional tasks")]
+
+        if planning_board.approach:
+            $ subtask = renpy.random.choice(filter(lambda task: isinstance(task, list), approach.tasks)[0])
+            timer 0.1 action [SetField(planning_board, "selected_task", subtask), Show("planning_board_confirm_tasks", None, planning_board)]
+
+        if planning_board.selected_task:
+            timer 0.1 action [Hide("planning_board_bottom"), Hide("planning_board_task_desc"), Hide("planning_board_blank"), Return()]
+
 
 
 screen planning_board_approach_desc(approach):

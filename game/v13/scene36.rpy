@@ -9,7 +9,7 @@ label v13_walk_garden:
 
     pause 0.75
 
-    play music "music/v13/Track Scene 36.mp3" fadein 2
+    play music music.ck1.v13.Track_Scene_36 fadein 2
 
     #scene v13s36_2 # FPP. MC looking at lindsey who has a neutral expression, mouth closed (location 1)
     scene v13s36_3a
@@ -29,7 +29,7 @@ label v13_walk_garden:
 
     li "He finished up with all of his frat planning with Sebastian and now for the last few days of our little vacay, he wants to be the perfect boyfriend. *Chuckles*"
 
-    if nora.relationship >= Relationship.FWB:
+    if CharacterService.is_fwb(nora):
         #scene v13s36_2 
         scene v13s36_3a
         with dissolve
@@ -74,7 +74,7 @@ label v13_walk_garden:
 
     imre "You know I don't."
 
-    if chris.relationship <= Relationship.MAD:
+    if CharacterService.is_mad(chris):
         scene v13s36_5c # FPP. Chris has a mad face on, looking at lindsey, mouth opened (location 3)
         with dissolve
         

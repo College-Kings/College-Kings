@@ -3,7 +3,7 @@
 # Characters: Ms. Rose(Outfit 1), MC (Outfit 3), Chris(Outfit 2), Imre(Outfit 1), Finn(Outfit 3), 
 # Time: Friday Afternoon
 label v9_dinner_w_rose:
-    play music "music/v9/Track Scene 23.mp3" fadein 2
+    play music music.ck1.v9.Track_Scene_23 fadein 2
 
     scene v9damr1 # FPP. Fade in at Ms. Rose's house
     with fade
@@ -150,8 +150,8 @@ label v9_dinner_w_rose:
     with dissolve
 
     menu:
-        "Talk about working out":
-            $ add_point(KCT.BRO)
+        "Talk about working out" (bro=1.0):
+            $ reputation.add_point(RepComponent.BRO)
 
             scene v9damr9
             with dissolve
@@ -305,8 +305,8 @@ label v9_dinner_w_rose:
     ro "Good! I'll go get it."
 
     menu:
-        "Offer to help":
-            $ add_point(KCT.BOYFRIEND)
+        "Offer to help" (boyfriend=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
 
             scene v9damr12f # FPP. Same camera as v9damr12, Show Ms. Rose now stood at the end of table, Imre seated to MC's right,neutral expressions, Ms. Rose mouth closed, Imre mouth closed
             with dissolve

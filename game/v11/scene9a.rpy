@@ -8,7 +8,7 @@ label v11_wolves_seb_prank:
     with fade
 
     pause 0.75
-    play music "music/v11/Track Scene 9a_1.mp3" fadein 2
+    play music music.ck1.v11.Track_Scene_9a_1 fadein 2
     scene v11wsp2 # FPP. MC is walking in to the living room, he can not see anyone yet, just a bit of the inside of the living room
     with dissolve
 
@@ -110,8 +110,8 @@ label v11_wolves_seb_prank:
     with dissolve
 
     menu:
-        "Not for me":
-            $ add_point(KCT.BOYFRIEND)
+        "Not for me" (boyfriend=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
 
             scene v11wsp8a
             with dissolve
@@ -196,19 +196,19 @@ label v11_wolves_seb_prank:
             scene v11wsp4b
             with dissolve
 
-            $ v11s9a_kiwiiPost1 = KiwiiPost(caleb, "v11/sebnaked.webp", _("Someone had a fun time last night!"), numberLikes=556) # Sebastian naked in the middle of campus stood over his sleeping bag looking confused
-            $ v11s9a_kiwiiPost1.newComment(aubrey, _("Suns out, Buns out!"), numberLikes=renpy.random.randint(100, 300), force_send=True)
-            $ v11s9a_kiwiiPost1.newComment(samantha, _("A little early in the morning to go streaking isn't it? lol"), numberLikes=renpy.random.randint(100, 300), force_send=True)
-            $ v11s9a_kiwiiPost1.newComment(lindsey, _("Spicy!"), numberLikes=renpy.random.randint(100, 300), force_send=True)
-            $ v11s9a_kiwiiPost1.addReply(_("Getting ready to go skinny dipping?"), numberLikes=321)
-            $ v11s9a_kiwiiPost1.addReply(_("Someone's got \"balls\""), numberLikes=334)
+            $ kiwii_post = KiwiiService.new_post(caleb, "ck1_v11_sebastian_naked", _("Someone had a fun time last night!"), number_likes=556) # Sebastian naked in the middle of campus stood over his sleeping bag looking confused
+            $ KiwiiService.new_comment(kiwii_post, aubrey, _("Suns out, Buns out!"), number_likes=renpy.random.randint(100, 300))
+            $ KiwiiService.new_comment(kiwii_post, samantha, _("A little early in the morning to go streaking isn't it? lol"), number_likes=renpy.random.randint(100, 300))
+            $ KiwiiService.new_comment(kiwii_post, lindsey, _("Spicy!"), number_likes=renpy.random.randint(100, 300))
+            $ KiwiiService.add_replies(kiwii_post,
+                KiwiiReply(_("Getting ready to go skinny dipping?"), number_likes=321),
+                KiwiiReply(_("Someone's got \"balls\""), number_likes=334)
+            )
 
-            label v11s9a_kiwiiPost1_continue:
-                if v11s9a_kiwiiPost1.replies:
-                    call screen phone
-                if v11s9a_kiwiiPost1.replies:
+            while KiwiiService.has_replies(kiwii_post):
+                call screen phone
+                if KiwiiService.has_replies(kiwii_post):
                     u "(I should reply on Kiwii)"
-                    jump v11s9a_kiwiiPost1_continue
 
             scene v11wsp4b
             with dissolve
@@ -225,8 +225,8 @@ label v11_wolves_seb_prank:
 
             guyd "I honestly kinda feel bad."
 
-        "Sure":
-            $ add_point(KCT.TROUBLEMAKER)
+        "Sure" (troublemaker=1.0):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             scene v11wsp4
             with dissolve
@@ -254,7 +254,7 @@ label v11_wolves_seb_prank:
             imre "*Whisper* It's time man!"
 
             stop music fadeout 3
-            play music "music/v11/Track Scene 9_3.mp3" fadein 2
+            play music music.ck1.v11.Track_Scene_9_3 fadein 2
 
             scene v11wsp13a # FPP. Same as v11wsp13, Imre mouth closed
             with dissolve
@@ -466,7 +466,7 @@ label v11_wolves_seb_prank:
 
             pause 0.75
             stop music fadeout 3
-            play music "music/v11/Track Scene 9a_2.mp3" fadein 2
+            play music music.ck1.v11.Track_Scene_9a_2 fadein 2
             scene v11wsp9a # TPP. Same cam as v11wsp9, MC is going down the stairs now
             with dissolve
 
@@ -492,19 +492,19 @@ label v11_wolves_seb_prank:
 
             imre "Check Kiwii."
 
-            $ v11s9a_kiwiiPost2 = KiwiiPost(caleb, "v11/sebnaked.webp", _("Someone had a fun time last night!"), numberLikes=556) # Sebastian naked in the middle of campus stood over his sleeping bag looking confused
-            $ v11s9a_kiwiiPost2.newComment(aubrey, _("Suns out, Buns out!"), numberLikes=renpy.random.randint(100, 300), force_send=True)
-            $ v11s9a_kiwiiPost2.newComment(samantha, _("A little early in the morning to go streaking isn't it? lol"), numberLikes=renpy.random.randint(100, 300), force_send=True)
-            $ v11s9a_kiwiiPost2.newComment(lindsey, _("Spicy!"), numberLikes=renpy.random.randint(100, 300), force_send=True)
-            $ v11s9a_kiwiiPost2.addReply(_("I wonder how this happened..."), numberLikes=321)
-            $ v11s9a_kiwiiPost2.addReply(_("Someone's got \"balls\""), numberLikes=218)
+            $ kiwii_post = KiwiiService.new_post(caleb, "ck1_v11_sebastian_naked", _("Someone had a fun time last night!"), number_likes=556) # Sebastian naked in the middle of campus stood over his sleeping bag looking confused
+            $ KiwiiService.new_comment(kiwii_post, aubrey, _("Suns out, Buns out!"), number_likes=renpy.random.randint(100, 300))
+            $ KiwiiService.new_comment(kiwii_post, samantha, _("A little early in the morning to go streaking isn't it? lol"), number_likes=renpy.random.randint(100, 300))
+            $ KiwiiService.new_comment(kiwii_post, lindsey, _("Spicy!"), number_likes=renpy.random.randint(100, 300))
+            $ KiwiiService.add_replies(kiwii_post,
+                KiwiiReply(_("I wonder how this happened..."), number_likes=321),
+                KiwiiReply(_("Someone's got \"balls\""), number_likes=218)
+            )
 
-            label v11s9a_kiwiiPost2_continue:
-                if v11s9a_kiwiiPost2.replies:
-                    call screen phone
-                if v11s9a_kiwiiPost2.replies:
+            while KiwiiService.has_replies(kiwii_post):
+                call screen phone
+                if KiwiiService.has_replies(kiwii_post):
                     u "(I should reply on Kiwii)"
-                    jump v11s9a_kiwiiPost2_continue
 
             scene v11wsp4b
             with dissolve

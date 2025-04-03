@@ -1,14 +1,14 @@
 label v11_start:
 
     if path_builder and not pb_name_set:
-        $ name = renpy.input(_("What's your name?"), default=_("Alex")).strip() or _("Alex")
+        $ name = renpy.input(_("What's your name?"), default=name).strip() or _("Alex")
         $ pb_name_set = True
 
     scene v11coc1 # FPP. Show entrance of college
     with fade
 
     pause 0.75
-    play music "music/v11/Track Scene 1_1.mp3" fadein 2
+    play music music.ck1.v11.Track_Scene_1_1 fadein 2
     scene v11coc1a # TPP. Same cam 1, MC now in shot running towards entrance
     with dissolve
 
@@ -39,7 +39,7 @@ label v11_start:
 
     pe "He hasn't texted me back all morning, the odds of him showing up now are one in a million."
     stop music fadeout 3
-    play music "music/v11/Track Scene 1_2.mp3" fadein 2
+    play music music.ck1.v11.Track_Scene_1_2 fadein 2
     scene v11coc5 # TPP. Show MC walking into the room (Camera behind MC, Penelope and Jenny in background, Penelope turned to look at MC)
     with dissolve
 
@@ -675,8 +675,8 @@ label v11_start:
 
             u "No further comments. I know you as the board will make the right decision."
 
-        "I won":
-            $ add_point(KCT.TROUBLEMAKER)
+        "I won" (troublemaker=1.0):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             scene v11coc12b
             with dissolve
@@ -690,7 +690,7 @@ label v11_start:
 
     stop music fadeout 3
 
-    play music "music/v11/Track Scene 1_1.mp3" fadein 2
+    play music music.ck1.v11.Track_Scene_1_1 fadein 2
 
     scene v11coc21 # TPP. Show MC, Jenny and Penelope standing next to the chairs, neutral expressions, mouths closed
     with dissolve
@@ -743,13 +743,13 @@ label v11_start:
     pause 0.75
     stop music fadeout 3
 
-    play music "music/v11/Track Scene 1_4.mp3" fadein 2
+    play music music.ck1.v11.Track_Scene_1_4 fadein 2
     call screen v11s1_hallway1
 
 label v11s1_riley:
     $ freeroam7.add("riley")
 
-    if riley.relationship >= Relationship.FWB:
+    if CharacterService.is_fwb(riley):
         scene v11cocri1 # FPP. MC and Riley looking at each other, Riley has mouth closed, neutral expression
         #with dissolve
 
@@ -760,7 +760,7 @@ label v11s1_riley:
 
         u "You came?"
 
-    if riley.relationship >= Relationship.FWB:
+    if CharacterService.is_fwb(riley):
         scene v11cocri1a # FPP. Same as ri1, Riley has mouth open, same expression
         with dissolve
 
@@ -798,7 +798,7 @@ label v11s1_riley:
 
             ri "I'm sorry... Do your best to stay positive, Penelope needs all the support she can get at the moment."
 
-            if riley.relationship >= Relationship.FWB:
+            if CharacterService.is_fwb(riley):
                 ri "It's really sweet of you to be so supportive of your friends."
 
     scene v11cocri1a
@@ -837,7 +837,7 @@ label v11s1_riley:
     ri "Well, you know I'm here for you both regardless. I'm gonna go check on Penelope and see if there's anything I can do to help settle her nerves."
 
 
-    if riley.relationship >= Relationship.FWB:
+    if CharacterService.is_fwb(riley):
         scene v11cocri1
         with dissolve
 
@@ -860,7 +860,7 @@ label v11s1_mrrose:
     if not "mr rose" in freeroam7:
         $ freeroam7.add("mr rose")
 
-        if joinwolves:
+        if mc.frat == Frat.WOLVES:
             scene v11cocmrr1a # FPP. Same as mrr1, but Mr Rose mouth closed
             with dissolve
 
@@ -907,8 +907,6 @@ label v11s1_mrrose:
 
             u "Whatever man, at least I'm actually doing something. Now, if you'll excuse me I have a friend to fight for."
 
-            call screen v11s1_hallway2
-
         else:
 
             scene v11cocmrr1
@@ -932,7 +930,7 @@ label v11s1_mrrose:
 
             u "Okayyy..."
 
-            call screen v11s1_hallway2
+        call screen v11s1_hallway2
 
     # -Back to free roam-
 
@@ -1073,7 +1071,7 @@ label v11_case_verdict:
     stop music fadeout 3
 
     if v11s1_courtpoints >= 4:
-        play music "music/v11/Track Scene 1_5.mp3" fadein 2
+        play music music.ck1.v11.Track_Scene_1_5 fadein 2
         $ v11_pen_goes_europe = True
         scene v11coc14b # TPP. Same as 14, Mr Lee looking at Penelope
         with dissolve
@@ -1094,7 +1092,8 @@ label v11_case_verdict:
 
         lee "As punishment for the actions taken, you will be subject to attend this year's abroad trip to Europe. While attending, you will serve as an Assistant Chaperone and help with all the chaperones may need."
 
-        lee "Alongside that, you will be volunteering with a university research company that is in great need of computer inclined individuals such as yourself for the remainder of your time here at the college. Do you agree?"
+        lee "Alongside that, you will be volunteering with a university research company."
+        lee "They're in great need of computer-inclined individuals such as yourself for the remainder of your time here at the college. Do you agree?"
 
         scene v11coc15a # TPP. Same as 15, but Penelope is shocked, mouth open
         with dissolve
@@ -1104,7 +1103,7 @@ label v11_case_verdict:
         scene v11coc14b
         with dissolve
 
-        $ grant_achievement("perry_mason")
+        grant Achievement("perry_mason", "Successfully defend Penelope")
         lee "Don't thank us, thank your friend. He did a very good job representing you. We may just have a future lawyer in our midst."
 
         scene v11coc14c
@@ -1159,7 +1158,7 @@ label v11_case_verdict:
 
         u "*Whisper* You're welcome."
 
-        if penelope.relationship >= Relationship.LIKES:
+        if CharacterService.is_dating(penelope) or bowling or hcGirl == "penelope":
             scene v11coc24e # FPP. Same as 24c, but Penelope's mouth is open
             with dissolve
 
@@ -1170,7 +1169,7 @@ label v11_case_verdict:
             with dissolve
 
             pe "No I mean it, thank you."
-
+            
         scene v11coc24c
         with dissolve
 
@@ -1212,12 +1211,11 @@ label v11_case_verdict:
 
         pe "I have to get going as well, thankfully I still have a class to get to."
 
-        pause 0.75
-        if penelope.relationship >= Relationship.LIKES:
+        if CharacterService.is_dating(penelope) or bowling or hcGirl == "penelope":
             scene v11coc25b # TPP. Same cam as 25, but Penelope is kissing MC on the cheek
             with dissolve
 
-            play sound "sounds/kiss.mp3"
+            play sound sound.kiss
 
             scene v11coc24e
             with dissolve
@@ -1229,9 +1227,10 @@ label v11_case_verdict:
             with dissolve
 
             pe "Thanks again, bye."
+            
     else:
         $ v11_pen_goes_europe = False
-        play music "music/v11/Track Scene 1_1.mp3" fadein 2
+        play music music.ck1.v11.Track_Scene_1_1 fadein 2
         scene v11coc12
         with dissolve
 
@@ -1296,12 +1295,14 @@ label v11_case_verdict:
     scene v11coc27 # TPP. Third person view of MC, he is alone and has a tired expression, mouth closed, in the hallway
     with dissolve
 
-    $ v11s1_kiwiiPost = KiwiiPost(autumn, "v11/v11_autumn_kiwii.webp", _("Best charity event yet, thanks for all the donations!"), numberLikes=556)
-    $ v11s1_kiwiiPost.newComment(aubrey, _("So psyched!"), numberLikes=renpy.random.randint(200, 500), force_send=True)
-    $ v11s1_kiwiiPost.newComment(cameron, _("What you doing later? ;)"), numberLikes=renpy.random.randint(200, 500), force_send=True)
-    $ v11s1_kiwiiPost.newComment(lindsey, _("It was an awesome day!"), numberLikes=renpy.random.randint(200, 500), force_send=True)
-    $ v11s1_kiwiiPost.addReply(_("Wish I could see more mud wrestling!"), numberLikes=321)
-    $ v11s1_kiwiiPost.addReply(_("Thanks for doing the event Autumn!"), numberLikes=518)
+    $ kiwii_post = KiwiiService.new_post(autumn, "ck1_v11_autumn_post", _("Best charity event yet, thanks for all the donations!"), number_likes=556)
+    $ KiwiiService.new_comment(kiwii_post, aubrey, _("So psyched!"), number_likes=renpy.random.randint(200, 500))
+    $ KiwiiService.new_comment(kiwii_post, cameron, _("What you doing later? ;)"), number_likes=renpy.random.randint(200, 500))
+    $ KiwiiService.new_comment(kiwii_post, lindsey, _("It was an awesome day!"), number_likes=renpy.random.randint(200, 500))
+    $ KiwiiService.add_replies(kiwii_post,
+        KiwiiReply(_("Wish I could see more mud wrestling!"), number_likes=321),
+        KiwiiReply(_("Thanks for doing the event Autumn!"), number_likes=518)
+    )
 
     u "(Wow, what a way to start my day. *Phew* Let's see who's going to Europe.)"
     stop music fadeout 3

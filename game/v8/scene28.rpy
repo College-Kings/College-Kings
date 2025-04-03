@@ -72,7 +72,7 @@ label drug_deal_w_josh:
 
     pause 0.5
 
-    play music "music/m3punk.mp3"
+    play music music.ck1.m3punk
 
     scene v8sdd4c # FPP. Same camera as v8sdd4, Joe and Lars looking at the camera, angry expression, Joe now holding the pipe in one hand only. Joe mouth open.
     with dissolve
@@ -100,8 +100,8 @@ label drug_deal_w_josh:
     je "If I were you, I'd just hand over the shit now before you end up with a nice, shiny dent in your skull. Save Lars the effort. You dig?"
 
     menu:
-        "Intervene":
-            $ add_point(KCT.BRO)
+        "Intervene" (bro=1.0):
+            $ reputation.add_point(RepComponent.BRO)
             jump int_deal_w_josh
         "Don't intervene":
             jump no_int_deal_w_josh
@@ -125,21 +125,20 @@ label int_deal_w_josh:
     scene v8sdd10 # TPP. Show Joe running at Josh with the Pipe looking angry, Lars readying for a fight with MC.
     with dissolve
 
-    # TODO: Update Lars Fight
-    call screen confirm("Would you like to play the fighting tutorial?",
+    call screen confirm(_("Would you like to play the fighting tutorial?"),
         yes_action=[SetVariable("fight_tutorial", True), Call("fight_tutorialLabel")],
         no_action=[SetVariable("fight_tutorial", False), Return()])
         
     scene v8sdd10
 
-    # call screen fight_typeMenu
+    call screen fight_typeMenu
 
     if fight_type == "normal":
         $ simLarsFight = False
 
-        # call screen fight_selectDifficulty
+        call screen fight_selectDifficulty
 
-        # call screen fight_keybindOptions
+        call screen fight_keybindOptions
     
     elif fight_type == "simReal" or fight_type == "simWin":
         $ simLarsFight = True
@@ -163,7 +162,7 @@ label int_deal_w_josh:
 label lars_McAttack:
     $ stance = 2
 
-    # show screen fight_overlay(stance="defend") TODO: Update fight code
+    show screen fight_overlay(stance="defend")
     
     # Lars hook
     if larsAttack == 1:
@@ -182,8 +181,7 @@ label lars_McAttack:
                 jump lars_McKickBlock
 
         else:
-            pass
-            # call screen larsFight_MCDefend(attack="Hook")
+            call screen larsFight_MCDefend(attack="Hook")
 
     # Lars jab
     if larsAttack == 2:
@@ -202,8 +200,7 @@ label lars_McAttack:
                 jump lars_McJabBlock
 
         else:
-            pass
-            # call screen larsFight_MCDefend(attack="Jab")
+            call screen larsFight_MCDefend(attack="Jab")
 
     # Lars body hook
     if larsAttack == 3:
@@ -222,8 +219,7 @@ label lars_McAttack:
                 jump lars_McHookBlock
 
         else:
-            pass
-            # call screen larsFight_MCDefend(attack="BodyHook")
+            call screen larsFight_MCDefend(attack="BodyHook")
 
     # Lars kick
     if larsAttack == 4:
@@ -242,8 +238,7 @@ label lars_McAttack:
                 jump lars_McBodyhookBlock
 
         else:
-            pass
-            # call screen larsFight_MCDefend(attack="Kick")
+            call screen larsFight_MCDefend(attack="Kick")
 
 
 # label Attacker_TargetAction
@@ -314,7 +309,7 @@ label mc_LarsBodyhookBlock: # MC Body Hooks Lars (Blocks)
 
 label lars_McKickHit: # Lars Kicks MC (Hits/No Block)
 
-    play sound "sounds/ks.mp3"
+    play sound sound.hit
     $ youDamage += 1
     scene Lars_Kick_hit
     with hpunch
@@ -327,7 +322,7 @@ label lars_McKickHit: # Lars Kicks MC (Hits/No Block)
 
 label lars_McKickBlock: # Lars Kicks MC (Blocked)
 
-    play sound "sounds/ks.mp3"
+    play sound sound.hit
     scene Lars_Kick_block
     with hpunch
 
@@ -339,7 +334,7 @@ label lars_McKickBlock: # Lars Kicks MC (Blocked)
 
 label lars_McJabHit: # Lars Kicks MC (Hits/No Block)
 
-    play sound "sounds/js.mp3"
+    play sound sound.hit
     $ youDamage += 1
     scene Lars_Jab_hit
     with hpunch
@@ -354,7 +349,7 @@ label lars_McJabHit: # Lars Kicks MC (Hits/No Block)
 
 label lars_McJabBlock: # Lars Kicks MC (Hits/No Block)
 
-    play sound "sounds/bs.mp3"
+    play sound sound.hit
     scene Lars_Hook_block
     with hpunch
 
@@ -366,7 +361,7 @@ label lars_McJabBlock: # Lars Kicks MC (Hits/No Block)
 
 label lars_McHookHit: # Lars Kicks MC (Hits/No Block)
 
-    play sound "sounds/hs.mp3"
+    play sound sound.hit
     $ youDamage += 1
     scene Lars_Hook_hit
     with hpunch
@@ -381,7 +376,7 @@ label lars_McHookHit: # Lars Kicks MC (Hits/No Block)
 
 label lars_McHookBlock: # Lars Kicks MC (Hits/No Block)
 
-    play sound "sounds/bs.mp3"
+    play sound sound.hit
     scene Lars_Hook_block
     with hpunch
 
@@ -393,7 +388,7 @@ label lars_McHookBlock: # Lars Kicks MC (Hits/No Block)
 
 label lars_McBodyhookHit: # Lars Kicks MC (Hits/No Block)
 
-    play sound "sounds/hs.mp3"
+    play sound sound.hit
     $ youDamage += 1
     scene Lars_BodyJab_hit
     with hpunch
@@ -406,7 +401,7 @@ label lars_McBodyhookHit: # Lars Kicks MC (Hits/No Block)
 
 label lars_McBodyhookBlock: # Lars Kicks MC (Hits/No Block)
 
-    play sound "sounds/bs.mp3"
+    play sound sound.hit
     scene Lars_BodyJab_block
     with hpunch
 
@@ -456,14 +451,13 @@ label mc_larsAttack:
             if simyou == 4 or simyou == 5 or simyou == 6:
                 jump mc_LarsKickHit
     else:
-        pass
-        # call screen larsFight_MCAttack
+        call screen larsFight_MCAttack
 
 
 label mc_larsFightEnd: # MC wins fight against Lars
     hide screen s28_larsMcAttack
     hide screen s28_mcLarsAttack
-    # hide screen fight_overlay TODO: Update fight code
+    hide screen fight_overlay
     $ youDamage = 0
     $ stance = 0
     $ s28_fightWinner = "MC"
@@ -473,7 +467,7 @@ label mc_larsFightEnd: # MC wins fight against Lars
 label lars_McFightEnd: # MC loses fight against Lars
     hide screen s28_larsMcAttack
     hide screen s28_mcLarsAttack
-    # hide screen fight_overlay TODO: Update fight code
+    hide screen fight_overlay
     $ youDamage = 0
     $ stance = 0
     $ s28_fightWinner = "Lars"
@@ -555,7 +549,7 @@ label dodged_pipe:
     scene v8sdd14 # TPP. Show MC looking up at Joe who is in shock, MC starts to stand up in preparation to plant a huge uppercut on Joe's chin. Lars on the ground. MC focused expression, MC mouth open.
     with dissolve
 
-    $ grant_achievement("ip_man")
+    grant Achievement("ip_man", "Win the alley fight")
 
     u "Fuck you!"
 
@@ -578,8 +572,8 @@ label dodged_pipe:
     with dissolve
 
     menu:
-        "Kick Joe":
-            $ add_point(KCT.TROUBLEMAKER)
+        "Kick Joe" (troublemaker=1.0):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
             jump volley_joe
 
         "Walk away":

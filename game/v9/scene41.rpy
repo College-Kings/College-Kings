@@ -7,7 +7,7 @@ label v9_apes_pre_fight:
     scene v9apf1 # TPP. Show MC on his bed in his Apes room.
     with fade
     
-    if lindsey.relationship >= Relationship.KISS:
+    if CharacterService.is_kissed(lindsey):
         u "(What a day!)"
 
         scene v9apf1a # TPP. Same camera as v9apf1a, MC smile.
@@ -28,7 +28,7 @@ label v9_apes_pre_fight:
 
     pause 2
 
-    play music "music/v9/Track Scene 14.mp3" fadein 2
+    play music music.ck1.v9.Track_Scene_14 fadein 2
 
     scene v9apf3 # TPP. Show Grayson barging through the door of MC's room.
     with dissolve

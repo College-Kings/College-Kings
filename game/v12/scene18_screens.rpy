@@ -16,6 +16,17 @@ screen v12s18_room1():
 
         hotspot (0, 30, 126, 1020) action Show("v12s18_room2") # Room 2
 
+    if config_debug:
+        python:
+            actions = []
+
+            if not "bottle" in v12_slumberparty:
+                actions.append(Jump("v12s18_bottlespin"))
+
+            actions.append(Show("v12s18_room2"))
+
+        timer 0.1 action renpy.random.choice(actions)
+
 
 screen v12s18_room2():
     tag free_roam
@@ -30,3 +41,16 @@ screen v12s18_room2():
             hotspot (849, 70, 477, 759) action Show("confirm", message="Are you sure you want to end the free roam?", yes_action=[Hide("confirm"), Jump("v12s18_bet")]) # End freeroam
 
         hotspot (1793, 30, 126, 1020) action Show("v12s18_room1") # Room 1
+
+    if config_debug:
+        python:
+            actions = []
+
+            if not "fmk" in v12_slumberparty:
+                actions.append(Jump("v12s18_fmk"))
+            else:
+                actions.append(Show("confirm", message="Are you sure you want to end the free roam?", yes_action=[Hide("confirm"), Jump("v12s18_bet")])) # End freeroam
+
+            actions.append(Show("v12s18_room1"))
+
+        timer 0.1 action renpy.random.choice(actions)

@@ -10,7 +10,7 @@ label v12_room_chloe_riley:
 
         u "Hey, hey. Thanks for checking us in."
 
-        play music "music/v12/Track Scene 12_1.mp3" fadein 2
+        play music music.ck1.v12.Track_Scene_12_1 fadein 2
 
         scene v12crm2a # FPP. same as 2, smiling and mouth opened
         with dissolve
@@ -43,8 +43,8 @@ label v12_room_chloe_riley:
         u "Goodness, you really didn't like acting poor. *Chuckles*"
 
         menu:
-            "Truth":
-                $ add_point(KCT.BOYFRIEND)
+            "Truth" (boyfriend=1.0):
+                $ reputation.add_point(RepComponent.BOYFRIEND)
                 scene v12crm2
                 with dissolve
 
@@ -55,8 +55,8 @@ label v12_room_chloe_riley:
 
                 cl "Mhmm, sure. I'll be keeping my eyes on you."
 
-            "Lie":
-                $ add_point(KCT.TROUBLEMAKER)
+            "Lie" (troublemaker=1.0):
+                $ reputation.add_point(RepComponent.TROUBLEMAKER)
                 scene v12crm2 
                 with dissolve
 
@@ -122,7 +122,7 @@ label v12_room_chloe_riley:
 
         pause 0.75
 
-        if chloe.relationship < Relationship.FWB:
+        if CharacterService.is_friend(chloe):
             scene v12crm6 # FPP. MC now laying on his bed, lights off, looking at chloe on her bed, mouth opened
             with dissolve
 
@@ -216,7 +216,7 @@ label v12_room_chloe_riley:
 
         ri "About time! What were you doing, plotting your next murder?"
 
-        play music "music/v12/Track Scene 12_2.mp3" fadein 2
+        play music music.ck1.v12.Track_Scene_12_2 fadein 2
 
         scene v12crm12a # FPP. looking at riley, mouth closed
         with dissolve

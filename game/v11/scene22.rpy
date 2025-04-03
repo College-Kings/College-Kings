@@ -6,7 +6,7 @@
 label v11_museum_tour:
     scene v11mt1 # TPP. Show Mr Lee, MC and Nora walking up to the museum, MC is in slight pain, Nora slightly annoyed, Mr Lee is smiling, all mouths closed
     with fade
-    play music "music/v11/Track Scene 11.mp3" fadein 2
+    play music music.ck1.v11.Track_Scene_11 fadein 2
     pause 0.75
 
     scene v11tm2 # TPP. Show Chris, Riley and MC standing next to each other inside the museum, Chris on his phone, MC is in slight pain, Riley is slightly smiling, Chris is smiling all mouths closed (Nora standing next to Chris, out of shot, Mr Lee in front of the students, out of shot)
@@ -72,7 +72,7 @@ label v11_museum_tour:
             scene v11tm5a # FPP. Same as v11tm5, but Riley looking at MC, mouth closed, slightly annoyed
             with dissolve
 
-            $ grant_achievement("just_a_theory")
+            grant Achievement("just_a_theory", "Tell Riley dinosaurs aren't real")
             u "Sorry Riley, they definitely aren't real."
 
             scene v11tm5b # FPP. Same as v11tm5a, Riley mouth open, slightly annoyed

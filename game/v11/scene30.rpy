@@ -11,7 +11,7 @@ label v11_lauren_store:
     
     scene v11las1 # TPP. Lauren is in the lobby, she is looking at her phone, show MC sneaking up on her
     with fade
-    play music "music/v11/Track Scene 1_1.mp3" fadein 2
+    play music music.ck1.v11.Track_Scene_1_1 fadein 2
     pause 0.75
 
     scene v11las1a # TPP. Same cam as v11las1, MC is behind Lauren, he is smiling, mouth closed, his hands over her eyes, Lauren is surprised, mouth closed
@@ -555,7 +555,7 @@ label v11_quiz_q2:
         "13":
             jump v11_answer_13
 
-        "29":
+        "29" :
             $ lauren.points += 1
             $ v11_hp_points += 1
 
@@ -609,7 +609,7 @@ label v11_quiz_q3:
 
     jud "Jerry, please."
 
-    if lauren.relationship >= Relationship.GIRLFRIEND:
+    if CharacterService.is_girlfriend(lauren):
         scene v11las21 # TPP. Show MC getting up from his chair, MC is very angry, mouth closed
         with dissolve
 
@@ -1005,7 +1005,7 @@ label v11_quiz_bonus:
     with dissolve
 
     if v11_hp_points == 3:
-        $ grant_achievement("earn_your_owl")
+        grant Achievement("earn_your_owl", "Get all the HP answers right")
 
     jud "For the first time in a very stressful two months, Jerry you have lost. Congratulations Team Pofflehoof!"
 
@@ -1064,8 +1064,8 @@ label v11_quiz_bonus:
 
     la "I'm glad we won, but it feels even better knowing we beat that jerk."
 
-    if lauren.relationship >= Relationship.GIRLFRIEND:
-        play sound "sounds/kiss.mp3"
+    if CharacterService.is_girlfriend(lauren):
+        play sound sound.kiss
         scene v11las33 # TPP. Show Lauren kissing MC, they're both still sitting down
         with dissolve
 
@@ -1267,8 +1267,8 @@ label v11_quiz_bonus:
 
     jud "I'd be happy to! Please, squish together a bit."
 
-    if lauren.relationship >= Relationship.GIRLFRIEND:
-        play sound "sounds/kiss.mp3"
+    if CharacterService.is_girlfriend(lauren):
+        play sound sound.kiss
         scene v11las45 # TPP. Show MC and Lauren posing for a picture, Lauren has her arms wrapped around MC's neck and they're kissing
         with dissolve
 
@@ -1334,9 +1334,9 @@ label v11_quiz_bonus:
 
     u "Wouldn't have missed it for the world."
 
-    if (lauren.relationship >= Relationship.GIRLFRIEND or (kct == "loyal" and lauren.relationship >= Relationship.KISS)) and not "v11_aubrey" in sceneList:
-        if lauren.relationship < Relationship.GIRLFRIEND:
-            call screen kct_popup
+    if (CharacterService.is_girlfriend(lauren) or (CharacterService.is_kissed(lauren) and reputation() == Reputations.LOYAL)) and not "v11_aubrey" in sceneList:
+        if CharacterService.is_kissed(lauren):
+            call screen reputation_popup
 
         scene v11las44f # FPP. Lauren has her hands around MC's neck, she is looking into his eyes, she is nervous, mouth open
         with dissolve
@@ -1357,9 +1357,9 @@ label v11_quiz_bonus:
         with dissolve
 
         menu:
-            "I love you too":
-                $ lauren.relationship = Relationship.GIRLFRIEND
-                $ add_point(KCT.BOYFRIEND)
+            "I love you too" (boyfriend=1.0):
+                $ CharacterService.set_relationship(lauren, Relationship.GIRLFRIEND)
+                $ reputation.add_point(RepComponent.BOYFRIEND)
                 $ lauren.points += 2
 
                 scene v11las44h # FPP. Same as v11las44g, Lauren mouth closed, big smile
@@ -1367,15 +1367,15 @@ label v11_quiz_bonus:
 
                 u "I love you too, Lauren."
 
-                play sound "sounds/kiss.mp3"
+                play sound sound.kiss
 
                 scene v11las46 # TPP. MC and Lauren passionately kissing
                 with dissolve
 
                 pause 1
 
-            "Play it off":
-                $ add_point(KCT.BRO)
+            "Play it off" (bro=1.0):
+                $ reputation.add_point(RepComponent.BRO)
                 $ lauren.points -= 2
 
                 scene v11las44i # FPP. Same as v11las44g, Lauren mouth closed, sad and embarrassed, no longer holding MC's neck
@@ -1391,7 +1391,7 @@ label v11_quiz_bonus:
     scene v11las44k # FPP. Same as v11las44d, Lauren slight smile, mouth open
     with dissolve
     stop music fadeout 3
-    play music "music/v11/Track Scene 17.mp3" fadein 2
+    play music music.ck1.v11.Track_Scene_17 fadein 2
     la "If it was my choice I'd spend all day with you exploring Hogwash, but I promised Riley I'd help her out with something, so I have to run."
 
     scene v11las44l # FPP. Same as v11las44k, Lauren slight smile, mouth closed
@@ -1419,27 +1419,25 @@ label v11_quiz_bonus:
 
     pause 0.75
 
-    if lauren.relationship >= Relationship.GIRLFRIEND:
+    if CharacterService.is_girlfriend(lauren):
         scene v11las49
         with dissolve
 
         u "(She said she loved me.)"
         
-        play sound "sounds/vibrate.mp3"
+        play sound sound.vibrate
 
         u "(Probably our pictures.)"
 
-        $ lauren.messenger.newImgMessage("images/v11/Scene 30/Laurentxtimg1.webp", force_send=True)
-        $ lauren.messenger.newImgMessage("images/v11/Scene 30/Laurentxtimg2.webp") # Lauren and MC picture together kissing (check v11las45 for the pose)
-        $ lauren.messenger.addReply("Some good looking people.")
-        $ lauren.messenger.newMessage("Sure are.")
+        $ MessengerService.new_message(lauren, "images/v11/Scene 30/Laurentxtimg1.webp")
+        $ MessengerService.new_message(lauren, "images/v11/Scene 30/Laurentxtimg2.webp") # Lauren and MC picture together kissing (check v11las45 for the pose)
+        $ MessengerService.add_reply(lauren, "Some good looking people.")
+        $ MessengerService.new_message(lauren, "Sure are.")
 
-        label v11s30_PhoneContinuelauren2:
-            if lauren.messenger.replies:
-                call screen phone
-            if lauren.messenger.replies:
+        while MessengerService.has_replies(lauren):
+            call screen phone
+            if MessengerService.has_replies(lauren):
                 u "(I should check my phone.)"
-                jump v11s30_PhoneContinuelauren2
 
     else:
         scene v11las49 # TPP. Show MC standing in the aisle, looking at where Lauren was walking away from, he is slightly smiling, mouth closed
@@ -1447,20 +1445,18 @@ label v11_quiz_bonus:
 
         u "(Wow, that was really nice.)"
 
-        play sound "sounds/vibrate.mp3"
+        play sound sound.vibrate
 
         u "(Probably our picture.)"
 
-        $ lauren.messenger.newImgMessage("images/v11/Scene 30/Laurentxtimg1.webp", force_send=True) # Lauren and MC picture together holding wands (check v11las45a for the pose)
-        $ lauren.messenger.addReply("Some good looking people.")
-        $ lauren.messenger.newMessage("Sure are.")
+        $ MessengerService.new_message(lauren, "images/v11/Scene 30/Laurentxtimg1.webp") # Lauren and MC picture together holding wands (check v11las45a for the pose)
+        $ MessengerService.add_reply(lauren, "Some good looking people.")
+        $ MessengerService.new_message(lauren, "Sure are.")
 
-        label v11s30_PhoneContinuelauren1:
-            if lauren.messenger.replies:
-                call screen phone
-            if lauren.messenger.replies:
+        while MessengerService.has_replies(lauren):
+            call screen phone
+            if MessengerService.has_replies(lauren):
                 u "(I should reply to Lauren.)"
-                jump v11s30_PhoneContinuelauren1
 
     scene v11las49
     with dissolve

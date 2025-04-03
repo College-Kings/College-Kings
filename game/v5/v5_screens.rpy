@@ -168,7 +168,37 @@ screen youattack2():
 
         timer reactiona action Jump("adamattack")
 
-    # use fight_overlay TODO: Update fight code
+    if config_debug:
+        python:
+            labels = []
+
+            if adamstance == 1:
+                labels.append("adamjab1")
+                labels.append("adamhook2")
+                labels.append("adambody2")
+                labels.append("adamkick2")
+
+            if adamstance == 2:
+                labels.append("adamjab2")
+                labels.append("adamhook1")
+                labels.append("adambody2")
+                labels.append("adamkick2")
+
+            if adamstance == 3:
+                labels.append("adamjab2")
+                labels.append("adamhook2")
+                labels.append("adambody1")
+                labels.append("adamkick2")
+
+            if adamstance == 4:
+                labels.append("adamjab2")
+                labels.append("adamhook2")
+                labels.append("adambody2")
+                labels.append("adamkick1")
+
+        timer 0.1 action Jump(renpy.random.choice(labels))
+
+    use fight_overlay
 
 
 screen adamattack():
@@ -340,7 +370,37 @@ screen adamattack():
             yalign 0.6
             action Jump ("adamkickblocked")
 
-    # use fight_overlay TODO: Update fight code
+    if config_debug:
+        python:
+            labels = []
+
+            if adamattack == 1:
+                labels.append("adamhookblocked")
+                labels.append("adamhookhit")
+                labels.append("adamhookhit")
+                labels.append("adamhookhit")
+
+            if adamattack == 2:
+                labels.append("adamjabhit")
+                labels.append("adamjabblocked")
+                labels.append("adamjabhit")
+                labels.append("adamjabhit")
+
+            if adamattack == 3:
+                labels.append("adambodyhit")
+                labels.append("adambodyhit")
+                labels.append("adambodyblocked")
+                labels.append("adambodyhit")
+
+            if adamattack == 4:
+                labels.append("adamkickhit")
+                labels.append("adamkickhit")
+                labels.append("adamkickhit")
+                labels.append("adamkickblocked")
+
+        timer 0.1 action Jump(renpy.random.choice(labels))
+
+    use fight_overlay
 
 
 screen trolleyProblem(option1, option2):
@@ -352,5 +412,8 @@ screen trolleyProblem(option1, option2):
         pos (125, 150)
         action Jump(option2)
 
+    bar value AnimatedValue(0, 3, 3, 3) at alpha_dissolve
     timer 3 action Jump(option1)
-    use timerBar
+
+    if config_debug:
+        timer 0.1 action Jump(renpy.random.choice((option1, option2)))

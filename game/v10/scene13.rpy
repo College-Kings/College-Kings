@@ -9,7 +9,7 @@ label v10_wolves_redec:
         scene v10swhr1 # TPP. Show MC walking through the front door of the Wolves house.
         with Fade(1, 0, 1)
 
-        play sound "sounds/dooropen.mp3"
+        play sound sound.door_open
 
     else:
         scene v10swhr8 # TPP. Show MC walking down the stairs of the Wolves house.
@@ -17,7 +17,7 @@ label v10_wolves_redec:
 
     pause 0.75
 
-    play music "music/v10/Track Scene 13.mp3" fadein 2
+    play music music.ck1.v10.Track_Scene_13 fadein 2
 
     scene v10swhr2 # FPP. Show Chris stood in the Wolves hallway this angle must make sense for both whr1 & whr8, Chris neutral, mouth closed.
     with dissolve
@@ -83,8 +83,8 @@ label v10_wolves_redec:
     with dissolve
 
     menu:
-        "Accept help":
-            $ add_point(KCT.BRO)
+        "Accept help" (bro=1.0):
+            $ reputation.add_point(RepComponent.BRO)
 
             u "Yeah I'd love some help. Will go much faster haha."
 

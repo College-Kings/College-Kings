@@ -9,7 +9,7 @@ label v13s50:
     
     ry "I'm really nervous, haha."
 
-    play music "music/v13/Track Scene 50_1.mp3" fadein 2
+    play music music.ck1.v13.Track_Scene_50_1 fadein 2
 
     scene v13s50_2 # FPP. Ryan looking at MC, slight smile, mouth closed
     with dissolve
@@ -72,7 +72,7 @@ label v13s50:
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v13/Track Scene 50_2.mp3" fadein 2
+    play music music.v13_Track_Scene_50_2 fadein 2
 
     scene v13s50_7 # FPP. Riley looking at MC, slight smile, mouth open
     with dissolve
@@ -165,8 +165,8 @@ label v13s50:
     em "Isn't that right, [name]?"
 
     menu:
-        "He knows more":
-            $ add_point(KCT.BRO)
+        "He knows more" (bro=1.0):
+            $ reputation.add_point(RepComponent.BRO)
             scene v13s50_9a
             with dissolve
 
@@ -284,7 +284,7 @@ label v13s50:
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v13/Track Scene 50_3.mp3" fadein 2
+    play music music.ck1.v13.Track_Scene_50_3 fadein 2
 
     scene v13s50_14 # TPP. Show MC entering the washroom thinking to himself, slight smile, mouth closed 
     with dissolve
@@ -346,7 +346,7 @@ label v13s50:
             pause 0.75
 
             stop music fadeout 3
-            play music "music/v13/Track Scene 50_4.mp3" fadein 2
+            play music music.ck1.v13.Track_Scene_50_4 fadein 2
 
             scene v13s50_19a # FPP. Same as v13s50_19, MC hands down to his side
             with dissolve
@@ -413,10 +413,10 @@ label v13s50:
 
     stop music fadeout 3
 
-    if chloe.relationship >= Relationship.GIRLFRIEND and not v11_riley_roomate:
+    if CharacterService.is_girlfriend(chloe) and not v11_riley_roomate:
         jump v13s52
     
-    elif riley.relationship >= Relationship.FWB and v11_riley_roomate:
+    elif CharacterService.is_fwb(riley) and v11_riley_roomate:
         jump v13s53
     
     else: 

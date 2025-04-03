@@ -10,7 +10,7 @@ label v12_amber_bus:
 
     pause 0.75
 
-    play music "music/v12/Track Scene 10.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_10 fadein 2
 
     scene v12amb2 # TPP. Show Amber taking a seat (she's on the window seat), MC still standing next to his seat (he will sit next to her), both slight smiles, mouths closed (Ms. Rose sitting on the other aisle with Imre, they're not in shot)
     with dissolve
@@ -41,9 +41,9 @@ label v12_amber_bus:
     with dissolve
 
     menu:
-        "Tease her":
+        "Tease her" (troublemaker=1.0):
             $ v11_tease_amber += 1
-            $ add_point(KCT.TROUBLEMAKER)
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
             scene v12amb3b # FPP. Same as v12amb3, Amber slight smile, mouth closed, different pose
             with dissolve
 
@@ -59,8 +59,8 @@ label v12_amber_bus:
 
             u "I may be willing to take that risk."
 
-        "Convince her":
-            $ add_point(KCT.BOYFRIEND)
+        "Convince her" (boyfriend=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             scene v12amb3b
             with dissolve
 
@@ -211,8 +211,8 @@ label v12_amber_bus:
 
             u "Exactly."
 
-        "Say something":
-            $ add_point(KCT.BRO)
+        "Say something" (bro=1.0):
+            $ reputation.add_point(RepComponent.BRO)
 
             u "You should just get it over with and tell her what's up."
 
@@ -391,7 +391,7 @@ label v12_amber_bus:
 
     u "Don't pass the blame, cause \"you have a fifth grade education\"."
 
-    play sound "sounds/facepunch1.mp3"
+    play sound sound.hit
     scene v12amb3m # FPP. Same as v12amb3i, Amber slightly annoyed, mouth closed, punching MC in the arm
     with vpunch
 

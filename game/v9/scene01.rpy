@@ -3,36 +3,25 @@
 # Characters: MC (outfit 2), Chris (Outfit 1)
 # Time: Tuesday night
 
-init python:
-    def v9s1_reply1():
-        imre.messenger.newMessage(_("Damn right! You heading to the gym?"))
-        imre.messenger.addReply(_("Naw, I'm spent. But I have a feeling I'll be spending a lot of my time in there"))
-        imre.messenger.newMessage(_("Me too. See ya there!"))
-
-    def v9s1_reply2():
-        imre.messenger.newMessage(_("Lucky we did, huh? I think we got a hand up on those baby apes"))
-        imre.messenger.addReply(_("Damn right! We got this! We need to hit the gym soon... after I get some sleep. I'm bout to pass out"))
-        imre.messenger.newMessage(_("Same! Talk soon"))
-
 label v9start:
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         jump v9_start_wolves
     else:
         jump v9_start_apes
 
 label v9_start_wolves:
-    play music "music/v9/Track Scene 1.mp3" fadein 2
+    play music music.ck1.v9.Track_Scene_1 fadein 2
 
     u "(I need to find out what's going on. This is insane!)"
 
     scene v9wpost1 # TPP. MC outside Chris' room, knocking the door, confused, mouth closed
     with fade
 
-    play sound "sounds/knock.mp3"
+    play sound sound.knock
     pause 0.5
     ch "Come in."
 
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
 
     scene v9wpost2 # FPP. (MC entered the room now and is standing near Chris' desk). Show Chris sitting at his desk just chilling, looking at his phone, smiling, mouth closed (preferably phone screen not visible)
     with dissolve
@@ -78,8 +67,8 @@ label v9_start_wolves:
     with dissolve
 
     menu:
-        "Excited reply":
-            $ add_point(KCT.TROUBLEMAKER)
+        "Excited reply" (troublemaker=1.0):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             u "No shit! That's amazing!"
 
@@ -95,8 +84,8 @@ label v9_start_wolves:
             with dissolve
             ch "Great! We're gonna need it if we plan on beating the Apes."
 
-        "Hesitant reply":
-            $ add_point(KCT.BOYFRIEND)
+        "Hesitant reply" (boyfriend=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             $ v9_brawl_hesitant = True
 
             u "(I haven't been training enough for this.)"
@@ -154,8 +143,8 @@ label v9_start_wolves:
     with dissolve
 
     menu:
-        "Try to back out":
-            $ add_point(KCT.BOYFRIEND)
+        "Try to back out" (boyfriend=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             $ v9_brawl_hesitant = True
 
             u "I don't know... I'm not ready for something like this. A... BRAWL?"
@@ -176,7 +165,7 @@ label v9_start_wolves:
             stop music fadeout 3
 
         "Go with it":
-            # $ add_point(KCT.TROUBLEMAKER)
+            # $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             u "Wow, trial by fire!"
 
@@ -198,7 +187,7 @@ label v9_start_wolves:
     with dissolve
     pause 0.75
 
-    play music "music/v9/Track Scene 3.mp3" fadein 2
+    play music music.ck1.v9.Track_Scene_3 fadein 2
 
     scene v9wpost6 # TPP. MC IN UNDERWEAR FROM NOW ON AND IT SHOULD BE DARK INSIDE THE ROOM. Show MC flexing one of his arms, looking at himself in mirror inside his room, neutral expression, mouth closed
     with Fade(0.75, 0.25, 0.75)
@@ -209,17 +198,28 @@ label v9_start_wolves:
     with dissolve
     pause 0.5
 
-    $ imre.messenger.addReply(_("You here yet?"))
-    $ imre.messenger.newMessage(_("Yeah, you ready?"))
-    $ imre.messenger.addReply(_("Hell no! But we need to get ready!"), v9s1_reply1)
-    $ imre.messenger.addReply(_("I think so, actually. You and Sebastian really helped"), v9s1_reply2)
-    
-    label v9_phn_imre1:
-        if imre.messenger.replies:
-            call screen phone
-        if imre.messenger.replies:
+    python:
+        v9s1_reply1 = MessageBuilder(imre)
+        v9s1_reply1.new_message(_("Damn right! You heading to the gym?"))
+        v9s1_reply1.add_reply(_("Naw, I'm spent. But I have a feeling I'll be spending a lot of my time in there"))
+        v9s1_reply1.new_message(_("Me too. See ya there!"))
+
+        v9s1_reply2 = MessageBuilder(imre)
+        v9s1_reply2.new_message(_("Lucky we did, huh? I think we got a hand up on those baby apes"))
+        v9s1_reply2.add_reply(_("Damn right! We got this! We need to hit the gym soon... after I get some sleep. I'm bout to pass out"))
+        v9s1_reply2.new_message(_("Same! Talk soon"))
+
+        MessengerService.add_reply(imre, _("You here yet?"))
+        MessengerService.new_message(imre, _("Yeah, you ready?"))
+        MessengerService.add_replies(imre,
+            Reply(_("Hell no! But we need to get ready!"), v9s1_reply1),
+            Reply(_("I think so, actually. You and Sebastian really helped"), v9s1_reply2)
+        )
+        
+    while MessengerService.has_replies(imre):
+        call screen phone
+        if MessengerService.has_replies(imre):
             u "(I should talk to Imre.)"
-            jump v9_phn_imre1
         
     scene v9wpost7a # MC places his phone down on his bed, and is just lying on it now, thinking, mouth closed
     with dissolve

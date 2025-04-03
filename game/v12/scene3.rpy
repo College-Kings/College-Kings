@@ -7,31 +7,29 @@ label v12_penelope_roof:
     scene v12penr1 # TPP Show MC sitting on his bed looking down at his phone, in his hand
     with fade
 
-    play sound "sounds/vibrate.mp3"
+    play sound sound.vibrate
     pause 1
 
-    play music "music/v12/Track Scene 3_1.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_3_1 fadein 2
 
-    $ penelope.messenger.newMessage("Hey, are you up still?", force_send=True)
-    $ penelope.messenger.newMessage("If you are, can you meet me in the hallway?", force_send=True)
+    $ MessengerService.new_message(penelope, "Hey, are you up still?")
+    $ MessengerService.new_message(penelope, "If you are, can you meet me in the hallway?")
 
     u "(It's Penelope.)"
 
-    call screen phone
+    call screen messenger(penelope)
 
     menu:
         "Reply":
-            if penelope.relationship >= Relationship.LIKES:
-                $ add_point(KCT.BOYFRIEND)
+            if CharacterService.is_dating(penelope):
+                $ reputation.add_point(RepComponent.BOYFRIEND)
 
-            $ penelope.messenger.addReply("Yeah, one sec", func=None)
+            $ MessengerService.add_reply(penelope, "Yeah, one sec")
 
-            label v12_penelope_roof_text:
-                if penelope.messenger.replies:
-                    call screen phone
-                if penelope.messenger.replies:
+            while MessengerService.has_replies(penelope):
+                call screen phone
+                if MessengerService.has_replies(penelope):
                     u "(I should probably reply.)"
-                    jump v12_penelope_roof_text
 
             scene v12penr2 # TPP Show MC leaving his hotel room
             with dissolve
@@ -39,7 +37,7 @@ label v12_penelope_roof:
             pause 1
 
             stop music fadeout 3
-            play music "music/v12/Track Scene 3_2.mp3" fadein 2
+            play music music.ck1.v12.Track_Scene_3_2 fadein 2
 
             scene v12penr3 # FPP Show Penelope in hotel room hallway, embarrassed expression, mouth closed
             with dissolve
@@ -152,7 +150,7 @@ label v12_penelope_roof:
             pause 1
 
             stop music fadeout 3
-            play music "music/v12/Track Scene 3_3.mp3" fadein 2
+            play music music.v12_Track_Scene_3_3 fadein 2
 
             scene v12penr8 # TPP Show MC and Penelope out on hotel roof in the process of sitting down
             with dissolve
@@ -168,15 +166,15 @@ label v12_penelope_roof:
             with dissolve
 
             menu:
-                "Sure is":
-                    $ add_point(KCT.BRO)
+                "Sure is" (bro=1.0):
+                    $ reputation.add_point(RepComponent.BRO)
                     scene v12penr11 # FPP View of MC, who is laying on his back looking up at the stars
                     with dissolve
 
                     u "It really is."
 
-                "You sure are":
-                    $ add_point(KCT.BOYFRIEND)
+                "You sure are" (boyfriend=1.0):
+                    $ reputation.add_point(RepComponent.BOYFRIEND)
                     u "Yes, you are."
 
                     scene v12penr10a # FPP Same angle as v12penr10, Penelope looking back at MC, neutral expression, mouth open
@@ -293,7 +291,7 @@ label v12_penelope_roof:
                 scene v12penr10a
                 with dissolve
 
-                $ grant_achievement("good_vs_evil")
+                grant Achievement("good_vs_evil", "Penelope understands you")
                 pe "I think you struggle with right and wrong just like everyone does, but that doesn't mean you're good or bad. It means you're human."
 
             else:
@@ -312,15 +310,15 @@ label v12_penelope_roof:
 
             pe "Always."
 
-            if penelope.relationship >= Relationship.LIKES:
+            if CharacterService.is_dating(penelope):
                 pe "I kinda hope I end up marrying a guy like you."
 
                 scene v12penr10e
                 with dissolve
 
                 menu:
-                    "Be shocked":
-                        $ add_point(KCT.BRO)
+                    "Be shocked" (bro=1.0):
+                        $ reputation.add_point(RepComponent.BRO)
 
                         u "*Gulp*"
 
@@ -339,9 +337,9 @@ label v12_penelope_roof:
 
                         pe "*Laughs* Yeah, you've got a few other things to figure out before you start thinking about tying the knot."
 
-                    "Be bold":
-                        $ add_point(KCT.BOYFRIEND)
-                        $ grant_achievement("a_person_like_me")
+                    "Be bold" (penelope=1.0):
+                        $ reputation.add_point(RepComponent.BOYFRIEND)
+                        grant Achievement("a_person_like_me", "You see yourself as Penelope's husband material")
 
                         scene v12penr10e
                         #with dissolve
@@ -356,7 +354,7 @@ label v12_penelope_roof:
                         scene v12penr13 # TPP Show close-up of Penelope giving MC a kiss
                         with dissolve
 
-                        play sound "sounds/kiss.mp3"
+                        play sound sound.kiss
 
                         pause 1.5
 
@@ -411,9 +409,9 @@ label v12_penelope_roof:
             pause 1.25
 
             stop music fadeout 3
-            play music "music/v12/Track Scene 3_4.mp3" fadein 2
+            play music music.v12_Track_Scene_3_4 fadein 2
 
-            if penelope.relationship >= Relationship.LIKES:
+            if CharacterService.is_dating(penelope):
                 scene v12penr4a # TPP Same angle as v12penr4, MC and Penelope walking down hotel hallway holding hands
                 with dissolve
 
@@ -440,11 +438,11 @@ label v12_penelope_roof:
 
             pe "I better get to bed, Mr. Lee wants me up early to help with our departure."
 
-            if penelope.relationship >= Relationship.LIKES:
+            if CharacterService.is_dating(penelope):
                 scene v12penr16 # TPP Outside of Penelope's hotel room, show Penelope kissing MC
                 with dissolve
 
-                play sound "sounds/kiss.mp3"
+                play sound sound.kiss
 
                 pause 1.5
 
@@ -477,7 +475,7 @@ label v12_penelope_roof:
             pause 0.75
 
         "Don't reply":
-            $ add_point(KCT.BRO)
+            $ reputation.add_point(RepComponent.BRO)
 
             scene v12penr19 # FPP MC's view sitting on his bed, looking down at his phone, which he just turned off
             with dissolve

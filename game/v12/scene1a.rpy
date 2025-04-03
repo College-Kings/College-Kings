@@ -10,7 +10,7 @@ label v12_chase_robber:
 
     pause 0.75
 
-    play music "music/v12/Track Scene 1_1.mp3" fadein 2
+    play music music.v12_Track_Scene_1_1 fadein 2
 
     scene v12car2 # TPP Show MC turning into an alley at a full run
     with dissolve
@@ -36,7 +36,7 @@ label v12_chase_robber:
 
             scene v12car6 # TPP Show MC getting hit on the back of the head
             with dissolve
-            play sound "sounds/facepunch1.mp3"
+            play sound sound.hit
 
             pause 0.3
             scene v12car7 # TPP Show MC laying on the ground in the alley, face down, trying to catch himself
@@ -74,21 +74,21 @@ label v12_chase_robber:
             with dissolve
 
             menu (fail_label="v12s1a_failed_timer"):
-                "Dodge":
-                    $ add_point(KCT.TROUBLEMAKER)
+                "Dodge" (troublemaker=1.0):
+                    $ reputation.add_point(RepComponent.TROUBLEMAKER)
                     $ v12_fight_win = True
                     scene v12car12 # TPP Show MC dodging robber's punch
                     with dissolve
 
                     pause 0.75
                     
-                    play sound "sounds/facepunch1.mp3"
+                    play sound sound.hit
                     scene v12car0
                     with hpunch
                     
                     pause 0.5
                     
-                    play sound "sounds/facepunch1.mp3"
+                    play sound sound.hit
                     scene v12car00
                     with vpunch
                     
@@ -100,7 +100,7 @@ label v12_chase_robber:
                         scene v12car12a # TPP Same angle as v12car12, show MC getting punched in the mouth by the robber
                         with hpunch
 
-                        play sound "sounds/facepunch1.mp3"
+                        play sound sound.hit
 
                         pause 0.75
 
@@ -113,7 +113,7 @@ label v12_chase_robber:
         robber "Ha, you sure are one sorry ass fighter. Now your girl lost her bag and you got your ass kicked. Bet you won't be getting any tonight. *Laughs*"
 
         stop music fadeout 3
-        play music "music/v12/Track Scene 1a_2.mp3" fadein 2
+        play music music.ck1.v12.Track_Scene_1a_2 fadein 2
 
         scene v12car14 # FPP View of MC laying on the ground, show robber running out of the alley and into the night
         with dissolve
@@ -213,7 +213,7 @@ label v12_chase_robber:
         pause 0.75
 
         stop music fadeout 3
-        play music "music/v12/Track Scene 1a_3.mp3" fadein 2
+        play music music.ck1.v12.Track_Scene_1a_3 fadein 2
 
         scene v12car100
         with fade
@@ -294,7 +294,7 @@ label v12_chase_robber:
         u "Fucking asshole!"
 
         stop music fadeout 3
-        play music "music/v12/Track Scene 1a_2.mp3" fadein 2
+        play music music.ck1.v12.Track_Scene_1a_2 fadein 2
 
         scene v12car16a # TPP Same angle as v12car16, show MC reaching down to robber on the ground and grabbing Nora's bag
         with dissolve
@@ -305,11 +305,11 @@ label v12_chase_robber:
         with dissolve
 
         menu:
-            "Kick him":
-                $ add_point(KCT.TROUBLEMAKER)
+            "Kick him" (troublemaker=1.0):
+                $ reputation.add_point(RepComponent.TROUBLEMAKER)
                 scene v12car16b # TPP Same angle as v12car16, show MC kicking robber
                 with dissolve
-                play sound "sounds/facepunch1.mp3"
+                play sound sound.hit
 
 
                 u "Bitch!"
@@ -435,7 +435,7 @@ label v12_chase_robber:
         pause 0.75
 
         stop music fadeout 3
-        play music "music/v12/Track Scene 1a_3.mp3" fadein 2
+        play music music.ck1.v12.Track_Scene_1a_3 fadein 2
 
         scene v12car23
         with dissolve
@@ -478,7 +478,7 @@ label v12_chase_robber:
         pause 0.75
 
     stop music fadeout 3
-    play music "music/v11/Track Scene 6.mp3" fadein 2
+    play music music.v11_Track_Scene_6 fadein 2
 
     scene v12car30 # TPP Show MC sitting on his bed in the hotel room
     with dissolve
@@ -514,7 +514,7 @@ label v12_chase_robber:
     scene v12car30
     with dissolve
 
-    play sound "sounds/vibrate.mp3"
+    play sound sound.vibrate
     pause 1.25
 
     scene v12car30a # TPP Same angle as v12car30, MC sitting on the hotel room bed and checking his phone
@@ -522,31 +522,25 @@ label v12_chase_robber:
 
     pause 0.75
 
-    $ v12s1a_kiwiiPost1 = KiwiiPost(imre, "v12/impost1.webp", _("Would your man chase a robber down in the middle of the night? If not, you don't have a real man..."), numberLikes=216)
-    $ v12s1a_kiwiiPost1.newComment(charli, _("If you want a man Imre I can take you to a few bars... All you had to do was ask."), numberLikes=14, force_send=True)
-    $ v12s1a_kiwiiPost1.newComment(ryan, _("LMAO"), numberLikes=1, mentions=[imre], force_send=True)
+    $ kiwii_post = KiwiiService.new_post(imre, "ck1_v12_imre_post", _("Would your man chase a robber down in the middle of the night? If not, you don't have a real man..."), number_likes=216)
+    $ KiwiiService.new_comment(kiwii_post, charli, _("If you want a man Imre I can take you to a few bars... All you had to do was ask."), number_likes=14)
+    $ KiwiiService.new_comment(kiwii_post, ryan, _("LMAO"), number_likes=1, mentions=[imre])
 
-    $ imre.messenger.newMessage("Check Kiwii... you're welcome. :)", force_send=True)
-    $ imre.messenger.addReply("Haha okay", func=None)
-
-    call screen phone
-
-    # MC checks Kiwii and there's a picture of MC running after the robber posted by Imre 
-    # caption "Would your man chase a robber down in the middle of the night? If not, you don't have a real man..."
-    # There's a comment from Charli that says "If you want a man Imre I can take you to a few bars, all you had to do was ask."
+    $ MessengerService.new_message(imre, "Check Kiwii... you're welcome. :)")
+    $ MessengerService.add_reply(imre, "Haha okay")
     
     # MC replies back to Imre-
-    $ imre.messenger.addReply("Boosting me huh?", func=None)
-    $ imre.messenger.newMessage("You deserved it")
-    $ imre.messenger.addReply("You see Charli's comment?", func=None)
-    $ imre.messenger.newMessage("No, one sec")
-    $ imre.messenger.newMessage("I'm gonna beat his ass")
-    $ imre.messenger.addReply("Haha", func=None)
+    $ MessengerService.add_reply(imre, "Boosting me huh?")
+    $ MessengerService.new_message(imre, "You deserved it")
+    $ MessengerService.add_reply(imre, "You see Charli's comment?")
+    $ MessengerService.new_message(imre, "No, one sec")
+    $ MessengerService.new_message(imre, "I'm gonna beat his ass")
+    $ MessengerService.add_reply(imre, "Haha")
 
-    scene v12car30a
-    with dissolve
-    pause 0.75
-    call screen phone
+    while MessengerService.has_replies(imre):
+        call screen phone
+        if MessengerService.has_replies(imre):
+            u "(I should check my phone.)"
     
     scene v12car30b # TPP Same angle as v12car30, MC sitting on bed, putting his phone away in his pocket
     with dissolve
@@ -555,7 +549,7 @@ label v12_chase_robber:
 
     # -MC hears a knock on his door-
 
-    play sound "sounds/knock.mp3"
+    play sound sound.knock
     pause 0.75
 
     stop music fadeout 3

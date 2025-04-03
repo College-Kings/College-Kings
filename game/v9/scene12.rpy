@@ -10,7 +10,7 @@ label v9_hallway:
 
     u "(Well that was really something, I guess. Who would have thought Mr. Lee's class could be anything more than a huge snorefest?)"
 
-    if lauren.relationship >= Relationship.GIRLFRIEND:
+    if CharacterService.is_girlfriend(lauren):
         scene v9hlw2 # TPP. Show MC looking down as he continues to walk.
         with dissolve
 
@@ -40,12 +40,12 @@ label v9_hallway:
     u "(Well, fuck.)"
 
     menu (fail_label="v9_hall_calm"): 
-        "Apologize": 
-            $ add_point(KCT.BRO)
+        "Apologize" (bro=1.0): 
+            $ reputation.add_point(RepComponent.BRO)
             jump v9_hall_apol
 
-        "Tell him to calm down":
-            $ add_point(KCT.TROUBLEMAKER)
+        "Tell him to calm down" (troublemaker=1.0):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
             jump v9_hall_calm
 
 label v9_hall_apol:
@@ -61,7 +61,7 @@ label v9_hall_apol:
 
     unknown "Watch where you're fucking walking, bitch!"
 
-    play music "music/v9/Track Scene 12_1.mp3" fadein 2
+    play music music.ck1.v9.Track_Scene_12_1 fadein 2
 
     jump v9_hall_cont1
 
@@ -78,7 +78,7 @@ label v9_hall_calm:
 
     unknown "Fuck you!"
 
-    play music "music/v9/Track Scene 12_1.mp3" fadein 2
+    play music music.ck1.v9.Track_Scene_12_1 fadein 2
 
     jump v9_hall_cont1
 
@@ -119,13 +119,13 @@ label v9_hall_cont1:
     with dissolve
 
     menu (fail_label="v9_hall_no_punch"): 
-        "Punch the guy": 
-            $ add_point(KCT.BRO)
+        "Punch the guy" (bro=1.0): 
+            $ reputation.add_point(RepComponent.BRO)
             $ hl_punch = True
             jump v9_hall_punch
 
-        "Don't punch the guy":
-            $ add_point(KCT.TROUBLEMAKER)
+        "Don't punch the guy" (troublemaker=1.0):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
             $ hl_punch = False
             jump v9_hall_no_punch
 
@@ -133,7 +133,7 @@ label v9_hall_punch:
     scene v9hlw8a # TPP. Same camera as v9hlw8, show MC stepping back and looking the tough guy in the face, both angry.
     with dissolve
 
-    $ grant_achievement("back_down")
+    grant Achievement("back_down", "Punch the guy in the hallway")
     u "(Nah, fuck this.)"
 
     scene v9hlw8b # TPP. Show MC swinging a punch into the tough guys stomach, the tough guy winces in pain.
@@ -164,10 +164,10 @@ label v9_hall_punch:
     scene v9hlw11 # FPP. Show the passers by who stopped and surrounded MC, looking at camera, all mouths closed.
     with dissolve
 
-    if kct == "loyal":
+    if reputation() == Reputations.LOYAL:
         u "(Actually, that might be one of the stupidest things I've done lately. Fuck it, [name]! That guy was a jerk, but did I really have to knock him out in front of everybody?)"
 
-    elif kct == "popular":
+    elif reputation() == Reputations.POPULAR:
         u "I tried to stop this guys. Guess he wasn't smart enough to listen."
 
     else: 
@@ -178,7 +178,7 @@ label v9_hall_punch:
     scene v9hlw12 # FPP. Show Lindsey and another girl who are a distance away from the camera, Lindsey looking at camera (MC). Lindsey smile.
     with dissolve
 
-    play music "music/v9/Track Scene 12_2.mp3" fadein 2
+    play music music.ck1.v9.Track_Scene_12_2 fadein 2
 
     pause 1
 
@@ -263,7 +263,7 @@ label v9_hall_no_punch:
     scene v9hlw23 # TPP. Show MC now sat up against the wall with a bleeding nose, Lindsey kneeling infront of MC, Lindsey concerned, mouth open.
     with dissolve
 
-    play music "music/v9/Track Scene 12_2.mp3" fadein 2
+    play music music.ck1.v9.Track_Scene_12_2 fadein 2
 
     li "Are you okay?"
 

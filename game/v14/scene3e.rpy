@@ -4,7 +4,7 @@
 # Time: Night
 
 label v14s03e:
-    play music "music/v13/Track Scene 10.mp3" fadein 2
+    play music music.v13_Track_Scene_10 fadein 2
 
     if v14_ryan_satin: 
         scene v14s03e_1 # TPP. Show MC standing outside of room, neutral expression, mouth closed 
@@ -41,8 +41,8 @@ label v14s03e:
         with dissolve
 
         menu: 
-            "Good to hear":
-                $ add_point(KCT.BRO)
+            "Good to hear" (bro=1.0):
+                $ reputation.add_point(RepComponent.BRO)
                 
                 u "Oh, good to hear..."
 
@@ -51,8 +51,8 @@ label v14s03e:
 
                 ry "Damn right it's good!" 
 
-            "Oof, poor Satin":
-                $ add_point(KCT.TROUBLEMAKER)
+            "Oof, poor Satin" (troublemaker=1.0):
+                $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
                 scene v14s03e_3
                 #with dissolve
@@ -126,8 +126,8 @@ label v14s03e:
         with dissolve
 
         menu:
-            "I'm glad you waited":
-                $ add_point(KCT.BRO)
+            "I'm glad you waited" (bro=1.0):
+                $ reputation.add_point(RepComponent.BRO)
                 u "I'm glad you did."
 
                 scene v14s03e_6b
@@ -140,8 +140,8 @@ label v14s03e:
 
                 u "That girl you were talking to... She had herpes."
 
-            "You should've done it":
-                $ add_point(KCT.TROUBLEMAKER)
+            "You should've done it" (troublemaker=1.0):
+                $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
                 u "I don't know man, I think you should've done it."
 
@@ -326,12 +326,12 @@ label v14s03e:
 
     menu:
 
-        "Laugh":
-            $ add_point(KCT.TROUBLEMAKER)
+        "Laugh" (troublemaker=1.0):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
             u "*Laughs* Oh god."
 
-        "Get mad":
-            $ add_point(KCT.BRO)
+        "Get mad" (bro=1.0):
+            $ reputation.add_point(RepComponent.BRO)
             u "What the fuck?!"
 
     u "So you set Imre up? I thought you two were finally getting along."
@@ -421,8 +421,8 @@ label v14s03e:
     with dissolve
 
     menu:
-        "That was hilarious":
-            $ add_point(KCT.TROUBLEMAKER)
+        "That was hilarious" (troublemaker=1.0):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
             u "Haha, that was hilarious."
 
             scene v14s03e_20
@@ -430,8 +430,8 @@ label v14s03e:
 
             ry "Right???"
 
-        "Not cool, Ryan":
-            $ add_point(KCT.BOYFRIEND)
+        "Not cool, Ryan" (boyfriend=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             
             scene v14s03e_20a
             #with dissolve

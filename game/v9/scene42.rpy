@@ -4,11 +4,11 @@
 # Time: Saturday Night
 
 label v9_at_warehouse:
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         scene v9aaw1 # FPP. Show Sebastian removing the blindfold being removed from Camera, blurry image (As if adjusting to the light).
         with fade
         
-        play music "music/v9/Track Scene 42.mp3" fadein 2
+        play music music.ck1.v9.Track_Scene_42 fadein 2
 
         pause 1
 
@@ -16,8 +16,8 @@ label v9_at_warehouse:
         with dissolve
 
         menu:
-            "Be upset":
-                $ add_point(KCT.BOYFRIEND)
+            "Be upset" (boyfriend=1.0):
+                $ reputation.add_point(RepComponent.BOYFRIEND)
 
                 u "Shit, Sebastian, was that really necessary?"
 
@@ -26,8 +26,8 @@ label v9_at_warehouse:
 
                 se "You tell me."
 
-            "Be excited":
-                $ add_point(KCT.BRO)
+            "Be excited" (bro=1.0):
+                $ reputation.add_point(RepComponent.BRO)
 
                 u "Mysterious! I like it."
 
@@ -117,8 +117,8 @@ label v9_at_warehouse:
         with dissolve
 
         menu:
-            "Talk about Ryan":
-                $ add_point(KCT.TROUBLEMAKER)
+            "Talk about Ryan" (troublemaker=1.0):
+                $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
                 u "*Whispers* Hey, Im, if I draw Ryan first, want me to warm him up for you?"
 
@@ -148,7 +148,7 @@ label v9_at_warehouse:
             u "(Oh, God what if they boo me when I get in the ring?)"
 
             show glitch
-            play sound "sounds/glitch.mp3"
+            play sound sound.glitch
             pause 0.1
             hide glitch
 
@@ -158,7 +158,7 @@ label v9_at_warehouse:
 
                 pause 1
 
-                play sound "sounds/fall.mp3"
+                play sound sound.fall
 
                 scene v9dream12b # IGNORE THIS
                 with hpunch
@@ -171,7 +171,7 @@ label v9_at_warehouse:
 
                 pause 1
 
-                play sound "sounds/fall.mp3"
+                play sound sound.fall
 
                 scene v9dream14b # IGNORE THIS
                 with hpunch
@@ -179,7 +179,7 @@ label v9_at_warehouse:
                 pause 1
             
             show glitch
-            play sound "sounds/glitch.mp3"
+            play sound sound.glitch
             pause 0.1
             hide glitch
 
@@ -202,8 +202,8 @@ label v9_at_warehouse:
         with dissolve
 
         menu:
-            "Tell Chris about Ryan":
-                $ add_point(KCT.TROUBLEMAKER)
+            "Tell Chris about Ryan" (troublemaker=1.0):
+                $ reputation.add_point(RepComponent.TROUBLEMAKER)
                 
                 u "(If I don't say something, this could get out of hand.)"
 
@@ -220,8 +220,8 @@ label v9_at_warehouse:
                 with dissolve
 
 
-            "Keep quiet":
-                $ add_point(KCT.BRO)
+            "Keep quiet" (bro=1.0):
+                $ reputation.add_point(RepComponent.BRO)
 
                 u "(Not my place.)"
 
@@ -239,7 +239,7 @@ label v9_at_warehouse:
         scene v9aaw8 # FPP. Show Cameron removing the blindfold being removed from Camera, blurry image (As if adjusting to the light).
         with fade
 
-        play music "music/v9/Track Scene 42.mp3" fadein 2
+        play music music.ck1.v9.Track_Scene_42 fadein 2
 
         pause 1
 
@@ -247,8 +247,8 @@ label v9_at_warehouse:
         with dissolve
 
         menu:
-            "Complain":
-                $ add_point(KCT.TROUBLEMAKER)
+            "Complain" (troublemaker=1.0):
+                $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
                 u "What the fuck, man?"
 
@@ -262,8 +262,8 @@ label v9_at_warehouse:
 
                 u "Geez."
 
-            "Deal with it":
-                $ add_point(KCT.BRO)
+            "Deal with it" (bro=1.0):
+                $ reputation.add_point(RepComponent.BRO)
 
                 u "(A bit over the top with the ambiance, bro.)"
 
@@ -338,8 +338,8 @@ label v9_at_warehouse:
         with dissolve
 
         menu:
-            "Say something":
-                $ add_point(KCT.TROUBLEMAKER)
+            "Say something" (troublemaker=1.0):
+                $ reputation.add_point(RepComponent.TROUBLEMAKER)
                 u "Um... what's up with Cam?"
 
                 scene v9aaw12d # FPP. Same camera as v9aaw12, Grayson turns to face cameron, Cameron looks at Grayson, Cameron angry, Grayson serious, Grayson mouth open.
@@ -395,8 +395,8 @@ label v9_at_warehouse:
         with dissolve
 
         menu:
-            "Get pumped":
-                $ add_point(KCT.BRO)
+            "Get pumped" (bro=1.0):
+                $ reputation.add_point(RepComponent.BRO)
 
                 u "They're going down!"
                 

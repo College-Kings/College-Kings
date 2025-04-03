@@ -10,7 +10,7 @@ label v12_follow_chris:
 
     ch "Shit! Fuck!"
 
-    play music "music/v12/Track Scene 26a_1.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_26a_1 fadein 2
 
     scene v12chf2 # FPP. MC and Chris now outside the hotel, Chris looking at MC, Chris angry, holding his wrist, mouth open
     with dissolve
@@ -126,10 +126,10 @@ label v12_follow_chris:
     with dissolve
 
     menu:
-        "She wasn't overreacting":
-            $ add_point(KCT.BOYFRIEND)
-            $ add_point(KCT.TROUBLEMAKER)
-            $ chris.relationship = Relationship.MAD
+        "She wasn't overreacting" (boyfriend=1.0, troublemaker=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
+            $ CharacterService.set_mood(chris, Moods.MAD)
 
             scene v12chf4a
             with dissolve
@@ -211,15 +211,15 @@ label v12_follow_chris:
 
             driver "Don't worry, I can take you back."
 
-        "You're right":
+        "You're right" (bro=1.0):
             $ v12_help_chris += 1
             if v12_help_chris >= 4:
-                if joinwolves:
-                    $ grant_achievement("brotherhood_of_men")
+                if mc.frat == Frat.WOLVES:
+                    grant Achievement("brotherhood_of_men", "Defend Chris every time as a Wolf")
                 else:
-                    $ grant_achievement("best_frenemies")
+                    grant Achievement("best_frenemies", "Defend Chris every time as an Ape")
             
-            $ add_point(KCT.BRO)
+            $ reputation.add_point(RepComponent.BRO)
             scene v12chf4l # FPP. Same as v12chf4a, different pose
             with dissolve
 
@@ -312,7 +312,7 @@ label v12_follow_chris:
             pause 1.25
 
             stop music fadeout 3
-            play music "music/v12/Track Scene 26a_2.mp3" fadein 2
+            play music music.ck1.v12.Track_Scene_26a_2 fadein 2
 
             scene v12chf10 # FPP. Chris and MC now sitting in the waiting room, Chris worried, mouth open, looking at MC, MC looking at Chris
             with dissolve
@@ -386,7 +386,7 @@ label v12_follow_chris:
 
     stop music fadeout 3
 
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         jump v12s27 #scene 27
     else:
         jump v12s27a #scene 27a

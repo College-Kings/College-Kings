@@ -6,10 +6,10 @@
 label v11_aubrey_plane_sex:
     scene v11aub1 # TPP. Show Aubrey walking down the plane aisle, she has a slight smile, mouth closed (MC can be seen sitting in his seat in the backrgound, make sure the rest of the seating matches scene12)
     with fade
-    play music "music/v11/Track Scene 13_1.mp3" fadein 2
+    play music music.ck1.v11.Track_Scene_13_1 fadein 2
     pause 0.75
 
-    if aubrey.relationship < Relationship.FWB:
+    if CharacterService.is_friend(aubrey):
         jump v11_nora_chris_plane
 
     else:
@@ -32,9 +32,10 @@ label v11_aubrey_plane_sex:
             "Go after her":
                 label v11_aubrey_plane_sex_sg:
                 $ sceneList.add("v11_aubrey")
-                if lauren.relationship >= Relationship.GIRLFRIEND:
+                if CharacterService.is_girlfriend(lauren):
+                    $ CharacterService.set_mood(lauren, Moods.MAD)
                     $ v11_lauren_caught_aubrey = True
-                    $ lauren.relationship = Relationship.MAD
+                    $ CharacterService.set_relationship(lauren, Relationship.FRIEND)
 
                 scene v11aub4
                 with dissolve
@@ -51,15 +52,20 @@ label v11_aubrey_plane_sex:
 
                 pause 0.75
 
-                if config_censored:
+                if is_censored:
                     call screen censored_popup("v11s13_nsfwSkipLabel1")
 
                 stop music fadeout 3
-                play music "music/v11/Track Scene 13_2.mp3" fadein 2
+                play music music.ck1.v11.Track_Scene_13_2 fadein 2
                 scene v11aub8 # FPP. MC walks in the bathroom and sees Aubrey, she is naked, smiling seducrtively at him, mouth closed (Make sure it's not the plane one, use the other bathroom)
                 with dissolve
 
                 u "Oh wow, someone's moving fast."
+
+                lovense vibrate 1
+                lovense rotate 1
+                lovense suction 1
+                lovense thrust 1
 
                 scene v11aub8a # FPP. Same as v11aub8, but Aubrey mouth open
                 with dissolve
@@ -75,6 +81,11 @@ label v11_aubrey_plane_sex:
                 with dissolve
                 
                 pause 1.25
+
+                lovense vibrate 4
+                lovense rotate 3
+                lovense suction 3
+                lovense thrust 3
 
                 scene v11aub11 # FPP. MC is now sitting on the toilet, pants off, Aubrey is kneeled between his legs, looking at his dick
                 with dissolve
@@ -99,6 +110,11 @@ label v11_aubrey_plane_sex:
                 image v11auban = Movie(play="images/v11/Scene 13/v11auanTPP1.webm", loop=True, image="images/v11/Scene 13/v11auanTPP1Start.webp", start_image="images/v11/Scene 13/v11auanTPP1Start.webp") # Aubrey and MC anal doggy
                 image v11aubanf = Movie(play="images/v11/Scene 13/v11auanTPP1f.webm", loop=True, image="images/v11/Scene 13/v11auanTPP1Start.webp", start_image="images/v11/Scene 13/v11auanTPP1Start.webp") # Aubrey and MC anal doggy sped up
 
+                lovense vibrate 7
+                lovense rotate 5
+                lovense suction 5
+                lovense thrust 5
+
                 scene v11aubbj # Ignore as animation
                 with dissolve
                 pause
@@ -122,6 +138,11 @@ label v11_aubrey_plane_sex:
                 pause
 
                 u "Mhmmmm..."
+
+                lovense vibrate 8
+                lovense rotate 6
+                lovense suction 6
+                lovense thrust 6 
 
                 scene v11aub12 # FPP. Aubrey stops giving MC head, she is looking up at him, smiling, mouth closed
                 with dissolve
@@ -154,6 +175,11 @@ label v11_aubrey_plane_sex:
 
                 au "Damn [name]!"
 
+                lovense vibrate 10
+                lovense rotate 7
+                lovense suction 7
+                lovense thrust 7
+
                 scene v11aubof # Ignore as animation
                 with dissolve
                 pause
@@ -180,6 +206,11 @@ label v11_aubrey_plane_sex:
 
                 pause 1.25
 
+                lovense vibrate 11
+                lovense rotate 8
+                lovense suction 8
+                lovense thrust 8
+
                 scene v11aub15a # TPP. Same cam as v11aub15, MC grabbing Aubrey's thigh and raising her leg, MC is also grabbing her waist, both smiling, mouths closed
                 with dissolve
 
@@ -193,7 +224,7 @@ label v11_aubrey_plane_sex:
 
                 au "Oh fuck!"
 
-                play sound "sounds/knock.mp3"
+                play sound sound.knock
                 
                 u "Oh shit..."
 
@@ -214,6 +245,11 @@ label v11_aubrey_plane_sex:
 
                 la "Uhm... Are you okay in there?"
 
+                lovense vibrate 13
+                lovense rotate 9
+                lovense suction 9
+                lovense thrust 9
+
                 scene v11aubll2f
                 with dissolve
                 pause
@@ -230,6 +266,11 @@ label v11_aubrey_plane_sex:
 
                 pause 1
                 
+                lovense vibrate 14
+                lovense rotate 10
+                lovense suction 10
+                lovense thrust 10
+
                 scene v11auban
                 with dissolve
                 pause
@@ -260,8 +301,10 @@ label v11_aubrey_plane_sex:
                 scene v11aub17 # FPP. MC is looking at the door, door slightly open, can not see Lauren yet (Make sure this render is using the plane bathroom instead of the other one)
                 with dissolve
 
-                play sound "sounds/cardooropen.mp3"
+                play sound sound.car_door_open
 
+                lovense stop
+                
                 pause 0.75
                 stop music fadeout 3
 
@@ -278,7 +321,7 @@ label v11_aubrey_plane_sex:
 
                     scene v11aub17b # FPP. Same as v11aub17a, Lauren is very angry, mouth closed
                     with dissolve
-                    play music "music/v11/Track Scene 13_1.mp3" fadein 2
+                    play music music.ck1.v11.Track_Scene_13_1 fadein 2
                     u "I'm just helping her with her uh..."
 
                     scene v11aub17a
@@ -289,7 +332,7 @@ label v11_aubrey_plane_sex:
                     scene v11aub17
                     with dissolve
 
-                    play sound "sounds/doorclose.mp3"
+                    play sound sound.door_close
 
                     pause 0.75
                     
@@ -300,11 +343,11 @@ label v11_aubrey_plane_sex:
 
                 else: # Lauren not dating MC
                     la "Oh... oh shit. Sorry."
-                    play music "music/v11/Track Scene 13_1.mp3" fadein 2
+                    play music music.ck1.v11.Track_Scene_13_1 fadein 2
                     scene v11aub17
                     with dissolve
 
-                    play sound "sounds/doorclose.mp3"
+                    play sound sound.door_close
 
                     pause 0.75
 
@@ -315,15 +358,15 @@ label v11_aubrey_plane_sex:
                 $ renpy.end_replay()
 
                 menu:
-                    "No, not really":
-                        $ add_point(KCT.TROUBLEMAKER)
+                    "No, not really" (troublemaker=1.0):
+                        $ reputation.add_point(RepComponent.TROUBLEMAKER)
                         scene v11aub18a # FPP. Same as v11aub18, Aubrey mouth closed, slightly smiling
                         with dissolve
 
                         u "Uhm... I'm not sure I agree."
                         
-                    "Kinda hot":
-                        $ add_point(KCT.BOYFRIEND)
+                    "Kinda hot" (boyfriend=1.0):
+                        $ reputation.add_point(RepComponent.BOYFRIEND)
                         scene v11aub18a
                         with dissolve
 

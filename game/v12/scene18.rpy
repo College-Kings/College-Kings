@@ -13,7 +13,7 @@ label v12_slumber_party:
 
     pause 0.75
 
-    play music "music/v12/Track Scene 18_1.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_18_1 fadein 2
 
     scene v12slp2 # FPP. Aubrey, Imre, Aubrey and Lindsey in a circle talking to each other. MC looking at Aubrey, Aubrey looking at MC, Aubrey slight smile, mouth open (Only Aubrey in shot)
     with dissolve
@@ -168,7 +168,7 @@ label v12_slumber_party:
     imre "Time to party!"
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 18_2.mp3" fadein 2
+    play music music.v12_Track_Scene_18_2 fadein 2
 
     scene v12slp9a # FPP. Same as v12slp9, Imre normal pose, smiling, mouth closed
     with dissolve
@@ -330,13 +330,15 @@ label v12_slumber_party:
 
     au "*Laughs* Let's have fun, guys."
 
-    $ v12s18_kiwiiPost1 = KiwiiPost(lindsey, "v12/lindsey_aubrey_pjs.webp", _("Couldn't have asked for a better night... <3"), numberLikes=571) # Lindsey Selfie with Aubrey in pajamas
-    $ v12s18_kiwiiPost1.newComment(aubrey, _("You're so welcome boo... Girls night again ASAP!"), mentions=[lindsey], numberLikes=renpy.random.randint(250,350), force_send=True)
-    $ v12s18_kiwiiPost1.newComment(imre, _("Even more beautiful in person, ladies..."), mentions=[lindsey], numberLikes=renpy.random.randint(150,300), force_send=True)
-    $ v12s18_kiwiiPost1.newComment(chloe, _("Yesss! We have to do this again."), mentions=[aubrey], numberLikes=renpy.random.randint(250,400), force_send=True)
-    $ v12s18_kiwiiPost1.addReply(_("Just say when and where! Had a lot of fun :)"), mentions=[aubrey], numberLikes=renpy.random.randint(250, 330))
-    $ v12s18_kiwiiPost1.addReply(_("You deserve the best! Glad you enjoyed it ;)"), mentions=[lindsey], numberLikes=renpy.random.randint(250, 330))
-    $ v12s18_kiwiiPost1.newComment(lindsey, _("Haha, thank you guys <3"), numberLikes=renpy.random.randint(150,300))
+    $ kiwii_post = KiwiiService.new_post(lindsey, "ck1_v12_lindsey_aubrey_pjs", _("Couldn't have asked for a better night... <3"), number_likes=571) # Lindsey Selfie with Aubrey in pajamas
+    $ KiwiiService.new_comment(kiwii_post, aubrey, _("You're so welcome boo... Girls night again ASAP!"), number_likes=renpy.random.randint(250,350), mentions=[lindsey])
+    $ KiwiiService.new_comment(kiwii_post, imre, _("Even more beautiful in person, ladies..."), number_likes=renpy.random.randint(150,300), mentions=[lindsey])
+    $ KiwiiService.new_comment(kiwii_post, chloe, _("Yesss! We have to do this again."), number_likes=renpy.random.randint(250,400), mentions=[aubrey])
+    $ KiwiiService.add_replies(kiwii_post,
+        KiwiiReply(_("Just say when and where! Had a lot of fun :)"), number_likes=renpy.random.randint(250, 330), mentions=[aubrey]),
+        KiwiiReply(_("You deserve the best! Glad you enjoyed it ;)"), number_likes=renpy.random.randint(250, 330), mentions=[lindsey])
+    )
+    $ KiwiiService.new_comment(kiwii_post, lindsey, _("Haha, thank you guys <3"), number_likes=renpy.random.randint(150,300))
     call screen v12s18_room1
 
 # -Start of free roam-
@@ -496,7 +498,7 @@ label v12s18_bottlespin:
     scene v12slpbs9 # TPP. Show Imre and Lindsey having a peck on the lips
     with dissolve
 
-    play sound "sounds/kiss.mp3"
+    play sound sound.kiss
 
     pause 1.5
 
@@ -546,8 +548,8 @@ label v12s18_bottlespin:
     u "(Of fucking course.)"
 
     menu:
-        "Kiss him":
-            $ add_point(KCT.TROUBLEMAKER)
+        "Kiss him" (troublemaker=1.0):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             u "Fuck. Well, I'm not in the mood to get slapped, so let's get this over with."
 
@@ -571,7 +573,7 @@ label v12s18_bottlespin:
 
             u "Good, I was hoping you'd say that."
 
-            play sound "sounds/slap.mp3"
+            play sound sound.slap
 
             scene v12slpbs11 # TPP. Show MC slapping Ryan on the face, MC smiling, mouth closed, Ryan in pain, mouth closed
             with vpunch
@@ -593,7 +595,7 @@ label v12s18_bottlespin:
 
             imre "*Laughs*"
 
-            if joinwolves:
+            if mc.frat == Frat.WOLVES:
                 scene v12slpbs12 # FPP. Same positioning as v12slpbs3, MC and Chris looking at each other, Chris slight smile, mouth open
                 with dissolve
 
@@ -605,14 +607,14 @@ label v12s18_bottlespin:
 
                 ch "Wish you were a Wolf, hitting like that."
 
-        "Get slapped":
-            $ add_point(KCT.BRO)
+        "Get slapped" (bro=1.0):
+            $ reputation.add_point(RepComponent.BRO)
             scene v12slpbs7f # FPP. Same as v12slpbs7b, Ryan slight smile, mouth closed
             with dissolve
 
             u "Go ahead and slap me dude, I'm not kissing you."
 
-            play sound "sounds/slap.mp3"
+            play sound sound.slap
 
             scene v12slpbs13 # TPP. Show Ryan slapping MC on the face, MC in pain, mouth closed, Ryan smiling, mouth closed
             with vpunch
@@ -671,7 +673,7 @@ label v12s18_bottlespin:
 
     scene v12slpbs14 # TPP. Show Chris and Chloe kissing (try and make it look a bit passionate)
     with dissolve
-    play sound "sounds/kiss.mp3"
+    play sound sound.kiss
 
     pause 1.5
 
@@ -697,7 +699,7 @@ label v12s18_bottlespin:
 
     scene v12slpbs15 # TPP. Show Chris and Nora kissing
     with dissolve
-    play sound "sounds/kiss.mp3"
+    play sound sound.kiss
 
     pause 1.5
 
@@ -731,7 +733,7 @@ label v12s18_bottlespin:
 
     imre "That was cruel."
 
-    play sound "sounds/call.mp3"
+    play sound sound.call
 
     scene v12slpbs12d # FPP. Same as v12slpbs12b, Chris looking down at his pocket, worried, mouth closed
     with dissolve
@@ -776,7 +778,7 @@ label v12s18_bottlespin:
 
     stop sound
 
-    play sound "sounds/answercall.mp3"
+    play sound sound.answer_call
     scene v12slpbs12e # FPP. Same as v12slpbs12b, Chris talking on his phone, worried, mouth open
     with dissolve
 
@@ -849,17 +851,17 @@ label v12s18_bottlespin:
 
     u "Oh, uhh-"
 
-    if nora.relationship >= Relationship.LIKES:
+    if v8_nora_likes_mc:
         scene v12slpbs16 # TPP. Show Nora grabbing MC's face and kissing him (try and make this a bit passionate)
         with dissolve
-        play sound "sounds/kiss.mp3"
+        play sound sound.kiss
 
         pause 2.25
     
     else:
         scene v12slpbs16a # TPP. Same as v12slpbs16, less passionate of a kiss 
         with dissolve
-        play sound "sounds/kiss.mp3"
+        play sound sound.kiss
 
         pause 1
 
@@ -913,14 +915,14 @@ label v12s18_bottlespin:
 
     imre "What the fuck is going on? No! I'm not kissing a god damn dude. Especially this ugly motherfuc-"
 
-    play sound "sounds/slap.mp3"
+    play sound sound.slap
 
     scene v12slpbs17 # TPP. Show Ryan slapping Imre, Ryan slightly angry, Imre startled and in pain, both mouths closed
     with dissolve
 
     pause 0.75
 
-    play sound "sounds/slap.mp3"
+    play sound sound.slap
 
     scene v12slpbs17a # TPP. Same as v12slpbs17, Imre slapping Ryan, Ryan in pain, Imre angry, both mouths closed
     with dissolve
@@ -981,7 +983,7 @@ label v12s18_bottlespin:
     scene v12slpbs20 # TPP. Show Aubrey and Chloe kissing (Try and make it look hot)
     with dissolve
 
-    play sound "sounds/kiss.mp3"
+    play sound sound.kiss
 
     pause 1.75
 
@@ -1030,7 +1032,7 @@ label v12s18_bottlespin:
     scene v12slpbs22 # TPP. Show Nora and Chloe sharing a quick peck on the lips
     with dissolve
 
-    play sound "sounds/kiss.mp3"
+    play sound sound.kiss
 
     pause 1.25
     
@@ -1281,8 +1283,8 @@ label v12s18_fmk:
     u "(Hmm, who to marry?)"
 
     menu:
-        "Marry Amber":
-            $ add_point(KCT.BRO)
+        "Marry Amber" (bro=1.0):
+            $ reputation.add_point(RepComponent.BRO)
             scene v12slpfmk4d
             with dissolve
 
@@ -1344,7 +1346,7 @@ label v12s18_fmk:
 
     u "*Laughs* Alright Nora, your turn."
 
-    if nora.relationship >= Relationship.LIKES:
+    if v8_nora_likes_mc:
         scene v12slpfmk5g
         with dissolve
 
@@ -1470,7 +1472,7 @@ label v12s18_bet: # END OF FREE ROAM
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 18_3.mp3" fadein 2
+    play music music.v12_Track_Scene_18_3 fadein 2
 
     if v11_overtake_points < 2: # MC lost the race
         scene v12slpbet3 # FPP. MC and Amber now in the bathroom, looking at each other, Amber smiling, mouth open
@@ -1546,7 +1548,7 @@ label v12s18_bet: # END OF FREE ROAM
         scene v12slpbet5b # TPP. Same as v12slpbet5a, different pose
         with flash
 
-        $ grant_achievement("a_bet_is_a_bet")
+        grant Achievement("a_bet_is_a_bet", "Embarrassing Kiwii picture for losing the race")
         pause
 
         scene v12slpbet5 
@@ -1569,7 +1571,7 @@ label v12s18_bet: # END OF FREE ROAM
 
         u "YOU'RE POSTING IT NOW!?"
 
-        play sound "sounds/knock.mp3"
+        play sound sound.knock
 
         scene v12slpbet6 # FPP. MC looking at the door
         with dissolve
@@ -1667,7 +1669,7 @@ label v12s18_bet: # END OF FREE ROAM
 
         am "Oooo, these are good! Damn..."
 
-        play sound "sounds/knock.mp3"
+        play sound sound.knock
 
         scene v12slpbet6
         with dissolve
@@ -1700,10 +1702,10 @@ label v12s18_bet: # END OF FREE ROAM
     imre "*Drunk* I'm just scrolling through my Kiwii and-"
 
     if v11_overtake_points >= 2: # MC wins the race
-        $ v12s18_kiwiiPost2 = KiwiiPost(amber, "v12/amber_bet.webp", _("A bet is a bet..."), numberLikes=5) # Amber nude pic
+        $ v12s18_kiwii_post2 = KiwiiService.new_post(amber, "ck1_v12_amber_bet", _("A bet is a bet..."), number_likes=5) # Amber nude pic
 
     else: # MC loses the race
-        $ v12s18_kiwiiPost3 = KiwiiPost(amber, "v12/mc_bet.webp", _("A bet is a bet..."), numberLikes=5) # MC nude pic
+        $ v12s18_kiwii_post3 = KiwiiService.new_post(amber, "ck1_v12_mc_bet", _("A bet is a bet..."), number_likes=5) # MC nude pic
     
     scene v12slpbet7b # TPP. Same as v12slpbet7, Imre surprised, mouth open
     with dissolve
@@ -1720,7 +1722,7 @@ label v12s18_bet: # END OF FREE ROAM
 
     u "Oh my god... *Chuckles*"
 
-    call screen phone
+    call screen kiwii_home
 
     scene v12slpbet3b
     with dissolve
@@ -1753,7 +1755,7 @@ label v12s18_bet: # END OF FREE ROAM
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 18_4.mp3" fadein 2
+    play music music.v12_Track_Scene_18_4 fadein 2
 
     scene v12slpbet10 # TPP. Show Aubrey and Riley sleeping on Riley's bed
     with dissolve
@@ -1866,17 +1868,17 @@ label v12s18_bet: # END OF FREE ROAM
     pause 0.75
 
     if v11_overtake_points >= 2: # MC wins the race
-        $ v12s18_kiwiiPost2.remove_post()
+        $ KiwiiService.delete_post(v12s18_kiwii_post2)
 
     else: # MC loses the race
-        $ v12s18_kiwiiPost3.remove_post()
+        $ KiwiiService.delete_post(v12s18_kiwii_post3)
 
     scene v12slpbet16a # TPP. Same camera as v12slpbet16, MC and Amber now lying on the bed, away from each other, both smiling, mouths closed
     with dissolve
 
     menu:
-        "Cuddle":
-            $ add_point(KCT.BOYFRIEND)
+        "Cuddle" (boyfriend=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             scene v12slpbet16b # TPP. Show MC cuddling with Amber, both smiling, mouths closed
             with dissolve
 
@@ -1892,9 +1894,9 @@ label v12s18_bet: # END OF FREE ROAM
 
             u "Something like that."
 
-            if amber.relationship >= Relationship.FWB or kct == "popular":
-                if amber.relationship < Relationship.FWB:
-                    call screen kct_popup
+            if CharacterService.is_fwb(amber) or reputation() == Reputations.POPULAR:
+                if not CharacterService.is_fwb(amber):
+                    call screen reputation_popup
                 
                 scene v12slpbet17
                 with dissolve
@@ -1912,7 +1914,7 @@ label v12s18_bet: # END OF FREE ROAM
                 pause 1.75
 
             else:
-                call screen kct_popup(required_kct="popular")
+                call screen reputation_popup(required_reputation="popular")
             
                 scene v12slpbet17
                 with dissolve
@@ -1934,8 +1936,8 @@ label v12s18_bet: # END OF FREE ROAM
 
                 pause 0.75
 
-        "Stay away":
-            $ add_point(KCT.BRO)
+        "Stay away" (bro=1.0):
+            $ reputation.add_point(RepComponent.BRO)
             scene v12slpbet18 # FPP. MC and Amber lying in bed, not cuddled up (check v12slpbet16a), MC looking at Amber, Amber's back turned to MC
             with dissolve
 

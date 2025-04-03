@@ -9,7 +9,7 @@ label v13s31:
    
     am "Hello, our friend here is having a negative reaction to marijuana... It was her first time and I-"
 
-    play music "music/v13/Track Scene 31.mp3" fadein 2
+    play music music.ck1.v13.Track_Scene_31 fadein 2
 
     scene v13s31_2 # TPP. Show Amber looking at nurse, serious expression, mouth closed, MC looing at nurse, serious expression, mouth closed, nurse looking at amber, neutral look, mouth open
     with dissolve
@@ -99,7 +99,7 @@ label v13s31:
     u "(Damn, this is crazy.)"
 
     if v11_invite_sam_europe and not v13_invite_samantha: #placeholder
-        $ cameron.relationship = Relationship.BRO
+        $ v13_cameron_and_mc_friends = True
 
         scene v13s31_100 # TPP. Show Cameron running towwards MC, angry, mouth closed
         with fade
@@ -154,7 +154,7 @@ label v13s31:
         scene v13s31_10f # FPP. Same position as v13s31_10, different pose, Cameron serious expression
         with dissolve
 
-        $ grant_achievement("bro_moment")
+        grant Achievement("bro_moment", "Cameron recognizes your pure intentions")
         ca "I have a hard time trusting that people actually have pure intentions, man. It's obvious you do though..."
 
         scene v13s31_10d

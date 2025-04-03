@@ -6,7 +6,7 @@
 label v11_apes_manhunt:
     scene v11amh1 # TPP. Show MC walking in through the Apes house door, he has a neutral expression, mouth closed
     with fade
-    play music "music/v11/Track Scene 9_1.mp3" fadein 2
+    play music music.ck1.v11.Track_Scene_9_1 fadein 2
     pause 1
 
     scene v11amh2 # FPP. MC is in the living room, Cameron and Grayson are sitting on the couch, looking at MC, both of them smiling, mouths closed (Ryan and Caleb are standing nearby, out of shot)
@@ -48,7 +48,7 @@ label v11_apes_manhunt:
 
     scene v11amh7 # FPP. MC, Ryan, Caleb, Grayson and Cameron are in the forest, show MC looking at Grayson, Grayson's mouth closed, grinning (Only Grayson in shot, MC, Ryan and Caleb next to each other, Cameron next to Grayson, Cameron and Grayson are across from MC, Ryan and Caleb)
     with fade
-    play music "music/v11/Track Scene 9_2.mp3" fadein 2
+    play music music.ck1.v11.Track_Scene_9_2 fadein 2
     u "Okay, what are we doing out here?"
 
     scene v11amh8 # FPP. Same character positioning as v11amh7, MC is now looking at Ryan, Ryan looking at Grayson, Ryan mouth open, worried expression (Only Ryan in shot)
@@ -91,7 +91,7 @@ label v11_apes_manhunt:
 
     pause 0.5
 
-    play sound "sounds/fall.mp3"
+    play sound sound.fall
 
     scene v11amh9c # FPP. Same as v11amh9a, now Cameron is throwing Caleb to the ground (Caleb is on the ground at this point), Cameron is angry, Caleb is startled, both mouths closed
     with dissolve
@@ -133,7 +133,7 @@ label v11_apes_manhunt:
 
     pause 0.5
 
-    play sound "sounds/fall.mp3"
+    play sound sound.fall
 
     scene v11amh9c 
     with dissolve
@@ -164,16 +164,16 @@ label v11_apes_manhunt:
     with dissolve
 
     menu:
-        "Ready":
-            $ add_point(KCT.BRO)
+        "Ready" (bro=1.0):
+            $ reputation.add_point(RepComponent.BRO)
 
             scene v11amh7
             with dissolve
 
             u "Yeah man, I'm ready!"
 
-        "One last question":
-            $ add_point(KCT.TROUBLEMAKER)
+        "One last question" (troublemaker=1.0):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             scene v11amh7
             with dissolve
@@ -185,7 +185,7 @@ label v11_apes_manhunt:
 
             pause 0.5
 
-            play sound "sounds/fall.mp3"
+            play sound sound.fall
             scene v11amh11 # FPP. MC is lying on the ground looking up at Cameron, Cameron looking down at MC, Cameron is angry, mouth open
             with vpunch
 
@@ -351,7 +351,7 @@ label v11_apes_manhunt:
 
             pause 0.75
 
-            play sound "sounds/fall.mp3"
+            play sound sound.fall
             scene v11amh23a # TPP. Same cam as v11amh23, Show Grayson slamming MC to the ground, MC is startled, Grayson is laughing
             with vpunch
 
@@ -534,9 +534,9 @@ label v11_apes_manhunt:
                             with dissolve
 
                             menu:
-                                "Run":
+                                "Run" (troublemaker=1.0):
                                     $ v11_manhunt_winner = "Caleb"
-                                    $ add_point(KCT.TROUBLEMAKER)
+                                    $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
                                     scene v11amh31b 
                                     with dissolve
@@ -548,7 +548,7 @@ label v11_apes_manhunt:
 
                                     pause 0.75
 
-                                    play sound "sounds/fall.mp3"
+                                    play sound sound.fall
                                     scene v11amh32a # FPP. Same cam as v11amh32, but Ryan is now on the ground, Cameron is looking down on him, Cameron is laughing
                                     with dissolve
 
@@ -564,7 +564,7 @@ label v11_apes_manhunt:
 
                                     pause 0.5
 
-                                    play sound "sounds/fall.mp3"
+                                    play sound sound.fall
                                     scene v11amh23a
                                     with vpunch
 
@@ -580,9 +580,9 @@ label v11_apes_manhunt:
 
                                     ca "Time for the horse."
 
-                                "Warn him":
+                                "Warn him" (bro=1.0):
                                     $ v11_manhunt_winner = "Caleb"
-                                    $ add_point(KCT.BRO)
+                                    $ reputation.add_point(RepComponent.BRO)
 
                                     scene v11amh31b
                                     with dissolve
@@ -599,7 +599,7 @@ label v11_apes_manhunt:
 
                                     pause 0.75
 
-                                    play sound "sounds/fall.mp3"
+                                    play sound sound.fall
                                     scene v11amh32a
                                     with dissolve
 
@@ -630,7 +630,7 @@ label v11_apes_manhunt:
 
                                     pause 0.5
 
-                                    play sound "sounds/fall.mp3"
+                                    play sound sound.fall
                                     scene v11amh23a
                                     with vpunch
 
@@ -719,7 +719,7 @@ label v11_apes_manhunt:
 
                             pause 0.5
 
-                            play sound "sounds/fall.mp3"
+                            play sound sound.fall
                             scene v11amh39b # FPP. Same cam as v11amh39, Caleb is on the ground, Grayson and Cameron are chest bumping, Grayson smiling, mouth open, Cameron smiling, mouth closed
                             with dissolve
 
@@ -765,7 +765,7 @@ label v11_apes_manhunt:
 
                             pause 0.5
 
-                            play sound "sounds/fall.mp3"
+                            play sound sound.fall
                             scene v11amh23a
                             with vpunch
 
@@ -854,7 +854,7 @@ label v11_apes_manhunt:
 
                     pause 0.5
 
-                    play sound "sounds/fall.mp3"
+                    play sound sound.fall
                     scene v11amh39b 
                     with dissolve
 
@@ -900,7 +900,7 @@ label v11_apes_manhunt:
 
                     pause 0.5
 
-                    play sound "sounds/fall.mp3"
+                    play sound sound.fall
                     scene v11amh23a
                     with vpunch
 
@@ -1031,7 +1031,7 @@ label v11_apes_manhunt:
                     scene v11amh51 # TPP. Show MC on the horse, the horse is rearing, MC is in control, smiling, mouth open
                     with dissolve
 
-                    $ grant_achievement("hold_your_horses")
+                    grant Achievement("hold_your_horses", "Balance the horse at the end of the manhunt")
                     u "Woah! *Laughs* Guess he is having a good time."
 
                     scene v11amh44b # FPP. Same as v11amh44, Cameron is slightly annoyed, mouth open
@@ -1042,7 +1042,7 @@ label v11_apes_manhunt:
                     scene v11amh44c # FPP. Same as v11amh44, the horse is kicking Cameron right in the chest, Cameron mouth closed, startled expression
                     with dissolve
 
-                    play sound "sounds/facepunch1.mp3"
+                    play sound sound.hit
                     pause 0.75
 
                     scene v11amh44d # FPP. Same as v11amh44, Cameron is on the ground, mouth closed, he is in pain
@@ -1091,7 +1091,7 @@ label v11_apes_manhunt:
                     scene v11amh51a # TPP. Same as v11amh51, but MC is not in control, he is unbalanced on the horse, mouth closed, startled face
                     with dissolve
 
-                    $ grant_achievement("off_your_high_horse")
+                    grant Achievement("off_your_high_horse", "Don't balance the horse at the end of the manhunt")
                     hor "NEIGHHHHHH!!!"
 
                     scene v11amh51b # TPP. Same as v11amh51, but MC is midair, startled expression, mouth open
@@ -1101,7 +1101,7 @@ label v11_apes_manhunt:
 
                     scene v11amh51c # TPP. Same as v11amh51, but now MC is on the ground, the horse is running away, MC is in pain, mouth closed
                     with vpunch
-                    play sound "sounds/fall.mp3"
+                    play sound sound.fall
 
                     pause 1
 
@@ -1135,7 +1135,7 @@ label v11_horse_fall:
     scene v11amh51a
     with dissolve
 
-    $ grant_achievement("off_your_high_horse")
+    grant Achievement("off_your_high_horse", "Don't balance the horse at the end of the manhunt")
     u "(I can't balance.)"
 
     scene v11amh51b
@@ -1143,7 +1143,7 @@ label v11_horse_fall:
 
     pause 0.75
 
-    play sound "sounds/fall.mp3"
+    play sound sound.fall
     scene v11amh51c
     with vpunch
 
@@ -1191,13 +1191,13 @@ label v11_mc_horse_room:
     with fade
   
     stop music fadeout 3
-    play music "music/v11/Track Scene 9_3.mp3" fadein 2
+    play music music.ck1.v11.Track_Scene_9_3 fadein 2
     u "(I swear they want to kill us. I definitely need a good night's sleep.)"
 
     scene v11amh53a # TPP. Same cam as v11amh53, MC drops into his bed (similar to s95 in v1)
     with dissolve
 
-    play sound "sounds/impactbed.mp3"
+    play sound sound.impact_bed
 
     pause 1
 
@@ -1216,7 +1216,7 @@ label v11_mc_horse_room:
 
     ry "Wake up, man."
     stop music fadeout 3
-    play music "music/v11/Track Scene 9_4.mp3" fadein 2
+    play music music.ck1.v11.Track_Scene_9_4 fadein 2
     scene v11amh55 # FPP. MC is now sitting on his bed, still looking at Ryan, Ryan mouth open, slightly worried expression
     with dissolve
 

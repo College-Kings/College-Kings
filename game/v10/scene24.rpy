@@ -6,8 +6,8 @@
 label v10_lauren_room:
     scene v10lar1 # TPP Show MC knocking on Lauren's door.
     with fade
-    play music "music/v10/Track Scene 24_1.mp3" fadein 2
-    play sound "sounds/knock.mp3"
+    play music music.ck1.v10.Track_Scene_24_1 fadein 2
+    play sound sound.knock
     
     pause 0.75
     
@@ -16,11 +16,11 @@ label v10_lauren_room:
 
     la "Heyyyy."
 
-    if lauren.relationship >= Relationship.GIRLFRIEND: # If in a relationship with Lauren
+    if CharacterService.is_girlfriend(lauren): # If in a relationship with Lauren
         scene v10lar1a # TPP Same angle as v10lar1: MC and Lauren kiss at her door
         with dissolve
 
-        play sound "sounds/kiss.mp3"
+        play sound sound.kiss
 
         pause 0.75
 
@@ -51,10 +51,10 @@ label v10_lauren_room:
     with dissolve
 
     menu:
-        "Agree":
+        "Agree" (boyfriend=1.0):
             $ v10s33_laurenBakeSale = True
 
-            $ add_point(KCT.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             scene v10lar3a
             with dissolve
 
@@ -91,9 +91,9 @@ label v10_lauren_room:
 
             u "I really do."
 
-            if lauren.relationship >= Relationship.GIRLFRIEND or kct == "loyal":
-                if lauren.relationship < Relationship.GIRLFRIEND:
-                    call screen kct_popup
+            if CharacterService.is_girlfriend(lauren) or reputation() == Reputations.LOYAL:
+                if not CharacterService.is_girlfriend(lauren):
+                    call screen reputation_popup
                 $ v10s33_laurenBakeSale = False
 
                 scene v10lar3b
@@ -170,8 +170,8 @@ label v10_lauren_room:
     la "Just not really my thing you know..."
 
     menu:
-        "Encourage her":
-            $ add_point(KCT.TROUBLEMAKER)
+        "Encourage her" (troublemaker=1.0):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
             scene v10lar3c
             with dissolve
 
@@ -204,12 +204,12 @@ label v10_lauren_room:
 
     u "You never know until you try."
 
-    if lauren.relationship >= Relationship.KISS:
+    if CharacterService.is_kissed(lauren) or CharacterService.is_girlfriend(lauren): # If dating or have made out
+
         label v10_lauren_room_sg:
             if _in_replay:
-                $ lauren.relationship = Relationship.GIRLFRIEND
+                $ CharacterService.set_relationship(lauren, Relationship.GIRLFRIEND)
 
-    if lauren.relationship >= Relationship.KISS: # If dating or have made out        
         scene v10lar3g # FPP Same angle as v10lar3, Lauren looking seductive, mouth open
         with dissolve
 
@@ -255,8 +255,12 @@ label v10_lauren_room:
 
         u "(Oh wow!)"
 
-        if config_censored:
+        if is_censored:
             call screen censored_popup("v10s24_nsfwSkipLabel1")
+        lovense vibrate 2
+        lovense rotate 1
+        lovense suction 1
+        lovense thrust 1
 
         scene v10lar7 # TPP Show Lauren on MC's lap facing him, MC arms around her waist, Lauren eyes closed and mouth open
         with dissolve
@@ -278,10 +282,14 @@ label v10_lauren_room:
 
         la "Oh [name]! *Moans*"
         stop music fadeout 3
-        play music "music/v10/Track Scene 24_2.mp3" fadein 2
+        play music music.ck1.v10.Track_Scene_24_2 fadein 2
         menu:
             "Suck on her tits":
                 $ sceneList.add("v10_lauren")
+                lovense vibrate 4
+                lovense rotate 2
+                lovense suction 2
+                lovense thrust 2
 
                 # MC starts kissing around her boobs and nipples. Ensure this scene is detailed and long, kissing all over her upper body
                 image v10lautk = Movie(play="images/v10/Scene 24/v10lautk.webm", loop=True, image="images/v10/Scene 24/v10lautkStart.webp", start_image="images/v10/Scene 24/v10lautkStart.webp") # TPP MC tenderly kissing Lauren on upper chest, holding her breast and playing with her nipple
@@ -295,10 +303,10 @@ label v10_lauren_room:
                 with dissolve
                 pause
 
-                if lauren.relationship >= Relationship.GIRLFRIEND or (lauren.relationship >= Relationship.KISS and kct == "loyal"):
-                    if lauren.relationship < Relationship.GIRLFRIEND:
-                        $ lauren.relationship = Relationship.GIRLFRIEND
-                        call screen kct_popup
+                if CharacterService.is_girlfriend(lauren) or (CharacterService.is_kissed(lauren) and reputation() == Reputations.LOYAL):
+                    if CharacterService.is_kissed(lauren):
+                        $ CharacterService.set_relationship(lauren, Relationship.GIRLFRIEND)
+                        call screen reputation_popup
                         
                     image v10lauts = Movie(play="images/v10/Scene 24/v10lauts.webm", loop=True, image="images/v10/Scene 24/v10lautsStart.webp", start_image="images/v10/Scene 24/v10lautsStart.webp") # TPP MC's arms around Lauren's waist while he sucks on her nipple, Lauren eyes rolled back in pleasure
                     image v10lautsf = Movie(play="images/v10/Scene 24/v10lautsf.webm", loop=True, image="images/v10/Scene 24/v10lautsStart.webp", start_image="images/v10/Scene 24/v10lautsStart.webp")
@@ -325,6 +333,8 @@ label v10_lauren_room:
                     with dissolve
 
                     u "*Smiles* Yeah."
+
+                    lovense stop
 
                     scene v10lar9 # FPP Show Lauren standing up and beginning to put her bra and shirt back on, Lauren smiling
                     with dissolve
@@ -353,7 +363,9 @@ label v10_lauren_room:
 
                     stop music fadeout 3
 
-                    play music "music/v10/Track Scene 24_3.mp3" fadein 2
+                    lovense stop
+
+                    play music music.ck1.v10.Track_Scene_24_3 fadein 2
                     
                     la "[name], I... I don't think I'm ready. Sorry I just..."
 
@@ -389,6 +401,8 @@ label v10_lauren_room:
                     la "Thanks for understanding. Maybe we could uhm-"
 
             "Kiss her":
+                lovense stop
+                
                 # Lauren and MC contine making out
                 scene v10lar7d
                 with dissolve
@@ -528,7 +542,7 @@ label v10_lauren_room:
 
     u "Uhm, hold on."
 
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         scene v10lar11 # FPP Show Ms. Rose on phone, worried expression, mouth closed, plain black background
         with dissolve
 
@@ -598,16 +612,16 @@ label v10_lauren_room:
 
     u "Of course."
 
-    if lauren.relationship >= Relationship.GIRLFRIEND: # lauren and mc kiss goodbye at her door
+    if CharacterService.is_girlfriend(lauren): # lauren and mc kiss goodbye at her door
         scene v10lar1a
         with fade
 
-        play sound "sounds/kiss.mp3"
+        play sound sound.kiss
         
         pause 1
 
     $ renpy.end_replay()
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         jump v10_ms_rose_fight
     else:
         jump v10_sam_kitchen

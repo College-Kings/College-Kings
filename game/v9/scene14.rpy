@@ -8,14 +8,14 @@ label v9_thur_room_w_seb:
     scene v9trs1 # TPP. Show MC's Wolves room door.
     with dissolve
 
-    play sound "sounds/knock.mp3"
+    play sound sound.knock
 
     "*Knock* *knock* *knock*"
 
     scene v9trs2 # TPP. Show MC getting up from his chair towards the door to open it.
     with dissolve
 
-    play music "music/v9/Track Scene 14.mp3" fadein 2
+    play music music.ck1.v9.Track_Scene_14 fadein 2
 
     "Fuck dude, open up!"
 
@@ -100,16 +100,16 @@ label v9_thur_w_punch:
 
     guyc "Made us proud, bro."
 
-    $ v9s14KiwiiPost = KiwiiPost(chris, "v9/v9hlw8c.webp", "That's my boy! Go [name]! Fuck yeah!", numberLikes=renpy.random.randint(100, 200))
-    $ v9s14KiwiiPost.newComment(sebastian, "Fuckin' A!", numberLikes=renpy.random.randint(15, 35), force_send=True)
-    $ v9s14KiwiiPost.newComment(aubrey, "Knew he had it in him!", numberLikes=renpy.random.randint(15, 35), force_send=True)
+    $ kiwii_post = KiwiiService.new_post(chris, "v9/Scene 12/v9hlw8c.webp", "That's my boy! Go [name]! Fuck yeah!", number_likes=renpy.random.randint(100, 200))
+    $ KiwiiService.new_comment(kiwii_post, sebastian, "Fuckin' A!", number_likes=renpy.random.randint(15, 35))
+    $ KiwiiService.new_comment(kiwii_post, aubrey, "Knew he had it in him!", number_likes=renpy.random.randint(15, 35))
 
     scene v9trs4a # TPP. Same camera as v9trs4, Show MC looking at his phone in hand.
     with dissolve
     
     pause 1
 
-    call screen phone
+    call screen kiwii_home
 
     scene v9trs5
     with dissolve
@@ -121,7 +121,7 @@ label v9_thur_w_punch:
 
     guyc "Fuck yeah! Seems the training did you well. Just like it should!"
 
-    if kct == "loyal":
+    if reputation() == Reputations.LOYAL:
         scene v9trs5b # FPP. Same camera as v9trs5, both smiling, mouths closed.
         with dissolve
 

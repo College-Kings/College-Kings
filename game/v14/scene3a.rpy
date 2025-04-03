@@ -4,7 +4,7 @@
 # Time: Night
 
 label v14s03a:
-    play music "music/v13/Track Scene 4.mp3" fadein 2
+    play music music.ck1.v13.Track_Scene_4 fadein 2
     
     scene v14s03a_1 # TPP. MC with Imre and Ryan right behind him, far away, walking towards the night gambler, MC/Gambler neutral expression, mouth closed,Ryan/Imre, smile, mouth closed
     with dissolve
@@ -57,8 +57,8 @@ label v14s03a:
     ngam "Sure deal brother man! Real simple. Three cups and a ball. Heard of it?"
 
     menu:
-        "Yes, of course":
-            $ add_point(KCT.TROUBLEMAKER)
+        "Yes, of course" (troublemaker=1.0):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
             scene v14s03a_2
             with dissolve
         
@@ -69,8 +69,8 @@ label v14s03a:
 
             ngam "My man!"
         
-        "Never heard of it":
-            $ add_point(KCT.BOYFRIEND)
+        "Never heard of it" (boyfriend=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             scene v14s03a_2
             with dissolve
             
@@ -112,8 +112,8 @@ label v14s03a:
     ngam "Ready to try your luck?"
 
     menu: # Play the game 
-        "I'll pass":
-            $ add_point(KCT.BOYFRIEND)
+        "I'll pass" (boyfriend=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             scene v14s03a_2e # FPP. Gambler, slightly sad, mouth closed.
             with dissolve
             
@@ -137,7 +137,7 @@ label v14s03a:
             pause 0.75
             
             stop music fadeout 3
-            play music "music/v13/Track Scene 29_2.mp3" fadein 2
+            play music music.ck1.v13.Track_Scene_29_2 fadein 2
 
             scene v14s03a_5a # TPP. Gambler grabs MC's arm to prevent him from leaving. 
             with dissolve
@@ -208,11 +208,11 @@ label v14s03a:
 
             u "*Chuckles*"
 
-        "Give it a try": # -If Give it a try
+        "Give it a try" (troublemaker=1.0): # -If Give it a try
             stop music fadeout 3
-            play music "music/v13/Track Scene 29_2.mp3" fadein 2
+            play music music.ck1.v13.Track_Scene_29_2 fadein 2
 
-            $ add_point(KCT.TROUBLEMAKER)
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
             scene v14s03a_2
             with dissolve
 
@@ -473,8 +473,8 @@ label v14s03a:
             imre "Shut the hell up! [name], tell him."
                 
             menu:
-                "Take the wallet": # -If Take the wallet
-                    $ add_point(KCT.TROUBLEMAKER)
+                "Take the wallet" (troublemaker=1.0): # -If Take the wallet
+                    $ reputation.add_point(RepComponent.TROUBLEMAKER)
                     $ v14s03a_take_wallet = True
                     
                     scene v14s03a_12a # FPP. Same as v14s03a_12, but Gambler mouth closed.
@@ -526,8 +526,8 @@ label v14s03a:
 
                     imre "Maybe after today you'll make money the right way."
 
-                "Don't take the wallet": # -If Don't take the wallet
-                    $ add_point(KCT.BOYFRIEND)
+                "Don't take the wallet" (boyfriend=1.0): # -If Don't take the wallet
+                    $ reputation.add_point(RepComponent.BOYFRIEND)
                     scene v14s03a_4e
                     with dissolve
                     

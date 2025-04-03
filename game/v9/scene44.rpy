@@ -9,7 +9,7 @@ label v9_warehouse_lindsey:
 
     u "(I need a breather. I should go see what this lineup looks like. Prepare myself for the night.)"
 
-    play music "music/v9/Track Scene 7.mp3" fadein 2
+    play music music.ck1.v9.Track_Scene_7 fadein 2
 
     scene v9wwl2 # TPP. Show MC continuing to walk, he bumps into Lindsey as he is walking.
     with dissolve
@@ -50,8 +50,8 @@ label v9_warehouse_lindsey:
         with dissolve
 
         menu:
-            "Stop her":
-                $ add_point(KCT.BOYFRIEND)
+            "Stop her" (boyfriend=1.0):
+                $ reputation.add_point(RepComponent.BOYFRIEND)
 
                 u "Um... Lindsey?"
 
@@ -99,7 +99,7 @@ label v9_warehouse_lindsey:
 
                 u "(You really screwed that one up. But you gotta get your head in the game.)"
 
-    elif lindsey.relationship >= Relationship.KISS:
+    elif CharacterService.is_kissed(lindsey):
         u "Oh, shit! Hey! Are you alright?"
 
         scene v9wwl3b
@@ -136,8 +136,8 @@ label v9_warehouse_lindsey:
         with dissolve
 
         menu:
-            "It was a joke":
-                $ add_point(KCT.BRO)
+            "It was a joke" (bro=1.0):
+                $ reputation.add_point(RepComponent.BRO)
                 
                 u "Aww, don't worry. No cold feet here. You're just very hard to resist."
                 
@@ -184,8 +184,8 @@ label v9_warehouse_lindsey:
                 scene v9wwl8 # TPP. Show Lindsey walking away, MC watching her walk away.
                 with dissolve
     
-            "Be serious":
-                $ add_point(KCT.BOYFRIEND)
+            "Be serious" (boyfriend=1.0):
+                $ reputation.add_point(RepComponent.BOYFRIEND)
 
                 u "Sorry, I'm just getting in my head. There's a lot riding on this fight."
 
@@ -284,8 +284,8 @@ label v9_warehouse_lindsey:
 
                 u "(Am I nuts or was that a cold shoulder? Damn. I really want to fix it but I have to get ready.)"
 
-            "Stop her":
-                $ add_point(KCT.BOYFRIEND)
+            "Stop her" (boyfriend=1.0):
+                $ reputation.add_point(RepComponent.BOYFRIEND)
 
                 u "Um, I'm sorry about earlier. I..."
 

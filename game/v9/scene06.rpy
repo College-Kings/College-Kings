@@ -9,7 +9,7 @@ label drive_to_lake:
     scene v9dtl1 # TPP. Show Aubrey from the side (as if from Riley's perspective). Aubrey looking at the road ahead, mouth open.
     with fade
 
-    play music "music/v9/Track Scene 6.mp3" fadein 2
+    play music music.ck1.v9.Track_Scene_6 fadein 2
 
     au "So I'm telling you guys, the lake is the best..."
 
@@ -287,8 +287,8 @@ label drive_to_lake:
     with dissolve
 
     menu:
-        "Flirt":
-            $ add_point(KCT.BOYFRIEND)
+        "Flirt" (boyfriend=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             jump dtl_f
 
         "Serious":

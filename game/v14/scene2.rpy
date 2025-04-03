@@ -4,7 +4,7 @@
 # Time: Night
 
 label v14s02:
-    play music "music/v13/Track Scene 36.mp3" fadein 2
+    play music music.ck1.v13.Track_Scene_36 fadein 2
     scene v14s02_1 # TPP. show mc in the hotel lobby and looking around everywhere, no expression, mouth closed
     with dissolve
 
@@ -35,8 +35,8 @@ label v14s02:
 
     menu:
 
-        "A little bit":
-            $ add_point(KCT.BOYFRIEND)
+        "A little bit" (boyfriend=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
 
             u "Maybe a little bit."
 
@@ -45,8 +45,8 @@ label v14s02:
 
             imre "Haha, I knew it."
 
-        "Not at all":
-            $ add_point(KCT.TROUBLEMAKER)
+        "Not at all" (troublemaker=1.0):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             scene v14s02_2a
             #with dissolve

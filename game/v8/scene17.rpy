@@ -6,10 +6,10 @@
 # Please look at the rpy file along with the render table to get a good idea of the scene's dynamics
 
 label msrose_moving:
-    $ penelope.messenger.addReply(_("Hey, how you holding up?"))
-    $ penelope.messenger.newMessage(_("Better, thanks to you"))
-    $ penelope.messenger.addReply(_("No problem. I'm here for you. Let me know if you need anything else."))
-    $ penelope.messenger.newMessage(_("Thank you! :)"))
+    $ MessengerService.add_reply(penelope, _("Hey, how you holding up?"))
+    $ MessengerService.new_message(penelope, _("Better, thanks to you"))
+    $ MessengerService.add_reply(penelope, _("No problem. I'm here for you. Let me know if you need anything else."))
+    $ MessengerService.new_message(penelope, _("Thank you! :)"))
 
     scene v8smcrm99
     with dissolve
@@ -19,25 +19,23 @@ label msrose_moving:
     with dissolve
     u "(Should I check how Penelope's doing?)"
 
-    label phn_penelope6:
-        if penelope.messenger.replies:
-            call screen phone
-        if penelope.messenger.replies:
+    while MessengerService.has_replies(penelope):
+        call screen phone
+        if MessengerService.has_replies(penelope):
             u "(I should talk to Penelope.)"
-            jump phn_penelope6
 
 label phn_penelope6_done:
 
     scene v8rose1a # MC looking towards his room door (not visible in the shot) and talking
     with dissolve
-    play sound "sounds/knock.mp3"
+    play sound sound.knock
 
     pause 1.5
 
     scene v8rose1a
     u "Come in!"
 
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
     scene v8rose2 # FPP. Chris walks in and is now standing somewhere near MC's bed. Serious expression, mouth open
     with dissolve
     ch "Hey man, you busy?"
@@ -88,7 +86,7 @@ label phn_penelope6_done:
     with dissolve
     u "When will he be back?"
 
-    play music "music/msad.mp3" fadein 2
+    play music music.ck1.msad fadein 2
 
     scene v8rose5b # Rose upset, not smiling anymore and mouth open. She's looking into the camera
     with dissolve
@@ -148,8 +146,8 @@ label phn_penelope6_done:
     u "(Ms. Rose is so upset, but we also really need to hurry if we're gonna finish this before her husband shows up.)"
 
     menu:
-        "Stay to console her":
-            $ add_point(KCT.BOYFRIEND)
+        "Stay to console her" (boyfriend=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             $ consoledRose = True
 
             u "(This is important. There are enough Wolves to move boxes quickly.)"
@@ -199,8 +197,8 @@ label phn_penelope6_done:
             with dissolve
             ro "Awww, this was from before the accident. Before everything... How did this happen?"
 
-        "Focus on moving the boxes":
-            $ add_point(KCT.BRO)
+        "Focus on moving the boxes" (bro=1.0):
+            $ reputation.add_point(RepComponent.BRO)
 
             u "Don't worry. We'll be out of here in no time."
             u "I'll uh... go and get more boxes."
@@ -274,13 +272,13 @@ label phn_penelope6_done:
     with dissolve
     u "And it's still not an excuse for..."
 
-    play sound "sounds/ring.mp3"
+    play sound sound.ring
 
     scene v8rose5e
     with vpunch
     u "One moment."
 
-    play sound "sounds/answercall.mp3"
+    play sound sound.answer_call
 
     scene v8rose15a # TPP. MC moves to a side away from the convo with Rose and Chris to take a call. He's holding the phone to his head, neutral expression, mouth open
     with dissolve
@@ -294,7 +292,7 @@ label phn_penelope6_done:
     with dissolve
     u "Listen, I'm in the middle of something..."
 
-    if lauren.relationship >= Relationship.GIRLFRIEND:
+    if CharacterService.is_girlfriend(lauren):
         scene v8rose15
         with dissolve
         la "Whatcha doooin?"
@@ -320,7 +318,7 @@ label phn_penelope6_done:
         with dissolve
         u "Sure, bye."
 
-    play sound "sounds/answercall.mp3"
+    play sound sound.answer_call
 
     scene v8rose5d
     with dissolve

@@ -10,8 +10,8 @@ label apes_join_ceremony:
     with fade
     u "(Looking good there, [name].)"
 
-    play music "music/mindie1.mp3" fadein 2
-    queue music ["music/m15punk.mp3", "music/m2punk.mp3"]
+    play music music.ck1.mindie1 fadein 2
+    queue music [music.ck1.m15punk, music.ck1.m2punk]
 
     if "v8_riley" in sceneList:
         u "(I hope I run into Riley tonight. Last night was great.)"
@@ -300,8 +300,8 @@ label apes_faceoff_task:
     pause
 
     menu:
-        "Wish them good luck":
-            $ add_point(KCT.BRO)
+        "Wish them good luck" (bro=1.0):
+            $ reputation.add_point(RepComponent.BRO)
 
             u "Good luck, guys!"
 
@@ -310,8 +310,8 @@ label apes_faceoff_task:
             kai "Thanks brother! To you too."
             coop "Let the best man win."
 
-        "Just get to the task":
-            $ add_point(KCT.TROUBLEMAKER)
+        "Just get to the task" (troublemaker=1.0):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
     scene black
     with dissolve
@@ -440,7 +440,7 @@ label after_apes_ranking:
         with dissolve
         u "Heh. Glad to have made it in. I don't know how I'd have reacted if I lost either."
 
-        play sound "sounds/toast.mp3"
+        play sound sound.toast
 
         scene v8apes20d # Cameron and MC cheers toasting their beers. Cameron talking
         with Dissolve(0.3)

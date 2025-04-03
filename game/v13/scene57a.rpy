@@ -9,7 +9,7 @@ label v13s57a:
 
     pause 0.75
 
-    play music "music/v13/Track Scene 57.mp3" fadein 2
+    play music music.v13_Track_Scene_57 fadein 2
 
     scene v13s57a_2 # FPP. Nora looking at MC, MC looking at Nora, Nora slight smile, mouth closed.
     with dissolve
@@ -26,7 +26,7 @@ label v13s57a:
 
     pause 0.75
 
-    play sound "sounds/ring.mp3"
+    play sound sound.ring
     scene v13s57a_2c # FPP. Same as v13s57a_2b, Nora holding her phone to her ear, slight smile, mouth open.
     with dissolve
 
@@ -68,7 +68,7 @@ label v13s57a:
     scene v13s57a_2b
     with dissolve
 
-    play sound "sounds/rejectcall.mp3"
+    play sound sound.reject_call
 
     pause 0.75
 

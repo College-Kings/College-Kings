@@ -8,7 +8,7 @@ image splashscreen_1 = "gui/splashscreen/1.webp"
 image splashscreen_2 = "gui/splashscreen/2.webp"
 image splashscreen_3 = "gui/splashscreen/3.webp"
 
-# GUI
+#region GUI
 ## Alert
 image alert_background = Frame("gui/alert/background.webp", 8, 8)
 
@@ -22,18 +22,20 @@ image transparent_bar = Frame("#0000")
 image choice_button_idle = Frame("gui/choice/button_idle.webp", 40, 8)
 image choice_button_hover = Frame("gui/choice/button_hover.webp", 40, 8)
 
-## End Screen
-image patreon_credits = Movie(channel="movie", play="gui/end_screen/patreon_credits.webm")
-
-## KCT Choice Hint
-image kct_choice_hint_background = Frame("gui/kct/background.webp", 44, 6, 44, 0) 
+#region Main Menu
+image main_menu_background = "gui/main_menu/background.webp"
+image main_menu_patreon_idle = "gui/main_menu/patreon_idle.webp"
+image main_menu_patreon_hover = Transform("gui/main_menu/patreon_hover.webp", pos=(-18, -14))
+image main_menu_discord_idle = "gui/main_menu/discord_idle.webp"
+image main_menu_discord_hover = "gui/main_menu/discord_hover.webp"
+#endregion Main Menu
 
 ## Path Builder
 image path_builder_button_idle = Frame("main_menu/path_builder/images/button_idle.webp", 24, 6)
 image path_builder_button_hover = Frame("main_menu/path_builder/images/button_hover.webp", 24, 6)
 
 ## Scene Gallery
-image scene_gallery_bar_base = Frame("main_menu/scene_gallery/images/bar_base.webp", 5, 10)
+image scene_gallery_bar_base = Frame("gui/bar/bar_base.webp")
 
 ## Settings
 image settings_bar_left = Frame("gui/settings/bar_right.webp", 14, 5)
@@ -47,23 +49,16 @@ image tutorial_right_button_idle = "gui/tutorial/right_button_idle.webp"
 
 ## Warning
 image warning_background_blue = Frame("gui/warning/background_blue.webp", 42, 8, 8, 8)
+#endregion GUI
+
+#region Path Builder
+image path_builder_act_1_start = "gui/path_builder/act_1_start.webp"
+image path_builder_act_2_start = "gui/path_builder/act_2_start.webp"
+image path_builder_act_3_start = "gui/path_builder/act_3_start.webp"
+#endregion Path Builder
 
 # Transitions
 image sleep_transition_fast = Movie(play="images/v15/sleep_transition_fast.webm", loop=False)
-
-# Phone
-## Common
-image contact_notification = "images/phone/common/contact-notification.webp"
-image back_button = "images/phone/common/back-button.webp"
-image message_background = Frame("images/phone/common/message-background.webp", 20, 20)
-image reply_background = Frame("images/phone/common/reply-background.webp")
-image reply_background_idle = Frame("images/phone/common/reply-background-idle.webp")
-image reply_background_hover = Frame("images/phone/common/reply-background-hover.webp")
-image reply_button_idle = "images/phone/common/reply-button-idle.webp"
-
-## Achievements
-image achievement_locked = Frame("images/phone/achievements/app-assets/achievement-locked.webp", 20, 20)
-image achievement_unlocked = Frame("images/phone/achievements/app-assets/achievement-unlocked.webp", 20, 20)
 
 ## Relationships
 image relationships_frame_background = Frame("images/phone/relationships/app-assets/frame-background.webp")
@@ -87,149 +82,20 @@ image fight_health_animation:
 
     repeat
 
-# Achievements
-image no_hard_feelings = "images/achievements/v1/nohardfeelings.webp"
-image open_wound = "images/achievements/v1/openwound.webp"
-image keep_it_moving = "images/achievements/v1/keepitmoving.webp"
-image romeo = "images/achievements/v1/romeo.webp"
-image big_mouth = "images/achievements/v1/bigmouth.webp"
+#region Common
+image girl_button_idle = "images/common/girl_button_idle.webp"
+image girl_button_hover = "images/common/girl_button_hover.webp"
+image girl_button_insensitive = Transform("girl_button_idle", matrixcolor=SaturationMatrix(0))
 
-image mixed_feelings = "images/achievements/v2/mixedfeelings.webp"
-image the_notorious = "images/achievements/v2/thenotorious.webp"
-image a_new_beginning = "images/achievements/v2/anewbeginning.webp"
-image over_it = "images/achievements/v2/overit.webp"
-
-image not_now_mom = "images/achievements/v3/notnowmom.webp"
-image lips_dont_lie = "images/achievements/v3/lipsdontlie.webp"
-image truth_hurts = "images/achievements/v3/truthhurts.webp"
-
-image relight_the_fire = "images/achievements/v4/relightthefire.webp"
-image rematch = "images/achievements/v4/rematch.webp"
-image keen_eye = "images/achievements/v4/keeneye.webp"
-
-image on_the_low = "images/achievements/v5/onthelow.webp"
-image peta_public_enemy = "images/achievements/v5/petapublicenemy.webp"
-image snitch = "images/achievements/v5/snitch.webp"
-
-image bros_before_hoes = "images/achievements/v6/brosbeforehoes.webp"
-image credulous = "images/achievements/v6/credulous.webp"
-image not_my_business = "images/achievements/v6/notmybusiness.webp"
-image reignition = "images/achievements/v6/reignition.webp"
-image monkey_business = "images/achievements/v6/monkeybusiness.webp"
-image seems_fishy = "images/achievements/v6/seemsfishy.webp"
-image strike = "images/achievements/v6/strike.webp"
-
-image true_to_self = "images/achievements/v7/truetoself.webp"
-image silver_back = "images/achievements/v7/silverback.webp"
-image wolf_pack = "images/achievements/v7/wolfpack.webp"
-image lee_way = "images/achievements/v7/lee-way.webp"
-image ecstatic = "images/achievements/v7/ecstatic.webp"
-image slow_and_steady = "images/achievements/v7/slowandsteady.webp"
-image playing_with_fire = "images/achievements/v7/playingwithfire.webp"
-image homecoming_queen = "images/achievements/v7/homecomingqueen.webp"
-
-image get_a_room = "images/achievements/v8/get_a_room.webp"
-image helping_hand = "images/achievements/v8/helping_hand.webp"
-image ip_man = "images/achievements/v8/ip_man.webp"
-image lucky_7 = "images/achievements/v8/lucky_7.webp"
-image text_with_an_s = "images/achievements/v8/text_with_an_s.webp"
-image thick_and_thin = "images/achievements/v8/thick_and_thin.webp" # No corresponding achievement
-image up_for_more = "images/achievements/v8/up_for_more.webp"
-
-image relaxing_day = "images/achievements/v9/relaxing_day.webp"
-image king_of_the_north = "images/achievements/v9/king_of_the_north.webp"
-image back_down = "images/achievements/v9/back_down.webp"
-image second_date = "images/achievements/v9/second_date.webp"
-image the_wrong_time = "images/achievements/v9/the_wrong_time.webp"
-image cheat_day = "images/achievements/v9/cheat_day.webp"
-
-image fright_club = "images/achievements/v10/fright_club.webp"
-image bros_before_blows = "images/achievements/v10/bros_before_blows.webp"
-image rough_rider = "images/achievements/v10/rough_rider.webp"
-image family_secrets = "images/achievements/v10/family_secrets.webp"
-image golden_boy = "images/achievements/v10/golden_boy.webp"
-image lights_out = "images/achievements/v10/lights_out.webp"
-image getting_clean = "images/achievements/v10/getting_clean.webp"
-image forbidden_romance = "images/achievements/v10/forbidden_romance.webp"
-image hard_decisions = "images/achievements/v10/hard_decisions.webp"
-image rawr_im_a_lion = "images/achievements/v10/rawr_im_a_lion.webp"
-image on_the_court = "images/achievements/v10/onthecourt.webp"
-
-image perry_mason = "images/achievements/v11/perry_mason.webp"
-image candy_crusher = "images/achievements/v11/candy_crusher.webp"
-image hold_your_horses = "images/achievements/v11/hold_your_horses.webp"
-image off_your_high_horse = "images/achievements/v11/off_your_high_horse.webp"
-image cross_your_heart = "images/achievements/v11/cross_your_heart.webp"
-image on_target = "images/achievements/v11/on_target.webp"
-image just_a_theory = "images/achievements/v11/just_a_theory.webp"
-image fruity = "images/achievements/v11/fruity.webp"
-image earn_your_owl = "images/achievements/v11/earn_your_owl.webp"
-image political_strategist = "images/achievements/v11/political_strategist.webp"
-image two_timer = "images/achievements/v11/two_timer.webp"
-image dont_just_stand_there = "images/achievements/v11/dont_just_stand_there.webp"
-image pretty_in_pink = "images/achievements/v11/pretty_in_pink.webp"
-image good_vs_evil = "images/achievements/v12/good_vs_evil.webp"
-image a_person_like_me = "images/achievements/v12/a_person_like_me.webp"
-image zero_to_hero = "images/achievements/v12/zero_to_hero.webp"
-image doctors_orders = "images/achievements/v12/doctors_orders.webp"
-image mercy_killing = "images/achievements/v12/mercy_killing.webp"
-image talk_murder_to_me = "images/achievements/v12/talk_murder_to_me.webp"
-image best_for_last = "images/achievements/v12/best_for_last.webp"
-image weapons_down = "images/achievements/v12/weapons_down.webp"
-image killing_spree = "images/achievements/v12/killing_spree.webp"
-image mass_casualties = "images/achievements/v12/mass_casualties.webp"
-image thrown_to_the_lions = "images/achievements/v12/thrown_to_the_lions.webp"
-image you_may_kiss_the_bride = "images/achievements/v12/you_may_kiss_the_bride.webp"
-image a_bet_is_a_bet = "images/achievements/v12/a_bet_is_a_bet.webp"
-image brotherhood_of_men = "images/achievements/v12/brotherhood_of_men.webp"
-image best_frenemies = "images/achievements/v12/best_frenemies.webp"
-image worth_the_wait = "images/achievements/v12/worth_the_wait.webp"
-image inside_job = "images/achievements/v12/inside_job.webp"
-image all_is_fair_in_love_and_war = "images/achievements/v12/all_is_fair_in_love_and_war.webp"
-image city_of_love = "images/achievements/v12/city_of_love.webp"
-image indecisive = "images/achievements/v13/indecisive.webp"
-image funny_night = "images/achievements/v13/funny_night.webp"
-image gentlemen_prefer_gingers = "images/achievements/v13/gentlemen_prefer_gingers.webp"
-image flush_flush = "images/achievements/v13/flush_flush.webp"
-image he_is_done = "images/achievements/v13/he_is_done.webp"
-image urbanizer_womanizer = "images/achievements/v13/urbanizer_womanizer.webp"
-image romantic_heart = "images/achievements/v13/romantic_heart.webp"
-image bro_moment = "images/achievements/v13/bro_moment.webp"
-image an_honest_liar = "images/achievements/v13/an_honest_liar.webp"
-image we_like_them_wild = "images/achievements/v13/we_like_them_wild.webp"
-image voyeur = "images/achievements/v13/voyeur.webp"
-image dammit_emily = "images/achievements/v13/dammit_emily.webp"
-image calm_down_big_fella = "images/achievements/v13/calm_down_big_fella.webp"
-
-image ready_player_three = "images/achievements/v14/ready_player_three.webp"
-image saving_ryans_privates = "images/achievements/v14/saving_ryans_privates.webp"
-image beastie_boy = "images/achievements/v14/beastie_boy.webp"
-image double_agent = "images/achievements/v14/double_agent.webp"
-image agree_to_disagree = "images/achievements/v14/agree_to_disagree.webp"
-image how_did_you_know = "images/achievements/v14/how_did_you_know.webp"
-image built_on_trust = "images/achievements/v14/built_on_trust.webp"
-image wrath_of_pen = "images/achievements/v14/wrath_of_pen.webp"
-image your_eyelids_are_heavy = "images/achievements/v14/your_eyelids_are_heavy.webp"
-image say_chirp = "images/achievements/v14/say_chirp.webp"
-image grand_theft_chloe = "images/achievements/v14/grand_theft_chloe.webp"
-image clean_it_up = "images/achievements/v14/clean_it_up.webp"
-
-image blue_cheese_and_sambuca = "images/achievements/v15/blue_cheese_and_sambuca.webp"
-image childhood_memories = "images/achievements/v15/childhood_memories.webp"
-image christmas_is_dead = "images/achievements/v15/christmas_is_dead.webp"
-image counter_intelligence = "images/achievements/v15/counter_intelligence.webp"
-image da_ba_dee_da_ba_dai = "images/achievements/v15/da_ba_dee_da_ba_dai.webp"
-image emotional_blackmail = "images/achievements/v15/emotional_blackmail.webp"
-image honey_bear = "images/achievements/v15/honey_bear.webp"
-image horn_dog = "images/achievements/v15/horn_dog.webp"
-image just_one_more_thing = "images/achievements/v15/just_one_more_thing.webp"
-image karen = "images/achievements/v15/karen.webp"
-image mmmm_donut = "images/achievements/v15/mmmm_donut.webp"
-image polycurious = "images/achievements/v15/polycurious.webp"
-image pumpkin_season = "images/achievements/v15/pumpkin_season.webp"
-image taskmaster = "images/achievements/v15/taskmaster.webp"
-image too_much_information = "images/achievements/v15/too_much_information.webp"
-image what_goes_around = "images/achievements/v15/what_goes_around.webp"
+#region Free Roam
+image free_roam_top = "images/common/free_roam_highlights/top.webp"
+image free_roam_right = "images/common/free_roam_highlights/right.webp"
+image free_roam_bottom = "images/common/free_roam_highlights/bottom.webp"
+image free_roam_left = "images/common/free_roam_highlights/left.webp"
+image free_roam_vertical_transparent = Transform("free_roam_top", alpha=0.0)
+image free_roam_horizontal_transparent = Transform("free_roam_right", alpha=0.0)
+#endregion Free Roam
+#endregion Common
 
 # v1.0 - v2.0
 image s14 = "images/v1/s14.webp"
@@ -307,12 +173,13 @@ image asexnew13 = Movie(play="images/v3/asexnew13.webm", loop=False, image="imag
 
 image rikiss2 = Movie(play="images/v3/rikiss.webm", loop=False, image="images/v3/rikiss.webp", start_image="images/v3/rikiss.webp")
 
-# v4.0
+#region v4.0
 image s316 = "images/v4/s316.webp" # Julia looking forward talking smiling
 image s316a = "images/v4/s316a.webp" # Julia looking forward talking smiling mouth closed
 image s316c = "images/v4/s316c.webp" # Julia looking forward curious
 image s316d = "images/v4/s316d.webp" # Julia looking forward curious mouth closed
 image s316b = "images/v4/s316b.webp" # Julia looking at you smiling mouth open
+#endregion v4.0
 
 # v5.0
 image af5 = Movie(play="images/v5/af5.webm", start_image="images/v5/af5start.webp", image="images/v5/af5pic.webp", loop=False)
@@ -477,5 +344,26 @@ image Imre_Jab_block = "images/v10/Scene 7/Animations/END/MCIMRE-JABBLOCKED-END.
 image Imre_Kick_hit = "images/v10/Scene 7/Animations/END/MCIMRE-KICKHIT-END.webp"
 image Imre_Kick_block = "images/v10/Scene 7/Animations/END/MCIMRE-KICKBLOCKED-END.webp"
 
-# Misc
-image credits = Movie(play="images/credits.webm", Loop = True)
+#region v12.0
+#region Left Walkway Front
+image v12s7_left_walkway_front_background_a = "images/v12/Scene 7/Screens/Navigation 12a.webp"
+image v12s7_left_walkway_front_background_b = "images/v12/Scene 7/Screens/Navigation 12b.webp"
+
+image v12s7_left_walkway_front_door_idle = Transform("v12s7_left_walkway_front_door_hover", alpha=0.0)
+image v12s7_left_walkway_front_door_hover = "images/v12/Scene 7/Buttons/v12s7_left_walkway_front_door.webp"
+
+image v12s7_left_walkway_front_penelope_idle = Transform("v12s7_left_walkway_front_penelope_hover", alpha=0.0)
+image v12s7_left_walkway_front_penelope_hover = "images/v12/Scene 7/Buttons/v12s7_left_walkway_front_penelope.webp"
+
+image v12s7_left_walkway_front_right_idle = Transform("v12s7_left_walkway_front_right_hover", alpha=0.0)
+image v12s7_left_walkway_front_right_hover = "images/v12/Scene 7/Buttons/v12s7_left_walkway_front_right.webp"
+#endregion Left Walkway Front
+
+#region Balcony Left
+image v12s7_balcony_left_background_a = "images/v12/Scene 7/Screens/Navigation 21a.webp"
+image v12s7_balcony_left_background_b = "images/v12/Scene 7/Screens/Navigation 21b.webp"
+
+image v12s7_balcony_left_nora_idle = Transform("v12s7_balcony_left_nora_hover", alpha=0.0)
+image v12s7_balcony_left_nora_hover = "images/v12/Scene 7/Buttons/v12s7_balcony_left_nora.webp"
+#endregion Balcony Left
+#endregion v12.0

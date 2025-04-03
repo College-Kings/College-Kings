@@ -139,7 +139,7 @@ label sun_aft_apes_house:
 
     u "Stay here, I'll go see what's up."
 
-    play music "music/m13punk.mp3"
+    play music music.ck1.m13punk
 
     scene v8sahs10 # TPP. Show MC walking down the stairs of the Apes house. Cameron and Grayson stood at the bottom (in the hallway) opposite eachother, both angry.
     with dissolve
@@ -165,11 +165,11 @@ label sun_aft_apes_house:
     with dissolve
 
     menu:
-        "Side with Grayson":
-            $ add_point(KCT.TROUBLEMAKER)
+        "Side with Grayson" (troublemaker=1.0):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
             jump sun_aft_grayson
-        "Side with Cameron":
-            $ add_point(KCT.BRO)
+        "Side with Cameron" (bro=1.0):
+            $ reputation.add_point(RepComponent.BRO)
             $ sideWithCameron = True
             jump sun_aft_cameron
 
@@ -208,7 +208,7 @@ label sun_aft_grayson:
 
     pause 0.5
 
-    play sound "sounds/doorclose.mp3"
+    play sound sound.door_close
 
     scene v8sahs15 # FPP. Close up Cameron, Cameron looking really angry, mouth closed.
     with dissolve
@@ -270,7 +270,7 @@ label sun_aft_cameron:
 
     pause 0.5
 
-    play sound "sounds/doorclose.mp3"
+    play sound sound.door_close
     stop music
 
     scene v8sahs15b # FPP. Same camera as v8sahs15, Cameron neutral expression, mouth closed.
@@ -278,7 +278,7 @@ label sun_aft_cameron:
 
     u "Hey Cameron, you okay?"
 
-    play music "music/m11punk.mp3" fadein 2
+    play music music.ck1.m11punk fadein 2
 
     scene v8sahs15c # FPP. Same camera as v8sahs15, Cameron neutral expression, mouth open.
     with dissolve

@@ -1,3 +1,42 @@
-[submodule "game/tl"]
-	path = game/tl
-	url = https://github.com/College-Kings/College-Kings-Translations.git
+[submodule "game/phone"]
+	path = game/phone
+	url = https://github.com/College-Kings/college-kings-phone.git
+[submodule "game/images"]
+	path = game/images
+	url = https://github.com/College-Kings/college-kings-images.git
+[submodule "game/recap"]
+	path = game/recap
+	url = https://github.com/College-Kings/college-kings-recap.git
+[submodule "game/whats_new"]
+	path = game/whats_new
+	url = https://github.com/College-Kings/college-kings-whats-new.git
+[submodule "game/characters"]
+	path = game/characters
+	url = https://github.com/College-Kings/college-kings-characters.git
+[submodule "game/reputation"]
+	path = game/reputation
+	url = https://github.com/College-Kings/college-kings-reputation.git
+[submodule "game/audio"]
+	path = game/audio
+	url = https://github.com/College-Kings/college-kings-audio.git
+[submodule "game/screens"]
+	path = game/screens
+	url = https://github.com/College-Kings/college-kings-screens.git
+[submodule "game/tutorials"]
+	path = game/tutorials
+	url = https://github.com/College-Kings/college-kings-tutorials.git
+[submodule "game/lovense"]
+	path = game/lovense
+	url = https://github.com/College-Kings/college-kings-lovense.git
+[submodule "renpy"]
+	path = renpy
+	url = https://github.com/KiloOscarSix/renpy-stubs.git
+[submodule "game/items"]
+	path = game/items
+	url = https://github.com/College-Kings/college-kings-items.git
+[submodule "game/_lovense"]
+	path = game/_lovense
+	url = https://github.com/College-Kings/renpy-lovense.git
+[submodule "game/fonts"]
+	path = game/fonts
+	url = https://github.com/College-Kings/college-kings-fonts.git

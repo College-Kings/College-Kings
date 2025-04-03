@@ -2,9 +2,9 @@
 # Location: Hotel Bar
 # Characters: MC (Outfit 1), Ms. Rose (Outfit 1), Samantha (Outfit 1)
 # Time: Evening
+label v11_hotel_bar_wolves: #can only get here if mc.frat == Frat.WOLVES
+    play music music.ck1.v11.Track_Scene_5_6 fadein 2
 
-label v11_hotel_bar_wolves: #can only get here if joinwolves
-    play music "music/v11/Track Scene 5_6.mp3" fadein 2
     if v11s25_beer:
         scene v11hrs1 # TPP Show MC taking a drink of his beer
         with dissolve
@@ -112,7 +112,7 @@ label v11_hotel_bar_wolves: #can only get here if joinwolves
     scene v11hrs6
     with dissolve
 
-    if ms_rose.relationship >= Relationship.FWB:
+    if CharacterService.is_fwb(ms_rose):
         pause 0.5
 
         scene v11hrs8 # TPP Close up of Ms. Rose whispering in MC's ear, Ms. Rose smiling with mouth open
@@ -120,7 +120,7 @@ label v11_hotel_bar_wolves: #can only get here if joinwolves
 
         ro "*Whisper* Speaking of what happens in London stays in London... Room 404, 10 minutes. Don't be late."
 
-        #play sound "sounds/kiss.mp3"
+        #play sound sound.kiss
 
         scene v11hrs4b # FPP Same angle as v11hrs4, Ms. Rose walking away, looking back at MC and blowing a kiss
         with dissolve
@@ -211,15 +211,15 @@ label v11_hotel_bar_wolves: #can only get here if joinwolves
 
         u "*Gulp*"
 
-    if ms_rose.relationship >= Relationship.FWB:
+    if CharacterService.is_fwb(ms_rose):
         scene v11hrs2
         with dissolve
 
         u "(10 minutes.)"
 
         menu:
-            "Go to her room":
-                $ add_point(KCT.TROUBLEMAKER)
+            "Go to her room" (troublemaker=1.0):
+                $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
                 scene v11hrs5a # TPP Same angle as v11hrs5, MC alone at bar, getting off of bar stool to leave
                 with dissolve

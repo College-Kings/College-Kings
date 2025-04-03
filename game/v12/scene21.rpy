@@ -10,7 +10,7 @@ label v12_nora_exploring:
 
     pause 0.75
 
-    play music "music/v12/Track Scene 21_1.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_21_1 fadein 2
 
     scene v12noe2 # FPP. MC sitting on the concrete block, Nora sitting on the ground. Both of them looking at each other, Nora slight smile, mouth closed
     with dissolve
@@ -51,15 +51,15 @@ label v12_nora_exploring:
     with dissolve
 
     menu:
-        "Not at all":
-            $ add_point(KCT.TROUBLEMAKER)
+        "Not at all" (troublemaker=1.0):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
             scene v12noe2h # FPP. Same as v12noe2f, Nora taking a sip of her drink
             with dissolve
 
             u "No, not at all. *Chuckles* You're good."
 
-        "A little surprising...":
-            $ add_point(KCT.BRO)
+        "A little surprising..." (bro=1.0):
+            $ reputation.add_point(RepComponent.BRO)
             scene v12noe2i # FPP. Same as v12noe2f, Nora slight smile, mouth closed
             with dissolve
 
@@ -235,8 +235,8 @@ label v12_nora_exploring:
     with dissolve
 
     menu:
-        "Speak her language":
-            $ add_point(KCT.TROUBLEMAKER)
+        "Speak her language" (troublemaker=1.0):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
             scene v12noe6c
             with dissolve
 
@@ -272,7 +272,7 @@ label v12_nora_exploring:
 
             no "Look lady, your home has been chosen for inspection by King [name]."
 
-            if nora.relationship >= Relationship.LIKES:
+            if v8_nora_likes_mc:
                 scene v12noe6b
                 with dissolve
 
@@ -313,8 +313,8 @@ label v12_nora_exploring:
 
             clady "You're... so kind! Thank you! Thank you..."
 
-        "Tell her off":
-            $ add_point(KCT.BRO)
+        "Tell her off" (bro=1.0):
+            $ reputation.add_point(RepComponent.BRO)
             scene v12noe6g # FPP. Same as v12noe6e, Nora slightly annoyed, mouth closed
             with dissolve
 
@@ -330,7 +330,7 @@ label v12_nora_exploring:
 
             clady "I'm not homeless, you're on my lawn right now! Take your wife and leave this instant."
 
-            if nora.relationship >= Relationship.LIKES:
+            if v8_nora_likes_mc:
                 scene v12noe6d
                 with dissolve
 
@@ -372,7 +372,7 @@ label v12_nora_exploring:
 
     pause 0.75
 
-    if nora.relationship >= Relationship.LIKES:
+    if v8_nora_likes_mc:
         scene v12noe10 # FPP. Nora and MC stop walking, they're on the sidewalk, looking at each other, Nora slight smile, avoiding eye contact, blushing, mouth closed
         with dissolve
 
@@ -430,7 +430,7 @@ label v12_nora_exploring:
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 21_2.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_21_2 fadein 2
 
     scene v12noe16 # FPP. MC and Nora standing next to each other in the room, Aubrey lying on her bed, with her phone, Imre drunk sitting on the floor, MC looking at Aubrey, Aubrey looking at MC, Aubrey slight smile, mouth open (Only Aubrey in shot)
     with dissolve

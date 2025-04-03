@@ -4,10 +4,10 @@
 # Time: Evening
 
 label v13s29:
-    play music "music/v13/Track Scene 29_1.mp3" fadein 2
+    play music music.ck1.v13.Track_Scene_29_1 fadein 2
 
     if not v13_invite_samantha:
-        scene v13s29_1: # TPP. Show Amber and MC on sidewalk in front of The AmsterDamn, all smiling, all mouths closed (Weed Bus)
+        scene v13s29_1 # TPP. Show Amber and MC on sidewalk in front of The AmsterDamn, all smiling, all mouths closed (Weed Bus)
         with dissolve
 
         pause 0.75
@@ -53,7 +53,7 @@ label v13s29:
         #pause 0.75
 
     else:
-        scene v13s29_1a: # TPP. Show Samantha, Amber and MC on sidewalk in front of The AmsterDamn, all smiling, all mouths closed (AmsterDamn = Weed Bus)
+        scene v13s29_1a # TPP. Show Samantha, Amber and MC on sidewalk in front of The AmsterDamn, all smiling, all mouths closed (AmsterDamn = Weed Bus)
         with dissolve
 
         pause 0.75
@@ -281,8 +281,8 @@ label v13s29:
 
             u "It wasn't my choice to come."
             
-        "Okay":
-            $ add_point(KCT.BRO)
+        "Okay" (bro=1.0):
+            $ reputation.add_point(RepComponent.BRO)
             $ v13_smoke_weed = True
             u "Okay, sure."
 
@@ -420,14 +420,14 @@ label v13s29:
 
     gary "You know I do."
 
-    play sound "sounds/js.mp3"
+    play sound sound.hit
     scene v13s29_24 # TPP. Show Amber angry, kneeing Gary in the nuts, Gary in pain, both mouths open
     with vpunch
 
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v13/Track Scene 29_2.mp3" fadein 2
+    play music music.ck1.v13.Track_Scene_29_2 fadein 2
 
     scene v13s29_25 # TPP. Show Amber grabbing bags of weed from the bus, preparing to escape, Amber mouth open
     with dissolve
@@ -507,7 +507,7 @@ label v13s29:
     with dissolve
 
     stop music fadeout 3
-    play music "music/v13/Track Scene 29_3.mp3" fadein 2
+    play music music.ck1.v13.Track_Scene_29_3 fadein 2
 
     u "*Heavy breathing* Fuck!"
 

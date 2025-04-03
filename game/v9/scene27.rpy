@@ -152,8 +152,8 @@ label v9_train_w_apes:
         ca "And Rocky. I'm sure you don't need my help. You're already famous."
 
         menu:
-            "Be confident":
-                $ add_point(KCT.BRO)
+            "Be confident" (bro=1.0):
+                $ reputation.add_point(RepComponent.BRO)
 
                 scene v9twa5a
                 with dissolve
@@ -170,8 +170,8 @@ label v9_train_w_apes:
 
                 ca "When I get done with you, no punk will even THINK about starting shit again. You hear me?"
 
-            "Be humble":
-                $ add_point(KCT.BOYFRIEND)
+            "Be humble" (boyfriend=1.0):
+                $ reputation.add_point(RepComponent.BOYFRIEND)
 
                 scene v9twa5a # FPP. Show Cameron, hands behind back, serious look, mouth open
                 with dissolve
@@ -238,8 +238,8 @@ label v9_train_w_apes:
         ca "Now your turn. Imagine him standing right in front of you and get as many sneak shots in as possible. Balls, kidneys, throat, I don't care. Go for the kill!"
 
         menu:
-            "Be pumped":
-                $ add_point(KCT.BRO)
+            "Be pumped" (bro=1.0):
+                $ reputation.add_point(RepComponent.BRO)
 
                 scene v9twa8 # TPP. Show MC Punching bag, back to camera, in boxing stance
                 with dissolve
@@ -305,8 +305,8 @@ label v9_train_w_apes:
 
                 ca "Great! Over here!"
 
-            "Stay quiet":
-                $ add_point(KCT.BOYFRIEND)
+            "Stay quiet" (boyfriend=1.0):
+                $ reputation.add_point(RepComponent.BOYFRIEND)
 
                 scene v9twa5a
                 with dissolve

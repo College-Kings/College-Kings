@@ -7,11 +7,11 @@ label v12_mc_chilling:
     if not v11_riley_roomate:
         scene v12mor1 # TPP. MC leaving riley's room
         with fade 
-        play sound "sounds/doorclose.mp3"
+        play sound sound.door_close
 
         pause 0.75
 
-        play music "music/v12/Track Scene 23a.mp3" fadein 2
+        play music music.v12_Track_Scene_23a fadein 2
 
         scene v12mor2 # TPP. MC on the hotel hallway
         with dissolve
@@ -20,7 +20,7 @@ label v12_mc_chilling:
 
         scene v12mor3 # TPP. MC arriving on his room
         with dissolve
-        play sound "sounds/dooropen.mp3"
+        play sound sound.door_open
 
         pause 1
 
@@ -38,7 +38,7 @@ label v12_mc_chilling:
 
         pause 0.75
 
-        play music "music/v12/Track Scene 23a.mp3" fadein 2
+        play music music.v12_Track_Scene_23a fadein 2
 
         scene v12mor5
         with dissolve
@@ -146,8 +146,8 @@ label v12_mc_chilling:
         sa "*Drunk* Do you think I'm pretty?"
 
         menu:
-            "What?":
-                $ add_point(KCT.TROUBLEMAKER)
+            "What?" (troublemaker=1.0):
+                $ reputation.add_point(RepComponent.TROUBLEMAKER)
                 scene v12mor9
                 with dissolve
 
@@ -163,8 +163,8 @@ label v12_mc_chilling:
 
                 u "No, Sam. I mean, yeah. Of course you're pretty. I just wasn't expecting that question I guess."
 
-            "Yes":
-                $ add_point(KCT.BOYFRIEND)
+            "Yes" (boyfriend=1.0):
+                $ reputation.add_point(RepComponent.BOYFRIEND)
                 scene v12mor9
                 with dissolve
 
@@ -303,8 +303,8 @@ label v12_mc_chilling:
 
                 sa "*Drunk* Good... Right answer."
 
-            "No":
-                $ add_point(KCT.TROUBLEMAKER)
+            "No" (troublemaker=1.0):
+                $ reputation.add_point(RepComponent.TROUBLEMAKER)
                 scene v12mor13a
                 with dissolve
 
@@ -338,15 +338,15 @@ label v12_mc_chilling:
         menu:
             "I can beat Cameron":
                 $ v12s23a_sam += 1
-                $ add_point(KCT.TROUBLEMAKER)
+                $ reputation.add_point(RepComponent.TROUBLEMAKER)
                 
                 scene v12mor13a
                 with dissolve
             
                 u "Yeah. Of course I can take him. He may be a lunatic, but I can handle that."
 
-            "Not fighting your brother":
-                $ add_point(KCT.BRO)
+            "Not fighting your brother" (bro=1.0):
+                $ reputation.add_point(RepComponent.BRO)
                 scene v12mor13a 
                 with dissolve
                 
@@ -471,8 +471,8 @@ label v12_mc_chilling:
         with dissolve
 
         menu:
-            "Call Cameron":
-                $ add_point(KCT.BRO)
+            "Call Cameron" (bro=1.0):
+                $ reputation.add_point(RepComponent.BRO)
 
                 scene v12mor23 # TPP. MC holding his phone, mouth closed
                 with dissolve
@@ -480,7 +480,7 @@ label v12_mc_chilling:
 
                 scene v12mor24 # TPP. MC with the phone to his ear, mouth closed
                 with dissolve
-                play sound "sounds/answercall.mp3"
+                play sound sound.answer_call
 
                 pause 0.75
 
@@ -561,12 +561,12 @@ label v12_mc_chilling:
 
                 scene v12mor24e # TPP. MC puts his phone away, slight smile
                 with dissolve
-                play sound "sounds/rejectcall.mp3"
+                play sound sound.reject_call
 
                 pause 0.75
 
-            "Don't call Cameron":
-                $ add_point(KCT.BOYFRIEND)
+            "Don't call Cameron" (boyfriend=1.0):
+                $ reputation.add_point(RepComponent.BOYFRIEND)
                 scene v12mor22
                 with dissolve
 
@@ -586,7 +586,7 @@ label v12_mc_chilling:
         pause 0.75
 
     else: 
-        play sound "sounds/call.mp3"
+        play sound sound.call
 
         pause 1.25
 
@@ -598,7 +598,7 @@ label v12_mc_chilling:
         scene v12mor24a
         with dissolve
         stop sound
-        play sound "sounds/answercall.mp3"
+        play sound sound.answer_call
 
         u "Hello?"
 
@@ -650,8 +650,8 @@ label v12_mc_chilling:
                 sa "*Drunk* Awww, I wish I was there too."
 
 
-            "No, I don't miss you (Joke)":
-                $ add_point(KCT.TROUBLEMAKER)
+            "No, I don't miss you (Joke)" (troublemaker=1.0):
+                $ reputation.add_point(RepComponent.TROUBLEMAKER)
                 scene v12mor24a
                 with dissolve
 
@@ -747,7 +747,7 @@ label v12_mc_chilling:
 
         sa "*Drunk* Forget my number, you stupid fuckboy!"
 
-        play sound "sounds/rejectcall.mp3"
+        play sound sound.reject_call
 
         scene v12mor24b
         with dissolve
@@ -768,15 +768,15 @@ label v12_mc_chilling:
         with dissolve
 
         menu:
-            "Call Cameron":
-                $ add_point(KCT.BRO)
+            "Call Cameron" (bro=1.0):
+                $ reputation.add_point(RepComponent.BRO)
 
                 scene v12mor24d
                 with dissolve
 
                 u "(*Sighs* He should know that she's drunk.)"
 
-                play sound "sounds/answercall.mp3"
+                play sound sound.answer_call
 
                 pause 0.75
                 scene v12mor25
@@ -859,8 +859,8 @@ label v12_mc_chilling:
 
                 pause 0.75
 
-            "Don't call Cameron":
-                $ add_point(KCT.BOYFRIEND)
+            "Don't call Cameron" (boyfriend=1.0):
+                $ reputation.add_point(RepComponent.BOYFRIEND)
                 scene v12mor22
                 with dissolve
 

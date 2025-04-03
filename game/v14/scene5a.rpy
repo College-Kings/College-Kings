@@ -4,9 +4,9 @@
 # Time: Night
 
 label v14s05a:
-    play music "music/v13/Track Scene 40_3.mp3" fadein 2
+    play music music.v13_Track_Scene_40_3 fadein 2
 
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
     pause 0.51
 
     scene v14s05a_1 # TPP. Show walking into his room, neutral expression, mouth closed
@@ -115,7 +115,7 @@ label v14s05a:
         scene v14s05a_11 # TPP. Closeup of Riley and MC kissing
         with dissolve
 
-        play sound "sounds/kiss.mp3"
+        play sound sound.kiss
         pause 0.75
 
         scene v14s05a_11a # TPP. Same postion as v14s05a_11, Riley slight smile, mouth closed, MC, slight smile, mouth closed
@@ -202,14 +202,14 @@ label v14s05a:
         with dissolve
 
         menu:
-            "I think you should":
+            "I think you should" (bro=1.0):
                 $ v14s5a_riley_should_join_chicks = True
-                $ add_point(KCT.BRO)
+                $ reputation.add_point(RepComponent.BRO)
 
                 u "I think you should. You'd really fit in there."
 
-            "You sure it's for you?":
-                $ add_point(KCT.BOYFRIEND)
+            "You sure it's for you?" (boyfriend=1.0):
+                $ reputation.add_point(RepComponent.BOYFRIEND)
 
                 u "Hmm, are you sure it's for you?"
 
@@ -245,20 +245,20 @@ label v14s05a:
 
         menu: 
             "Help Chloe":
-                if chloe.relationship >= Relationship.GIRLFRIEND:
-                    $ add_point(KCT.BOYFRIEND)
-                elif lindsey.relationship >= Relationship.FWB:
-                    $ add_point(KCT.TROUBLEMAKER)
+                if CharacterService.is_girlfriend(chloe):
+                    $ reputation.add_point(RepComponent.BOYFRIEND)
+                elif CharacterService.is_fwb(lindsey):
+                    $ reputation.add_point(RepComponent.TROUBLEMAKER)
                 scene v14s05a_13
                 with dissolve
 
                 u "Well, I'd support Chloe."
 
             "Help Lindsey":
-                if lindsey.relationship >= Relationship.FWB:
-                    $ add_point(KCT.BOYFRIEND)
-                elif chloe.relationship >= Relationship.GIRLFRIEND:
-                    $ add_point(KCT.TROUBLEMAKER)
+                if CharacterService.is_fwb(lindsey):
+                    $ reputation.add_point(RepComponent.BOYFRIEND)
+                elif CharacterService.is_girlfriend(chloe):
+                    $ reputation.add_point(RepComponent.TROUBLEMAKER)
                 scene v14s05a_13
                 with dissolve
 

@@ -4,12 +4,12 @@
 # Time: Night
 label v11_chloe_sex_scene:
 
-    if config_censored:
+    if is_censored:
         call screen censored_popup("v11s41b_nsfwSkipLabel1")
 
     scene v11css1 # TPP. Mc and chloe removing their clothes
     with dissolve
-    play music "music/v10/Track Scene 17_2.mp3" fadein 2
+    play music music.ck1.v10.Track_Scene_17_2 fadein 2
     pause
 
     scene v11css1a # TPP. Chloe turning chloe against the wall kissing her neck
@@ -191,7 +191,7 @@ label v11_chloe_sex_scene:
 
     cl "I'll be right back, I'm gonna go clean up."
     stop music fadeout 3
-    play music "music/v10/Track Scene 41_2.mp3" fadein 2
+    play music music.ck1.v10.Track_Scene_41_2 fadein 2
     scene v11css6 # FPP. Chloe walks off to the bathroom
     with dissolve
 

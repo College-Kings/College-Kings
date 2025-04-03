@@ -9,7 +9,7 @@ label v13s30:
 
     u "Wait a minute, are these not the canals you were talking about?"
 
-    play music "music/v13/Track Scene 30_1.mp3" fadein 2
+    play music music.v13_Track_Scene_30_1 fadein 2
 
     scene v13s30_2 # FPP. MC looking at Amber, Amber looking at MC, Amber slight smile, mouth open. 
     with dissolve
@@ -128,7 +128,7 @@ label v13s30:
 
     pause 0.75
 
-    play sound "sounds/rejectcall.mp3"
+    play sound sound.reject_call
     scene v13s30_2c # FPP. Same as v13s30_2b, Amber with phone to her ear, slight smile, mouth open.
     with dissolve
 
@@ -300,7 +300,7 @@ label v13s30:
 
         pause 0.75
    
-    elif lauren.relationship >= Relationship.GIRLFRIEND:
+    elif CharacterService.is_girlfriend(lauren):
         scene v13s30_6c # FPP. Same as v13s30_6a, Lauren slight smile, mouth open.
         with dissolve
 
@@ -336,7 +336,7 @@ label v13s30:
 
         pause 0.75
 
-        play sound "sounds/kiss.mp3"
+        play sound sound.kiss
         scene v13s30_9a # TPP. Same as v13s30_9. Lauren kissing MC while grabbing his chin.
         with dissolve
 
@@ -443,10 +443,10 @@ label v13s30:
 
     am "As long as you don't do too much you'll be fine."
 
-    if v13_lauren_smoke or (kct == "loyal" and not "v11_aubrey" in sceneList):
+    if v13_lauren_smoke or (reputation() == Reputations.LOYAL and not "v11_aubrey" in sceneList):
         if not v13_lauren_smoke:
             $ v13_lauren_smoke = True
-            call screen kct_popup
+            call screen reputation_popup
 
         scene v13s30_8a
         with dissolve
@@ -629,7 +629,7 @@ label v13s30:
         u "She's shaking, Amber..."
 
         stop music fadeout 3
-        play music "music/v13/Track Scene 30_2.mp3" fadein 2
+        play music music.ck1.v13.Track_Scene_30_2 fadein 2
 
         scene v13s30_15b # TPP. Same as v13s30_15a, Show MC looking down towards where Amber is sitting, MC worried expression, mouth closed, amber worried expression, Mouth open.
         with dissolve
@@ -680,7 +680,7 @@ label v13s30:
 
     else:
         if not "v11_aubrey" in sceneList:
-            call screen kct_popup(required_kct="loyal")
+            call screen reputation_popup(required_reputation="loyal")
     
         scene v13s30_21 # FPP. Amber the only one sitting. MC looking at Lauren, Lauren looking at Amber where she is sitting, Lauren slight frown, mouth open, Amber slight frown, mouth closed.
         with dissolve

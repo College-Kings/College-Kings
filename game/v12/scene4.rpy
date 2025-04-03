@@ -10,7 +10,7 @@ label v12_roomate_talk:
 
         pause 0.75
 
-        play music "music/v12/Track Scene 4.mp3" fadein 2
+        play music music.ck1.v12.Track_Scene_4 fadein 2
 
         scene v12rcr2 # FPP. Show chloe walking into the room, looking at MC, mouth closed
         with dissolve
@@ -23,25 +23,25 @@ label v12_roomate_talk:
         cl "What, were you worried about me? *Chuckles*"
 
         menu:
-            "Yes":
-                $ add_point(KCT.BOYFRIEND)
+            "Yes" (boyfriend=1.0):
+                $ reputation.add_point(RepComponent.BOYFRIEND)
                 scene v12rcr2
                 with dissolve
 
                 u "Yeah, kinda... It's not like we weren't just in the middle of a robbery or anything."
 
-            "No":
-                $ add_point(KCT.BRO)
+            "No" (bro=1.0):
+                $ reputation.add_point(RepComponent.BRO)
                 scene v12rcr2
                 with dissolve
                        
                 u "Haha no, I was just curious. I know you can take care of yourself."
 
-        if chloe.relationship >= Relationship.FWB:
+        if CharacterService.is_fwb(chloe) or CharacterService.is_girlfriend(chloe):
             scene v12rcr3 # TPP. Chloe gives MC a kiss
             with dissolve
 
-            play sound "sounds/kiss.mp3"
+            play sound sound.kiss
 
             pause 0.75
 
@@ -144,8 +144,8 @@ label v12_roomate_talk:
         cl "You don't think Ryan's a good fighter?"
 
         menu:
-            "He is":
-                $ add_point(KCT.BRO)
+            "He is" (bro=1.0):
+                $ reputation.add_point(RepComponent.BRO)
                 scene v12rcr5a
                 with dissolve
 
@@ -161,8 +161,8 @@ label v12_roomate_talk:
 
                 u "Not Grayson-level crazy. *Laughs*"
 
-            "Nope":
-                $ add_point(KCT.TROUBLEMAKER)
+            "Nope" (troublemaker=1.0):
+                $ reputation.add_point(RepComponent.TROUBLEMAKER)
                 scene v12rcr5a
                 with dissolve
 
@@ -218,7 +218,7 @@ label v12_roomate_talk:
 
         u "Haha, same."
 
-        if chloe.relationship >= Relationship.FWB:
+        if CharacterService.is_fwb(chloe) or CharacterService.is_girlfriend(chloe):
             scene v12rcr6 # TPP. Chloe gets off her bed 
             with dissolve
 
@@ -312,8 +312,8 @@ label v12_roomate_talk:
         ri "Someone sure has a lot of questions. *Chuckles* Were you wishing I was here with you or something?"
 
         menu:
-            "A little":
-                $ add_point(KCT.BOYFRIEND)
+            "A little" (boyfriend=1.0):
+                $ reputation.add_point(RepComponent.BOYFRIEND)
                 scene v12rcr12
                 with dissolve
 
@@ -324,8 +324,8 @@ label v12_roomate_talk:
 
                 ri "Aww. I guess I can't be upset at you for missing me. *Chuckles*"
 
-            "Not really":
-                $ add_point(KCT.BRO)
+            "Not really" (bro=1.0):
+                $ reputation.add_point(RepComponent.BRO)
                 scene v12rcr12 
                 with dissolve
 
@@ -400,8 +400,8 @@ label v12_roomate_talk:
         ri "Well there was, but then Lindsey agreed that there was a lot of drama but promised me she was planning on running for President against Chloe."
 
         menu:
-            "I know":
-                $ add_point(KCT.TROUBLEMAKER)
+            "I know" (troublemaker=1.0):
+                $ reputation.add_point(RepComponent.TROUBLEMAKER)
                 scene v12rcr13b
                 with dissolve
 

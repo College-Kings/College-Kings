@@ -32,8 +32,8 @@ label after_drugs:
         pause 0.5
         jo "*Groans*"
 
-    play sound "sounds/dooropen.mp3"
-    play music "music/mchill1.mp3"
+    play sound sound.door_open
+    play music music.ck1.mchill1
 
     scene v8josh14 # TPP (This is the next scene for both v8josh12a and v8josh13, in different paths of course, so both the transitions should look smooth). Show MC opening the room door (half open) with Josh still taking support from MC
     with dissolve
@@ -114,13 +114,13 @@ label after_drugs:
     with dissolve
     u "(I should call Amber and tell her what happened.)"
 
-    play sound "sounds/calling.mp3"
+    play sound sound.calling
 
     scene v8josh22a # MC holding the phone to his face, looking somewhat upset, mouth closed
     with dissolve
     pause 1
 
-    play sound "sounds/answercall.mp3"
+    play sound sound.answer_call
 
     scene v8josh22a
     with dissolve
@@ -147,7 +147,7 @@ label after_drugs:
     with dissolve
     u "He's sleeping at the moment, Amber, and I..."
 
-    play sound "sounds/rejectcall.mp3"
+    play sound sound.reject_call
     pause 0.5
 
     scene v8josh22
@@ -158,7 +158,7 @@ label after_drugs:
     with Fade(1, 0.25, 0.5)
     pause 0.75
 
-    play sound "sounds/knock.mp3"
+    play sound sound.knock
     pause 0.75
 
     scene v8josh21
@@ -166,7 +166,7 @@ label after_drugs:
     stop ambience
     pause 0.5
 
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
 
     scene v8josh24 # TPP. Show MC opening the door (Door is half open. For context, Amber is standing outside)
     with dissolve
@@ -276,7 +276,7 @@ label after_drugs:
             with dissolve
             u "(What is she up to?)"
 
-            play sound "sounds/flush.mp3"
+            play sound sound.flush
             pause 0.75
 
             scene v8josh27a # Amber walking towards the couch to sit beside MC, looking at him neutral expression. MC neutral expression, mouth open
@@ -576,9 +576,9 @@ label after_drugs:
     with Dissolve(1)
     pause 0.5
 
-    if ending == "amber" or kct == "popular":
+    if ending == "amber" or reputation() == Reputations.POPULAR:
         if ending != "amber":
-            call screen kct_popup
+            call screen reputation_popup
 
         $ amberSexOfferAtJoshs = True
 
@@ -620,20 +620,22 @@ label after_drugs:
         menu:
             "Go with her":
                 $ sceneList.add("v8_amber2")
-                $ amber.relationship = Relationship.FWB
-                if lauren.relationship >= Relationship.GIRLFRIEND:
-                    $ add_point(KCT.TROUBLEMAKER)
+                $ CharacterService.set_relationship(amber, Relationship.FWB)
+                
+                if CharacterService.is_girlfriend(lauren):
+                    $ reputation.add_point(RepComponent.TROUBLEMAKER)
                 else:
-                    $ add_point(KCT.BOYFRIEND)
+                    $ reputation.add_point(RepComponent.BOYFRIEND)
 
                 u "*Whispers* Fuck yes! Let's go!"
 
                 jump amber_sex_at_joshs
 
             "Reject her advances":
-                $ amber.relationship = Relationship.FRIEND
-                if lauren.relationship >= Relationship.GIRLFRIEND:
-                    $ add_point(KCT.BOYFRIEND)
+                $ CharacterService.set_relationship(amber, Relationship.FRIEND)
+                
+                if CharacterService.is_girlfriend(lauren):
+                    $ reputation.add_point(RepComponent.BOYFRIEND)
 
                 u "*Whispers* Sorry Amber, I'm not feeling it tonight."
 
@@ -665,7 +667,7 @@ label tues_morning_at_joshs:
         u "(Oh, looks like Amber is up already.)"
         u "(I should get dressed and see how Josh is doing.)"
 
-        play music "music/mfunk.mp3"
+        play music music.ck1.mfunk
 
         scene v8josh39 # FPP. MC walking down the stairs into the kitchen, no others should be seen in the shot (For context, Josh is making breakfast and Amber is sitting at the table talking to Josh but they should not be visible in this shot)
         with dissolve
@@ -776,7 +778,7 @@ label tues_morning_at_joshs:
         u "(Oh, looks like Josh and Amber are up already.)"
         u "(Guess I better get up and see how he is.)"
 
-        play music "music/mfunk.mp3"
+        play music music.ck1.mfunk
 
         scene v8josh38 # FPP. MC walking into the kitchen but just outside it, so no others should be seen in the shot (For context, Josh is making breakfast and Amber is sitting at the table talking to Josh but they should not be visible in this shot)
         with dissolve

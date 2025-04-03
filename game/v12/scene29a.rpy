@@ -10,9 +10,9 @@ label v12_late_night_workout:
 
     li "What are you doing down here all by yourself?"
 
-    play music "music/v12/Track Scene 29_1.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_29_1 fadein 2
 
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         scene v12lnw2 # FPP Show Lindsey, looking at MC, neutral expression with mouth closed
         with dissolve
 
@@ -115,7 +115,7 @@ label v12_late_night_workout:
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 29a_1.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_29a_1 fadein 2
 
     scene v12lnw6 # TPP Show MC and Lindsey, now inside gym looking around, Lindsey looks amazed and has mouth open
     with dissolve
@@ -401,8 +401,8 @@ label v12_late_night_workout:
     pause 0.75
 
     menu:
-        "Show off":
-            $ add_point(KCT.TROUBLEMAKER)
+        "Show off" (troublemaker=1.0):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             scene v12lnw9b
             with dissolve
@@ -580,8 +580,8 @@ label v12_late_night_workout:
 
                     li "*Chuckles*"
                 
-                "Best spot ever":
-                    $ add_point(KCT.TROUBLEMAKER)
+                "Best spot ever" (troublemaker=1.0):
+                    $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
                     scene v12lnw21d
                     #with dissolve
@@ -804,7 +804,7 @@ label v12_late_night_workout:
 
     pause 0.5
 
-    play sound "sounds/facepunch1.mp3"
+    play sound sound.hit
     scene v12lnw25a # FPP Same angle as v12lnw25, Lindsey kicking backward at the punching bag while looking away
     with dissolve
 
@@ -839,9 +839,9 @@ label v12_late_night_workout:
     with dissolve
 
     menu:
-        "Hard":
-            $ add_point(KCT.TROUBLEMAKER)
-            play sound "sounds/ks.mp3"
+        "Hard" (troublemaker=1.0):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
+            play sound sound.hit
             scene v12lnw25c # TPP Same angle as v12lnw25, MC kicking back at the punching bag, missing, and losing his balance
             with dissolve
 
@@ -858,7 +858,7 @@ label v12_late_night_workout:
             li "Just a little. *Chuckles*"
             
         "Steady":
-            play sound "sounds/facepunch1.mp3"
+            play sound sound.hit
             scene v12lnw25d # TPP Same angle as v12lnw25, MC kicking back at the punching bag, the kick landing squarly and knocking the bag back
             with dissolve
 
@@ -900,7 +900,7 @@ label v12_late_night_workout:
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 29_6.mp3" fadein 2
+    play music music.v12_Track_Scene_29_6 fadein 2
 
     scene v12lnw28 # FPP Show Lindsey, back at hotel lobby, Lindsey smiling with mouth closed
     with dissolve

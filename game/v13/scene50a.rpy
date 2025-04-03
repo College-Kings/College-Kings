@@ -5,7 +5,7 @@
 
 label v13s50a:
     $ sceneList.add("v13_emily")
-    $ emily.relationship = Relationship.FWB
+    $ CharacterService.set_relationship(emily, Relationship.FWB)
 
     if v13s48_ryan_double_date:
         scene v13s50a_1 # TPP Show MC with his hands on Emily's shoulders, pushing her down to her knees
@@ -13,10 +13,10 @@ label v13s50a:
 
         pause 1
 
-    if config_censored:
+    if is_censored:
         call screen censored_popup("v13s50a_nsfwSkipLabel1")
 
-    play music "music/v13/Track Scene 50a.mp3" fadein 2
+    play music music.ck1.v13.Track_Scene_50a fadein 2
 
     if v13s48_ryan_double_date:
         scene v13s50a_2 # TPP Show MC roughly pulling Emily's shirt off while she gets up to her feet
@@ -136,12 +136,12 @@ label v13s50a:
     u "*Moans* Ah, shhhiiiitt... Ha... Dammit Emily!"
 
     stop music fadeout 3
-    play music "music/v13/Track Scene 50_3.mp3" fadein 2
+    play music music.ck1.v13.Track_Scene_50_3 fadein 2
 
     scene v13s50a_6a # FPP Same angle as 6, Emily turning her head to look back at MC, Emily smiling with her mouth open
     with dissolve
 
-    $ grant_achievement("dammit_emily")
+    grant Achievement("dammit_emily", "Angry bathroom sex")
     em "Did you enjoy yourself? *Chuckles*"
 
     scene v13s50a_6b # FPP Same as 6a, Emily's mouth closed
@@ -178,7 +178,7 @@ label v13s50a:
     label v13s50a_nsfwSkipLabel1:
 
     stop music fadeout 3
-    play music "music/v13/Track Scene 50_2.mp3" fadein 2
+    play music music.v13_Track_Scene_50_2 fadein 2
 
     if v13s48_ryan_double_date: # -If coming from Scene50-
         label v13s50a_return_after_emily:
@@ -231,7 +231,7 @@ label v13s50a:
         u "(Yikes...) Sounds good man."
 
         stop music fadeout 3
-        play music "music/v13/Track Scene 49.mp3" fadein 2
+        play music music.ck1.v13.Track_Scene_49 fadein 2
 
         scene v13s50a_12 # FPP MC walking into the hotel lobby
         with dissolve
@@ -243,7 +243,7 @@ label v13s50a:
     else: # -If coming from Scene51
 
         stop music fadeout 3
-        play music "music/v13/Track Scene 49.mp3" fadein 2
+        play music music.ck1.v13.Track_Scene_49 fadein 2
 
         scene v13s50a_13 # TPP Show MC walking into hotel lobby
         with dissolve
@@ -252,10 +252,10 @@ label v13s50a:
 
         stop music fadeout 3
 
-    if chloe.relationship >= Relationship.GIRLFRIEND and not v11_riley_roomate:
+    if CharacterService.is_girlfriend(chloe) and not v11_riley_roomate:
         jump v13s52
     
-    elif riley.relationship >= Relationship.FWB and v11_riley_roomate:
+    elif CharacterService.is_fwb(riley) and v11_riley_roomate:
         jump v13s53
     
     else: 

@@ -23,3 +23,6 @@ screen aubsex():
             idle "images/v3/sexposbutton.webp"
             hover "images/v3/sexposbutton.webp"
             action Jump("acream")
+
+    if config_debug:
+        timer 0.1 action Jump(renpy.random.choice(("amiss", "acow", "abj", "acream")))

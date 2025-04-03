@@ -9,7 +9,7 @@ label v13s24:
 
     pause 0.75
 
-    play music "music/v13/Track Scene 24_1.mp3" fadein 2
+    play music music.v13_Track_Scene_24_1 fadein 2
 
     scene v13s24_2 # TPP. show imre and ryan standing next to each other on MC's left and barhost on MC's right, imre slight anger mouth open, ryan slight smile mouth closed, barhost slight smile mouth open
     with dissolve
@@ -57,8 +57,8 @@ label v13s24:
     barh "There's three other singles, but they're all girls. One for each of you maybe? *Laughs*"
 
     menu:
-        "I already have a girl":
-            $ add_point(KCT.BOYFRIEND)
+        "I already have a girl" (boyfriend=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
 
             scene v13s24_3a
             with dissolve
@@ -95,10 +95,10 @@ label v13s24:
 
             barh "Awkward..."
 
-        "Fuck yeah, let's mingle":
-            $ add_point(KCT.BRO)
-            if chloe.relationship >= Relationship.GIRLFRIEND or lauren.relationship >= Relationship.GIRLFRIEND:
-                $ add_point(KCT.TROUBLEMAKER)
+        "Fuck yeah, let's mingle" (bro=1.0):
+            $ reputation.add_point(RepComponent.BRO)
+            if CharacterService.is_girlfriend(chloe) or CharacterService.is_girlfriend(lauren):
+                $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             scene v13s24_3a
             with dissolve
@@ -256,7 +256,7 @@ label v13s24:
     barh "The first woman is coming in, stand tall gentlemen! For Emmy has arrived!"
 
     stop music fadeout 3
-    play music "music/v13/Track Scene 24_2.mp3" fadein 2
+    play music music.v13_Track_Scene_24_2 fadein 2
 
     scene v13s24_13 # FPP. emmy walks in, slight smile, mouth closed
     with dissolve
@@ -277,9 +277,6 @@ label v13s24:
     with dissolve
 
     emmy "Hello boys! *Chuckles* It's nice to meet you all."
-
-    if emmy.simplr in simplr_app.contacts: #for v12-v13 compatibility
-        $ v12s24_emmymatch = True
 
     if v12s24_emmymatch:
         scene v13s24_17 # FPP. emmy recognizes MC, eyebrow raised, slight smile, mouth closed
@@ -373,9 +370,9 @@ label v13s24:
     ry "Well, I'll be honest. I'm not interested in having kids at this very moment, but I do want children in the future... And many of them. *Chuckles*"
 
     menu:
-        "No kids for me":
-            $ add_point(KCT.BRO)
-            $ v13_emmy_points += 1
+        "No kids for me" (bro=1.0):
+            $ reputation.add_point(RepComponent.BRO)
+            $ emmy.points = 1
             
             scene v13s24_11a
             #with dissolve
@@ -387,8 +384,9 @@ label v13s24:
 
             pause 0.75
 
-        "I'm a family man":
-            $ add_point(KCT.BOYFRIEND)
+        "I'm a family man" (boyfriend=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
+            $ emmy.points = 0
             
             scene v13s24_11a
             #with dissolve
@@ -422,10 +420,7 @@ label v13s24:
 
     menu:
         "City":
-            $ v13_emmy_points += 2
-            
-            if v13_emmy_points == 3:
-                $ emmy.relationship = Relationship.LIKES
+            $ emmy.points += 2
             
             scene v13s24_16b
             with dissolve
@@ -564,17 +559,18 @@ label v13s24:
     ry "I do like to spoil my girl, so maybe."
 
     menu:
-        "Yes, I'm a romantic":
-            $ add_point(KCT.BOYFRIEND)
-            $ kourtney.relationship = Relationship.LIKES
+        "Yes, I'm a romantic" (boyfriend=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
+            $ kourtney.points = 1
             
             scene v13s24_16h
             with dissolve
 
             u "I feel like I'm a romantic, so of course."
 
-        "No, that's too old school":
-            $ add_point(KCT.TROUBLEMAKER)
+        "No, that's too old school" (troublemaker=0.0):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
+            $ kourtney.points = 0
 
             scene v13s24_16i # FPP. same as v13s24_16h kourtney slight frown
             with dissolve
@@ -687,18 +683,19 @@ label v13s24:
     ry "Well, I wouldn't wanna be doing nothing. So, probably."
 
     menu:
-        "Work":
-            $ add_point(KCT.BOYFRIEND)
-            $ aryssa.relationship = Relationship.LIKES
+        "Work" (boyfriend=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
+            $ aryssa.points = 1
             
             scene v13s24_16l
             with dissolve
 
             u "I'd still be working in some way, shape or form. Don't have time for boredom."
 
-        "Retired life":
-            $ add_point(KCT.BRO)
-            $ add_point(KCT.TROUBLEMAKER)
+        "Retired life" (bro=1.0, troublemaker=1.0):
+            $ reputation.add_point(RepComponent.BRO)
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
+            $ aryssa.points = 0
 
             scene v13s24_16m # FPP. same as v13s24_16l aryssa slight frown
             with dissolve
@@ -760,7 +757,7 @@ label v13s24:
 
     barh "Right then... Ladies, go ahead and decide on your man. If you would be willing to go on a date with [name], please raise your hand."
 
-    if not emmy.relationship >= Relationship.LIKES and not kourtney.relationship >= Relationship.LIKES and not aryssa.relationship >= Relationship.LIKES:
+    if not emmy.points == 3 and kourtney.points == 0 and aryssa.points == 0:
         scene v13s24_20a # FPP. same as v13s24_20 emmy kourtney and aryssa looking in different directions, no expressions, hands MUST be at sides or in laps NOT raised, mouths closed
         with dissolve
 
@@ -771,7 +768,7 @@ label v13s24:
 
         pause 1
 
-    elif emmy.relationship >= Relationship.LIKES and kourtney.relationship >= Relationship.LIKES and aryssa.relationship >= Relationship.LIKES:
+    elif emmy.points == 3 and kourtney.points == 1 and aryssa.points == 1:
         scene v13s24_20b # FPP. same as v13s24_20 emmy kourtney and aryssa looking at MC, all with one hand raised, all fully smiling, all mouths closed
         with dissolve
 
@@ -787,37 +784,37 @@ label v13s24:
 
         pause 1
 
-    elif emmy.relationship >= Relationship.LIKES and kourtney.relationship >= Relationship.LIKES:
+    elif emmy.points == 3 and kourtney.points == 1:
         scene v13s24_20c # FPP. same as v13s24_20b aryssa no expression and doesn't raise her hand
         with dissolve
 
         pause 2
 
-    elif emmy.relationship >= Relationship.LIKES and aryssa.relationship >= Relationship.LIKES:
+    elif emmy.points == 3 and aryssa.points == 1:
         scene v13s24_20d # FPP. same as v13s24_20b kourtney no expression and doesn't raise her hand
         with dissolve
 
         pause 2
 
-    elif kourtney.relationship >= Relationship.LIKES and aryssa.relationship >= Relationship.LIKES:
+    elif kourtney.points == 1 and aryssa.points == 1:
         scene v13s24_20e # FPP. same as v13s24_20b emmy no expression and doesn't raise her hand
         with dissolve
 
         pause 2
 
-    elif emmy.relationship >= Relationship.LIKES:
+    elif emmy.points == 3:
         scene v13s24_20f # FPP. same as v13s24_20b show just emmy raising her hand, full smile, mouth closed, 
         with dissolve
 
         pause 2
 
-    elif kourtney.relationship >= Relationship.LIKES:
+    elif kourtney.points == 1:
         scene v13s24_20g # FPP. same as v13s24_20b show just kourtney raising her hand, full smile, mouth closed, 
         with dissolve
 
         pause 2
 
-    elif aryssa.relationship >= Relationship.LIKES:
+    elif aryssa.points == 1:
         scene v13s24_20h # FPP. same as v13s24_20b show just aryssa raising her hand, full smile, mouth closed, 
         with dissolve
 
@@ -861,7 +858,7 @@ label v13s24:
     scene v13s24_12a
     with dissolve
 
-    if not emmy.relationship >= Relationship.LIKES and not kourtney.relationship >= Relationship.LIKES and not aryssa.relationship >= Relationship.LIKES:
+    if emmy.points != 3 and kourtney.points == 0 and aryssa.points == 0:
         scene v13s24_12a
         with dissolve
 
@@ -943,7 +940,7 @@ label v13s24_kourtney_date:
     scene v13s24_26a # FPP same as v13s24_26 kourtney instead of emmy
     with dissolve
 
-    $ grant_achievement("romantic_heart")
+    grant Achievement("romantic_heart", "Score a date with Kourtney")
     u "Let's go, Kourtney."
 
     scene v13s24_28a # TPP. same as v13s24_28 kourtney instead of emmy

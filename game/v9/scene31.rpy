@@ -7,7 +7,7 @@ label v9_sat_cafe_w_nora:
     scene v9cwn1 # TPP. Show MC and Nora walking to a table in the cafe.
     with fade
 
-    play music "music/v9/Track Scene 31.mp3" fadein 2
+    play music music.ck1.v9.Track_Scene_31 fadein 2
 
     pause 1
 
@@ -55,8 +55,8 @@ label v9_sat_cafe_w_nora:
     with dissolve
 
     menu:
-        "Correct waiter":
-            $ add_point(KCT.BRO)
+        "Correct waiter" (bro=1.0):
+            $ reputation.add_point(RepComponent.BRO)
 
             u "Actually, we're just friends."
 
@@ -117,8 +117,8 @@ label v9_sat_cafe_w_nora:
             scene v9cwn7 # FPP. Show MC and Nora walking away in opposite directions.
             with dissolve
 
-        "Don't correct waiter":
-            $ add_point(KCT.BOYFRIEND)
+        "Don't correct waiter" (boyfriend=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
 
             scene v9cwn3c
             with fade

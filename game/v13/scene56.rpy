@@ -9,7 +9,7 @@ label v13s56:
 
     pause 0.75
 
-    play music "music/v13/Track Scene 56.mp3" fadein 2
+    play music music.ck1.v13.Track_Scene_56 fadein 2
 
     scene v13s56_1a # TPP. Same as v13s56_1, different place on sidewalk
     with dissolve
@@ -41,7 +41,7 @@ label v13s56:
 
     u "I definitely feel that. *Chuckles*"
 
-    if nora.relationship >= Relationship.FWB:
+    if CharacterService.is_fwb(nora):
         scene v13s56_2
         with dissolve
 
@@ -101,8 +101,8 @@ label v13s56:
     with dissolve
 
     menu:
-        "*Accidently* bump against her":
-            $ add_point(KCT.TROUBLEMAKER)
+        "*Accidently* bump against her" (troublemaker=1.0):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
             scene v13s56_98 # TPP. MC grinds up against Nora's ass, Nora looks back slightly shocked, mouth open
             with dissolve
 
@@ -128,7 +128,7 @@ label v13s56:
 
             u "I said my bad. *Chuckles*"
 
-            if nora.relationship >= Relationship.FWB:
+            if CharacterService.is_fwb(nora):
                 scene v13s56_5f # FPP. same as v13s56_5d nora slight smile
                 with dissolve
 
@@ -140,12 +140,12 @@ label v13s56:
 
                 no "Yeah... I heard you."
 
-        "Be respectful":
-            $ add_point(KCT.BRO)
+        "Be respectful" (bro=1.0):
+            $ reputation.add_point(RepComponent.BRO)
             scene v13s56_99 # FPP. same as v13s56_5 MC looks down at his crotch
             with dissolve
 
-            $ grant_achievement("calm_down_big_fella")
+            grant Achievement("calm_down_big_fella", "Respect Nora")
             u "(Calm down big fella.)"
 
     scene v13s56_5f

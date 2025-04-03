@@ -6,7 +6,7 @@
 label v11_arrive_hotel:
     scene v11arrh1 # FPP. MC is looking at Ms Rose, Ms Rose is looking at the students in the lobby, tired, mouth open
     with dissolve
-    play music "music/v11/Track Scene 17.mp3" fadein 2
+    play music music.ck1.v11.Track_Scene_17 fadein 2
     ro "Listen up, please! I'm not going to sugar coat anything, I'm very tired so let's please get through this quickly."
 
     ro "Based on your submitted preferences we've assigned your rooms and roommates. You can find them on this list."
@@ -61,7 +61,7 @@ label v11_arrive_hotel:
 
     ro "Everyone please wait and talk amongst yourselves while we wait on the keys."
     stop music fadeout 3
-    if joinwolves:
+    if mc.frat == Frat.WOLVES and CharacterService.is_kissed(ms_rose):
         scene v11arrh3
         with dissolve
 

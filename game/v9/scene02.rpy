@@ -3,40 +3,29 @@
 # Characters: MC (outfit 2), Cameron (Outfit 1 boxers only, no shirt, no shoes)
 # Time: Tuesday night
 
-init python:
-    def v9s2_reply1():
-        ryan.messenger.newMessage(_("Damn right! You heading to the gym?"))
-        ryan.messenger.addReply(_("Naw, I'm spent. But I have a feeling I'll be spending a lot of my time in there"))
-        ryan.messenger.newMessage(_("Me too. See ya there!"))
-
-    def v9s2_reply2():
-        ryan.messenger.newMessage(_("Lucky we did, huh? I think we got a hand up on those baby apes"))
-        ryan.messenger.addReply(_("Damn right! We got this! We need to hit the gym soon... after I get some sleep. I'm bout to pass out"))
-        ryan.messenger.newMessage(_("Same! Talk soon"))
-
 label v9_start_apes:
 
-    play music "music/v9/Track Scene 1.mp3" fadein 2
+    play music music.ck1.v9.Track_Scene_1 fadein 2
 
     u "(I need to find out what's going on. This is insane!)"
 
     scene v9apost1 # TPP. MC outside Cameron's room, knocking the door, confused, mouth closed
     with fade
 
-    play sound "sounds/knock.mp3"
+    play sound sound.knock
     pause 2
 
     scene v9apost2 # FPP. Cameron opens the door slightly and peeks through the opening, slightly annoyed, mouth open
     with dissolve
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
     ca "What you want, pledge?"
 
     scene v9apost3 # FPP (Can use the same camera as v9apost2 but different frame number to allow camera freedom). Cameron comes out and is standing in front of the MC now, looking slightly annoyed, mouth closed. Door still only half open.
     with dissolve
 
     menu:
-        "Not a pledge anymore":
-            $ add_point(KCT.TROUBLEMAKER)
+        "Not a pledge anymore" (troublemaker=1.0):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             u "Not a pledge anymore."
 
@@ -68,8 +57,8 @@ label v9_start_apes:
             with dissolve
             u "Something's going on. I just don't know what."
 
-        "Let it slide":
-            $ add_point(KCT.BRO)
+        "Let it slide" (bro=1.0):
+            $ reputation.add_point(RepComponent.BRO)
 
             u "(Cam's just a dick. Not worth it.)"
             u "Do you know what's going on?"
@@ -119,8 +108,8 @@ label v9_start_apes:
     with dissolve
 
     menu:
-        "Defend your honor":
-            $ add_point(KCT.TROUBLEMAKER)
+        "Defend your honor" (troublemaker=1.0):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             u "I do fine. And they ALL call me Big Daddy."
 
@@ -140,8 +129,8 @@ label v9_start_apes:
             with dissolve
             ca "That's for the Freshman Brawl! It's gonna be epic!"
 
-        "Just ask him about the red square":
-            $ add_point(KCT.BRO)
+        "Just ask him about the red square" (bro=1.0):
+            $ reputation.add_point(RepComponent.BRO)
 
             u "What's up with the red square? That's all I wanna know."
 
@@ -166,8 +155,8 @@ label v9_start_apes:
     with dissolve
 
     menu:
-        "Excited reply":
-            $ add_point(KCT.TROUBLEMAKER)
+        "Excited reply" (troublemaker=1.0):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             u "Pledge vs pledge!?"
 
@@ -191,7 +180,7 @@ label v9_start_apes:
             with dissolve
             ca "Saturday."
 
-            play sound "sounds/doorclose.mp3"
+            play sound sound.door_close
 
             scene v9apost3f # Cameron slammed the door and went inside, so just show a closed door
             with hpunch
@@ -200,9 +189,9 @@ label v9_start_apes:
 
             pause
 
-        "Hesitant reply":
+        "Hesitant reply" (boyfriend=1.0):
             $ v9_brawl_hesitant = True
-            $ add_point(KCT.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
 
             u "(Bloodbath? I don't like the sound of that.)"
             u "Freshman Brawl? Sounds dangerous."
@@ -223,7 +212,7 @@ label v9_start_apes:
             with dissolve
             ca "Saturday. Get to work!"
 
-            play sound "sounds/doorclose.mp3"
+            play sound sound.door_close
 
             scene v9apost3f
             with hpunch
@@ -236,7 +225,7 @@ label v9_start_apes:
     with Fade(0.75, 0.25, 0.75)
     pause 0.5
 
-    play music "music/v9/Track Scene 3.mp3" fadein 2
+    play music music.ck1.v9.Track_Scene_3 fadein 2
 
     u "(Better amp up my workouts. Ryan too.)"
 
@@ -244,17 +233,28 @@ label v9_start_apes:
     with dissolve
     pause 0.5
 
-    $ ryan.messenger.addReply(_("You here yet?"))
-    $ ryan.messenger.newMessage(_("Yeah, you ready?"))
-    $ ryan.messenger.addReply(_("Hell no! But we need to get ready!"), v9s2_reply1)
-    $ ryan.messenger.addReply(_("I think so, actually. You and Cameron really helped"), v9s2_reply2)
+    python:
+        v9s2_reply1 = MessageBuilder(ryan)
+        v9s2_reply1.new_message(_("Damn right! You heading to the gym?"))
+        v9s2_reply1.add_reply(_("Naw, I'm spent. But I have a feeling I'll be spending a lot of my time in there"))
+        v9s2_reply1.new_message(_("Me too. See ya there!"))
 
-    label v9_phn_ryan1:
-        if ryan.messenger.replies:
-            call screen phone
-        if ryan.messenger.replies:
+        v9s2_reply2 = MessageBuilder(ryan)
+        v9s2_reply2.new_message(_("Lucky we did, huh? I think we got a hand up on those baby apes"))
+        v9s2_reply2.add_reply(_("Damn right! We got this! We need to hit the gym soon... after I get some sleep. I'm bout to pass out"))
+        v9s2_reply2.new_message(_("Same! Talk soon"))
+
+        MessengerService.add_reply(ryan, _("You here yet?"))
+        MessengerService.new_message(ryan, _("Yeah, you ready?"))
+        MessengerService.add_replies(ryan,
+            Reply(_("Hell no! But we need to get ready!"), v9s2_reply1),
+            Reply(_("I think so, actually. You and Cameron really helped"), v9s2_reply2)
+        )
+
+    while MessengerService.has_replies(ryan):
+        call screen phone
+        if MessengerService.has_replies(ryan):
             u "(I should talk to Ryan.)"
-            jump v9_phn_ryan1
 
     scene v9apost7a # MC places his phone down on his bed, and is just lying on it now, thinking, mouth closed
     with dissolve

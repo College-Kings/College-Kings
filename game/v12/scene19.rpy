@@ -5,19 +5,13 @@
 # Phone Images: YES
 # POST 1 - imre_raccoon.webp - Picture of Imre sleeping on the toilet with the raccoon drawn on his face (check with whoever did scene 18 for the exact drawing). 
 # NOTE: v12pwu13a and all other renders after that use the second outfit provided for the character (if there are 2 outfits given)
-
-init python:
-    def v12s19_kiwiiReply1():
-        v12s19_kiwiiPost1.newComment(amber, _("Hahahaha"), numberLikes=renpy.random.randint(250,350), force_send=True)
-        v12s19_kiwiiPost1.newComment(imre, _("Karma's a bitch..."), numberLikes=renpy.random.randint(250,350), force_send=True)
-
 label v12_party_wake_up:
     scene v12pwu1 # TPP. Show MC sleeping, it's morning now, alone in the bed
     with fade
 
     pause 0.75
 
-    play music "music/v12/Track Scene 19.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_19 fadein 2
 
     scene v12pwu2 # FPP. MC lying in the bed, looking at the bedroom door
     with vpunch
@@ -28,7 +22,7 @@ label v12_party_wake_up:
 
     scene v12pwu3 # TPP. Show MC opening the bathroom door and walking in, smiling, mouth closed
     with dissolve
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
 
     pause 0.75
 
@@ -199,12 +193,19 @@ label v12_party_wake_up:
 
         pause 0.75
     
-    $ v12s19_kiwiiPost1 = KiwiiPost(amber, "v12/imre_raccoon.webp", _("Happy Birthday, Lindsey!"), numberLikes=419) # Picture of Imre with the raccoon drawing from scene 18 on his face
-    $ v12s19_kiwiiPost1.newComment(chris, _("Oh no... What did you guys do to him?"), mentions=[amber], numberLikes=renpy.random.randint(250,350), force_send=True)
-    $ v12s19_kiwiiPost1.newComment(amber, _("\"We\" taught him why we shouldn't get too drunk at slumber parties... Hehe"), mentions=[chris], numberLikes=renpy.random.randint(150,300), force_send=True)
-    $ v12s19_kiwiiPost1.newComment(imre, _("\"We\"??? Who is we?!?!"), mentions=[amber], numberLikes=renpy.random.randint(250,400), force_send=True)
-    $ v12s19_kiwiiPost1.addReply(_("Not cool, Amber... Not cool... ;)"), v12s19_kiwiiReply1, mentions=[amber], numberLikes=renpy.random.randint(250, 330))
-    $ v12s19_kiwiiPost1.addReply(_("It's just a prank bro!"), v12s19_kiwiiReply1, mentions=[imre], numberLikes=renpy.random.randint(250, 330))
+    $ kiwii_post = KiwiiService.new_post(amber, "ck1_v12_imre_raccoon", _("Happy Birthday, Lindsey!"), number_likes=419) # Picture of Imre with the raccoon drawing from scene 18 on his face
+
+    $ v12s19_kiwii_reply1 = KiwiiBuilder(kiwii_post)
+    $ v12s19_kiwii_reply1.new_comment(amber, _("Hahahaha"), number_likes=renpy.random.randint(250,350))
+    $ v12s19_kiwii_reply1.new_comment(imre, _("Karma's a bitch..."), number_likes=renpy.random.randint(250,350))
+
+    $ KiwiiService.new_comment(kiwii_post, chris, _("Oh no... What did you guys do to him?"), number_likes=renpy.random.randint(250,350), mentions=[amber])
+    $ KiwiiService.new_comment(kiwii_post, amber, _("\"We\" taught him why we shouldn't get too drunk at slumber parties... Hehe"), number_likes=renpy.random.randint(150,300), mentions=[chris])
+    $ KiwiiService.new_comment(kiwii_post, imre, _("\"We\"??? Who is we?!?!"), number_likes=renpy.random.randint(250,400), mentions=[amber])
+    $ KiwiiService.add_replies(kiwii_post,
+        KiwiiReply(_("Not cool, Amber... Not cool... ;)"),number_likes=renpy.random.randint(250, 330), mentions=[amber], next_comment=v12s19_kiwii_reply1),
+        KiwiiReply(_("It's just a prank bro!"), number_likes=renpy.random.randint(250, 330), mentions=[imre], next_comment=v12s19_kiwii_reply1)
+    )
     
     scene v12pwu13 # TPP. Show MC removing his pajama shirt, pajama pants still on, neutral expression, mouth closed
     with dissolve

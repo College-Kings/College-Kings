@@ -2,27 +2,13 @@
 # Location: MC's Apes Room OR MC Wolves Room
 # Outfits: MC Outfit 2
 # Time: Sunday Afternoon
-
-init python:
-    def v8s16_kiwiiReply1():
-        v8s16_kiwiiPost2.newComment(lauren, _("Took a lot of work but Homecoming looks great"), numberLikes=renpy.random.randint(15, 35))
-
-    def v8s16_kiwiiReply2():
-        v8s16_kiwiiPost2.newComment(lauren, _("Thank you miss Rose also says thank you"), numberLikes=renpy.random.randint(15, 35))
-
-    def v8s16_kiwiiReply3():
-        v8s16_kiwiiPost3.newComment(riley, _("You will have to find out some times :)"), numberLikes=renpy.random.randint(15, 35))
-
-    def v8s16_kiwiiReply4():
-        v8s16_kiwiiPost3.newComment(riley, _("Not this time, but maybe next time you can join me ;)"), numberLikes=renpy.random.randint(15, 35))
-
 label mc_wolves_sun_aft:
     scene v8smcrm1 # TPP. Show MC walking inside his Wolves room towards his bed.
     with fade
 
     pause 0.5
 
-    play music "music/mindie1.mp3" fadein 2
+    play music music.ck1.mindie1 fadein 2
 
     scene v8smcrm2 # TPP. Show MC sitting on the edge of his bed.
     with dissolve
@@ -32,25 +18,45 @@ label mc_wolves_sun_aft:
     #scene v8smcrm2a # TPP. Show MC sitting on the edge of his bed, phone in hand.
     #with dissolve
 
-    $ v8s16_kiwiiPost1 = KiwiiPost(chloe, "v8/chlaubpost1.webp", _("Hanging with my best friend. Good times!"), numberLikes=346) # Chloe & Aubrey having fun at the beach.
-    $ v8s16_kiwiiPost1.newComment(aubrey, _("Awww, I love hanging out with you <3"), numberLikes=renpy.random.randint(15, 35), force_send=True)
-    $ v8s16_kiwiiPost1.newComment(nora, _("Looking great Aubrey!"), numberLikes=renpy.random.randint(15, 35), force_send=True)
-    $ v8s16_kiwiiPost1.newComment(lindsey, _("Next time invite me along"), numberLikes=renpy.random.randint(15, 35), force_send=True)
-    $ v8s16_kiwiiPost1.addReply(_("Looking hot, ladies!"), numberLikes=321)
-    $ v8s16_kiwiiPost1.addReply(_("This is such a great picture!"), numberLikes=334)
+    $ kiwii_post = KiwiiService.new_post(chloe, "ck1_v8_chloe_aubrey_post", _("Hanging with my best friend. Good times!"), number_likes=346) # Chloe & Aubrey having fun at the beach.
+    $ KiwiiService.new_comment(kiwii_post, aubrey, _("Awww, I love hanging out with you <3"), number_likes=renpy.random.randint(15, 35))
+    $ KiwiiService.new_comment(kiwii_post, nora, _("Looking great Aubrey!"), number_likes=renpy.random.randint(15, 35))
+    $ KiwiiService.new_comment(kiwii_post, lindsey, _("Next time invite me along"), number_likes=renpy.random.randint(15, 35))
+    $ KiwiiService.add_replies(kiwii_post,
+        KiwiiReply(_("Looking hot, ladies!"), number_likes=321),
+        KiwiiReply(_("This is such a great picture!"), number_likes=334)
+    )
 
     if not hcGirl == "lauren":
-        $ v8s16_kiwiiPost2 = KiwiiPost(lauren, "v8/laurosepost1.webp", _("Having fun with Ms. Rose at Hoco!"), numberLikes=328) # Lauren & Ms. Rose at Hoco.
-        $ v8s16_kiwiiPost2.newComment(cameron, _("Teacher's pet!"), numberLikes=renpy.random.randint(15, 35), force_send=True)
-        $ v8s16_kiwiiPost2.newComment(ryan, _("Booba"), numberLikes=renpy.random.randint(15, 35), force_send=True)        
-        $ v8s16_kiwiiPost2.addReply(_("I'm glad you guys had fun"), v8s16_kiwiiReply1, numberLikes=320)
-        $ v8s16_kiwiiPost2.addReply(_("Wow, you two look great!"), v8s16_kiwiiReply2, numberLikes=343)
+        $ kiwii_post = KiwiiService.new_post(lauren, "ck1_v8_lauren_rose_post", _("Having fun with Ms. Rose at Hoco!"), number_likes=328) # Lauren & Ms. Rose at Hoco.
 
-    $ v8s16_kiwiiPost3 = KiwiiPost(riley, "v8/riclothpost1.webp", _("Nothing like a good day of shopping"), numberLikes=330) # Picture of Riley outside a clothing store.
-    $ v8s16_kiwiiPost3.newComment(aubrey, _("Wish I could of been there to try things with you"), numberLikes=renpy.random.randint(15, 35), force_send=True)
-    $ v8s16_kiwiiPost3.newComment(imre, _("Looking good"), numberLikes=renpy.random.randint(15, 35), force_send=True)
-    $ v8s16_kiwiiPost3.addReply(_("How many bikinis did you buy? Haha."), v8s16_kiwiiReply3, numberLikes=350)
-    $ v8s16_kiwiiPost3.addReply(_("Did you buy me anything?"), v8s16_kiwiiReply4, numberLikes=337)
+        $ v8s16_kiwii_reply1 = KiwiiBuilder(kiwii_post)
+        $ v8s16_kiwii_reply1.new_comment(lauren, _("Took a lot of work but Homecoming looks great"), number_likes=renpy.random.randint(15, 35))
+
+        $ v8s16_kiwii_reply2 = KiwiiBuilder(kiwii_post)
+        $ v8s16_kiwii_reply2.new_comment(lauren, _("Thank you miss Rose also says thank you"), number_likes=renpy.random.randint(15, 35))
+
+        $ KiwiiService.new_comment(kiwii_post, cameron, _("Teacher's pet!"), number_likes=renpy.random.randint(15, 35))
+        $ KiwiiService.new_comment(kiwii_post, ryan, _("Booba"), number_likes=renpy.random.randint(15, 35))
+        $ KiwiiService.add_replies(kiwii_post,
+            KiwiiReply(_("I'm glad you guys had fun"), number_likes=320, next_comment=v8s16_kiwii_reply1),
+            KiwiiReply(_("Wow, you two look great!"), number_likes=343, next_comment=v8s16_kiwii_reply2)
+        )
+
+    $ kiwii_post = KiwiiService.new_post(riley, "ck1_v8_riley_post", _("Nothing like a good day of shopping"), number_likes=330) # Picture of Riley outside a clothing store.
+    
+    $ v8s16_kiwii_reply3 = KiwiiBuilder(kiwii_post)
+    $ v8s16_kiwii_reply3.new_comment(riley, _("You will have to find out sometimes :)"), number_likes=renpy.random.randint(15, 35))
+
+    $ v8s16_kiwii_reply4 = KiwiiBuilder(kiwii_post)
+    $ v8s16_kiwii_reply4.new_comment(riley, _("Not this time, but maybe next time you can join me ;)"), number_likes=renpy.random.randint(15, 35))
+
+    $ KiwiiService.new_comment(kiwii_post, aubrey, _("Wish I could of been there to try things with you"), number_likes=renpy.random.randint(15, 35))
+    $ KiwiiService.new_comment(kiwii_post, imre, _("Looking good"), number_likes=renpy.random.randint(15, 35))
+    $ KiwiiService.add_replies(kiwii_post,
+        KiwiiReply(_("How many bikinis did you buy? Haha."), number_likes=350, next_comment=v8s16_kiwii_reply3),
+        KiwiiReply(_("Did you buy me anything?"), number_likes=337, next_comment=v8s16_kiwii_reply4)
+    )
 
     jump msrose_moving
 
@@ -60,7 +66,7 @@ label mc_apes_sun_aft:
 
     pause 0.5
 
-    play music "music/m11punk.mp3" fadein 2
+    play music music.ck1.m11punk fadein 2
 
     scene v8smcrm4 # TPP. Show MC sitting on the edge of his bed.
     with dissolve
@@ -70,24 +76,44 @@ label mc_apes_sun_aft:
     scene v8smcrm4a # TPP. Show MC sitting on the edge of his bed, phone in hand.
     with dissolve
 
-    $ v8s16_kiwiiPost1 = KiwiiPost(chloe, "v8/chlaubpost1.webp", _("Hanging with my best friend. Good times!"), numberLikes=346) # Chloe & Aubrey having fun at the beach.
-    $ v8s16_kiwiiPost1.newComment(aubrey, _("Awww, I love hanging out with you <3"), numberLikes=renpy.random.randint(15, 35), force_send=True)
-    $ v8s16_kiwiiPost1.newComment(nora, _("Looking great Aubrey!"), numberLikes=renpy.random.randint(15, 35), force_send=True)
-    $ v8s16_kiwiiPost1.newComment(lindsey, _("Next time invite me along"), numberLikes=renpy.random.randint(15, 35), force_send=True)
-    $ v8s16_kiwiiPost1.addReply(_("Looking hot, ladies!"), numberLikes=321)
-    $ v8s16_kiwiiPost1.addReply(_("This is such a great picture!"), numberLikes=334)
+    $ kiwii_post = KiwiiService.new_post(chloe, "ck1_v8_chloe_aubrey_post", _("Hanging with my best friend. Good times!"), number_likes=346) # Chloe & Aubrey having fun at the beach.
+    $ KiwiiService.new_comment(kiwii_post, aubrey, _("Awww, I love hanging out with you <3"), number_likes=renpy.random.randint(15, 35))
+    $ KiwiiService.new_comment(kiwii_post, nora, _("Looking great Aubrey!"), number_likes=renpy.random.randint(15, 35))
+    $ KiwiiService.new_comment(kiwii_post, lindsey, _("Next time invite me along"), number_likes=renpy.random.randint(15, 35))
+    $ KiwiiService.add_replies(kiwii_post,
+        KiwiiReply(_("Looking hot, ladies!"), number_likes=321),
+        KiwiiReply(_("This is such a great picture!"), number_likes=334)
+    )
 
     if not hcGirl == "lauren":
-        $ v8s16_kiwiiPost2 = KiwiiPost(lauren, "v8/laurosepost1.webp", _("Having fun with Ms. Rose at Hoco!"), numberLikes=328) # Lauren & Ms. Rose at Hoco.
-        $ v8s16_kiwiiPost2.newComment(cameron, _("Teacher's pet!"), numberLikes=renpy.random.randint(15, 35), force_send=True)
-        $ v8s16_kiwiiPost2.newComment(ryan, _("Booba"), numberLikes=renpy.random.randint(15, 35), force_send=True)        
-        $ v8s16_kiwiiPost2.addReply(_("I'm glad you guys had fun"), v8s16_kiwiiReply1, numberLikes=320)
-        $ v8s16_kiwiiPost2.addReply(_("Wow, you two look great!"), v8s16_kiwiiReply2, numberLikes=343)
+        $ kiwii_post = KiwiiService.new_post(lauren, "ck1_v8_lauren_rose_post", _("Having fun with Ms. Rose at Hoco!"), number_likes=328) # Lauren & Ms. Rose at Hoco.
 
-    $ v8s16_kiwiiPost3 = KiwiiPost(riley, "v8/riclothpost1.webp", _("Nothing like a good day of shopping"), numberLikes=330) # Picture of Riley outside a clothing store.
-    $ v8s16_kiwiiPost3.newComment(aubrey, _("Wish I could of been there to try things with you"), numberLikes=renpy.random.randint(15, 35), force_send=True)
-    $ v8s16_kiwiiPost3.newComment(imre, _("Looking good"), numberLikes=renpy.random.randint(15, 35), force_send=True)
-    $ v8s16_kiwiiPost3.addReply(_("How many bikinis did you buy? Haha."), v8s16_kiwiiReply3, numberLikes=350)
-    $ v8s16_kiwiiPost3.addReply(_("Did you buy me anything?"), v8s16_kiwiiReply4, numberLikes=337)
+        $ v8s16_kiwii_reply1 = KiwiiBuilder(kiwii_post)
+        $ v8s16_kiwii_reply1.new_comment(lauren, _("Took a lot of work but Homecoming looks great"), number_likes=renpy.random.randint(15, 35))
+
+        $ v8s16_kiwii_reply2 = KiwiiBuilder(kiwii_post)
+        $ v8s16_kiwii_reply2.new_comment(lauren, _("Thank you miss Rose also says thank you"), number_likes=renpy.random.randint(15, 35))
+
+        $ KiwiiService.new_comment(kiwii_post, cameron, _("Teacher's pet!"), number_likes=renpy.random.randint(15, 35))
+        $ KiwiiService.new_comment(kiwii_post, ryan, _("Booba"), number_likes=renpy.random.randint(15, 35))
+        $ KiwiiService.add_replies(kiwii_post,
+            KiwiiReply(_("I'm glad you guys had fun"), number_likes=320, next_comment=v8s16_kiwii_reply1),
+            KiwiiReply(_("Wow, you two look great!"), number_likes=343, next_comment=v8s16_kiwii_reply2)
+        )
+
+    $ kiwii_post = KiwiiService.new_post(riley, "ck1_v8_riley_post", _("Nothing like a good day of shopping"), number_likes=330) # Picture of Riley outside a clothing store.
+    
+    $ v8s16_kiwii_reply3 = KiwiiBuilder(kiwii_post)
+    $ v8s16_kiwii_reply3.new_comment(riley, _("You will have to find out sometimes :)"), number_likes=renpy.random.randint(15, 35))
+
+    $ v8s16_kiwii_reply4 = KiwiiBuilder(kiwii_post)
+    $ v8s16_kiwii_reply4.new_comment(riley, _("Not this time, but maybe next time you can join me ;)"), number_likes=renpy.random.randint(15, 35))
+
+    $ KiwiiService.new_comment(kiwii_post, aubrey, _("Wish I could of been there to try things with you"), number_likes=renpy.random.randint(15, 35))
+    $ KiwiiService.new_comment(kiwii_post, imre, _("Looking good"), number_likes=renpy.random.randint(15, 35))
+    $ KiwiiService.add_replies(kiwii_post,
+        KiwiiReply(_("How many bikinis did you buy? Haha."), number_likes=350, next_comment=v8s16_kiwii_reply3),
+        KiwiiReply(_("Did you buy me anything?"), number_likes=337, next_comment=v8s16_kiwii_reply4)
+    )
 
     jump sun_aft_apes_house

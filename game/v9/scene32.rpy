@@ -2,27 +2,12 @@
 # Locations: Outside the gym, inside the gym
 # Characters: MC (Outfit 3when outside gym,Outfit 4 when inside gym ), Evelyn (Outfit 4)
 # Time: Saturday Morning
-
-init python:
-    def v9s32_reply1():
-        riley.messenger.newMessage(_("So you're coming?"))
-        riley.messenger.addReply(_("I hope so ;)"))
-        riley.messenger.newMessage(_("See you in a few!"))
-        setattr(store, "v9_sex_with_riley", True)
-
-    def v9s32_reply2():
-        riley.messenger.newMessage(_("But? :o"))
-        riley.messenger.addReply(_("But I have to stay focused on the Brawl. There's a lot riding on my fight."))
-        riley.messenger.newMessage(_("Seriously?"))
-        riley.messenger.addReply(_("I'm so sorry. You know I would any other day. Really."))
-        riley.messenger.newMessage(_("Ok well, your loss."))
-
 label v9_sat_gym:
     scene v9atg1 # TPP. Show MC outside the Gym, neutral face, mouth closed
     with fade
     u "(I should probably freshen up my skills.)"
 
-    play music "music/v9/Track Scene 8_3.mp3" fadein 2
+    play music music.ck1.v9.Track_Scene_8_3 fadein 2
 
     menu:
         "Hit the gym":
@@ -36,7 +21,7 @@ label v9_sat_hit_gym:
 
     pause 1
 
-    if evelyn.relationship >= Relationship.LIKES:
+    if v6_evelyn_successful_date:
         scene v9atg3 # FPP. Show Evelyn sat on a weight bench inside the gym (now infront of MC), mouth closed
         with dissolve
         u "Hey, you seem to handle that bench pretty easy."
@@ -54,8 +39,8 @@ label v9_sat_hit_gym:
         ev "Is that so? I'm a very busy woman with a lot of responsibilities, I barely have enough time to workout and here you are interrupting that."
 
         menu:
-            "Convince her":
-                $ add_point(KCT.BOYFRIEND)
+            "Convince her" (boyfriend=1.0):
+                $ reputation.add_point(RepComponent.BOYFRIEND)
                 jump v9_sat_hit_gym_convince
             "Forget it":
                 jump v9_sat_hit_gym_forget
@@ -81,7 +66,7 @@ label v9_sat_hit_gym:
             scene v9atg3b
             with dissolve
 
-            $ grant_achievement("second_date")
+            grant Achievement("second_date", "Get a second date with Evelyn")
             u "Great, I'll text you."
 
             scene v9atg4 # TPP. Show MC walking away from Evelyn, evelyn still on weight bench, MC walking towards punching bag, both smiling mouth closed
@@ -148,26 +133,40 @@ label v9_sat_hit_gym_train:
 label v9_sat_skip_gym:
     u "(Best that I don't push it.)"
 
-    if riley.relationship >= Relationship.FWB:
+    if CharacterService.is_fwb(riley):
         scene v9atg1a # TPP. Same camera as v9atg1, Show MC checking his phone.
         with dissolve
 
-        play sound "sounds/vibrate.mp3"
+        play sound sound.vibrate
 
         u "(Oh, who's that?)"
-
-        $ riley.messenger.newMessage(_("Hey, what's up? Wanna come over?"), force_send=True)
-        $ riley.messenger.addReply(_("I really shouldn't. Big day tomorrow. Stressed out"))
-        $ riley.messenger.newMessage(_("Duh, that's why I'm asking)"))
-        $ riley.messenger.addReply(_("Well you shoulda led with that!"), v9s32_reply1)
-        $ riley.messenger.addReply(_("Man, I'd really love to but..."), v9s32_reply2)
         
-        label s32_PhoneContinue:
-            if riley.messenger.replies:
-                call screen phone
-            if riley.messenger.replies:
+        python:
+            v9s32_reply1 = MessageBuilder(riley)
+            v9s32_reply1.new_message(_("So you're coming?"))
+            v9s32_reply1.add_reply(_("I hope so ;)"))
+            v9s32_reply1.new_message(_("See you in a few!"))
+            v9s32_reply1.set_variable("v9_sex_with_riley", True)
+
+            v9s32_reply2 = MessageBuilder(riley)
+            v9s32_reply2.new_message(_("But? :o"))
+            v9s32_reply2.add_reply(_("But I have to stay focused on the Brawl. There's a lot riding on my fight."))
+            v9s32_reply2.new_message(_("Seriously?"))
+            v9s32_reply2.add_reply(_("I'm so sorry. You know I would any other day. Really."))
+            v9s32_reply2.new_message(_("Ok well, your loss."))
+
+            MessengerService.new_message(riley,_("Hey, what's up? Wanna come over?"))
+            MessengerService.add_reply(riley,_("I really shouldn't. Big day tomorrow. Stressed out"))
+            MessengerService.new_message(riley,_("Duh, that's why I'm asking ;)"))
+            MessengerService.add_replies(riley,
+                Reply(_("Well you shoulda led with that!"), v9s32_reply1),
+                Reply(_("Man, I'd really love to but..."), v9s32_reply2)
+            )
+        
+        while MessengerService.has_replies(riley):
+            call screen phone
+            if MessengerService.has_replies(riley):
                 u "(I should reply to Riley.)"
-                jump s32_PhoneContinue
 
         if v9_sex_with_riley:
             stop music fadeout 3

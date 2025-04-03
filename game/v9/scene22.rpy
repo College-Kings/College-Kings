@@ -7,14 +7,14 @@ label v9_room_w_sam:
     scene v9rwsa1 # TPP. Show MC's apes door.
     with dissolve
 
-    play sound "sounds/knock.mp3"
+    play sound sound.knock
 
     "*Knock* *Knock*"
 
     scene v9rwsa2 # TPP. Show MC getting up from his desk to answer his door.
     with dissolve
 
-    play music "music/v9/Track Scene 21.mp3" fadein 2
+    play music music.ck1.v9.Track_Scene_21 fadein 2
 
     pause 0.8
 
@@ -154,8 +154,8 @@ label v9_room_w_sam:
 
                 u "I have my moments."                    
                 
-            "Console Samantha":
-                $ add_point(KCT.BOYFRIEND)
+            "Console Samantha" (boyfriend=1.0):
+                $ reputation.add_point(RepComponent.BOYFRIEND)
 
                 u "You're not a mess! You're figuring your life out. We're supposed to screw up."
 
@@ -194,8 +194,8 @@ label v9_room_w_sam:
         with dissolve
 
         menu:
-            "Play it off":
-                $ add_point(KCT.BRO)
+            "Play it off" (bro=1.0):
+                $ reputation.add_point(RepComponent.BRO)
 
                 u "No need to thank me. Really. it was nothing. I support my fellow Apes."
 
@@ -219,8 +219,8 @@ label v9_room_w_sam:
 
                 u "In that case, you're both welcome."
 
-            "Accept the thanks":
-                $ add_point(KCT.BOYFRIEND)
+            "Accept the thanks" (boyfriend=1.0):
+                $ reputation.add_point(RepComponent.BOYFRIEND)
 
                 u "Aww, you're welcome. Apes gotta stick together, you know. And that includes you now."
 

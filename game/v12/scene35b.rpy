@@ -11,7 +11,7 @@ label v12_game_roommate:
 
         pause 1.25
 
-        play music "music/v12/Track Scene 35b_1.mp3" fadein 2
+        play music music.ck1.v12.Track_Scene_35b_1 fadein 2
 
         scene v12grm2 # FPP. MC lying on his bed, looking at Chloe, Chloe sitting on her bed, looking at MC, slight smile, mouth open
         with dissolve
@@ -43,7 +43,7 @@ label v12_game_roommate:
 
         u "Definitely does not look fun... I'll say that."
 
-        if chloe.relationship >= Relationship.GIRLFRIEND:
+        if CharacterService.is_girlfriend(chloe):
             scene v12grm2
             with dissolve
 
@@ -179,7 +179,7 @@ label v12_game_roommate:
 
         u "Married!?"
 
-        if chloe.relationship >= Relationship.GIRLFRIEND:
+        if CharacterService.is_girlfriend(chloe):
             scene v12grm2e
             with dissolve
 
@@ -295,8 +295,8 @@ label v12_game_roommate:
         with dissolve
 
         menu:
-            "Kill parents for insurance":
-                $ add_point(KCT.TROUBLEMAKER)
+            "Kill parents for insurance" (troublemaker=1.0):
+                $ reputation.add_point(RepComponent.TROUBLEMAKER)
                 scene v12grm2f
                 with dissolve
 
@@ -342,8 +342,8 @@ label v12_game_roommate:
 
                 u "I guess so. *Laughs*"
 
-            "Sell your house":
-                $ add_point(KCT.BOYFRIEND)
+            "Sell your house" (boyfriend=1.0):
+                $ reputation.add_point(RepComponent.BOYFRIEND)
                 scene v12grm2d
                 with dissolve
 
@@ -449,7 +449,7 @@ label v12_game_roommate:
 
         cl "OH MY GOD! *Chuckles* STOP IT! [name]! PLEASE... PLEASE STOP! *Laughs*"
 
-        if chloe.relationship >= Relationship.FWB:
+        if CharacterService.is_fwb(chloe) or CharacterService.is_girlfriend(chloe):
             #scene v12grm2a
             scene v12grm5
             with dissolve
@@ -514,7 +514,7 @@ label v12_game_roommate:
 
             scene v12grm11 # FPP. MC on the floor, looking up at Chloe who is sitting on her bed, Chloe slight smile, mouth open
             with vpunch
-            play sound "sounds/fall.mp3"
+            play sound sound.fall
 
             cl "Oh my god, are you okay?! *Chuckles?*"
 
@@ -583,7 +583,7 @@ label v12_game_roommate:
 
         ri "Steal anything else of mine while I was in the shower?"
 
-        play music "music/v12/Track Scene 35b_2.mp3" fadein 2
+        play music music.v12_Track_Scene_35b_2 fadein 2
 
         scene v12grm16 # FPP. Riley standing in front of MC's bed, Riley angry, mouth closed
         with dissolve

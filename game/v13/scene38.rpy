@@ -7,7 +7,7 @@ label v13_walk_imre:
     scene v13s38_1 # TPP. MC and imre walking in the sidewalk (location 1)
     with fade
 
-    play music "music/v13/Track Scene 38.mp3" fadein 2
+    play music music.ck1.v13.Track_Scene_38 fadein 2
 
     if v13_imre_disloyal:
         scene v13s38_2 # FPP. MC looking at imre who looks dissapointed, mouth opened (location 1)

@@ -6,7 +6,7 @@
 label v11_airport_arrival:
     scene v11aira1 # FPP. MC can see Mr Lee talking to the students (Show only Riley, Amber, Mr Lee and in shot, Riley and Amber backs turned to MC, Mr Lee's front is showing), Mr Lee neutral expression, mouth open (Ms Rose is next to Mr Lee, out of shot)
     with fade
-    play music "music/v11/Track Scene 10.mp3" fadein 2
+    play music music.v11_Track_Scene_10 fadein 2
     pause 0.75
 
     scene v11aira2 # FPP. Same character positioning as v11aira1, MC is walking up to the group, Mr Lee is still addressing the students, make sure his pose is different from v11aira1, neutral expression, mouth open
@@ -208,8 +208,8 @@ label v11_airport_arrival:
 
             ri "Oh hush, quit trying to ruin the fun."
 
-        "Be excited":
-            $ add_point(KCT.BRO)
+        "Be excited" (bro=1.0):
+            $ reputation.add_point(RepComponent.BRO)
             $ riley.points += 1
 
             scene v11aira10a

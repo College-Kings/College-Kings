@@ -6,7 +6,7 @@
 label v11_going_to_museum:
     scene v11gtm1 # TPP. Show MC, Mr Lee and Riley walking in the hotel lobby
     with dissolve
-    play music "music/v11/Track Scene 10.mp3" fadein 2
+    play music music.v11_Track_Scene_10 fadein 2
     pause 0.75
 
     scene v11gtm2 # FPP. (MC, Lee, Riley, Nora and Chris standing outside the shuttle) MC and Mr Lee looking at each other, Mr Lee very slightly annoyed, mouth closed (Only Lee in shot)

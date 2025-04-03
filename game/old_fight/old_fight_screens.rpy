@@ -1,9 +1,9 @@
-screen fight_tutorial(highlight=None, stance="attack"):
+screen old_fight_tutorial(highlight=None, stance="attack"):
     tag tag_fightTutorial
 
     add "images/fight_background.webp"
 
-    text "[w]":
+    text _("[w]"):
         align (0.122, 0.3)
         style "fight_tutorialText"
         if highlight == 'w':
@@ -11,7 +11,7 @@ screen fight_tutorial(highlight=None, stance="attack"):
         else:
             color "#FFD166"
 
-    text "[e]":
+    text _("[e]"):
         align (0.235, 0.5)
         style "fight_tutorialText"
         if highlight == 'e':
@@ -19,7 +19,7 @@ screen fight_tutorial(highlight=None, stance="attack"):
         else:
             color "#FFD166"
 
-    text "[q]":
+    text _("[q]"):
         align (0.02, 0.5)
         style "fight_tutorialText"
         if highlight == 'q':
@@ -27,7 +27,7 @@ screen fight_tutorial(highlight=None, stance="attack"):
         else:
             color "#FFD166"
 
-    text "[r]":
+    text _("[r]"):
         align (0.122, 0.7)
         style "fight_tutorialText"
         if highlight == 'r':
@@ -50,7 +50,7 @@ screen fight_typeMenu():
 
     add "images/fightchoice.webp"
 
-    text "Fighting":
+    text _("Fighting"):
         align (0.5, 0.25)
         font "fonts/Freshman.ttf"
         color "#ffffff"
@@ -58,30 +58,36 @@ screen fight_typeMenu():
         xsize 500
         text_align 0.5
 
-    text "Fighting is big part of College Kings, however you can simulate all fights if you'd like to.":
+    text _("Fighting is big part of College Kings, however you can simulate all fights if you'd like to."):
         align (0.5, 0.42)
         font "fonts/OpenSans-Bold.ttf"
         color "#ffffff"
         xsize 500
         text_align 0.5
 
-    textbutton "Play Fight":
+    textbutton _("Play Fight"):
         text_size 40
         align (0.5, 0.6)
         sensitive True
+        selected False
         action [SetVariable("fight_type", "normal"), Return()]
 
-    textbutton "Simulate: realistic":
+    textbutton _("Simulate: realistic"):
         text_size 40
         align (0.5, 0.7)
         sensitive True
+        selected False
         action [SetVariable("fight_type", "simReal"), Return()]
 
-    textbutton "Simulate: auto-win":
+    textbutton _("Simulate: auto-win"):
         text_size 40
         align (0.5, 0.8)
         sensitive True
+        selected False
         action [SetVariable("fight_type", "simWin"), Return()]
+
+    if config_debug:
+        timer 0.1 action [SetVariable("fight_type", "normal"), Return()]
 
 
 screen fight_selectDifficulty():
@@ -89,7 +95,7 @@ screen fight_selectDifficulty():
 
     add "images/fightchoice.webp"
 
-    text "Difficulty":
+    text _("Difficulty"):
         align (0.5, 0.25)
         font "fonts/Freshman.ttf"
         color "#ffffff"
@@ -97,7 +103,7 @@ screen fight_selectDifficulty():
         xsize 500
         text_align 0.5
 
-    text "Higher difficulties require quicker reactions. You can change this at any time in the settings.":
+    text _("Higher difficulties require quicker reactions. You can change this at any time in the settings."):
         align (0.5, 0.42)
         font "fonts/OpenSans-Bold.ttf"
         color "#ffffff"
@@ -108,25 +114,29 @@ screen fight_selectDifficulty():
         align(0.45, 0.75)
         spacing 30
 
-        textbutton "Easy":
+        textbutton _("Easy"):
             text_size 40
             action [Function(selectDifficulty, "easy"), Return()]
 
-        textbutton "Moderate":
+        textbutton _("Moderate"):
             text_size 40
             action [Function(selectDifficulty, "normal"), Return()]
 
-        textbutton "Hard":
+        textbutton _("Hard"):
             text_size 40
             action [Function(selectDifficulty, "hard"), Return()]
+
+    if config_debug:
+        timer 0.1 action [Function(selectDifficulty, "easy"), Return()]
 
 
 screen fight_keybindOptions():
     tag tag_fight
 
     add "images/fightchoice.webp"
+    default keybindText = _("\n[q!u] = Jab / Block Head\n[w!u] = Hook / Block Face\n[e!u] = Kick / Block Leg")
 
-    text "Keybinding":
+    text _("Keybinding"):
         align (0.5, 0.25)
         font "fonts/Freshman.ttf"
         color "#ffffff"
@@ -135,11 +145,10 @@ screen fight_keybindOptions():
         text_align 0.5
 
     if bodyHook:
-        $ keybindText = "\n{} = Jab / Block Head\n{} = Hook / Block Face\n{} = Kick / Block Leg\n{} = Body Hook / Low Guard".format(q.upper(), w.upper(), r.upper(), e.upper())
-    else:
-        $ keybindText = "\n{} = Jab / Block Head\n{} = Hook / Block Face\n{} = Kick / Block Leg".format(q.upper(), w.upper(), r.upper())
+        $ keybindText += _("\n[r!u] = Body Hook / Low Guard")
 
-    text "The current keybindings are:[keybindText]":
+
+    text _("The current keybindings are: [keybindText]"):
         align (0.5, 0.42)
         font "fonts/OpenSans-Bold.ttf"
         color "#ffffff"
@@ -150,31 +159,34 @@ screen fight_keybindOptions():
         align (0.45, 0.75)
         spacing 30
 
-        textbutton "Change Keys":
+        textbutton _("Change Keys"):
             text_size 40
             action Call("fight_changeKeybinds")
 
-        textbutton "Start Fight":
+        textbutton _("Start Fight"):
             text_size 40
             action Return()
+
+    if config_debug:
+        timer 0.1 action Return()
 
 
 screen fight_overlay(stance=None):
     add "images/fight_background.webp"
 
-    text "[w]":
+    text _("[w]"):
         align (0.122, 0.3)
         style "fight_overlayText"
 
-    text "[e]":
+    text _("[e]"):
         align (0.235, 0.5)
         style "fight_overlayText"
 
-    text "[q]":
+    text _("[q]"):
         align (0.02, 0.5)
         style "fight_overlayText"
 
-    text "[r]":
+    text _("[r]"):
         align (0.122, 0.7)
         style "fight_overlayText"
 
@@ -222,6 +234,10 @@ screen tomtut1():
 
     use fight_overlay
 
+    if config_debug:
+        timer 0.1 action Jump(renpy.random.choice("tomtut1hook", "tomtut1jab", "tomtut1kick"))
+
+
 screen fight_defendTutorial():
 
     add "images/v2/tomhook.webp"
@@ -256,6 +272,8 @@ screen fight_defendTutorial():
 
     use fight_overlay
 
+    if config_debug:
+        timer 0.1 action Jump(renpy.random.choice("tuthookblock", "tuthookhit", "tuthookhit"))
 
 screen youattack():
 
@@ -370,6 +388,20 @@ screen youattack():
 
     use fight_overlay
 
+    if config_debug:
+        python:
+            if tomstance == 1:
+                labels = ("tomkick1", "tomkick2", "tomkick3")
+
+            if tomstance == 2:
+                labels = ("tomhook1", "tomhook2", "tomhook3")
+
+            if tomstance == 3:
+                labels = ("tomjab1", "tomjab2", "tomjab3")
+
+        timer 0.1 action Jump(renpy.random.choice(labels))
+
+
 
 screen tomattack():
 
@@ -475,6 +507,19 @@ screen tomattack():
         timer reaction action Jump("timer6")
 
     use fight_overlay
+
+    if config_debug:
+        python:
+            if tomattack == 1:
+                labels = ("tomhookhit", "tomhookblocked", "tomhookhit2")
+
+            if tomattack == 2:
+                labels = ("tomjabhit", "tomjabblocked", "tomjabhit2")
+
+            if tomattack == 3:
+                labels = ("tomkickhit", "tomkickhit2", "tomkickblocked")
+
+        timer 0.1 action Jump(renpy.random.choice(labels))
 
 
 screen larsFight_MCDefend(attack=None):

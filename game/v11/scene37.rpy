@@ -6,7 +6,7 @@
 label v11_walk_park:
     scene v11wap1 # TPP. Show the car stopping at the lake
     with dissolve
-    play music "music/v11/Track Scene 3.mp3" fadein 2
+    play music music.ck1.v11.Track_Scene_3 fadein 2
     pause 0.75
 
     scene v11wap2 # TPP. Show Mr Lee, MC, Ryan and Imre getting out of the car, Mr Lee slight smile, mouth closed, the rest slightly annoyed, mouth angry

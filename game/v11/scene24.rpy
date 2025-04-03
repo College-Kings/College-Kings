@@ -4,17 +4,9 @@
 # Time: Evening
 
 label v11_big_ben:
-    $ v11s24_kiwiiPost1 = KiwiiPost(sebastian, "v11/v11_caleb.webp", _("Who's laughing now!"), numberLikes=374)
-    $ v11s24_kiwiiPost1.newComment(chris, _("Someone's gonna be upset in the morning!"), numberLikes=renpy.random.randint(100, 200), force_send=True)
-    $ v11s24_kiwiiPost1.newComment(nora, _("Sebastian that's cruel!!"), numberLikes=renpy.random.randint(100, 200), force_send=True)
-
-    $ v11s24_kiwiiPost2 = KiwiiPost(imre, "v11/v11_imrebunny.webp", _("Say hello to our newest Wolf recruit"), numberLikes=306)
-    $ v11s24_kiwiiPost2.newComment(aubrey, _("Awww cute!!"), numberLikes=renpy.random.randint(100, 200), force_send=True)
-    $ v11s24_kiwiiPost2.newComment(nora, _("That thing stinks!"), numberLikes=renpy.random.randint(100, 200), force_send=True)
-
     scene v11bb1 # FPP Show Nora, neutral expression, mouth closed
     with dissolve
-    play music "music/v11/Track Scene 5_5.mp3" fadein 2
+    play music music.ck1.v11.Track_Scene_5_5 fadein 2
     u "So, I know pretty much nothing about London..."
 
     scene v11bb1a # FPP Same angle as v11bb1, Nora with neutral expression, mouth open
@@ -184,7 +176,7 @@ label v11_big_ben:
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v11/Track Scene 7_2.mp3" fadein 2
+    play music music.ck1.v11.Track_Scene_7_2 fadein 2
 
     scene v11bb7 # FPP Show Nora looking up toward the clock tower, smiling with mouth open
     with dissolve
@@ -267,7 +259,7 @@ label v11_big_ben:
     u "I'm pretty sure you-"
 
     # Big Ben rings very loudly
-    play sound "sounds/bells.mp3"
+    play sound sound.bells
     scene v11bb9 # Show MC looking shocked, Nora looking at him, smiling with mouth closed
     with dissolve
 

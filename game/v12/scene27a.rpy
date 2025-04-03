@@ -9,7 +9,7 @@ label v12s27a:
     with dissolve
     ry "That was some mess, wasn't it?"
 
-    play music "music/v12/Track Scene 27a_1.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_27a_1 fadein 2
 
     scene v12s27a_2a #FPP, Ryan now close up in front of mc, mouth closed, surprised smile
     with dissolve
@@ -289,7 +289,7 @@ label v12s27a:
     barber "Bonjour!"
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 27_3.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_27_3 fadein 2
 
     scene v12s27a_5a # same as 5, mouth closed
     with dissolve
@@ -379,14 +379,9 @@ label v12s27a:
 
     u "Let me just take some pictures for Kiwii..."
 
-    $ v12s27a_kiwiiPost1 = KiwiiPost(mc, "v12/roastedape.webp", _("#RoastedApe"), numberLikes=469)
-    $ v12s27a_kiwiiPost1.newComment(imre, "Holy shit... You make it way too easy, Ryan!", mentions=[ryan], numberLikes=renpy.random.randint(250,350), force_send=True)
-    $ v12s27a_kiwiiPost1.newComment(amber, "Haha, yes! That's what you get, moron...", mentions=[ryan], numberLikes=renpy.random.randint(250,400), force_send=True)
-   
-### ERROR: KiwiiPost(mc, "Ryan sitting in chair at salon not facing the mirror with black hair", "#RoastedApe", numberLikes=469)
-### ERROR: kiwiiPost.newComment(imre, "Holy shit... You make it way to easy, Ryan!", mentions=[ryan])
-### ERROR: kiwiiPost.newComment(amber, "Haha, yes! That's what you get, moron...”, mentions=[ryan])
-### ERROR: kiwiiPost.addReply("Haha, an Ape doesn't back down!")### ERROR: kiwiiPost.addReply("Aw, come on guys! It doesn't look... that bad... Lmao")
+    $ kiwii_post = KiwiiService.new_post(mc, "ck1_v12_roasted_ape", _("#RoastedApe"), number_likes=469)
+    $ KiwiiService.new_comment(kiwii_post, imre, _("Holy shit... You make it way too easy, Ryan!"), number_likes=renpy.random.randint(250,350), mentions=[ryan])
+    $ KiwiiService.new_comment(kiwii_post, amber, _("Haha, yes! That's what you get, moron..."), number_likes=renpy.random.randint(250,400), mentions=[ryan])
   
     scene v12s27a_8b # same as 8a, ryan mouth open, outraged, hiding his face behind his hands
     with dissolve
@@ -407,8 +402,8 @@ label v12s27a:
     with dissolve
 
     menu:
-        "It's not a bad look":
-            $ add_point(KCT.BRO)
+        "It's not a bad look" (bro=1.0):
+            $ reputation.add_point(RepComponent.BRO)
             u "Honestly Ryan, it's not a bad look. It's actually pretty cool."
 
             scene v12s27a_8
@@ -416,8 +411,8 @@ label v12s27a:
 
             ry "*Sighs* I hope you're not just saying that..."
 
-        "It's not your best look":
-            $ add_point(KCT.TROUBLEMAKER)
+        "It's not your best look" (troublemaker=1.0):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             scene v12s27a_8a
             #with dissolve
@@ -481,7 +476,7 @@ label v12s27a:
     ry "Oh man, everyone on Kiwii keeps commenting \"#RoastedApe\"."
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 27a_3.mp3" fadein 2
+    play music music.v12_Track_Scene_27a_3 fadein 2
 
     scene v12s27a_12a # FPP show Ryan looking at mc, annoyed, mouth closed
     with dissolve

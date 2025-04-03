@@ -13,7 +13,7 @@ screen v6_fr3garden():
             if not "josh" in freeroam3:
                 action Jump("v6_fr3josh1")
 
-            elif relics >= 5 and upstairs == "nobody" and not "kim" in freeroam3asked: # Asking people for upstairs
+            elif all(v6_relics.values()) and upstairs == "nobody" and not "kim" in freeroam3asked: # Asking people for upstairs
                 action Jump("v6_fr3josh3")
             else:
                 action Jump("v6_fr3josh2")
@@ -27,6 +27,19 @@ screen v6_fr3garden():
         idle "images/v6/fr3gardendoorblank.webp"
         hover "images/v6/fr3gardendoor.webp"
         action Show("v6_fr3downstairs")
+
+    if config_debug:
+        python:
+            actions = []
+
+            if not "josh" in freeroam3:
+                actions.append(Jump("v6_fr3josh1"))
+            elif all(v6_relics.values()) and upstairs == "nobody" and not "kim" in freeroam3asked: # Asking people for upstairs
+                actions.append(Jump("v6_fr3josh3"))
+
+            actions.append(Show("v6_fr3downstairs"))
+
+        timer 0.1 action renpy.random.choice(actions)
 
 
 screen v6_fr3downstairs():
@@ -58,6 +71,9 @@ screen v6_fr3downstairs():
         hover "images/v6/fr3downstairsright.webp"
         action Show("v6_fr3kitchen")
 
+    if config_debug:
+        timer 0.1 action Show(renpy.random.choice(("v6_fr3garden", "v6_fr3upstairs", "v6_fr3livingroom", "v6_fr3kitchen")))
+
 
 screen v6_fr3livingroom():
     tag free_roam
@@ -83,7 +99,7 @@ screen v6_fr3livingroom():
 
         if not "aubrey" in freeroam3:
             action Jump("v6_fr3aubrey1")
-        elif relics >= 5 and upstairs == "nobody": # Asking people for upstairs
+        elif all(v6_relics.values()) and upstairs == "nobody": # Asking people for upstairs
             action Jump("v6_fr3aubrey3")
         else:
             action Jump("v6_fr3aubrey2")
@@ -104,6 +120,24 @@ screen v6_fr3livingroom():
         hover "images/v6/fr3livingroomdoor.webp"
         action Show("v6_fr3kitchen")
 
+    if config_debug:
+        python:
+            actions = []
+
+            if not "peter" in freeroam3:
+                actions.append(Jump("v6_fr3guy1"))
+
+            if not "aubrey" in freeroam3:
+                actions.append(Jump("v6_fr3aubrey1"))
+            elif all(v6_relics.values()) and upstairs == "nobody": # Asking people for upstairs
+                actions.append(Jump("v6_fr3aubrey3"))
+
+            actions.append(Show("v6_fr3downstairs"))
+
+            actions.append(Show("v6_fr3kitchen"))
+
+        timer 0.1 action renpy.random.choice(actions)
+
 
 screen v6_fr3kitchen():
     tag free_roam
@@ -118,7 +152,7 @@ screen v6_fr3kitchen():
         if not "chris" in freeroam3:
             action Jump("v6_fr3chris1")
         else:
-            action Show("confirm", message="Are you sure you want to end the free roam?", yes_action=[Hide("confirm"), Jump("v6_fr3chris3")])
+            action Show("confirm", message=_("Are you sure you want to end the free roam?"), yes_action=[Hide("confirm"), Jump("v6_fr3chris3")])
 
     imagebutton: #Matt button
         pos (1048, 139)
@@ -149,10 +183,33 @@ screen v6_fr3kitchen():
 
         if not "riley" in freeroam3:
             action Jump("v6_fr3riley1")
-        elif relics >= 5 and upstairs == "nobody" and not "riley" in freeroam3asked: # Asking people for upstairs
+        elif all(v6_relics.values()) and upstairs == "nobody" and not "riley" in freeroam3asked: # Asking people for upstairs
             action Jump("v6_fr3riley3")
         else:
             action Jump("v6_fr3riley2")
+
+    if config_debug:
+        python:
+            actions = []
+
+            if not "chris" in freeroam3:
+                actions.append(Jump("v6_fr3chris1"))
+            else:
+                actions.append(Show("confirm", message="Are you sure you want to end the free roam?", yes_action=[Hide("confirm"), Jump("v6_fr3chris3")]))
+
+            if not "matt" in freeroam3:
+                actions.append(Jump("v6_fr3matt1"))
+
+            actions.append(Show("v6_fr3kitchen2"))
+
+            actions.append(Show("v6_fr3livingroom"))
+
+            if not "riley" in freeroam3:
+                actions.append(Jump("v6_fr3riley1"))
+            elif all(v6_relics.values()) and upstairs == "nobody" and not "riley" in freeroam3asked: # Asking people for upstairs
+                actions.append(Jump("v6_fr3riley3"))
+
+        timer 0.1 action renpy.random.choice(actions)
 
 
 screen v6_fr3kitchen2():
@@ -180,6 +237,9 @@ screen v6_fr3kitchen2():
         hover "images/v6/fr3kitchen2right.webp"
         action Show("v6_fr3downstairs")
 
+    if config_debug:
+        timer 0.1 action Show(renpy.random.choice(("v6_fr3kitchen", "v6_fr3middleroom", "v6_fr3downstairs")))
+
 
 screen v6_fr3middleroom():
     tag free_roam
@@ -205,6 +265,11 @@ screen v6_fr3middleroom():
         hover "images/v6/fr3middleroomright.webp"
         action Show("v6_fr3garage")
 
+    if config_debug:
+        $ actions = (Show("v6_fr3kitchen2"), Jump("v6_fr3dsbathroom"), Show("v6_fr3garage"))
+
+        timer 0.1 action renpy.random.choice(actions)
+
 
 screen v6_fr3garage():
     tag free_roam
@@ -220,7 +285,7 @@ screen v6_fr3garage():
             if not "amber" in freeroam3:
                 action Jump("v6_fr3amber1")
 
-            elif relics >= 5 and upstairs == "nobody" and not "amber" in freeroam3asked: #Asking people for upstairs
+            elif all(v6_relics.values()) and upstairs == "nobody" and not "amber" in freeroam3asked: #Asking people for upstairs
                 action Jump("v6_fr3amber3")
             else:
                 action Jump("v6_fr3amber2")
@@ -245,6 +310,25 @@ screen v6_fr3garage():
         idle "images/v6/fr3garagebackblank.webp"
         hover "images/v6/fr3garageback.webp"
         action Show("v6_fr3middleroom")
+
+    if config_debug:
+        python:
+            actions = []
+
+            if not upstairs == "amber":
+                if not "amber" in freeroam3:
+                    actions.append(Jump("v6_fr3amber1"))
+
+                elif all(v6_relics.values()) and upstairs == "nobody" and not "amber" in freeroam3asked: #Asking people for upstairs
+                    actions.append(Jump("v6_fr3amber3"))
+
+
+            if not "sebastian" in freeroam3:
+                actions.append(Jump("v6_fr3sebastian1"))
+
+            actions.append(Show("v6_fr3middleroom"))
+
+        timer 0.1 action renpy.random.choice(actions)
 
 
 screen v6_fr3upstairs():
@@ -280,6 +364,19 @@ screen v6_fr3upstairs():
             action Jump("v6_fr3chloe1")
         else:
             action Jump("v6_fr3chloe2")
+
+    if config_debug:
+        python:
+            actions = []
+
+            actions.append(Show("v6_fr3downstairs"))
+            actions.append(Jump("v6_fr3office"))
+            actions.append(Show("v6_fr3roofroom"))
+
+            if not "chloe" in freeroam3:
+                actions.append(Jump("v6_fr3chloe1"))
+
+        timer 0.1 action renpy.random.choice(actions)
 
 
 screen v6_fr3office():
@@ -318,6 +415,19 @@ screen v6_fr3office():
         hover "images/v6/fr3officetrophy.webp"
         action Jump("v6_fr3trophies")
 
+    if config_debug:
+        python:
+            actions = []
+
+            actions.append(Show("v6_fr3downstairs"))
+            actions.append(Jump("v6_fr3office"))
+            actions.append(Show("v6_fr3roofroom"))
+
+            if not "chloe" in freeroam3:
+                actions.append(Jump("v6_fr3chloe1"))
+
+        timer 0.1 action renpy.random.choice(actions)
+
 
 screen v6_fr3roofroom():
     tag free_roam
@@ -340,6 +450,18 @@ screen v6_fr3roofroom():
             action Jump ("v6_fr3nora1")
         else:
             action Jump ("v6_fr3nora2")
+
+    if config_debug:
+        python:
+            actions = []
+
+            actions.append(Show("v6_fr3upstairs"))
+
+            if not "nora" in freeroam3:
+                actions.append(Jump("v6_fr3nora1"))
+
+        timer 0.1 action renpy.random.choice(actions)
+
 
 screen emilysexoverlay():
 
@@ -380,6 +502,7 @@ screen emilysexoverlay():
             imagebutton:
                 idle "images/v6/emclimax.webp"
                 action Jump("emclimax")
+
 
 screen aubreysexoverlay():
 

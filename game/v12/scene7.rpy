@@ -25,7 +25,7 @@ label v12s7fr:
 
     lee "Students, please gather around. I have something very exciting to announce."
 
-    play music "music/v12/Track Scene 7_1.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_7_1 fadein 2
 
     scene v12fer2 # TPP. Show Aubrey,riley, mc, imre all mouths closed
     with dissolve
@@ -401,7 +401,7 @@ label v12s7fr:
     pause
     hide murder_tutorial2
 
-    if (v12s7_victims == 16) or (v12s7_victims == 15 and joinwolves):
+    if (v12s7_victims == 16) or (v12s7_victims == 15 and mc.frat == Frat.WOLVES):
         show murder_tutorial3 at truecenter
         pause
         hide murder_tutorial3
@@ -411,7 +411,7 @@ label v12s7fr:
         hide murder_tutorial3b
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 7_2.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_7_2 fadein 2
 
     call screen v12s7_seating_front
 
@@ -427,7 +427,7 @@ label v12s7_aubrey1:
     au "Hey there, handsome. Please make sure you're being careful, okay? I'd hate for you to get hurt, but if you do find yourself needing some love and care, don't forget to come see your favorite nurse. *Chuckles*"
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 7_2.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_7_2 fadein 2
 
     scene v12ferau1a # FPP. Same 1, mouth closed
     with dissolve
@@ -453,15 +453,15 @@ label v12s7_aubrey1:
     au "If you say so. *Chuckles* So, tell me about that last fight of yours. I don't get to see much of the outside world since I'm always working on the ship. Was it a pretty big fight?"
 
     menu:
-        "Major fight":
-            $ add_point(KCT.BRO)
+        "Major fight" (bro=1.0):
+            $ reputation.add_point(RepComponent.BRO)
             scene v12ferau1a
             with dissolve
 
             u "It was a serious fight. I'm surprised you haven't heard about it yet. It feels as if the whole world watched it."
 
-        "Light work":
-            $ add_point(KCT.TROUBLEMAKER)
+        "Light work" (troublemaker=1.0):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
             scene v12ferau1a
             with dissolve
 
@@ -546,15 +546,15 @@ label v12s7_aubrey1:
     au "I think I'd like to see exactly how tough you actually are. I... I think I see some bruising. Oh my gosh, and your eye is cut! I'm gonna need to patch that up immediately."
 
     menu:
-        "It does hurt pretty bad":
+        "It does hurt pretty bad" (boyfriend=1.0):
             $ v12s7_aubrey_moved = True
-            $ add_point(KCT.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             scene v12ferau1
             with dissolve
 
             au "Oh, sweetie. If I didn't take a look at this I wouldn't be able to call myself a nurse. Please come by my office so I can get you fixed up."
 
-            if aubrey.relationship >= Relationship.FWB:
+            if CharacterService.is_fwb(aubrey):
                 au "I'll need some privacy to give the best treatment possible."
 
                 scene v12ferau2 # TPP. Show Aubrey wispering in mc's ear
@@ -579,12 +579,12 @@ label v12s7_aubrey1:
                 au "Good, and try not to take too long. Those injuries look very, very bad. *Chuckles*"
             
             stop music fadeout 3
-            play music "music/v12/Track Scene 7_2.mp3" fadein 2
+            play music music.ck1.v12.Track_Scene_7_2 fadein 2
 
             call screen v12s7_balcony_right
             
-        "Didn't even feel it":
-            $ add_point(KCT.BRO)
+        "Didn't even feel it" (bro=1.0):
+            $ reputation.add_point(RepComponent.BRO)
             scene v12ferau1a
             with dissolve
 
@@ -606,7 +606,7 @@ label v12s7_aubrey1:
             au "Looking forward to it, Mr. Boxer."
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 7_2.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_7_2 fadein 2
 
     call screen v12s7_balcony_right
 
@@ -622,7 +622,7 @@ label v12s7_aubrey2:
     au "Finally! Took you long enough..."
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 7_3.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_7_3 fadein 2
 
     scene v12ferauh1a # FPP. same 1, mouth closed
     with dissolve
@@ -663,12 +663,12 @@ label v12s7_aubrey2:
     with dissolve
 
     menu:
-        "Let her":
-            $ add_point(KCT.BOYFRIEND)
+        "Let her" (boyfriend=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             scene v12ferauh2a # TPP. same 2, mc mouth open
             with dissolve
             
-            $ grant_achievement("doctors_orders")
+            grant Achievement("doctors_orders", "Accept Nurse Aubrey's advances")
             u "Oh... Yeah, this is definitely more interesting than a murder."
 
             scene v12ferauh3 # TPP. Show aubrey kissing mc, placing his hand on her ass.
@@ -684,11 +684,11 @@ label v12s7_aubrey2:
             with dissolve
 
             u "Absolu-"
-            play sound "sounds/dooropen.mp3"
+            play sound sound.door_open
 
             unknown "Could've sworn I heard people talking in here... Guess not."
 
-            play sound "sounds/doorclose.mp3"
+            play sound sound.door_close
 
             scene v12ferauh4
             with dissolve
@@ -716,23 +716,23 @@ label v12s7_aubrey2:
             pause 0.75
 
             stop music fadeout 3
-            play music "music/v12/Track Scene 7_2.mp3" fadein 2
+            play music music.ck1.v12.Track_Scene_7_2 fadein 2
 
             call screen v12s7_bathroom
 
-        "Kill her":
+        "Kill her" (troublemaker=1.0):
             $ v12s7_killList.add(aubrey)
             label v12s7_aubrey_kill:
             hide screen murder_button_overlay
 
-            $ add_point(KCT.TROUBLEMAKER)
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
             scene v12ferauh6 # TPP. Show MC pointing finger gun at aubrey, mc mouth open, aubrey mouth closed
             with dissolve
 
             u "Boom."
 
             stop music fadeout 3
-            play music "music/v12/Track Scene 7_4.mp3" fadein 2
+            play music music.ck1.v12.Track_Scene_7_4 fadein 2
 
             scene v12ferauh6a # TPP. Show MC pointing finger gun at aubrey, mc mouth closed, aubrey mouth open
             with dissolve
@@ -773,12 +773,12 @@ label v12s7_aubrey2:
             pause 0.75
 
             stop music fadeout 3
-            play music "music/v12/Track Scene 7_2.mp3" fadein 2
+            play music music.ck1.v12.Track_Scene_7_2 fadein 2
 
             call screen v12s7_bathroom
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 7_2.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_7_2 fadein 2
 
 label v12s7_riley1:
     $ freeroam9.add("riley")
@@ -797,7 +797,7 @@ label v12s7_riley1:
     cl "People like you never wanna pay your taxes but I barely have two pennies to rub together and I still have to pay mine."
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 7_5.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_7_5 fadein 2
 
     scene v12ferri2 # FPP. Show riley(from a distance as mc is overhearing the convo), smug look, looking at chloe out of shot, mouth open.
     with dissolve
@@ -856,7 +856,7 @@ label v12s7_riley1:
     ri "*Southern accent* And now my confusion is all too much. It makes sense why the wealthy and a man such as yourself would be here..."
     ri "But I can't understand why Miss Blue Collar here would be allowed to join us."
 
-    if chloe.relationship >= Relationship.GIRLFRIEND:
+    if CharacterService.is_girlfriend(chloe):
         # -Chloe kisses MC-
         scene v12ferri5 # FPP. Show chloe, looking at camera, neutral look mouth open
         with dissolve
@@ -901,11 +901,11 @@ label v12s7_riley1:
     ri "*Southern accent* That's to be expected. Those of the lower classes aren't familiar with as many social topics as the wealthy. Isn't that right, Mr. Boxer?"
 
     menu:
-        "I'm poor":
+        "I'm poor" (riley=1.0):
             scene v12ferri4a
             with dissolve
 
-            $ grant_achievement("zero_to_hero")
+            grant Achievement("zero_to_hero", "Tell Riley you are poor")
             u "I'm actually quite poor myself. My manager takes nearly all of my winnings and after expenses, I'm usually left with hardly anything."
 
             scene v12ferri4
@@ -1050,15 +1050,15 @@ label v12s7_riley1:
 
             u "Haha, alright. I'll catch up with you later."
 
-            if chloe.relationship >= Relationship.FWB:
+            if CharacterService.is_fwb(chloe) or CharacterService.is_girlfriend(chloe):
                 scene v12ferri6 # TPP. Show MC kissing chloe
                 with dissolve
-                play sound "sounds/kiss.mp3"
+                play sound sound.kiss
                 
                 pause 0.75
     
     stop music fadeout 3
-    play music "music/v12/Track Scene 7_2.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_7_2 fadein 2
 
     call screen v12s7_left_viewpoint
 
@@ -1078,7 +1078,7 @@ label v12s7_chloe1:
     u "Well, well. If it isn't the richest woman alive."
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 7_6.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_7_6 fadein 2
 
     scene v12ferch1a # FPP. same 1, mouth open
     with dissolve
@@ -1098,7 +1098,7 @@ label v12s7_chloe1:
     scene v12ferch1
     with dissolve
 
-    u "Being poor is nothing more than a setting stone to being rich, because no one chooses to be poor. That's why I donate half of all my fight proceeds to those in need."
+    u "Being poor is nothing more than a stepping stone to being rich, because no one chooses to be poor. That's why I donate half of all my fight proceeds to those in need."
 
     scene v12ferch1a
     with dissolve
@@ -1178,8 +1178,8 @@ label v12s7_chloe1:
 
             cl "Exactly. So, I don't know. I'm doing my best to not think about it..."
 
-        "Enjoy Europe":
-            $ add_point(KCT.TROUBLEMAKER)
+        "Enjoy Europe" (troublemaker=1.0):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
             scene v12ferch1c
             with dissolve
             
@@ -1280,7 +1280,7 @@ label v12s7_chloe1:
 
     cl "That's actually a good point... Okay, now I'm not so sure about you being the killer. *Chuckles*"
 
-    if chloe.relationship >= Relationship.FWB:
+    if CharacterService.is_fwb(chloe) or CharacterService.is_girlfriend(chloe):
         scene v12ferch3 # TPP. Show chloe, hand on mc's chest, chloe mouth open
         with dissolve
 
@@ -1298,7 +1298,7 @@ label v12s7_chloe1:
 
         scene v12ferch4 # TPP. Show chloe kissing MC
         with dissolve
-        play sound "sounds/kiss.mp3"
+        play sound sound.kiss
 
         pause 1.5
 
@@ -1323,7 +1323,7 @@ label v12s7_chloe1:
         pause 0.75
 
         stop music fadeout 3
-        play music "music/v12/Track Scene 7_2.mp3" fadein 2
+        play music music.ck1.v12.Track_Scene_7_2 fadein 2
 
         call screen v12s7_left_viewpoint
 
@@ -1339,7 +1339,7 @@ label v12s7_chloe1:
         pause 0.75
 
         stop music fadeout 3
-        play music "music/v12/Track Scene 7_2.mp3" fadein 2
+        play music music.ck1.v12.Track_Scene_7_2 fadein 2
 
         call screen v12s7_left_viewpoint
 
@@ -1352,7 +1352,7 @@ label v12s7_chloe_kill:
     u "Boom."
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 7_7.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_7_7 fadein 2
 
     scene v12ferch1d
     with dissolve
@@ -1405,7 +1405,7 @@ label v12s7_chloe_kill:
     u "*Chuckles*"
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 7_2.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_7_2 fadein 2
 
     call screen v12s7_left_viewpoint
 
@@ -1427,7 +1427,7 @@ label v12s7_riley3:
     u "Seeing you guys together again in the same exact location is a little suspicious."
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 7_5.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_7_5 fadein 2
 
     scene v12ferric2 # FPP. Show riley, slight smile, mouth open
     with dissolve
@@ -1546,7 +1546,7 @@ label v12s7_riley3:
     with dissolve
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 7_2.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_7_2 fadein 2
 
     $ v12s7_endtalkList.append(riley)
 
@@ -1567,7 +1567,7 @@ label v12s7_riley3a:
     u "Still alive out here, huh?"
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 7_5.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_7_5 fadein 2
 
     scene v12ferril1a # FPP. Same 1, mouth open
     with dissolve
@@ -1608,8 +1608,8 @@ label v12s7_riley3a:
     ri "*Southern accent* Well, wait a minute. You were here with Chloe when I left, what'd she say while I was gone?"
 
     menu:
-        "Me":
-            $ add_point(KCT.BRO)
+        "Me" (bro=1.0):
+            $ reputation.add_point(RepComponent.BRO)
             scene v12ferril1
             with dissolve
 
@@ -1620,8 +1620,8 @@ label v12s7_riley3a:
 
             ri "*Southern accent* Someone else must come by when neither of us were with her."
 
-        "You":
-            $ add_point(KCT.TROUBLEMAKER)
+        "You" (troublemaker=1.0):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
             scene v12ferril1
             with dissolve
 
@@ -1654,7 +1654,7 @@ label v12s7_riley3a:
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 7_2.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_7_2 fadein 2
 
     call screen v12s7_left_viewpoint
 
@@ -1667,7 +1667,7 @@ label v12s7_riley_kill:
     u "Boom."
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 7_7.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_7_7 fadein 2
 
     scene v12ferril4 # FPP. Show riley, slight smile, mouth open
     with dissolve
@@ -1703,7 +1703,7 @@ label v12s7_riley_kill:
     with dissolve
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 7_2.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_7_2 fadein 2
 
     call screen v12s7_left_viewpoint
 
@@ -1722,7 +1722,7 @@ label v12s7_lauren1:
     u "There you are."
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 7_8.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_7_8 fadein 2
 
     if v11_lauren_caught_aubrey:
         scene v12ferla1a # FPP. same 1, mouth open
@@ -1731,8 +1731,8 @@ label v12s7_lauren1:
         la "Don't try an use the game as a way of talking to me."
 
         menu:
-            "Apologize":
-                $ add_point(KCT.BOYFRIEND)
+            "Apologize" (boyfriend=1.0):
+                $ reputation.add_point(RepComponent.BOYFRIEND)
                 scene v12ferla1
                 with dissolve
                 
@@ -1740,8 +1740,8 @@ label v12s7_lauren1:
 
                 u "(Damn, she's still really pissed.)"
 
-            "Kill her":
-                $ add_point(KCT.TROUBLEMAKER)
+            "Kill her" (troublemaker=1.0):
+                $ reputation.add_point(RepComponent.TROUBLEMAKER)
                 $ v12s7_killList.add(lauren)
                 scene v12ferla1
                 with dissolve
@@ -1749,7 +1749,7 @@ label v12s7_lauren1:
                 u "Yeah uhm, I know you're mad right now but I gotta play the game so..."
 
                 stop music fadeout 3
-                play music "music/v12/Track Scene 7_7.mp3" fadein 2
+                play music music.ck1.v12.Track_Scene_7_7 fadein 2
 
                 scene v12ferla2 # TPP. Show mc pointing finger gun at lauren, mouth open
                 with dissolve
@@ -1767,7 +1767,7 @@ label v12s7_lauren1:
                 u "(Damn, she's still really pissed.)"
         
         stop music fadeout 3
-        play music "music/v12/Track Scene 7_2.mp3" fadein 2
+        play music music.ck1.v12.Track_Scene_7_2 fadein 2
 
         call screen v12s7_seating_back
 
@@ -1776,10 +1776,10 @@ label v12s7_lauren1:
 
     la "And there you are."
 
-    if lauren.relationship >= Relationship.GIRLFRIEND:
+    if CharacterService.is_girlfriend(lauren):
         scene v12ferla5 # TPP. Show lauren kissing mc.
         with dissolve
-        play sound "sounds/kiss.mp3"
+        play sound sound.kiss
 
         pause 1.5
 
@@ -1806,7 +1806,7 @@ label v12s7_lauren1:
     scene v12ferla1
     with dissolve
 
-    u "*Laughs* Wait, you're character is a killer on the run but you're saying you're not the killer? I don't know if I can believe that."
+    u "*Laughs* Wait, your character is a killer on the run but you're saying you're not the killer? I don't know if I can believe that."
 
     scene v12ferla1b # FPP. same 1, Show lauren annoyed, mouth open
     with dissolve
@@ -1924,7 +1924,7 @@ label v12s7_lauren1:
 
     la "You know what, go bother someone else. *Chuckles* Maybe someone will kill you for me. *Laughs*"
 
-    if lauren.relationship >= Relationship.GIRLFRIEND:
+    if CharacterService.is_girlfriend(lauren):
         scene v12ferla1d
         with dissolve
 
@@ -1932,7 +1932,7 @@ label v12s7_lauren1:
 
         scene v12ferla6 # TPP. Show Lauren and mc kissing
         with dissolve
-        play sound "sounds/kiss.mp3"
+        play sound sound.kiss
         pause 1.5
 
     scene v12ferla1
@@ -1951,7 +1951,7 @@ label v12s7_lauren1:
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 7_2.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_7_2 fadein 2
 
     call screen v12s7_seating_back
 
@@ -1964,7 +1964,7 @@ label v12s7_lauren_kill:
     u "Boom."
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 7_7.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_7_7 fadein 2
 
     scene v12ferla1d
     with dissolve
@@ -1997,7 +1997,7 @@ label v12s7_lauren_kill:
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 7_2.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_7_2 fadein 2
 
     call screen v12s7_seating_back
 
@@ -2016,7 +2016,7 @@ label v12s7_ryan_imre1:
     ry "Wow, look at this beautiful day, if only my wife was just as beautiful."
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 7_5.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_7_5 fadein 2
 
     scene v12ferryi2 # FPP. Show imre from a distance looking at ryan off screen mouth open
     with dissolve
@@ -2134,8 +2134,8 @@ label v12s7_ryan_imre1:
     ry "Yep, we're proud newlyweds."
 
     menu:
-        "Tease Imre":
-            $ add_point(KCT.TROUBLEMAKER)
+        "Tease Imre" (troublemaker=1.0):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
             scene v12ferryi9a
             with dissolve
             
@@ -2156,8 +2156,8 @@ label v12s7_ryan_imre1:
 
             u "Oh, that's unfortunate."
 
-        "Tell Ryan to cool it":
-            $ add_point(KCT.BRO)
+        "Tell Ryan to cool it" (bro=1.0):
+            $ reputation.add_point(RepComponent.BRO)
             
             scene v12ferryi9a
             with dissolve
@@ -2269,7 +2269,7 @@ label v12s7_ryan_imre1:
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 7_2.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_7_2 fadein 2
 
     call screen v12s7_right_gallery_back
 
@@ -2288,7 +2288,7 @@ label v12s7_ryan1:
     u "Your wife still hasn't come back?"
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 7_5.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_7_5 fadein 2
 
     scene v12ferry1a # FPP. Same 1, mouth open
     with dissolve
@@ -2439,7 +2439,7 @@ label v12s7_ryan1:
     with dissolve
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 7_2.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_7_2 fadein 2
 
     call screen v12s7_right_gallery_back
 
@@ -2452,7 +2452,7 @@ label v12s7_ryan_kill:
     u "Boom."
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 7_7.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_7_7 fadein 2
 
     scene v12ferry1a
     with dissolve
@@ -2478,7 +2478,7 @@ label v12s7_ryan_kill:
     with dissolve
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 7_2.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_7_2 fadein 2
 
     call screen v12s7_right_gallery_back
 
@@ -2494,7 +2494,7 @@ label v12s7_imre2:
     u "Hello Mrs."
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 7_9.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_7_9 fadein 2
 
     scene v12ferim1a # FPP. Same 1, mouth open
     with dissolve
@@ -2602,7 +2602,7 @@ label v12s7_imre2:
     with dissolve
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 7_2.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_7_2 fadein 2
 
     call screen v12s7_foyer
 
@@ -2615,7 +2615,7 @@ label v12s7_imre_kill:
     u "Boom."
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 7_7.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_7_7 fadein 2
 
     scene v12ferim1b # FPP. same 1,new pose, mouth open
     with dissolve
@@ -2630,7 +2630,7 @@ label v12s7_imre_kill:
     scene v12ferim1b
     with dissolve
 
-    $ grant_achievement("mercy_killing")
+    grant Achievement("mercy_killing", "Kill Imre")
     imre "FREEDOM!!!"
 
     scene v12ferim1c
@@ -2654,11 +2654,11 @@ label v12s7_imre_kill:
     u "(He's crazy. *Chuckles*)"
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 7_2.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_7_2 fadein 2
 
     call screen v12s7_foyer
 
-label v12s7_lindsey_charlie1:
+label v12s7_lindsey_charli1:
     $ freeroam9.add("lindsey")
     $ v12s7_seenList = [lindsey, charli]
 
@@ -2670,7 +2670,7 @@ label v12s7_lindsey_charlie1:
     u "Surprised we haven't crashed yet."
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 7_10.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_7_10 fadein 2
 
     scene v12ferlich1a # FPP. Same 1, rolling eyes
     with dissolve
@@ -2794,8 +2794,8 @@ label v12s7_lindsey_charlie1:
     li "Good, [name]. You sure there's nothing you've seen?"
 
     menu:
-        "Ryan is suspicious":
-            $ add_point(KCT.TROUBLEMAKER)
+        "Ryan is suspicious" (troublemaker=1.0):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
             scene v12ferlich2a
             with dissolve
             
@@ -2943,7 +2943,7 @@ label v12s7_lindsey_charlie1:
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 7_2.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_7_2 fadein 2
 
     call screen v12s7_captains_room
 
@@ -2959,7 +2959,7 @@ label v12s7_lindsey2:
     li "Come over here citizen."
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 7_5.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_7_5 fadein 2
 
     scene v12ferli2 # TPP. Show mc walking closer to lindsey
     with dissolve
@@ -3017,15 +3017,15 @@ label v12s7_lindsey2:
     li "*Chuckles* I considered that, but I'm having a hard time choosing who."
 
     menu:
-        "Me":
-            $ add_point(KCT.BOYFRIEND)
+        "Me" (boyfriend=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             scene v12ferli3
             with dissolve
             
             u "I can be your distraction. I'll just try and separate them... then see if I get murked or not."
 
-        "Charli":
-            $ add_point(KCT.TROUBLEMAKER)
+        "Charli" (troublemaker=1.0):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
             scene v12ferli3
             with dissolve
 
@@ -3144,7 +3144,7 @@ label v12s7_lindsey2:
     scene v12ferli3b
     with dissolve
 
-    if lindsey.relationship >= Relationship.KISS:
+    if CharacterService.is_kissed(lindsey):
         scene v12ferli5 # TPP. Show mc and lindsey kissing
         with dissolve
 
@@ -3164,7 +3164,7 @@ label v12s7_lindsey2:
     with dissolve
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 7_2.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_7_2 fadein 2
 
     $ v12s7_endtalkList.append(lindsey)
 
@@ -3179,7 +3179,7 @@ label v12s7_lindsey_kill:
     u "Boom."
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 7_7.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_7_7 fadein 2
 
     scene v12ferli8 # FPP. Show lindsey, slight smile, mouth open
     with dissolve
@@ -3210,7 +3210,7 @@ label v12s7_lindsey_kill:
     with dissolve
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 7_2.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_7_2 fadein 2
 
     call screen v12s7_rear
 
@@ -3226,7 +3226,7 @@ label v12s7_charli2:
     u "Still alone huh?"
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 7_10.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_7_10 fadein 2
 
     scene v12fercha1a # FPP. Same 1, mouth open
     with dissolve
@@ -3254,7 +3254,7 @@ label v12s7_charli2:
     charli "And you have the most annoying personality."
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 7_2.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_7_2 fadein 2
 
     $ v12s7_endtalkList.append(charli)
 
@@ -3267,12 +3267,12 @@ label v12s7_charli_kill:
     with dissolve
 
     if len(v12s7_killList) == v12s7_victims:
-        $ grant_achievement("best_for_last")
+        grant Achievement("best_for_last", "Charli is your final kill")
 
     u "Boom."
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 7_4.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_7_4 fadein 2
 
     scene v12fercha1a
     with dissolve
@@ -3293,7 +3293,7 @@ label v12s7_charli_kill:
     with dissolve
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 7_2.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_7_2 fadein 2
 
     call screen v12s7_captains_room
 
@@ -3312,7 +3312,7 @@ label v12s7_msrose1:
     ro "Hello there world-famous boxing champion."
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 7_10.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_7_10 fadein 2
 
     scene v12fermsr1a # FPP. same 1, mouth closed
     with dissolve
@@ -3438,15 +3438,15 @@ label v12s7_msrose1:
     with dissolve
 
     menu:
-        "Not really":
-            $ add_point(KCT.BRO)
+        "Not really" (bro=1.0):
+            $ reputation.add_point(RepComponent.BRO)
             scene v12fermsr1a
             with dissolve
             
             u "No not really, if anyone runs up on me I have two guns waiting for them."
 
-        "Who wouldn't be":
-            $ add_point(KCT.BOYFRIEND)
+        "Who wouldn't be" (boyfriend=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             scene v12fermsr1a
             with dissolve
             
@@ -3493,7 +3493,7 @@ label v12s7_msrose1:
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 7_2.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_7_2 fadein 2
 
     call screen v12s7_seating_front
 
@@ -3506,7 +3506,7 @@ label v12s7_ms_rose_kill:
     u "Boom."
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 7_4.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_7_4 fadein 2
 
     scene v12fermsr1b
     with dissolve
@@ -3559,7 +3559,7 @@ label v12s7_ms_rose_kill:
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 7_2.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_7_2 fadein 2
 
     call screen v12s7_seating_front
 
@@ -3575,7 +3575,7 @@ label v12s7_penelope1:
     u "Hey hey hey!"
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 7_11.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_7_11 fadein 2
 
     scene v12ferpen1a # FPP. same 1, mouth open
     with dissolve
@@ -3613,8 +3613,8 @@ label v12s7_penelope1:
     pe "I could've enjoyed a nice ride without being bothered if I had just kept my mouth shut. I said that I couldn't wait to get on the ferry and relax and he heard me... now here we are."
 
     menu:
-        "Let her work":
-            $ add_point(KCT.BRO)
+        "Let her work" (bro=1.0):
+            $ reputation.add_point(RepComponent.BRO)
             scene v12ferpen1
             with dissolve
             
@@ -3632,8 +3632,8 @@ label v12s7_penelope1:
 
             call screen v12s7_left_walkway_front
 
-        "Help her out":
-            $ add_point(KCT.BOYFRIEND)
+        "Help her out" (boyfriend=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             scene v12ferpen1
             with dissolve
 
@@ -3644,7 +3644,7 @@ label v12s7_penelope1:
 
             pe "I am."
 
-            if penelope.relationship >= Relationship.LIKES:
+            if CharacterService.is_dating(penelope):
                 scene v12ferpen1
                 with dissolve
 
@@ -3777,7 +3777,7 @@ label v12s7_penelope1:
 
                 scene v12ferpen6 # TPP. Show Penelope kissing mc.
                 with dissolve
-                play sound "sounds/kiss.mp3"
+                play sound sound.kiss
 
                 pause 1.5
 
@@ -3812,7 +3812,7 @@ label v12s7_penelope1:
                 pause 0.75
 
                 stop music fadeout 3
-                play music "music/v12/Track Scene 7_2.mp3" fadein 2
+                play music music.ck1.v12.Track_Scene_7_2 fadein 2
 
                 call screen v12s7_left_walkway_front
 
@@ -3823,7 +3823,7 @@ label v12s7_penelope1:
                 pause 0.75
 
                 stop music fadeout 3
-                play music "music/v12/Track Scene 7_2.mp3" fadein 2
+                play music music.ck1.v12.Track_Scene_7_2 fadein 2
                 
                 call screen v12s7_left_walkway_front
 
@@ -3835,7 +3835,7 @@ label v12s7_penelope_kill:
 
     u "Boom."
     stop music fadeout 3
-    play music "music/v12/Track Scene 7_7.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_7_7 fadein 2
 
     scene v12ferpen8 # TPP. Show Penelope hugging mc
     with dissolve
@@ -3863,7 +3863,7 @@ label v12s7_penelope_kill:
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 7_2.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_7_2 fadein 2
 
     call screen v12s7_left_walkway_front
 
@@ -3882,7 +3882,7 @@ label v12s7_amber1:
     am "Hey you!"
     
     stop music fadeout 3
-    play music "music/v12/Track Scene 7_12.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_7_12 fadein 2
 
     scene v12feram1a # FPP. same 1, mouth closed
     with dissolve
@@ -3990,8 +3990,8 @@ label v12s7_amber1:
     am "Oh shit, that's your... why are you hard right now? Are you turned on by this?"
 
     menu:
-        "A little":
-            $ add_point(KCT.BRO)
+        "A little" (bro=1.0):
+            $ reputation.add_point(RepComponent.BRO)
             scene v12feram7
             with dissolve
             
@@ -4002,8 +4002,8 @@ label v12s7_amber1:
 
             am "Hmmm, good to know. I'll remember that for future reference."
 
-        "No":
-            $ add_point(KCT.BOYFRIEND)
+        "No" (boyfriend=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             scene v12feram7
             with dissolve
             
@@ -4049,7 +4049,7 @@ label v12s7_amber1:
     scene v12feram3a
     with dissolve
 
-    am "I'm just doing my job and should just learn to comply."
+    am "I'm just doing my job and you should just learn to comply."
 
     scene v12feram3
     with dissolve
@@ -4082,7 +4082,7 @@ label v12s7_amber1:
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 7_2.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_7_2 fadein 2
 
     $ v12s7_endtalkList.append(amber)
 
@@ -4097,7 +4097,7 @@ label v12s7_amber_kill:
     u "Boom."
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 7_7.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_7_7 fadein 2
 
     scene v12feram3a
     with dissolve
@@ -4112,7 +4112,7 @@ label v12s7_amber_kill:
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 7_2.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_7_2 fadein 2
 
     call screen v12s7_right_gallery_front
 
@@ -4128,7 +4128,7 @@ label v12s7_riley2:
     u "What's going on?"
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 7_5.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_7_5 fadein 2
 
     u "*Southern accent* I mean, what's going on?"
 
@@ -4282,7 +4282,7 @@ label v12s7_riley2:
     with dissolve
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 7_2.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_7_2 fadein 2
 
     $ v12s7_endtalkList.append(riley)
 
@@ -4297,7 +4297,7 @@ label v12s7_riley_kill2:
     u "Boom."
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 7_7.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_7_7 fadein 2
 
     scene v12ferrile1a
     with dissolve
@@ -4335,7 +4335,7 @@ label v12s7_riley_kill2:
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 7_2.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_7_2 fadein 2
 
     call screen v12s7_right_gallery_front
 
@@ -4354,7 +4354,7 @@ label v12s7_riley2_amber:
     am "I'm just not ready for all that, I think you're really amazing, but I'm just not the relationship person."
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 7_5.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_7_5 fadein 2
 
     scene v12feramb2 # Show riley, from a distance, looking at amber out of shot, mouth closed
     with dissolve
@@ -4412,7 +4412,7 @@ label v12s7_riley2_amber:
     pause 1
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 7_2.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_7_2 fadein 2
 
     call screen v12s7_front_gallery
 
@@ -4428,7 +4428,7 @@ label v12s7_sam_cameron:
     sa "Hey hey boxer!"
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 7_6.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_7_6 fadein 2
 
     scene v12fersaca1a # FPP. same 1, mouth closed
     with dissolve
@@ -4521,8 +4521,8 @@ label v12s7_sam_cameron:
     ca "'Cause they don't know where home is."
 
     menu:
-        "Laugh":
-            $ add_point(KCT.BRO)
+        "Laugh" (bro=1.0):
+            $ reputation.add_point(RepComponent.BRO)
             scene v12fersaca2a
             with dissolve
             
@@ -4533,8 +4533,8 @@ label v12s7_sam_cameron:
 
             sa "His jokes aren't funny."
 
-        "Don't laugh":
-            $ add_point(KCT.BOYFRIEND)
+        "Don't laugh" (boyfriend=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             scene v12fersaca2a
             with dissolve
             
@@ -4628,7 +4628,7 @@ label v12s7_sam_cameron:
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 7_2.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_7_2 fadein 2
 
     call screen v12s7_seating_front
 
@@ -4644,7 +4644,7 @@ label v12s7_sam2:
     u "No bodyguard?"
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 7_5.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_7_5 fadein 2
 
     scene v12fersam1a # FPP. same 1, mouth open
     with dissolve
@@ -4682,15 +4682,15 @@ label v12s7_sam2:
     sa "Besides distracting my mind with something else? *Chuckles*"
 
     menu:
-        "Focus on the game":
-            $ add_point(KCT.BRO)
+        "Focus on the game" (bro=1.0):
+            $ reputation.add_point(RepComponent.BRO)
             scene v12fersam1b # FPP. same 1, new pose, mouth closed
             with dissolve
 
             u "Wanna focus on the game? That's the point of all of this, I think... To make us focus on something else for a while."
 
-        "Go for the kiss":
-            $ add_point(KCT.BOYFRIEND)
+        "Go for the kiss" (boyfriend=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
 
             scene v12fersam1b
             with dissolve
@@ -4704,7 +4704,7 @@ label v12s7_sam2:
 
             scene v12fersam2 # TPP. Show mc and samantha kissing, mc's hand on samantha's cheek
             with dissolve
-            play sound "sounds/kiss.mp3"
+            play sound sound.kiss
 
             pause 1.5
 
@@ -4716,7 +4716,7 @@ label v12s7_sam2:
             scene v12fersam1b
             with dissolve
 
-            play sound "sounds/doorclose.mp3"
+            play sound sound.door_close
 
             u "(Shit!) That might be Mr. Lee, shh!"
 
@@ -4878,7 +4878,7 @@ label v12s7_sam2:
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 7_2.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_7_2 fadein 2
     
     call screen v12s7_right_walkway_back
 
@@ -4888,11 +4888,11 @@ label v12s7_samantha_kill:
     scene v12fersam4 # TPP. Show mc, mouth open, pointing finger fun at sam.
     with dissolve
 
-    $ grant_achievement("talk_murder_to_me")
+    grant Achievement("talk_murder_to_me", "Kill Samantha")
     u "Boom."
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 7_7.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_7_7 fadein 2
 
     scene v12fersam1c
     with dissolve
@@ -4960,7 +4960,7 @@ label v12s7_samantha_kill:
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 7_2.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_7_2 fadein 2
 
     call screen v12s7_right_walkway_back
 
@@ -4976,7 +4976,7 @@ label v12s7_cameron2:
     ca "Hey [name], get over here."
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 7_12.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_7_12 fadein 2
 
     scene v12fercam2 # TPP. Show mc walking over to cameron
     with dissolve
@@ -5064,7 +5064,7 @@ label v12s7_cameron2:
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 7_2.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_7_2 fadein 2
 
     call screen v12s7_rear_gallery
 
@@ -5077,7 +5077,7 @@ label v12s7_cameron_kill:
     u "Boom."
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 7_7.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_7_7 fadein 2
 
     scene v12fercam3a
     with dissolve
@@ -5090,7 +5090,7 @@ label v12s7_cameron_kill:
     u "Then why am I wasting my time with you?"
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 7_2.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_7_2 fadein 2
 
     call screen v12s7_rear_gallery
 
@@ -5112,7 +5112,7 @@ label v12s7_nora1:
     u "Hey, nice to meet you. I'm sure you recognize me."
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 7_5.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_7_5 fadein 2
 
     scene v12fernor1a # FPP. same 1, mouth open
     with dissolve
@@ -5172,8 +5172,8 @@ label v12s7_nora1:
     no "Alright, sorry. I'm not trying to be a bitch. I'm just not in the mood for this."
 
     menu:
-        "See you later":
-            $ add_point(KCT.BRO)
+        "See you later" (bro=1.0):
+            $ reputation.add_point(RepComponent.BRO)
             scene v12fernor1
             with dissolve
             
@@ -5183,14 +5183,14 @@ label v12s7_nora1:
             with dissolve
 
             stop music fadeout 3
-            play music "music/v12/Track Scene 7_2.mp3" fadein 2
+            play music music.ck1.v12.Track_Scene_7_2 fadein 2
 
             $ v12s7_endtalkList.append(nora)
 
             call screen v12s7_balcony_left
 
-        "Want some company?":
-            $ add_point(KCT.BOYFRIEND)
+        "Want some company?" (boyfriend=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             scene v12fernor1b # FPP. same 1, new pose,annoyed look, mouth closed
             with dissolve
             
@@ -5222,9 +5222,9 @@ label v12s7_nora1:
             no "*Chuckles* It's alright. At least you actually asked. It's nice to know that someone cares."
 
             menu:
-                "Chris cares about you":
+                "Chris cares about you" (bro=1.0):
                     $ v12_help_chris += 1
-                    $ add_point(KCT.BRO)
+                    $ reputation.add_point(RepComponent.BRO)
                     scene v12fernor1b
                     with dissolve
 
@@ -5264,14 +5264,14 @@ label v12s7_nora1:
                     with dissolve
 
                     stop music fadeout 3
-                    play music "music/v12/Track Scene 7_2.mp3" fadein 2
+                    play music music.ck1.v12.Track_Scene_7_2 fadein 2
 
                     $ v12s7_endtalkList.append(nora)
 
                     call screen v12s7_balcony_left
 
-                "Of course I care":
-                    $ add_point(KCT.BOYFRIEND)
+                "Of course I care" (boyfriend=1.0):
+                    $ reputation.add_point(RepComponent.BOYFRIEND)
 
                     scene v12fernor1b
                     with dissolve
@@ -5286,15 +5286,15 @@ label v12s7_nora1:
             no "Eventually there will come a time when you can't play both sides. Either he'll get mad that you're talking to me or I'll get mad because you're talking to him."
             no "It's going to happen, so what would be your choice?"
 
-            if joinwolves:
+            if mc.frat == Frat.WOLVES:
                 scene v12fernor1c
                 with dissolve
 
                 no "Nevermind, I already know you're going to say him."
 
             menu:
-                "Sounds like you're dumping him":
-                    $ add_point(KCT.TROUBLEMAKER)
+                "Sounds like you're dumping him" (troublemaker=1.0):
+                    $ reputation.add_point(RepComponent.TROUBLEMAKER)
                     scene v12fernor1b
                     with dissolve
 
@@ -5331,22 +5331,22 @@ label v12s7_nora1:
                     pause 0.75
 
                     stop music fadeout 3
-                    play music "music/v12/Track Scene 7_2.mp3" fadein 2
+                    play music music.ck1.v12.Track_Scene_7_2 fadein 2
 
                     $ v12s7_endtalkList.append(nora)
                     
                     call screen v12s7_balcony_left
                     
-                "I'd choose you":
-                    $ add_point(KCT.BOYFRIEND)
-                    $ nora.relationship = Relationship.LIKES
+                "I'd choose you" (boyfriend=1.0):
+                    $ reputation.add_point(RepComponent.BOYFRIEND)
+                    $ v8_nora_likes_mc = True
 
                     scene v12fernor1
                     with dissolve
 
                     u "There's no choice."
 
-                    if joinwolves:
+                    if mc.frat == Frat.WOLVES:
                         scene v12fernor1
                         with dissolve
 
@@ -5393,7 +5393,7 @@ label v12s7_nora1:
                     pause 0.75
 
                     stop music fadeout 3
-                    play music "music/v12/Track Scene 7_2.mp3" fadein 2
+                    play music music.ck1.v12.Track_Scene_7_2 fadein 2
                     $ v12s7_endtalkList.append(nora)
 
                     call screen v12s7_balcony_left
@@ -5407,14 +5407,14 @@ label v12s7_nora_kill:
     u "Boom."
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 7_7.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_7_7 fadein 2
 
     scene v12fernor5 # FPP. Show nora mouth closed, smiling
     with dissolve
 
     pause 0.75
 
-    if nora.relationship >= Relationship.LIKES:
+    if v8_nora_likes_mc:
         scene v12fernor5a # FPP. Show nora, slight smile mouth open
         with dissolve
 
@@ -5441,7 +5441,7 @@ label v12s7_nora_kill:
         pause 0.75
 
         stop music fadeout 3
-        play music "music/v12/Track Scene 7_2.mp3" fadein 2
+        play music music.ck1.v12.Track_Scene_7_2 fadein 2
 
         call screen v12s7_balcony_left
     else:
@@ -5461,7 +5461,7 @@ label v12s7_nora_kill:
         pause 0.75
 
         stop music fadeout 3
-        play music "music/v12/Track Scene 7_2.mp3" fadein 2
+        play music music.ck1.v12.Track_Scene_7_2 fadein 2
 
         call screen v12s7_balcony_left
 
@@ -5481,7 +5481,7 @@ label v12s7_chris1:
     u "What are you doing?"
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 7_9.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_7_9 fadein 2
 
     if "emily" in freeroam9 and emily not in v12s7_killList:
         scene v12ferchr1a # FPP. Same 1, phone still in air, looking at mc, mouth open
@@ -5608,7 +5608,7 @@ label v12s7_chris1:
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 7_2.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_7_2 fadein 2
 
     $ v12s7_endtalkList.append(chris)
     call screen v12s7_kitchen
@@ -5622,7 +5622,7 @@ label v12s7_chris_kill:
     u "Boom."
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 7_7.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_7_7 fadein 2
 
     if "emily" in freeroam9 and emily not in v12s7_killList:
         scene v12ferchr1c # FPP. show chris, Chris is holding his phone up trying to get a signal, looking up at phone, mouth closed
@@ -5711,7 +5711,7 @@ label v12s7_chris_kill:
     u "(He's having a hard time.)"
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 7_2.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_7_2 fadein 2
 
     call screen v12s7_kitchen
 
@@ -5724,7 +5724,7 @@ label v12s7_mrlee:
     u "Hello there, you fan of boxing? If so, did you catch my last fight?"
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 7_13.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_7_13 fadein 2
 
     scene v12ferlee1a # FPP. same 1, mouth open
     with dissolve
@@ -5752,7 +5752,7 @@ label v12s7_mrlee:
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 7_2.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_7_2 fadein 2
 
     call screen v12s7_rear_gallery
 
@@ -5773,7 +5773,7 @@ label v12s7_josh1:
     u "What are you supposed to be?"
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 7_5.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_7_5 fadein 2
 
     scene v12ferjo1a # FPP. same 1, mouth open
     with dissolve
@@ -5811,9 +5811,10 @@ label v12s7_josh1:
     jo "No one cared about that wrinkly old man, it's a shame the leopards had to eat his crusty ass."
 
     menu:
-        "Really care about cats, huh?":
-            $ add_point(KCT.TROUBLEMAKER)
-            $ josh.relationship = Relationship.MAD
+        "Really care about cats, huh?" (troublemaker=1.0):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
+            $ CharacterService.set_mood(josh, Moods.MAD)
+            
             scene v12ferjo1
             with dissolve
 
@@ -5829,8 +5830,8 @@ label v12s7_josh1:
 
             u "*Laughs* Have you seen yourself?"
 
-        "You're the best actor here":
-            $ add_point(KCT.BRO)
+        "You're the best actor here" (bro=1.0):
+            $ reputation.add_point(RepComponent.BRO)
             scene v12ferjo1
             with dissolve
 
@@ -5872,13 +5873,15 @@ label v12s7_josh1:
             pause 0.75
     
     stop music fadeout 3
-    play music "music/v12/Track Scene 7_2.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_7_2 fadein 2
 
     call screen v12s7_right_viewpoint
 
 label v12s7_josh2:
     $ freeroam9.add("josh2")
-    $ v12s7_seenList = []
+    $ v12s7_seenList = [aubrey]
+    if v12s7_aubrey_moved:
+        $ v12s7_seenList = []
 
     show screen murder_button_overlay(josh)
 
@@ -5888,7 +5891,7 @@ label v12s7_josh2:
     jo "Hey you there mister?"
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 7_5.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_7_5 fadein 2
 
     scene v12ferjos2 # TPP. Show MC walking over to josh
     with dissolve
@@ -6027,7 +6030,7 @@ label v12s7_josh2:
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 7_2.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_7_2 fadein 2
 
     call screen v12s7_utility
 
@@ -6040,7 +6043,7 @@ label v12s7_josh_kill:
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 7_7.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_7_7 fadein 2
 
     if not v12s7_aubrey_moved:
         scene v12ferjos3a # FPP. Same 3, mouth open
@@ -6092,7 +6095,7 @@ label v12s7_josh_kill:
     u "(Freaking goofball.)"
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 7_2.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_7_2 fadein 2
 
     call screen v12s7_utility
 
@@ -6108,7 +6111,7 @@ label v12s7_emily1:
     em "Hmmm, I can see it, when alone and solely alone the passengers will be swept away from the life they've always know."
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 7_10.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_7_10 fadein 2
 
     scene v12ferem2 # TPP. Show mc walking closer to emily
     with dissolve
@@ -6146,7 +6149,7 @@ label v12s7_emily1:
     em "Good."
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 7_2.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_7_2 fadein 2
 
     call screen v12s7_seating_back
 
@@ -6162,7 +6165,7 @@ label v12s7_emily2:
     u "Hey."
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 7_5.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_7_5 fadein 2
 
     scene v12feremi1a # FPP. same 1, mouth open
     with dissolve
@@ -6175,7 +6178,7 @@ label v12s7_emily2:
     u "I'm just trying to... *Sighs* Nevermind."
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 7_2.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_7_2 fadein 2
 
     $ v12s7_endtalkList.append(emily)
     call screen v12s7_bow
@@ -6189,7 +6192,7 @@ label v12s7_emily_kill:
     u "Boom."
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 7_7.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_7_7 fadein 2
 
     scene v12feremi4 # FPP. Show emily, annoyed look, mouth open
     with dissolve
@@ -6202,7 +6205,7 @@ label v12s7_emily_kill:
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 7_2.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_7_2 fadein 2
 
     call screen v12s7_bow
 
@@ -6211,10 +6214,10 @@ label v12s7_mc_caught:
     hide screen murder_button_overlay
     
     stop music fadeout 3
-    play music "music/v12/Track Scene 7_7.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_7_7 fadein 2
 
     if len(v12s7_killList) == 0:
-        $ grant_achievement("weapons_down")
+        grant Achievement("weapons_down", "Don't kill anyone")
 
     unknown "I found the murderer!"
 

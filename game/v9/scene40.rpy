@@ -7,7 +7,7 @@ label v9_wolves_pre_fight:
     scene v9wpf1 # TPP. Show MC sat on his bed in his Wolves room.
     with fade
 
-    if lindsey.relationship >= Relationship.KISS:
+    if CharacterService.is_kissed(lindsey):
         u "(What a day!)"
 
         scene v9wpf1a # TPP. Same camera as v9wpf1, MC smiling.
@@ -31,7 +31,7 @@ label v9_wolves_pre_fight:
     scene v9wpf3 # TPP. Show MC's door.
     with dissolve
 
-    play sound "sounds/knock.mp3"
+    play sound sound.knock
 
     "*Knock* *knock*"
 
@@ -52,7 +52,7 @@ label v9_wolves_pre_fight:
 
     u "More than ready!"
 
-    play music "music/v9/Track Scene 14.mp3" fadein 2
+    play music music.ck1.v9.Track_Scene_14 fadein 2
 
     scene v9wpf5b # FPP. Same camera as v9wpf5, neutral expression, mouth open.
     with dissolve

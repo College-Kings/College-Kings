@@ -3,9 +3,9 @@
 # Characters: MC (Outfit 1), Lauren (Outfit 3)
 # Time:
 label v10_call_with_lauren2:
-    play music "music/v10/Track Scene 15.mp3" fadein 2
+    play music music.ck1.v10.Track_Scene_15 fadein 2
 
-    if joinwolves: # MC is a wolf, is that the correct variable name?
+    if mc.frat == Frat.WOLVES: # MC is a wolf, is that the correct variable name?
         scene v10scwl1 # TPP. Show Lauren as though FPP, she's sitting on the train. Lauren on phone listening to MC, smiling, mouth closed.
         with fade
 
@@ -211,7 +211,7 @@ label v10_call_with_lauren2:
 
         la "So uhm... rapid change of topics, do you want kids someday?"
 
-        if lauren.relationship >= Relationship.GIRLFRIEND: # RCS - if MC is in a relationship with Lauren
+        if CharacterService.is_girlfriend(lauren): # RCS - if MC is in a relationship with Lauren
             scene v10scwl1
             with dissolve
 
@@ -241,7 +241,7 @@ label v10_call_with_lauren2:
 
                 la "I do too, well, family woman. The chance to create a person and then just be able to give that person the most amazing life possible just sounds too good to pass up on."
 
-                if lauren.relationship >= Relationship.GIRLFRIEND: # RCS - MC is in a relationship with Lauren
+                if CharacterService.is_girlfriend(lauren): # RCS - MC is in a relationship with Lauren
                     scene v10scwl1a
                     with dissolve
                     
@@ -566,7 +566,7 @@ label v10_call_with_lauren2:
 
         la "So uhm... rapid change of topics, do you want kids someday?"
 
-        if lauren.relationship >= Relationship.GIRLFRIEND: # RCS - if MC is in a relationship with Lauren
+        if CharacterService.is_girlfriend(lauren): # RCS - if MC is in a relationship with Lauren
             scene v10scwl1
             with dissolve
 
@@ -596,7 +596,7 @@ label v10_call_with_lauren2:
 
                 la "I do too, well, family woman. The chance to create a person and then just be able to give that person the most amazing life possible just sounds too good to pass up on."
 
-                if lauren.relationship >= Relationship.GIRLFRIEND: # RCS - MC is in a relationship with Lauren
+                if CharacterService.is_girlfriend(lauren): # RCS - MC is in a relationship with Lauren
                     scene v10scwl1a
                     with dissolve
                     

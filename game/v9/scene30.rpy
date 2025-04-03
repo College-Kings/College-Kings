@@ -7,7 +7,7 @@ label v9_satmorn_gfb_walk:
     scene v9gfb1 # FPP. MC on sidewalk, looking at the horizon, sun barely risen
     with fade
 
-    play music "music/v9/Track Scene 30.mp3" fadein 2
+    play music music.ck1.v9.Track_Scene_30 fadein 2
 
     pause 1
 
@@ -35,7 +35,7 @@ label v9_satmorn_gfb_walk:
     with dissolve
     u "Well, we all need to hear it now and again."
 
-    if nora.relationship >= Relationship.LIKES:
+    if v8_nora_likes_mc:
         scene v9gfb3b # FPP. Same camera as v9gfb3, Nora hand on hip, Neutral look, mouth open
         with dissolve
         no "What are you doing out this early? Shouldn't you be getting some extra rest, today's a big day for you."

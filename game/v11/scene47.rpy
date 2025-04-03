@@ -6,7 +6,7 @@
 label v11_walking_back:
     scene v11wb1 # TPP. Show MC walking on the sidewalk, Charli a few feet behind him, Charli smirking, mouth closed, MC mouth closed, slight smile
     with dissolve
-    play music "music/v10/Track Scene 41_1.mp3" fadein 2
+    play music music.ck1.v10.Track_Scene_41_1 fadein 2
     pause 0.75
     
     scene v11wb1a # TPP. Same as v11wb1, Show MC looking back at Charli, Charli smirking, mouth closed, MC mouth closed, slightly annoyed
@@ -22,27 +22,25 @@ label v11_walking_back:
     scene v11wb2 # TPP. Same as v11wb1b, but MC and Charli in a different place on the sidewalk. MC slightly surprised, mouth closed, Charli neutral expression, mouth closed
     with dissolve
 
-    play sound "sounds/vibrate.mp3"
+    play sound sound.vibrate
 
-    if config_censored:
-        $ jenny.messenger.newImgMessage("gui/censoredPopup/censoredBackground.webp", force_send=True)
+    if is_censored:
+        $ MessengerService.new_message(jenny, "gui/censoredPopup/censoredBackground.webp")
     else:
-        $ jenny.messenger.newImgMessage("images/v11/Scene 47/jennynude.webp", force_send=True) # Jenny nude pic (selfie or pic in a mirror)
-    $ jenny.messenger.newMessage("OMG, I'M SO SORRY!", force_send=True)
-    $ jenny.messenger.newMessage("I DID NOT MEAN TO SEND THAT!", force_send=True)
-    $ jenny.messenger.addReply("Haha, don't worry about it.")
+        $ MessengerService.new_message(jenny, "images/v11/Scene 47/jennynude.webp") # Jenny nude pic (selfie or pic in a mirror)
+    $ MessengerService.new_message(jenny, "OMG, I'M SO SORRY!")
+    $ MessengerService.new_message(jenny, "I DID NOT MEAN TO SEND THAT!")
+    $ MessengerService.add_reply(jenny, "Haha, don't worry about it.")
 
     u "(Wow... It's been so long since I've gotten a text, I forgot I even had this thing. *Chuckles*)"
 
     scene v11wb3 # TPP. Same position as v11wb2, show MC looking down at his phone, slightly surprised, mouth closed
     with dissolve
 
-    label v11s47_PhoneContinueJenny:
-        if jenny.messenger.replies:
-            call screen phone
-        if jenny.messenger.replies:
+    while MessengerService.has_replies(jenny):
+        call screen phone
+        if MessengerService.has_replies(jenny):
             u "(I should check my phone.)"
-            jump v11s47_PhoneContinueJenny
 
     scene v11wb3a # TPP. Same as v11wb3, show MC putting his phone away, smiling, mouth closed
     with dissolve
@@ -110,11 +108,5 @@ label v11_walking_back:
 
     no "AHHHH!!!!"
     stop music fadeout 3
-    jump end11
-
-label end11:
-    if not renpy.loadable("v12/scene1.rpy"):
-        call screen save_now(12)
-        with Fade(1, 0, 1)
 
     jump v12_start

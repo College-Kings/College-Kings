@@ -9,7 +9,7 @@ label v13s41:
     
     u "(It's kinda late, but I can see if Lindsey wants to go over to that ferris wheel she was talking about.)"
 
-    play music "music/v13/Track Scene 41_1.mp3" fadein 2
+    play music music.ck1.v13.Track_Scene_41_1 fadein 2
 
     scene v13s41_1
     with dissolve
@@ -117,7 +117,7 @@ label v13s41:
     luuk "Later man!"
 
     stop music fadeout 3
-    play music "music/v13/Track Scene 41_2.mp3" fadein 2
+    play music music.v13_Track_Scene_41_2 fadein 2
 
     scene v13s41_7 # TPP. show MC and Lindsey looking at each other slight smiles, mouths closed leaving the hotel
     with dissolve
@@ -255,7 +255,7 @@ label v13s41:
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v13/Track Scene 41_3.mp3" fadein 2
+    play music music.v13_Track_Scene_41_3 fadein 2
 
     scene v13s41_13a # TPP. same as v13s41_13 ferris wheel starts moving
     with dissolve
@@ -321,9 +321,9 @@ label v13s41:
     with dissolve
 
     menu:
-        "What about you":
+        "What about you" (boyfriend=1.0):
             $ v13s41_lindsey_points += 1
-            $ add_point(KCT.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
 
             scene v13s41_14c
             with dissolve
@@ -340,8 +340,8 @@ label v13s41:
 
             u "Always."
 
-        "Agree":
-            $ add_point(KCT.BRO)
+        "Agree" (bro=1.0):
+            $ reputation.add_point(RepComponent.BRO)
 
             scene v13s41_14c
             with dissolve
@@ -392,9 +392,9 @@ label v13s41:
     with dissolve
 
     menu:
-        "They should":
+        "They should" (troublemaker=1.0):
             $ v13s41_lindsey_points += 1
-            $ add_point(KCT.TROUBLEMAKER)
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             scene v13s41_14g
             with dissolve
@@ -448,8 +448,8 @@ label v13s41:
     with dissolve
 
     menu:
-        "Then back out the race":
-            $ add_point(KCT.BRO)
+        "Then back out the race" (bro=1.0):
+            $ reputation.add_point(RepComponent.BRO)
 
             scene v13s41_14c
             with dissolve
@@ -471,9 +471,9 @@ label v13s41:
 
             li "Not everything."
 
-        "You did right":
+        "You did right" (boyfriend=1.0):
             $ v13s41_lindsey_points += 1
-            $ add_point(KCT.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
 
             scene v13s41_14g
             with dissolve
@@ -524,8 +524,8 @@ label v13s41:
     with dissolve
 
     menu:
-        "You're beautiful":
-            $ add_point(KCT.BOYFRIEND)
+        "You're beautiful" (boyfriend=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             scene v13s41_14l # FPP. same as v13s41_14g lindsey mouth closed slight smile
             with dissolve
 
@@ -548,7 +548,7 @@ label v13s41:
 
                 u "I'm a guy like me."
 
-                play sound "sounds/kiss.mp3"
+                play sound sound.kiss
                 scene v13s41_16 # TPP. Lindsey smiles and then romantically kisses MC-
                 with dissolve
 
@@ -559,8 +559,8 @@ label v13s41:
 
                 li "Yes you are."
 
-        "Of course":
-            $ add_point(KCT.BRO)
+        "Of course" (bro=1.0):
+            $ reputation.add_point(RepComponent.BRO)
             scene v13s41_14g
             with dissolve
 

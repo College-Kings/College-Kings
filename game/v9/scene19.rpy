@@ -8,18 +8,18 @@ label v9_lau_dorm:
     scene v9lau1 # TPP. Show MC walking up the hallway to Lauren's dorm.
     with fade
 
-    play music "music/v9/Track Scene 8_1.mp3" fadein 2
+    play music music.ck1.v9.Track_Scene_8_1 fadein 2
 
     pause 0.8
 
-    play sound "sounds/knock.mp3"
+    play sound sound.knock
 
     scene v9lau2 # TPP. Show MC knocking on Lauren's dorm door.
     with dissolve
 
     pause 0.8
 
-    if lauren.relationship >= Relationship.GIRLFRIEND:
+    if CharacterService.is_girlfriend(lauren):
         scene v9lau3 # FPP. Show Lauren who has just opened the door, Lauren smile, mouth closed.
         with dissolve
 
@@ -30,7 +30,7 @@ label v9_lau_dorm:
 
         la "Aww, I missed you, too. Come in."
 
-    elif lauren.relationship >= Relationship.KISS:
+    elif CharacterService.is_kissed(lauren):
         scene v9lau3
         with dissolve
 
@@ -95,10 +95,10 @@ label v9_lau_dorm:
     scene v9lau6a
     with dissolve
 
-    if lauren.relationship >= Relationship.KISS:
+    if CharacterService.is_kissed(lauren) or CharacterService.is_girlfriend(lauren):
         menu:
-            "Offer Lauren a back rub":
-                $ add_point(KCT.BOYFRIEND)
+            "Offer Lauren a back rub" (boyfriend=1.0):
+                $ reputation.add_point(RepComponent.BOYFRIEND)
 
                 u "Here, let me help."
 
@@ -122,8 +122,8 @@ label v9_lau_dorm:
 
                 la "Yeah! Let's get to work."
 
-            "Offer Lauren a hug":
-                $ add_point(KCT.BOYFRIEND)
+            "Offer Lauren a hug" (boyfriend=1.0):
+                $ reputation.add_point(RepComponent.BOYFRIEND)
             
                 u "Aww, come here."
 
@@ -154,8 +154,8 @@ label v9_lau_dorm:
 
     else:
         menu:
-            "Offer guidance":
-                $ add_point(KCT.BRO)
+            "Offer guidance" (bro=1.0):
+                $ reputation.add_point(RepComponent.BRO)
 
                 u "It's simple. Start with your main goal and work your way back to what to do now."
 
@@ -179,8 +179,8 @@ label v9_lau_dorm:
 
                 u "(Whew!)"
 
-            "Just listen":
-                $ add_point(KCT.BOYFRIEND)
+            "Just listen" (boyfriend=1.0):
+                $ reputation.add_point(RepComponent.BOYFRIEND)
 
                 u "What part's giving you the most trouble? How can I help?"
 
@@ -236,8 +236,8 @@ label v9_lau_dorm:
 
             u "No! We can top that!"
 
-        "Support Lauren":
-            $ add_point(KCT.BOYFRIEND)
+        "Support Lauren" (boyfriend=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
         
             u "Hmm. I see why you're stressed. But don't worry. We can come up with something just as awesome."
 
@@ -254,7 +254,7 @@ label v9_lau_dorm:
             scene v9lau6c
             with dissolve
 
-    if lauren.relationship >= Relationship.KISS:
+    if CharacterService.is_kissed(lauren) or CharacterService.is_girlfriend(lauren):
         u "How about a hand job booth?"
 
         scene v9lau6e # FPP. Same camera as v9lau6, Lauren looks shocked, mouth closed.
@@ -308,7 +308,7 @@ label v9_lau_dorm:
     scene v9lau6c
     with dissolve
 
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         u "Five bucks to punch Grayson in the face-"
 
     else:
@@ -422,7 +422,7 @@ label v9_lau_dorm:
     scene v9lau11 # FPP. Show Lauren (Who is now stood up in her room), Lauren looks stressed, mouth closed.
     with dissolve
 
-    if lauren.relationship >= Relationship.KISS:
+    if CharacterService.is_kissed(lauren) or CharacterService.is_girlfriend(lauren):
         u "Whatever you choose, I'll be there with you."
 
         scene v9lau11a # FPP. Same camera as v9lau11, Lauren smile, mouth open.
@@ -506,16 +506,16 @@ label v9_lau_dorm:
     scene v9lau16 # FPP. Show Lauren, now stood near the door of her dorm, smile, mouth open.
     with dissolve
 
-    if lauren.relationship >= Relationship.KISS:
+    if CharacterService.is_kissed(lauren) or CharacterService.is_girlfriend(lauren):
         la "You were a lifesaver."
 
         scene v9lau16a # FPP. Same camera as v9lau16, Lauren smile, mouth closed.
         with dissolve
 
-        if lauren.relationship >= Relationship.GIRLFRIEND:
+        if CharacterService.is_girlfriend(lauren):
             menu:
-                "Flirt":
-                    $ add_point(KCT.BOYFRIEND)
+                "Flirt" (boyfriend=1.0):
+                    $ reputation.add_point(RepComponent.BOYFRIEND)
 
                     u "One might say, your hero?"
 
@@ -524,8 +524,8 @@ label v9_lau_dorm:
 
                     la "One might."
 
-                "Be romantic":
-                    $ add_point(KCT.BOYFRIEND)
+                "Be romantic" (boyfriend=1.0):
+                    $ reputation.add_point(RepComponent.BOYFRIEND)
 
                     u "I just want you to know you can count on me. Always."
 
@@ -565,20 +565,20 @@ label v9_lau_dorm:
         scene v9lau16a
         with dissolve
 
-        if lauren.relationship < Relationship.GIRLFRIEND and kct == "loyal":
-            if kct == "loyal":
-                call screen kct_popup
+        if not CharacterService.is_girlfriend(lauren) and reputation() == Reputations.LOYAL:
+            if reputation() == Reputations.LOYAL:
+                call screen reputation_popup
 
             menu:
-                "Kiss Lauren":
-                    $ add_point(KCT.BOYFRIEND)
+                "Kiss Lauren" (boyfriend=1.0):
+                    $ reputation.add_point(RepComponent.BOYFRIEND)
 
                     jump v9_lau_dorm_kiss
 
                 "Leave":
                     jump v9_lau_dorm_no_kiss
                 
-        elif lauren.relationship >= Relationship.GIRLFRIEND:
+        elif CharacterService.is_girlfriend(lauren):
             jump v9_lau_dorm_kiss
 
         else:
@@ -591,8 +591,8 @@ label v9_lau_dorm:
         with dissolve
 
         menu:
-            "Credit Lauren":
-                $ add_point(KCT.BOYFRIEND)
+            "Credit Lauren" (boyfriend=1.0):
+                $ reputation.add_point(RepComponent.BOYFRIEND)
 
                 u "It's gonna be a great event. Those Deer will be begging you to host every event from now on."
 
@@ -630,7 +630,7 @@ label v9_lau_dorm_kiss:
     scene v9lau17 # TPP. Show Lauren and MC kissing.
     with dissolve
 
-    play sound "sounds/kiss.mp3"
+    play sound sound.kiss
 
     pause 1
 

@@ -6,7 +6,7 @@ label v11_dinner_with_lauren:
 
     scene v11dwl1a # Fpp. Show Lauren from across teh table, slight smile mouth open
     with dissolve
-    play music "music/v10/Track Scene 40_2.mp3" fadein 2
+    play music music.ck1.v10.Track_Scene_40_2 fadein 2
     u "So... Our last event in London, how do you feel?"
 
     scene v11dwl1 # Fpp. same 1, mouth closed
@@ -154,7 +154,7 @@ label v11_dinner_with_lauren:
 
     la "I may or may not have already talked to her about this. *Chuckles*"
 
-    if lauren.relationship >= Relationship.GIRLFRIEND:
+    if CharacterService.is_girlfriend(lauren):
         scene v11dwl1e
         with dissolve
 
@@ -338,7 +338,7 @@ label v11_dinner_with_lauren:
                 
                 u "Haha, I don't think so, no. Why?"
 
-                if kct == "loyal":
+                if reputation() == Reputations.LOYAL:
                     scene v11dwl1e
                     with dissolve
 

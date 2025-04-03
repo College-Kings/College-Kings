@@ -4,20 +4,26 @@ label v8_ri_start:
     stop music fadeout 3
 
     $ sceneList.add("v8_riley")
-    $ riley.relationship = Relationship.FWB
+    $ CharacterService.set_relationship(riley, Relationship.FWB)
+    $ CharacterService.remove_mood(riley, Moods.TEASED)
 
     scene v8s25 # Same as sfr4ri55 (from v7) but MC talking now
     with dissolve
     u "Mhm... Tell me more."
 
-    if config_censored:
+    if is_censored:
         call screen censored_popup("v8s3_nsfwSkipLabel1")
+
+    lovense vibrate 3
+    lovense rotate 1
+    lovense suction 1
+    lovense thrust 1
 
     scene v8s26 # FPP (MC still sitting on the bed). Riley stands up and is looking into the camera and talking seductively, about to take her dress off. She should be visible at least down until her knees
     with dissolve
     ri "I'd rather show you instead."
 
-    play music "music/msexy.mp3" ###CHECK - Maybe add more sexy time music?
+    play music music.ck1.sexy ###CHECK - Maybe add more sexy time music?
 
     scene v8s26a # Riley's dress is off now. She's wearing a sexy red lingerie underneath and showing off her body, seductive expression and mouth closed
     with fade
@@ -67,6 +73,11 @@ label v8_ri_start:
     with fade
     pause 1
 
+    lovense vibrate 4
+    lovense rotate 2
+    lovense suction 2
+    lovense thrust 1
+
     scene v8s28 # TPP. MC crouched and has his hands on her panties, about to remove it. Close up shot so that MC's face, hands and Riley's bottom is visible
     with dissolve
     pause 0.5
@@ -98,6 +109,11 @@ label v8_ri_start:
     # scene v8s28c
     # with dissolve
     # ri "...ride you so badly right now!"
+
+    lovense vibrate 6
+    lovense rotate 2
+    lovense suction 2
+    lovense thrust 2
 
     scene v8s29 # TPP. MC is in the bed, turned towards Riley who is still standing and hand gesturing her to come. Camera behind Riley's ass and focus on it (DOF blur on MC). Note: s29 will be leading up to the posture in Animation 1 in three frames. Check at the end for reference (just posture, camera angle is different)
     with fade
@@ -131,6 +147,11 @@ label v8s3_rileyCowgirl:
     ri "Mmmm..."
     u "(She's so wet, she slipped right through.)"
     pause
+
+    lovense vibrate 7
+    lovense rotate 3
+    lovense suction 3
+    lovense thrust 2
 
     scene v8ricg2
     with dissolve
@@ -185,6 +206,11 @@ label v8s3_rileyLiftDoggy:
     ri "Fuck yes! Just like that!"
     pause
 
+    lovense vibrate 8
+    lovense rotate 3
+    lovense suction 3
+    lovense thrust 2
+
     scene v8ridg3f
     with dissolve
     ri "*Moans loudly*"
@@ -192,6 +218,12 @@ label v8s3_rileyLiftDoggy:
     u "Ahh! Get your hands here."
 
 label v8s3_rileyDoggy:
+
+    lovense vibrate 10
+    lovense rotate 4
+    lovense suction 4
+    lovense thrust 3
+
     scene v8ridg2
     with dissolve
     pause 3
@@ -201,6 +233,11 @@ label v8s3_rileyDoggy:
     ri "Oh God baby, you feel so... *moans*"
     ri "...fucking good!!!"
     u "It's about to feel better now."
+
+    lovense vibrate 14
+    lovense rotate 5
+    lovense suction 5
+    lovense thrust 4
 
     scene v8ridg2f
     with dissolve
@@ -239,7 +276,9 @@ label v8s3_rileyDoggy:
 
     $ renpy.end_replay()
 
-    play music "music/mlove.mp3" fadein 2
+    lovense stop
+    
+    play music music.ck1.mlove fadein 2
 
     scene v8s33a # Same as v8s33 but Riley mouth closed
     with dissolve
@@ -257,7 +296,7 @@ label v8s3_rileyDoggy:
 
     scene v8s33_2 # TPP. Close up of MC and Riley kissing from top
     with dissolve
-    play sound "sounds/kiss.mp3"
+    play sound sound.kiss
     pause 0.5
 
     scene v8s33a
@@ -305,7 +344,7 @@ label v8s3_rileyDoggy:
 label v8s3_nsfwSkipLabel1:
     scene v8s33_2
     with dissolve
-    play sound "sounds/kiss.mp3"
+    play sound sound.kiss
     pause 0.5
 
     scene v8s32a # MC on his back and Riley leaning over on him and sleeping
@@ -391,7 +430,7 @@ label v8s3_nsfwSkipLabel1:
     with dissolve
     pause 0.5
 
-    play sound "sounds/kiss.mp3"
+    play sound sound.kiss
 
     scene v8s36a # Riley gives a quick peck on MC's lips
     with dissolve

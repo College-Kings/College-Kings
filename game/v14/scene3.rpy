@@ -4,7 +4,7 @@
 # Time: Night
 
 label v14s03:
-    play music "music/v13/Track Scene 62a.mp3" fadein 2
+    play music music.ck1.v13.Track_Scene_62a fadein 2
     
     scene v14s03_1 # TPP. MC Imre and ryan arriving at red light district
     with dissolve

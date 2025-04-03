@@ -1,15 +1,27 @@
 init python:
-    class FightStance(SmartEnum):
-        AGGRESSIVE = 1
-        FORWARD = 2
-        SOLID = 3
-        DEFENSIVE = 4
+    class FightStance(IntEnum):
+        AGGRESSIVE = enum.auto()
+        FORWARD = enum.auto()
+        SOLID = enum.auto()
+        DEFENSIVE = enum.auto()
+
+        @classmethod
+        def _missing_(cls, value):
+            return cls.AGGRESSIVE
 
 
     class BasePlayer:
-        MAX_GUARD = FightStance.DEFENSIVE.value + 1 # Turtle stance bonus
+        MAX_GUARD = FightStance.DEFENSIVE.value + 1  # Turtle stance bonus
 
-        def __init__(self, name, stance, health=20, stamina=8, attack_multiplier=1, quirk=None):
+        def __init__(
+            self,
+            name: str,
+            stance: FightStance,
+            health: int = 20,
+            stamina: int = 8,
+            attack_multiplier: int = 1,
+            quirk: Optional[FightQuirk] = None,
+        ):
             self.name = name
             self.stance = stance
             self.stamina = stamina
@@ -18,23 +30,26 @@ init python:
             self.quirk = quirk
 
             self.max_stamina = stamina
-            self.stance_bonus = None
+            self.stance_bonus: Optional[str] = None
 
             self._health = health
             self._guard = stance.value
 
             self.wins = 0
-            self.turn_moves = [Turtle(), EndTurn()]
+            self.turn_moves: list[FightMoves] = [
+                Turtle(),
+                EndTurn(),
+            ]
             self.base_attacks = []
             self.special_attack = None
             self.previous_moves = []
-            
+
         @property
         def health(self):
             return int(self._health)
 
         @health.setter
-        def health(self, value):
+        def health(self, value: int):
             self._health = max(value, 0)
 
         @property
@@ -42,61 +57,48 @@ init python:
             return int(self._guard)
 
         @guard.setter
-        def guard(self, value):
+        def guard(self, value: int):
             self._guard = max(value, 0)
 
-        @property
-        def rank(self):
-            rv = FightRank.UNDERDOG
-            for rank in FightRank:
-                if rank.value["win_requirement"] > self.wins:
-                    break
-                rv = rank
-            return rv
-
-        def set_specials(self):
-            for attr in self.attributes:
-                if attr.value == 10:
-                    self.special_abilities.add(attr.active_ability)
-                    self.passive_abilities.add(attr.passive_ability)
-                elif attr.value >= 5:
-                    self.passive_abilities.add(attr.passive_ability)
-
-        def set_stance_bonus(self, move):
+        def set_stance_bonus(self, move: "FightMoves"):
             if self.stance == move.ideal_stance:
                 self.stance_bonus = move.name
             else:
                 self.stance_bonus = None
 
-        def get_primed_muliplier(self, fight, move):
+        def get_primed_muliplier(
+            self, fight: Fight, move: "FightMoves"
+        ):
             if isinstance(self, Player):
                 return 1.0
-            
+
             try:
-                if fight.move_list[-1][fight.player.name].count(move.name) != 2:
+                if fight.move_list[-1][fight.player.name].count(move) != 2:
                     return 1.0
 
-                if self.health / self.max_health <= 0.25:
+                if self.health / float(self.max_health) <= 0.25:  ### decimals!
                     return 0.7
-                elif 0.25 < self.health / self.max_health <= 0.5:
+                elif 0.25 < self.health / float(self.max_health) <= 0.5:
                     return 0.4
                 else:
                     return 0.1
-            
+
             except IndexError:
                 return 1.0
 
-        def get_reckless_multiplier(self, fight):
+        def get_reckless_multiplier(self, fight: Fight):
             if isinstance(self, Player):
                 return 1.0
 
             try:
-                if not isinstance(fight.move_list[-5][fight.player.name][-1], Turtle) and not isinstance(fight.move_list[-3][fight.player.name][-1], Turtle):
+                if not isinstance(
+                    fight.move_list[-5][fight.player.name][-1], Turtle
+                ) and not isinstance(fight.move_list[-3][fight.player.name][-1], Turtle):
                     return 1.0
 
-                if self.health / self.max_health <= 0.25:
+                if self.health / float(self.max_health) <= 0.25:
                     return 1.9
-                elif 0.25 < self.health / self.max_health <= 0.5:
+                elif 0.25 < self.health / float(self.max_health) <= 0.5:
                     return 1.6
                 else:
                     return 1.3
@@ -104,7 +106,12 @@ init python:
             except IndexError:
                 return 1.0
 
-        def get_calculating_muliplier(self, fight):
+        def get_calculating_muliplier(self, fight: Fight):
+            if fight.opponent.fighter is None:
+                raise AttributeError(
+                    f"object '{fight.opponent.__class__.__name__}' attribute 'fighter' not set"
+                )
+
             if isinstance(self, Player):
                 return 0
 
@@ -112,31 +119,47 @@ init python:
                 if fight.move_list[-4][self.name] != fight.move_list[-2][self.name]:
                     return 0
 
-                if opponent.health / opponent.max_health <= 0.25:
+                if (
+                    fight.opponent.fighter.health / float(fight.opponent.fighter.max_health)
+                    <= 0.25
+                ):
                     return 0.9
-                elif 0.25 < opponent.health / opponent.max_health <= 0.5:
+                elif (
+                    0.25
+                    < fight.opponent.fighter.health
+                    / float(fight.opponent.fighter.max_health)
+                    <= 0.5
+                ):
                     return 0.6
                 else:
                     return 0.3
-            
+
             except IndexError:
                 return 0
 
-        def get_stance_multiplier(self, fight):
+        def get_stance_multiplier(self, fight: Fight):
             if self.stance_bonus == "Body Hook":
                 return 1.2
 
-            if self.stance_bonus == "Kick" and self.stamina == 6:
+            # Stance Bonus: Kick
+            if self.stance_bonus == "Kick" and self.stamina == 5:
                 return 1.2
 
             return 1.0
 
 
     class Opponent(BasePlayer):
-        def __init__(self, name, stance, health=20, stamina=8, attack_multiplier=1):
+        def __init__(
+            self,
+            name: str,
+            stance: FightStance,
+            health: int = 20,
+            stamina: int = 8,
+            attack_multiplier: int = 1,
+        ):
             BasePlayer.__init__(self, name, stance, health, stamina, attack_multiplier)
 
-            self.stance_images = None
+            self.stance_images: dict[FightStance, str] = {}
 
         @property
         def stance_image(self):
@@ -181,21 +204,21 @@ label fight_start_turn(fight, target, attacker):
 
     scene black
 
-    if attacker == fight.player:
-        show text "Your Turn"
+    if attacker == fight.player.fighter:
+        show text _("Your Turn")
     else:
-        show text "Opponent's turn"
+        show text _("Opponent's turn")
 
     pause 1.0
 
     $ overwhelmed_multiplier = 1
 
-    if attacker == fight.opponent:
+    if attacker == fight.opponent.fighter:
         # Overwhelmed
         if len(fight.move_list[-1][target.name]) >= 4:
-            if opponent.health / opponent.max_health <= 0.25:
+            if attacker.health / float(attacker.max_health) <= 0.25:
                 $ overwhelmed_multiplier = 1.9
-            elif 0.25 < opponent.health / opponent.max_health <= 0.5:
+            elif 0.25 < attacker.health / float(attacker.max_health) <= 0.5:
                 $ overwhelmed_multiplier = 1.6
             else:
                 $ overwhelmed_multiplier = 1.3
@@ -210,7 +233,7 @@ label fight_start_turn(fight, target, attacker):
     if attacker == fight.player.fighter:
         call screen fight_player_turn(fight, attacker, target)
     else:
-        call fight_attack_turn(fight, target, attacker)
+        call fight_attack_turn(fight, target, attacker) from _call_fight_attack_turn
 
 
 label fight_attack_turn(fight, target, attacker, move=None):
@@ -229,7 +252,7 @@ label fight_attack_turn(fight, target, attacker, move=None):
     if isinstance(move, EndTurn):
         $ attacker.stamina = attacker.max_stamina + min(attacker.stamina, 2)
         $ attacker.guard = attacker.stance.value
-        call fight_start_turn(fight, attacker, target)
+        call fight_start_turn(fight, attacker, target) from _call_fight_start_turn
 
     elif isinstance(move, Turtle):
         $ attacker.guard = FightStance.DEFENSIVE.value
@@ -238,7 +261,7 @@ label fight_attack_turn(fight, target, attacker, move=None):
         if attacker.stance == FightStance.SOLID:
             $ attacker.guard += 1
 
-        call fight_start_turn(fight, attacker, target)
+        call fight_start_turn(fight, attacker, target) from _call_fight_start_turn_1
 
     if hasattr(move, "images") and not move.images:
         $ raise NotImplementedError("Move {} is missing images.".format(move.name))
@@ -248,14 +271,15 @@ label fight_attack_turn(fight, target, attacker, move=None):
     scene expression move.images["start_image"]
     pause 1.0
 
-    # Player attacks
-    # Opponent Approachs
-    $ primed_multiplier = target.get_primed_muliplier(fight, move)
+        # Player attacks
+        # Opponent Approachs
+    $ primed_multiplier = target.get_primed_muliplier(fight, move) 
 
     $ reckless_multiplier = target.get_reckless_multiplier(fight)
 
-    # Calculating
-    $ attacker.health -= round(move.damage * target.get_calculating_muliplier(fight))
+    if attacker == fight.player.fighter: 
+        # Calculating
+        $ attacker.health -= round(move.damage * target.get_calculating_muliplier(fight))
 
     # Stance Bonus
     $ stance_multiplier = target.get_stance_multiplier(fight)
@@ -278,7 +302,7 @@ label fight_attack_turn(fight, target, attacker, move=None):
     if isinstance(attacker.quirk, SeeingRed) and not fight.moves_list[-1][attacker.name]:
         $ damage *= 2
 
-    call move_attack(fight, target, attacker, move, damage)
+    call move_attack(fight, target, attacker, move, damage) from _call_move_attack
 
     if target.health <= 0:
         show screen phone_icon
@@ -289,10 +313,10 @@ label fight_attack_turn(fight, target, attacker, move=None):
         $ attacker.stance = move.end_stance
 
     if attacker.stamina > 0:
-        if attacker == fight.player:
-            call screen fight_player_turn(fight, fight.player, fight.opponent)
+        if attacker == fight.player.fighter:
+            call screen fight_player_turn(fight, fight.player.fighter, fight.opponent.fighter)
         else:
-            call fight_attack_turn(fight, target, attacker)
+            call fight_attack_turn(fight, target, attacker) from _call_fight_attack_turn_1
 
     else:
         # Seeing Red quirk
@@ -301,4 +325,4 @@ label fight_attack_turn(fight, target, attacker, move=None):
         else:
             $ attacker.guard = attacker.stance.value
         $ attacker.stamina = attacker.max_stamina
-        call fight_start_turn(fight, attacker, target)
+        call fight_start_turn(fight, attacker, target) from _call_fight_start_turn_2

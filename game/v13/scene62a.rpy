@@ -4,14 +4,14 @@
 # Time: Night
 
 label v13s62a:
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
 
     scene v13s62a_1 # FPP. Lindsey walking into the hotel room, sexy expression, mouth closed
     with dissolve
 
     pause 1.25
 
-    play music "music/v13/Track Scene 62a.mp3" fadein 2
+    play music music.ck1.v13.Track_Scene_62a fadein 2
 
     scene v13s62a_2 # FPP. Lindsey standing next to MC, grabbing his hand, sexy expression, mouth open
     with dissolve
@@ -41,13 +41,12 @@ label v13s62a:
     scene v13s62a_6 # TPP. Show Lindsey taking off her top, sexy expression, mouth closed
     with dissolve
 
-    if config_censored:
-        if renpy.loadable("v14/scene1.rpy"):
-            call screen censored_popup("v14s01a_nsfwSkipLabel1")
-        else:
-            call screen censored_popup("end13")
+    if is_censored:
+        call screen censored_popup("v14s01a_nsfwSkipLabel1")
 
     pause
+
+    lovense vibrate 2
 
     scene v13s62a_7 # TPP. Show LIndsey taking off her pants (she has panties on, no bra), sexy expression, mouth closed
     with dissolve
@@ -91,6 +90,8 @@ label v13s62a:
 
     #pause
 
+    lovense stop
     stop music fadeout 3
 
-    jump end13
+    jump v14_start
+    

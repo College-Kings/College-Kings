@@ -10,16 +10,16 @@ label v12_room_sneak:
 
     pause 0.75
 
-    play music "music/v12/Track Scene 30.mp3" fadein 2
+    play music music.v12_Track_Scene_30 fadein 2
 
     if not v11_riley_roomate:
-        if chloe.relationship >= Relationship.FWB:
+        if CharacterService.is_fwb(chloe) or CharacterService.is_girlfriend(chloe):
             scene v12rs2 # FPP. MC standing in front of Chloe's bed, looking at her as she sleeps
             with dissolve
 
             u "(So beautiful.)"
 
-            play sound "sounds/kiss.mp3"
+            play sound sound.kiss
 
             scene v12rs3 # TPP. Show MC giving Chloe a quick kiss on the cheek, Chloe still sleeping
             with dissolve

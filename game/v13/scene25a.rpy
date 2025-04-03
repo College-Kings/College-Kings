@@ -9,7 +9,7 @@ label v13s25a:
 
     kourt "This is so nice. It's almost like something out of a movie."
 
-    play music "music/v13/Track Scene 25.mp3" fadein 2
+    play music music.v13_Track_Scene_25 fadein 2
 
     scene v13s25a_2 # FPP. Mc and are sitting down facing each other, Kourtney slight smiles, mouth closed
     with dissolve
@@ -25,8 +25,8 @@ label v13s25a:
     with dissolve
 
     menu:
-        "Maybe":
-            $ add_point(KCT.TROUBLEMAKER)
+        "Maybe" (troublemaker=1.0):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             scene v13s25a_2
             with dissolve
@@ -122,8 +122,8 @@ label v13s25a:
 
             jump v13s27
 
-        "No":
-            $ add_point(KCT.BOYFRIEND)
+        "No" (boyfriend=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
 
             scene v13s25a_2
             with dissolve
@@ -250,7 +250,7 @@ label v13s25a:
 
             kourt "I could have gotten over your age, you know."
 
-            play sound "sounds/kiss.mp3"
+            play sound sound.kiss
             scene v13s25a_8 # TPP. Kourtney pulls Mc's face towards her, and she kisses MC on the cheek
             with dissolve
 

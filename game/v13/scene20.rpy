@@ -7,9 +7,9 @@ label v13s20:
     scene v13s20_1 # TPP. Show MC walking into Charli's room, smirking, mouth closed
     with dissolve
 
-    play music "music/v13/Track Scene 20.mp3" fadein 2
+    play music music.ck1.v13.Track_Scene_20 fadein 2
 
-    play sound "sounds/doorclose.mp3"
+    play sound sound.door_close
 
     u "(Ohhhh shit... I'm gonna fuck some shit up.) *Laughs*"
 
@@ -36,8 +36,8 @@ label v13s20_closet:
     u "(They low-key smell good, though. It'd be a shame if someone pissed on his shit...)"
 
     menu:
-        "Soak that shit":
-            $ add_point(KCT.TROUBLEMAKER)
+        "Soak that shit" (troublemaker=1.0):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
             u "(Guess I gotta be that someone...)"
 
             scene v13s20clo_4 # TPP. Show MC pissing on Charli's clothes, smirking, mouth closed
@@ -81,8 +81,8 @@ label v13s20_bleach:
     u "What can we do with this?"
 
     menu:
-        "Bleach his suitcase":
-            $ add_point(KCT.TROUBLEMAKER)
+        "Bleach his suitcase" (troublemaker=1.0):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
             $ v13s20_bleach_suitcase = True
             u "(Riley said this suitcase is special to him, and that bleach would be a good addition to it... Let's find out.) *Laughs*"
 
@@ -155,8 +155,8 @@ label v13s20_toothbrush:
     u "Ha... The classic \"toothbrush in the toilet\" trick, shall we?"
 
     menu:
-        "Flush, flush, motherfucker!":
-            $ add_point(KCT.TROUBLEMAKER)
+        "Flush, flush, motherfucker!" (troublemaker=1.0):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
             scene v13s20brush_4 # TPP. Show MC bending over the toilet, sticking the toothbrush in the toilet, smirking, mouth closed
             with dissolve
 
@@ -165,7 +165,7 @@ label v13s20_toothbrush:
             scene v13s20brush_5 # FPP. Same positioning as v13s20brush_4, MC sticking the toothbrush in the toilet
             with dissolve
 
-            $ grant_achievement("flush_flush")
+            grant Achievement("flush_flush", "Flush Charli's toothbrush")
             u "TASTE SHIT BITCH! *Chuckles*"
 
             scene v13s20brush_5a # FPP. Same as v13s20brush_5, MC moved the toothbrush a bit

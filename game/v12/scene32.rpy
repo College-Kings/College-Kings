@@ -6,18 +6,6 @@
 # v12aumcsexy (MC and Aubrey sexy pose)
 # v12aunaselfie (Aubrey and Naomi selfie wearing bras, both smiling, mouths closed)
 # v12aucar (Aubrey sexy pic on car)
-
-init python:
-    def v12s32kiwiiPost1_Reply1():
-        v12s32kiwiiPost1.newComment(naomi, _("Hehe, you too! Hope to see you soon...;)"), numberLikes=renpy.random.randint(583, 912), force_send=True)
-        v12s32kiwiiPost1.newComment(chloe, _("OMG!?!?!?!"), numberLikes=renpy.random.randint(124,354), force_send=True)
-        v12s32kiwiiPost1.newComment(imre, _("Bro... Is that you?!"), mentions=[mc], numberLikes=renpy.random.randint(53,93), force_send=True)
-    
-    def v12s32kiwiiPost1_Reply2():
-        v12s32kiwiiPost1.newComment(aubrey, _("You're so welcome... Today was amazing. <3"), numberLikes=renpy.random.randint(253, 462), force_send=True)
-        v12s32kiwiiPost1.newComment(chloe, _("OMG!?!?!?!"), numberLikes=renpy.random.randint(124,354), force_send=True)
-        v12s32kiwiiPost1.newComment(imre, _("Bro... Is that you?!"), mentions=[mc], numberLikes=renpy.random.randint(53,93), force_send=True)
-
 label v12s32:
 # -MC and Aubrey are walking along the sidewalk-
 
@@ -26,7 +14,7 @@ label v12s32:
 
     u "So, where exactly are they doing the shoot?"
 
-    play music "music/v12/Track Scene 32_1.mp3" fadein 2
+    play music music.v12_Track_Scene_32_1 fadein 2
 
     scene v12s32_2 # FPP, close up AUbrey looking at mc, but walking forwards. Aubrey slightly nervous not smiling, mouth open
     with dissolve
@@ -76,7 +64,7 @@ label v12s32:
     pause 0.7
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 32_2.mp3" fadein 2
+    play music music.v12_Track_Scene_32_2 fadein 2
 
     scene v12s32_4 # FPP shows photographer taking pictures of Naomi (Aubrey's sister)
     with dissolve
@@ -263,7 +251,7 @@ label v12s32:
     pg "I want you posing together, get sexy!"
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 32_3.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_32_3 fadein 2
 
     scene v12s32_15 # TPP show Aubrey and mc, Aubrey looking at the camera, mc confused looking at aubrey, mouth open
     with dissolve
@@ -271,8 +259,8 @@ label v12s32:
     u "Oh umm..."
 
     menu:
-        "Turn your back to Aubrey":
-            $ add_point(KCT.BRO)
+        "Turn your back to Aubrey" (bro=1.0):
+            $ reputation.add_point(RepComponent.BRO)
             scene v12s32_15a #same 15, MC crosses his arms and puts his back to Aubrey, aubrey a bit dissapointed, mouth upen
             with dissolve
 
@@ -293,8 +281,8 @@ label v12s32:
 
             pg "I wouldn't call that sexy but, alright..."
 
-        "Put your arms around Aubrey":
-            $ add_point(KCT.BOYFRIEND)
+        "Put your arms around Aubrey" (boyfriend=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             scene v12s32_15c #same 15, Aubrey has her back to MC and he wraps his arms around her, squeezing her in tight, Aubrey smiles at him, mouth closed
             with dissolve
 
@@ -481,8 +469,8 @@ label v12s32:
     u "(I think she's jealous of her sister or something, maybe I should boost her up.)"
 
     menu:
-        "Boost Aubrey":
-            $ add_point(KCT.TROUBLEMAKER)
+        "Boost Aubrey" (troublemaker=1.0):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
             $ v12s32_Aubrey_Boost = True
             $ aubrey.points += 1
 
@@ -504,8 +492,8 @@ label v12s32:
 
             u "*Whisper* You got this, just be yourself."
 
-        "Leave it alone":
-            $ add_point(KCT.BRO)
+        "Leave it alone" (bro=1.0):
+            $ reputation.add_point(RepComponent.BRO)
             scene v12s32_21c 
             with dissolve
 
@@ -601,7 +589,7 @@ label v12s32:
     pause 0.7
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 32_4.mp3" fadein 2
+    play music music.v12_Track_Scene_32_4 fadein 2
 
     if v12s32_Aubrey_Boost:
         scene v12s32_27 # TPP show aubrey hugging mc, aubrey mouth open, cute smile
@@ -778,62 +766,46 @@ label v12s32:
     au "I wanna get back as soon as possible and show these to everyone. I posted a few on Kiwii and my sister did too. Let's hurry back."
 
     python:
-        v12s32kiwiiPost1 = KiwiiPost(lews_official, "v12/v12s32_15g.webp", _("New faces in our new pieces! Check out the new Lavish Line on our website ;)"), numberLikes=3889)
-        v12s32kiwiiPost1.newComment(naomi, _("That's my baby sis! <3"), numberLikes=renpy.random.randint(952, 1512), force_send=True)
-        v12s32kiwiiPost1.newComment(aubrey, _("Thank you so much for having us! Can't wait for the future..."), numberLikes=renpy.random.randint(367, 526), force_send=True)
-        v12s32kiwiiPost1.newComment(chloe, _("OMG!?!?!?!"), numberLikes=renpy.random.randint(124,354), force_send=True)
-        v12s32kiwiiPost1.newComment(imre, _("Bro... Is that you?!"), mentions=[mc], numberLikes=renpy.random.randint(53,93), force_send=True)
+        kiwii_post: KiwiiPost = KiwiiService.new_post(lews_official, "ck1_v12_lews_post_1", _("New faces in our new pieces! Check out the new Lavish Line on our website ;)"), number_likes=3889)
 
-        v12s32kiwiiPost2 = KiwiiPost(naomi, "v12/v12s32_24.webp", _("When little sis visits you at work and leaves with your JOB! #ProudBigSis"), numberLikes=2107)
-        v12s32kiwiiPost2.newComment(aubrey, _("Haha! I love you boo... Thank you for today :)"), mentions=[naomi], numberLikes=renpy.random.randint(278, 363), force_send=True)
-        v12s32kiwiiPost2.newComment(naomi, _("You're sooo welcome sissy. #ItRunsInTheFamily"), mentions=[aubrey], numberLikes=renpy.random.randint(747, 973), force_send=True) 
-        v12s32kiwiiPost2.newComment(nora, _("Hotties!! Hope you had an amazing time... Can't wait to see all the pics!"), numberLikes=renpy.random.randint(253, 462), force_send=True)
-        v12s32kiwiiPost2.newComment(chloe, _("JOB?!?!?!"), numberLikes=renpy.random.randint(245, 587), force_send=True)
-        v12s32kiwiiPost2.newComment(naomi, _("Thank you... <3"), numberLikes=renpy.random.randint(346, 579), force_send=True)
-        v12s32kiwiiPost2.newComment(aubrey, _("Thanks guys... I'll tell you all about it Chlo! Lol"), numberLikes=renpy.random.randint(253, 462), force_send=True)
+        v12s32_kiwii_reply1 = KiwiiBuilder(kiwii_post)
+        v12s32_kiwii_reply1.new_comment(naomi, _("Hehe, you too! Hope to see you soon...;)"), number_likes=renpy.random.randint(583, 912))
 
-        v12s32kiwiiPost3 = KiwiiPost(aubrey, "v12/v12s32_33.webp", _("You're looking at the newest Lew's model! #BestDayEver"), numberLikes=934)
-        v12s32kiwiiPost3.newComment(naomi, _("Watch out world, there's two of us... ;)"), numberLikes=renpy.random.randint(532, 737), force_send=True)
-        v12s32kiwiiPost3.newComment(chloe, _("Holy shit, Aubs! Fucking HOTTTT!!!"), numberLikes=renpy.random.randint(320, 479), force_send=True)
-        v12s32kiwiiPost3.newComment(aubrey, _("Haha, thank you babes <3"), numberLikes=renpy.random.randint(253, 462), force_send=True)
-        v12s32kiwiiPost3.addReply(_("Absolutely deserved."), numberLikes=renpy.random.randint(126, 367))
-        v12s32kiwiiPost3.newComment(ryan, _("Holy..."), numberLikes=renpy.random.randint(78, 153))
-        v12s32kiwiiPost3.newComment(imre, _("Pick up your jaw idiot! LOL"), mentions=[ryan], numberLikes=renpy.random.randint(69, 178))
+        v12s32_kiwii_reply2 = KiwiiBuilder(kiwii_post)
+        v12s32_kiwii_reply2.new_comment(aubrey, _("You're so welcome... Today was amazing. <3"), number_likes=renpy.random.randint(253, 462))
+        
+        KiwiiService.new_comment(kiwii_post, naomi, _("That's my baby sis! <3"), number_likes=renpy.random.randint(952, 1512))
+        KiwiiService.new_comment(kiwii_post, aubrey, _("Thank you so much for having us! Can't wait for the future..."), number_likes=renpy.random.randint(367, 526))
+        KiwiiService.new_comment(kiwii_post, chloe, _("OMG!?!?!?!"), number_likes=renpy.random.randint(124,354))
+        KiwiiService.new_comment(kiwii_post, imre, _("Bro... Is that you?!"), number_likes=renpy.random.randint(53,93), mentions=[mc])
+        KiwiiService.add_replies(kiwii_post,
+            KiwiiReply(_("Thanks for the invite! It was really nice to meet you..."), number_likes=renpy.random.randint(278,421), mentions=[naomi], next_comment=v12s32_kiwii_reply1),
+            KiwiiReply(_("Had an amazing time today... Thank you, gorgeous!"), mentions=[aubrey], next_comment=v12s32_kiwii_reply2)
+        )
 
+        kiwii_post: KiwiiPost = KiwiiService.new_post(naomi, "ck1_v12_lews_post_2", _("When little sis visits you at work and leaves with your JOB! #ProudBigSis"), number_likes=2107)
+        KiwiiService.new_comment(kiwii_post, aubrey, _("Haha! I love you boo... Thank you for today :)"), number_likes=renpy.random.randint(278, 363))
+        KiwiiService.new_comment(kiwii_post, naomi, _("You're sooo welcome sissy. #ItRunsInTheFamily"), number_likes=renpy.random.randint(747, 973), mentions=[aubrey]) 
+        KiwiiService.new_comment(kiwii_post, nora, _("Hotties!! Hope you had an amazing time... Can't wait to see all the pics!"), number_likes=renpy.random.randint(253, 462))
+        KiwiiService.new_comment(kiwii_post, chloe, _("JOB?!?!?!"), number_likes=renpy.random.randint(245, 587))
+        KiwiiService.new_comment(kiwii_post, naomi, _("Thank you... <3"), number_likes=renpy.random.randint(346, 579))
+        KiwiiService.new_comment(kiwii_post, aubrey, _("Thanks guys... I'll tell you all about it Chlo! Lol"), number_likes=renpy.random.randint(253, 462))
 
-#    python:
-#        v12s32kiwiiPost1 = KiwiiPost(lews_official, "v12/v12aumcsexy.webp", _("New faces in our new pieces! Check out the new Lavish Line on our website ;)"), numberLikes=3889)
-#        v12s32kiwiiPost1.newComment(naomi, _("That's my baby sis! <3"), numberLikes=renpy.random.randint(952, 1512), force_send=True)
-#        v12s32kiwiiPost1.newComment(aubrey, _("Thank you so much for having us! Can't wait for the future..."), numberLikes=renpy.random.randint(367, 526), force_send=True)
-#        v12s32kiwiiPost1.addReply(_("Thanks for the invite! It was really nice to meet you..."), v12s32kiwiiPost1_Reply1, mentions=[naomi], numberLikes=renpy.random.randint(278,421))
-#        v12s32kiwiiPost1.addReply(_("Had an amazing time today... Thank you, gorgeous!"), v12s32kiwiiPost1_Reply2, mentions=[aubrey])
-#
-#        v12s32kiwiiPost2 = KiwiiPost(naomi, "v12/v12aunaselfie.webp", _("When little sis visits you at work and leaves with your JOB! #ProudBigSis"), numberLikes=2107)
-#        v12s32kiwiiPost2.newComment(aubrey, _("Haha! I love you boo... Thank you for today :)"), mentions=[naomi], numberLikes=renpy.random.randint(278, 363), force_send=True)
-#        v12s32kiwiiPost2.newComment(naomi, _("You're sooo welcome sissy. #ItRunsInTheFamily"), mentions=[aubrey], numberLikes=renpy.random.randint(747, 973), force_send=True) 
-#        v12s32kiwiiPost2.addReply(_("Even more beautiful in person..."), numberLikes=renpy.random.randint(562, 789))
-#        v12s32kiwiiPost2.addReply(_("Aww, love this pic of you guys!"), numberLikes=renpy.random.randint(578, 865))
-#        v12s32kiwiiPost2.newComment(nora, _("Hotties!! Hope you had an amazing time... Can't wait to see all the pics!"), numberLikes=renpy.random.randint(253, 462))
-#        v12s32kiwiiPost2.newComment(chloe, _("JOB?!?!?!"), numberLikes=renpy.random.randint(245, 587))
-#        v12s32kiwiiPost2.newComment(naomi, _("Thank you... <3"), numberLikes=renpy.random.randint(346, 579))
-#        v12s32kiwiiPost2.newComment(aubrey, _("Thanks guys... I'll tell you all about it Chlo! Lol"), numberLikes=renpy.random.randint(253, 462))
-#
-#        v12s32kiwiiPost3 = KiwiiPost(aubrey, "v12/v12aucar.webp", _("You're looking at the newest Lew's model! #BestDayEver"), numberLikes=934)
-#        v12s32kiwiiPost3.newComment(naomi, _("Watch out world, there's two of us... ;)"), numberLikes=renpy.random.randint(532, 737))
-#        v12s32kiwiiPost3.newComment(chloe, _("Holy shit, Aubs! Fucking HOTTTT!!!"), numberLikes=renpy.random.randint(320, 479))
-#        v12s32kiwiiPost3.newComment(aubrey, _("Haha, thank you babes <3"), numberLikes=renpy.random.randint(253, 462))
-#        v12s32kiwiiPost3.addReply(_("Absolutely deserved."), numberLikes=renpy.random.randint(126, 367))
-#        v12s32kiwiiPost3.newComment(aubrey, _(":) Thanks to you..."), numberLikes=renpy.random.randint(167, 241))
-#        v12s32kiwiiPost3.newComment(ryan, _("Holy..."), numberLikes=renpy.random.randint(78, 153))
-#        v12s32kiwiiPost3.newComment(imre, _("Pick up your jaw idiot! LOL"), mentions=[ryan], numberLikes=renpy.random.randint(69, 178))
+        kiwii_post: KiwiiPost = KiwiiService.new_post(aubrey, "ck1_v12_lews_post_3", _("You're looking at the newest Lew's model! #BestDayEver"), number_likes=934)
+        KiwiiService.new_comment(kiwii_post, naomi, _("Watch out world, there's two of us... ;)"), number_likes=renpy.random.randint(532, 737))
+        KiwiiService.new_comment(kiwii_post, chloe, _("Holy shit, Aubs! Fucking HOTTTT!!!"), number_likes=renpy.random.randint(320, 479))
+        KiwiiService.new_comment(kiwii_post, aubrey, _("Haha, thank you babes <3"), number_likes=renpy.random.randint(253, 462))
+        KiwiiService.add_reply(kiwii_post, _("Absolutely deserved."), number_likes=renpy.random.randint(126, 367))
+        KiwiiService.new_comment(kiwii_post, ryan, _("Holy..."), number_likes=renpy.random.randint(78, 153))
+        KiwiiService.new_comment(kiwii_post, imre, _("Pick up your jaw idiot! LOL"), number_likes=renpy.random.randint(69, 178), mentions=[ryan])
 
     scene v12s32_33b # same 33, -Aubrey starts walking away-
     with dissolve
 
     menu: 
-        "Get Aubrey flowers":
+        "Get Aubrey flowers" (boyfriend=1.0):
             $ s12v32_get_aubrey_flowers = True
-            $ add_point(KCT.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             u "Wait a minute, Aubrey."
 
             scene v12s32_33d # aubrey turns around, looks at mc, curious, mouth open

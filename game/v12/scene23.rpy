@@ -4,13 +4,13 @@
 # Time: Night
 # Phone Images: None
 
-label v12_ms_rose_sex: #can only get here if joinwolves
+label v12_ms_rose_sex: #can only get here if mc.frat == Frat.WOLVES
     scene v12msr1 # TPP. Show MC walking out of Riley's room into the hallway, slight smile, mouth closed
     with dissolve
 
     pause 0.75
 
-    play music "music/v12/Track Scene 23_1.mp3" fadein 2
+    play music music.v12_Track_Scene_23_1 fadein 2
 
     scene v12msr2 # FPP. MC and Ms. Rose in the hallway, MC and Ms. Rose looking at each other, Ms. Rose slight smile, mouth open
     with dissolve
@@ -22,7 +22,7 @@ label v12_ms_rose_sex: #can only get here if joinwolves
 
     u "I've been around..."
 
-    if ms_rose.relationship >= Relationship.FWB:
+    if CharacterService.is_fwb(ms_rose):
         scene v12msr2d # FPP. Same as v12msr2, Ms. Rose, slight smile, mouth open, caressing MC's cheek
         with dissolve
 
@@ -81,11 +81,11 @@ label v12_ms_rose_sex: #can only get here if joinwolves
 
                 pause 0.75
 
-            "Let's go":
-                $ add_point(KCT.TROUBLEMAKER)
+            "Let's go" (troublemaker=1.0):
+                $ reputation.add_point(RepComponent.TROUBLEMAKER)
                 
                 $ sceneList.add("v12_rose")
-                $ ms_rose.relationship = Relationship.FWB
+                $ CharacterService.set_relationship(ms_rose, Relationship.FWB)
 
                 label v12_ms_rose_sex_sg:
 
@@ -125,7 +125,7 @@ label v12_ms_rose_sex: #can only get here if joinwolves
                 pause 0.75
 
                 stop music fadeout 3
-                play music "music/v12/Track Scene 23_2.mp3" fadein 2
+                play music music.v12_Track_Scene_23_2 fadein 2
 
                 scene v12msr10 # FPP. MC and Ms. Rose in living room, looking at each other, Ms. Rose slight smile, mouth closed
                 with dissolve
@@ -192,8 +192,13 @@ label v12_ms_rose_sex: #can only get here if joinwolves
 
                 u "Good... Fucking... God."
 
-                if config_censored:
+                if is_censored:
                     call screen censored_popup("v12s23_nsfwSkipLabel1")
+
+                lovense vibrate 2
+                lovense rotate 1
+                lovense suction 1
+                lovense thrust 1
 
                 scene v12msr15a # FPP. Same as v12msr15, Ms. Rose topless, seductive look, mouth open
                 with dissolve
@@ -219,6 +224,11 @@ label v12_ms_rose_sex: #can only get here if joinwolves
                 with dissolve
 
                 pause
+                
+                lovense vibrate 3
+                lovense rotate 2
+                lovense suction 2
+                lovense thrust 2
 
                 image v12rosso = Movie(play="images/v12/Scene 23/v12rosso.webm", loop=True, image="images/v12/Scene 23/v12rossoStart.webp", start_image="images/v12/Scene 23/v12rossoStart.webp") # Rose standing oral
                 image v12rossof = Movie(play="images/v12/Scene 23/v12rossof.webm", loop=True, image="images/v12/Scene 23/v12rossoStart.webp", start_image="images/v12/Scene 23/v12rossoStart.webp") # Rose standing oral spedup
@@ -236,6 +246,11 @@ label v12_ms_rose_sex: #can only get here if joinwolves
                 pause
 
                 ro "Ahhh... Haha, definitely getting an A for this. Mmm..."
+
+                lovense vibrate 6
+                lovense rotate 4
+                lovense suction 4
+                lovense thrust 4
 
                 scene v12rosso2 # Ignore as animation
                 with dissolve
@@ -268,6 +283,11 @@ label v12_ms_rose_sex: #can only get here if joinwolves
 
                 ro "Someone's eager..."
 
+                lovense vibrate 8
+                lovense rotate 6
+                lovense suction 6
+                lovense thrust 6
+
                 scene v12rossmf # Ignore as animation
                 with dissolve
                 pause
@@ -285,6 +305,11 @@ label v12_ms_rose_sex: #can only get here if joinwolves
                 pause
 
                 u "*Grunts*"
+
+                lovense vibrate 10
+                lovense rotate 8
+                lovense suction 8
+                lovense thrust 8
 
                 scene v12msr20 # TPP. Show MC moving Ms. Rose to the back of the white sofa
                 with dissolve
@@ -319,6 +344,11 @@ label v12_ms_rose_sex: #can only get here if joinwolves
                 pause
 
                 u "Ah ah ah... We're not anywhere near being finished."
+
+                lovense vibrate 13
+                lovense rotate 10
+                lovense suction 10
+                lovense thrust 10
 
                 scene v12rossd2f # Ignore as animation
                 with dissolve
@@ -368,6 +398,11 @@ label v12_ms_rose_sex: #can only get here if joinwolves
 
                 ro "Do it inside, [name]! Fill me up... Please... I..."
 
+                lovense vibrate 15
+                lovense rotate 12
+                lovense suction 12
+                lovense thrust 12
+
                 scene v12msr23 # TPP. Show MC cumming in Ms. Rose
                 with vpunch
 
@@ -395,6 +430,11 @@ label v12_ms_rose_sex: #can only get here if joinwolves
                 u "(Ho... ly... shit)"
 
                 u "I don't know where all that energy came from..."
+
+                lovense vibrate 16
+                lovense rotate 13
+                lovense suction 13
+                lovense thrust 13
 
                 scene v12msr27a # FPP. Same as v12msr27, Ms. Rose smiling, mouth open
                 with dissolve
@@ -444,25 +484,26 @@ label v12_ms_rose_sex: #can only get here if joinwolves
                 u "I'm feeling... really..."
 
                 stop music fadeout 3
-                play music "music/v12/Track Scene 23_3.mp3" fadein 2
+                play music music.ck1.v12.Track_Scene_23_3 fadein 2
 
                 label v12s23_nsfwSkipLabel1:
-
+                lovense stop
+                
                 scene black
                 with dissolve
 
-                play sound "sounds/dooropen.mp3"
+                play sound sound.door_open
 
                 pause
 
                 scene black
                 with dissolve
 
-                play music "sounds/driving1.mp3" fadein 2
+                play ambience ambience.driving fadein 2
 
                 pause
 
-                stop music fadeout 3
+                stop ambience fadeout 3
 
                 if not v11_riley_roomate:
                     scene v12msr29 # TPP. Chloe in front of MC and Ms. Rose, MC very drunk, Ms. Rose helping him stand up. Show Chloe looking at them, Chloe worried, mouth open (Only Chloe in shot)

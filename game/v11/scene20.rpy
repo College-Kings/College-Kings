@@ -6,7 +6,7 @@
 label v11_treasure_hunt:
     scene v11th1 # TPP. MC and Riley are walking together in the hallway outside their room, they're smiling, mouths closed
     with dissolve
-    play music "music/v11/Track Scene 20_1.mp3" fadein 2
+    play music music.ck1.v11.Track_Scene_20_1 fadein 2
     pause 0.75
 
     scene v11th2 # TPP. Show MC and Riley in the lobby, they're walking, still smiling, mouths closed
@@ -298,9 +298,9 @@ label v11_treasure_hunt:
     with dissolve
 
     menu:
-        "She will miss":
+        "She will miss" (troublemaker=1.0):
             $ v11_she_will_miss = True
-            $ add_point(KCT.TROUBLEMAKER)
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
             scene v11th14d # FPP. Same as v11th14, MC and Riley looking at each other, Riley holding the gun, Riley mouth closed, slight smirk
             with dissolve
 
@@ -331,7 +331,7 @@ label v11_treasure_hunt:
 
             u "Three... Two... One..."
 
-            play sound "sounds/gun.mp3"
+            play sound sound.gun
 
             pause 0.5
 
@@ -363,7 +363,7 @@ label v11_treasure_hunt:
             scene v11th17c # TPP. Same as v11th17b, Riley now aiming the gun at the bullseye, mouth closed, nervous expression
             with dissolve
 
-            play sound "sounds/gun.mp3"
+            play sound sound.gun
             pause 1
 
             scene v11th18a # TPP. Show a bullet mark that hit right in the middle of the bullseye
@@ -396,8 +396,8 @@ label v11_treasure_hunt:
 
             ri "I guess it just comes naturally... *Chuckles*"
 
-        "She won't miss":
-            $ add_point(KCT.BRO)
+        "She won't miss" (bro=1.0):
+            $ reputation.add_point(RepComponent.BRO)
             scene v11th14g # FPP. Same as v11th14d, Riley smiling, mouth closed, different pose
             with dissolve
 
@@ -421,7 +421,7 @@ label v11_treasure_hunt:
             scene v11th17c
             with dissolve
 
-            play sound "sounds/gun.mp3"
+            play sound sound.gun
 
             pause 1
 
@@ -452,14 +452,14 @@ label v11_treasure_hunt:
 
             u "Three... Two... One..."
 
-            play sound "sounds/gun.mp3"
+            play sound sound.gun
 
             pause 0.75
 
             scene v11th18a
             with dissolve
 
-            $ grant_achievement("on_target")
+            grant Achievement("on_target", "Hit a bullseye at Duncan's")
 
             stop sound
 
@@ -545,7 +545,7 @@ label v11_treasure_hunt:
 
     pause 0.75
     stop music fadeout 3
-    play music "music/v11/Track Scene 20_2.mp3" fadein 2
+    play music music.ck1.v11.Track_Scene_20_2 fadein 2
     scene v11th30 # TPP. Show MC and Riley leaving the store, both mouths closed, smiling
     with dissolve
 

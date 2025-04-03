@@ -10,14 +10,14 @@ label v12_amber_after_spa:
 
     pause 1.25
 
-    play music "music/v12/Track Scene 34_1.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_34_1 fadein 2
 
     scene v12ams2 # FPP. MC, Amber, Aubrey and Imre talking to each other, MC looking at Amber, Amber looking at MC, smiling, mouth closed (make sure Lew's logo on towel is visible)
     with dissolve
 
     menu:
-        "Tease Amber":
-            $ add_point(KCT.TROUBLEMAKER)
+        "Tease Amber" (troublemaker=1.0):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
             $ v11_tease_amber += 1
 
             scene v12ams2a # FPP. Same as v12ams2, Amber slightly annoyed, mouth closed
@@ -32,7 +32,7 @@ label v12_amber_after_spa:
             u "Wow Amber, that's a really nice towel."
 
             stop music fadeout 3
-            play music "music/v12/Track Scene 34_2.mp3" fadein 2
+            play music music.v12_Track_Scene_34_2 fadein 2
 
             scene v12ams2
             with dissolve
@@ -63,10 +63,10 @@ label v12_amber_after_spa:
 
             jump v12_chris_nora_room
                 
-    if v11_tease_amber <= 2 or kct == "popular":
+    if v11_tease_amber <= 2 or reputation() == Reputations.POPULAR:
         $ v11_amber_sauna_convo = True
         if not (v11_tease_amber <= 2):
-            call screen kct_popup
+            call screen reputation_popup
 
         scene v12ams2a
         with dissolve
@@ -74,7 +74,7 @@ label v12_amber_after_spa:
         am "You know what?"
 
         stop music fadeout 3
-        play music "music/v12/Track Scene 34_2.mp3" fadein 2
+        play music music.v12_Track_Scene_34_2 fadein 2
 
         scene v12ams3 # FPP. MC looking as Amber pullsd him into the sauna, Amber mouth open, neutral expression
         with dissolve
@@ -95,8 +95,8 @@ label v12_amber_after_spa:
         with dissolve
 
         menu:
-            "Pull away":
-                $ add_point(KCT.BRO)
+            "Pull away" (bro=1.0):
+                $ reputation.add_point(RepComponent.BRO)
                 scene v12ams4
                 with dissolve
 
@@ -197,13 +197,13 @@ label v12_amber_after_spa:
         with dissolve
 
         stop music fadeout 3
-        play music "music/v12/Track Scene 34_2.mp3" fadein 2
+        play music music.v12_Track_Scene_34_2 fadein 2
 
         am "You just can't mind your own fucking business?"
 
         scene v12ams10 # TPP. Same positioning as v12ams2, Show Amber smacking MC on the side of the head, Amber very angry, MC startled, both mouths closed
         with vpunch
-        play sound "sounds/slap.mp3"
+        play sound sound.slap
 
         pause 1.25
 

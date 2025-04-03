@@ -4,7 +4,7 @@
 # Time: Sunday
 
 label v14s03b:
-    play music "music/v13/Track Scene 11_1.mp3" fadein 2
+    play music music.v13_Track_Scene_11_1 fadein 2
 
     scene v14s03b_1 # TPP Show MC, Imre, and Ryan coming in the brothel door, Imre pointing and looking toward the girls, mouth open
     with dissolve
@@ -137,15 +137,15 @@ label v14s03b:
 
     menu:
 
-        "Take him seriously":
+        "Take him seriously" (bro=1.0):
             
-            $ add_point(KCT.BRO)
+            $ reputation.add_point(RepComponent.BRO)
 
             u "Oh shit."
 
-        "Take it as a joke":
+        "Take it as a joke" (troublemaker=1.0):
 
-            $ add_point(KCT.TROUBLEMAKER)
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             u "*Laughs*"
 
@@ -239,8 +239,8 @@ label v14s03b:
     with dissolve
 
     menu:
-        "Go for it":
-            $ add_point(KCT.TROUBLEMAKER)
+        "Go for it" (troublemaker=1.0):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
             u "Well, no. Honestly, if it's just for practice then there's probably no better place than this. Just make sure that's really what you want to do."
 
             scene v14s03b_5b
@@ -253,8 +253,8 @@ label v14s03b:
 
             u "Not at all. I think you should go for it."
 
-        "Don't ruin your first time":
-            $ add_point(KCT.BRO)
+        "Don't ruin your first time" (bro=1.0):
+            $ reputation.add_point(RepComponent.BRO)
             u "Well, honestly... I wouldn't want my first time to be in a brothel."
 
             scene v14s03b_5a

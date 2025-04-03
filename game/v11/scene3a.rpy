@@ -6,20 +6,20 @@ label v11_wolves_packing_chris:
 
     scene v10swpc1 # FPP. MC is in his Wolves room, looking at his clothes. 
     with fade
-    play music "music/v11/Track Scene 3.mp3" fadein 2
+    play music music.ck1.v11.Track_Scene_3 fadein 2
     u "(I really should get some more clothes.)"
 
     scene v10swpc2 # FPP. MC looks at the door in his Wolves room. It's closed.
     with fade
 
-    play sound "sounds/knock.mp3"
+    play sound sound.knock
 
     scene v10swpc2a # FPP. Same camera as v10swpc2. MC's door opens and Chris starts walking in. Show Chris, smiling, mouth open.
     with dissolve
 
     ch "Hey man, saw you come home. You usually aren't here around this time and everyone else is out. What are you up to?"
 
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
 
     scene v10swpc2b # FPP. Same camera as v10swpc2. Show a closer shot of Chris after walking in to talk w/ MC. Smiling, mouth closed.
     with dissolve
@@ -74,8 +74,8 @@ label v11_wolves_packing_chris:
     scene v10swpc4
     with dissolve
     menu:
-        "Let him":
-            $ add_point(KCT.BRO)
+        "Let him" (bro=1.0):
+            $ reputation.add_point(RepComponent.BRO)
             scene v10swpc4
             with dissolve
 
@@ -89,8 +89,8 @@ label v11_wolves_packing_chris:
             scene v10swpc4
             with dissolve
             menu:
-                "Of course":
-                    $ add_point(KCT.BRO)
+                "Of course" (bro=1.0):
+                    $ reputation.add_point(RepComponent.BRO)
                     scene v10swpc4
                     with dissolve
 
@@ -229,8 +229,8 @@ label v11_wolves_packing_chris:
 
                     ch "I hope you're right."
                 
-                "Her or the frat":
-                    $ add_point(KCT.TROUBLEMAKER)
+                "Her or the frat" (troublemaker=1.0):
+                    $ reputation.add_point(RepComponent.TROUBLEMAKER)
                     scene v10swpc4
                     with dissolve
 
@@ -354,14 +354,14 @@ label v11_wolves_packing_chris:
 
             pause 0.75
 
-            play sound "sounds/doorclose.mp3"
+            play sound sound.door_close
 
             scene v10swpc2
             with dissolve
 
             u "(THAT. WAS. ROUGH.)"
 
-            play sound "sounds/call.mp3"
+            play sound sound.call
             pause 2.25
 
         "Don't let him":
@@ -395,12 +395,12 @@ label v11_wolves_packing_chris:
 
             pause 0.75
 
-            play sound "sounds/doorclose.mp3"
+            play sound sound.door_close
 
             scene v10swpc2
             with dissolve
 
-            play sound "sounds/call.mp3"
+            play sound sound.call
             pause 2.25
         
     stop music fadeout 3

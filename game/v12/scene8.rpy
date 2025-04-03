@@ -10,12 +10,12 @@ label v12_murder_mystery_reveal:
     scene v12mmr1 # FPP. Mr. Lee and Ms. Rose standing in front of the students, addressing them, only Mr. Lee in shot. Mr. Lee smiling, mouth open, looking at MC
     with dissolve
 
-    if (joinwolves and len(v12s7_killList) == 15) or len(v12s7_killList) == 16:
-        $ grant_achievement("mass_casualties")
+    if (mc.frat == Frat.WOLVES and len(v12s7_killList) == 15) or len(v12s7_killList) == 16:
+        grant Achievement("mass_casualties", "Kill everyone (including optional characters)")
 
     lee "Wow, that turned out a lot better than expected. I hope you all enjoyed yourselves. Was anyone surprised to learn [name] was my chosen murderer?"
 
-    play music "music/v12/Track Scene 8.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_8 fadein 2
 
     scene v12mmr2 # FPP. Same positioning as v12mmr1, MC looking at Lindsey, Lindsey looking at Mr. Lee's direction, Lindsey smiling, mouth open
     with dissolve
@@ -73,7 +73,7 @@ label v12_murder_mystery_reveal:
     $ v12_murder_count = len(v12s7_killList)
     if len(v12s7_killList) >= 5:
     
-        $ grant_achievement("killing_spree")
+        grant Achievement("killing_spree", "Kill enough people to win the game")
 
         lee "A total of [v12_murder_count] people were killed, so let's give our murderer a round of applause."
 
@@ -180,9 +180,9 @@ label v12_murder_mystery_reveal:
     with dissolve
 
     menu:
-        "Let Chris help her":
+        "Let Chris help her" (bro=1.0):
             $ v12_help_chris += 1
-            $ add_point(KCT.BRO)
+            $ reputation.add_point(RepComponent.BRO)
 
             u "(It's his girl, he's got her.)"
 
@@ -206,9 +206,9 @@ label v12_murder_mystery_reveal:
 
             pause 0.75
 
-        "Hurry to help her":
-            $ add_point(KCT.BOYFRIEND)
-            $ nora.relationship = Relationship.LIKES
+        "Hurry to help her" (boyfriend=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
+            $ v8_nora_likes_mc = True
             
             scene v12mmr9 # TPP. Show MC rushing to Nora, MC worried, mouth closed, Nora feeling sick, mouth closed
             with dissolve

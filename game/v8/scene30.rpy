@@ -16,8 +16,13 @@ label amber_sex_at_joshs:
     with dissolve
     pause
 
-    if config_censored:
+    if is_censored:
         call screen censored_popup("v8s30_nsfwSkipLabel1")
+
+    lovense vibrate 2
+    lovense rotate 1
+    lovense suction 1
+    lovense thrust 1
 
     scene v8amber4 # TPP. Amber and MC standing in front of the bed (with MC towards the bed), making out passionately with Amber holding MC's head
     with dissolve
@@ -26,7 +31,7 @@ label amber_sex_at_joshs:
     scene v8amber4a # Amber pulls back her head and is speaking now while looking into the MC's eyes seductively
     with dissolve
 
-    $ grant_achievement("get_a_room")
+    grant Achievement("get_a_room", "Stay with Amber at Josh's")
 
     if ending == "amber":
         am "I've been waiting for this since the last time."
@@ -41,6 +46,11 @@ label amber_sex_at_joshs:
     scene v8amber4
     with dissolve
     pause
+
+    lovense vibrate 2
+    lovense rotate 2
+    lovense suction 2
+    lovense thrust 2
 
     scene v8amber5 # FPP. Show Amber removing her top (She's wearing a bra underneath) while looking into the camera seductively, mouth closed
     with dissolve
@@ -57,6 +67,11 @@ label v8s30_amberBlowjob:
     with dissolve
     pause 1
 
+    lovense vibrate 4
+    lovense rotate 2
+    lovense suction 2
+    lovense thrust 2
+
     scene v8amber7a # MC's pants are off now so he's completely naked. Amber looking at MC's erect penis, horny, mouth open
     with dissolve
     if ending == "amber":
@@ -64,7 +79,7 @@ label v8s30_amberBlowjob:
     else:
         am "Oh wow, I could get used to this."
 
-    play music "music/v8/Track Scene 30.mp3" fadein 2
+    play music music.ck1.v8.Track_Scene_30 fadein 2
 
     image v8am2bj1 = Movie(play="images/v8/Scene 30/v8am2bj1.webm", loop=True, image="images/v8/Scene 30/2ambj_000.webp", start_image="images/v8/Scene 30/2ambj_000.webp") # BJ TPP
     image v8am2bj1f = Movie(play="images/v8/Scene 30/v8am2bj1f.webm", loop=True, image="images/v8/Scene 30/2ambj_000.webp", start_image="images/v8/Scene 30/2ambj_000.webp")
@@ -77,6 +92,12 @@ label v8s30_amberBlowjob:
 
     image v8am2dg1 = Movie(play="images/v8/Scene 30/v8am2dg1f.webm", loop=True, image="images/v8/Scene 30/cgt_000.webp", start_image="images/v8/Scene 30/cgt_000.webp") # Doggy 1 (close up of penetration)
     image v8am2dg1f = Movie(play="images/v8/Scene 30/v8am2dg1f.webm", loop=True, image="images/v8/Scene 30/cgt_000.webp", start_image="images/v8/Scene 30/cgt_000.webp")
+
+
+    lovense vibrate 6
+    lovense rotate 3
+    lovense suction 2
+    lovense thrust 2
 
     scene v8am2bj1
     with dissolve
@@ -118,6 +139,11 @@ label v8s30_amberBlowjob:
     am "*Chuckles* I'm glad you like it."
 
 label v8s30_amberCowgirl:
+    lovense vibrate 7
+    lovense rotate 3
+    lovense suction 3
+    lovense thrust 3
+
     scene v8amber10 # FPP (As seen from the MC's position in v8amber8). Amber climbing onto the bed while looking into the camera. Check animation references, this should lead up to the position in Animation 2
     with dissolve
     pause
@@ -144,6 +170,11 @@ label v8s30_amberCowgirl:
     pause 3
     am "Ahhh yes!"
     pause
+
+    lovense vibrate 8
+    lovense rotate 5
+    lovense suction 5 
+    lovense thrust 5
 
     scene v8am2cg2f
     with dissolve
@@ -183,6 +214,11 @@ label v8s30_amberAnal:
     with dissolve
     am "Oh yes, a hundred percent. Do it. C'mon."
     am "Slide it deep in my ass. Let me feel you deep inside me."
+
+    lovense vibrate 10
+    lovense rotate 6
+    lovense suction 6
+    lovense thrust 6
 
     scene v8am2dg1
     with dissolve
@@ -224,6 +260,7 @@ label v8s30_amberAnal:
 
 label v8s30_nsfwSkipLabel1:
 
+    lovense stop
     scene v8amber14 # TPP (MC and Amber in same position as v8amber13) but camera moved closer to focus on Amber. Amber satisfied look, smiling, mouth open. MC's face need not be in the frame but if it is, his mouth is closed. Amber should not be looking at the MC, but staring into the distance
     with dissolve
     am "My God, you were amazing."

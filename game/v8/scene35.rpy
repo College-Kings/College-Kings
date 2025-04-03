@@ -9,8 +9,8 @@ label steak_w_chloe:
 
     pause 1
 
-    play music "music/mlove.mp3"
-    queue music ["music/mhappy.mp3", "music/mindie1.mp3"]
+    play music music.ck1.mlove
+    queue music [music.ck1.mhappy, music.ck1.mindie1]
 
     scene v8steak2 # TPP. Show MC sitting down at the table with Chloe.
     with dissolve
@@ -20,7 +20,7 @@ label steak_w_chloe:
     scene v8steak3 # FPP. Close up Chloe, Chloe smile, mouth open.
     with dissolve
 
-    if chloe.relationship >= Relationship.FWB:
+    if CharacterService.is_fwb(chloe):
         cl "It's about time! I'm starving."
 
         scene v8steak3a # FPP. Same camera as v8steak3, Chloe smile, mouth closed.
@@ -76,7 +76,7 @@ label steak_w_chloe:
 
     cl "Wow it's nice in here."
 
-    if chloe.relationship >= Relationship.FWB:
+    if CharacterService.is_fwb(chloe):
         scene v8steak3a
         with dissolve
 
@@ -120,8 +120,8 @@ label steak_w_chloe:
         with dissolve
 
         menu:
-            "Flirt with Chloe":
-                $ add_point(KCT.BOYFRIEND)
+            "Flirt with Chloe" (boyfriend=1.0):
+                $ reputation.add_point(RepComponent.BOYFRIEND)
                 jump steak_flirt_w_chloe
 
             "Don't flirt with Chloe":
@@ -129,7 +129,7 @@ label steak_w_chloe:
 
 label steak_flirt_w_chloe:
 
-    $ grant_achievement("up_for_more")
+    grant Achievement("up_for_more", "Flirt with Chloe at the Steakhouse")
 
     u "Unlesssss..."
 
@@ -235,8 +235,8 @@ label steak_w_chloe_cont:
     with dissolve
 
     menu:
-        "Ask to see Chloe's muscles":
-            $ add_point(KCT.BOYFRIEND)
+        "Ask to see Chloe's muscles" (boyfriend=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             jump steak_w_chloe_muscles
 
         "Turn the conversation serious":
@@ -434,11 +434,12 @@ label steak_w_chloe_cont_2:
     scene v8steak15a # FPP. Same camera as v8steak15, chloe mouth closed.
     with dissolve
 
-    if chloe.relationship >= Relationship.FWB:
+    if CharacterService.is_fwb(chloe):
         menu:
-            "Say a dirty joke":
+            "Say a dirty joke" (troublemaker=1.0):
+                $ reputation.add_point(RepComponent.TROUBLEMAKER)
                 jump steak_w_chloe_dirty
-                $ add_point(KCT.TROUBLEMAKER)
+                
             "Don't say a joke":
                 jump steak_w_chloe_dirty_no
 
@@ -547,7 +548,7 @@ label steak_w_chloe_cont_3:
 
     u "I'd love that!"
 
-    if chloe.relationship >= Relationship.FWB:
+    if CharacterService.is_fwb(chloe):
         scene v8steak17b # FPP. Same camera as v8steak17, flirty expression, mouth open.
         with dissolve
 
@@ -603,7 +604,7 @@ label steak_w_chloe_cont_3:
 
     cl "You too."
 
-    if chloe.relationship >= Relationship.FWB:
+    if CharacterService.is_fwb(chloe):
         scene v8steak20 # TPP. Show MC and Chloe kissing.
         with dissolve
 

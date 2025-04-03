@@ -4,7 +4,7 @@ label v10_chloe_vs_nora:
     with dissolve
 
     cl "*Grunts*"
-    play music "music/v10/Track Scene 35.mp3" fadein 2
+    play music music.ck1.v10.Track_Scene_35 fadein 2
 
     scene v10cvn2 #second with Nora hitting Chloe's arms into the air off her shoulders
     with dissolve
@@ -22,7 +22,7 @@ label v10_chloe_vs_nora:
 
     no "C'mon Madame President."
 
-    if config_censored:
+    if is_censored:
         call screen censored_popup("v10s35_nsfwSkipLabel1")
 
     scene v10cvn5 # fifth is of Chloe lifting her waist throwing Nora up a little bit at which point her strap falls down on one side letting her breast slip out of her top and Nora gets extremely shocked,
@@ -62,16 +62,20 @@ label v10s35_nsfwSkipLabel1:
 
             u "Hey! Good job."
 
-            if chloe.relationship <= Relationship.MAD:
+            if CharacterService.is_mad(chloe):
                 scene v10cvn9a
                 with dissolve
+                
                 cl "Uhm thanks, [name]."
 
                 menu:
                     "Make a joke":
-                        $ chloe.relationship = Relationship.FRIEND
+                        $ CharacterService.set_relationship(chloe, Relationship.FRIEND, mc)
+                        $ CharacterService.remove_mood(chloe, Moods.MAD)
+
                         scene v10cvn9
                         with dissolve
+
                         u "I know you're a bit mad at me, but I just hope you never unleash your fury on me like that, haha."
 
                         scene v10cvn9a

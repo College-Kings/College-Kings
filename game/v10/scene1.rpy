@@ -8,14 +8,14 @@ label v10start:
     with dissolve
     u "What are you guys doing!?"
 
-    play music "music/v10/Track Scene 1.mp3" fadein 2
+    play music music.ck1.v10.Track_Scene_1 fadein 2
 
     scene v10sta2 # FPP. Show MC trying to pull Ryan and imre apart, imre/ryan angry, mc worried look, mouths closed
     with dissolve
 
     pause 0.75
 
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         scene v10sta2 # FPP. Show Imre and ryan now standing in fighting stances both with fists raised, angry look on imre/ryan, ryan mouth closed, imre mouth open
         with dissolve
 
@@ -55,7 +55,7 @@ label v10start:
 
     stop music fadeout 3
 
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         scene v10sta4a # FPP. Same Camera as v10sta4, imre now left scene, Show Sebastian near the warehouse doors facing camera, neutral look, mouth open
         with dissolve
  

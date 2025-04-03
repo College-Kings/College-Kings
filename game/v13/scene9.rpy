@@ -4,12 +4,14 @@
 # Time: Afternoon
 
 label v13s9:
+    $ CharacterService.remove_mood(chloe, Moods.MAD)
+
     scene v13s9_1 # TPP. Hotel hallway. MC walking down the hallway, back to camera, angled to where hotel room doors are visible on MC's right.
     with dissolve
 
     pause 0.75
 
-    play music "music/v13/Track Scene 9_1.mp3" fadein 2
+    play music music.ck1.v13.Track_Scene_9_1 fadein 2
 
     scene v13s9_1a # TPP. Same as v13s9_1 but MC is halfway down the hall and he last room door at the end of the hall is halfway open. 
     with dissolve
@@ -21,13 +23,13 @@ label v13s9:
 
     pause 0.75
 
-    if chloe.relationship >= Relationship.GIRLFRIEND:
+    if CharacterService.is_girlfriend(chloe):
         scene v13s9_2 # FPP. Chloe full face smile, happy suprised, mouth open looking at MC.
         with dissolve
 
         cl "Oh! Hey there handsome. Guess I won't have to go around the hotel looking for you since you're right here. *Chuckles*"
 
-        play sound "sounds/kiss.mp3"
+        play sound sound.kiss
 
         scene v13s9_3 # TPP. Chloe kisses MC on the lips.
         with dissolve
@@ -131,7 +133,7 @@ label v13s9:
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v13/Track Scene 9_2.mp3" fadein 2
+    play music music.ck1.v13.Track_Scene_9_2 fadein 2
 
     scene v13s9_11 # FPP. MC watching Chloe lean against the guard rail, slightly looking downward at the water, neutral expression, mouth open.
     with dissolve
@@ -292,10 +294,10 @@ label v13s9:
 
             cl "I knew I could count on you."
 
-            if chloe.relationship >= Relationship.GIRLFRIEND: # -If Chloegirlfriend (extra dialog)
-                $ add_point(KCT.BOYFRIEND)
+            if CharacterService.is_girlfriend(chloe): # -If Chloegirlfriend (extra dialog)
+                $ reputation.add_point(RepComponent.BOYFRIEND)
 
-                play sound "sounds/kiss.mp3"
+                play sound sound.kiss
                 
                 scene v13s9_13 # TPP: Chloe, facing MC (no longer leaning against rail) arms around MC, giving him a kiss.
                 with dissolve
@@ -340,10 +342,10 @@ label v13s9:
 
             u "Chloe, it's not like that. I'm her friend and she came to me in confidence for my help. I'd be wrong to turn her away."
 
-            if chloe.relationship >= Relationship.GIRLFRIEND: # -If Chloegirlfriend (extra dialog)
+            if CharacterService.is_girlfriend(chloe): # -If Chloegirlfriend (extra dialog)
                 $ chloe.points -= 1 
                 
-                $ add_point(KCT.TROUBLEMAKER)
+                $ reputation.add_point(RepComponent.TROUBLEMAKER)
                 
                 scene v13s9_12l # FPP. Chloe facing MC (not leaning) very MAD, leaning in towards MC, pointing finger at MC (Yelling at him)
                 with dissolve
@@ -360,11 +362,11 @@ label v13s9:
 
                 cl "Whatever, [name]."
         
-        "Help no one": # -If No One        
+        "Help no one": # -If No One
             scene v13s9_12e
             with dissolve
 
-            $ grant_achievement("indecisive")
+            grant Achievement("indecisive", "Help neither Chloe nor Lindsey")
             u "Honestly, I'm going into the grey-zone on this one. I don't want anyone, you or her, to feel betrayed."
 
             scene v13s9_12f
@@ -473,7 +475,7 @@ label v13s9:
 
     u "Oh... Well... That's spicy. *Laughs*"
 
-    if chloe.relationship >= Relationship.FWB:
+    if CharacterService.is_fwb(chloe) or CharacterService.is_girlfriend(chloe):
         scene v13s9_12q # FPP. Chloe facing MC (not leaning), flirting/seductive, smiling, mouth open.
         with dissolve
 
@@ -509,7 +511,7 @@ label v13s9:
 
     cl "Well, anytime would be fine. Whenever you-"
 
-    play sound "sounds/call.mp3"
+    play sound sound.call
 
     scene v13s9_14 # FPP. Close up of MC holding his phone lit up, incoming call ideally showing the name Ryan under a picture of Ryan.
     with dissolve
@@ -603,8 +605,8 @@ label v13s9:
         with dissolve
         
         menu:
-            "Go with Ryan":
-                $ add_point(KCT.BRO) # only give points for the decision; not the else (default) flow.   
+            "Go with Ryan" (bro=1.0):
+                $ reputation.add_point(RepComponent.BRO) # only give points for the decision; not the else (default) flow.   
                 jump v13s9_no_concert
 
             "Don't go with Ryan":

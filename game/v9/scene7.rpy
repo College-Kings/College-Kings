@@ -19,7 +19,7 @@ label v9_before_lake_fr:
     scene fr5lakefull
     with dissolve
 
-    play music "music/v9/Track Scene 7.mp3" fadein 2
+    play music music.ck1.v9.Track_Scene_7 fadein 2
 
     scene fr5lakefull
 
@@ -28,7 +28,7 @@ label v9_before_lake_fr:
 label fr5ryan1:
     $ freeroam5.add("ryan")
 
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         scene v9slake1 #FPP closeup ryan sitting on a picnic blanket, mouth closed, Ryan grinning looking at the girls (you can't see the girls)
 
         u "Enjoying the view?"
@@ -221,8 +221,8 @@ label fr5ryan1:
         with dissolve
 
         menu:
-            "Talk about your dream":
-                $ add_point(KCT.BOYFRIEND)
+            "Talk about your dream" (boyfriend=1.0):
+                $ reputation.add_point(RepComponent.BOYFRIEND)
 
                 u "I'm not so sure about that. Last night I had a fucked up dream."
 
@@ -325,8 +325,8 @@ label fr5ryan1:
 
                 u "Right as fuck, my man."
 
-            "Talk about the brawl":
-                $ add_point(KCT.BRO)
+            "Talk about the brawl" (bro=1.0):
+                $ reputation.add_point(RepComponent.BRO)
 
                 # -if MC chooses to tell Ryan how excited he is about the Brawl-
 
@@ -429,7 +429,7 @@ label fr5riley1:
 
     scene v9slake2 #FPP Close up as if sitting next to Riley, you look at her from the side, Riley is sitting on the pier, with her legs hanging over the ledge, Riley looking at the lake. -
 
-    if riley.relationship >= Relationship.FWB:
+    if CharacterService.is_fwb(riley):
         u "What's a pretty lady doing all by herself?"
 
         scene v9slake2b #same as 2, but Riley now looking at you, flirting, mouth open
@@ -451,10 +451,10 @@ label fr5riley1:
         with dissolve
 
         menu:
-            "Kiss her":
-                $ add_point(KCT.TROUBLEMAKER)
+            "Kiss her" (troublemaker=1.0):
+                $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
-                play sound "sounds/kiss.mp3"
+                play sound sound.kiss
 
                 scene v9slake3 #TPP showing mc and riley kissing
                 with dissolve
@@ -547,7 +547,7 @@ label fr5riley1:
 
         ri "Okay."
 
-    if riley.relationship < Relationship.FWB:
+    if CharacterService.is_friend(riley):
         u "And I thought I was gonna find you close to the water. Wanna take a dip?"
 
         scene v9slake2f
@@ -647,8 +647,8 @@ label fr5aubrey1:
     with dissolve
 
     menu: 
-        "Don't join her":
-            $ add_point(KCT.TROUBLEMAKER)
+        "Don't join her" (troublemaker=1.0):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             u "That was a nice try, miss. But you must be mistaking me for a child, if you thought that would work."
 
@@ -682,8 +682,8 @@ label fr5aubrey1:
 
             u "Sounds interesting. I guess we will see."
 
-        "Join her":
-            $ add_point(KCT.BOYFRIEND)
+        "Join her" (boyfriend=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
 
             u "Fine, let me just take my clothes off."
 
@@ -757,7 +757,7 @@ label fr5aubrey1:
 
             u "For one living in the moment, I wouldn't say you expect much at all. Well, maybe you don't expect much, but you surely know how to seize the moment."
 
-            if aubrey.relationship >= Relationship.FWB:
+            if CharacterService.is_fwb(aubrey):
                 label v9_aubrey_scene_lake:
                     $ sceneList.add("v9_aubrey")
 
@@ -786,8 +786,13 @@ label fr5aubrey1:
 
                     u "What is this?"
 
-                    if config_censored:
+                    if is_censored:
                         call screen censored_popup("v9s7_nsfwSkipLabel1")
+
+                    lovense vibrate 2
+                    lovense rotate 1
+                    lovense suction 1
+                    lovense thrust 1
 
                     scene v9slake8 # same as 8a, mouth open
                     with dissolve
@@ -809,6 +814,11 @@ label fr5aubrey1:
                     
                     au "Now, where were we?"
 
+                    lovense vibrate 3
+                    lovense rotate 2
+                    lovense suction 2
+                    lovense thrust 2
+
                     image v9slake17vid = Movie (play="images/v9/scene 7/v9slake17vid.webm", loop = True, image = "images/v9/scene 7/v9slake17vidend.webp", start_image = "images/v9/scene 7/v9slake17vidstart.webp")
                     image v9slake18vid = Movie (play="images/v9/scene 7/v9slake18vid.webm", loop = True, image = "images/v9/scene 7/v9slake18vidend.webp", start_image = "images/v9/scene 7/v9slake18vidstart.webp")
                     image v9slake18vidfast = Movie (play="images/v9/scene 7/v9slake18vidf.webm", loop = True, image = "images/v9/scene 7/v9slake18vidend.webp", start_image = "images/v9/scene 7/v9slake18vidstart.webp")
@@ -818,7 +828,7 @@ label fr5aubrey1:
                     scene v9slake17vid # mc and aubrey make out animation
                     with dissolve
                     
-                    $ grant_achievement("relaxing_day")
+                    grant Achievement("relaxing_day", "Have fun with Aubrey at the lake")
 
                     " "
 
@@ -826,6 +836,11 @@ label fr5aubrey1:
                     with dissolve
 
                     au "Let's see what we got here."
+
+                    lovense vibrate 4
+                    lovense rotate 3
+                    lovense suction 3
+                    lovense thrust 3
 
                     scene v9slake18vid # aubrey handjob slow, TPP
                     with fade
@@ -841,6 +856,11 @@ label fr5aubrey1:
 
                     " "
 
+                    lovense vibrate 6
+                    lovense rotate 4
+                    lovense suction 4
+                    lovense thrust 4
+
                     scene v9slake18vidfast # aubrey handjob fast, TPP (Not rendered again)
                     with dissolve
 
@@ -854,6 +874,10 @@ label fr5aubrey1:
                     au "You like this?"
 
                     " "
+                    lovense vibrate 8
+                    lovense rotate 5
+                    lovense suction 5
+                    lovense thrust 5
 
                     scene v9slake20 # close up mc cumshot
                     with flash
@@ -882,6 +906,8 @@ label fr5aubrey1:
 
                     u "You sure you don't want me to do you?"
 
+                    lovense stop
+                    
                     scene v9slake21 
                     with dissolve
 

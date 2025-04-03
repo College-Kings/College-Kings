@@ -7,7 +7,7 @@ label v9_hc_demo:
     scene v9demo1 # FPP. Show shot of Cameron and Penelope stood on the docks. Cameron looks annoyed (Penelope with beard, Cameron with wig)
     with fade
 
-    play music "music/v9/Track Scene 11.mp3" fadein 2
+    play music music.ck1.v9.Track_Scene_11 fadein 2
    
     pause 1
 
@@ -91,7 +91,7 @@ label v9_hc_demo:
     scene v9demo7 # TPP. Show MC approaching Cameron, Penelope and the guard from the side, all are looking at MC, neutral expressions, camera from behind MC.
     with fade
 
-    play music "music/v9/Track Scene 11.mp3" fadein 2
+    play music music.ck1.v9.Track_Scene_11 fadein 2
     
     pause 1
 
@@ -113,8 +113,8 @@ label v9_hc_demo:
 
             u "Yes, much better than the last one."
 
-        "Don't recognize the King":
-            $ add_point(KCT.TROUBLEMAKER)
+        "Don't recognize the King" (troublemaker=1.0):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
             u "Hark, who goes there?"
 
             scene v9demo8b # FPP. Same camera as v9demo8, Penelope whispering in Cameron's ear, Cameron looks uninterested. Penelope mouth open.
@@ -153,8 +153,8 @@ label v9_hc_demo:
     with dissolve
 
     menu:
-        "Discuss War":
-            $ add_point(KCT.BRO)
+        "Discuss War" (bro=1.0):
+            $ reputation.add_point(RepComponent.BRO)
 
             u "We have conquered the enemies to the East and South. Much is left to pillage to the West. It's good you've returned to us now. We will need your expert guidance."
 
@@ -209,7 +209,7 @@ label v9_hc_demo:
     menu:
         "North":
             if the_king:
-                $ grant_achievement("king_of_the_north")
+                grant Achievement("king_of_the_north", "The King is heading North")
 
             u "North, Your Majesty."
 

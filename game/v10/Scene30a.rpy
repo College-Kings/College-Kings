@@ -7,7 +7,7 @@ label v10_emily_course:
     scene v10semi1 # TPP. Show MC walking down the college hallways, towards a slightly open door.
     with fade
 
-    play music "music/v10/Track Scene 27.mp3" fadein 2
+    play music music.ck1.v10.Track_Scene_27 fadein 2
 
     pause 0.75
 
@@ -86,8 +86,8 @@ label v10_emily_course:
                 with dissolve
 
                 menu:
-                    "Join Emily":
-                        $ add_point(KCT.BOYFRIEND)
+                    "Join Emily" (emily=1.0):
+                        $ reputation.add_point(RepComponent.BOYFRIEND)
                         $ emily.points += 1
 
                         u "I'm sure I could try it out."
@@ -136,15 +136,15 @@ label v10_emily_course:
                         with dissolve
 
                         menu:
-                            "Save Emily":
-                                $ add_point(KCT.BOYFRIEND)
+                            "Save Emily" (boyfriend=1.0):
+                                $ reputation.add_point(RepComponent.BOYFRIEND)
 
                                 u "Don't you die on us!"
 
                                 be "Looks like you two are really getting into it."                                
 
-                            "Don't save Emily":
-                                $ add_point(KCT.TROUBLEMAKER)
+                            "Don't save Emily" (troubelmaker=1.0):
+                                $ reputation.add_point(RepComponent.TROUBLEMAKER)
                             
                                 u "Oh no, if only someone could save her."
 
@@ -167,8 +167,8 @@ label v10_emily_course:
                         with dissolve
 
                         menu:
-                            "Agree with Emily":
-                                $ add_point(KCT.BOYFRIEND)
+                            "Agree with Emily" (emily=1.0):
+                                $ reputation.add_point(RepComponent.BOYFRIEND)
                                 $ emily.points += 1
 
                                 u "Yeah, I could be down."
@@ -223,8 +223,8 @@ label v10_emily_course:
 
                         jump v10_late_alley
 
-                    "Leave":
-                        $ add_point(KCT.TROUBLEMAKER)
+                    "Leave" (troubelmaker=1.0):
+                        $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
                         u "Shoot, what time is it?"
 
@@ -307,8 +307,8 @@ label v10_emily_course:
                 with dissolve
 
                 menu:
-                    "Join Emily":
-                        $ add_point(KCT.BOYFRIEND)
+                    "Join Emily" (emily=1.0):
+                        $ reputation.add_point(RepComponent.BOYFRIEND)
                         $ emily.points += 1
                         $ forgiveemily = True
 
@@ -358,15 +358,15 @@ label v10_emily_course:
                         with dissolve
 
                         menu:
-                            "Save Emily":
-                                $ add_point(KCT.BOYFRIEND)
+                            "Save Emily" (boyfriend=1.0):
+                                $ reputation.add_point(RepComponent.BOYFRIEND)
 
                                 u "Don't you die on us!"
 
                                 be "Looks like you two are really getting into it."                                
 
-                            "Don't save Emily":
-                                $ add_point(KCT.TROUBLEMAKER)
+                            "Don't save Emily" (troubelmaker=1.0):
+                                $ reputation.add_point(RepComponent.TROUBLEMAKER)
                             
                                 u "Oh no, if only someone could save her."
 
@@ -389,8 +389,8 @@ label v10_emily_course:
                         with dissolve
 
                         menu:
-                            "Agree with Emily":
-                                $ add_point(KCT.BOYFRIEND)
+                            "Agree with Emily" (emily=1.0):
+                                $ reputation.add_point(RepComponent.BOYFRIEND)
                                 $ emily.points += 1
 
                                 u "Yeah, I could be down."
@@ -445,8 +445,8 @@ label v10_emily_course:
 
                         jump v10_late_alley
 
-                    "Leave":
-                        $ add_point(KCT.TROUBLEMAKER)
+                    "Leave" (troubelmaker=1.0):
+                        $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
                         u "Shoot, what time is it?"
 

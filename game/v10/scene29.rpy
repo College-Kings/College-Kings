@@ -4,7 +4,7 @@
 # Time: Tuesday Morning
 
 label v10_chloe_hallway:
-    play music "music/v10/Track Scene 29.mp3" fadein 2
+    play music music.ck1.v10.Track_Scene_29 fadein 2
     scene v10such1 # TPP. Show MC walking down the school hallway after exiting econ class, to the side in the distance near lockers should be Chloe and Aubrey.
     with fade
 
@@ -20,7 +20,7 @@ label v10_chloe_hallway:
 
     au "[name], settle an argument for us."
 
-    if chloe.relationship <= Relationship.MAD:
+    if CharacterService.is_mad(chloe):
         scene v10such3a # FPP. Same as 3, Aubrey smile, Chloe slightly annoyed, Chloe mouth open.
         with dissolve
 
@@ -37,8 +37,8 @@ label v10_chloe_hallway:
         with dissolve
 
         menu:
-            "Cute":
-                $ add_point(KCT.BOYFRIEND)
+            "Cute" (boyfriend=1.0):
+                $ reputation.add_point(RepComponent.BOYFRIEND)
 
                 u "I'd say cute fits better..."
 
@@ -48,7 +48,7 @@ label v10_chloe_hallway:
                 cl "Ugh, who cares what you think?"
 
             "Sexy":
-                if not kct == "popular":
+                if not reputation() == Reputations.POPULAR:
                     u "No, sexy definitely describes her better."
 
                     scene v10such3a
@@ -57,7 +57,7 @@ label v10_chloe_hallway:
                     cl "Ugh, I don't care what you think."
 
                 else:
-                    call screen kct_popup
+                    call screen reputation_popup
 
                     u "No, sexy definitely describes her better."
 
@@ -80,8 +80,8 @@ label v10_chloe_hallway:
                     with dissolve
 
                     menu:
-                        "Ask Chloe how she is":
-                            $ add_point(KCT.BOYFRIEND)
+                        "Ask Chloe how she is" (chloe=1.0):
+                            $ reputation.add_point(RepComponent.BOYFRIEND)
                             $ chloe.points += 1
 
                             u "So uhm... how have you been?"
@@ -125,18 +125,18 @@ label v10_chloe_hallway:
                             with dissolve
 
                             menu:
-                                "Have a Rematch":
-                                    $ add_point(KCT.BOYFRIEND)
-                                    $ chloe.relationship = Relationship.FRIEND
-                                    
-                                    $ grant_achievement("on_the_court")
+                                "Have a Rematch" (chloe=1.0):
+                                    $ reputation.add_point(RepComponent.BOYFRIEND)
+                                    $ CharacterService.set_relationship(chloe, Relationship.FRIEND, mc)
+                                    $ CharacterService.remove_mood(chloe, Moods.MAD)
+                                    grant Achievement("on_the_court", "Have a rematch with Chloe")
 
                                     u "Yeah let's go."
 
                                     jump v10_chloe_gym
 
-                                "Decline a Rematch":
-                                    $ add_point(KCT.TROUBLEMAKER)
+                                "Decline a Rematch" (chloe=-1.0):
+                                    $ reputation.add_point(RepComponent.TROUBLEMAKER)
                                     $ chloe.points -= 1
 
                                     u "Uhm, I shouldn't, I have a lot to do. Sorry."
@@ -154,7 +154,7 @@ label v10_chloe_hallway:
 
                             cl "Yeah. Alright."   
 
-        if not kct == "popular":
+        if not reputation() == Reputations.POPULAR:
             scene v10such4 # TPP. Show Chloe walking away, Aubrey and MC watching her.
             with dissolve
 
@@ -218,7 +218,7 @@ label v10_chloe_hallway:
                 au "Anyways, I'm gonna head to class, see you guys."
 
             "Sexy":
-                $ add_point(KCT.BOYFRIEND)
+                $ reputation.add_point(RepComponent.BOYFRIEND)
                 $ chloe.points += 1
 
                 u "Definitely gotta go with sexy."
@@ -272,11 +272,11 @@ label v10_chloe_hallway:
         with dissolve
 
         menu:
-            "Have a Rematch":
-                $ add_point(KCT.BOYFRIEND)
+            "Have a Rematch" (chloe=1.0):
+                $ reputation.add_point(RepComponent.BOYFRIEND)
                 $ chloe.points += 1
                 
-                $ grant_achievement("on_the_court")
+                grant Achievement("on_the_court", "Have a rematch with Chloe")
 
                 u "Let's do it, but I won't be going easy on you."
 

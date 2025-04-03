@@ -4,7 +4,7 @@
 # Time: Morning
 
 label v14s06:
-    play music "music/v13/Track Scene 46_1.mp3" fadein 2
+    play music music.v13_Track_Scene_46_1 fadein 2
 
     scene black
     with fade
@@ -31,7 +31,7 @@ label v14s06:
 
     u "(I feel like I never even hit my head.)"
 
-    play sound "sounds/knock.mp3"
+    play sound sound.knock
 
     scene v14s06_5 # FPP. MC standing same place as v14s06_4, looking at the hotel door (door closed)
     with dissolve

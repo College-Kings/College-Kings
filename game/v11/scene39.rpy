@@ -5,7 +5,7 @@
 label v11_mc_amber_gokart:
     scene v11cam1 # TPP. MC and amber in the streets
     with dissolve
-    play music "music/v10/Track Scene 9.mp3" fadein 2
+    play music music.ck1.v10.Track_Scene_9 fadein 2
     pause 0.75
 
     scene v11cam2a # FPP. MC looks at amber, mouth opened (walking)
@@ -282,7 +282,7 @@ label v11_mc_amber_gokart:
 
 
         "Be excited":
-            $ add_point(KCT.BRO)
+            $ reputation.add_point(RepComponent.BRO)
             scene v11cam7
             with dissolve
 
@@ -421,7 +421,7 @@ label v11_mc_amber_gokart:
 
     menu:
         "Agree":
-            $ add_point(KCT.TROUBLEMAKER)
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
             scene v11cam14a # FPP. looking at amber, mouth closed
             with dissolve
 
@@ -456,7 +456,7 @@ label v11_mc_amber_gokart:
             with dissolve
 
         "Disagree":
-            $ add_point(KCT.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             scene v11cam14c # FPP. Same as 14, mouth closed
             with dissolve
 
@@ -488,7 +488,7 @@ label v11_mc_amber_gokart:
 
             am "Haha, fine. Let's do this race."
 
-    play music "music/v10/Track Scene 24_1.mp3" fadein 2
+    play music music.ck1.v10.Track_Scene_24_1 fadein 2
     scene v11cam15 # TPP. MC and amber hop in their karts, helmets on
     with dissolve
 
@@ -1005,7 +1005,7 @@ label v11_race_continue3:
 
         clerk "Hey babe, nice job! Have fun?"
     stop music fadeout 3
-    play music "music/v10/Track Scene 9.mp3" fadein 2
+    play music music.ck1.v10.Track_Scene_9 fadein 2
     scene v11cam14f # FPP. Same as v11cam14, Amber looking towards the clerk (Clerk positioned like v11cam42a), Amber annoyed, mouth open
     with dissolve
 
@@ -1021,8 +1021,8 @@ label v11_race_continue3:
 
     menu:
         "Stand up for Amber":
-            $ add_point(KCT.BOYFRIEND)
-            $ add_point(KCT.TROUBLEMAKER)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
             $ amber.points += 1
 
             scene v11cam14f
@@ -1058,7 +1058,7 @@ label v11_race_continue3:
             scene v11cam45 # TPP. Show Amber kissing MC, he is surprised
             with dissolve
 
-            play sound "sounds/kiss.mp3"
+            play sound sound.kiss
 
             pause 1.25
 
@@ -1088,7 +1088,7 @@ label v11_race_continue3:
             u "At least we both had a good time, right?"
 
         "Let her handle it":
-            $ add_point(KCT.BRO)
+            $ reputation.add_point(RepComponent.BRO)
             scene v11cam14f
             with dissolve
 
@@ -1140,7 +1140,7 @@ label v11_race_continue3:
 
     menu:
         "Tease":
-            $ add_point(KCT.TROUBLEMAKER)
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
             $ v11_tease_amber += 1
 
             u "You know what, if the job at Lew's doesn't work out, maybe you can work with our friend back there."

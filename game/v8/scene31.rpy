@@ -14,7 +14,7 @@ label v8_tues_eco_class:
 
     pause 0.5
 
-    play music "music/m16punk.mp3"
+    play music music.ck1.m16punk
 
     scene v8stec3 # FPP. Show Ms Rose stood at the front of the class, mouth open looking around at class, mouth open.
     with dissolve
@@ -54,7 +54,7 @@ label v8_tues_eco_class:
     scene v8stec5
     with dissolve
 
-    if riley.relationship >= Relationship.FWB:
+    if CharacterService.is_fwb(riley):
         u "It's too bad, though."
 
         scene v8stec5b # FPP. Same camera as v8stec5, Riley confused, mouth open.
@@ -85,7 +85,7 @@ label v8_tues_eco_class:
 
     u "Hey."
 
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         scene v8stec6a # FPP. Same camera as v8stec6, Ryan neutral expression, mouth open
         with dissolve
 
@@ -138,8 +138,8 @@ label v8_tues_eco_class:
         with dissolve
 
         menu:
-            "Confide in Ryan":
-                $ add_point(KCT.BRO)
+            "Confide in Ryan" (bro=1.0):
+                $ reputation.add_point(RepComponent.BRO)
                 jump tec_conf_ryan
             "Play it cool":
                 jump tec_cool_ryan
@@ -185,7 +185,7 @@ label tec_cont:
 
     pause 0.5
 
-    if lauren.relationship >= Relationship.GIRLFRIEND:
+    if CharacterService.is_girlfriend(lauren):
         scene v8stec8 # FPP. Show Lauren, Lauren looking at camera, Lauren smile, mouth open.
         with dissolve
 
@@ -197,8 +197,8 @@ label tec_cont:
         u "Sorry, I just can't focus."
 
         menu:
-            "Flirt with Lauren":
-                $ add_point(KCT.BOYFRIEND)
+            "Flirt with Lauren" (boyfriend=1.0):
+                $ reputation.add_point(RepComponent.BOYFRIEND)
                 jump fl_w_lau
 
             "Don't flirt with Lauren":
@@ -302,7 +302,7 @@ label tec_end_time:
 
     stop music fadeout 3
 
-    play sound "sounds/clock2.mp3"
+    play sound sound.clock2
     scene clocka
     with fade
     pause 0.5

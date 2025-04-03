@@ -9,7 +9,7 @@ label v10_riley_sex:
 
     ri "Okay, I really wanna go get cleaned up so do you mind waiting here?"
 
-    play music "music/v10/Track Scene 40_1.mp3" fadein 2
+    play music music.ck1.v10.Track_Scene_40_1 fadein 2
 
     scene v10srds2 # FPP. Show Riley, smiling, mouth closed. She's still dirty.
     with dissolve
@@ -46,10 +46,10 @@ label v10_riley_sex:
 
     u "(Okay, she should be coming out soon.)"
 
-    if riley.relationship >= Relationship.FWB or kct == "confident":
+    if CharacterService.is_fwb(riley)or reputation() == Reputations.CONFIDENT:
         label v10s40_galleryScene:
             if _in_replay:
-                $ riley.relationship = Relationship.FWB
+                $ CharacterService.set_relationship(riley, Relationship.FWB)
 
     scene v10srds3 # FPP. Show Riley walking into her dorm room, wrapped in a towel, her hair down and still wet. She has a little smile, mouth open.
     with fade
@@ -66,7 +66,7 @@ label v10_riley_sex:
 
     ri "*Chuckles* I forgot a change of clothes."
 
-    if riley.relationship >= Relationship.FWB: # mc in a relationship with riley
+    if CharacterService.is_fwb(riley): # mc in a relationship with riley
         scene v10srds1f # TPP. Same camera as v10srds1. Show MC standing up from Riley's bed, smiling, mouth closed.
         with fade
 
@@ -76,7 +76,7 @@ label v10_riley_sex:
         with dissolve
 
         menu:
-            "Offer to turn around":
+            "Offer to turn around" (riley=0.0):
                 scene v10srds3a
                 with dissolve
 
@@ -226,8 +226,8 @@ label v10_riley_sex:
 
                         jump v10_mc_pen_call # -Transition to Scene 41-
 
-                    "Peek":
-                        $ riley.relationship = Relationship.FWB
+                    "Peek" (riley=1.0):
+                        $ CharacterService.set_relationship(riley, Relationship.FWB)
                         $ sceneList.add("v10_riley")
 
                         scene v10srds1f
@@ -245,7 +245,7 @@ label v10_riley_sex:
 
                         pause 0.75
 
-                        if config_censored:
+                        if is_censored:
                             call screen censored_popup("v10_mc_pen_call")
 
                         scene v10srds5
@@ -263,6 +263,11 @@ label v10_riley_sex:
 
                         u "Come here."
 
+                        lovense vibrate 2
+                        lovense rotate 1
+                        lovense suction 1
+                        lovense thrust 1
+
                         scene v10srds5c
                         with dissolve
 
@@ -275,6 +280,11 @@ label v10_riley_sex:
                             u "You're so sexy."
 
                             ri "Squeeze my thighs."
+
+                            lovense vibrate 4
+                            lovense rotate 2
+                            lovense suction 2
+                            lovense thrust 2
 
                             scene v10rircgf
                             with dissolve
@@ -294,12 +304,22 @@ label v10_riley_sex:
                         ri "My turn."
 
                         label v10s40_rileyCowgirl:
+                            lovense vibrate 5
+                            lovense rotate 3
+                            lovense suction 3
+                            lovense thrust 3
+
                             scene v10riot
                             with dissolve
                             pause
                             u "Fuck that feels good."
 
                             ri "You like it huh?"
+
+                            lovense vibrate 7
+                            lovense rotate 4
+                            lovense suction 3
+                            lovense thrust 3
 
                             scene v10riotf
                             with dissolve
@@ -321,6 +341,8 @@ label v10_riley_sex:
 
                         hide screen v10s40_rileySexOverlay
 
+                        lovense stop
+
                         scene v10srds6a
                         with dissolve
 
@@ -330,8 +352,8 @@ label v10_riley_sex:
                         with dissolve
 
                         u "It was."
-            "Make a move":
-                $ riley.relationship = Relationship.FWB
+            "Make a move" (riley=1.0):
+                $ CharacterService.set_relationship(riley, Relationship.FWB)
                 $ sceneList.add("v10_riley")
 
                 scene v10srds4a # TPP. Same camera as v10srds4. Show MC and Riley. Both smiling, mouths closed. MC puts his hand on Riley's towel and drops it to the floor.
@@ -339,7 +361,7 @@ label v10_riley_sex:
 
                 pause 0.75
 
-                if config_censored:
+                if is_censored:
                     call screen censored_popup("v10_mc_pen_call")
 
                 scene v10srds5 # FPP. Show Riley naked, towel at her feet, smiling, mouth closed.
@@ -352,6 +374,11 @@ label v10_riley_sex:
 
                 ri "I like where this is going."
 
+                lovense vibrate 2
+                lovense rotate 1
+                lovense suction 1
+                lovense thrust 1
+
                 scene v10srds5b # FPP. Same camera as v10srds5. Show Riley naked, standing close with her arms wrapped around MC. Smiling, mouth closed.
                 with dissolve
 
@@ -361,7 +388,7 @@ label v10_riley_sex:
                 with dissolve
 
                 stop music fadeout 3
-                play music "music/v10/Track Scene 40_2.mp3" fadein 2
+                play music music.ck1.v10.Track_Scene_40_2 fadein 2
 
                 u "Lie down."
                 
@@ -369,6 +396,11 @@ label v10_riley_sex:
                 image v10rircgf = Movie(play="images/v10/Scene 40/v10rircgf.webm", loop=True, image="images/v10/Scene 40/v10rircgStart.webp", start_image="images/v10/Scene 40/v10rircgStart.webp")
 
                 # -Move to position 2 (refer to Miro)-
+
+                lovense vibrate 3
+                lovense rotate 2
+                lovense suction 2
+                lovense thrust 2
 
                 scene v10rircg
                 with dissolve
@@ -401,6 +433,10 @@ label v10_riley_sex:
                 image v10riot = Movie(play="images/v10/Scene 40/v10riot.webm", loop=True, image="images/v10/Scene 40/v10riotStart.webp", start_image="images/v10/Scene 40/v10riotStart.webp")
                 image v10riotf = Movie(play="images/v10/Scene 40/v10riot.webm", loop=True, image="images/v10/Scene 40/v10riotStart.webp", start_image="images/v10/Scene 40/v10riotStart.webp")
 
+                lovense vibrate 5
+                lovense rotate 3
+                lovense suction 3
+                lovense thrust 3
 
                 scene v10riot
                 with dissolve
@@ -427,8 +463,10 @@ label v10_riley_sex:
 
                 pause 0.75
 
+                lovense stop
+
                 stop music fadeout 3
-                play music "music/v10/Track Scene 40_3.mp3" fadein 2
+                play music music.ck1.v10.Track_Scene_40_3 fadein 2
                 scene v10srds6a # TPP. Same camera as v10srds6. Show MC and Riley laying naked in bed together after sex. Both smiling, Riley mouth open.
                 with dissolve
 
@@ -563,14 +601,14 @@ label v10_riley_sex:
 
         jump v10_mc_pen_call # -Transition to Scene 41-
 
-    elif kct == "confident": # -If not riley rs with KCT Confident #
-        call screen kct_popup
+    elif reputation() == Reputations.CONFIDENT: # -If not riley rs with KCT Confident #
+        call screen reputation_popup
 
         scene v10srds3a
         with dissolve
         menu:
-            "Make a move":
-                $ riley.relationship = Relationship.FWB
+            "Make a move" (chloe=1.0):
+                $ CharacterService.set_relationship(riley, Relationship.FWB)
                 $ sceneList.add("v10_riley")
 
                 scene v10srds1f
@@ -588,7 +626,7 @@ label v10_riley_sex:
 
                 pause 0.75
 
-                if config_censored:
+                if is_censored:
                     call screen censored_popup("v10_mc_pen_call")
 
                 scene v10srds5
@@ -601,6 +639,11 @@ label v10_riley_sex:
 
                 ri "Someone's confident."
 
+                lovense vibrate 2
+                lovense rotate 1
+                lovense suction 1
+                lovense thrust 1 
+
                 scene v10srds5b
                 with dissolve
 
@@ -610,7 +653,7 @@ label v10_riley_sex:
                 with dissolve
 
                 stop music fadeout 3
-                play music "music/v10/Track Scene 40_2.mp3" fadein 2
+                play music music.ck1.v10.Track_Scene_40_2 fadein 2
 
                 u "Lie down."
 
@@ -620,6 +663,11 @@ label v10_riley_sex:
                 u "You're so sexy."
 
                 ri "Squeeze my thighs."
+
+                lovense vibrate 4
+                lovense rotate 2
+                lovense suction 2
+                lovense thrust 2
 
                 scene v10rircgf
                 with dissolve
@@ -645,6 +693,11 @@ label v10_riley_sex:
 
                 ri "You like it huh?"
 
+                lovense vibrate 6
+                lovense rotate 4
+                lovense suction 4
+                lovense thrust 4
+
                 scene v10riotf
                 with dissolve
                 pause
@@ -662,15 +715,17 @@ label v10_riley_sex:
                 with dissolve
 
                 ri "That was nice."
+                
+                lovense stop
 
                 stop music fadeout 3
-                play music "music/v10/Track Scene 40_3.mp3" fadein 2
+                play music music.ck1.v10.Track_Scene_40_3 fadein 2
                 scene v10srds7
                 with dissolve
 
                 u "It was."
 
-            "Offer to turn around":
+            "Offer to turn around" (riley=0.0):
                 scene v10srds3a
                 with dissolve
 
@@ -820,8 +875,8 @@ label v10_riley_sex:
 
                         jump v10_mc_pen_call # -Transition to Scene 41-
                     
-                    "Peek":
-                        $ riley.relationship = Relationship.FWB
+                    "Peek" (riley=1.0):
+                        $ CharacterService.set_relationship(riley, Relationship.FWB)
                         $ sceneList.add("v10_riley")
 
                         scene v10srds1f
@@ -839,7 +894,7 @@ label v10_riley_sex:
 
                         pause 0.75
 
-                        if config_censored:
+                        if is_censored:
                             call screen censored_popup("v10_mc_pen_call")
 
                         scene v10srds5
@@ -851,6 +906,11 @@ label v10_riley_sex:
                         with dissolve
 
                         ri "Someone's confident."
+
+                        lovense vibrate 2
+                        lovense rotate 1
+                        lovense suction 1
+                        lovense thrust 1
 
                         scene v10srds5b
                         with dissolve
@@ -868,6 +928,11 @@ label v10_riley_sex:
                         u "You're so sexy."
 
                         ri "Squeeze my thighs."
+
+                        lovense vibrate 4
+                        lovense rotate 3
+                        lovense suction 3
+                        lovense thrust 3
 
                         scene v10rircgf
                         with dissolve
@@ -892,6 +957,11 @@ label v10_riley_sex:
                         u "Fuck that feels good."
 
                         ri "You like it huh?"
+                        
+                        lovense vibrate 7
+                        lovense rotate 4
+                        lovense suction 4
+                        lovense thrust 4
 
                         scene v10riotf
                         with dissolve
@@ -911,6 +981,8 @@ label v10_riley_sex:
 
                         pause 0.75
 
+                        lovense stop
+                        
                         scene v10srds6a
                         with dissolve
 

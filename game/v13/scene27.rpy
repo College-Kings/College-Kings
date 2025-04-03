@@ -9,28 +9,26 @@ label v13s27:
 
     pause 0.75
 
-    play music "music/v13/Track Scene 27_1.mp3" fadein 2
+    play music music.ck1.v13.Track_Scene_27_1 fadein 2
 
-    play sound "sounds/vibrate.mp3"
+    play sound sound.vibrate
 
     scene v13s27_1a # TPP. Same as v13s27_1, MC slightly surprised, going to grab his phone, mouth closed
     with dissolve
 
     u "Wow... Perfect timing, who is it this time?"
 
-    $ amber.messenger.newMessage("Meet me at the bus stop near the hotel.", force_send=True)
-    $ amber.messenger.addReply("For?")
-    $ amber.messenger.newMessage("...")
+    $ MessengerService.new_message(amber, "Meet me at the bus stop near the hotel.")
+    $ MessengerService.add_reply(amber, "For?")
+    $ MessengerService.new_message(amber, "...")
 
     scene v13s27_1b # TPP. Same as v13s27_1, MC slight smile, looking at his phone, mouth closed
     with dissolve
 
-    label v13s27_PhoneContinueAmber:
-        if amber.messenger.replies:
-                call screen phone
-        if amber.messenger.replies:
-                u "(I should check my phone.)"
-                jump v13s27_PhoneContinueAmber
+    while MessengerService.has_replies(amber):
+        call screen phone
+        if MessengerService.has_replies(amber):
+            u "(I should check my phone.)"
 
     scene v13s27_1c # TPP. Same as v13s27_1, MC suspicious, mouth closed
     with dissolve
@@ -63,7 +61,7 @@ label v13s27:
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v13/Track Scene 27_2.mp3" fadein 2
+    play music music.v13_Track_Scene_27_2 fadein 2
 
     scene v13s27_4 # TPP. Show MC walking in the street, slight smile, mouth closed
     with fade

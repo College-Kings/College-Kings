@@ -10,7 +10,7 @@ label v12_escape_room:
 
     au "It's about time you guys got here."
 
-    play music "music/v12/Track Scene 17_1.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_17_1 fadein 2
 
     scene v12esr2 # FPP. Same positioning as v12esr1, MC looking at Imre, Imre looking at Aubrey, Imre slight smile, mouth open
     with dissolve
@@ -123,7 +123,7 @@ label v12_escape_room:
     escman "*Dry Tone* Welcome to Escape, do you have a reservation?"
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 17_2.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_17_2 fadein 2
 
     scene v12esr7 # FPP. Same positioning as v12esr6, MC looking at Lindsey, Lindsey looking at Escape Manager, Lindsey slight smile, mouth open
     with dissolve
@@ -286,7 +286,7 @@ label v12_escape_room:
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 17_3.mp3" fadein 2
+    play music music.v12_Track_Scene_17_3 fadein 2
 
     scene v12esr12 # FPP. Same positioning as v12esr11, MC looking at Charli, Charli looking at Escape Manager, Charli uncomfortable, mouth open
     with dissolve
@@ -338,7 +338,7 @@ label v12_escape_room:
 
     au "*Chuckles*"
 
-    play sound "sounds/vibrate.mp3"
+    play sound sound.vibrate
     scene v12esr14b # FPP. Same as v12esr14, Lindsey looking at Imre, Lindsey slight smile, mouth open
     with dissolve
 
@@ -384,7 +384,7 @@ label v12_escape_room:
 
     li "Nope, not yet."
 
-    play sound "sounds/vibrate.mp3"
+    play sound sound.vibrate
 
     scene v12esr14c
     with dissolve
@@ -416,7 +416,7 @@ label v12_escape_room:
 
     charli "I wonder if she responds directly to us or if she has a prepared response. Like if I said, \"just so you know, my name is Charli\", would she know my name is Charli?"
 
-    play sound "sounds/vibrate.mp3"
+    play sound sound.vibrate
     scene v12esr14d
     with dissolve
 
@@ -437,7 +437,7 @@ label v12_escape_room:
 
     charli "Well, that proves that they respond directly to us rather than automated responses. I assume it's the guy at the front."
 
-    play sound "sounds/vibrate.mp3"
+    play sound sound.vibrate
     scene v12esr14c
     with dissolve
 
@@ -482,7 +482,7 @@ label v12_escape_room:
 
     unknown "Three."
 
-    play sound "sounds/lever.mp3"
+    play sound sound.lever
     scene v12esr17d # FPP. Same as v12esr17c, Imre, Aubrey and Charli outside, door closed, all slightly surprised, mouths closed
     with vpunch
 
@@ -503,7 +503,7 @@ label v12_escape_room:
 
     charli "*Sighs*"
 
-    play sound "sounds/vibrate.mp3"
+    play sound sound.vibrate
 
     li "Just got another message. It says, \"tell your friends 'bye' because you won't see them for a while. Go into the room across the hall to find out how to help them.\""
 
@@ -557,7 +557,7 @@ label v12_escape_room:
 
     pause 0.75
 
-    play sound "sounds/vibrate.mp3"
+    play sound sound.vibrate
     scene v12esr18b # FPP. Same as v12esr18, Charli looking down at Lindsey's phone, slightly annoyed, mouth open
     with dissolve
 
@@ -588,7 +588,7 @@ label v12_escape_room:
 
     charli "Just forward the messages to us."
 
-    play sound "sounds/vibrate.mp3"
+    play sound sound.vibrate
 
     scene v12esr18
     with dissolve
@@ -764,7 +764,7 @@ label v12_escape_room:
 
     imre "I don't care if his fucking non-existent balls freeze off, I'm not touchin- *inaudible*."
 
-    play music "sounds/driving1.mp3"
+    play ambience ambience.driving
 
     scene v12esr29 # FPP. Same positioning as v12esr28, MC and Lindsey looking at each other, Lindsey slightly worried, mouth open
     with dissolve
@@ -796,10 +796,10 @@ label v12_escape_room:
 
     u "That we do..."
 
-    stop music fadeout 3
-    play music "music/v12/Track Scene 17_4.mp3" fadein 2
+    stop ambience fadeout 3
+    play music music.ck1.v12.Track_Scene_17_4 fadein 2
 
-    if chloe.relationship >= Relationship.GIRLFRIEND:
+    if CharacterService.is_girlfriend(chloe):
         scene v12esr29
         with dissolve
 
@@ -824,8 +824,8 @@ label v12_escape_room:
         with dissolve
 
         menu:
-            "You're right, we shouldn't do this":
-                $ add_point(KCT.BOYFRIEND)
+            "You're right, we shouldn't do this" (boyfriend=1.0):
+                $ reputation.add_point(RepComponent.BOYFRIEND)
                 scene v12esr29f # FPP. Same as v12esr29d, Lindsey slightly worried, mouth closed
                 with dissolve
 
@@ -853,8 +853,8 @@ label v12_escape_room:
 
                 jump v12_after_sex
 
-            "Is it? I want this...":
-                $ add_point(KCT.TROUBLEMAKER)
+            "Is it? I want this..." (troublemaker=1.0):
+                $ reputation.add_point(RepComponent.TROUBLEMAKER)
                 scene v12esr29f
                 with dissolve
 
@@ -885,27 +885,27 @@ label v12_lindsey_kiss_or_not:
     with dissolve
 
     menu:
-        "Kiss her":
-            $ add_point(KCT.BOYFRIEND)
+        "Kiss her" (boyfriend=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             scene v12esr30 # TPP. Show MC and Lindsey kissing
             with dissolve
 
-            play sound "sounds/kiss.mp3"
+            play sound sound.kiss
 
             pause 1.5
 
-            if lindsey.relationship >= Relationship.KISS or kct == "popular" or len(v12s7_killList) >= 5:
-                if lindsey.relationship < Relationship.KISS and not len(v12s7_killList) >= 5:
-                    call screen kct_popup
+            if CharacterService.is_kissed(lindsey) or reputation() == Reputations.POPULAR or len(v12s7_killList) >= 5:
+                if CharacterService.is_friend(lindsey) and not len(v12s7_killList) >= 5:
+                    call screen reputation_popup
                 jump v12_lindsey_sex
             
             else:
-                call screen kct_popup(required_kct="popular")
+                call screen reputation_popup(required_reputation="popular")
             
                 jump v12_after_sex
                 
-        "Don't kiss her":
-            $ add_point(KCT.BRO)
+        "Don't kiss her" (bro=1.0):
+            $ reputation.add_point(RepComponent.BRO)
             scene v12esr29e
             with dissolve
 
@@ -930,7 +930,7 @@ label v12_lindsey_kiss_or_not:
 
 label v12_lindsey_sex:
     $ sceneList.add("v12_lindsey")
-    $ lindsey.relationship = Relationship.FWB
+    $ CharacterService.set_relationship(lindsey, Relationship.FWB)
 
     scene v12esr29g # FPP. Same as v12esr29c, Lindsey eyes open, slight smile, mouth open, face close to MC
     with dissolve
@@ -1026,12 +1026,17 @@ label v12_lindsey_sex:
 
     pause
 
-    if config_censored:
+    if is_censored:
         call screen censored_popup("v12s17_nsfwSkipLabel1")
 
     show screen v12s17_lindsey_sex_overlay
 
     label v12s17_lindsey_handjob:
+        lovense vibrate 2
+        lovense rotate 1
+        lovense suction 1
+        lovense thrust 1
+
         scene v12esr37c # FPP. Same as v12esr37b, MC's pants removed, Lindsey looking at MC's dick, Lindsey slight smile, mouth open
         with dissolve
 
@@ -1072,6 +1077,11 @@ label v12_lindsey_sex:
         li "*Chuckles* I'm not sure how much time we have left but... I'll give you all that I can, okay?"
 
     label v12s17_lindsey_blowjob:
+        lovense vibrate 3
+        lovense rotate 2
+        lovense suction 2
+        lovense thrust 2
+
         image v12linbj = Movie(play="images/v12/Scene 17/v12linbj.webm", loop=True, image="images/v12/Scene 17/v12linbjStart.webp", start_image="images/v12/Scene 17/v12linbjStart.webp") # Lindsey blowjob
         image v12linbjf = Movie(play="images/v12/Scene 17/v12linbjf.webm", loop=True, image="images/v12/Scene 17/v12linbjStart.webp", start_image="images/v12/Scene 17/v12linbjStart.webp") # Lindsey blowjob spedup
         image v12linbj2 = Movie(play="images/v12/Scene 17/v12linbj2.webm", loop=True, image="images/v12/Scene 17/v12linbj2Start.webp", start_image="images/v12/Scene 17/v12linbj2Start.webp") # Lindsey blowjob FPP
@@ -1126,6 +1136,11 @@ label v12_lindsey_sex:
 
         pause
     label v12s17_lindsey_sixty_nine:
+        lovense vibrate 4
+        lovense rotate 3
+        lovense suction 3
+        lovense thrust 3
+
         image v12linsn = Movie(play="images/v12/Scene 17/v12linsn.webm", loop=True, image="images/v12/Scene 17/v12linsnStart.webp", start_image="images/v12/Scene 17/v12linsnStart.webp") # Lindsey handjob
         image v12linsnf = Movie(play="images/v12/Scene 17/v12linsnf.webm", loop=True, image="images/v12/Scene 17/v12linsnStart.webp", start_image="images/v12/Scene 17/v12linsnStart.webp") # Lindsey handjob spedup
         image v12linsn2 = Movie(play="images/v12/Scene 17/v12linsn2.webm", loop=True, image="images/v12/Scene 17/v12linsn2Start.webp", start_image="images/v12/Scene 17/v12linsn2Start.webp") # Lindsey handjob TPP 2
@@ -1157,6 +1172,11 @@ label v12_lindsey_sex:
 
         u "Tell me Linds... I'm cumming! Tell me how good it fucking feels."
 
+        lovense vibrate 6
+        lovense rotate 5
+        lovense suction 5
+        lovense thrust 5
+
         scene v12esr40 # TPP. Show MC cumming in lindsey's mouth in 69 position
         with vpunch
 
@@ -1176,6 +1196,11 @@ label v12_lindsey_sex:
         with dissolve
 
         li "Oh, [name], FUCK!"
+
+        lovense vibrate 8
+        lovense rotate 6
+        lovense suction 6
+        lovense thrust 6
 
         scene v12esr41b # TPP. Same as v12esr41a, Lindsey holding the back of MC's head, she is moaning, mouth open
         with dissolve
@@ -1205,6 +1230,7 @@ label v12_lindsey_sex:
     pause
     
     label v12s17_nsfwSkipLabel1:
+    lovense stop
     
     scene v12esr44 # FPP. MC and Lindsey standing in front of each other, Lindsey smiling, mouth closed, looking at MC
     with dissolve
@@ -1257,9 +1283,9 @@ label v12_after_sex:
     unknown "We're having some sort of technical difficulties with the electric... So, you'll be- Or, I mean, your teacher will be refunded. Sorry. Thanks."
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 17_5.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_17_5 fadein 2
 
-    play sound "sounds/lever.mp3"
+    play sound sound.lever
 
     scene v12esr17i # FPP. Same as v12esr17, lights dim
     with dissolve
@@ -1306,7 +1332,7 @@ label v12_after_sex:
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 17_6.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_17_6 fadein 2
 
     scene v12esr48 # FPP. MC and Lindsey in the viewing room, MC looking at Lindsey, Lindsey looking at MC, Lindsey slight smile, mouth closed
     with dissolve
@@ -1444,7 +1470,7 @@ label v12_after_sex:
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 17_2.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_17_2 fadein 2
 
     scene v12esr54 # FPP. Same positioning as v12esr53, MC looking at Lindsey, Lindsey looking at Aubrey, Lindsey worried, mouth open
     with dissolve
@@ -1517,7 +1543,7 @@ label v12_after_sex:
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v12/Track Scene 17_7.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_17_7 fadein 2
 
     scene v12esr61 # FPP. MC looking at Aubrey, outside the escape room building, Aubrey looking at MC, Aubrey slight smile, mouth open
     with dissolve

@@ -29,7 +29,7 @@ label caf_w_aub:
     scene scaf8 # FPP. Close up of Aubrey sat at cafe table, Aubrey slight smile.
     with dissolve
 
-    if aubrey.relationship >= Relationship.FWB:
+    if CharacterService.is_fwb(aubrey):
         u "How you doin?"
 
         scene scaf8a # FPP. Same camera as scaf8, Aubrey slight smile, mouth open.
@@ -108,7 +108,7 @@ label caf_w_aub:
         au "You have a lot going on today?"
 
         if protest:
-            play sound "sounds/call.mp3"
+            play sound sound.call
 
             scene scaf9 # TPP. Show MC and Aubrey, MC has his phone in hand as Autumn is calling him. Aubrey neutral expression, MC neutral expression mouth open.
             with dissolve
@@ -118,7 +118,7 @@ label caf_w_aub:
             scene scaf9a # TPP. Same camera as scaf9a, Show MC walking away from the table now on the phone, MC mouth closed. Aubrey neutral expression mouth open.
             with dissolve
             stop sound
-            play sound "sounds/answercall.mp3"
+            play sound sound.answer_call
             au "Okay."
 
             jump au_prot_call
@@ -185,7 +185,7 @@ label caf_w_aub:
         au "So you got a lot going on today?"
 
         if protest:
-            play sound "sounds/call.mp3"
+            play sound sound.call
 
             scene scaf9
             with dissolve
@@ -196,7 +196,7 @@ label caf_w_aub:
             with dissolve
             
             stop sound
-            play sound "sounds/answercall.mp3"
+            play sound sound.answer_call
             au "Okay."
 
             jump au_prot_call
@@ -208,7 +208,7 @@ label cafe_no_call:
     scene scaf8
     with dissolve
 
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         u "Nothing in particular except for some of the Wolves' stuff."
 
     else:
@@ -230,7 +230,7 @@ label cafe_no_call:
     with Dissolve(1)
     pause 0.75
 
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         jump after_prot_wolves
 
     else:
@@ -250,8 +250,8 @@ label au_prot_call:
     with dissolve
 
     menu:
-        "Go to the protest":
-            $ add_point(KCT.BOYFRIEND)
+        "Go to the protest" (boyfriend=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             jump caf_prot_au
 
         "Don't go to the protest":
@@ -395,7 +395,7 @@ label caf_no_prot_au:
     with Dissolve(1)
     pause 0.75
 
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         jump after_prot_wolves
 
     else:

@@ -7,9 +7,9 @@ label v10_linds_room:
     scene v10slds1 # TPP. Show MC arriving at the door to Lindsey's house and knocking. Normal expression, mouth closed.
     with fade
 
-    play sound "sounds/knock.mp3"
+    play sound sound.knock
 
-    play music "music/v10/Track Scene 11.mp3" fadein 2
+    play music music.ck1.v10.Track_Scene_11 fadein 2
 
     pause 0.75
     
@@ -216,13 +216,13 @@ label v10_linds_room:
                     li "Honestly, just venting it all out already has me feeling a lot better."
 
         "Make a joke":
-            if kct == "confident":
+            if reputation() == Reputations.CONFIDENT:
                 scene v10slds3e # FPP. Same camera as v10slds3. Show Lindsey, with a somewhat amused smile, mouth closed.
                 with dissolve
 
                 u "Hey, at least you're not gonna end up like that sailor that followed the North Star and ended up freezing to death in a snow storm, right?"
 
-                call screen kct_popup
+                call screen reputation_popup
                 
                 scene v10slds3f # FPP. Same camera as v10slds3. Show Lindsey, with a somewhat amused smile, mouth open.
                 with dissolve
@@ -364,12 +364,12 @@ label v10_linds_room:
 
     menu:
         "I like it":
-            if kct == "confident":
+            if reputation() == Reputations.CONFIDENT:
                 scene v10slds3e
                 with dissolve
                 u "I'd never say no to any attention you wanted to give."
 
-                call screen kct_popup
+                call screen reputation_popup
 
                 scene v10slds3f
                 with dissolve
@@ -469,7 +469,7 @@ label v10_linds_room:
 
     stop music fadeout 3
 
-if joinwolves: # I don't know this variable name
+if mc.frat == Frat.WOLVES: # I don't know this variable name
     jump v10_wolves_redec
 
 else: # RCS - if MC is an ape?

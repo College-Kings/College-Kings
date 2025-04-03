@@ -5,13 +5,13 @@
 # de = Dean
 
 label mon_morning_room:
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         scene v8sdea1 # TPP. Show MC waking up on his bed in Wolves room.
         with Fade(0.75, 0.25, 0.75)
 
         u "(I gotta go talk to the dean today about Penelope. I better get ready)"
 
-        play music "music/mindie2.mp3" fadein 2
+        play music music.ck1.mindie2 fadein 2
 
         scene v8sdea2 # TPP. Show MC getting ready in his Wolves room.
         with dissolve
@@ -26,7 +26,7 @@ label mon_morning_room:
 
         u "(I gotta go talk to the dean today about Penelope. I better get ready)"
 
-        play music "music/mindie2.mp3" fadein 2
+        play music music.ck1.mindie2 fadein 2
 
         scene v8sdea4 # TPP. Show MC getting ready in his Apes room.
         with dissolve

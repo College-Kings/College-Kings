@@ -5,7 +5,7 @@
 # KIWII IMAGES: s20KiwiiWolf = Red Boxing Glove | s20KiwiiApe = Muscular MMA style fighter
 
 label v9_room_fri_aft:
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         scene v9rfa1 # TPP. Show MC sat at his desk in his Wolves room studying.
         with fade
 
@@ -19,19 +19,17 @@ label v9_room_fri_aft:
         scene v9rfa2 # TPP. Show MC sat at his desk on his phone.
         with dissolve
 
-        $ v9s20KiwiiPost1 = KiwiiPost(chris, "v9/s20KiwiiWolf.webp", "Who's ready?!", numberLikes=renpy.random.randint(200, 300))
-        $ v9s20KiwiiPost1.newComment(imre, "Ding! Ding! Ding!", numberLikes=renpy.random.randint(200, 250), force_send=True)
-        $ v9s20KiwiiPost1.newComment(cameron, "Whatever man! You're going down!", numberLikes=renpy.random.randint(200, 250), force_send=True)
-        $ v9s20KiwiiPost1.addReply("Fuck yeah!", numberLikes=renpy.random.randint(100, 200))
+        $ kiwii_post = KiwiiService.new_post(chris, "v9/Scene 20/s20KiwiiWolf.webp", "Who's ready?!", number_likes=renpy.random.randint(200, 300))
+        $ KiwiiService.new_comment(kiwii_post, imre, "Ding! Ding! Ding!", number_likes=renpy.random.randint(200, 250))
+        $ KiwiiService.new_comment(kiwii_post, cameron, "Whatever man! You're going down!", number_likes=renpy.random.randint(200, 250))
+        $ KiwiiService.add_reply(kiwii_post, _("Fuck yeah!"), number_likes=renpy.random.randint(100, 200))
 
         pause 0.5
 
-        label s20_phoneExit1:
-            if v9s20KiwiiPost1.replies:
-                call screen phone
-            if v9s20KiwiiPost1.replies:
+        while KiwiiService.has_replies(kiwii_post):
+            call screen phone
+            if KiwiiService.has_replies(kiwii_post):
                 u "(I should reply to that post on Kiwii.)"
-                jump s20_phoneExit1
 
         jump v9_room_fri_aft_contW
 
@@ -50,19 +48,18 @@ label v9_room_fri_aft:
         with dissolve
        
 
-        $ v9s20KiwiiPost2 = KiwiiPost(grayson, "v9/s20KiwiiApe.webp", "Where my APES at?", numberLikes=renpy.random.randint(200, 300))
-        $ v9s20KiwiiPost2.newComment(cameron, "The BEST Ape is right here!", numberLikes=renpy.random.randint(200, 250), force_send=True)
-        $ v9s20KiwiiPost2.newComment(ryan, "I'm SO ready!", numberLikes=renpy.random.randint(200, 250), force_send=True)
-        $ v9s20KiwiiPost2.addReply("Let's go!!", numberLikes=renpy.random.randint(100, 200))
+        $ kiwii_post = KiwiiService.new_post(grayson, "v9/Scene 20/s20KiwiiApe.webp", "Where my APES at?", number_likes=renpy.random.randint(200, 300))
+        $ KiwiiService.new_comment(kiwii_post, cameron, "The BEST Ape is right here!", number_likes=renpy.random.randint(200, 250))
+        $ KiwiiService.new_comment(kiwii_post, ryan, "I'm SO ready!", number_likes=renpy.random.randint(200, 250))
+        $ KiwiiService.add_reply(kiwii_post, _("Let's go!!"), number_likes=renpy.random.randint(100, 200))
 
         pause 0.5
 
-        label s20_phoneExit2:
-            if v9s20KiwiiPost2.replies:
-                call screen phone
-            if v9s20KiwiiPost2.replies:
-                u "(I should reply to that post on Kiwii)"
-                jump s20_phoneExit2
+        while KiwiiService.has_replies(kiwii_post):
+            call screen phone
+            if KiwiiService.has_replies(kiwii_post):
+                u "(I should reply to that post on Kiwii.)"
+
         jump v9_room_fri_aft_contA
 
 label v9_room_fri_aft_contW:

@@ -3,10 +3,10 @@
 # Characters: MC (Outfit 1), charli (Outfit 1)
 # Time: Evening
 
-label v11_hotel_charlie_bar:
+label v11_hotel_charli_bar:
     scene v11cmb1 # TPP. Show Charli approaching MC at the bar.
     with dissolve
-    play music "music/v11/Track Scene 5_6.mp3" fadein 2
+    play music music.ck1.v11.Track_Scene_5_6 fadein 2
     charli "Wearing that shirt with those pants was a pretty brave choice."
 
     scene v11cmb2 # FPP. Show charli mouth closed
@@ -38,16 +38,16 @@ label v11_hotel_charlie_bar:
 
     charli "You can't comprehend being nice without an agenda, because you yourself aren't nice without an agenda."
 
-    if chloe.relationship >= Relationship.FWB and lauren.relationship >= Relationship.GIRLFRIEND and aubrey.relationship >= Relationship.FWB:
+    if CharacterService.is_fwb(chloe) or CharacterService.is_girlfriend(chloe) and CharacterService.is_girlfriend(lauren) and CharacterService.is_fwb(aubrey):
         charli "How many girls have you messed with on this trip alone? Chloe, Aubrey, Lauren?"
 
-    elif lauren.relationship >= Relationship.GIRLFRIEND and aubrey.relationship >= Relationship.FWB:
+    elif CharacterService.is_girlfriend(lauren) and CharacterService.is_fwb(aubrey):
         charli "How many girls have you messed with on this trip alone? Aubrey, Lauren, who else?"
 
-    elif aubrey.relationship >= Relationship.FWB and chloe.relationship >= Relationship.FWB:
+    elif CharacterService.is_fwb(aubrey) and CharacterService.is_fwb(chloe) or CharacterService.is_girlfriend(chloe):
         charli "How many girls have you messed with on this trip alone? Aubrey, Chloe, who else?"
 
-    elif lauren.relationship >= Relationship.GIRLFRIEND and chloe.relationship >= Relationship.FWB:
+    elif CharacterService.is_girlfriend(lauren) and CharacterService.is_fwb(chloe) or CharacterService.is_girlfriend(chloe):
         charli "How many girls have you messed with on this trip alone? Chloe, Lauren, who else?"
         
     scene v11cmb2a
@@ -82,7 +82,7 @@ label v11_hotel_charlie_bar:
 
     u "(Fuck him! He doesn't know me! I'm not letting him get to me...)"
     stop music fadeout 3
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         jump v11_hotel_bar_wolves
     else:
         jump v11_hotel_bar_apes

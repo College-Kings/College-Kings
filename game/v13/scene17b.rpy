@@ -9,7 +9,7 @@ label v13s17b:
 
     pause 0.75
 
-    play music "music/v13/Track Scene 17.mp3" fadein 2
+    play music music.v13_Track_Scene_17 fadein 2
 
     scene v13s17b_1a # TPP. Same as v13s17b_1, MC wakes up, Lauren still sleeping, MC looking at Lauren, MC slight smile, mouth closed
     with dissolve

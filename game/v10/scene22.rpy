@@ -6,8 +6,8 @@
 # -MC wakes from his sleep-
 
 label v10_cafe_w_jenny:
-    play music "music/v10/Track Scene 22_2.mp3" fadein 2
-    if joinwolves:
+    play music music.ck1.v10.Track_Scene_22_2 fadein 2
+    if mc.frat == Frat.WOLVES:
         scene v10scwj1 # TPP. Show MC waking up in his new Wolves room in underwear.
         with fade
 
@@ -158,8 +158,8 @@ label v10_cafe_w_jenny:
         with dissolve
 
         menu:
-            "Reassure her":
-                $ add_point(KCT.BOYFRIEND)
+            "Reassure her" (boyfriend=1.0):
+                $ reputation.add_point(RepComponent.BOYFRIEND)
                 $ jenny.points += 1
 
                 u "Penelope always puts others before herself, even if you knew and tried to stop her, she probably still would've done it."
@@ -203,9 +203,9 @@ label v10_cafe_w_jenny:
         with dissolve
 
         menu:
-            "Flirt":
-                $ add_point(KCT.BOYFRIEND)
-                if kct == "popular":
+            "Flirt" (boyfriend=1.0):
+                $ reputation.add_point(RepComponent.BOYFRIEND)
+                if reputation() == Reputations.POPULAR:
                     $ jenny.points += 1
 
                 else:
@@ -226,7 +226,7 @@ label v10_cafe_w_jenny:
 
                 jen "I may just have to try one at some point."
 
-        play sound "sounds/vibrate.mp3"
+        play sound sound.vibrate
 
         scene v10scwj9 # FPP. Show MC's phone in MC's hand, Camera as if MC is looking down at his phone screen. Use Penelope call texture.
         with dissolve
@@ -284,8 +284,8 @@ label v10_cafe_w_jenny:
         with dissolve
 
         menu:
-            "Be helpful":
-                $ add_point(KCT.BRO)
+            "Be helpful" (bro=1.0):
+                $ reputation.add_point(RepComponent.BRO)
 
                 scene v10scwj11
                 with dissolve
@@ -301,8 +301,8 @@ label v10_cafe_w_jenny:
 
                 u "And if they don't then I'll just rob a bank for you."
 
-            "Be supportive":
-                $ add_point(KCT.BOYFRIEND)
+            "Be supportive" (boyfriend=1.0):
+                $ reputation.add_point(RepComponent.BOYFRIEND)
                 $ penelope.points += 1
 
                 scene v10scwj11

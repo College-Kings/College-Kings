@@ -3,20 +3,6 @@
 # Characters: MC smart outfit from scene 1, Josh (Outfit 1)
 # Time: Night time
 
-init python:
-    def v11s5_reply1():
-        josh.messenger.newMessage("Really bro, that's lame.")
-        josh.messenger.addReply("No for real, I have to pack for the trip.")
-
-        if josh_europe:
-            josh.messenger.newMessage("Fuck, me too.")
-        else:
-            josh.messenger.newMessage("Whatever man!")
-
-    def v11s5_reply2():
-        setattr(store, "v11_josh_nightclub", True)
-        josh.messenger.newMessage("Let's party!")
-
 label v11_nightclub_with_josh:
     #scene v11seap4e # FPP. Show the Park, Show Emily just leaving
     #with fade
@@ -24,27 +10,40 @@ label v11_nightclub_with_josh:
     scene v11swc31
     with dissolve
 
-    play music "music/v11/Track Scene 4_1.mp3" fadein 2
-    play sound "sounds/vibrate.mp3"
+    play music music.ck1.v11.Track_Scene_4_1 fadein 2
+    play sound sound.vibrate
 
     u "(Let's see who this is.)"
 
-    $ josh.messenger.newMessage("WE GETTIN FUCKED UP TONIGHT!", force_send=True)
-    $ josh.messenger.addReply("Who?")
-    $ josh.messenger.newMessage("You and me, meet me at the bar on Stevenson.")
-    $ josh.messenger.addReply("There's a lot of bars on Stevenson.")
-    $ josh.messenger.newMessage("The Hive duh!")
-    $ josh.messenger.addReply("Josh, we can't even get in.")
-    $ josh.messenger.newMessage("With these fake IDs we can...")
-    $ josh.messenger.addReply("I can't be staying up anyway, I still have a ton of stuff to do tonight.", v11s5_reply1)
-    $ josh.messenger.addReply("LET'S FUCKING GOOOOO! OMW NOW!", v11s5_reply2)
+    python:
+        v11s5_reply1 = MessageBuilder(josh)
+        v11s5_reply1.new_message("Really bro, that's lame.")
+        v11s5_reply1.add_reply("No for real, I have to pack for the trip.")
+        if josh_europe:
+            v11s5_reply1.new_message("Fuck, me too.")
+        else:
+            v11s5_reply1.new_message("Whatever man!")
 
-label v11s4_PhoneContinueJosh1:
-    if josh.messenger.replies:
+        v11s5_reply2 = MessageBuilder(josh)
+        v11s5_reply2.set_variable("v11_josh_nightclub", True)
+        v11s5_reply2.new_message("Let's party!")
+
+    $ MessengerService.new_message(josh, "WE GETTIN FUCKED UP TONIGHT!")
+    $ MessengerService.add_reply(josh, "Who?")
+    $ MessengerService.new_message(josh, "You and me, meet me at the bar on Stevenson.")
+    $ MessengerService.add_reply(josh, "There's a lot of bars on Stevenson.")
+    $ MessengerService.new_message(josh, "The Hive duh!")
+    $ MessengerService.add_reply(josh, "Josh, we can't even get in.")
+    $ MessengerService.new_message(josh, "With these fake IDs we can...")
+    $ MessengerService.add_replies(josh,
+        Reply("I can't be staying up anyway, I still have a ton of stuff to do tonight.", v11s5_reply1),
+        Reply("LET'S FUCKING GOOOOO! OMW NOW!", v11s5_reply2)
+    )
+
+    while MessengerService.has_replies(josh):
         call screen phone
-    if josh.messenger.replies:
-        u "(I should check my phone.)"
-        jump v11s4_PhoneContinueJosh1
+        if MessengerService.has_replies(josh):
+            u "(I should check my phone.)"
 
     if not v11_josh_nightclub:
 
@@ -79,7 +78,7 @@ label v11s4_PhoneContinueJosh1:
     with fade
 
     stop music fadeout 3
-    play music "music/v11/Track Scene 5_2.mp3" fadein 2
+    play music music.ck1.v11.Track_Scene_5_2 fadein 2
 
     jo "There he is. Ready to get fucked up?"
 
@@ -104,8 +103,8 @@ label v11s4_PhoneContinueJosh1:
     jo "Yeah, that's the name I put on your ID. Cool right?"
 
     menu:
-        "Cool":
-            $ add_point(KCT.BRO)
+        "Cool" (bro=1.0):
+            $ reputation.add_point(RepComponent.BRO)
 
             scene v11swc3
             with dissolve
@@ -129,7 +128,7 @@ label v11s4_PhoneContinueJosh1:
             u "Fine. Hi, I'm John Smith. My stock dividends have treated me well, and I'm here to have a good time."
 
     stop music fadeout 3
-    play music "music/v11/Track Scene 5_3.mp3" fadein 2
+    play music music.ck1.v11.Track_Scene_5_3 fadein 2
 
     scene v11swc3b
     with dissolve
@@ -161,8 +160,8 @@ label v11s4_PhoneContinueJosh1:
 
     if not josh_europe:
         menu:
-            "Invite to Europe":
-                $ add_point(KCT.BRO)
+            "Invite to Europe" (bro=1.0):
+                $ reputation.add_point(RepComponent.BRO)
                 $ josh_europe = True
 
                 scene v11swc3
@@ -252,8 +251,8 @@ label v11s4_PhoneContinueJosh1:
     bartender "And for you?"
 
     menu:
-        "Henny":
-            $ add_point(KCT.BRO)
+        "Henny" (bro=1.0):
+            $ reputation.add_point(RepComponent.BRO)
 
             scene v11swc6c # FPP Same angle as v11swc6b, Bartender mouth closed
             with dissolve
@@ -584,9 +583,9 @@ label v11s4_PhoneContinueJosh1:
 
     u "That's smart, actually. Probably makes it harder for the creeps at the bar to stalk you on Kiwii."
 
-    if candyLike < 3 and not kct == "popular":
-        if not kct == "popular":
-            call screen kct_popup(required_kct="popular")
+    if candyLike != 3 and not reputation() == Reputations.POPULAR:
+        if not reputation() == Reputations.POPULAR:
+            call screen reputation_popup(required_reputation="popular")
     
         scene v11swc6o
         with dissolve
@@ -630,11 +629,8 @@ label v11s4_PhoneContinueJosh1:
 
         jump v11_thurs_night_room
 
-    # If made Candy smile 3 or more times
-    $ candy.relationship = Relationship.LIKES
-
-    if candyLike < 3:
-        call screen kct_popup
+    if candyLike != 3:
+        call screen reputation_popup
 
     scene v11swc6l
     with dissolve
@@ -701,7 +697,7 @@ label v11s4_PhoneContinueJosh1:
 
     pause 0.75
     stop music fadeout 3
-    play music "music/v11/Track Scene 5_4.mp3" fadein 2
+    play music music.ck1.v11.Track_Scene_5_4 fadein 2
     scene v11swc16 # TPP Outside of bar, Dannis walking up to MC and Candy, Dennis looks angry with mouth open
     with dissolve
 
@@ -731,7 +727,7 @@ label v11s4_PhoneContinueJosh1:
 
             scene v11swc16a # TPP Same angle as v11swc16, Show Dennis punching MC
             with dissolve
-            play sound "sounds/facepunch1.mp3"
+            play sound sound.hit
 
             pause 0.75
             
@@ -769,9 +765,11 @@ label v11s4_PhoneContinueJosh1:
 
         "Act like family":
             $ sceneList.add("v11_candy")
-            $ candy.relationship = Relationship.FWB
+            $ CharacterService.set_relationship(candy, Relationship.FWB)
+
             scene v11swc16e # TPP Same angle and characters as v11swc16, MC puts one hand on his waist, stands in a faminine way, and holds his other hand up, wrist limp
             with dissolve
+            
             u "She's my cousin, dude."
 
     scene v11swc3i # FPP Show Dennis looking confused, mouth closed
@@ -818,7 +816,7 @@ label v11s5_galleryScene:
     scene v11swc20 # FPP At Candy's house, show Candy smiling, mouth closed
     with fade
     stop music fadeout 3
-    play music "music/v11/Track Scene 5_5.mp3" fadein 2
+    play music music.ck1.v11.Track_Scene_5_5 fadein 2
     u "This is a nice place, you live here by yourself?"
 
     scene v11swc20a # FPP Same angle as v11swc20, Candy smiling with mouth open
@@ -844,11 +842,16 @@ label v11s5_galleryScene:
     scene v11swc22 # FPP Show Candy standing above MC, Candy smiling with mouth closed
     with dissolve
 
-    $ grant_achievement("candy_crusher")
+    grant Achievement("candy_crusher", "Have fun with Candy")
     u "Candy it is."
 
-    if config_censored:
+    if is_censored:
         call screen censored_popup("v11s5_nsfwSkipLabel1")
+
+    lovense vibrate 2
+    lovense rotate 1
+    lovense suction 1
+    lovense thrust 1
 
     scene v11swc21a # TPP Same angle as v11swc21, Candy removing her clothing
     with dissolve
@@ -859,7 +862,7 @@ label v11s5_galleryScene:
     with fade
 
     stop music fadeout 3
-    play music "music/v11/Track Scene 5_6.mp3" fadein 2
+    play music music.ck1.v11.Track_Scene_5_6 fadein 2
     pause 1.25
 
     image v11cbj = Movie(play="images/v11/Scene 5/v11canbj.webm", loop=True, image="images/v11/Scene 5/v11canbjStart.webp", start_image="images/v11/Scene 5/v11canbjStart.webp") # FPP Candy giving MC a blowjob
@@ -871,6 +874,12 @@ label v11s5_galleryScene:
     with fade
 
     u "Oh fuck."
+
+    lovense vibrate 5
+    lovense rotate 3
+    lovense suction 3
+    lovense thrust 3
+    lovense depth 1
 
     scene v11cbjf
     with dissolve
@@ -887,6 +896,12 @@ label v11s5_galleryScene:
 
     u "Oh my god, come here."
 
+    lovense vibrate 7
+    lovense rotate 4
+    lovense suction 4
+    lovense thrust 4
+    lovense depth 1
+
     scene v11swc22a # FPP. candy getting on top of MC ready to ride MC
     with dissolve
 
@@ -896,6 +911,11 @@ label v11s5_galleryScene:
     with fade
 
     u "I'm glad I went out tonight."
+
+    lovense vibrate 9
+    lovense rotate 5
+    lovense suction 5
+    lovense thrust 5
 
     image v11ccg = Movie(play="images/v11/Scene 5/v11cancg.webm", loop=True, image="images/v11/Scene 5/v11cancgStart.webp", start_image="images/v11/Scene 5/v11cancgStart.webp") # TPP Candy riding MC, their faces near each other
     image v11ccgf = Movie(play="images/v11/Scene 5/v11cancgf.webm", loop=True, image="images/v11/Scene 5/v11cancgStart.webp", start_image="images/v11/Scene 5/v11cancgStart.webp")
@@ -914,6 +934,12 @@ label v11s5_galleryScene:
     with dissolve
 
     candy "Oh yes!"
+
+    lovense vibrate 11
+    lovense rotate 7
+    lovense suction 7
+    lovense thrust 7
+    lovense depth 2
 
     scene v11ccg2
     with dissolve
@@ -936,6 +962,12 @@ label v11s5_galleryScene:
 
     candy "YESSSSS!"
 
+    lovense vibrate 13
+    lovense rotate 9
+    lovense suction 9
+    lovense thrust 9
+    lovense depth 2
+
     scene v11cmif
     with dissolve
 
@@ -948,6 +980,12 @@ label v11s5_galleryScene:
     with dissolve
 
     u "Turn around for me."
+
+    lovense vibrate 15
+    lovense rotate 11
+    lovense suction 11
+    lovense thrust 11
+    lovense depth 3
 
     scene v11cdg # MC and Candy having sex doggy style
     with dissolve
@@ -963,6 +1001,12 @@ label v11s5_galleryScene:
     with dissolve
 
     u "Me too."
+
+    lovense vibrate 17
+    lovense rotate 13
+    lovense suction 13
+    lovense thrust 13
+    lovense depth 3
 
     scene v11swc23
     with dissolve
@@ -983,6 +1027,8 @@ label v11s5_galleryScene:
     with dissolve
 
     candy "That was exactly what I needed."
+    
+    lovense stop
 
     label v11s5_nsfwSkipLabel1:
 
@@ -1002,14 +1048,14 @@ label v11s5_galleryScene:
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v11/Track Scene 5_7.mp3" fadein 2
+    play music music.ck1.v11.Track_Scene_5_7 fadein 2
 
     scene v11swc26 # FPP View of the bedroom door
     with dissolve
 
     u "Oh fuck!"
 
-    play sound "sounds/slam.mp3"
+    play sound sound.slam
 
     scene v11swc26a # FPP Same angle as v11swc26, Dennis kicking in bedroom door, looking angry with mouth open
     with dissolve
@@ -1047,7 +1093,7 @@ label v11s5_galleryScene:
 
             pause 0.75
 
-            if not config_censored:
+            if not is_censored:
                 scene v11swc29 # FPP MC's view while on the bedroom floor
                 with dissolve
     

@@ -58,9 +58,9 @@ label hosp_climb_seb:
     with dissolve
 
     menu:
-        "Climb the hospital":
-            $ add_point(KCT.BRO)
-            $ add_point(KCT.TROUBLEMAKER)
+        "Climb the hospital" (bro=1.0, troublemaker=1.0):
+            $ reputation.add_point(RepComponent.BRO)
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
             $ climbwseb = True
             jump climb_the_hos
 

@@ -35,6 +35,29 @@ screen v11s23_entrance():
 
             hotspot (287, 0, 1373, 186) action Show("v11s23_mid")
 
+    if config_debug:
+        python:
+            actions = []
+
+            if v11_pen_goes_europe:
+                if not "riley" in freeroam8:
+                    actions.append(Jump("v11s23_riley1")) # speak to riley
+                    
+                actions.append(Show("confirm", message="Are you sure you want to end the free roam?", yes_action=[Hide("confirm"), Jump("v11s23_freeroamend")])) # speak to Nora
+
+                actions.append(Show("v11s23_mid"))
+                
+            else:
+                if not "riley" in freeroam8:
+                    actions.append(Jump("v11s23_riley1")) # speak to riley
+
+                actions.append(Show("confirm", message="Are you sure you want to end the free roam?", yes_action=[Hide("confirm"), Jump("v11s23_freeroamend")])) # speak to Nora
+
+                actions.append(Show("v11s23_mid"))
+
+        timer 0.1 action renpy.random.choice(actions)
+
+
 screen v11s23_mid():
     tag free_roam
 
@@ -59,6 +82,24 @@ screen v11s23_mid():
         if v11_pen_goes_europe:
             hotspot (1637, 171, 280, 846) action Show("v11s23_helm")
 
+    if config_debug:
+        python:
+            actions = []
+
+            if not "chris" in freeroam8:
+                actions.append(Jump("v11s23_chris1")) # speak to chris
+
+            if not "lee" in freeroam8:
+                actions.append(Jump("v11s23_mrlee1")) # speak to Mr. Lee
+
+            actions.append(Show("v11s23_entrance"))
+
+            if v11_pen_goes_europe:
+                actions.append(Show("v11s23_helm"))
+
+        timer 0.1 action renpy.random.choice(actions)
+
+
 screen v11s23_helm():
     tag free_roam
 
@@ -75,3 +116,14 @@ screen v11s23_helm():
             hotspot (936, 342, 272, 585) action Call("free_roam_spoken_too", "v11s23helm", "v11s23_helm")
 
         hotspot (423, 958, 1096, 120) action Show("v11s23_mid")
+
+    if config_debug:
+        python:
+            actions = []
+
+            if not "penelope" in freeroam8:
+                actions.append(Jump("v11s23_penelope1")) # speak to penelope
+
+            actions.append(Show("v11s23_mid"))
+
+        timer 0.1 action renpy.random.choice(actions)

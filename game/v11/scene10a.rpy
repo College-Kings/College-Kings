@@ -6,7 +6,7 @@
 label v11_airport_charli:
     scene v11air1 # FPP. show Chloe, Lindsey and Aubrey all laughing with Charli and Charli points at MC
     with dissolve
-    play music "music/v11/Track Scene 10.mp3" fadein 2
+    play music music.v11_Track_Scene_10 fadein 2
     u "Chuckles* Do I have something on my face or what? I saw you pointing, Charli."
 
     scene v11air2 # FPP. Show lindsey slight smile mouth closed

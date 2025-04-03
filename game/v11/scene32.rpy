@@ -6,7 +6,7 @@
 label v11_emily_sidewalk:
     scene v11ems1a # FPP. Show MC and Emily in talking distance (check positioning in v11lip9), Emily slightly annoyed, looking at MC
     with dissolve
-    play music "music/v10/Track Scene 39.mp3" fadein 2
+    play music music.ck1.v10.Track_Scene_39 fadein 2
     u "Hey Emily, haven't seen you the whole time we've been here."
 
     scene v11ems1 # FPP. Same as v11ems1, Emily slightly annoyed, mouth closed

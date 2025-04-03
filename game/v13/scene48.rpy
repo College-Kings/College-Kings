@@ -9,7 +9,7 @@ label v13s48:
 
     pause 0.75
 
-    play music "music/v13/Track Scene 48.mp3" fadein 2
+    play music music.v13_Track_Scene_48 fadein 2
 
     scene v13s48_2 # FPP. MC looking at Aubrey, Aubrey looking at MC, Slight smile, mouth closed.
     with dissolve
@@ -133,15 +133,15 @@ label v13s48:
     pause 0.75
     
     menu:
-        "Stay quiet":
-            $ add_point(KCT.BRO)
+        "Stay quiet" (bro=1.0):
+            $ reputation.add_point(RepComponent.BRO)
             scene v13s48_6
             with dissolve
 
             u "(I'll let her work.)"
 
-        "DAMNNN...!":
-            $ add_point(KCT.BOYFRIEND)
+        "DAMNNN...!" (boyfriend=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             scene v13s48_6
             with dissolve
             
@@ -298,12 +298,12 @@ label v13s48:
     with dissolve
 
     menu:
-        "Because we're friends":
-            $ add_point(KCT.BRO)
+        "Because we're friends" (bro=1.0):
+            $ reputation.add_point(RepComponent.BRO)
             u "Because we're friends and it'd be nice to know you a bit better. *Chuckles*"
 
-        "Because I like you":
-            $ add_point(KCT.BOYFRIEND)
+        "Because I like you" (boyfriend=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             u "Because I like you, and it'd be nice to add more reasons why I like you to my list. *Chuckles*"
 
     scene v13s48_8a
@@ -531,9 +531,9 @@ label v13s48:
     with dissolve
 
     menu :
-        "Get her chocolates":
+        "Get her chocolates" (aubrey=1.0):
             $ aubrey.points += 1
-            $ add_point(KCT.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             $ v13s48_get_aubrey_chocolate = True
 
             u "Wait right here okay?"
@@ -633,15 +633,15 @@ label v13s48:
 
     au "Sounds kinda romantic don't you think?"
 
-    if aubrey.relationship >= Relationship.FWB:
+    if CharacterService.is_fwb(aubrey):
         au "I know we're fucking, but..."
 
         scene v13s48_8
         with dissolve
         
         menu:
-            "I meant as friends":
-                $ add_point(KCT.BRO)
+            "I meant as friends" (bro=1.0):
+                $ reputation.add_point(RepComponent.BRO)
 
                 u "I meant it as friends."
 
@@ -650,8 +650,8 @@ label v13s48:
 
                 au "Mhmm, okay. *Chuckles* When are you thinking about going?"
 
-            "I meant as a date":
-                $ add_point(KCT.BOYFRIEND)
+            "I meant as a date" (boyfriend=1.0):
+                $ reputation.add_point(RepComponent.BOYFRIEND)
 
                 scene v13s48_8
                 #with dissolve
@@ -698,7 +698,7 @@ label v13s48:
     u "Oooh, now I'm excited. *Chuckles*"
 
     if v10s33_ryan_flirt_emily and emily_europe:
-        play sound "sounds/vibrate.mp3"
+        play sound sound.vibrate
 
         scene v13s48_8
         with dissolve
@@ -718,8 +718,8 @@ label v13s48:
         ry "I thought I'd ask again 'cause I really do want you there, but I wanna be sure you're comfortable first."
 
         menu :
-            "Go on the date":
-                $ add_point(KCT.BRO)
+            "Go on the date" (bro=1.0):
+                $ reputation.add_point(RepComponent.BRO)
                 $ v13s48_ryan_double_date = True
 
                 scene v13s48_12
@@ -737,8 +737,8 @@ label v13s48:
 
                 u "Alright, sounds good."
 
-            "Don't go on the date":
-                $ add_point(KCT.BOYFRIEND)
+            "Don't go on the date" (boyfriend=1.0):
+                $ reputation.add_point(RepComponent.BOYFRIEND)
 
                 scene v13s48_12
                 with dissolve

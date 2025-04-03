@@ -20,7 +20,7 @@ label v10_charity_freeroam:
     with fade
 
     u "(Now this is an event!)"
-    play music "music/v10/Track Scene 33.mp3" fadein 2
+    play music music.ck1.v10.Track_Scene_33 fadein 2
 
     jump v10s33_autumn1
 
@@ -107,8 +107,8 @@ label v10s33_autumn1:
     with dissolve
 
     menu:
-        "Ask why":
-            $ add_point(KCT.BOYFRIEND)
+        "Ask why" (boyfriend=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             $ autumn.points += 1
             u "Why wouldn't you expect her to pledge?"
 
@@ -122,8 +122,8 @@ label v10s33_autumn1:
 
             u "(I doubt she's told many people everything she's told me.)"
 
-        "Leave it be":
-            $ add_point(KCT.BRO)
+        "Leave it be" (bro=1.0):
+            $ reputation.add_point(RepComponent.BRO)
             u "(Not really my business.)"
 
     scene v10cfraut1
@@ -145,12 +145,12 @@ label v10s33_autumn1:
     with dissolve
 
     menu:
-        "That's the main reason":
-            $ add_point(KCT.BRO)
+        "That's the main reason" (bro=1.0):
+            $ reputation.add_point(RepComponent.BRO)
             u "I'll be sure to try the other things too, but it's definitely the main attraction."
         
-        "I'd be here without it":
-            $ add_point(KCT.BOYFRIEND)
+        "I'd be here without it" (boyfriend=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             $ autumn.points += 1
             u "I didn't even know about the mud wrestling until recently, I'd be here with or without it."
 
@@ -247,7 +247,7 @@ label v10s33_deergirl11:
     with dissolve
     guyd "Only took me a thousand tries."
     
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         scene v10cfrdg12b # FPP. same 12, show perry looking at camera, mouth open
         with dissolve
 
@@ -419,7 +419,7 @@ label v10s33_deergirl11:
 
     dg1 "If you're interested in learning any more dances, you know where to find me."
 
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         menu:
             "Make fun of Perry":
                 scene v10cfrdg12c
@@ -508,9 +508,9 @@ label v10s33_deergirl11:
     with dissolve
 
     menu:
-        "Sure":
+        "Sure" (boyfriend=1.0):
             u "Sure."
-            $ add_point(KCT.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             $ aubrey.points += 1
             scene v10cfrau5 #TPP, Aubrey grabs MC holding his hands, they're both smiling, mouth closed
             with dissolve
@@ -584,9 +584,9 @@ label v10s33_deergirl11:
 
             au "I don't, high school prom date. *Laughs*"
 
-        "No way":
+        "No way" (bro=1.0):
             $ aubrey.points -= 1
-            $ add_point(KCT.BRO)
+            $ reputation.add_point(RepComponent.BRO)
             u "Oh no way, I don't wanna be an embarrassment. *Laughs*"
 
             scene v10cfrau2b
@@ -654,8 +654,8 @@ label v10s33_deergirl11:
     with dissolve
 
     menu:
-        "Hot":
-            $ add_point(KCT.BRO)
+        "Hot" (bro=1.0):
+            $ reputation.add_point(RepComponent.BRO)
             u "Hot."
 
             scene v10cfrau4b
@@ -663,8 +663,8 @@ label v10s33_deergirl11:
 
             au "Of course she is!"
        
-        "Not":
-            $ add_point(KCT.TROUBLEMAKER)
+        "Not" (troublemaker=1.0):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             u "Not."
 
@@ -682,8 +682,8 @@ label v10s33_deergirl11:
     with dissolve
 
     menu:
-        "Hot":
-            $ add_point(KCT.TROUBLEMAKER)
+        "Hot" (troublemaker=1.0):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
             u "Hot."
 
             scene v10cfrau4b
@@ -691,8 +691,8 @@ label v10s33_deergirl11:
 
             au "Not gonna lie, if I ever went for a girl from the Chicks... Whew!"
 
-        "Not":
-            $ add_point(KCT.BRO)
+        "Not" (bro=1.0):
+            $ reputation.add_point(RepComponent.BRO)
             u "Not."
 
             scene v10cfrau4f
@@ -709,8 +709,8 @@ label v10s33_deergirl11:
     with dissolve
 
     menu:
-        "Hot":
-            $ add_point(KCT.BRO)
+        "Hot" (bro=1.0):
+            $ reputation.add_point(RepComponent.BRO)
             u "Hot."
 
             scene v10cfrau4d
@@ -718,8 +718,8 @@ label v10s33_deergirl11:
 
             au "Cute, but I don't know about hot."
         
-        "Not":
-            $ add_point(KCT.TROUBLEMAKER)
+        "Not" (troublemaker=1.0):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
             u "Not."
 
             scene v10cfrau4d
@@ -746,9 +746,9 @@ label v10s33_deergirl11:
     with dissolve
 
     menu:
-        "Hot":
-            $ add_point(KCT.BOYFRIEND)
-            if lauren.relationship >= Relationship.GIRLFRIEND:
+        "Hot" (boyfriend=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
+            if CharacterService.is_girlfriend(lauren):
                 u "Hot, obviously."
 
                 scene v10cfrau4
@@ -764,8 +764,8 @@ label v10s33_deergirl11:
 
                 au "Her little innocent attitude is pretty hot."
 
-        "Not":
-            $ add_point(KCT.BRO)
+        "Not" (bro=1.0):
+            $ reputation.add_point(RepComponent.BRO)
             u "Not."
 
             scene v10cfrau4b
@@ -787,9 +787,9 @@ label v10s33_deergirl11:
     with dissolve
 
     menu:
-        "Hot":
+        "Hot" (bro=1.0):
             $ aubrey.points += 1
-            $ add_point(KCT.BRO)
+            $ reputation.add_point(RepComponent.BRO)
             u "Hot."
 
             scene v10cfrau4
@@ -798,8 +798,8 @@ label v10s33_deergirl11:
             au "Exactly!"
             au "It seems we both have good taste."
 
-        "Not":
-            $ add_point(KCT.TROUBLEMAKER)
+        "Not" (troublemaker=1.0):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
             u "Not."
 
             scene v10cfrau4f
@@ -814,7 +814,7 @@ label v10s33_deergirl11:
     scene v10cfrau4c
     with dissolve
 
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         u "*Blushes* Uhhh'"
 
         scene v10cfrau4b
@@ -834,8 +834,8 @@ label v10s33_deergirl11:
 
     else:
         menu:
-            "Hot":
-                $ add_point(KCT.BRO)
+            "Hot" (bro=1.0):
+                $ reputation.add_point(RepComponent.BRO)
                 u "Hot."
 
                 scene v10cfrau4
@@ -843,8 +843,8 @@ label v10s33_deergirl11:
 
                 au "Definitely too cute to be a Professor."
 
-            "Not":
-                $ add_point(KCT.BOYFRIEND)
+            "Not" (boyfriend=1.0):
+                $ reputation.add_point(RepComponent.BOYFRIEND)
 
                 u "Not."
 
@@ -868,9 +868,9 @@ label v10s33_deergirl11:
 
     if v10_help_nora_freeroam:
         menu:
-            "Invite her to Europe":
+            "Invite her to Europe" (boyfriend=1.0):
                 $ aubrey.points += 1
-                $ add_point(KCT.BOYFRIEND)
+                $ reputation.add_point(RepComponent.BOYFRIEND)
 
                 u "Before I forget, do you know about the Europe trip?"
 
@@ -914,9 +914,9 @@ label v10s33_deergirl11:
 
                 u "Great!"
 
-            "Don't invite her":
+            "Don't invite her" (troublemaker=1.0):
                 $ aubrey.points -= 1
-                $ add_point(KCT.TROUBLEMAKER)
+                $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
                 u "(If she goes she goes, if she doesn't she doesn't.)"
 
@@ -931,7 +931,7 @@ label v10s33_deergirl11:
 
 label v10s33_chloe1:
     $ freeroam6.add("chloe")
-    if chloe.relationship <= Relationship.MAD:
+    if CharacterService.is_mad(chloe):
         scene v10cfrcl1 # FPP. Show Chloe, mouth closed
         
         u "I think Chloe's still mad at me, I'd rather not talk to her."
@@ -1026,7 +1026,7 @@ label v10s33_chloe1:
     menu:
         "Date with Chloe":
             $ chloe.points += 1
-            if chloe.relationship >= Relationship.FWB:
+            if CharacterService.is_fwb(chloe):
                 scene v10cfrcl1
                 with dissolve
 
@@ -1104,7 +1104,7 @@ label v10s33_chloe1:
                 scene v10cfrcl1c
                 with dissolve
 
-                $ grant_achievement("hard_decisions")
+                grant Achievement("hard_decisions", "Tell Chloe what Nora said")
                 u "She said a lot, but to sum up everything, she called you fake. Said you do a bunch of pretending for sympathy points from people."
 
                 scene v10cfrcl1d # FPP. same1,slight angry look, mouth open
@@ -1185,7 +1185,7 @@ label v10s33_chloe1:
                                     scene v10cfrcl1a
                                     with dissolve
 
-                                    if kct == "popular" or chloe.relationship >= Relationship.FWB:
+                                    if reputation() == Reputations.POPULAR or CharacterService.is_fwb(chloe):
                                         scene v10cfrcl1a
                                         with dissolve
 
@@ -1263,8 +1263,8 @@ label v10s33_deergirl21:
     with dissolve
 
     menu:
-        "Make a joke":
-            $ add_point(KCT.BRO)
+        "Make a joke" (bro=1.0):
+            $ reputation.add_point(RepComponent.BRO)
 
             u "If I win the lingerie I get to see you in it right? *Chuckles*"
 
@@ -1278,8 +1278,8 @@ label v10s33_deergirl21:
 
             u "My bad, I didn't mean to... I'm just gonna go."
 
-        "Play the game":
-            $ add_point(KCT.BOYFRIEND)
+        "Play the game" (boyfriend=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
 
             u "Mind if I play a game?"
 
@@ -1372,9 +1372,9 @@ label v10s33_deergirl21:
     with dissolve
 
     menu:
-        "Get a lottery ticket":
+        "Get a lottery ticket" (boyfriend=1.0):
             $ freeroam6.add("karen_ticket")
-            $ add_point(KCT.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             u "Well I'll take one."
 
             scene v10cfrdg31b #same 1, happy, hands out ticket to mc
@@ -1387,8 +1387,8 @@ label v10s33_deergirl21:
 
             u "Thanks."
 
-        "Don't get a ticket":
-            $ add_point(KCT.TROUBLEMAKER)
+        "Don't get a ticket" (troublemaker=1.0):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
             u "Well, good luck."
 
             scene v10cfrdg31d #same 1, dissappointed, mouth open
@@ -1411,14 +1411,14 @@ label v10s33_deergirl21:
     label v10s33_laurenbake1:
     $ freeroam6.add("lauren")
 
-    if lauren.relationship >= Relationship.GIRLFRIEND:
+    if CharacterService.is_girlfriend(lauren):
         scene v10cfrla1 #FPP Show Lauren, Looking at mc, happy smile, mouth open
         la "Hey babe!"
 
         scene v10cfrla2 #TPP showing Mc kissing Lauren over the table
         with dissolve
 
-        play sound "sounds/kiss.mp3"
+        play sound sound.kiss
 
         pause 0.5
 
@@ -1444,7 +1444,7 @@ label v10s33_deergirl21:
 
     la "Haha, to answer your question, bad. Sales are going bad. I only sold one and that was to my mother when she stopped by earlier."
 
-    if lauren.relationship >= Relationship.GIRLFRIEND:
+    if CharacterService.is_girlfriend(lauren):
         scene v10cfrla1
         with dissolve
 
@@ -1566,7 +1566,7 @@ label v10s33_deergirl21:
 
     u "I'm sure you people are gonna get hungry at some point."
 
-    if lauren.relationship >= Relationship.GIRLFRIEND:
+    if CharacterService.is_girlfriend(lauren):
         u "I know, I'd love some of... Lauren's Moist Muffins."
 
         scene v10cfrla1d
@@ -1594,13 +1594,13 @@ label v10s33_deergirl21:
     else:
         if v10_help_nora_freeroam:
             menu:
-                "Invite her to Europe":
-                    $ add_point(KCT.BOYFRIEND)
+                "Invite her to Europe" (boyfriend=1.0):
+                    $ reputation.add_point(RepComponent.BOYFRIEND)
 
                     u "Oh I wanted to ask, I'm planning on going on this year's Europe trip. Would you want to go?"
 
-                    if kct == "loyal":
-                        call screen kct_popup
+                    if reputation() == Reputations.LOYAL:
+                        call screen reputation_popup
 
                         scene v10cfrla1
                         with dissolve
@@ -1623,8 +1623,8 @@ label v10s33_deergirl21:
 
                         u "No problem, you still have some time to decide."
 
-                "Don't invite her":
-                    $ add_point(KCT.BRO)
+                "Don't invite her" (bro=1.0):
+                    $ reputation.add_point(RepComponent.BRO)
                     u "(I don't really feel like inviting Lauren.)"
 
     u "I'm gonna check out some more stuff, I'll check back in later."
@@ -1644,7 +1644,7 @@ label v10s33_deergirl21:
 
     u "What a beautiful statue."
 
-    if lauren.relationship >= Relationship.GIRLFRIEND:
+    if CharacterService.is_girlfriend(lauren):
         scene v10cfrla4 #TPP shows mc leaning in for the kiss, but lauren holds him back, lauren mouth open, neutral face
         with dissolve
 
@@ -1659,8 +1659,8 @@ label v10s33_deergirl21:
     with dissolve
 
     menu:
-        "Say you're sorry":
-            $ add_point(KCT.BOYFRIEND)
+        "Say you're sorry" (boyfriend=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             u "It is, I'm sorry. Maybe it's not a good idea to follow my ideas from now on."
 
             scene v10cfrla3b
@@ -1693,8 +1693,8 @@ label v10s33_deergirl21:
 
             u "*Laughs*"
 
-        "Joke around":
-            $ add_point(KCT.TROUBLEMAKER)
+        "Joke around" (troublemaker=1.0):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
             u "Oh my gosh, did that statue just talk to me? Everyone, that statue just talked!"
 
             scene v10cfrla3b
@@ -1778,7 +1778,7 @@ label v10s33_deergirl21:
 
     u "So committed, we love to see it."
 
-    if lauren.relationship >= Relationship.GIRLFRIEND:
+    if CharacterService.is_girlfriend(lauren):
         u "Oh I wanted to ask, I'm planning on going on this year's Europe trip. Would you want to go?"
 
         scene v10cfrla3d
@@ -1794,13 +1794,13 @@ label v10s33_deergirl21:
     else:
         if v10_help_nora_freeroam:
             menu:
-                "Invite her to Europe":
-                    $ add_point(KCT.BOYFRIEND)
+                "Invite her to Europe" (boyfriend=1.0):
+                    $ reputation.add_point(RepComponent.BOYFRIEND)
 
                     u "Oh I wanted to ask, I'm planning on going on this year's Europe trip. Would you want to go?"
 
-                    if kct == "loyal":
-                        call screen kct_popup
+                    if reputation() == Reputations.LOYAL:
+                        call screen reputation_popup
 
                         scene v10cfrla3d
                         with dissolve
@@ -1823,8 +1823,8 @@ label v10s33_deergirl21:
 
                         u "No problem, you still have some time to decide."
 
-                "Don't invite her":
-                    $ add_point(KCT.BRO)
+                "Don't invite her" (bro=1.0):
+                    $ reputation.add_point(RepComponent.BRO)
                     u "(I don't really feel like inviting Lauren.)"
 
     u "I'm gonna check out some more stuff, I'll check back in later."
@@ -1842,8 +1842,8 @@ label v10s33_deergirl21:
         scene v10cfrfrli1 # FPP. Show Lindsey stood by the body paint stand in a bikini. Lindsey looking at camera, smile, mouth closed.
 
         menu:
-            "Compliment":
-                $ add_point(KCT.BOYFRIEND)
+            "Compliment" (boyfriend=1.0):
+                $ reputation.add_point(RepComponent.BOYFRIEND)
                 $ lindsey.points += 1
                 u "Look at you! This alone is a reason to give all my money away."
 
@@ -2142,7 +2142,7 @@ label v10s33_deergirl21:
                         "Don't invite her":
                             u "(I'm sure Nora will ask her if she wants her to go.)"
                         
-            "Side with Ms. Rose":
+            "Side with Ms. Rose" (ms_rose=1.0):
                 $ ms_rose.points += 1
             
                 u "I overheard your conversation and I have to be honest, body paint is sort of a kids game nowadays."
@@ -2959,8 +2959,8 @@ label v10s33_riley2:
     with dissolve
 
     menu:
-        "Witty retort":
-            $ add_point(KCT.TROUBLEMAKER)
+        "Witty retort" (troublemaker=1.0):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
             u "Ha, you just wanna see me shirtless wrestling other guys."
 
             scene v10cfram1
@@ -2983,8 +2983,8 @@ label v10s33_riley2:
 
             u "*Chuckles* You know that's not what I meant."
 
-        "Flirt":
-            $ add_point(KCT.BOYFRIEND)
+        "Flirt" (boyfriend=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             u "And here I was thinking you wanted to put on a little show for me."
 
             scene v10cfram1
@@ -3039,7 +3039,7 @@ label v10s33_riley2:
 
     label v10s33_chris1:
 
-    if not joinwolves:
+    if mc.frat == Frat.APES:
         if v10s33_toldChloe:
             scene fr6bagtossnonora
         else:
@@ -3204,8 +3204,8 @@ label v10s33_riley2:
     with dissolve
 
     menu:
-        "Show me what you got":
-            $ add_point(KCT.BRO)
+        "Show me what you got" (bro=1.0):
+            $ reputation.add_point(RepComponent.BRO)
 
             u "You should show me what you got... since you're such a pro."
 
@@ -3284,8 +3284,8 @@ label v10s33_riley2:
 
             u "Ahh, not my business."
 
-        "Ask about sorority life":
-            $ add_point(KCT.BOYFRIEND)
+        "Ask about sorority life" (boyfriend=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             $ v10_nora_bitch_about_chloe = True
             u "How's sorority life?"
 
@@ -3318,8 +3318,8 @@ label v10s33_riley2:
             with dissolve
 
             menu:
-                "What do you mean?":
-                    $ add_point(KCT.BRO)
+                "What do you mean?" (bro=1.0):
+                    $ reputation.add_point(RepComponent.BRO)
                     u "What do you mean by that?"
 
                     scene v10cfrno3d
@@ -3333,8 +3333,8 @@ label v10s33_riley2:
 
                     u "She can be a little... extra sometimes."
 
-                "Defend Chloe":
-                    $ add_point(KCT.BOYFRIEND)
+                "Defend Chloe" (boyfriend=1.0):
+                    $ reputation.add_point(RepComponent.BOYFRIEND)
                     u "Well, she might be acting that way because of all the pressure she's under. Conversations behind her back probably aren't helping with that."
 
                     scene v10cfrno3d
@@ -3428,8 +3428,8 @@ label v10s33_riley2:
         with dissolve
 
         menu:
-            "It's okay":
-                $ add_point(KCT.BRO)
+            "It's okay" (bro=1.0):
+                $ reputation.add_point(RepComponent.BRO)
                 $ ryan.points += 1
                 $ v10s33_ryan_flirt_emily = True
 
@@ -3470,8 +3470,8 @@ label v10s33_riley2:
 
                 ry "Yeah yeah, uhm... that's cool. See you around."
 
-            "It's not okay": 
-                $ add_point(KCT.TROUBLEMAKER)
+            "It's not okay" (troublemaker=1.0): 
+                $ reputation.add_point(RepComponent.TROUBLEMAKER)
                 u "You would really ask me that? Why would I be cool with my friend dating my ex?!"
 
                 scene v10cfrry1c
@@ -3692,7 +3692,7 @@ label v10s33_emily1:
     label v10s33_evelyn1:
     $ freeroam6.add("evelyn")
 
-    if evelyn.relationship >= Relationship.LIKES: #If Date successful
+    if v6_evelyn_successful_date: #If Date successful
         scene v10cfrev1a
 
         u "Out of everyone here, I'm most surprised to see you."
@@ -3735,8 +3735,8 @@ label v10s33_emily1:
         scene v10cfrev1c
         with dissolve
         menu:
-            "Let's do it right now":
-                $ add_point(KCT.BOYFRIEND)
+            "Let's do it right now" (boyfriend=1.0):
+                $ reputation.add_point(RepComponent.BOYFRIEND)
                 $ v10s33_ev_date_now = True
                 u "Wanna go now?"
 
@@ -3745,8 +3745,8 @@ label v10s33_emily1:
 
                 ev "Someone's eager. *Chuckles* Soon, but let's enjoy the event for today."
 
-            "I'll think about it":
-                $ add_point(KCT.TROUBLEMAKER)
+            "I'll think about it" (troublemaker=1.0):
+                $ reputation.add_point(RepComponent.TROUBLEMAKER)
                 u "I'll think about it. *Chuckles*"
 
                 scene v10cfrev1b
@@ -3761,7 +3761,7 @@ label v10s33_emily1:
 
         call screen v10s33_toilet
 
-    elif evelyn.relationship >= Relationship.DATE: #if Date but unsuccessful
+    elif not v6_evelyn_successful_date: #if Date but unsuccessful
         if not "ryan" in freeroam6:
             scene fr6toilet # toilet screen
         else:

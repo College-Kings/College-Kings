@@ -4,19 +4,6 @@
 # Characters needed: MC (outfit 3), Grayson (outfit 3), Chloe (outfit 2 or put together some other revealing outfit), Caleb (outfit 1), Cameron (outfit 3), Ryan (outfit 1), Sam (outfit 2), Mason (outfit 1), Some other random chick in a revealing outfit
 # Time: Saturday evening to night
 
-init python:
-    def v8s13_reply1(): # phn_chloe11_a
-        chloe.messenger.newMessage(_("Guess you'll have to wait and see ;)"))
-        chloe.messenger.addReply(_("I'm moving my stuff now. How about we get started tonight?"))
-        chloe.messenger.newMessage(_("You're such a flirt. Have a good night!"))
-
-    def v8s13_reply2(): # phn_chloe11_b
-        chloe.messenger.newMessage(_("Aww, I like talking to you too. You're sweet."))
-        chloe.messenger.addReply(_("Sweet? Not hot? Or sexy? Or... anything but sweet?"))
-        chloe.messenger.newMessage(_("Sweet and cute ;)"))
-        chloe.messenger.addReply(_("I'll take it. For now. Talk to you when I get settled."))
-        chloe.messenger.newMessage(_("Good night."))
-
 # SCENE 13: MOVING INTO THE APES
 label after_apes_ceremony:
     scene v8apes21 # TPP. MC in his dorm packing his bag (finished it), smiling and mouth closed
@@ -26,40 +13,53 @@ label after_apes_ceremony:
     # [Grayson has made a Kiwii post that MC, Ryan, and Caleb are the new Apes. If MC got first place, Grayson also says Congrats to the prodigal son, [name] for getting our top score. Looks like somebody's coming for my throne!]
 
     # Kiwii post pic description: Grayson popping a champagne in Apes den with MC, Ryan and Caleb around him (make sure they're wearing the same outfits as in scene 12)
-    $ v8s13_kiwiiPost = KiwiiPost(grayson, "v8/grpost1.webp", _("[name], Ryan and Caleb are the new proud Apes! I can see this fight season turning out well for us!"), numberLikes=renpy.random.randint(320, 350))
+    $ kiwii_post = KiwiiService.new_post(grayson, "ck1_v8_grayson_post", _("[name], Ryan and Caleb are the new proud Apes! I can see this fight season turning out well for us!"), number_likes=renpy.random.randint(320, 350))
     if apesVids == 4:
-        $ v8s13_kiwiiPost.newComment(grayson, _("And congrats to the prodigal son, [name], for getting the perfect score. Looks like somebody's coming for my throne!"), numberLikes=renpy.random.randint(140, 150), force_send=True)
-    $ v8s13_kiwiiPost.newComment(ryan, _("Apes baby! Woohoooo!!!"), numberLikes=renpy.random.randint(60, 70), force_send=True)
-    $ v8s13_kiwiiPost.newComment(caleb, _("GO APES!!!"), numberLikes=renpy.random.randint(60, 70), force_send=True)
-    $ v8s13_kiwiiPost.newComment(parker, _("Congrats guys!"), numberLikes=renpy.random.randint(40, 50), force_send=True)
+        $ KiwiiService.new_comment(kiwii_post, grayson, _("And congrats to the prodigal son, [name], for getting the perfect score. Looks like somebody's coming for my throne!"), number_likes=renpy.random.randint(140, 150))
+    $ KiwiiService.new_comment(kiwii_post, ryan, _("Apes baby! Woohoooo!!!"), number_likes=renpy.random.randint(60, 70))
+    $ KiwiiService.new_comment(kiwii_post, caleb, _("GO APES!!!"), number_likes=renpy.random.randint(60, 70))
+    $ KiwiiService.new_comment(kiwii_post, parker, _("Congrats guys!"), number_likes=renpy.random.randint(40, 50))
     if apesVids == 4:
-        $ v8s13_kiwiiPost.newComment(aubrey, _("Damn, perfect score? Would love to see you in action in the ring ;)"), mentions=[mc], numberLikes=renpy.random.randint(80, 90), force_send=True)
+        $ KiwiiService.new_comment(kiwii_post, aubrey, _("Damn, perfect score? Would love to see you in action in the ring ;)"), number_likes=renpy.random.randint(80, 90), mentions=[mc])
     else:
-        $ v8s13_kiwiiPost.newComment(aubrey, _("Congrats guys! Couldn't be at the ceremony cause of some stupid shit :/"), numberLikes=renpy.random.randint(50, 60), force_send=True)
-    $ v8s13_kiwiiPost.newComment(mason, _("So proud of you guys especially my man"), mentions=[caleb], numberLikes=renpy.random.randint(40, 50), force_send=True)
-    $ v8s13_kiwiiPost.newComment(emily, _("Yaayyy! Congrats"), mentions=[mc], numberLikes=renpy.random.randint(25, 35), force_send=True)
+        $ KiwiiService.new_comment(kiwii_post, aubrey, _("Congrats guys! Couldn't be at the ceremony cause of some stupid shit :/"), number_likes=renpy.random.randint(50, 60))
+    $ KiwiiService.new_comment(kiwii_post, mason, _("So proud of you guys especially my man"), number_likes=renpy.random.randint(40, 50), mentions=[caleb])
+    $ KiwiiService.new_comment(kiwii_post, emily, _("Yaayyy! Congrats"), number_likes=renpy.random.randint(25, 35), mentions=[mc])
     if apesVids == 4:
-        $ v8s13_kiwiiPost.newComment(elijah, _("Hmph ridiculous! Like those are the perfect scores that matter..."), numberLikes=renpy.random.randint(3, 6), force_send=True)
-        $ v8s13_kiwiiPost.newComment(cameron, _("Just shut the fuck up and never come back"), mentions=[elijah], numberLikes=renpy.random.randint(75, 85), force_send=True)
-        $ v8s13_kiwiiPost.newComment(cameron, _("That is unless you want me to kick your ass, then of course knock yourself out"), mentions=[elijah], numberLikes=renpy.random.randint(110, 120), force_send=True)
-    $ v8s13_kiwiiPost.newComment(amber, _("Congrats people!!!"), mentions=[mc, ryan, caleb], numberLikes=renpy.random.randint(50, 60), force_send=True)
-    $ v8s13_kiwiiPost.newComment(caleb, _("Thanks everyone!"), numberLikes=renpy.random.randint(20, 30), force_send=True)
+        $ KiwiiService.new_comment(kiwii_post, elijah, _("Hmph ridiculous! Like those are the perfect scores that matter..."), number_likes=renpy.random.randint(3, 6))
+        $ KiwiiService.new_comment(kiwii_post, cameron, _("Just shut the fuck up and never come back"), number_likes=renpy.random.randint(75, 85), mentions=[elijah])
+        $ KiwiiService.new_comment(kiwii_post, cameron, _("That is unless you want me to kick your ass, then of course knock yourself out"), number_likes=renpy.random.randint(110, 120), mentions=[elijah])
+    $ KiwiiService.new_comment(kiwii_post, amber, _("Congrats people!!!"), number_likes=renpy.random.randint(50, 60), mentions=[mc, ryan, caleb])
+    $ KiwiiService.new_comment(kiwii_post, caleb, _("Thanks everyone!"), number_likes=renpy.random.randint(20, 30))
 
-    $ chloe.messenger.newMessage(_("Congrats on getting in. Looks like we'll be seeing a lot of each other."), force_send=True)
-    $ chloe.messenger.addReply(_("Exactly how much is a lot? ;)"), v8s13_reply1)
-    $ chloe.messenger.addReply(_("Hope so. I like talking to you."), v8s13_reply2)
+    python:
+        v8s13_reply1 = MessageBuilder(chloe) # phn_chloe11_a
+        v8s13_reply1.new_message(_("Guess you'll have to wait and see ;)"))
+        v8s13_reply1.add_reply(_("I'm moving my stuff now. How about we get started tonight?"))
+        v8s13_reply1.new_message(_("You're such a flirt. Have a good night!"))
 
-    play sound "sounds/vibrate.mp3"
+        v8s13_reply2 = MessageBuilder(chloe) # phn_chloe11_b
+        v8s13_reply2.new_message(_("Aww, I like talking to you too. You're sweet."))
+        v8s13_reply2.add_reply(_("Sweet? Not hot? Or sexy? Or... anything but sweet?"))
+        v8s13_reply2.new_message(_("Sweet and cute ;)"))
+        v8s13_reply2.add_reply(_("I'll take it. For now. Talk to you when I get settled."))
+        v8s13_reply2.new_message(_("Good night."))
+
+        MessengerService.new_message(chloe, _("Congrats on getting in. Looks like we'll be seeing a lot of each other."))
+        MessengerService.add_replies(chloe,
+            Reply(_("Exactly how much is a lot? ;)"), v8s13_reply1),
+            Reply(_("Hope so. I like talking to you."), v8s13_reply2)
+        )
+
+    play sound sound.vibrate
 
     scene v8apes21a # MC looking at his phone, mouth closed
     with dissolve
 
-    label phn_chloe11:
-        if chloe.messenger.replies:
-            call screen phone
-        if chloe.messenger.replies:
+    while MessengerService.has_replies(chloe):
+        call screen phone
+        if MessengerService.has_replies(chloe):
             u "(I should probably reply.)"
-            jump phn_chloe11
 
         u "(Gotta get going.)"
         jump phn_chloe11_done
@@ -78,14 +78,14 @@ label phn_chloe11_done:
     with dissolve
     u "(This room is miles better than the dorm I was in.)"
 
-    play sound "sounds/knock.mp3"
+    play sound sound.knock
     "*Knock knock knock*"
 
     scene v8apes25 # FPP. Shot of the door in his room closed
     with dissolve
     pause 0.5
 
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
 
     scene v8apes25a # Door open now. Grayson is standing there with his hands behind his back (He's holding two beer bottles). He's in a party mood, smiling and mouth closed
     with dissolve
@@ -117,8 +117,8 @@ label phn_chloe11_done:
     gr "And some of the Chicks are here too..."
 
     menu:
-        "Party":
-            $ add_point(KCT.TROUBLEMAKER)
+        "Party" (troublemaker=1.0):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             scene v8apes25d
             with dissolve
@@ -132,8 +132,8 @@ label phn_chloe11_done:
             with dissolve
             pause 0.5
 
-        "Stay back and study":
-            $ add_point(KCT.BOYFRIEND)
+        "Stay back and study" (boyfriend=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
 
             scene v8apes25d
             with dissolve
@@ -168,7 +168,7 @@ label phn_chloe11_done:
     with dissolve
     ry "Woohoooo!"
 
-    if chloe.messenger.find_message("Guess you'll have to wait and see ;)"):
+    if MessengerService.find_message(chloe, "Guess you'll have to wait and see ;)"):
         scene v8apes28 # FPP. MC inside the room now and he notices Chloe and Caleb chitchatting
         with dissolve
         u "(Oh, Chloe is here.)"
@@ -287,8 +287,8 @@ label phn_chloe11_done:
     ca "Nothing's up. Just lame hanging out with you new kids."
 
     menu:
-        "Press it":
-            $ add_point(KCT.BRO)
+        "Press it" (bro=1.0):
+            $ reputation.add_point(RepComponent.BRO)
 
             scene v8apes34c
             with dissolve
@@ -298,8 +298,8 @@ label phn_chloe11_done:
             with dissolve
             ca "It's just..."
 
-        "Let it go":
-            $ add_point(KCT.BOYFRIEND)
+        "Let it go" (boyfriend=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
 
             scene v8apes34c
             with dissolve

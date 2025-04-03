@@ -5,8 +5,8 @@
     # -MC wakes up and hears his alarm going off-
 
 label v10_econ_class:
-    play music "music/v10/Track Scene 27.mp3" fadein 2
-    if joinwolves:
+    play music music.ck1.v10.Track_Scene_27 fadein 2
+    if mc.frat == Frat.WOLVES:
         scene v10eco1 # TPP. Show MC in his room, Slight worried face, mouth closed (wolves)
         with fade
     else:
@@ -23,7 +23,7 @@ label v10_econ_class:
     with dissolve
 
 
-    if lauren.relationship >= Relationship.GIRLFRIEND:
+    if CharacterService.is_girlfriend(lauren):
         scene v10eco4 # FPP. Show Lauren, Slight smile, mouth open
         with dissolve
 
@@ -45,7 +45,7 @@ label v10_econ_class:
 
     ri "Well after hanging all last night I bet you were tired."
 
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         scene v10eco6 # FPP. Show Ryan in seat on other side of room, mouth open
         with dissolve
 
@@ -57,7 +57,7 @@ label v10_econ_class:
 
         ry "Wait, you were out having fun and didn't invite your main brother?"
 
-    if lauren.relationship >= Relationship.GIRLFRIEND:
+    if CharacterService.is_girlfriend(lauren):
         scene v10eco4
         with dissolve
 
@@ -183,8 +183,8 @@ label v10_econ_class:
     scene v10eco8 # FPP. MC now stood infront of Ms rose at front of class, Show Ms. Rose, mouth open
     with dissolve
 
-    if joinwolves:
-        if ms_rose.relationship >= Relationship.KISS:
+    if mc.frat == Frat.WOLVES:
+        if CharacterService.is_kissed(ms_rose):
             ro "I just wanted to see how you were doing after... everything."
             
             scene v10eco8a # FPP. same 8, mouth closed.
@@ -239,7 +239,7 @@ label v10_econ_class:
 
                 ro "*Sighs* When she came in right after you left I wondered if you'd seen her."
 
-                $ grant_achievement("family_secrets")
+                grant Achievement("family_secrets", "Find out Nora and Ms. Rose are family")
 
                 ro "It's true, she's my stepdaughter. But since we both attend SVC we do our best to keep our relationship unknown."
 

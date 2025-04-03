@@ -7,7 +7,7 @@ label v11_dinner_with_aubrey:
     scene v11dwa1 # FPP. Show Aubrey slight smile mouth closed
     with dissolve
     u "So, do you like fancy restaurants like this?"
-    play music "music/v10/Track Scene 40_2.mp3" fadein 2
+    play music music.ck1.v10.Track_Scene_40_2 fadein 2
     scene v11dwa1a # FPP. # FPP. Show Aubrey slight smile mouth open
     with dissolve
 
@@ -129,7 +129,7 @@ label v11_dinner_with_aubrey:
     scene v11dwa1
     with dissolve
 
-    if aubrey.relationship < Relationship.FWB:
+    if CharacterService.is_friend(aubrey):
         scene v11dwa1e # FPP. Same 1, different pose, neutral look, mouth open
         with dissolve
         au "I'm surprised you're not like all the other guys."
@@ -311,7 +311,7 @@ label v11_dinner_with_aubrey:
 
                 u "I know you said that before, but I thought that maybe things felt a little different lately."
 
-                if kct == "confident":
+                if reputation() == Reputations.CONFIDENT:
                     scene v11dwa1e
                     with dissolve
 

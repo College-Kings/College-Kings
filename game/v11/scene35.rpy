@@ -4,8 +4,8 @@
 # Time: Night (Day when specified)
 
 label v11_riley_sex:
-    play music "music/v10/Track Scene 40_2.mp3" fadein 2
-    if riley.relationship < Relationship.FWB:
+    play music music.ck1.v10.Track_Scene_40_2 fadein 2
+    if CharacterService.is_friend(riley):
 
         scene v11ris1 # TPP. Show MC walking through the door to his hotel room, MC slight smile, mouth closed (Riley not in shot here)
         with dissolve
@@ -88,8 +88,8 @@ label v11_riley_sex:
         with dissolve
 
         menu:
-            "Ladies love me":
-                $ add_point(KCT.BRO)
+            "Ladies love me" (bro=1.0):
+                $ reputation.add_point(RepComponent.BRO)
 
                 scene v11ris3e # FPP. Same as v11ris3d, different pose
                 with dissolve
@@ -146,8 +146,8 @@ label v11_riley_sex:
 
                 u "*Chuckles* Night Riley."
 
-            "Wasn't a ladies man":
-                $ add_point(KCT.BOYFRIEND)
+            "Wasn't a ladies man" (boyfriend=1.0):
+                $ reputation.add_point(RepComponent.BOYFRIEND)
 
                 scene v11ris3e
                 with dissolve
@@ -247,7 +247,7 @@ label v11_riley_sex:
         scene v11ris7a # TPP. Same cam as v11ris7, MC is startled, mouth closed, still sitting down, looking at the door to the hallway direction (day)
         with vpunch
 
-        play sound "sounds/fall.mp3"
+        play sound sound.fall
 
         pause 0.75
 
@@ -301,7 +301,7 @@ label v11_riley_sex:
         with dissolve
 
         menu:
-            "Not tonight":
+            "Not tonight" (riley=-1.0):
                 $ riley.points -= 1
 
                 u "Sorry Riley, I'm not really in the mood for anything like that right now."
@@ -428,7 +428,7 @@ label v11_riley_sex:
                 scene v11ris7a 
                 with vpunch
 
-                play sound "sounds/fall.mp3"
+                play sound sound.fall
 
                 pause 0.75
 
@@ -456,7 +456,7 @@ label v11_riley_sex:
 
                 jump v11_imre_ryan_grapple
 
-            "Do something about it":
+            "Do something about it" (riley=1.0):
                 $ sceneList.add("v11_riley")
                 $ riley.points += 1
 
@@ -467,8 +467,13 @@ label v11_riley_sex:
 
                 ri "Then I guess I'll say it again..."
 
-                if config_censored:
+                if is_censored:
                     call screen censored_popup("v11s35_nsfwSkipLabel1")
+
+                lovense vibrate 2
+                lovense rotate 1 
+                lovense suction 1
+                lovense thrust 1
 
                 scene v11ris12d # FPP. Same as v11ris12, Riley no longer under the blanket, smiling seductively, mouth open
                 with dissolve
@@ -476,7 +481,7 @@ label v11_riley_sex:
                 ri "Do something about it."
                 stop music fadeout 3
 
-                play music "music/v10/Track Scene 26_2.mp3" fadein 2
+                play music music.ck1.v10.Track_Scene_26_2 fadein 2
                 scene v11ris15 # TPP. MC walking over to Riley, he is removing his shirt (Camera behind MC), show Riley big smile, mouth closed, she's getting close to the edge of the bed (not the sides, the side oposite the pillows)
                 with dissolve
 
@@ -541,6 +546,11 @@ label v11_riley_sex:
 
                 pause 1
 
+                lovense vibrate 4
+                lovense rotate 2
+                lovense suction 2
+                lovense thrust 2
+
                 image v11riwf = Movie(play="images/v11/Scene 35/v11riwf.webm", loop=True, image="images/v11/Scene 35/v11riwfStart.webp", start_image="images/v11/Scene 35/v11riwfStart.webp") # Riley fuck against wall
                 image v11riwff = Movie(play="images/v11/Scene 35/v11riwff.webm", loop=True, image="images/v11/Scene 35/v11riwfStart.webp", start_image="images/v11/Scene 35/v11riwfStart.webp") # Riley fuck against wall spedup
                 image v11riwf2 = Movie(play="images/v11/Scene 35/v11riwf2.webm", loop=True, image="images/v11/Scene 35/v11riwf2Start.webp", start_image="images/v11/Scene 35/v11riwf2Start.webp") # Riley fuck against wall
@@ -579,6 +589,11 @@ label v11_riley_sex:
                 with dissolve
 
                 pause 1
+
+                lovense vibrate 6
+                lovense rotate 4
+                lovense suction 4
+                lovense thrust 4
 
                 image v11riod = Movie(play="images/v11/Scene 35/v11riod.webm", loop=True, image="images/v11/Scene 35/v11riodStart.webp", start_image="images/v11/Scene 35/v11riodStart.webp") # Riley fucked over desk
                 image v11riodf = Movie(play="images/v11/Scene 35/v11riodf.webm", loop=True, image="images/v11/Scene 35/v11riodStart.webp", start_image="images/v11/Scene 35/v11riodStart.webp") # Riley fucked over desk spedup
@@ -619,6 +634,11 @@ label v11_riley_sex:
 
                 ri "*Gasps* OH FUCK!"
 
+                lovense vibrate 7
+                lovense rotate 5
+                lovense suction 5
+                lovense thrust 5
+
                 image v11rioda = Movie(play="images/v11/Scene 35/v11rioda.webm", loop=True, image="images/v11/Scene 35/v11riodaStart.webp", start_image="images/v11/Scene 35/v11riodaStart.webp") # Riley fucked over desk anal
                 image v11riodaf = Movie(play="images/v11/Scene 35/v11riodaf.webm", loop=True, image="images/v11/Scene 35/v11riodaStart.webp", start_image="images/v11/Scene 35/v11riodaStart.webp") # Riley fucked over desk anal sped up
                 image v11rioda2 = Movie(play="images/v11/Scene 35/v11rioda2.webm", loop=True, image="images/v11/Scene 35/v11rioda2Start.webp", start_image="images/v11/Scene 35/v11rioda2Start.webp") # Riley fucked over desk anal
@@ -642,6 +662,11 @@ label v11_riley_sex:
                 
                 ri "Yes! Yes! Don't stop!"
 
+                lovense vibrate 9
+                lovense rotate 7
+                lovense suction 7
+                lovense thrust 7
+
                 scene v11rioda2f
                 with dissolve
                 pause
@@ -663,6 +688,8 @@ label v11_riley_sex:
 
                 ri "Wow... I like the kinky side of you. *Chuckles* I'm gonna go clean up... I'll be right back."
 
+                lovense stop
+                
                 scene v11ris25 # TPP. Show Riley walking towards the bathroom, MC putting his boxers on, both smiling, mouths closed
                 with dissolve
 
@@ -671,7 +698,7 @@ label v11_riley_sex:
                 scene v11ris26 # TPP. Show MC getting in bed, he's smiling, mouth closed
                 with dissolve
                 stop music fadeout 3
-                play music "music/v10/Track Scene 40_2.mp3" fadein 2
+                play music music.ck1.v10.Track_Scene_40_2 fadein 2
                 pause 0.75
 
                 scene v11ris26a # TPP. Same as v11ris26, MC is lying in his bed, looking at Riley, Riley is getting into bed, both smiling, mouths closed
@@ -774,7 +801,7 @@ label v11_riley_sex:
                 with vpunch
 
                 $ renpy.end_replay()
-                play music "music/v10/Track Scene 41a_2.mp3" fadein 2
+                play music music.ck1.v10.Track_Scene_41a_2 fadein 2
                 ri "[name], wake up! I think someone's fighting in the hall!"
 
                 scene v11ris6b
@@ -795,7 +822,7 @@ label v11_riley_sex:
                 scene v11ris7a 
                 with vpunch
 
-                play sound "sounds/fall.mp3"
+                play sound sound.fall
 
                 pause 0.75
 

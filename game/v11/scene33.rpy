@@ -6,16 +6,16 @@
 label v11_bar_chloe_and_aubrey:
     scene v11caa1 # TPP. Show MC walking to the bar, mouth closed
     with fade
-    play music "music/v11/Track Scene 11.mp3" fadein 2
+    play music music.ck1.v11.Track_Scene_11 fadein 2
     pause 0.75
 
     scene v11caa2 # FPP. MC spots chloe and aubrey sitting at the bar holding beer, mouth closed
     with dissolve
 
-    play sound "sounds/swoosh.mp3"
+    play sound sound.swoosh
     pause 0.75
 
-    show screen fantasyOverlay
+    show fantasyoverlay onlayer foreground
 
     scene v11caa2a # FPP. same as 2,MC is approaching chloe and aubrey but charli steps in the middle of the way, mouth opened
     with dissolve
@@ -24,10 +24,10 @@ label v11_bar_chloe_and_aubrey:
     charli "First you thought I was being kind to the girls with a hidden agenda, but now that you know I'm gay you've lost the ability to connect those dots."
     charli "You can't comprehend being nice without an agenda, because you yourself aren't nice without an agenda."
 
-    play sound "sounds/swoosh.mp3"
+    play sound sound.swoosh
 
     pause 0.75
-    hide screen fantasyOverlay
+    hide fantasyoverlay onlayer foreground
 
     scene v11caa3 # TPP. MC murmors with a mad face, mouth opened
     with dissolve
@@ -48,7 +48,7 @@ label v11_bar_chloe_and_aubrey:
     scene v11caa4b # FPP. same as 4a, mouth closed
     with dissolve
 
-    if chloe.relationship <= Relationship.MAD:
+    if CharacterService.is_mad(chloe):
         scene v11caa5 # FPP. Looking at chloe, she is starring away from mc, mouth closed
         with dissolve
 
@@ -134,7 +134,7 @@ label v11_bar_chloe_and_aubrey:
 
     u "Maybe he's just really passionate."
 
-    if chloe.relationship <= Relationship.MAD:
+    if CharacterService.is_mad(chloe):
         scene v11caa9b
         with dissolve
 
@@ -171,7 +171,7 @@ label v11_bar_chloe_and_aubrey:
 
     cl "That's kinda what it sounds like."
 
-    play sound "sounds/call.mp3"
+    play sound sound.call
 
     scene v11caa10 # FPP. aubrey looks down at her pocket
     with dissolve
@@ -190,7 +190,7 @@ label v11_bar_chloe_and_aubrey:
 
     u "Haha, later Aubrey."
 
-    if chloe.relationship <= Relationship.MAD:
+    if CharacterService.is_mad(chloe):
         scene v11caa12 # FPP. Looking at chloe, mouth closed
         with dissolve
 

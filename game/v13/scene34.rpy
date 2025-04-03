@@ -9,7 +9,7 @@ label v13s34:
 
     pause 0.75
 
-    play music "music/v13/Track Scene 34_1.mp3" fadein 2
+    play music music.ck1.v13.Track_Scene_34_1 fadein 2
 
     scene v13s34_2 # FPP. Show clipps looking at MC, slight smile, mouth open
     with dissolve
@@ -154,7 +154,7 @@ label v13s34:
     pause 0.75 
 
     stop music fadeout 3
-    play music "music/v13/Track Scene 34_2.mp3" fadein 2
+    play music music.ck1.v13.Track_Scene_34_2 fadein 2
 
     scene v13s34_9 # TPP. Show the gate door slamming closed, Riley, angry expression, mouth closed
     with dissolve
@@ -276,6 +276,8 @@ label v13s34:
 
     u "Oh!"
 
+label v13s34_1:
+
     menu: 
         "Threaten him":
             scene v13s34_17b # FPP. Same as v13s34_17a, serious expression
@@ -288,8 +290,8 @@ label v13s34:
 
             clipps "Your words mean nothing."
 
-        "Push him":
-            $ add_point(KCT.TROUBLEMAKER)
+        "Push him" (troublemaker=1.0):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
             scene v13s34_18 # TPP. Show MC pushing Clipps back, MC, angry expression mouth closed, Clipps, serious expression, mouth closed 
             with dissolve
 
@@ -396,7 +398,7 @@ label v13s34:
 
     menu:
         "I'm a liar":
-            $ grant_achievement("an_honest_liar")
+            grant Achievement("an_honest_liar", "Own up to Clipps")
             u "Yeah, I'm a liar. But who isn't?"
 
             clipps "Good people."
@@ -426,7 +428,7 @@ label v13s34:
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v13/Track Scene 34_3.mp3" fadein 2
+    play music music.ck1.v13.Track_Scene_34_3 fadein 2
     
     scene v13s34_23 # FPP. Duncan, Clipps, Mr. Lee all standing infront of MC looking at him, all slight smile, mouth closed
     with dissolve
@@ -464,8 +466,8 @@ label v13s34:
     dun "Still blind, huh?"
 
     menu:
-        "Stop this":
-            $ add_point(KCT.BRO)
+        "Stop this" (bro=1.0):
+            $ reputation.add_point(RepComponent.BRO)
             scene v13s34_26 # FPP. MC starts walking over to Riley
             with dissolve
 
@@ -482,7 +484,7 @@ label v13s34:
             pause 0.75
 
             stop music fadeout 3
-            play music "music/v13/Track Scene 34_4.mp3" fadein 2
+            play music music.ck1.v13.Track_Scene_34_4 fadein 2
 
             scene v13s34_29 # FPP. Riley looking at MC, mascara dripping down her face, crying expression, mouth open
             with dissolve
@@ -536,8 +538,8 @@ label v13s34:
 
             u "*Sighs*"
 
-        "Let them scare her":
-            $ add_point(KCT.TROUBLEMAKER)
+        "Let them scare her" (troublemaker=1.0):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
             scene v13s34_24
             with dissolve
 
@@ -669,7 +671,7 @@ label v13s34:
             pause 0.75
 
             stop music fadeout 3
-            play music "music/v13/Track Scene 34_4.mp3" fadein 2
+            play music music.ck1.v13.Track_Scene_34_4 fadein 2
 
             scene v13s34_33 # FPP. Riley looking at Mr. Lee, surprised expression, mouth open
             with dissolve
@@ -680,6 +682,8 @@ label v13s34:
             with dissolve
 
             pause 0.75 
+
+label v13s34_2:
 
     scene v13s34_35 # FPP. Riley, looking at Mr. Lee, surprised expression, mouth open 
     with dissolve

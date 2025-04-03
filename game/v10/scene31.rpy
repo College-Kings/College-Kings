@@ -6,7 +6,7 @@ label v10_late_alley:
 
     scene v10all1 # TPP. Show MC on the sidewalk, just before the entrance to the alley, mouth closed
     with dissolve
-    play music "music/v10/Track Scene 31.mp3" fadein 2
+    play music music.ck1.v10.Track_Scene_31 fadein 2
     pause 0.75
 
     scene v10all2 # FPP. Show Alley, 2 hookers against the wall near the entrance, Josh down the bottom of the alley with unknown guy in hoody,
@@ -126,66 +126,65 @@ label v10_late_alley:
         jo "Haha, he's some big shot. Can't remember his name honestly, but he's a bit intimidating. Kinda reminds me of my dad, but more flexible."
 
     menu:
-        "Support him":
+        "Support him" (josh=1.0):
             $ v10_support_josh = True
             scene v10all3a
             with dissolve
             u "Just be safe, deal in the daylight not in a back alleyway. Anything could happen and we would have no idea."
 
-            scene v10all3a
+            scene v10all3
             with dissolve
 
             jo "Well I don't want to get caught on campus, that'd defeat the whole purpose of doing this in the first place because I'd be suspended."
 
-            scene v10all3
+            scene v10all3a
             with dissolve
 
             u "Bro, have your \"clients\" stop by your house or get someone else to deliver for you and give them a little cut. Doing it here is dangerous."
 
-            scene v10all3a
+            scene v10all3
             with dissolve
 
             jo "Having someone work for me does sound nice."
 
             jo "I'm sure the guy I've been selling to would do it if I just let him have some for free. He's been a pretty serious customer."
 
-            scene v10all3
+            scene v10all3a
             with dissolve
 
             u "Someone I know?"
 
-            scene v10all3a
+            scene v10all3
             with dissolve
 
             jo "Not sure, he does go to SVC though. He was in that nerd frat."
 
-            scene v10all3
+            scene v10all3a
             with dissolve
 
             u "(Is he talking about the Frogs?)"
 
             u "Yeah, let him do your dirty work."
 
-            scene v10all3a
+            scene v10all3
             with dissolve
 
             jo "Not a bad idea. I appreciate the talk man."
 
         "Don't support":
-            if kct == "confident":
-
-                scene v10all3
+            if reputation() == Reputations.CONFIDENT:
+                scene v10all3a
                 with dissolve
 
                 u "I get that this isn't supposed to be a permanent thing for you and you have an out plan, but I still don't support what you're doing. There's other ways to get money. You're gonna end up fucking up your life."
 
-                call screen kct_popup
-                scene v10all3a
+                call screen reputation_popup
+                scene v10all3
                 with dissolve
 
                 jo "I open up to you and that's your response? What else am I supposed to do?"
 
-                scene v10all3
+                scene v10all3a
                 with dissolve
 
                 u "I'm not saying I have all the answers, but putting yourself in a dangerous situation to get out of a dangerous situation isn't a good idea."
@@ -195,20 +194,21 @@ label v10_late_alley:
 
                 jo "Fuck, when you say it out loud like that it kinda makes some sense."
 
-                scene v10all3
+                scene v10all3a
                 with dissolve
 
                 u "I'm just saying man."
 
-                scene v10all3a
+                scene v10all3
                 with dissolve
 
                 jo "Trust me, I hear you. I'm gonna get out of here man."
 
             else:
-                $ josh.relationship = Relationship.MAD
+                $ CharacterService.set_mood(josh, Moods.MAD)
                 $ josh_europe = False
-                scene v10all3
+                
+                scene v10all3a
                 with dissolve
                 u "I get that this isn't supposed to be a permanent thing for you and you have an out plan, but I still don't support what you're doing. There's other ways to get money. You're gonna end up fucking up your life."
 
@@ -216,6 +216,7 @@ label v10_late_alley:
                 with dissolve
 
                 jo "I open up to you and that's your response? Mind your own business from now on! Fuck you man!"
+                
     scene v10all2a
     with dissolve
 

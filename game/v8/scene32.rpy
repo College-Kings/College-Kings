@@ -4,12 +4,12 @@
 # Time: Tuesday Morning
 
 label mr_aft_class:
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         scene v8saec1 # TPP. Show everyone in the class standing up from their seats in preparation to leave the class.
         with dissolve
         pause 0.5
 
-        play music "music/mindie3.mp3"
+        play music music.ck1.mindie3
 
         scene v8saec2 # FPP. Show Ms. Rose looking at MC (Camera), gesturing to come over, neutral expression, mouth open.
         with dissolve
@@ -60,8 +60,8 @@ label mr_aft_class:
         with dissolve
 
         menu:
-            "Ask more questions":
-                $ add_point(KCT.BOYFRIEND)
+            "Ask more questions" (boyfriend=1.0):
+                $ reputation.add_point(RepComponent.BOYFRIEND)
                 jump ask_rose_more_q
             "Leave":
                 jump no_ask_rose_more_q

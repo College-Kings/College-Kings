@@ -8,11 +8,11 @@ label v9_walk_w_sam:
     with fade  
     sa "Thanks for walking with me."
 
-    play music "music/v9/Track Scene 9.mp3" fadein 2
+    play music music.ck1.v9.Track_Scene_9 fadein 2
 
     menu:
-        "Joke around":
-            $ add_point(KCT.BOYFRIEND)
+        "Joke around" (boyfriend=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             jump v9_walk_w_sam_joke
         "Be serious":
             jump v9_walk_w_sam_serious
@@ -240,8 +240,8 @@ label v9_walk_w_sam_cont2:
 
     menu:
 
-        "Ask to go out again":
-            $ add_point(KCT.BOYFRIEND)
+        "Ask to go out again" (boyfriend=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             jump v9_walk_w_sam_walk_again
         "Say goodbye":
             jump v9_walk_w_sam_walk_goodbye

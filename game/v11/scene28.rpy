@@ -5,23 +5,23 @@
 
 label v11_ms_rose_sex:
     $ sceneList.add("v11_rose")
-    $ ms_rose.relationship = Relationship.FWB
+    $ CharacterService.set_relationship(ms_rose, Relationship.FWB)
 
     scene v11ros1 # TPP. Show MC walking thourgh the corridor, he is slightly nervous, mouth closed
     with fade
-    play music "music/v10/Track Scene 41_2.mp3" fadein 2
+    play music music.ck1.v10.Track_Scene_41_2 fadein 2
     pause 0.75
 
     scene v11ros2 # FPP. MC is standing outside Ms Rose's room, he is looking at the door
     with dissolve
 
     menu:
-        "Open the door":
-            $ add_point(KCT.TROUBLEMAKER)
+        "Open the door" (troublemaker=1.0):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             scene v11ros2a # FPP. Same as v11ros2, MC is grabbing the door handle
             with dissolve
-            play sound "sounds/dooropen.mp3"
+            play sound sound.door_open
 
             pause 0.75
 
@@ -35,13 +35,13 @@ label v11_ms_rose_sex:
 
             pause 1
 
-        "Knock":
-            $ add_point(KCT.BOYFRIEND)
+        "Knock" (boyfriend=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
 
             scene v11ros2c # FPP. Same as v11ros2, show MC knocking on the door
             with dissolve
 
-            play sound "sounds/knock.mp3"
+            play sound sound.knock
 
             pause 0.75
 
@@ -72,7 +72,7 @@ label v11_ms_rose_sex:
 
 label v11_ms_rose_sex_sg:
     stop music fadeout 3
-    play music "music/v10/Track Scene 17_2.mp3" fadein 2
+    play music music.ck1.v10.Track_Scene_17_2 fadein 2
     scene v11ros3a # FPP. Same as v11ros3, Rose mouth open, seductive look
     with dissolve
 
@@ -108,8 +108,13 @@ label v11_ms_rose_sex_sg:
 
     pause 1.25
 
-    if config_censored:
+    if is_censored:
         call screen censored_popup("v11s28_nsfwSkipLabel1")
+
+    lovense vibrate 2
+    lovense rotate 1
+    lovense suction 1
+    lovense thrust 1
 
     scene v11ros5 # TPP. Show Ms Rose removing MC's pants, show her ass appearing from under the bathrobe while she's bending over to remove his pants
     with dissolve
@@ -140,6 +145,11 @@ label v11_ms_rose_sex_sg:
     with dissolve
 
     u "Yes."
+
+    lovense vibrate 3
+    lovense rotate 2
+    lovense suction 2
+    lovense thrust 2
 
     scene v11ros7b # FPP. MC is looking as Ms Rose slides down, she is kissing his abs
     with dissolve
@@ -173,6 +183,11 @@ label v11_ms_rose_sex_sg:
 
     pause 1
 
+    lovense vibrate 5
+    lovense rotate 4
+    lovense suction 4
+    lovense thrust 4
+
     image v11roscgc = Movie(play="images/v11/Scene 28/v11roscgc.webm", loop=True, image="images/v11/Scene 28/v11roscgcStart.webp", start_image="images/v11/Scene 28/v11roscgcStart.webp") # Ms Rose cowgirl choking
     image v11roscgcf = Movie(play="images/v11/Scene 28/v11roscgcf.webm", loop=True, image="images/v11/Scene 28/v11roscgcStart.webp", start_image="images/v11/Scene 28/v11roscgcStart.webp") # Ms Rose cowgirl choking spedup
 
@@ -204,6 +219,11 @@ label v11_ms_rose_sex_sg:
     pause
 
     ro "Harder."
+
+    lovense vibrate 7
+    lovense rotate 6
+    lovense suction 6
+    lovense thrust 6
 
     scene v11rosmf # Ignore as animation
     with dissolve
@@ -240,6 +260,11 @@ label v11_ms_rose_sex_sg:
 
     ro "Do it."
 
+    lovense vibrate 9
+    lovense rotate 7
+    lovense suction 7
+    lovense thrust 7
+
     scene v11ros13 # TPP. Close up shot of Ms Rose's pussy filled with cum (she's doggystyle position)
     with dissolve
 
@@ -265,6 +290,8 @@ label v11_ms_rose_sex_sg:
 
     ro "If you want this to happen again, the answer is no."
 
+    lovense stop
+
     scene v11ros15a
     with dissolve
 
@@ -273,7 +300,7 @@ label v11_ms_rose_sex_sg:
     scene v11ros16 # TPP. Show MC getting out of bed, slight smile, mouth closed, Ms Rose lying down in the bed, mouth closed, neutral expression
     with dissolve
     stop music fadeout 3
-    play music "music/v10/Track Scene 41_2.mp3" fadein 2
+    play music music.ck1.v10.Track_Scene_41_2 fadein 2
     pause 1
 
     scene v11ros17 # TPP. Show MC putting on his pants, Ms Rose sitting down in the bed behind him, still naked, both mouths closed, slight smiles
@@ -306,7 +333,7 @@ label v11_ms_rose_sex_sg:
     scene v11ros20 # TPP. Show MC slosing the door behind him
     with dissolve
 
-    play sound "sounds/doorclose.mp3"
+    play sound sound.door_close
 
     $ renpy.end_replay()
 

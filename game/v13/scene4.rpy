@@ -10,7 +10,7 @@ label v13s4:
 
         pause 0.75
 
-        play music "music/v13/Track Scene 4.mp3" fadein 2
+        play music music.ck1.v13.Track_Scene_4 fadein 2
 
         scene v13s4_2 # TPP. Show MC and Riley walking in to the hotel, Ms. Rose in front of them, all slightly smiling, mouths closed, all carrying their luggage
         with dissolve
@@ -23,7 +23,7 @@ label v13s4:
 
         pause 0.75
 
-        play music "music/v13/Track Scene 4.mp3" fadein 2
+        play music music.ck1.v13.Track_Scene_4 fadein 2
 
         scene v13s4_2a # TPP. Same as v13s4_2, but Chloe instead of Riley, Chloe frowning, tired, mouth closed
         with dissolve
@@ -98,7 +98,7 @@ label v13s4:
 
         u "*Chuckles* Right behind you."
 
-        if chloe.relationship >= Relationship.GIRLFRIEND:
+        if CharacterService.is_girlfriend(chloe):
             scene v13s4_5b # TPP. Same as v13s4_5a, but MC carrying Chloe's luggage as well
             with dissolve
 

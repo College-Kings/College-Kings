@@ -8,10 +8,10 @@
 label v12_julia_call:
     scene black
     with fade
-    play sound "sounds/call.mp3"
+    play sound sound.call
     pause 1
 
-    play music "music/v12/Track Scene 25.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_25 fadein 2
     
     scene v12juc1 # TPP. Show MC sleeping in his bed
     with dissolve
@@ -27,7 +27,7 @@ label v12_julia_call:
     with dissolve
 
     stop sound
-    play sound "sounds/answercall.mp3"
+    play sound sound.answer_call
     u "Hello?"
 
     scene v12juc3 # TPP. Show Julia in her house. Julia slightly worried, mouth open, talking on the phone

@@ -6,7 +6,7 @@
 label v11_roommate:
     #scene v11rm1 # TPP. Show MC walking in the lobby, he is slightly smiling, mouth closed ###ERROR WRONG OUTFIT
     #with fade
-    play music "music/v11/Track Scene 19_1.mp3" fadein 2
+    play music music.ck1.v11.Track_Scene_19_1 fadein 2
     #pause 0.75
 
     scene v11rm2 # FPP. MC is standing in the lobby, he can see Chloe and Riley in the background (slightly close to the counter), Chloe is looking at her phone, Riley is reading a brochure
@@ -20,7 +20,7 @@ label v11_roommate:
 
         pause 0.75
 
-        if chloe.relationship <= Relationship.MAD:
+        if CharacterService.is_mad(chloe):
             scene v11rm4 # FPP. MC is now in talking distance to Chloe, Chloe is now looking at MC, Chloe is slightly annoyed, mouth closed (make sure counter is in backrgound)
             with dissolve
 
@@ -91,7 +91,7 @@ label v11_roommate:
 
             cl "[name], it's late."
 
-        elif chloe.relationship >= Relationship.FWB:
+        elif CharacterService.is_fwb(chloe) or CharacterService.is_girlfriend(chloe):
             scene v11rm4f
             with dissolve
 
@@ -207,10 +207,12 @@ label v11_roommate:
 
             cl "Goodnight."
 
-            $ v11s19_kiwiiPost2 = KiwiiPost(chloe, "v11/v11_chloemcselfie.webp", _("My Europe roommate!"), numberLikes=756)
-            $ v11s19_kiwiiPost2.newComment(aubrey, _("Look at you two!"), numberLikes=renpy.random.randint(100, 200), force_send=True)
-            $ v11s19_kiwiiPost2.addReply(_("I think I made the correct choice of roommate ;)"), numberLikes=321)
-            $ v11s19_kiwiiPost2.addReply(_("Glad to have you as my roommate Chloe!"), numberLikes=334)
+            $ kiwii_post = KiwiiService.new_post(chloe, "ck1_v11_chloe_mc_selfie", _("My Europe roommate!"), number_likes=756)
+            $ KiwiiService.new_comment(kiwii_post, aubrey, _("Look at you two!"), number_likes=renpy.random.randint(100, 200))
+            $ KiwiiService.add_replies(kiwii_post,
+                KiwiiReply(_("I think I made the correct choice of roommate ;)"), number_likes=321),
+                KiwiiReply(_("Glad to have you as my roommate Chloe!"), number_likes=334)
+            )
 
         else:
             scene v11rm4f # FPP. Same as v11rm4, but Chloe is smiling, mouth closed
@@ -318,17 +320,19 @@ label v11_roommate:
 
             cl "Haha, just like that."
 
-            $ v11s19_kiwiiPost1 = KiwiiPost(chloe, "v11/v11_chloemcselfie.webp", _("My Europe roommate!"), numberLikes=756)
-            $ v11s19_kiwiiPost1.newComment(aubrey, _("Look at you two!"), numberLikes=renpy.random.randint(100, 200), force_send=True)
-            $ v11s19_kiwiiPost1.addReply(_("I think I made the correct choice of roommate ;)"), numberLikes=321)
-            $ v11s19_kiwiiPost1.addReply(_("Glad to have you as my roommate Chloe!"), numberLikes=334)
+            $ kiwii_post = KiwiiService.new_post(chloe, "ck1_v11_chloe_mc_selfie", _("My Europe roommate!"), number_likes=756)
+            $ KiwiiService.new_comment(kiwii_post, aubrey, _("Look at you two!"), number_likes=renpy.random.randint(100, 200))
+            $ KiwiiService.add_replies(kiwii_post,
+                KiwiiReply(_("I think I made the correct choice of roommate ;)"), number_likes=321),
+                KiwiiReply(_("Glad to have you as my roommate Chloe!"), number_likes=334)
+            )
 
         scene v11rm7c # FPP. MC looks as Chloe is turned around with her back to him, sleeping
         with dissolve
 
         pause 0.75
         stop music fadeout 3
-        play music "music/v11/Track Scene 19_2.mp3" fadein 2
+        play music music.ck1.v11.Track_Scene_19_2 fadein 2
         scene v11rm8 # TPP. Show MC and Chloe sleeping (lights turned off now)
         with fade
 
@@ -347,7 +351,7 @@ label v11_roommate:
         scene v11rm9 # FPP. MC lying in his bed, looking at the door to the hallway (day)
         with dissolve
 
-        play sound "sounds/knock.mp3"
+        play sound sound.knock
 
         u "Huh?"
 
@@ -365,7 +369,7 @@ label v11_roommate:
 
         pause 0.75
 
-        play sound "sounds/dooropen.mp3"
+        play sound sound.door_open
 
         scene v11rm11a # FPP. Same cam as v11rm11, Door now open, MC looking at Riley, Riley slight smile, mouth closed (Day)
         with dissolve
@@ -377,7 +381,7 @@ label v11_roommate:
 
         ri "Ready to go check out this treasure hunt?"
 
-        if chloe.relationship >= Relationship.FWB:
+        if CharacterService.is_fwb(chloe) or CharacterService.is_girlfriend(chloe):
             scene v11rm12 # FPP. MC still standing by the door, he looks back at Chloe who is still sleeping, show some of her boobs slipping out from her outfit (Day)
             with dissolve
 
@@ -412,7 +416,7 @@ label v11_roommate:
 
         pause 0.75
 
-        if riley.relationship < Relationship.FWB:
+        if CharacterService.is_friend(riley):
             scene v11rm14 # FPP. MC is now in talking distance to Riley, Riley is now looking at MC, Riley is smiling, mouth closed (make sure counter is in backrgound)
             with dissolve
 
@@ -609,8 +613,8 @@ label v11_roommate:
             with dissolve
 
             menu:
-                "Just tell her":
-                    $ add_point(KCT.BOYFRIEND)
+                "Just tell her" (boyfriend=1.0):
+                    $ reputation.add_point(RepComponent.BOYFRIEND)
                     $ riley.points += 1
 
                     scene v11rm21c
@@ -623,8 +627,8 @@ label v11_roommate:
 
                     ri "You're probably right."
 
-                "Ease into it":
-                    $ add_point(KCT.BRO)
+                "Ease into it" (bro=1.0):
+                    $ reputation.add_point(RepComponent.BRO)
 
                     scene v11rm21c
                     with dissolve
@@ -824,8 +828,8 @@ label v11_roommate:
             with dissolve
 
             menu:
-                "Just tell her":
-                    $ add_point(KCT.BOYFRIEND)
+                "Just tell her" (boyfriend=1.0):
+                    $ reputation.add_point(RepComponent.BOYFRIEND)
                     $ riley.points += 1
                     
                     scene v11rm21c
@@ -841,8 +845,8 @@ label v11_roommate:
                     scene v11rm21c
                     with dissolve
 
-                "Ease into it":
-                    $ add_point(KCT.BRO)
+                "Ease into it" (bro=1.0):
+                    $ reputation.add_point(RepComponent.BRO)
 
                     scene v11rm21c
                     with dissolve
@@ -892,10 +896,12 @@ label v11_roommate:
 
                     ri "...And all of a sudden I'm tired. *Chuckles*"
 
-        $ v11s19_kiwiiPost3 = KiwiiPost(riley, "v11/v11_rileymcselfie.webp", _("Roll on Europe!"), numberLikes=456)
-        $ v11s19_kiwiiPost3.newComment(ryan, _("Good roommate pick!"), numberLikes=renpy.random.randint(100, 300), force_send=True)
-        $ v11s19_kiwiiPost3.addReply(_("Europe's gonna be a blast!"), numberLikes=321)
-        $ v11s19_kiwiiPost3.addReply(_("Glad to have you as my roommate Riley!"), numberLikes=334)
+        $ kiwii_post = KiwiiService.new_post(riley, "ck1_v11_riley_mc_selfie", _("Roll on Europe!"), number_likes=456)
+        $ KiwiiService.new_comment(kiwii_post, ryan, _("Good roommate pick!"), number_likes=renpy.random.randint(100, 300))
+        $ KiwiiService.add_replies(kiwii_post,
+            KiwiiReply(_("Europe's gonna be a blast!"), number_likes=321),
+            KiwiiReply(_("Glad to have you as my roommate Riley!"), number_likes=334)
+        )
 
         pause 0.75
 

@@ -4,9 +4,17 @@
 # Time: Evening
 
 label v11_hotel_bar:
+    $ kiwii_post = KiwiiService.new_post(sebastian, "ck1_v11_caleb_post", _("Who's laughing now!"), number_likes=374)
+    $ KiwiiService.new_comment(kiwii_post, chris, _("Someone's gonna be upset in the morning!"), number_likes=renpy.random.randint(100, 200))
+    $ KiwiiService.new_comment(kiwii_post, nora, _("Sebastian that's cruel!!"), number_likes=renpy.random.randint(100, 200))
+
+    $ kiwii_post = KiwiiService.new_post(imre, "ck1_v11_imre_bunny", _("Say hello to our newest Wolf recruit"), number_likes=306)
+    $ KiwiiService.new_comment(kiwii_post, aubrey, _("Awww cute!!"), number_likes=renpy.random.randint(100, 200))
+    $ KiwiiService.new_comment(kiwii_post, nora, _("That thing stinks!"), number_likes=renpy.random.randint(100, 200))
+    
     scene v11hob1 # TPP Show MC getting on to a stool at the hotel bar
     with dissolve
-    play music "music/v11/Track Scene 5_6.mp3" fadein 2
+    play music music.ck1.v11.Track_Scene_5_6 fadein 2
     pause 0.75
 
     scene v11hob2 # FPP Show bartender, mouth open
@@ -37,7 +45,7 @@ label v11_hotel_bar:
             scene v11hob2a
             with dissolve
 
-            $ grant_achievement("fruity")
+            grant Achievement("fruity", "Have a cocktail at the bar")
             u "Something fruity."
 
             scene v11hob2
@@ -173,4 +181,4 @@ label v11_hotel_bar:
 
         u "(Damn, left so fast I couldn't even say bye.)"
     stop music fadeout 3
-    jump v11_hotel_charlie_bar
+    jump v11_hotel_charli_bar

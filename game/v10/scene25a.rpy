@@ -7,7 +7,7 @@ label v10_sam_kitchen:
     with fade
     u "Samantha???"
 
-    play music "music/v10/Track Scene 25a.mp3" fadein 2
+    play music music.ck1.v10.Track_Scene_25a fadein 2
 
     pause 0.5
 
@@ -32,9 +32,9 @@ label v10_sam_kitchen:
     sa "Could you make me a Sex on The Beach?"
 
     menu:
-        "Make her a cocktail":
+        "Make her a cocktail" (samantha=1.0):
             $ makeSamCock = True
-            $ add_point(KCT.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             $ samantha.points += 1
             scene v10skt2 
             with dissolve
@@ -89,9 +89,9 @@ label v10_sam_kitchen:
             sa "Scared of a little drink? You're not gonna make me drink all by myself are you?"
 
             menu:
-                "Drink with her":
+                "Drink with her" (samantha=1.0):
                     $ drinkWsam = True
-                    $ add_point(KCT.BOYFRIEND)
+                    $ reputation.add_point(RepComponent.BOYFRIEND)
                     $ samantha.points += 1
                     scene v10skt4a 
                     with dissolve
@@ -102,7 +102,7 @@ label v10_sam_kitchen:
 
                     sa "See! That's why I called you."
 
-                "Pass":
+                "Pass" (samantha=-1.0):
                     $ samantha.points -= 1
                     scene v10skt4a 
                     with dissolve
@@ -117,9 +117,9 @@ label v10_sam_kitchen:
                     scene v10skt4a
                     with dissolve
 
-        "Get mad":
+        "Get mad" (samantha=-1.0):
             $ samantha.points -= 1
-            $ add_point(KCT.TROUBLEMAKER)
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
             scene v10skt2
             with dissolve
 
@@ -171,8 +171,8 @@ label v10_sam_kitchen:
     sa "So what were you doing out? Were you with one of your little girlfriends?"
 
     menu:
-        "Tease her":
-            $ add_point(KCT.BOYFRIEND)
+        "Tease her" (samantha=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             $ samantha.points += 1
             scene v10skt4a
             with dissolve
@@ -183,7 +183,7 @@ label v10_sam_kitchen:
             with dissolve
 
             sa "I mean you're free to do what you want... As long as when I call you come running. *Chuckles*"
-        "No":
+        "No" (samantha=-1.0):
             $ samantha.points -= 1
             scene v10skt4a
             with dissolve
@@ -235,7 +235,7 @@ label v10_sam_kitchen:
     sa "*Tipsy* I'm not drunk, just answer the question."
 
     menu:
-        "Lion":
+        "Lion" (samantha=1.0):
             $ samantha.points += 1
             scene v10skt4a
             with dissolve

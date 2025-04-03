@@ -7,7 +7,7 @@ label v9_ending:
     scene v9end1 # TPP. Show MC walking near the exit of the warehouse.
     with fade
 
-    play music "music/v9/Track Scene 45.mp3" fadein 2
+    play music music.ck1.v9.Track_Scene_45 fadein 2
 
     pause 1
 
@@ -37,10 +37,5 @@ label v9_ending:
     with fade
 
     pause 2
-
-label end9:
-    if not renpy.loadable("v10/scene1.rpy"):
-        call screen save_now(10)
-        with Fade(1, 0, 1)
-
+    
     jump v10start

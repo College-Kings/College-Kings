@@ -7,7 +7,7 @@ label v9_hang_w_linds:
     scene v9hwl1 # TPP. Show MC knocking on the door of the chicks house.
     with fade
 
-    play music "music/v9/Track Scene 8_1.mp3" fadein 2
+    play music music.ck1.v9.Track_Scene_8_1 fadein 2
 
     pause 1
 
@@ -78,9 +78,9 @@ label v9_hang_w_linds:
         with dissolve
 
         menu:
-            "Play it cool":
+            "Play it cool" (bro=1.0):
                 $ playCoolWLins = True
-                $ add_point(KCT.BRO)
+                $ reputation.add_point(RepComponent.BRO)
 
                 u "Damn right! You gonna be there to cheer me on?"
 
@@ -109,8 +109,8 @@ label v9_hang_w_linds:
 
                 li "Sure do." 
 
-            "Get real":
-                $ add_point(KCT.BOYFRIEND)
+            "Get real" (boyfriend=1.0):
+                $ reputation.add_point(RepComponent.BOYFRIEND)
 
                 u "I'm sure everyone's expecting me to fall in my first fight."
 
@@ -147,11 +147,11 @@ label v9_hang_w_linds:
 
     menu:
         "Let Lindsey grab your hand":
-            if chloe.relationship >= Relationship.FWB:
-                $ add_point(KCT.TROUBLEMAKER)
+            if CharacterService.is_fwb(chloe):
+                $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             else:
-                $ add_point(KCT.BOYFRIEND)
+                $ reputation.add_point(RepComponent.BOYFRIEND)
             
             scene v9hwl6a # TPP. Same camera as v9hwl6, Lindsey now holding MC's hand, looking into his eyes.
             with dissolve
@@ -195,18 +195,18 @@ label v9_hang_w_linds:
             
             stop music fadeout 3
 
-            play music "music/v9/Track Scene 39_2.mp3" fadein 2
+            play music music.ck1.v9.Track_Scene_39_2 fadein 2
 
 
             menu:
                 "Make out with Lindsey":
-                    if chloe.relationship >= Relationship.FWB:
-                        $ add_point(KCT.TROUBLEMAKER)
+                    if CharacterService.is_fwb(chloe):
+                        $ reputation.add_point(RepComponent.TROUBLEMAKER)
                     
                     else:
-                        $ add_point(KCT.BOYFRIEND)
+                        $ reputation.add_point(RepComponent.BOYFRIEND)
 
-                    $ lindsey.relationship = Relationship.KISS
+                    $ CharacterService.set_relationship(lindsey, Relationship.KISSED)
                     $ sceneList.add("v9_lindsey")
                     
                     scene v9links # Animations pls ignore
@@ -252,7 +252,7 @@ label v9_hang_w_linds:
                     scene v9hwl9 # TPP. Show MC lying on Lindsey's bed looking at Lindsey, both smiling.
                     with dissolve
 
-                    play sound "sounds/phonealarm.mp3"
+                    play sound sound.phone_alarm
 
                     "*Phone alarm goes off*"
 
@@ -313,8 +313,8 @@ label v9_hang_w_linds:
                     $ renpy.end_replay()
 
                 "Pull away":
-                    if chloe.relationship >= Relationship.FWB:
-                        $ add_point(KCT.BOYFRIEND)
+                    if CharacterService.is_fwb(chloe):
+                        $ reputation.add_point(RepComponent.BOYFRIEND)
                         
                     scene v9hwl7b # TPP. Same camera as v9hwl7, Show MC pulling away from Lindsey who is trying to kiss him.
                     with dissolve
@@ -324,7 +324,7 @@ label v9_hang_w_linds:
                     scene v9hwl5h # FPP. Same camera as v9hwl5, quite sad, mouth open.
                     with dissolve
 
-                    $ grant_achievement("the_wrong_time")
+                    grant Achievement("the_wrong_time", "Don't kiss Lindsey")
                     li "What's wrong?"
 
                     scene v9hwl5i # FPP. Same camera as v9hwl5, quite sad, mouth closed.
@@ -375,7 +375,7 @@ label v9_hang_w_linds:
                     pause 1
                     $ renpy.end_replay()
 
-            if joinwolves:
+            if mc.frat == Frat.WOLVES:
                 jump v9_wolves_pre_fight
             
             else:
@@ -433,7 +433,7 @@ label v9_hang_w_linds:
             pause 1
             $ renpy.end_replay()
     
-            if joinwolves:
+            if mc.frat == Frat.WOLVES:
                 jump v9_wolves_pre_fight
             
             else:

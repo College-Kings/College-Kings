@@ -1,6 +1,6 @@
 ### SCENE 2: Chloe v7 ending continued
 label v8_cl_start:
-    $ chloe.relationship = Relationship.FWB
+    $ CharacterService.set_relationship(chloe, Relationship.FWB)
     $ sceneList.add("v8_chloe")
 
     # Note to renderers: Make sure the MC is in his suit and any other props are the same as Chloe's ending in v7
@@ -25,7 +25,7 @@ label v8_cl_start:
     with dissolve
     u "So bad."
 
-    play music "music/msexy.mp3"
+    play music music.ck1.sexy
     scene v8s13 # TPP (lateral shot). Chloe pushing MC (who is sitting) into the bed playfully with one hand
     with hpunch
     cl "Good."
@@ -171,7 +171,7 @@ label v8_cl_start:
 
     $ renpy.end_replay()
 
-    play sound "sounds/knock.mp3"
+    play sound sound.knock
     stop music
 
     scene v8s20c # Same as v8s20b but Chloe shocked, eyes fully open, mouth open
@@ -191,7 +191,7 @@ label v8_cl_start:
     with dissolve
     pause 0.5
 
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
 
     scene v8s22 # TPP (behind Chloe). Chloe opened the door. She's shocked and talking. Lindsey on other side of the door, crying really bad, mouth closed. MC behind Chloe. Focus on Lindsey
     with dissolve
@@ -218,7 +218,7 @@ label v8s2_nsfwSkipLabel1:
     with dissolve
     pause 1
 
-    play sound "sounds/doorclose.mp3"
+    play sound sound.door_close
 
     scene v8s22d # Door closed and nobody in the shot
     with dissolve
@@ -232,7 +232,7 @@ label v8s2_nsfwSkipLabel1:
     with Dissolve(1.5)
     pause 1
 
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
 
     scene v8s23a # Chloe opened the door and walking in with a sad, sorry face
     with Dissolve(0.5)

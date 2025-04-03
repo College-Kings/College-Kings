@@ -9,7 +9,7 @@ label v12_riley_lobby:
     with dissolve
 
     pause 0.75
-    play music "music/v12/Track Scene 28.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_28 fadein 2
 
     scene v12ril1a # FPP. Same as v12ril1, Riley now in talking distance to MC, Riley very angry, mouth open
     with dissolve
@@ -89,7 +89,7 @@ label v12_riley_lobby:
 
     stop music fadeout 3
     
-    if lauren.relationship >= Relationship.KISS and not "v11_aubrey" in sceneList:
+    if (CharacterService.is_kissed(lauren) or CharacterService.is_girlfriend(lauren)) and not "v11_aubrey" in sceneList:
         jump v12_lauren_sex #scene 29
     else:
         jump v12_late_night_workout #scene 29a

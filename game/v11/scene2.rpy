@@ -7,7 +7,7 @@ label v11_nora_chloe_hallway:
     scene v11nohall1 # TPP. Show MC walking in the hallway, camera should be behind MC, Nora is supposed to be in the background looking at the bulleting board
     with fade
 
-    play music "music/v11/Track Scene 2.mp3" fadein 2
+    play music music.ck1.v11.Track_Scene_2 fadein 2
 
     pause 0.75
 
@@ -16,7 +16,7 @@ label v11_nora_chloe_hallway:
 
     u "Hey Nora, are there a lot of people going on the trip?"
 
-    if nora.relationship >= Relationship.LIKES:
+    if v8_nora_likes_mc:
         scene v11nohall2a # FPP. Same as 2, but now Nora is looking at MC, Nora mouth open, happy expression
         with dissolve
 
@@ -64,16 +64,16 @@ label v11_nora_chloe_hallway:
     with dissolve
 
     menu:
-        "I'll be there":
+        "I'll be there" (nora=1.0):
             $ nora.points += 1
-            $ add_point(KCT.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
 
             scene v11nohall2b
             with dissolve
 
             u "Well I'll be there, I hope that's something good. *Chuckles*"
 
-            if nora.relationship >= Relationship.LIKES:
+            if v8_nora_likes_mc:
                 scene v11nohall2a
                 with dissolve
 
@@ -85,15 +85,15 @@ label v11_nora_chloe_hallway:
 
                 no "I just wish he'd make more of an effort."
 
-        "Have a good time":
-            $ add_point(KCT.BRO)
+        "Have a good time" (bro=1.0):
+            $ reputation.add_point(RepComponent.BRO)
 
             scene v11nohall2d
             with dissolve
 
             u "Just try to enjoy yourself anyway."
 
-            if nora.relationship >= Relationship.LIKES:
+            if v8_nora_likes_mc:
                 scene v11nohall2c
                 with dissolve
 
@@ -119,8 +119,8 @@ label v11_nora_chloe_hallway:
     with dissolve
 
     menu:
-        "Defend Chloe":
-            $ add_point(KCT.TROUBLEMAKER)
+        "Defend Chloe" (nora=-1.0):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
             $ nora.points -= 1
 
             scene v11nohall2d
@@ -138,7 +138,7 @@ label v11_nora_chloe_hallway:
 
             u "No I just... nevermind."
 
-        "Don't defend Chloe":
+        "Don't defend Chloe" (nora=1.0):
             $ nora.points += 1
 
             scene v11nohall2b
@@ -243,7 +243,7 @@ label v11_nora_chloe_hallway:
 
     u "If you're looking for a more mellow time then Lauren or Lindsey may be nice to talk to, but if you have a more wild side then getting to know Amber or Aubrey is probably right up your alley."
 
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         u "In terms of people to avoid, It's always best to avoid Grayson. *Laughs*"
 
     else:
@@ -255,8 +255,8 @@ label v11_nora_chloe_hallway:
     charli "And what kind of company are you?"
 
     menu:
-        "Mellow":
-            $ add_point(KCT.BOYFRIEND)
+        "Mellow" (boyfriend=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             scene v11nohall11c # same 11b, just change pose a little so conversation isn't stale
             with dissolve
 
@@ -274,8 +274,8 @@ label v11_nora_chloe_hallway:
     charli "Nora mentioned that we'll have some time to do our own thing and explore. Anything you're looking forward to?"
 
     menu:
-        "Hanging with the girls":
-            $ add_point(KCT.BOYFRIEND)
+        "Hanging with the girls" (boyfriend=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
 
             scene v11nohall11c
             with dissolve
@@ -349,7 +349,7 @@ label v11_nora_chloe_hallway:
                 u "(I need to get home and pack.)"
 
         "Say something":
-            if chloe.relationship <= Relationship.MAD:
+            if CharacterService.is_mad(chloe):
                 scene v11clhall1c # FPP. Same as clhall1a, Chloe and MC are now looking at each other, Chloe's mouth is closed, she is annoyed
                 with dissolve
 
@@ -364,9 +364,10 @@ label v11_nora_chloe_hallway:
                 with dissolve
 
                 menu:
-                    "Apologize":
-                        $ chloe.relationship = Relationship.FRIEND
-                        $ add_point(KCT.BOYFRIEND)
+                    "Apologize" (boyfriend=1.0):
+                        $ CharacterService.set_relationship(chloe, Relationship.FRIEND, mc)
+                        $ CharacterService.remove_mood(chloe, Moods.MAD)
+                        $ reputation.add_point(RepComponent.BOYFRIEND)
 
                         scene v11clhall1c
                         with dissolve
@@ -402,8 +403,8 @@ label v11_nora_chloe_hallway:
                         with dissolve
 
                         menu:
-                            "Yes":
-                                $ add_point(KCT.BOYFRIEND)
+                            "Yes" (chloe=1.0):
+                                $ reputation.add_point(RepComponent.BOYFRIEND)
                                 $ chloe.points += 1
 
                                 scene v11clhall1f
@@ -586,7 +587,7 @@ label v11_nora_chloe_hallway:
                         pause 0.75
 
             else:
-                if chloe.relationship >= Relationship.FWB:
+                if CharacterService.is_fwb(chloe) or CharacterService.is_girlfriend(chloe):
                     scene v11clhall1f
                     with dissolve
 
@@ -598,7 +599,7 @@ label v11_nora_chloe_hallway:
 
                     u "Hey Chloe."
 
-                if chloe.relationship >= Relationship.FWB:
+                if CharacterService.is_fwb(chloe) or CharacterService.is_girlfriend(chloe):
                     scene v11clhall1e
                     with dissolve
 
@@ -631,8 +632,8 @@ label v11_nora_chloe_hallway:
                 cl "Haha, me too. You know, I have a few minutes before my next class. Wanna go outside and talk for a bit?"
 
                 menu:
-                    "Yes":
-                        $ add_point(KCT.BOYFRIEND)
+                    "Yes" (chloe=1.0):
+                        $ reputation.add_point(RepComponent.BOYFRIEND)
                         $ chloe.points += 1
 
                         scene v11clhall1f
@@ -767,7 +768,7 @@ label v11_nora_chloe_hallway:
 
                         u "Haha, well I won't be good company if I'm not there so I'm gonna go get packing."
 
-                        if chloe.relationship >= Relationship.FWB:
+                        if CharacterService.is_fwb(chloe) or CharacterService.is_girlfriend(chloe):
                             scene v11clb1
                             with dissolve
 
@@ -779,7 +780,7 @@ label v11_nora_chloe_hallway:
 
                             cl "Alright, it was good talking to you."
 
-                        if chloe.relationship >= Relationship.FWB:
+                        if CharacterService.is_fwb(chloe) or CharacterService.is_girlfriend(chloe):
                             scene v11clb1a
                             with dissolve
 
@@ -818,7 +819,7 @@ label v11_nora_chloe_hallway:
                         pause 0.75
     stop music fadeout 3
 
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         jump v11_wolves_packing_chris
     else:
         jump v11_samantha_packing

@@ -9,8 +9,8 @@
 # suck_in_whoosh.mp3 - Something like the first part in this audio https://elements.envato.com/suck-in-whoosh-5VSEHLA (build up and then sudden stop)
 
 label v9_dream:
-play music "music/v9/Track Scene 4.mp3" fadein 2
-play sound "sounds/swoosh.mp3"
+play music music.ck1.v9.Track_Scene_4 fadein 2
+play sound sound.swoosh
 
 scene v9dream1 # TPP (camera from the front so the void is not fully visible yet). MC standing near an open door (as if he just entered it) behind which there is the black void, nervous, mouth closed
 with dissolve
@@ -41,7 +41,7 @@ scene v9dream5
 with dissolve
 u "I'M ALL ALONE IN HERE!"
 
-play music "music/mhorror.mp3"
+play music music.horror
 "I'm all alone in here...{w=1} {size=-5}I'm all alone in here...{/size}{w=1} {size=-10}I'm all alone in here...{/size}"
 
 scene v9dream2
@@ -49,7 +49,7 @@ with dissolve
 pause 1
 
 show glitch
-play sound "sounds/glitch.mp3"
+play sound sound.glitch
 pause 0.1
 hide glitch
 
@@ -74,14 +74,14 @@ scene v9dream8
 with dissolve
 pause 1
 
-if joinwolves:
+if mc.frat == Frat.WOLVES:
     jump v9_dream_wolves
 else:
     jump v9_dream_apes
 
 label v9_dream_wolves:
 show glitch
-play sound "sounds/glitch.mp3"
+play sound sound.glitch
 pause 0.1
 hide glitch
 
@@ -98,7 +98,7 @@ with dissolve
 pause 0.5
 
 show glitch
-play sound "sounds/glitch.mp3"
+play sound sound.glitch
 pause 0.1
 hide glitch
 
@@ -124,7 +124,7 @@ with dissolve
 pause 0.25
 
 show glitch
-play sound "sounds/glitch.mp3"
+play sound sound.glitch
 pause 0.1
 hide glitch
 
@@ -145,7 +145,7 @@ with dissolve
 pause 2
 
 $ renpy.music.set_volume(0.4, channel="sound")
-# play sound "sounds/boo.mp3"
+
 pause 0.5
 
 scene v9dream8c # MC turned his head to look at someone unseen in the frame, looking confused and offended, mouth closed
@@ -153,11 +153,9 @@ with dissolve
 u "(Huh?)"
 
 $ renpy.music.set_volume(1, channel="sound")
-# play sound "sounds/boo.mp3"
+
 
 u "(Are they booing me? I'll show them.)"
-
-# play sound "sounds/spotlight.mp3"
 
 scene v9dream10 # TPP. A spotlight shines on MC, the rest of the scene gets relatively darker than before. MC looking confident with his fists up, mouth closed
 with Dissolve(0.2)
@@ -182,7 +180,7 @@ menu:
         pause 0.5
 
         show glitch
-        play sound "sounds/glitch.mp3"
+        play sound sound.glitch
         pause 0.1
         hide glitch
 
@@ -190,13 +188,11 @@ menu:
         with dissolve
         pause
 
-        play sound "sounds/hs.mp3"
+        play sound sound.hit
 
         scene v9dream12 # TPP. Show MC punching Ryan in the ring. (It should be a weak punch and Ryan isn't too shaken by it)
         with hpunch
         pause 1
-
-        # play sound "sounds/boo.mp3"
 
         scene v9dream13 # TPP. Close up shot of Chris (standing outside the ring like before) looking disappointed, mouth open
         with dissolve
@@ -206,13 +202,13 @@ menu:
         with dissolve
         pe "My grandma can hit harder than that! *Laughs*"
 
-        play sound "sounds/hs.mp3"
+        play sound sound.hit
 
         scene v9dream12a # Show Ryan punching MC back very hard
         with hpunch
         pause 1
 
-        play sound "sounds/fall.mp3"
+        play sound sound.fall
 
         scene v9dream12b # Show Ryan knocking the MC to the ground and locking him, MC in pain
         with hpunch
@@ -236,7 +232,7 @@ menu:
         pause 0.5
 
         show glitch
-        play sound "sounds/glitch.mp3"
+        play sound sound.glitch
         pause 0.1
         hide glitch
 
@@ -244,13 +240,11 @@ menu:
         with dissolve
         pause
 
-        play sound "sounds/hs.mp3"
+        play sound sound.hit
 
         scene v9dream14 # TPP (Use same camera as v9dream12. I used different frame numbering for ease of understanding). Same as v9dream12 but instead of Ryan, it's Caleb
         with hpunch
         pause 1
-
-        # play sound "sounds/boo.mp3"
 
         scene v9dream13
         with dissolve
@@ -260,13 +254,13 @@ menu:
         with dissolve
         pe "My grandma can hit harder than that! *Laughs*"
 
-        play sound "sounds/hs.mp3"
+        play sound sound.hit
 
         scene v9dream14a # Same as v9dream12a but instead of Ryan, it's Caleb
         with hpunch
         pause 1
 
-        play sound "sounds/fall.mp3"
+        play sound sound.fall
 
         scene v9dream14b # Same as v9dream12b but instead of Ryan, it's Caleb
         with hpunch
@@ -284,7 +278,7 @@ pe "Never letting a pussy like that near mine."
 u "(Fuck! Let's turn this mess around, [name]!)"
 
 show glitch
-play sound "sounds/glitch.mp3"
+play sound sound.glitch
 pause 0.1
 hide glitch
 
@@ -299,13 +293,13 @@ u "Who's next?"
 u "I SAID WHO'S NEXT!?" with hpunch
 
 show glitch
-play sound "sounds/glitch.mp3"
+play sound sound.glitch
 pause 0.1
 hide glitch
 
 scene v9dream13b # Same as v9dream13 but this time it's Lauren looking disappointed, mouth open
 with dissolve
-if lauren.relationship >= Relationship.GIRLFRIEND:
+if CharacterService.is_girlfriend(lauren):
     la "You risked our relationship to join a fighting frat and you aren't even GOOD at it? What the hell?"
 else:
     la "I'm so glad I didn't waste my time on you."
@@ -315,7 +309,6 @@ with dissolve
 u "(I don't like this dream anymore.)"
 u "Wake up, [name]. WAKE UP!"
 
-# play sound "sounds/suck_in_whoosh.mp3"
 # pause n # (Pause length should be precisely the length of the above audio clip)
 stop music
 
@@ -327,7 +320,7 @@ jump v9_dream_wakeup
 
 label v9_dream_apes:
 show glitch
-play sound "sounds/glitch.mp3"
+play sound sound.glitch
 pause 0.1
 hide glitch
 
@@ -344,7 +337,7 @@ with dissolve
 pause 0.5
 
 show glitch
-play sound "sounds/glitch.mp3"
+play sound sound.glitch
 pause 0.1
 hide glitch
 
@@ -370,7 +363,7 @@ with dissolve
 pause 0.25
 
 show glitch
-play sound "sounds/glitch.mp3"
+play sound sound.glitch
 pause 0.1
 hide glitch
 
@@ -391,7 +384,7 @@ with dissolve
 pause 2
 
 $ renpy.music.set_volume(0.4, channel="sound")
-# play sound "sounds/boo.mp3"
+
 pause 0.5
 
 scene v9dream8c
@@ -399,11 +392,8 @@ with dissolve
 u "(Huh?)"
 
 $ renpy.music.set_volume(1, channel="sound")
-# play sound "sounds/boo.mp3"
 
 u "(Are they booing me? I'll show them.)"
-
-# play sound "sounds/spotlight.mp3"
 
 scene v9dream10
 with Dissolve(0.2)
@@ -428,7 +418,7 @@ menu:
         pause 0.5
 
         show glitch
-        play sound "sounds/glitch.mp3"
+        play sound sound.glitch
         pause 0.1
         hide glitch
 
@@ -436,13 +426,11 @@ menu:
         with dissolve
         pause
 
-        play sound "sounds/hs.mp3"
+        play sound sound.hit
 
         scene v9dream17 # TPP (Use same camera as v9dream12. I used different frame numbering for ease of understanding). Same as v9dream12 but instead of Ryan, it's Imre
         with hpunch
         pause 1
-
-        # play sound "sounds/boo.mp3"
 
         scene v9dream13c # Same as v9dream13 but this time it's Grayson looking disappointed, angry, mouth open
         with dissolve
@@ -452,13 +440,13 @@ menu:
         with dissolve
         ri "My grandma can hit harder than that! *Laughs*"
 
-        play sound "sounds/hs.mp3"
+        play sound sound.hit
 
         scene v9dream17a # Same as v9dream12a but instead of Ryan, it's Imre
         with hpunch
         pause 1
 
-        play sound "sounds/fall.mp3"
+        play sound sound.fall
 
         scene v9dream17b # Same as v9dream12b but instead of Ryan, it's Imre
         with hpunch
@@ -482,7 +470,7 @@ menu:
         pause 0.5
 
         show glitch
-        play sound "sounds/glitch.mp3"
+        play sound sound.glitch
         pause 0.1
         hide glitch
 
@@ -490,13 +478,11 @@ menu:
         with dissolve
         pause
 
-        play sound "sounds/hs.mp3"
+        play sound sound.hit
 
         scene v9dream18 # TPP (Use same camera as v9dream12. I used different frame numbering for ease of understanding). Same as v9dream12 but instead of Ryan, it's Perry
         with hpunch
         pause 1
-
-        # play sound "sounds/boo.mp3"
 
         scene v9dream13c
         with dissolve
@@ -506,13 +492,13 @@ menu:
         with dissolve
         ri "My grandma can hit harder than that! *Laughs*"
 
-        play sound "sounds/hs.mp3"
+        play sound sound.hit
 
         scene v9dream18a # Same as v9dream12a but instead of Ryan, it's Perry
         with hpunch
         pause 1
 
-        play sound "sounds/fall.mp3"
+        play sound sound.fall
 
         scene v9dream18b # Same as v9dream12b but instead of Ryan, it's Perry
         with hpunch
@@ -530,7 +516,7 @@ ri "Never letting a pussy like that near mine."
 u "(Fuck! Let's turn this mess around, [name]!)"
 
 show glitch
-play sound "sounds/glitch.mp3"
+play sound sound.glitch
 pause 0.1
 hide glitch
 
@@ -545,13 +531,13 @@ u "Who's next?"
 u "I SAID WHO'S NEXT!?" with hpunch
 
 show glitch
-play sound "sounds/glitch.mp3"
+play sound sound.glitch
 pause 0.1
 hide glitch
 
 scene v9dream13b
 with dissolve
-if lauren.relationship >= Relationship.GIRLFRIEND:
+if CharacterService.is_girlfriend(lauren):
     la "You risked our relationship to join a fighting frat and you aren't even GOOD at it? What the hell?"
 else:
     la "I'm so glad I didn't waste my time on you."
@@ -561,7 +547,6 @@ with dissolve
 u "(I don't like this dream anymore.)"
 u "Wake up, [name]. WAKE UP!"
 
-# play sound "sounds/suck_in_whoosh.mp3"
 # $ renpy.pause(renpy.music.get_duration(channel="sound")) 
 stop music fadeout 3
 

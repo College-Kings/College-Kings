@@ -9,7 +9,7 @@ label v12_paris_hotel:
     
     pause 0.75
 
-    play music "music/v12/Track Scene 11.mp3" fadein 2
+    play music music.v12_Track_Scene_11 fadein 2
 
     scene v12pht2 # FPP. Looking at imre, mouth opened
     with dissolve
@@ -44,7 +44,7 @@ label v12_paris_hotel:
     scene v12pht3 # FPP. Chris and Imre high five
     with dissolve
 
-    play sound "sounds/ks.mp3"
+    play sound sound.hit
 
     pause 0.75
 
@@ -303,8 +303,8 @@ label v12_paris_hotel:
     no "Yeah, it's just a lot, you know? Never thought I'd be in a situation like this."
 
     menu:
-        "Support her choice":
-            $ add_point(KCT.BOYFRIEND)
+        "Support her choice" (boyfriend=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             scene v12pht9d
             with dissolve
 
@@ -321,9 +321,9 @@ label v12_paris_hotel:
 
             u "That's what FRIENDS are for. *Chuckles*"
 
-        "Help Chris":
+        "Help Chris" (bro=1.0):
             $ v12_help_chris += 1
-            $ add_point(KCT.BRO)
+            $ reputation.add_point(RepComponent.BRO)
             scene v12pht9d
             with dissolve
 
@@ -361,8 +361,8 @@ label v12_paris_hotel:
     no "Should I turn the tables and have a little \"mind your own business\" talk with him?"
 
     menu:
-        "Yes":
-            $ add_point(KCT.TROUBLEMAKER)
+        "Yes" (troublemaker=1.0):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
             scene v12pht9h
             with dissolve
 
@@ -373,8 +373,8 @@ label v12_paris_hotel:
 
             no "Haha, I'll think about it."
 
-        "No":
-            $ add_point(KCT.BOYFRIEND)
+        "No" (boyfriend=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             scene v12pht9h 
             with dissolve
 
@@ -412,7 +412,7 @@ label v12_paris_hotel:
 
     scene v12pht12 # TPP. MC at his hotel door
     with dissolve
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
 
     pause 0.75
     stop music fadeout 3

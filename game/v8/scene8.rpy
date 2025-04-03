@@ -14,8 +14,8 @@ label prot_w_au:
 
     pause 0.5
 
-    play music "music/mindie5.mp3" fadein 2
-    queue music "music/mfunk.mp3"
+    play music music.ck1.mindie5 fadein 2
+    queue music music.ck1.mfunk
 
     scene v8sprot3 # FPP. Close up of Autumn, Autumn smile, mouth open.
     with dissolve
@@ -72,12 +72,12 @@ label prot_w_au:
     with dissolve
 
     menu:
-        "Pretend you know what you're doing":
-            $ add_point(KCT.TROUBLEMAKER)
+        "Pretend you know what you're doing" (troublemaker=1.0):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
             jump prot_w_au_wing
 
-        "Ask what you need to do":
-            $ add_point(KCT.BOYFRIEND)
+        "Ask what you need to do" (boyfriend=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             jump prot_w_au_no_wing
 
 label prot_w_au_wing:
@@ -189,8 +189,8 @@ label prot_w_au_1:
     with dissolve
 
     menu:
-        "Pretend you know about it":
-            $ add_point(KCT.TROUBLEMAKER)
+        "Pretend you know about it" (troublemaker=1.0):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
             jump prot_w_au_leg
         "Admit you don't know":
             jump prot_w_au_no_leg
@@ -334,7 +334,7 @@ label prot_w_au_2:
 
     u "Yeah, anytime."
 
-    if evelyn.relationship >= Relationship.LIKES:
+    if v6_evelyn_successful_date:
         scene v8sprot13 # TPP. Show Evelyn walking past MC, MC turns to look at Evenlyn walking past.
         with dissolve
 
@@ -547,7 +547,7 @@ label prot_w_au_end:
     with Dissolve(1)
     pause 0.5
 
-    if joinwolves:
+    if mc.frat == Frat.WOLVES:
         jump after_prot_wolves
 
     else:

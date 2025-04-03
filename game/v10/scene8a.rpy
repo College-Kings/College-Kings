@@ -9,14 +9,14 @@ label v10_avoid_fight:
         scene v10frr1 # TPP. Show MC leaving the warehouse.(camera from inside wearhouse positioned behind mc)
         with dissolve
 
-        play music "music/v10/Track Scene 8a.mp3" fadein 2
+        play music music.ck1.v10.Track_Scene_8a fadein 2
 
         pause 0.75
 
         scene v10frr2 # TPP. Show MC having just left the warehouse (camera from outside, mc facing camera)        
         with dissolve
 
-        if joinwolves:
+        if mc.frat == Frat.WOLVES:
             scene v10frr2a # TPP. same camera as v10frr2, Show MC having just left the warehouse (camera from outside, mc facing camera), Show chris just exiting the warehouse. MC mouth closed, Chris mouth open
             with dissolve
 
@@ -56,8 +56,8 @@ label v10_avoid_fight:
             ch "If this is how you're going to act when push comes to shove then think real hard about if this is even for you."
 
             menu:
-                "Apologize":
-                    $ add_point(KCT.BRO)
+                "Apologize" (bro=1.0):
+                    $ reputation.add_point(RepComponent.BRO)
                     scene v10frr3b # FPP. same camera as v10frr3, Show Chris, mouth closed, serious look.
                     with dissolve
                     u "*Sighs* What was I thinking? I shouldn't have let you guys down just because-"

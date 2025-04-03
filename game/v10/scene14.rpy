@@ -7,7 +7,7 @@ label v10_apes_samantha:
     scene v10ssap1 # TPP. Show MC in the Ape's living room. He's sitting on the couch, appearing exhausted, mouth closed.
     with fade
 
-    play music "music/v10/Track Scene 14.mp3" fadein 2
+    play music music.ck1.v10.Track_Scene_14 fadein 2
 
     u "(Shit I'm tired.)"
 
@@ -80,8 +80,8 @@ label v10_apes_samantha:
     with dissolve
 
     menu:
-        "I can be a hothead":
-            $ add_point(KCT.TROUBLEMAKER)
+        "I can be a hothead" (troublemaker=1.0):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             scene v10ssap2c
             with dissolve
@@ -150,8 +150,8 @@ label v10_apes_samantha:
 
             u "Haha, I'll remember that."
        
-        "What's that supposed to mean?":
-            $ add_point(KCT.BRO)
+        "What's that supposed to mean?" (bro=1.0):
+            $ reputation.add_point(RepComponent.BRO)
             
             scene v10ssap2c
             with dissolve
@@ -212,8 +212,8 @@ label v10_apes_samantha:
     with dissolve
 
     menu:
-        "Maybe":
-            $ add_point(KCT.TROUBLEMAKER)
+        "Maybe" (troublemaker=1.0):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
             
             scene v10ssap3a
             with dissolve

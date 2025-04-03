@@ -6,10 +6,10 @@
 label v11_Amber_Penelope:
     scene v11amp1 # FPP In airport boarding area, show Amber, neutral expression, mouth closed
     with dissolve
-    play music "music/v11/Track Scene 11.mp3" fadein 2
+    play music music.ck1.v11.Track_Scene_11 fadein 2
     menu:
-        "Tease her":
-            $ add_point(KCT.TROUBLEMAKER)
+        "Tease her" (troublemaker=1.0):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
             $ v11_tease_amber += 1
             scene v11amp1
             with dissolve
@@ -230,7 +230,7 @@ label v11_Amber_Penelope:
         scene v11amp9 # TPP Show Penelope kissing MC on the cheek
         with dissolve
 
-        play sound "sounds/kiss.mp3"
+        play sound sound.kiss
 
         pause 0.75
 
@@ -238,16 +238,16 @@ label v11_Amber_Penelope:
         with dissolve
 
         menu:
-            "Kiss her":
-                $ penelope.relationship = Relationship.LIKES
-                $ add_point(KCT.BOYFRIEND)
+            "Kiss her" (penelope=1.0):
+                $ CharacterService.set_relationship(penelope, Relationship.DATING)
+                $ reputation.add_point(RepComponent.BOYFRIEND)
 
-                play sound "sounds/kiss.mp3"
+                play sound sound.kiss
 
                 scene v11amp9a # TPP Same angle as v11amp9, MC with his hand on Penelope's cheek, kissing her on the lips
                 with dissolve
                 
-                $ grant_achievement("cross_your_heart")
+                grant Achievement("cross_your_heart", "Kiss Penelope at the airport")
 
                 pause 1.75
                 

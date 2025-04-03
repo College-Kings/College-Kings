@@ -9,7 +9,7 @@ label v13s35_buy_item_dialog(item):
     if (cuffs not in mc.inventory) and (mc.money - item.cost < cuffs.cost):
         u "Only have a bit of money left, better get the cuffs."
     else:
-        $ mc.inventory.add_item(item)
+        $ mc.inventory.append(item)
         $ mc.money -= item.cost
 
     call screen v13s35_adult_shop
@@ -20,7 +20,7 @@ label v13s35:
 
     u "Aubrey wanting to go to a sex shop? Not surprised. *Chuckles*"
 
-    play music "music/v13/Track Scene 35_1.mp3" fadein 2
+    play music music.ck1.v13.Track_Scene_35_1 fadein 2
 
     scene v13s35_2 # FPP. MC looking at Aubrey, Aubrey looking at MC, Aubrey slight smile, mouth open.
     with dissolve
@@ -83,12 +83,12 @@ label v13s35:
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v13/Track Scene 35_2.mp3" fadein 2
+    play music music.v13_Track_Scene_35_2 fadein 2
 
     scene v13s35_4a # TPP. Same as v13s35_4, Show Aubrey walking away from mc.
     with dissolve
 
-    if chloe.relationship >= Relationship.FWB:
+    if CharacterService.is_fwb(chloe) or CharacterService.is_girlfriend(chloe):
         u "(Guess I could look around a bit...)"
         
         menu:
@@ -120,7 +120,7 @@ label v13s35:
         
         u "(She'll be happy with these, I think. We're gonna have some fun... *Chuckles*)"
 
-        $ mc.inventory.add_item(cuffs)
+        $ mc.inventory.append(cuffs)
         $ mc.money -= 10
 
     else:
@@ -178,7 +178,7 @@ label v13s35:
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v13/Track Scene 35_3.mp3" fadein 2
+    play music music.ck1.v13.Track_Scene_35_3 fadein 2
 
     scene v13s35_11 # FPP. Show Lindsey walking towards MC and Aubrey on the side walk, all slight smile, mouths closed
     with dissolve

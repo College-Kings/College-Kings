@@ -10,7 +10,7 @@ label v12_aubrey_wake_up:
 
     au "Hey, wake up!"
 
-    play music "music/v12/Track Scene 31.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_31 fadein 2
 
     scene v12auw1 # FPP. MC lying in his bed, Aubrey standing next to him, MC and Aubrey looking at each other, Aubrey slight smile, mouth closed
     with dissolve
@@ -60,7 +60,7 @@ label v12_aubrey_wake_up:
     scene v12auw4b # FPP. Same as v12auw4a, Chloe slight smile, mouth open
     with dissolve
 
-    if chloe.relationship >= Relationship.GIRLFRIEND:
+    if CharacterService.is_girlfriend(chloe):
         cl "You know I'm just messing around, I wouldn't make fun of my boyfriend. Even if he is slow... *Chuckles*"
 
         scene v12auw4a

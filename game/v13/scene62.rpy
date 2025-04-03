@@ -9,7 +9,7 @@ label v13s62:
 
     pause 1.5
 
-    play music "music/v13/Track Scene 62.mp3" fadein 2
+    play music music.ck1.v13.Track_Scene_62 fadein 2
 
     scene v13s62_2 # FPP. Show Aubrey and Rilet sitting on the bed next to MC, both slightly worried, looking at MC, Aubrey mouth open, RIley mouth closed
     with dissolve
@@ -87,10 +87,5 @@ label v13s62:
     u "(Is this happening?!)"
 
     stop music fadeout 3
-
-label end13:
-    if not renpy.loadable("v14/scene1.rpy"):
-        call screen save_now(14)
-        with Fade(1, 0, 1)
 
     jump v14_start

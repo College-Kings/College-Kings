@@ -6,7 +6,7 @@ label v11_nora_airport_convo:
 
     scene v11nca1 # FPP. Show Charli approaching nora
     with dissolve
-    play music "music/v11/Track Scene 15.mp3" fadein 2
+    play music music.ck1.v11.Track_Scene_15 fadein 2
     u "(Oh...)"
 
     scene v11nca2 # FPP. Show charli and nora from a distance talking to each other, charlie mouth open, nora mouth closed
@@ -153,7 +153,9 @@ label v11_nora_airport_convo:
     scene v11nca5a
     with dissolve
 
-    charli "Pfft. I was just trying to be friendly. But if you wanna make this some pity, jealousy feud, sure. Go ahead. Just know that we could've been good friends and your life would be a whole lot easier."
+    charli "Pfft. I was just trying to be friendly. But if you wanna make this some petty, jealousy feud, sure. Go ahead."
+    
+    charli "Just know that we could've been good friends and your life would be a whole lot easier."
 
     scene v11nca9 # FPP. Show Charli walking off
     with dissolve

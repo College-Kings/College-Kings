@@ -9,7 +9,7 @@ label v13s53:
 
     u "(I wonder if Riley is up.)"
 
-    play music "music/v13/Track Scene 52.mp3" fadein 2
+    play music music.v13_Track_Scene_52 fadein 2
 
     scene v13s53_2 # TPP. Show MC walking into the room, neutral expression, mouth closed
     with dissolve

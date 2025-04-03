@@ -1,14 +1,12 @@
 ### v8 beginning. Variable definitions here
 label v8start:
-
-    if lauren.relationship < Relationship.FRIEND: #reset lauren mad to friend
-        $ lauren.relationship = Relationship.FRIEND
+    $ CharacterService.remove_mood(lauren, Moods.MAD)
     
     if ending == "lauren":
         jump v8_la_start
     elif ending == "chloe":
         jump v8_cl_start
-    elif ending == "riley" and riley.relationship >= Relationship.LIKES:
+    elif ending == "riley" and (Moods.TEASED in riley.mood or CharacterService.is_fwb(riley)):
         jump v8_ri_start
     elif ending == "riley":
         jump v8_ri_start_fr
@@ -25,7 +23,7 @@ label v8_la_start:
     with dissolve
     u "I like the sound of that."
 
-    play sound "sounds/switch.mp3"
+    play sound sound.switch
 
     scene v8s1 # TPP. MC turning the light switch off in Lauren's room (lights are off in this render)
     with dissolve
@@ -43,7 +41,7 @@ label v8_la_start:
     with dissolve
     u "God, you're beautiful."
 
-    play sound "sounds/kiss.mp3"
+    play sound sound.kiss
 
     scene v8s4 # TPP (same angle as v8s3 but zoomed in to focus on faces and upper torsos). MC and Lauren making out passionately
     with dissolve
@@ -146,7 +144,7 @@ label v8_la_start:
     with Dissolve(1)
     pause 0.5
 
-    play sound "sounds/kiss.mp3"
+    play sound sound.kiss
 
     scene v8s6b # MC kissing on Lauren's cheek (to wake her up)
     with dissolve
@@ -190,7 +188,7 @@ label v8_la_start:
 
     scene v8s8 # TPP (from top). Lauren and MC quick peck on the lips
     with dissolve
-    play sound "sounds/kiss.mp3"
+    play sound sound.kiss
     pause 0.5
 
     scene v8s7a
@@ -215,7 +213,7 @@ label v8_la_start:
 
     scene v8s8
     with dissolve
-    play sound "sounds/kiss.mp3"
+    play sound sound.kiss
     pause 0.5
 
     scene v8s7
@@ -236,7 +234,7 @@ label v8_la_start:
 
     scene v8s8
     with dissolve
-    play sound "sounds/kiss.mp3"
+    play sound sound.kiss
     pause 0.5
 
     scene v8s7a

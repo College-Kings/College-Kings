@@ -4,8 +4,8 @@
 # Time: night/day
 
 label v11_hotel_room:
-    play music "music/mhorror.mp3"
-    play sound "sounds/swoosh.mp3"
+    play music music.ck1.mhorror
+    play sound sound.swoosh
     scene s587
     with flash
     ri "He's coming!"
@@ -38,20 +38,20 @@ label v11_hotel_room:
     u "2..."
 
     menu (fail_label="v11timera"):
-        "Save Lauren":
-            $ add_point(KCT.BOYFRIEND)
+        "Save Lauren" (boyfriend=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             $ v11save = 1
 
             scene v11bane5 # Mc tackles Lauren out of the guns aim (replace bane like character for MC )
             with dissolve
 
             u "1..."
-            play sound "sounds/fall.mp3"
+            play sound sound.fall
 
             scene s593 # Mc and Lauren on the ground terrified
             with vpunch
 
-            play sound "sounds/gun.mp3"
+            play sound sound.gun
             pause 0.5
 
             scene s593a # mc looks back and screams
@@ -66,20 +66,20 @@ label v11_hotel_room:
 
             jump v11wakeupa
 
-        "Save Riley":
-            $ add_point(KCT.BRO)
+        "Save Riley" (bro=1.0):
+            $ reputation.add_point(RepComponent.BRO)
             $ v11save = 2
 
             scene v11bane6 # Mc tackles Riley out of the guns aim (replace bane character with MC, Mc should still be tackling Riley out the way)
             with dissolve
 
             u "1..."
-            play sound "sounds/fall.mp3"
+            play sound sound.fall
 
             scene s595 # Mc and Riley on the ground terrified
             with vpunch
 
-            play sound "sounds/gun.mp3"
+            play sound sound.gun
             pause 0.5
 
             scene s595a # mc looks back and screams
@@ -101,7 +101,7 @@ label v11timera:
     with dissolve
 
     u "1..."
-    play sound "sounds/gun.mp3"
+    play sound sound.gun
 
     scene s596a # Mc screaming terrified
     with vpunch
@@ -110,8 +110,8 @@ label v11timera:
 
 label v11wakeupa:
     stop sound
-    hide screen fantasyOverlay
-    play sound "sounds/swoosh.mp3"
+    hide fantasyoverlay onlayer foreground
+    play sound sound.swoosh
 
     if not v11_riley_roomate:
         scene v11bane2 # TPP. Close up of mc, MC jumps awake from the dream. Sitting up in bed, scared face
@@ -129,7 +129,7 @@ label v11wakeupa:
 
         u "Oh, uh... yeah. Just a bad dream I guess... You're up early."
 
-        play music "music/v11/Track Scene 19_1.mp3" fadein 2
+        play music music.ck1.v11.Track_Scene_19_1 fadein 2
         scene v11bane3b # FPP. Same 3, chloe now looking at her suitcase accross the room, mouth open.
         with dissolve
 
@@ -140,7 +140,7 @@ label v11wakeupa:
 
         u "Probably because you brought a house's worth of stuff. Here, let me help you."
 
-        if chloe.relationship <= Relationship.MAD:
+        if CharacterService.is_mad(chloe):
             scene v11hr3a # FPP. Same as v11hr3, Chloe slight smile, mouth open
             with dissolve
 
@@ -222,7 +222,7 @@ label v11wakeupa:
 
             cl "Stop, you're embarrassing me."
 
-            if chloe.relationship >= Relationship.FWB:
+            if CharacterService.is_fwb(chloe) or CharacterService.is_girlfriend(chloe):
                 scene v11hr3h # FPP. Same cam as v11hr3, Show MC grabbing Chloe's chin, she's slightly embarrassed, mouth closed, looking at MC
                 with dissolve
 
@@ -231,7 +231,7 @@ label v11wakeupa:
                 scene v11hr6 # TPP. Show MC kissing Chloe while holding her chin, same position as v11hr3
                 with dissolve
 
-                play sound "sounds/kiss.mp3"
+                play sound sound.kiss
 
                 pause 1
 
@@ -307,7 +307,7 @@ label v11wakeupa:
 
         ri "[name]! Get up! You can't just sleep all day."
 
-        play music "music/v11/Track Scene 19_1.mp3" fadein 2
+        play music music.ck1.v11.Track_Scene_19_1 fadein 2
 
         scene v11hr9 # FPP. MC is lying in his bed, he is looking at Riley, who is standing next to him, she is slightly angry, mouth closed
         with fade
@@ -344,7 +344,7 @@ label v11wakeupa:
 
         menu:
             "Tease":
-                $ add_point(KCT.TROUBLEMAKER)
+                $ reputation.add_point(RepComponent.TROUBLEMAKER)
                 $ riley.points -= 1
 
                 scene v11hr11
@@ -358,7 +358,7 @@ label v11wakeupa:
                 ri "You wish."
 
             "Flirt":
-                $ add_point(KCT.BOYFRIEND)
+                $ reputation.add_point(RepComponent.BOYFRIEND)
                 $ riley.points += 1
 
                 scene v11hr11b # FPP. Same as v11hr11, Riley slightly smiling, mouth closed
@@ -391,7 +391,7 @@ label v11wakeupa:
 
         u "And I didn't get an invite? Wow..."
 
-        if riley.relationship >= Relationship.FWB:
+        if CharacterService.is_fwb(riley):
             scene v11hr11d # FPP. Same as v11hr11, Riley seductive look, mouth open
             with dissolve
 

@@ -6,7 +6,7 @@
 label v11_sit_ryan_convo:
     scene v11src1 # FPP View down the aisle from front of the plane, some people sitting, some standing, Ms. Rose standing with mouth open
     with dissolve
-    play music "music/v11/Track Scene 12.mp3" fadein 2
+    play music music.ck1.v11.Track_Scene_12 fadein 2
     ro "Alright, you know your seats. [name], you're sitting next to Ryan."
 
     scene v11src1a # FPP Same angle and characters as v11src1, Ms. Rose mouth closed
@@ -87,8 +87,8 @@ label v11_sit_ryan_convo:
 
                 u "Uhm, I'm pretty tired, so I think I'm going to sleep."
             
-            "Like what?":
-                $ add_point(KCT.BRO)
+            "Like what?" (bro=1.0):
+                $ reputation.add_point(RepComponent.BRO)
 
                 scene v11src4j # FPP Same angle as v11src4, Ryan smiling slightly, mouth closed
                 with dissolve
@@ -222,8 +222,8 @@ label v11_sit_ryan_convo:
         ry "Since you know her so well... Do you think you could tell me some things about her?"
 
         menu:
-            "Give blessing":
-                $ add_point(KCT.BRO)
+            "Give blessing" (bro=1.0):
+                $ reputation.add_point(RepComponent.BRO)
                 scene v11src4d
                 with dissolve
 
@@ -367,8 +367,8 @@ label v11_sit_ryan_convo:
         ry "Aye man, do you mind if I use the armrest?"
 
         menu:
-            "Be a dick":
-                $ add_point(KCT.TROUBLEMAKER)
+            "Be a dick" (troublemaker=1.0):
+                $ reputation.add_point(RepComponent.TROUBLEMAKER)
                 scene v11src4a
                 with dissolve
 
@@ -404,8 +404,8 @@ label v11_sit_ryan_convo:
 
                 u "Keep telling yourself that man, I'm going to sleep."
 
-            "Let him":
-                $ add_point(KCT.BRO)
+            "Let him" (bro=1.0):
+                $ reputation.add_point(RepComponent.BRO)
                 scene v11src4a
                 with dissolve
 

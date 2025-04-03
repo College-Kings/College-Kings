@@ -5,49 +5,42 @@
 
 label v14_start:
     if path_builder and not pb_name_set:
-        $ name = renpy.input(_("What's your name?"), default=_("Alex")).strip() or _("Alex")
+        $ name = renpy.input(_("What's your name?"), default=name).strip() or _("Alex")
         $ pb_name_set = True
     
         $ v11_lindsey_slogan = 1
     
-        if emily.relationship == Relationship.FWB:
+        if CharacterService.is_fwb(emily):
             $ sceneList.add("v13_emily")
 
-        if ms_rose.relationship == Relationship.FWB:
+        if CharacterService.is_fwb(ms_rose):
             $ sceneList.add("v12_rose")
             $ v13_perfume = True
 
-        if lauren.relationship == Relationship.GIRLFRIEND:
+        if CharacterService.is_girlfriend(lauren):
             $ sceneList.add("v12_lauren")
             
-        if nora.relationship >= Relationship.FWB:
+        if CharacterService.is_fwb(nora):
             $ sceneList.add("v12_nora")
             
-        if chloe.relationship == Relationship.GIRLFRIEND:
+        if CharacterService.is_girlfriend(chloe):
             $ sceneList.add("v13_chloe")
             
-        if lindsey.relationship == Relationship.FWB:
+        if CharacterService.is_fwb(lindsey):
             $ sceneList.add("v12_lindsey")
 
-        if lauren.relationship == Relationship.FRIEND:
-            $ lauren.relationship = Relationship.KISS
-
-        if aubrey.relationship >= Relationship.FWB:
+        if CharacterService.is_fwb(aubrey):
             $ s12v32_get_aubrey_flowers = True
             $ v13s48_canoeing_as_date = True
             $ v13s48_get_aubrey_chocolate = True
 
-        if penelope.relationship >= Relationship.LOYAL:
+        if CharacterService.is_girlfriend(penelope): # TODO: Check if GF is obtainable
             $ v11_pen_goes_europe = True
 
-        if samantha.relationship == Relationship.FWB:
-            $ cameron.relationship = Relationship.BRO
-    
-    if emmy.simplr.pending_messages: #for compatibility with v12 players where emmy replies were not forced to be seen
-        $ emmy.simplr.pending_messages = []
-        $ emmy.simplr.sent_messages[-1].replies = []
+        if CharacterService.is_fwb(samantha):
+            $ v13_cameron_and_mc_friends = True
 
-    if aubrey.relationship >= Relationship.FWB and riley.relationship >= Relationship.FWB:
+    if CharacterService.is_fwb(aubrey) and CharacterService.is_fwb(riley):
         $ v13_threesomeending = True
         jump v14s01
 
@@ -55,7 +48,7 @@ label v14_start:
         jump v14s01a
     
 label v14s01:
-    play music "music/v12/Track Scene 23_2.mp3" fadein 2
+    play music music.v12_Track_Scene_23_2 fadein 2
 
     scene v14s01_1 # FPP. MC sitting on bed, looking at Riley and Aubrey making out, show some caressing between them
     with dissolve
@@ -71,15 +64,20 @@ label v14s01:
 
     u "(Oh, shit. This is happening.)"
 
-    if config_censored:
+    if is_censored:
         call screen censored_popup("v14s01_nsfwSkipLabel1")
+
+    lovense vibrate 2
+    lovense rotate 1
+    lovense suction 1
+    lovense thrust 1
 
     scene v14s01_1b # FPP. Same as v14s01_1a, Riley and Aubrey topless, looking at MC seductively, both mouths closed
     with dissolve
 
     menu:
-        "We're doing this":
-            $ add_point(KCT.TROUBLEMAKER)
+        "We're doing this" (troublemaker=1.0):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
             
             $ sceneList.add("v14_threesome")
             u "I'm gonna feel much better after this."
@@ -98,6 +96,11 @@ label v14s01:
             with dissolve
 
             u "Yes, ma'am... That I can do."
+
+            lovense vibrate 3
+            lovense rotate 2
+            lovense suction 2
+            lovense thrust 2
 
             scene v14s01_2 # TPP. Show Riley helping MC remove his shirt while Aubrey is removing her panties
             with dissolve
@@ -119,10 +122,15 @@ label v14s01:
             image v14auridbj2 = Movie(play="images/v14/Scene 1/v14auridbj2.webm", loop=True, image="images/v14/Scene 1/v14auridbj2Start.webp", start_image="images/v14/Scene 1/v14auridbj2Start.webp") # double blowjob FPP
             image v14auridbj2f = Movie(play="images/v14/Scene 1/v14auridbj2f.webm", loop=True, image="images/v14/Scene 1/v14auridbj2Start.webp", start_image="images/v14/Scene 1/v14auridbj2Start.webp") # double blowjob FPP spedup
 
+            lovense vibrate 4
+            lovense rotate 3
+            lovense suction 3
+            lovense thrust 3
+
             scene v14auridbj # Ignore as animation
             with dissolve
             if voice_acted:
-                $ renpy.sound.play("music/v14/va/Scene 1 - dbj_slow_2loops.mp3", loop=True)
+                play voice music.ck1.v14.Scene_1_dbj_slow_2loops loop
             pause
 
             u "*Moans* Damn, ladies... That feels unbelievable."
@@ -131,7 +139,7 @@ label v14s01:
             scene v14auridbjf # Ignore as animation
             with dissolve
             if voice_acted:
-                $ renpy.sound.play("music/v14/va/Scene 1 - dbj_fast_2loops.mp3", loop=True)
+                play voice music.ck1.v14.Scene_1_dbj_fast_2loops loop
             pause
 
             u "You two are so fucking beautiful."
@@ -140,7 +148,7 @@ label v14s01:
             scene v14auridbj2 # Ignore as animation
             with dissolve
             if voice_acted:
-                $ renpy.sound.play("music/v14/va/Scene 1 - dbj_slow_2loops.mp3", loop=True)
+                play voice music.ck1.v14.Scene_1_dbj_slow_2loops loop
             pause
 
             u "Mmm, fuck! O-okay... Come here, now."
@@ -149,7 +157,7 @@ label v14s01:
             scene v14auridbj2f # Ignore as animation
             with dissolve
             if voice_acted:
-                $ renpy.sound.play("music/v14/va/Scene 1 - dbj_fast_2loops.mp3", loop=True)
+                play voice music.ck1.v14.Scene_1_dbj_fast_2loops loop
             pause
 
             ri "Hehe... Yes, sir."
@@ -160,6 +168,11 @@ label v14s01:
 
             pause
 
+            lovense vibrate 5
+            lovense rotate 4 
+            lovense suction 4
+            lovense thrust 4
+
             image v14aurircg = Movie(play="images/v14/Scene 1/v14aurircg.webm", loop=True, image="images/v14/Scene 1/v14aurircgStart.webp", start_image="images/v14/Scene 1/v14aurircgStart.webp") # Chloe Table top
             image v14aurircgf = Movie(play="images/v14/Scene 1/v14aurircgf.webm", loop=True, image="images/v14/Scene 1/v14aurircgStart.webp", start_image="images/v14/Scene 1/v14aurircgStart.webp") # Chloe Table top spedup
             image v14aurircg2 = Movie(play="images/v14/Scene 1/v14aurircg2.webm", loop=True, image="images/v14/Scene 1/v14aurircg2Start.webp", start_image="images/v14/Scene 1/v14aurircg2Start.webp") # Chloe Table top FPP
@@ -168,7 +181,7 @@ label v14s01:
             scene v14aurircg # Ignore as animation
             with dissolve
             if voice_acted:
-                $ renpy.sound.play("music/v14/va/Scene 1 - rcg_slow_4loops.mp3", loop=True)
+                play voice music.ck1.v14.Scene_1_rcg_slow_4loops loop
             pause
 
             ri "*Moans* Oh yes! It gets better... every... time!"
@@ -179,8 +192,13 @@ label v14s01:
             scene v14aurircgf # Ignore as animation
             with dissolve
             if voice_acted:
-                $ renpy.sound.play("music/v14/va/Scene 1 - rcg_fast_4loops.mp3", loop=True)
+                play voice music.ck1.v14.Scene_1_rcg_fast_4loops loop
             pause
+
+            lovense vibrate 6
+            lovense rotate 5
+            lovense suction 5
+            lovense thrust 5
 
             au "Look at you, babe. You've definitely done this before."
 
@@ -190,7 +208,7 @@ label v14s01:
             scene v14aurircg2 # Ignore as animation
             with dissolve
             if voice_acted:
-                $ renpy.sound.play("music/v14/va/Scene 1 - rcg_slow_4loops.mp3", loop=True)
+                play voice music.ck1.v14.Scene_1_rcg_slow_4loops loop
             pause
 
             u "*Moans* She does a... damn good job, too."
@@ -201,7 +219,7 @@ label v14s01:
             scene v14aurircg2f # Ignore as animation
             with dissolve
             if voice_acted:
-                $ renpy.sound.play("music/v14/va/Scene 1 - rcg_fast_4loops.mp3", loop=True)
+                play voice music.ck1.v14.Scene_1_rcg_fast_4loops loop
             pause
 
             au "You know what? You haven't eaten in a long, long time, [name]."
@@ -224,6 +242,11 @@ label v14s01:
 
             pause
 
+            lovense vibrate 7
+            lovense rotate 6
+            lovense suction 6
+            lovense thrust 6
+
             image v14auridcg = Movie(play="images/v14/Scene 1/v14auridcg.webm", loop=True, image="images/v14/Scene 1/v14auridcgStart.webp", start_image="images/v14/Scene 1/v14auridcgStart.webp") # Chloe Table top
             image v14auridcgf = Movie(play="images/v14/Scene 1/v14auridcgf.webm", loop=True, image="images/v14/Scene 1/v14auridcgStart.webp", start_image="images/v14/Scene 1/v14auridcgStart.webp") # Chloe Table top spedup
             image v14auridcg2 = Movie(play="images/v14/Scene 1/v14auridcg2.webm", loop=True, image="images/v14/Scene 1/v14auridcg2Start.webp", start_image="images/v14/Scene 1/v14auridcg2Start.webp") # Chloe Table top FPP
@@ -232,7 +255,7 @@ label v14s01:
             scene v14auridcg # Ignore as animation
             with dissolve
             if voice_acted:
-                $ renpy.sound.play("music/v14/va/Scene 1 - dcg_slow_4loops.mp3", loop=True)
+                play voice music.ck1.v14.Scene_1_dcg_slow_4loops loop
             pause
 
             ri "Oh... F-f-fuuuuck... [name]!"
@@ -243,7 +266,7 @@ label v14s01:
             scene v14auridcgf # Ignore as animation
             with dissolve
             if voice_acted:
-                $ renpy.sound.play("music/v14/va/Scene 1 - dcg_fast_4loops.mp3", loop=True)
+                play voice music.ck1.v14.Scene_1_dcg_fast_4loops loop
             pause
 
             u "*Moans*"
@@ -254,7 +277,7 @@ label v14s01:
             scene v14auridcg2 # Ignore as animation
             with dissolve
             if voice_acted:
-                $ renpy.sound.play("music/v14/va/Scene 1 - dcg_slow_4loops.mp3", loop=True)
+                play voice music.ck1.v14.Scene_1_dcg_slow_4loops loop
             pause
 
             au "Ha... Mmm... She's right. *Moans*"
@@ -265,7 +288,7 @@ label v14s01:
             scene v14auridcg2f # Ignore as animation
             with dissolve
             if voice_acted:
-                $ renpy.sound.play("music/v14/va/Scene 1 - dcg_fast_4loops.mp3", loop=True)
+                play voice music.ck1.v14.Scene_1_dcg_fast_4loops loop
             pause
 
             u "*Mumbles*"
@@ -283,6 +306,11 @@ label v14s01:
 
             pause
 
+            lovense vibrate 7
+            lovense rotate 6
+            lovense suction 6
+            lovense thrust 6
+
             image v14aurido = Movie(play="images/v14/Scene 1/v14aurido.webm", loop=True, image="images/v14/Scene 1/v14auridoStart.webp", start_image="images/v14/Scene 1/v14auridoStart.webp") # Chloe Table top
             image v14auridof = Movie(play="images/v14/Scene 1/v14auridof.webm", loop=True, image="images/v14/Scene 1/v14auridoStart.webp", start_image="images/v14/Scene 1/v14auridoStart.webp") # Chloe Table top spedup
             image v14aurido2 = Movie(play="images/v14/Scene 1/v14aurido2.webm", loop=True, image="images/v14/Scene 1/v14aurido2Start.webp", start_image="images/v14/Scene 1/v14aurido2Start.webp") # Chloe Table top FPP
@@ -291,7 +319,7 @@ label v14s01:
             scene v14aurido # Ignore as animation
             with dissolve
             if voice_acted:
-                $ renpy.sound.play("music/v14/va/Scene 1 - doral_slow_2loops.mp3", loop=True)
+                play voice music.ck1.v14.Scene_1_doral_slow_2loops loop
             pause
 
             u "Wow, I... I have the best fucking life... *Moans*"
@@ -300,7 +328,7 @@ label v14s01:
             scene v14auridof # Ignore as animation
             with dissolve
             if voice_acted:
-                $ renpy.sound.play("music/v14/va/Scene 1 - doral_fast_4loops.mp3", loop=True)
+                play voice music.ck1.v14.Scene_1_doral_fast_4loops loop
             pause
 
             ri "*Chuckles*"
@@ -309,7 +337,7 @@ label v14s01:
             scene v14aurido2 # Ignore as animation
             with dissolve
             if voice_acted:
-                $ renpy.sound.play("music/v14/va/Scene 1 - doral_slow_2loops.mp3", loop=True)
+                play voice music.ck1.v14.Scene_1_doral_slow_2loops loop
             pause
 
             u "Sh-shit... Mmmm, I'm getting ready to... *Moans*"
@@ -318,11 +346,16 @@ label v14s01:
             scene v14aurido2f # Ignore as animation
             with dissolve
             if voice_acted:
-                $ renpy.sound.play("music/v14/va/Scene 1 - doral_fast_4loops.mp3", loop=True)
+                play voice music.ck1.v14.Scene_1_doral_fast_4loops loop
             pause
             au "Mmm! *Gags*"
 
             u "Fuck..."
+
+            lovense vibrate 8
+            lovense rotate 7
+            lovense suction 7
+            lovense thrust 7
 
             stop sound
             scene v14s01_11 # FPP. MC looking at Aubrey, Aubrey with his dick fully in her mouth, Riley sucking MC's balls
@@ -348,7 +381,7 @@ label v14s01:
             scene v14s01_11d # FPP. Same as v14s01_11c, Aubrey and Riley mouths closed
             with dissolve
 
-            $ grant_achievement("ready_player_three")
+            grant Achievement("ready_player_three", "Three-way with Riley and Aubrey")
 
             u "*Chuckles* I feel absolutely amazing. Thank you ladies."
 
@@ -357,7 +390,7 @@ label v14s01:
 
             ri "*Laughs* I call that a job well done."
 
-            play sound "sounds/kiss.mp3"
+            play sound sound.kiss
 
             scene v14s01_11f # FPP. Same as v14s01_11d, Aubrey and Riley kissing
             with dissolve
@@ -370,7 +403,7 @@ label v14s01:
             au "We may have to do this again, Riley."
 
             stop music fadeout 3
-            play music "music/v12/Track Scene 35.mp3" fadein 2
+            play music music.ck1.v12.Track_Scene_35 fadein 2
 
             scene v14s01_11g # FPP. Same as v14s01_11b, Riley mouth open, Aubrey mouth closed
             with dissolve
@@ -392,6 +425,8 @@ label v14s01:
 
             au "*Laughs* Good."
 
+            lovense stop
+            
             scene v14s01_11b
             with dissolve
 
@@ -435,8 +470,8 @@ label v14s01:
             u "(Now that I'm awake I might as well go see what's going on.)"
             u "(My sleep schedule is gonna be all fucked now, though. Feeling energized at night isn't a good thing...) *Sighs*"
 
-        "Stop them":
-            $ add_point(KCT.BOYFRIEND)
+        "Stop them" (boyfriend=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             scene v14s01_1e # FPP. Same as v14s01_1b, Aubrey and Riley shocked, mouths closed
             with dissolve
 

@@ -4,21 +4,21 @@
 # Time: Sunday evening
 
 label v10_aubrey_house:
-    play music "music/v10/Track Scene 17_1.mp3" fadein 2
+    play music music.ck1.v10.Track_Scene_17_1 fadein 2
     scene v10auh1 # FPP Show Aubrey, walking on sidewalk in the evening, slight smile, mouth closed
     with dissolve
 
     u "Look at me, walking you home, out of the kindness of my heart."
 
-    if aubrey.relationship >= Relationship.FWB: # If in relationship with Aubrey
+    if CharacterService.is_fwb(aubrey): # If in relationship with Aubrey
         scene v10auh1a # FPP Same angle as v10auh1, Aubrey with slight smile and eyebrow raised, mouth open
         with dissolve
         
         au "Just walking me home, huh? No ulterior motive?"
 
         menu:
-            "Maybe":
-                $ add_point(KCT.TROUBLEMAKER)
+            "Maybe" (troublemaker=1.0):
+                $ reputation.add_point(RepComponent.TROUBLEMAKER)
                 scene v10auh1b # FPP Same angle and expression as v10auh1a,, Aubrey mouth closed
                 with dissolve
 
@@ -122,8 +122,8 @@ label v10_aubrey_house:
     with dissolve
 
     menu:
-        "Compliment her":
-            $ add_point(KCT.BOYFRIEND)
+        "Compliment her" (boyfriend=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
 
             scene v10auh1f # FPP Same angle as v10auh1, Aubrey has a big smile, mouth closed
             with dissolve
@@ -140,8 +140,8 @@ label v10_aubrey_house:
 
             u "*Laughs*"
 
-        "Make a joke":
-            $ add_point(KCT.TROUBLEMAKER)
+        "Make a joke" (troublemaker=1.0):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             scene v10auh1b
             with dissolve
@@ -209,15 +209,15 @@ label v10_aubrey_house:
     with dissolve
 
     menu:
-        "Ask about her":
-            $ add_point(KCT.BOYFRIEND)
+        "Ask about her" (boyfriend=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             
             scene v10auh1
             with dissolve
 
             u "How's that going for you?"
 
-            if aubrey.relationship >= Relationship.FWB: # If in a relationship with Aubrey
+            if CharacterService.is_fwb(aubrey): # If in a relationship with Aubrey
                 scene v10auh1a
                 with dissolve
 
@@ -234,8 +234,8 @@ label v10_aubrey_house:
 
                 au "Not too bad. *Chuckles*"
 
-        "Ask about her sister":
-            $ add_point(KCT.TROUBLEMAKER)
+        "Ask about her sister" (troublemaker=1.0):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             scene v10auh1h
             with dissolve
@@ -256,9 +256,9 @@ label v10_aubrey_house:
     with dissolve
 
     menu:
-        "Ask to watch":
-            $ add_point(KCT.TROUBLEMAKER)
-            if aubrey.relationship >= Relationship.FWB: # Aubrey relationship check
+        "Ask to watch" (troublemaker=1.0):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
+            if CharacterService.is_fwb(aubrey): # Aubrey relationship check
                 label v10s17_galleryScene:
                 $ sceneList.add("v10_aubrey")
                 
@@ -270,7 +270,7 @@ label v10_aubrey_house:
                 scene v10auh2c # FPP Same angle and position as v10auh2b, Aubrey smiling with eyebrow raised, mouth open
                 with dissolve
                 stop music fadeout 3
-                play music "music/v10/Track Scene 17_2.mp3" fadein 2
+                play music music.ck1.v10.Track_Scene_17_2 fadein 2
                 au "*Chuckles* Of course."
 
                 scene v10auh3 # TPP Outside bathroom at Chicks house, show Aubrey grabbing MC to pull him toward the bathroom, both smiling
@@ -300,8 +300,13 @@ label v10_aubrey_house:
 
                         u "How about we start with your top?"
 
-                        if config_censored:
+                        if is_censored:
                             call screen censored_popup("v10s17_nsfwSkipLabel1")
+
+                        lovense vibrate 2
+                        lovense rotate 1
+                        lovense suction 1
+                        lovense thrust 1
 
                         scene v10auh5b # FPP Same angle as v10auh5, Aubrey removing top with bottoms still on while smiling, mouth open
                         with dissolve
@@ -334,8 +339,13 @@ label v10_aubrey_house:
                         
                         u "Let's start with the bottoms."
 
-                        if config_censored:
+                        if is_censored:
                             call screen censored_popup("v10s17_nsfwSkipLabel1")
+
+                        lovense vibrate 2
+                        lovense rotate 1
+                        lovense suction 1
+                        lovense thrust 1
 
                         scene v10auh5f # FPP Same angle as v10auh5, Aubrey removing bottoms while top still on, smiling, mouth open
                         with dissolve
@@ -361,6 +371,11 @@ label v10_aubrey_house:
                         with dissolve
 
                         au "I'm enjoying the audience."
+                
+                lovense vibrate 3
+                lovense rotate 2
+                lovense suction 2 
+                lovense thrust 2
 
                 scene v10auh5i # FPP Same angle and expression as v10auh5e, Aubrey mouth closed
                 with dissolve
@@ -370,7 +385,7 @@ label v10_aubrey_house:
                 scene v10auh5e
                 with dissolve
 
-                $ grant_achievement("getting_clean")
+                grant Achievement("getting_clean", "Have fun in the bathroom")
                 au "Your turn."
 
                 scene v10auh5i
@@ -399,6 +414,11 @@ label v10_aubrey_house:
                 image v10aubfaf = Movie(play="images/v10/Scene 17/v10aubfaf.webm", loop=True, image= "images/v10/Scene 17/v10aubfaStart.webp", start_image="images/v10/Scene 17/v10aubfaStart.webp")
                 
                 label v10s17_aubreyBlowjob:
+                    lovense vibrate 3
+                    lovense rotate 2
+                    lovense suction 2
+                    lovense thrust 2
+
                     scene v10aubbj # Aubrey starts giving MC a blowjob while he's sitting on the toilet.
                     with dissolve
                     pause
@@ -415,6 +435,11 @@ label v10_aubrey_house:
 
                     u "Fuck, Aubrey!"
 
+                    lovense vibrate 4
+                    lovense rotate 3
+                    lovense suction 3
+                    lovense thrust 2
+
                     scene v10aubbjtpp
                     with dissolve
                     pause
@@ -428,6 +453,11 @@ label v10_aubrey_house:
                     u "That's fucking amazing."
 
                 label v10s17_aubreyCowgirl:
+                    lovense vibrate 5
+                    lovense rotate 4
+                    lovense suction 4
+                    lovense thrust 4
+
                     scene v10aubcg # Aubrey then gets up and rides MC
                     with dissolve
                     pause
@@ -453,6 +483,11 @@ label v10_aubrey_house:
 
                     au "OH MY GOD!"
 
+                    lovense vibrate 7
+                    lovense rotate 5
+                    lovense suction 5
+                    lovense thrust 5
+
                     scene v10aubllf
                     with dissolve
                     pause
@@ -475,6 +510,11 @@ label v10_aubrey_house:
 
                     au "This feels so good!"
 
+                lovense vibrate 9
+                lovense rotate 6
+                lovense suction 6
+                lovense thrust 6
+
                 scene v10aubfa # Aubrey gets on her knees in front MC while he's standing to finish him off
                 with dissolve
                 pause
@@ -495,7 +535,9 @@ label v10_aubrey_house:
                 with flash
 
                 pause 
-
+                
+                lovense stop
+                
                 scene v10auh9 # FPP. Show Aubrey, inside bathroom, facing the door/camera, arms out towards camera as if pushing. Mouth open
                 with dissolve
 
@@ -539,8 +581,8 @@ label v10_aubrey_house:
 
                         u "(Yup. Classic day in my life.) *Chuckles*"
 
-                    "Make a joke":
-                        $ add_point(KCT.TROUBLEMAKER)
+                    "Make a joke" (troublemaker=1.0):
+                        $ reputation.add_point(RepComponent.TROUBLEMAKER)
                         scene v10auh6a
                         with dissolve
 
@@ -623,7 +665,7 @@ label v10_aubrey_house:
 
             u "Alright, I'll wait out here."
 
-            if aubrey.relationship >= Relationship.FWB: # Aubrey relationship check
+            if CharacterService.is_fwb(aubrey): # Aubrey relationship check
                 scene v10auh2f
                 with dissolve
 
@@ -699,8 +741,8 @@ label v10_aubrey_house:
     with dissolve
 
     menu:
-        "Compliment":
-            $ add_point(KCT.BOYFRIEND)
+        "Compliment" (boyfriend=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             scene v10auh2e
             with dissolve
 

@@ -9,7 +9,7 @@ label v13s47:
 
     pause 0.75
 
-    play music "music/v13/Track Scene 47.mp3" fadein 2
+    play music music.ck1.v13.Track_Scene_47 fadein 2
 
     scene v13s47_2 # TPP. show MC and lauren get off their bikes and turn them into the bike clerk
     with dissolve
@@ -41,7 +41,7 @@ label v13s47:
 
     u "Sure, I could use a-"
 
-    play sound "sounds/call.mp3"
+    play sound sound.call
 
     scene v13s47_3
     with dissolve
@@ -145,7 +145,7 @@ label v13s47:
 
     u "Okay."
 
-    if lauren.relationship >= Relationship.GIRLFRIEND:
+    if CharacterService.is_girlfriend(lauren):
         scene v13s47_3
         with dissolve
 
@@ -156,7 +156,7 @@ label v13s47:
 
         pause 0.4
 
-        play sound "sounds/kiss.mp3"
+        play sound sound.kiss
         scene v13s47_6 # TPP. show mc holding lauren behind her head kissing her
         with dissolve
 

@@ -1,7 +1,5 @@
 init python:
-    class FightQuirk:
-        __metaclass__ = ABCMeta
-
+    class FightQuirk(ABC):
         quirks = []
 
         @abstractmethod
@@ -77,9 +75,9 @@ init python:
             pass
 
 
-define seeing_red = SeeingRed("Seeing Red")
-define the_great_equalizer = TheGreatEqualizer("The Great Equalizer")
-define in_the_zone = InTheZone("In The Zone")
-define backlash = Backlash("Backlash")
-define double_time = DoubleTime("Double Time")
-define all_in = AllIn("All In")
+define seeing_red = SeeingRed(_("Seeing Red"))
+define the_great_equalizer = TheGreatEqualizer(_("The Great Equalizer"))
+define in_the_zone = InTheZone(_("In The Zone"))
+define backlash = Backlash(_("Backlash"))
+define double_time = DoubleTime(_("Double Time"))
+define all_in = AllIn(_("All In"))

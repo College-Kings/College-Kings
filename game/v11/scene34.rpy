@@ -8,7 +8,7 @@ label v11_cardealership:
 
     scene v11cd1 # TPP. Shows MC and Chloe getting into the car dealership
     with fade
-    play music "music/v11/Track Scene 3.mp3" fadein 2
+    play music music.ck1.v11.Track_Scene_3 fadein 2
     pause 0.75
 
     scene v11cd2 # TPP. MC is looking for a car salesman, spotting one, him looking back at them
@@ -86,7 +86,7 @@ label v11_cardealership:
 
     cl "What? *Chuckles* I just thought we could have a little fun."
 
-    if chloe.relationship >= Relationship.FWB:
+    if CharacterService.is_fwb(chloe) or CharacterService.is_girlfriend(chloe):
         scene v11cd7 # TPP. chloe whispers in MCs ear, MC looks surprised, MCs mouth closed chloe's mouth opened
         with dissolve
         
@@ -110,7 +110,7 @@ label v11_cardealership:
     scene v11cd8 # TPP. Shows the car arriving at the front door
     with dissolve
 
-    play sound "sounds/carbrake.mp3"
+    play sound sound.car_brake
 
     pause 1.75
 
@@ -179,13 +179,13 @@ label v11_cardealership:
 
     u "Thank you."
     stop music fadeout 3
-    play music "music/v10/Track Scene 13.mp3" fadein 2
+    play music music.ck1.v10.Track_Scene_13 fadein 2
     scene v11cd15 # TPP. MC and chloe getting into the car
     with dissolve
 
     pause 0.75
 
-    if chloe.relationship >= Relationship.FWB:
+    if CharacterService.is_fwb(chloe) or CharacterService.is_girlfriend(chloe):
         scene v11cd16 #FPP. Inside of the car, mc looking at chloe in passenger sit, mouth closed
         with dissolve
         
@@ -233,7 +233,7 @@ label v11_cardealership:
 
     pause 0.75
 
-    play sound "sounds/revving.mp3"
+    play sound sound.revving
 
     scene v11cd52 # TPP. Show's the car pulling away from the front of the store
     with dissolve
@@ -243,7 +243,7 @@ label v11_cardealership:
     scene v11cd20 # TPP. MC and chloe inside the car, smiling, looking forwards in london steets location a (artist decides location)
     with dissolve
 
-    play sound "sounds/driving1.mp3"
+    play ambience ambience.driving
 
     pause 0.75
     
@@ -287,7 +287,7 @@ label v11_cardealership:
 
     cl "Haha, [name], this is amazing."
 
-    if chloe.relationship >= Relationship.FWB:
+    if CharacterService.is_fwb(chloe) or CharacterService.is_girlfriend(chloe):
         menu:
             "Talk about \"us\"": 
                 scene v11cd22a # FPP. looking at chloe, mouth closed
@@ -375,6 +375,7 @@ label v11_cardealership:
     scene v11cd24 # TPP. Show's the car parking in location c (artist chooses location)
     with dissolve
 
+    stop ambience
     stop sound
     pause 0.75
 
@@ -385,7 +386,7 @@ label v11_cardealership:
 
     label v11s34_c1:
 
-    if chloe.relationship >= Relationship.FWB:
+    if CharacterService.is_fwb(chloe) or CharacterService.is_girlfriend(chloe):
         menu:
             "Kiss her":
                 scene v11cd30 # TPP. MC sits on the hood of the car, chloe is nearby
@@ -416,7 +417,7 @@ label v11_cardealership:
                 scene v11cd32 # TPP. Mc kisses chloe romantically on the hood of the car
                 with dissolve
 
-                play sound "sounds/kiss.mp3"
+                play sound sound.kiss
 
                 pause 0.75
 
@@ -438,13 +439,14 @@ label v11_cardealership:
                         scene v11cd33c # FPP. Chloe looks back at mc, mouth closed
                         with dissolve
                         stop music fadeout 3
-                        play music "music/v10/Track Scene 11.mp3" fadein 2
+                        play music music.ck1.v10.Track_Scene_11 fadein 2
                         u "Chloe, I've been captured by you since the moment I first saw you. Every day I think about you and hope that we can be together at all times."
                         u "I don't know what I'd do if one day you were just... gone. The truth is... I love you, Chloe, and I don't want to go another day without you being mine."
                         u "So with all that said, can we make it official? Will you be my girl?"
 
-                        if chloe.relationship >= Relationship.GIRLFRIEND or (meetchloe and hcGirl == "chloe" and ending == "chloe"): #chloe gf in case of seeing this scene via pathbuilder
-                            $ chloe.relationship = Relationship.GIRLFRIEND
+                        if CharacterService.is_girlfriend(chloe) or (meetchloe and hcGirl == "chloe" and ending == "chloe"): #chloe gf in case of seeing this scene via pathbuilder
+                            $ CharacterService.set_relationship(chloe, Relationship.GIRLFRIEND)
+                            
                             scene v11cd33d # FPP, sanme as 33c, chloe looking excited, mouth opened
                             with dissolve
 
@@ -458,27 +460,29 @@ label v11_cardealership:
                             scene v11cd35 # TPP. MC picks up chloe with her legs wrapped arround him and kisses her romantically
                             with dissolve
 
-                            play sound "sounds/kiss.mp3"
+                            play sound sound.kiss
 
-                            if lauren.relationship >= Relationship.GIRLFRIEND and not v11_lauren_caught_aubrey:
-                                $ grant_achievement("two_timer")
+                            if CharacterService.is_girlfriend(lauren) and not v11_lauren_caught_aubrey:
+                                grant Achievement("two_timer", "Date both Lauren and Chloe")
 
                             pause 2.5
 
                             scene v11cd36 # FPP. MC sets chloe down, mouth closed
                             with dissolve
 
-                            if lauren.relationship >= Relationship.GIRLFRIEND and not v11_lauren_caught_aubrey:
+                            if CharacterService.is_girlfriend(lauren) and not v11_lauren_caught_aubrey:
                                 u "(Damn, two girlfriends. This could get complicated fast.)"
 
                             u "Wow... c'mon, let's get this car back."
 
-                            play sound "sounds/driving1.mp3"
+                            play ambience ambience.driving
 
                             scene v11cd28 # TPP. MC and chloe inside the car, smiling, looking forwards in london steets location d
                             with dissolve
 
                             pause 1
+
+                            stop ambience
                                 
                             scene v11cd29 # TPP. MC and chloe getting out of the car infront of the car dealership, mouth closed
                             with dissolve
@@ -508,7 +512,7 @@ label v11_cardealership:
                             scene v11cd38 # FPP. Chloe kisses MC
                             with dissolve
 
-                            play sound "sounds/kiss.mp3"
+                            play sound sound.kiss
 
                             pause 1.25
 
@@ -517,12 +521,14 @@ label v11_cardealership:
 
                             u "C'mon, let's get this car back."
 
-                            play sound "sounds/driving1.mp3"
+                            play ambience ambience.driving
 
                             scene v11cd28 # TPP. MC and chloe inside the car, smiling, looking forwards in london steets location d
                             with dissolve
 
                             pause 1
+
+                            stop ambience
                                 
                             scene v11cd29 # TPP. MC and chloe getting out of the car infront of the car dealership, mouth closed
                             with dissolve
@@ -530,18 +536,22 @@ label v11_cardealership:
                             pause 1
 
                     "Let's get the car back":
+                        $ CharacterService.set_relationship(chloe, Relationship.FRIEND)
+                        
                         scene v11cd39
                         with dissolve
 
                         u "C'mon, let's get this car back."
 
-                        play sound "sounds/driving1.mp3"
+                        play ambience ambience.driving
 
                         scene v11cd28 # TPP. MC and chloe inside the car, smiling, looking forwards in london steets location d
                         with dissolve
 
                         pause 0.75
                         
+                        stop ambience
+
                         scene v11cd29 # TPP. MC and chloe getting out of the car infront of the car dealership, mouth closed
                         with dissolve
 
@@ -595,7 +605,7 @@ label v11_cardealership:
                 scene v11cd26 # FPP. Chloe gets in the car, mc is in the passanger door looking through glass, mouth opened
                 with dissolve
 
-                play sound "sounds/revving.mp3"
+                play sound sound.revving
 
                 cl "If you don't hurry, I will leave you."
 
@@ -609,12 +619,14 @@ label v11_cardealership:
 
                 pause 0.75
 
-                play sound "sounds/driving1.mp3"
+                play ambience ambience.driving
 
                 scene v11cd28 # TPP. MC and chloe inside the car, smiling, looking forwards in london steets location d
                 with dissolve
 
                 pause 0.75
+
+                stop ambience
                 
                 scene v11cd29 # TPP. MC and chloe getting out of the car infront of the car dealership, mouth closed
                 with dissolve
@@ -667,7 +679,7 @@ label v11_cardealership:
         scene v11cd26 # FPP. Chloe gets in the car, mc is in the passanger door looking through glass, mouth opened
         with dissolve
 
-        play sound "sounds/revving.mp3"
+        play sound sound.revving
 
         cl "If you don't hurry, I will leave you."
 
@@ -681,12 +693,14 @@ label v11_cardealership:
 
         pause 1
 
-        play sound "sounds/driving1.mp3"
+        play ambience ambience.driving
 
         scene v11cd28 # TPP. MC and chloe inside the car, smiling, looking forwards in london steets location d
         with dissolve
 
         pause 1
+
+        stop ambience
         
         scene v11cd29 # TPP. MC and chloe getting out of the car infront of the car dealership, mouth closed
         with dissolve
@@ -700,7 +714,7 @@ label v11_cardealership:
 
     csa "Did you two enjoy the ride?"
 
-    if chloe.relationship >= Relationship.GIRLFRIEND: 
+    if CharacterService.is_girlfriend(chloe): 
         scene v11cd40a # FPP. same as 40, mouth closed
         with dissolve
 
@@ -727,7 +741,7 @@ label v11_cardealership:
 
     csa "So, will you two be purchasing the car?"
 
-    play sound "sounds/call.mp3"
+    play sound sound.call
 
     scene v11cd41 # FPP. now looking at chloe, mouth opened
     with dissolve

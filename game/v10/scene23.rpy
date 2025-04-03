@@ -4,7 +4,7 @@
 # Time: Afternoon
 label v10_aft_walk_home:
 
-    play music "music/v10/Track Scene 23.mp3" fadein 2
+    play music music.ck1.v10.Track_Scene_23 fadein 2
 
     scene v10smwh1 # TPP. Show MC walking on the sidewalk. Normal expression, mouth closed.
     with fade
@@ -29,8 +29,8 @@ label v10_aft_walk_home:
     scene v10smwh2b # FPP. Same camera as v10smwh2. Show Josh alone in the alley after the fishy guy rushes off.
     with dissolve
     menu:
-        "Check it out":
-            $ add_point(KCT.BRO)
+        "Check it out" (bro=1.0):
+            $ reputation.add_point(RepComponent.BRO)
             scene v10smwh3 # FPP. POV is MC and Josh close in the alley, talking. Show Josh, normal expression, mouth closed.
             with fade
 
@@ -265,8 +265,8 @@ label v10_aft_walk_home:
 
             pause 0.5
         
-        "Keep walking":
-            $ add_point(KCT.TROUBLEMAKER)
+        "Keep walking" (troublemaker=1.0):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
             scene v10smwh2b
             with dissolve
 
@@ -280,19 +280,16 @@ label v10_aft_walk_home:
     scene v10smwh1c
     with dissolve
 
-    play sound "sounds/vibrate.mp3"
+    play sound sound.vibrate
 
-    python:
-        lauren.messenger.newMessage("Hey, wanna hang out? I have some free time in between study sessions.", force_send=True)
-        lauren.messenger.addReply("Sure, on my way")
-        lauren.messenger.newMessage(":)")
+    $ MessengerService.new_message(lauren, "Hey, wanna hang out? I have some free time in between study sessions.")
+    $ MessengerService.add_reply(lauren, "Sure, on my way")
+    $ MessengerService.new_message(lauren, ":)")
 
-    label v10s23_phoneCheckLau:
-        if lauren.messenger.replies:
-            call screen phone
-        if lauren.messenger.replies:
-            u "(I should reply to Lauren)"
-            jump v10s23_phoneCheckLau
+    while MessengerService.has_replies(lauren):
+        call screen phone
+        if MessengerService.has_replies(lauren):
+            u "(I should reply to Lauren.)"
 
     scene v10smwh1d # TPP. Same camera as v10smwh1. MC is looking at his phone.
     with dissolve

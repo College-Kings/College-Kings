@@ -4,7 +4,7 @@
 # Time: around 3am sunday morning (dark outside)
 
 label v11_lauren_airport_convo:
-    play music "music/v11/Track Scene 16.mp3" fadein 2
+    play music music.v11_Track_Scene_16 fadein 2
     if v11_lauren_caught_aubrey:
         scene v11laac1 # TPP. Show Lauren standing in the airport, looking at her phone, she is very angry, mouth closed, MC is in the background looking at her, walking towards her direction (he is relatively far away), MC mouth closed, worried expression (make sure diff location in airport to v11noac1)
         with fade
@@ -111,8 +111,8 @@ label v11_lauren_airport_convo:
                 with dissolve
 
                 menu:
-                    "Yes":
-                        $ add_point(KCT.TROUBLEMAKER)
+                    "Yes" (troublemaker=1.0):
+                        $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
                         scene v11laac2e
                         with dissolve
@@ -201,7 +201,7 @@ label v11_lauren_airport_convo:
 
         u "Like?"
 
-        if lauren.relationship >= Relationship.KISS:
+        if CharacterService.is_kissed(lauren) or CharacterService.is_girlfriend(lauren):
             scene v11laac2g # FPP. Same as v11laac2e, Lauren has a slightly seductive look, mouth open
             with dissolve
 
@@ -213,16 +213,16 @@ label v11_lauren_airport_convo:
             la "If it doesn't interfere with your plans with Aubrey..."
 
             menu:
-                "Play it cool":
-                    $ add_point(KCT.BRO)
+                "Play it cool" (bro=1.0):
+                    $ reputation.add_point(RepComponent.BRO)
 
                     scene v11laac2h # FPP. Same as v11laac2e, Lauren has a slightly seductive look, mouth closed
                     with dissolve
 
                     u "*Smirks* Sounds nice."
 
-                "Act clueless":
-                    $ add_point(KCT.BOYFRIEND)
+                "Act clueless" (boyfriend=1.0):
+                    $ reputation.add_point(RepComponent.BOYFRIEND)
 
                     scene v11laac2h
                     with dissolve
@@ -259,7 +259,7 @@ label v11_lauren_airport_convo:
 
         la "Time to go."
 
-    elif lauren.relationship >= Relationship.KISS: #and not plane sex scene
+    elif CharacterService.is_kissed(lauren) or CharacterService.is_girlfriend(lauren): #and not plane sex scene
         scene v11laac1c 
         with dissolve
 
@@ -320,7 +320,7 @@ label v11_lauren_airport_convo:
 
         la "*Whisper* I'll show you soon."
 
-        play sound "sounds/kiss.mp3"
+        play sound sound.kiss
 
         scene v11laac4 # TPP. Same positioning as v11laac2, but Lauren is kissing MC on the cheek, MC is slightly surprised, mouth closed
         with dissolve

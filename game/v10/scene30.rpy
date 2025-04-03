@@ -4,7 +4,7 @@
 # Time: Afternoon
 
 label v10_chloe_gym:
-    play music "music/v10/Track Scene 30_1.mp3" fadein 2
+    play music music.ck1.v10.Track_Scene_30_1 fadein 2
     # MC and Chloe are in the gym which happens to be empty, the lights are on and the door is unlocked
     scene v10chg1 # TPP Show MC and Chloe at door to gym, light are on, MC is pulling open the door
     with fade
@@ -163,7 +163,7 @@ label v10_chloe_gym:
 
     u "(Damn...)"
 
-    if chloe.relationship >= Relationship.FWB: # If in a relationship with Chloe
+    if CharacterService.is_fwb(chloe): # If in a relationship with Chloe
         # -Event1 Look closer-
         menu:
             "Look closer":
@@ -184,7 +184,7 @@ label v10_chloe_gym:
 
                 u "I'd run that back on repeat."
 
-                play sound "sounds/kiss.mp3"
+                play sound sound.kiss
 
                 scene v10chg7 # TPP In gym, show Chloe kissing MC
                 with dissolve
@@ -207,7 +207,7 @@ label v10_chloe_gym:
 
                 pause 0.5
                 stop music fadeout 3
-                play music "music/v8/Track Scene 30.mp3" fadein 2
+                play music music.ck1.v8.Track_Scene_30 fadein 2
                 scene v10chg9a # TPP Same angle as v10chg8, Chloe looking seductive with mouth open
                 with dissolve
 
@@ -229,8 +229,13 @@ label v10_chloe_gym:
 
                 pause 0.5
 
-                if config_censored:
+                if is_censored:
                     call screen censored_popup("v10s30_nsfwSkipLabel1")
+
+                lovense vibrate 2
+                lovense rotate 1
+                lovense suction 1
+                lovense thrust 1
 
                 scene v10chg10 # FPP Close up on Chloe, laying on her back on the bench, small smile and mouth closed, mc reaching to pull off her top.
                 with dissolve
@@ -245,6 +250,11 @@ label v10_chloe_gym:
                 with dissolve
 
                 cl "Oh, [name]!"
+
+                lovense vibrate 4
+                lovense rotate 2
+                lovense suction 2
+                lovense thrust 2
 
                 scene v10chgfpf
                 with dissolve
@@ -262,6 +272,11 @@ label v10_chloe_gym:
                 image v10chgeof = Movie(play="images/v10/Scene 30/v10chgeof.webm", loop=True, image="images/v10/Scene 30/v10chgeoStart.webp", start_image="images/v10/Scene 30/v10chgeoStart.webp")
 
                 label v10s30_chloeLicking:
+                    lovense vibrate 5
+                    lovense rotate 3
+                    lovense suction 3
+                    lovense thrust 3
+
                     scene v10chgeo # MC eating Chloe out
                     with dissolve
                     
@@ -288,6 +303,11 @@ label v10_chloe_gym:
                 u "Oh God!"
 
                 label v10s30_chloeBlowjob:
+                    lovense vibrate 8
+                    lovense rotate 4
+                    lovense suction 4
+                    lovense thrust 4
+
                     scene v10chg10c # FPP Same angle as v10chg10b, Chloe moving to give MC a blowjob
                     with dissolve
 
@@ -311,6 +331,11 @@ label v10_chloe_gym:
 
                     u "Ahh fuck... I'm cumming!"
 
+                    lovense vibrate 8
+                    lovense rotate 4
+                    lovense suction 4
+                    lovense thrust 4
+
                     scene v10chg10e # FPP Same angle as v10chg10b, Chloe smiling, mouth open, cum in her mouth
                     with dissolve
 
@@ -320,7 +345,9 @@ label v10_chloe_gym:
                     with dissolve
 
                     cl "*gulp*"
-
+                
+                lovense stop
+                
                 hide screen v10s30_chloeSexOverlay
 
                 scene v10chg10g # FPP Same angle as v10chg10b, Chloe smiling, mouth open

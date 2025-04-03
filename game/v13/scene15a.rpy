@@ -3,23 +3,13 @@
 # Characters: MC (Outfit: 2), RILEY (Outfit: NAKED)
 # Time: Night
 
-init python:
-    def v13s15a_Reply1():
-        setattr(store, "v13_cuddle_lauren_text", True)
-        lauren.messenger.newMessage("Yayy :)")
-
-    def v13s15a_Reply2():
-        lauren.messenger.newMessage("Aww okay, it's cool")
-        lauren.messenger.addReply("Sorry babe, I'm just so tired.")
-        lauren.messenger.newMessage("It's okay.")
-
 label v13s15a:
     scene v13s15a_1 # TPP. Show MC walking into the room, it's dark inside, MC neutral expression, mouth closed
     with dissolve
 
     pause 0.75
 
-    play music "music/v13/Track Scene 15.mp3" fadein 2
+    play music music.v13_Track_Scene_15 fadein 2
 
     scene v13s15a_2 # TPP. Show MC standing in front of the door, in the room, MC neutral expression, mouth closed, room is dark
     with dissolve
@@ -80,33 +70,43 @@ label v13s15a:
 
     u "I hear you."
 
-    if lauren.relationship >= Relationship.GIRLFRIEND and not v11_lauren_caught_aubrey: #if healthy lauren relationship
-        play sound "sounds/vibrate.mp3"
+    if CharacterService.is_girlfriend(lauren) and not v11_lauren_caught_aubrey: #if healthy lauren relationship
+        python:
+            v13s15a_Reply1 = MessageBuilder(lauren)
+            v13s15a_Reply1.set_variable("v13_cuddle_lauren", True)
+            v13s15a_Reply1.new_message("Yayy :)")
+
+            v13s15a_Reply2 = MessageBuilder(lauren)
+            v13s15a_Reply2.new_message("Aww okay, it's cool")
+            v13s15a_Reply2.add_reply("Sorry babe, I'm just so tired.")
+            v13s15a_Reply2.new_message("It's okay, night.")
+        
+        play sound sound.vibrate
 
         scene v13s15a_7 # TPP. MC looking down at his phone, he is standing in same place as v13s15a_6, slightly surprised, mouth closed
         with dissolve
 
         u "(Kinda late for a text.)"
 
-        $ lauren.messenger.newMessage("You up?", force_send=True)
-        $ lauren.messenger.addReply("Yeah, wassup?")
-        $ lauren.messenger.newMessage("Come cuddle with me? ;)")
-        $ lauren.messenger.addReply("You don't have to ask me twice, omw", v13s15a_Reply1)
-        $ lauren.messenger.addReply("I'm already asleep...", v13s15a_Reply2)
+        $ MessengerService.new_message(lauren, "You up?")
+        $ MessengerService.add_reply(lauren, "Yeah, wassup?")
+        $ MessengerService.new_message(lauren, "Come cuddle with me? ;)")
+        $ MessengerService.add_replies(lauren,
+            Reply("You don't have to ask me twice, omw", v13s15a_Reply1),
+            Reply("I'm already halfway asleep...", v13s15a_Reply2)
+        )
 
         scene v13s15a_8 # FPP. MC looking down at his phone, he is standing in same place as v13s15a_6
         with dissolve
 
         pause 0.75
 
-        label v13s15a_PhoneContinueLauren:
-            if lauren.messenger.replies:
-                call screen phone
-            if lauren.messenger.replies:
+        while MessengerService.has_replies(lauren):
+            call screen phone
+            if MessengerService.has_replies(lauren):
                 u "(I should check my phone.)"
-                jump v13s15a_PhoneContinueLauren
 
-    if v13_cuddle_lauren_text:
+    if v13_cuddle_lauren:
         scene v13s15a_6b
         with dissolve
 
@@ -122,7 +122,7 @@ label v13s15a:
 
         u "Yeah?"
 
-        if config_censored:
+        if is_censored:
             call screen censored_popup("v13s15a_nsfwSkipLabel1")
 
         scene v13s15a_6g # FPP. Same as v13s15a_6f, Riley sexy look, mouth open
@@ -165,7 +165,7 @@ label v13s15a:
 
         menu:
             "Stay with Riley":
-                $ grant_achievement("gentlemen_prefer_gingers")
+                grant Achievement("gentlemen_prefer_gingers", "Bail on Lauren's cuddles")
                 u "Is that even a question?"
 
                 scene v13s15a_9 # TPP. Show MC removing his pants, shirt already off, smiling, mouth closed
@@ -245,7 +245,7 @@ label v13s15a:
 
         u "How so?"
 
-        if config_censored:
+        if is_censored:
             call screen censored_popup("v13s15a_nsfwSkipLabel1")
 
         scene v13s15a_6j

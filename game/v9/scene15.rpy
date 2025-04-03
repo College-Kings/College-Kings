@@ -7,7 +7,7 @@ label v9_thur_room_w_cam:
     scene v9trc1 # TPP. Show MC laid on bed, eyes closed, mouth shut
     with fade
 
-    play music "music/v9/Track Scene 14.mp3" fadein 2
+    play music music.ck1.v9.Track_Scene_14 fadein 2
     
     pause 1
 
@@ -56,15 +56,15 @@ label v9_thur_room_w_cam_punch:
     with dissolve
     u "What? No. I've just been chilling. What's going on?"
 
-    $ v9s15KiwiiPost1 = KiwiiPost(grayson, "v9/v9hlw8c.webp", "That's my boy! Go [name]! Fuck yeah!", numberLikes=renpy.random.randint(100, 200))
-    $ v9s15KiwiiPost1.newComment(cameron, "Fuckin' A!", numberLikes=renpy.random.randint(100, 200), force_send=True)
-    $ v9s15KiwiiPost1.newComment(riley, "Knew he had it in him!", numberLikes=renpy.random.randint(200, 250), force_send=True)
+    $ kiwii_post = KiwiiService.new_post(grayson, "v9/Scene 12/v9hlw8c.webp", "That's my boy! Go [name]! Fuck yeah!", number_likes=renpy.random.randint(100, 200))
+    $ KiwiiService.new_comment(kiwii_post, cameron, "Fuckin' A!", number_likes=renpy.random.randint(100, 200))
+    $ KiwiiService.new_comment(kiwii_post, riley, "Knew he had it in him!", number_likes=renpy.random.randint(200, 250))
 
-    call screen phone
+    call screen kiwii_home
 
     menu:
-        "Brag":
-            $ add_point(KCT.TROUBLEMAKER)
+        "Brag" (troublemaker=1.0):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
             jump v9_thur_room_w_cam_brag
         "Be humble":
             jump v9_thur_room_w_cam_humble
@@ -154,8 +154,8 @@ label v9_thur_room_w_cam_cont1:
     with dissolve
 
     menu:
-        "Drink":
-            $ add_point(KCT.BRO)
+        "Drink" (bro=1.0):
+            $ reputation.add_point(RepComponent.BRO)
             jump v9_thur_room_w_cam_drink
         "Don't drink":
             jump v9_thur_room_w_cam_no_drink
@@ -251,17 +251,17 @@ label v9_thur_room_w_cam_no_punch:
     with dissolve
     sa "You better check it."
 
-    $ v9s15KiwiiPost2 = KiwiiPost(sebastian, "v9/v9hlw20.webp", "", numberLikes=renpy.random.randint(100, 200))
-    $ v9s15KiwiiPost2.newComment(chris, "Wow, hope he's OK!", numberLikes=renpy.random.randint(100, 200), force_send=True)
-    $ v9s15KiwiiPost2.newComment(cameron, "Ahhhh! Preview of Saturday's Freshman Brawl!", numberLikes=renpy.random.randint(150, 170), force_send=True)
+    $ kiwii_post = KiwiiService.new_post(sebastian, "v9/Scene 12/v9hlw20.webp", "", number_likes=renpy.random.randint(100, 200))
+    $ KiwiiService.new_comment(kiwii_post, chris, "Wow, hope he's OK!", number_likes=renpy.random.randint(100, 200))
+    $ KiwiiService.new_comment(kiwii_post, cameron, "Ahhhh! Preview of Saturday's Freshman Brawl!", number_likes=renpy.random.randint(150, 170))
 
-    call screen phone
+    call screen kiwii_home
     
     menu:
         "Shrug it off":
             jump v9_thur_room_w_cam_shrugg_off
-        "Get defensive":
-            $ add_point(KCT.TROUBLEMAKER)
+        "Get defensive" (troublemaker=1.0):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
             jump v9_thur_room_w_cam_defensive
 
 label v9_thur_room_w_cam_shrugg_off:
@@ -324,8 +324,8 @@ label v9_thur_room_w_cam_cont3:
     ca "Gross!"
 
     menu:
-        "Protest":
-            $ add_point(KCT.TROUBLEMAKER)
+        "Protest" (troublemaker=1.0):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
             jump v9_thur_room_w_cam_protest
         "Follow orders":
             jump v9_thur_room_w_cam_follow

@@ -1,46 +1,10 @@
-init python:
-    # Emily's messages
-    def v1_reply1():
-        grant_achievement("no_hard_feelings")
-
-        emily.messenger.newMessage(_("Cool :)"))
-
-    def v1_reply2():
-        grant_achievement("open_wound")
-
-        add_point(KCT.TROUBLEMAKER)
-        emily.messenger.newMessage(_("Ugh :/"))
-
-    # Julia messages
-    def v1_reply3():
-        add_point(KCT.BOYFRIEND)
-
-    def v1_reply4():
-        add_point(KCT.BRO)
-
-    # Lauren messages
-    def v1_reply5():
-        add_point(KCT.BOYFRIEND)
-
-    # Lauren messages
-    def v1_reply6():
-        add_point(KCT.BOYFRIEND)
-        lauren.messenger.newMessage(_("Cool :)"))
-
-    def v1_reply7():
-        add_point(KCT.TROUBLEMAKER)
-        lauren.messenger.newMessage(_("Idk, it's just feels kinda weird now. Can we please just talk tomorrow?"))
-        lauren.messenger.addReply(_("Fine"))
-        lauren.messenger.newMessage(_(":)"))
-
-label v1start:
-label starta: #for compatibility only
+label v1_start:
     if config.developer:
-        show screen bugTesting_Overlay
+        show screen debug_overlay
 
-    show screen fantasyOverlay
+    show fantasyoverlay onlayer foreground
 
-    play music "music/msexy.mp3"
+    play music music.ck1.sexy
     
     scene s0a
     with dissolve
@@ -54,7 +18,7 @@ label starta: #for compatibility only
 
     em "Anything."
 
-    hide screen fantasyOverlay
+    hide fantasyoverlay onlayer foreground
     stop music fadeout 3
 
     scene s1
@@ -65,9 +29,10 @@ label starta: #for compatibility only
     scene s1b
     with dissolve
 
-    play music "music/m15punk.mp3"
+    play music music.ck1.punk15
 
-    $ mc.username = name = renpy.input(_("What's your name?"), default=_("Alex")).strip() or _("Alex")
+    if not config_debug:
+        $ mc.username = name = renpy.input(_("What's your name?"), default=name).strip() or _("Alex")
 
     u "Hmm...?"
     
@@ -162,25 +127,34 @@ label starta: #for compatibility only
     
     u "(I better not lose this bag, Julia loves it.)"
 
-    play sound "sounds/vibrate.mp3"
+    play sound sound.vibrate
 
     u "(Huh?)"
     
     # Emily's messages
-    $ emily.messenger.newMessage(_("Hey...\nI know we haven't talked much after we broke up, but I just wanted to let you know that I didn't get into Stanford, so I'll be going to San Vallejo as well.\nGuess I'll see you there. :)"))
-    $ emily.messenger.addReply(_("Yeah... I'll see you there."), v1_reply1)
-    $ emily.messenger.addReply(_("You cheated on me.\nGo to hell!"), v1_reply2)
+    python:
+        v1_reply1 = MessageBuilder(emily)
+        v1_reply1.add_function(no_hard_feelings.grant)
+        v1_reply1.new_message(_("Cool :)"))
 
-    show screen tutorial([
-        "This is the phone screen. You can access your phone whenever the phone icon in the top right corner appears.",
-        "Blue dots show notifications. New notifications are usually accommpanied by a buzz sound. Currently you have a new message waiting for you.",
-        "How you reply to messages matters just as much as any other decision.",
-        "Over the course of the game you will also unlock all kinds of new apps, such as statistics or social media platforms.",
-        "Lastly, if you ever need to get to the homescreen, just click the bottom border of the phone, or the phone icon.",
-    ])
-    call screen phone
-    hide screen tutorial
-    
+        v1_reply2 = MessageBuilder(emily)
+        v1_reply2.add_function(open_wound.grant)
+        v1_reply2.add_function(reputation.add_point, RepComponent.TROUBLEMAKER)
+        v1_reply2.new_message(_("Ugh :/"))
+
+        MessengerService.new_message(emily, _("Hey...\nI know we haven't talked much after we broke up, but I just wanted to let you know that I didn't get into Stanford, so I'll be going to San Vallejo as well.\nGuess I'll see you there. :)"))
+
+        MessengerService.add_replies(emily,
+            Reply(_("Yeah... I'll see you there."), v1_reply1),
+            Reply(_("You cheated on me.\nGo to hell!"), v1_reply2)
+        )
+
+    while MessengerService.has_replies(emily):
+        call screen phone
+        if MessengerService.has_replies(emily):
+            u "(I should see who is texting me.)"
+
+
     stop music fadeout 3
     scene s11
     with dissolve
@@ -190,7 +164,7 @@ label starta: #for compatibility only
     scene carback
     show s14
     with fade
-    play music "sounds/driving1.mp3"
+    play ambience ambience.driving
 
     ju "You know, when I was in college, there were these fraternities and sororities that everyone wanted to join."
 
@@ -207,40 +181,27 @@ label starta: #for compatibility only
     with dissolve
 
     ju "You're not planning on joining one of those, are you?"
-
-    show screen tutorial([
-        "Your decisions strongly influence the way the story progresses and how other characters perceive you.",
-        "With each choice you'll either gain Bro, Boyfriend or Troublemaker points.",
-        "Bros put the squad first, boyfriends show strong affinity towards a few selected individuals and troublemakers seek thrills and take risks.",
-        "These points are then used to identify your Key Character Trait (KCT).  Each KCT will unlock different possibilities and choices, but you can only have one active at a time.",
-        "You can read more about each individual KCT in the Stats app on your phone.",
-    ])
     
     menu:
-        "Could be fun":
+        "Could be fun" (troublemaker=1.0):
             hide s14
             show s14a
             with dissolve
-            $ add_point(KCT.TROUBLEMAKER)
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             u "I don't know... it might be fun."
 
-        "No":
+        "No" (boyfriend=1.0):
             hide s14
             show s14a
             with dissolve
-            $ add_point(KCT.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
 
             u "No, I don't think so, Julia."
 
-    hide screen tutorial
-
-    label aa_db: #for compatibility only
     hide s14a
     show s15
     with dissolve
-
-    $ stats_app.unlock()
 
     ju "Fraternities can be dangerous, honey."
     
@@ -308,7 +269,7 @@ label starta: #for compatibility only
 
     u "(I wonder if he's still dealing...)"
 
-    stop music fadeout 3
+    stop ambience fadeout 3
 
     car "*stops*"
 
@@ -330,11 +291,11 @@ label starta: #for compatibility only
     scene s17
     with dissolve
 
-    play music "music/mfunk.mp3"
+    play music music.ck1.mfunk
 
     ju "Don't worry, I'll get it for you, honey."
 
-    play sound "sounds/trunkopen.mp3"
+    play sound sound.trunk_open
 
     scene s18
     with dissolve
@@ -390,7 +351,7 @@ label starta: #for compatibility only
     scene s29
     with dissolve
 
-    play music "music/m3punk.mp3"
+    play music music.ck1.m3punk
 
     ca "Yo, watch where you're fucking walking, bitch!"
 
@@ -428,7 +389,7 @@ label starta: #for compatibility only
     scene s33a
     with dissolve
 
-    play music "music/mlove1.mp3"
+    play music music.ck1.mlove1
 
     u "Yeah...thanks."
 
@@ -509,7 +470,7 @@ label starta: #for compatibility only
     scene s41
     with dissolve  #Rose annoyed bend over laptop
 
-    play music "music/m6punk.mp3"
+    play music music.ck1.m6punk
 
     ro "It's fine, just take a seat."
 
@@ -633,14 +594,14 @@ label starta: #for compatibility only
     ro "It seems that Elijah here fixed the laptop and we can start the induction. Thank you, Elijah."
 
     menu:
-        "Make fun of Elijah":
+        "Make fun of Elijah" (elijah=-1.0):
+            $ CharacterService.set_mood(elijah, Moods.HURT)
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
+
             scene s46a
             with dissolve
 
             u "Wow Elijah, way to start the fun."
-
-            $ elijah.relationship = Relationship.MAKEFUN
-            $ add_point(KCT.TROUBLEMAKER)
 
             scene s46b
             with dissolve
@@ -666,7 +627,7 @@ label starta: #for compatibility only
     scene clocka
     with fade
 
-    play sound "sounds/clock2.mp3"
+    play sound sound.clock2
 
     pause 0.5
 
@@ -691,7 +652,7 @@ label starta: #for compatibility only
     scene s48
     with fade # ryan standing up
 
-    play music "music/mchill1.mp3"
+    play music music.ck1.mchill1
 
     ry "[name], give me your number and I'll hit you up for the Apes' rush party tomorrow."
 
@@ -723,8 +684,8 @@ label starta: #for compatibility only
     la "Sorry... I overheard you guys talking and I just wanted to say that... this fighting thing? It's really stupid."
 
     menu:
-        "Agree":
-            $ add_point(KCT.BOYFRIEND)
+        "Agree" (boyfriend=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
 
             scene s50a
             with dissolve
@@ -738,8 +699,8 @@ label starta: #for compatibility only
 
             la "Not at all, pretty much any girl that's part of the Deer hates it."
 
-        "Disagree":
-            $ add_point(KCT.TROUBLEMAKER)
+        "Disagree" (troublemaker=1.0):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             scene s50a
             with dissolve
@@ -806,8 +767,8 @@ label starta: #for compatibility only
 
             la "I bet you think she's cute, don't you?"
 
-        "Defend Autumn":
-            $ add_point(KCT.BOYFRIEND)
+        "Defend Autumn" (boyfriend=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
 
             scene s50a
             with dissolve
@@ -836,8 +797,8 @@ label starta: #for compatibility only
 
             u "Only for the right girl."
 
-        "Yeah, kinda":
-            $ add_point(KCT.BOYFRIEND)
+        "Yeah, kinda" (boyfriend=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
 
             scene s53a
             with dissolve
@@ -899,23 +860,23 @@ label starta: #for compatibility only
 
     u "(I should probably go to my new dorm, but I might as well explore for a bit beforehand.)"
 
-    play music "music/mchill2.mp3"
+    play music music.ck1.mchill2
 
     scene s50 # freeroam
     with dissolve
 
-    $ julia.messenger.newMessage(_("Hey honey,\nenjoy your time in college.\nStay safe and don't forget to visit me.\nLove you"), force_send=True)
-    $ julia.messenger.addReply(_("Love you too."), v1_reply3)
-    $ julia.messenger.addReply(_("Thanks, Julia :)"), v1_reply4)
+    python:
+        v1_reply3 = MessageBuilder(julia).add_function(reputation.add_point, RepComponent.BOYFRIEND)
+        v1_reply4 = MessageBuilder(julia).add_function(reputation.add_point, RepComponent.BRO)
 
-    play sound "sounds/vibrate.mp3"
+        MessengerService.new_message(julia, _("Hey honey,\nenjoy your time in college.\nStay safe and don't forget to visit me.\nLove you"))
+        MessengerService.add_replies(julia,
+            Reply(_("Love you too."), v1_reply3), 
+            Reply(_("Thanks, Julia :)"), v1_reply4)
+        )
+
+    play sound sound.vibrate
     
-    # Enter free roam
-    show screen tutorial([
-        "At certain parts of the game, you'll unlock free roam.",
-        "During free roam, you choose where you go and who you want to talk to next.",
-        "You will also be able to use your phone and you might just find some hidden content."
-    ], position=(1050, 700))
     call screen v1_freeRoam1_1
     with dissolve
     label fr1a2: #for compatibility only
@@ -949,8 +910,8 @@ label starta: #for compatibility only
         ri "So what did you think of Ms. Rose?"
 
         menu:
-            "She's hot":
-                $ add_point(KCT.BRO)
+            "She's hot" (troublemaker=1.0):
+                $ reputation.add_point(RepComponent.BRO)
 
                 scene s50ri2a
                 with dissolve
@@ -1035,7 +996,7 @@ label starta: #for compatibility only
         scene s50el
         u "Hey, you're Elijah right?"
 
-        if elijah.relationship <= Relationship.MAKEFUN:
+        if Moods.HURT in elijah.mood:
             scene s50el1
             with dissolve
 
@@ -1088,8 +1049,8 @@ label starta: #for compatibility only
         el "Only the brightest of minds are allowed to join."
 
         menu:
-            "So... the nerds?":
-                $ add_point(KCT.TROUBLEMAKER)
+            "So... the nerds?" (troublemaker=1.0):
+                $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
                 scene s50el2a
                 with dissolve
@@ -1103,8 +1064,8 @@ label starta: #for compatibility only
 
                 el "Just get out of my face."
 
-            "That's cool":
-                $ add_point(KCT.BOYFRIEND)
+            "That's cool" (boyfriend=1.0):
+                $ reputation.add_point(RepComponent.BOYFRIEND)
 
                 scene s50el2a
                 with dissolve
@@ -1175,7 +1136,7 @@ label starta: #for compatibility only
 
         scene s55ch3
         with dissolve
-        play sound "sounds/kiss.mp3"
+        play sound sound.kiss
         " "
 
         scene s55ch4
@@ -1201,14 +1162,14 @@ label starta: #for compatibility only
         no "They're right through the doors behind you."
 
         menu:
-            "Flirt":
-                $ add_point(KCT.TROUBLEMAKER)
-                $ nora.relationship = Relationship.MOVE
+            "Flirt" (troublemaker=1.0):
+                $ reputation.add_point(RepComponent.TROUBLEMAKER)
+                $ CharacterService.set_mood(nora, Moods.AWKWARD)
 
                 scene s56no1a
                 with dissolve
 
-                $ grant_achievement("keep_it_moving")
+                grant Achievement("keep_it_moving", "Hit on Nora")
 
                 u "Actually, I knew that. I just wanted to talk to you 'cause you're really cute."
 
@@ -1229,7 +1190,7 @@ label starta: #for compatibility only
         scene s56no1a
         
         u "Uhm..."
-        if nora.relationship >= Relationship.MOVE:
+        if Moods.AWKWARD in nora.mood:
             scene s56no1
             with dissolve
 
@@ -1246,12 +1207,12 @@ label starta: #for compatibility only
     label v1_freeRoam1_aubrey:
         $ freeroam1.add("aubrey")
     
-        if config_censored:
+        if is_censored:
             call screen censored_popup("v1_freeRoam1_aubrey2")
 
         scene adamaubrey36
         stop music fadeout 3
-        play music "music/msexy.mp3"
+        play music music.ck1.sexy
         show adam1
 
         au "Ohhh shit, that feels good!"
@@ -1279,12 +1240,12 @@ label efra:
     pause 0.75
     
     stop music fadeout 3
-    play sound "sounds/knock.mp3"
+    play sound sound.knock
     
     scene s60
     with dissolve
 
-    play music "music/m16punk.mp3"
+    play music music.ck1.m16punk
 
     imre "Yooo, what's up my man?"
 
@@ -1378,8 +1339,8 @@ label efra:
     imre "Yeah they did, but that doesn't mean shit. The Wolves have won 5 out of the last 10 years."
 
     menu:
-        "So, they're equally good?":
-            $ add_point(KCT.TROUBLEMAKER)
+        "So, they're equally good?" (troublemaker=1.0):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             scene s63a
             with dissolve
@@ -1399,8 +1360,8 @@ label efra:
             scene s63d
             with dissolve
 
-        "The Wolves sound sick":
-            $ add_point(KCT.BRO)
+        "The Wolves sound sick" (bro=1.0):
+            $ reputation.add_point(RepComponent.BRO)
 
             scene s64a
             with dissolve
@@ -1500,17 +1461,22 @@ label efra:
     scene s61a
     with dissolve
 
-    $ lauren.messenger.addReply(_("Hey Lauren, would you want to hang out with me and my friends tonight?"))
-    $ lauren.messenger.newMessage(_("Yeah sounds good :) Where do you wanna meet?"))
-    $ lauren.messenger.addReply(_("Just come to dorm 109 at 8"))
-    $ lauren.messenger.newMessage(_("Okay, will do"))
-    $ lauren.messenger.addReply(_("See you later, cutie"), v1_reply5)
-    $ lauren.messenger.addReply(_("Cool"))
+    python:      
+        v1_reply5 = MessageBuilder(lauren).add_function(reputation.add_point, RepComponent.BOYFRIEND)
 
-    label v1_phoneCheck1:
-        if lauren.messenger.replies:
-            call screen phone
-        if lauren.messenger.replies:
+        MessengerService.add_reply(lauren, _("Hey Lauren, would you want to hang out with me and my friends tonight?"))
+        MessengerService.new_message(lauren, _("Yeah sounds good :) Where do you wanna meet?"))
+        MessengerService.add_reply(lauren, _("Just come to dorm 109 at 8"))
+        MessengerService.new_message(lauren, _("Okay, will do"))
+        MessengerService.add_replies(lauren,
+            Reply(_("See you later, cutie"), v1_reply5),
+            Reply(_("Cool"))
+        ) 
+
+    while MessengerService.has_replies(lauren):
+        call screen phone
+
+        if MessengerService.has_replies(lauren):
             u "(I should reply to Lauren.)"
 
             scene s61
@@ -1518,19 +1484,14 @@ label efra:
 
             imre "Did you ask?"
 
-            scene s61
-            with dissolve
-
             u "Oops I forgot."
 
-            jump v1_phoneCheck1
 
-    label v1_phoneCheck2:
-        if julia.messenger.replies:
-            call screen phone
-        if julia.messenger.replies:
+    while MessengerService.has_replies(julia):
+        call screen phone
+
+        if MessengerService.has_replies(julia):
             u "(I should reply to Julia as well, by the way.)"
-            jump v1_phoneCheck2
 
     scene s61a
     with dissolve
@@ -1547,12 +1508,12 @@ label efra:
     with Fade(1, 0, 1)
     stop music fadeout 3
 
-    play sound "sounds/knock.mp3"
+    play sound sound.knock
     pause 0.75
 
     scene s66
     with dissolve
-    play music "music/mparty.mp3"
+    play music music.ck1.mparty
     imre "I think the ladies are here!"
 
     scene s67
@@ -1608,29 +1569,29 @@ label efra:
 
     u "Yeah, she should be here any minute."
 
-    play sound "sounds/knock.mp3"
+    play sound sound.knock
 
     scene s68a
     with dissolve
 
     imre "Speak of the devil..."
 
-    scene s69a
+    scene s69
     with fade
 
     u "Hey Lauren!"
 
-    scene s69
+    scene s69a
     with dissolve
 
     la "Heyyy..."
 
-    scene s69a
+    scene s69
     with dissolve
 
     u "I wasn't sure if you were gonna come."
 
-    scene s69
+    scene s69a
     with dissolve
 
     la "I was only 2 minutes late."
@@ -1780,8 +1741,8 @@ label efra:
 
             la "I guess we'll never know."
 
-        "Dodged a bullet there":
-            $ add_point(KCT.TROUBLEMAKER)
+        "Dodged a bullet there" (troublemaker=1.0):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             scene s73gr
             with dissolve
@@ -1817,7 +1778,7 @@ label efra:
     scene s75a
     with hpunch
 
-    play sound "sounds/slap.mp3"
+    play sound sound.slap
     pause 1.5
 
     scene s75b
@@ -1851,8 +1812,8 @@ label efra:
     ri "Take your shirt off."
 
     menu:
-        "Take your shirt off":
-            $ add_point(KCT.TROUBLEMAKER)
+        "Take your shirt off" (troublemaker=1.0):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             scene s76
             with dissolve
@@ -1909,8 +1870,8 @@ label efra:
     ri "So I feel like that dare is kinda unfair."
 
     menu:
-        "Do it, or drink":
-            $ add_point(KCT.BRO)
+        "Do it, or drink" (bro=1.0):
+            $ reputation.add_point(RepComponent.BRO)
 
             scene s71ef
             with dissolve
@@ -1927,8 +1888,8 @@ label efra:
 
             " "
 
-        "You're right":
-            $ add_point(KCT.BOYFRIEND)
+        "You're right" (boyfriend=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             
             scene s71ef
             with dissolve
@@ -1961,13 +1922,13 @@ label efra:
     ### Late night talk with Imre.
     scene s80
     with Fade(1, 0, 1)
-    play music "music/msad.mp3"
+    play music music.ck1.msad
 
     imre "Man, I can't wait to bang this Riley chick."
 
     menu:
-        "Riley's mine":
-            $ add_point(KCT.TROUBLEMAKER)
+        "Riley's mine" (troublemaker=1.0, bro=0.5):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             scene s79b
             with dissolve
@@ -1980,8 +1941,8 @@ label efra:
             imre "What the hell man?! I invited Riley. Back off."
 
             menu:
-                "You're right, sorry":
-                    $ add_point(KCT.BRO)
+                "You're right, sorry" (bro=1.0):
+                    $ reputation.add_point(RepComponent.BRO)
 
                     scene s79a
                     with dissolve
@@ -1993,8 +1954,8 @@ label efra:
 
                     imre "It's fine bro, I get it. She is really cute."
 
-                "She wants me":
-                    $ add_point(KCT.TROUBLEMAKER)
+                "She wants me" (troublemaker=1.0):
+                    $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
                     scene s79b
                     with dissolve
@@ -2025,8 +1986,8 @@ label efra:
 
                     jump at_bd
 
-        "They're both hot":
-            $ add_point(KCT.BRO)
+        "They're both hot" (bro=1.0):
+            $ reputation.add_point(RepComponent.BRO)
 
             scene s79
             with dissolve
@@ -2098,7 +2059,7 @@ label at_bd:
 
     ### Sex dream
     label sexdream1: #for compatibility only
-    show screen fantasyOverlay
+    show fantasyoverlay onlayer foreground
     scene sda1  ### close to the kitchen counter
     with Fade (1,0,1)
 
@@ -2129,13 +2090,13 @@ label at_bd:
 
     u "Probably not for a few hours yet."
 
-    play music "music/msexy.mp3"
+    play music music.ck1.sexy
 
     if not _in_replay:
-        if not config_censored:
+        if not is_censored:
             call screen nsfw_Toggle
 
-        if config_censored:
+        if is_censored:
             call screen censored_popup("v1_nsfwSkipLabel1")
 
     scene sda2
@@ -2151,18 +2112,23 @@ label at_bd:
     scene sdakisso
     with dissolve
 
+    lovense vibrate 2
+
     " "
 
     u "(Okay, this is definitely a dream, but I do like where this is going.)"
 
     menu:
-        "Keep dreaming":
+        "Keep dreaming" (True):
             $ sceneList.add("v1_riley")
 
             scene sda3a
             with fade
 
             ri "*Chuckles* You're hard already."
+            
+            lovense vibrate 3
+            lovense rotate 2
 
             scene sda3
             with dissolve
@@ -2179,6 +2145,10 @@ label at_bd:
 
             ri "Tell me what you want."
 
+            lovense vibrate 3
+            lovense rotate 2
+            lovense thrust 2
+            
             menu:
                 "Blowjob":
                     scene sda3b
@@ -2207,6 +2177,10 @@ label at_bd:
                     show sdabjf
                     with dissolve
 
+                    lovense vibrate 4
+                    lovense rotate 3
+                    lovense thrust 3
+
                     ri "*Gasp* Like this?"
 
                     u "Fuuuuck. Yes, exactly like that."
@@ -2229,6 +2203,11 @@ label at_bd:
 
                     show sdafj
                     with fade
+                    
+                    lovense vibrate 4 
+                    lovense rotate 3
+                    lovense thrust 3
+
                     ri "Wow, I've never done this before. Does it feel good?"
 
                     u "Yes, it feels fantastic, Riley."
@@ -2261,6 +2240,10 @@ label at_bd:
             scene sda4c ## turning her around
             with dissolve
 
+            lovense vibrate 4
+            lovense rotate 3
+            lovense thrust 3
+
             u "Bend over."
 
             scene sda4d ## grabing her neck
@@ -2280,7 +2263,7 @@ label at_bd:
             with dissolve
 
             pause 0.3
-            play sound "sounds/slap.mp3"
+            play sound sound.slap
             scene sda60a
             with vpunch
 
@@ -2290,7 +2273,7 @@ label at_bd:
             with dissolve
 
             pause 0.3
-            play sound "sounds/slap.mp3"
+            play sound sound.slap
             scene sda60a
             with vpunch
 
@@ -2300,7 +2283,7 @@ label at_bd:
             with dissolve
 
             pause 0.3
-            play sound "sounds/slap.mp3"
+            play sound sound.slap
             scene sda60a
             with vpunch
 
@@ -2315,6 +2298,10 @@ label at_bd:
             with vpunch
 
             ri "Oh my god!"
+
+            lovense vibrate 6
+            lovense rotate 4
+            lovense thrust 4
 
             show sdasex
             with dissolve
@@ -2334,6 +2321,10 @@ label at_bd:
             scene sda7a
             with dissolve
 
+            lovense vibrate 8
+            lovense rotate 6
+            lovense thrust 6
+
             ri "Cum inside me, [name]! Please fill me up!"
 
             scene aftercum
@@ -2346,11 +2337,13 @@ label at_bd:
 
             ri "My legs are shaking."
 
+            lovense stop
+
         "Wake up":
             pass
             
 label v1_nsfwSkipLabel1:
-    hide screen fantasyOverlay
+    hide fantasyoverlay onlayer foreground
 
     stop music fadeout 3
     $ renpy.end_replay()
@@ -2362,7 +2355,7 @@ label v1_nsfwSkipLabel1:
 
         u "*Yawn*"
 
-        play music "music/mfunk.mp3"
+        play music music.ck1.mfunk
 
         u "(That was the most amazing dream of my life.)"
         u "(I wish I could sleep some more, but I gotta get to class.)"
@@ -2398,7 +2391,7 @@ label v1_nsfwSkipLabel1:
 
         u "*Yawn*"
 
-        play music "music/mfunk.mp3"
+        play music music.ck1.mfunk
 
         u "(What a weird dream...)"
 
@@ -2455,7 +2448,7 @@ label v1_nsfwSkipLabel1:
 
     ro "Today, we're gonna learn about-"
 
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
 
     scene s85 ###Lauren comes in, her roomates a dick so she wants to stay with you whenever Imre's gone."
     with dissolve
@@ -2469,7 +2462,7 @@ label v1_nsfwSkipLabel1:
     ro "Just sit down, so that we can get started on the material."
     #####clock video
     stop music fadeout 3
-    play sound "sounds/clock2.mp3"
+    play sound sound.clock2
     scene clocka
     with fade
 
@@ -2500,7 +2493,7 @@ label v1_nsfwSkipLabel1:
 
     ry "This class is so damn boring..."
 
-    play music "music/m11punk.mp3"
+    play music music.ck1.m11punk
     scene s86a
     with dissolve
 
@@ -2527,8 +2520,8 @@ label v1_nsfwSkipLabel1:
     la "Yep... she's just so annoying. I wish I could still move dorms."
 
     menu:
-        "Move in with me?":
-            $ add_point(KCT.BOYFRIEND)
+        "Move in with me?" (boyfriend=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
 
             scene s87a
             with dissolve
@@ -2547,8 +2540,8 @@ label v1_nsfwSkipLabel1:
 
             u "How about we go to the park this afternoon? I'll bring some sandwiches and we'll make your day better."
 
-        "Bad roommates suck":
-            $ add_point(KCT.BRO)
+        "Bad roommates suck" (bro=1.0):
+            $ reputation.add_point(RepComponent.BRO)
 
             scene s87a
             with dissolve
@@ -2578,8 +2571,8 @@ label v1_nsfwSkipLabel1:
     scene s88
     with Fade (1,0,1)
 
-    play music "music/mlove1.mp3"
-    play sound "sounds/park.mp3"
+    play music music.ck1.mlove1
+    play sound sound.park
 
     la "This park is really nice. I've never been here before."
 
@@ -2661,7 +2654,7 @@ label v1_nsfwSkipLabel1:
 
             la "Uhm... thanks. Not really though, haha."
 
-        "Yet, you're here with me":
+        "Yet, you're here with me" (lauren=1.0):
             $ v1_laurenPoints += 1
 
             scene s89d
@@ -2742,7 +2735,7 @@ label v1_nsfwSkipLabel1:
 
             u "Now it's time for your secret."
 
-        "I've broken into an Ikea":
+        "I've broken into an Ikea" (lauren=1.0):
             $ v1_laurenPoints += 1
             scene s89d
             with dissolve
@@ -2868,8 +2861,8 @@ label aw_bd:
     u "It's not weird, it's just..."
 
     menu:
-        "You're really beautiful":
-            $ add_point(KCT.BOYFRIEND)
+        "You're really beautiful" (boyfriend=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
 
             u "You know... you're really beautiful."
 
@@ -2878,8 +2871,8 @@ label aw_bd:
 
             la "Awww."
 
-        "You're not ugly":
-            $ add_point(KCT.BRO)
+        "You're not ugly" (bro=1.0):
+            $ reputation.add_point(RepComponent.BRO)
 
             u "You know... you're not ugly."
 
@@ -2895,16 +2888,14 @@ label aw_bd:
     u "(Is this the moment to kiss her?)"
 
     menu:
-        "Kiss her":
-            $ lauren.relationship = Relationship.MOVE
-
+        "Kiss her" (lauren=1.0):
             if v1_laurenPoints == 2:
-                $ lauren.relationship = Relationship.KISS                
+                $ CharacterService.set_relationship(lauren, Relationship.KISSED)
 
                 scene s90
                 with dissolve # kiss
-                play sound "sounds/kiss.mp3"
-                $ grant_achievement("romeo")
+                play sound sound.kiss
+                grant Achievement("romeo", "Kiss Lauren")
 
                 pause
 
@@ -2914,6 +2905,8 @@ label aw_bd:
                 pause
 
             else:
+                $ CharacterService.set_mood(lauren, Moods.AWKWARD)
+
                 scene s90a
                 with dissolve
 
@@ -2946,7 +2939,7 @@ label aw_bd:
     scene s92 # you head in hands
     with dissolve
 
-    if lauren.relationship >= Relationship.MOVE:
+    if CharacterService.is_kissed(lauren) or Moods.AWKWARD in lauren.mood:
         u "(Fuck... why did I try to kiss her?! That just made everything weird.)"
     else:
         u "(Fuck... should I have kissed her? Now it's just weird between us.)"
@@ -2965,7 +2958,7 @@ label aw_bd:
     scene s93a
     with dissolve
 
-    play music "music/msad.mp3"
+    play music music.ck1.msad
 
     u "For the last time, it wasn't a date."
 
@@ -2978,7 +2971,7 @@ label aw_bd:
     with dissolve
 
     u "Right, glad you enjoyed them."
-    play sound "sounds/impactbed.mp3"
+    play sound sound.impact_bed
     scene s95 # you falling onto bed
     with vpunch
 
@@ -2989,7 +2982,7 @@ label aw_bd:
 
     imre "I take it your date didn't go as planned?"
 
-    if lauren.relationship >= Relationship.KISS:
+    if CharacterService.is_kissed(lauren):
         scene s96a
         with dissolve
 
@@ -3001,7 +2994,7 @@ label aw_bd:
 
         u "And now it's all just super weird."
 
-    elif lauren.relationship >= Relationship.MOVE:
+    elif Moods.AWKWARD in lauren.mood:
         scene s96a
         with dissolve
 
@@ -3051,22 +3044,21 @@ label aw_bd:
     u "I guess..."
 
     stop music fadeout 3
-    play sound "sounds/vibrate.mp3"
+    play sound sound.vibrate
 
-    $ ryan.messenger.newMessage(_("Hey man, it's Ryan.\nThe Apes' rush party is tonight at 9. You're coming, right???"), force_send=True)
-    $ ryan.messenger.addReply(_("Alright, but I'll only stay for a few hours."))
-    $ ryan.messenger.newMessage(_("Haha, trust me, you're not gonna want to leave once you see all the hot chicks there."))
-    $ ryan.messenger.newMessage(_("Just meet me in front of the Apes' frat house at 9."))
-    $ ryan.messenger.addReply(_("Okay, will do."))
+    $ MessengerService.new_message(ryan, _("Hey man, it's Ryan.\nThe Apes' rush party is tonight at 9. You're coming, right???"))
+    $ MessengerService.add_reply(ryan, _("Alright, but I'll only stay for a few hours."))
+    $ MessengerService.new_message(ryan, _("Haha, trust me, you're not gonna want to leave once you see all the hot chicks there."))
+    $ MessengerService.new_message(ryan, _("Just meet me in front of the Apes' frat house at 9."))
+    $ MessengerService.add_reply(ryan, _("Okay, will do."))
 
-    label repeata:
-        if ryan.messenger.replies:
-            call screen phone
-        if ryan.messenger.replies:
+    while MessengerService.has_replies(ryan):
+        call screen phone
+        
+        if MessengerService.has_replies(ryan):
             u "(I should really check who texted me.)"
-            jump repeata
 
-    play music "music/m3punk.mp3"
+    play music music.ck1.m3punk
 
     scene s96c
     with dissolve    
@@ -3102,7 +3094,7 @@ label aw_bd:
 
     u "(Holy shit, their house is huge. I guess someone here has rich parents.)"
 
-    play music "music/muffledparty.mp3"
+    play music music.ck1.muffledparty
 
     u "(Looks like Ryan's right there as well, waiting for me.)"
 
@@ -3221,8 +3213,8 @@ label v1_freeRoam2_sam2:
 label v1_freeRoam2_door:
     $ freeroam2.add("door")
     
-    play music "music/mparty2.mp3"
-    queue music [ "music/mparty3.mp3", "music/mparty4.mp3" ]
+    play music music.ck1.mparty2
+    queue music [music.ck1.mparty3, music.ck1.mparty4]
     
     scene s103
     #with dissolve
@@ -3413,8 +3405,8 @@ label v1_freeRoam2_josh:
             au "Nothing wrong with warming up the new batch of fighters, is there?"
 
             menu:
-                "Say you're a fighter":
-                    $ add_point(KCT.TROUBLEMAKER)
+                "Say you're a fighter" (troublemaker=1.0):
+                    $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
                     scene fr2jo2d
                     with dissolve
@@ -3487,8 +3479,8 @@ label v1_freeRoam2_josh:
 
                     u "Alright, I'll leave you guys alone and look around a bit more."
 
-        "Ask if she likes fighters":
-            $ add_point(KCT.BOYFRIEND)
+        "Ask if she likes fighters" (boyfriend=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
 
             scene fr2jo2b
             with dissolve
@@ -3505,8 +3497,8 @@ label v1_freeRoam2_josh:
             au "Why are you asking? Are you planning on becoming a fighter?"
 
             menu:
-                "I'll be the next Fight King":
-                    $ add_point(KCT.TROUBLEMAKER)
+                "I'll be the next Fight King" (troublemaker=1.0):
+                    $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
                     scene fr2jo2d
                     with dissolve
@@ -3610,12 +3602,25 @@ label v1_freeRoam2_camp:
         call screen v1_freeRoam2_2
 
     else:
-        play sound "sounds/vibrate.mp3"
+        if not MessengerService.find_message(lauren, _("Hey :)\nSorry about today.\n\nCan we talk tomorrow?")):
+            play sound sound.vibrate
 
-        if not lauren.messenger.find_message("Hey :)\nSorry about today.\n\nCan we talk tomorrow?"):
-            $ lauren.messenger.newMessage(_("Hey :)\nSorry about today.\n\nCan we talk tomorrow?"), force_send=True)
-            $ lauren.messenger.addReply(_("Yeah, sure."), v1_reply6)
-            $ lauren.messenger.addReply(_("What is there to talk about?"), v1_reply7)
+            python:
+                v1_reply6 = MessageBuilder(lauren)
+                v1_reply6.add_function(reputation.add_point, RepComponent.BOYFRIEND)
+                v1_reply6.new_message(_("Cool :)"))
+
+                v1_reply7 = MessageBuilder(lauren)
+                v1_reply7.add_function(reputation.add_point, RepComponent.TROUBLEMAKER)
+                v1_reply7.new_message(_("Idk, it's just feels kinda weird now. Can we please just talk tomorrow?"))
+                v1_reply7.add_reply(_("Fine"))
+                v1_reply7.new_message(_(":)"))
+
+                MessengerService.new_message(lauren, _("Hey :)\nSorry about today.\n\nCan we talk tomorrow?"))
+                MessengerService.add_replies(lauren,
+                    Reply(_("Yeah, sure."), v1_reply6),
+                    Reply(_("What is there to talk about?"), v1_reply7)
+                )
 
         call screen v1_freeRoam2_4
 
@@ -3638,14 +3643,14 @@ label v1_freeRoam2_mason:
     jeremy "Damn, that takes balls, kid!"
 
     menu:
-        "Yeah, he better watch out":
-            $ add_point(KCT.TROUBLEMAKER)
-            $ add_point(KCT.BRO)
+        "Yeah, he better watch out" (troublemaker=1.0, bro=1.0):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
+            $ reputation.add_point(RepComponent.BRO)
 
             scene fr2ma1a
             with dissolve
 
-            $ grant_achievement("big_mouth")
+            grant Achievement("big_mouth", "Threaten Cameron")
                 
             u "Yeah, he better watch out, or I'll kick his ass."
 
@@ -3936,7 +3941,7 @@ label fr2end: #for compatibility only
 
     u "Ryan?"
 
-    play music "music/mlove.mp3"
+    play music music.ck1.mlove
     scene s108
     with dissolve
 
@@ -3962,8 +3967,8 @@ label fr2end: #for compatibility only
     ry "Man, I don't know. Why don't you just go ask her yourself?"
 
     menu:
-        "You're right, I'll talk to her":
-            $ add_point(KCT.BRO)
+        "You're right, I'll talk to her" (bro=1.0):
+            $ reputation.add_point(RepComponent.BRO)
 
             scene s108e
             with dissolve
@@ -4068,8 +4073,8 @@ label fr2end: #for compatibility only
     with dissolve
 
     menu:
-        "Apologize":
-            $ add_point(KCT.BOYFRIEND)
+        "Apologize" (boyfriend=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
 
             u "I'm really sorry for interrupting your conversation."
 
@@ -4083,8 +4088,8 @@ label fr2end: #for compatibility only
 
             u "In that case, you're very welcome."
 
-        "Make fun of him":
-            $ add_point(KCT.BRO)
+        "Make fun of him" (bro=1.0):
+            $ reputation.add_point(RepComponent.BRO)
 
             u "Don't worry, I'm not gonna start talking about my rock collection."
 
@@ -4126,7 +4131,7 @@ label fr2end: #for compatibility only
 
     cl "So you're a first year, huh? Are you excited to get into the college lifestyle?"
 
-    play music "music/mlove2.mp3"
+    play music music.ck1.mlove2
     scene s114a
     with dissolve
 
@@ -4173,8 +4178,8 @@ label fr2end: #for compatibility only
     with dissolve
 
     menu:
-        "Empathize":
-            $ add_point(KCT.BOYFRIEND)
+        "Empathize" (boyfriend=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
 
             u "Wow, that sounds awful."
 
@@ -4183,8 +4188,8 @@ label fr2end: #for compatibility only
 
             cl "It really was."
 
-        "Poke fun":
-            $ add_point(KCT.TROUBLEMAKER)
+        "Poke fun" (troublemaker=1.0):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             u "Hahaha, sounds like the Dean was into you."
 
@@ -4276,7 +4281,7 @@ label fr2end: #for compatibility only
     with dissolve
 
     u "Uhh... yeah, let's go."
-    play music "music/mparty2.mp3"
+    play music music.ck1.mparty2
     scene s118 # looking from behind main room at l and chloe
     with fade
 
@@ -4322,6 +4327,6 @@ label fr2end: #for compatibility only
     stop music
     #####punch
     scene black
-    $ renpy.movie_cutscene("v1/punchdemo.webm", loops=0)
+    $ renpy.movie_cutscene("images/v1/punchdemo.webm", loops=0)
 
 jump v2start

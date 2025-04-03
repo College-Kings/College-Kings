@@ -1,83 +1,5 @@
-init python:
-
-    # Ryan messages
-    def v2_reply1():
-        add_point(KCT.BRO)
-        ryan.messenger.newMessage(_("Look, I know what Grayson did was a dick move, but he was just being overprotective of Chloe"))
-        ryan.messenger.addReply(_("Whatever"), v2_reply2)
-        ryan.messenger.addReply(_("Don't you dare defend that guy"), v2_reply3)
-
-    def v2_reply2():
-        add_point(KCT.BRO)
-
-    def v2_reply3():
-        add_point(KCT.TROUBLEMAKER)
-        ryan.messenger.newMessage(_("Sorry..."))
-
-    def v2_reply4():
-        add_point(KCT.TROUBLEMAKER)
-        ryan.messenger.newMessage(_("Look, I know what Grayson did was a dick move, but he was just being overprotective of Chloe"))
-        ryan.messenger.addReply(_("Whatever"), v2_reply2)
-        ryan.messenger.addReply(_("Don't you dare defend that guy"), v2_reply3)
-
-    # Lauren messages
-    def v2_reply5():
-        setattr(store, "meetlauren", True)
-        add_point(KCT.BOYFRIEND)
-        lauren.messenger.newMessage(_("Great, I'll see you then :)"))
-
-    def v2_reply6():
-        grant_achievement("mixed_feelings")
-
-    # Josh messages
-    def v2_reply7():
-        add_point(KCT.BRO)
-        josh.messenger.newMessage(_("It's fine, you go get her."))
-
-    def v2_reply8():
-        add_point(KCT.BOYFRIEND)
-        josh.messenger.newMessage(_("Nah, you don't want a bitch like her."))
-        josh.messenger.addReply(_("Yeah, I guess you're right."), v2_reply9)
-        josh.messenger.addReply(_("Dude, what the fuck?!"), v2_reply10)
-
-    def v2_reply9():
-        add_point(KCT.BRO)
-        josh.messenger.newMessage(_("Hahaha, I'm just kidding, yo."))
-        josh.messenger.newMessage(_("Of course I gave her your number."))
-        josh.messenger.addReply(_("Damn, you got me."))
-
-    def v2_reply10():
-        add_point(KCT.TROUBLEMAKER)
-        josh.messenger.newMessage(_("Hahaha, I'm just kidding, yo."))
-        josh.messenger.newMessage(_("Of course I gave her your number."))
-        josh.messenger.addReply(_("Damn, you got me."))
-
-    # Aubrey messages
-    def v2_reply11():
-        add_point(KCT.BRO)
-        aubrey.messenger.newMessage(_("Yeah, I mean they had a thing a while ago but she broke it off 'cause he lied about some shit."))
-        aubrey.messenger.newMessage(_("So... tomorrow?"))
-        aubrey.messenger.addReply(_("My day tomorrow is quite full, but how about today?\n\nI need to buy a costume."), v2_reply12)
-
-    def v2_reply12():
-        add_point(KCT.BOYFRIEND)
-        aubrey.messenger.newMessage(_("I've got dance practice tonight \n:("))
-        aubrey.messenger.addReply(_("I'm not talking tonight, I can pick you up right now."))
-        aubrey.messenger.newMessage(_("Oh wow, that's spontaneous, I like it haha.\n\nI guess come to the Chicks' house whenever you're ready and then we can go costume shopping."))
-        aubrey.messenger.addReply(_("Cool, I'll be 20 mins."))
-
-    def v2_reply13():
-        setattr(store, "costumeaubrey", True)
-        add_point(KCT.BOYFRIEND)
-        aubrey.messenger.newMessage(_("Good :)"))
-
-    def v2_reply14():
-        setattr(store, "costumeaubrey", False)
-        add_point(KCT.TROUBLEMAKER)
-        aubrey.messenger.newMessage(_("Oh, okay. Guess we'll have to postpone the costume buying."))
-
 label v2start:
-    play music "music/muffledparty.mp3"
+    play music music.ck1.muffledparty
     scene black
     
     scene s121a
@@ -98,7 +20,7 @@ label v2start:
 
     imre "Hey man, did you have a good night?"
 
-    play music "music/m9punk.mp3"
+    play music music.ck1.m9punk
     scene s123a
     with dissolve
 
@@ -138,8 +60,8 @@ label v2start:
     imre "If you knew how to fight, maybe he wouldn't fuck with you."
 
     menu:
-        "Hmm... maybe":
-            $ add_point(KCT.BRO)
+        "Hmm... maybe" (bro=True):
+            $ reputation.add_point(RepComponent.BRO)
 
             scene s123d
             with dissolve
@@ -149,8 +71,8 @@ label v2start:
             with dissolve
             imre "Just think about it, okay? I'll see you later."
 
-        "I'm not fighting":
-            $ add_point(KCT.BOYFRIEND)
+        "I'm not fighting" (boyfriend=1.0, bro=0.5):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
 
             scene s123d
             with dissolve
@@ -164,8 +86,8 @@ label v2start:
             imre "If he sees you looking at him wrong from now on, you'll end up in the hospital."
 
             menu:
-                "I'll think about it":
-                    $ add_point(KCT.BRO)
+                "I'll think about it" (bro=True):
+                    $ reputation.add_point(RepComponent.BRO)
 
                     scene s123d
                     with dissolve
@@ -175,8 +97,8 @@ label v2start:
                     with dissolve
                     imre "That's all I'm asking for. I'll see you later."
 
-                "I won't fight":
-                    $ add_point(KCT.BOYFRIEND)
+                "I won't fight" (boyfriend=True):
+                    $ reputation.add_point(RepComponent.BOYFRIEND)
 
                     scene s123d
                     with dissolve
@@ -191,38 +113,74 @@ label v2start:
     with fade
 
     label bjj_bd: #for compatibility only
-    play sound "sounds/vibrate.mp3"
+    play sound sound.vibrate
     queue sound "sounds/vibrate.mp3"
 
-    $ ryan.messenger.newMessage(_("You okay?"), force_send=True)
-    $ ryan.messenger.addReply(_("I'm fine"), v2_reply1)
-    $ ryan.messenger.addReply(_("No, wtf was that?! Fuck Grayson and fuck the Apes"), v2_reply4)
+    python:
+        v2_reply2 = MessageBuilder(ryan).add_function(reputation.add_point, RepComponent.BRO)
 
-    $ add_point(KCT.TROUBLEMAKER)
-    $ lauren.messenger.newMessage(_("Is everything okay?"))
-    $ lauren.messenger.addReply(_("Yeah, I'm fine."))
-    $ lauren.messenger.newMessage(_("Okay..."))
+        v2_reply3 = MessageBuilder(ryan)
+        v2_reply3.add_function(reputation.add_point, RepComponent.TROUBLEMAKER)
+        v2_reply3.new_message(_("Sorry..."))
 
-    if lauren.messenger.replies:
-        $ lauren.messenger.newMessage(_("Hello?? Can we please talk today?"), force_send=True)
-        $ lauren.messenger.addReply(_("Yeah, SV cafe in 20 mins?"), v2_reply5)
-        $ lauren.messenger.addReply(_("Sorry, I can't"), v2_reply6)
-    else:
-        $ lauren.messenger.newMessage(_("Are we still on for today? :)"), force_send=True)
-        $ lauren.messenger.addReply(_("Yeah, SV cafe in 20 mins?"), v2_reply5)
-        $ lauren.messenger.addReply(_("Sorry, I can't"), v2_reply6)
+        v2_reply1 = MessageBuilder(ryan)
+        v2_reply1.add_function(reputation.add_point, RepComponent.BRO)
+        v2_reply1.new_message(_("Look, I know what Grayson did was a dick move, but he was just being overprotective of Chloe"))
+        v2_reply1.add_replies(
+            Reply(_("Whatever"), v2_reply2),
+            Reply(_("Don't you dare defend that guy"), v2_reply3)
+        )
+
+        v2_reply4 = MessageBuilder(ryan)
+        v2_reply4.add_function(reputation.add_point, RepComponent.TROUBLEMAKER)
+        v2_reply4.new_message(_("Look, I know what Grayson did was a dick move, but he was just being overprotective of Chloe"))
+        v2_reply4.add_replies(
+            Reply(_("Whatever"), v2_reply2),
+            Reply(_("Don't you dare defend that guy"), v2_reply3)
+        )
+
+        MessengerService.new_message(ryan, _("You okay?"))
+        MessengerService.add_replies(ryan,
+            Reply(_("I'm fine"), v2_reply1),
+            Reply(_("No, wtf was that?! Fuck Grayson and fuck the Apes"), v2_reply4)
+        )
+
+        v2_reply5 = MessageBuilder(lauren)
+        v2_reply5.set_variable("meetlauren", True)
+        v2_reply5.add_function(reputation.add_point, RepComponent.BOYFRIEND)
+        v2_reply5.new_message(_("Great, I'll see you then :)"))
+
+        v2_reply6 = MessageBuilder(lauren)
+        v2_reply6.add_function(mixed_feelings.grant)
+        v2_reply6.add_function(reputation.add_point, RepComponent.TROUBLEMAKER)
+        v2_reply6.new_message(_("Is everything okay?"))
+        v2_reply6.add_reply(_("Yeah, I'm fine."))
+        v2_reply6.new_message(_("Okay..."))
+
+        if MessengerService.has_replies(lauren):
+            MessengerService.new_message(lauren, _("Hello?? Can we please talk today?"))
+            MessengerService.add_replies(lauren,
+                Reply(_("Yeah, SV cafe in 20 mins?"), v2_reply5),
+                Reply(_("Sorry, I can't"), v2_reply6)
+            )
+        else:
+            MessengerService.new_message(lauren, _("Are we still on for today? :)"))
+            MessengerService.add_replies(lauren,
+                Reply(_("Yeah, SV cafe in 20 mins?"), v2_reply5),
+                Reply(_("Sorry, I can't"), v2_reply6)
+            )
 
     " "
 
     scene s96g
     with dissolve
 
-    label repeatb:
-        if lauren.messenger.replies or ryan.messenger.replies:
-            call screen phone
-        if lauren.messenger.replies or ryan.messenger.replies:
+    while MessengerService.has_replies(lauren) or MessengerService.has_replies(ryan):
+        call screen phone
+
+        if MessengerService.has_replies(lauren) or MessengerService.has_replies(ryan):
             u "(Damn, my phone's blowing up. I should probably check my messages.)"
-            jump repeatb
+
 
     if meetlauren:
         u "(Well, time to head to the cafe to meet Lauren.)"
@@ -239,7 +197,7 @@ label v2start:
 
     u "(I can't believe I got knocked out in front of everyone...)"
 
-    play music "music/m4punk.mp3"
+    play music music.ck1.m4punk
 
     u "(Especially in front of Chloe, that's so humiliating.)"
 
@@ -298,7 +256,7 @@ label v1_tomShoutBack:
 
     scene tompush
     pause 0.7
-    play sound "sounds/push.mp3"
+    play sound sound.push
     scene push12
     with vpunch
 
@@ -316,9 +274,10 @@ label gb:
     scene tomstancekick
     with dissolve
 
-    call screen confirm("Would you like to play the fighting tutorial?",
-        yes_action=[SetVariable("fight_tutorial", True), Call("fight_tutorialLabel")],
-        no_action=[SetVariable("fight_tutorial", False), Return()])
+    if not config_debug:
+        call screen confirm(_("Would you like to play the fighting tutorial?"),
+            yes_action=[SetVariable("fight_tutorial", True), Call("fight_tutorialLabel")],
+            no_action=[SetVariable("fight_tutorial", False), Return()])
 
     if fight_tutorial:
         call screen tomtut1
@@ -327,7 +286,7 @@ label gb:
             scene kick2movie
             pause 0.7
 
-            play sound "sounds/ks.mp3"
+            play sound sound.hit
             
             scene kick2pic
             with hpunch
@@ -339,19 +298,19 @@ label gb:
             $ renpy.pause(0.7)
 
             scene tomhook
-            show screen fight_tutorial(stance="defend")
+            show screen old_fight_tutorial(stance="defend")
 
             tut "Now it's time to block Tom's attack."
 
-            show screen fight_tutorial(highlight="q", stance="defend")
+            show screen old_fight_tutorial(highlight="q", stance="defend")
             tut "{b}Q{/b} lets you block your head from heavy attacks such as hooks, which come from a slight angle."
-            show screen fight_tutorial(highlight="w", stance="defend")
+            show screen old_fight_tutorial(highlight="w", stance="defend")
             tut "In order to protect yourself from attacks flying straight at your face, such as jabs, press {b}W{/b}."
-            show screen fight_tutorial(highlight="r", stance="defend")
+            show screen old_fight_tutorial(highlight="r", stance="defend")
             tut "Lastly, you can protect your legs, from low kicks for example, by pressing {b}R{/b}."
-            show screen fight_tutorial(highlight="q", stance="defend")
+            show screen old_fight_tutorial(highlight="q", stance="defend")
             tut "As of right now, there's a hook flying at your head, press {b}Q{/b} in the upcoming screen in order to block it."
-            hide screen fight_tutorial
+            hide screen old_fight_tutorial
 
             call screen fight_defendTutorial
 
@@ -359,7 +318,7 @@ label gb:
         label tomtut1hook:
             scene hook1movie
             $ renpy.pause(0.7)
-            play sound "sounds/bs.mp3"
+            play sound sound.hit
             scene hook1pic
             with hpunch
 
@@ -375,15 +334,15 @@ label gb:
 
             scene hookcounter
 
-            show screen fight_tutorial(highlight="q", stance="defend")
+            show screen old_fight_tutorial(highlight="q", stance="defend")
             tut "{b}Q{/b} lets you block your head from heavy attacks such as hooks, which come from a slight angle."
-            show screen fight_tutorial(highlight="w", stance="defend")
+            show screen old_fight_tutorial(highlight="w", stance="defend")
             tut "In order to protect yourself from attacks flying straight at your face, such as jabs, press {b}W{/b}."
-            show screen fight_tutorial(highlight="r", stance="defend")
+            show screen old_fight_tutorial(highlight="r", stance="defend")
             tut "Lastly, you can protect your legs, from low kicks for example, by pressing {b}R{/b}."
-            show screen fight_tutorial(highlight="w", stance="defend")
+            show screen old_fight_tutorial(highlight="w", stance="defend")
             tut "As of right now, there's a jab flying at your face, press {b}W{/b} in the upcoming screen in order to block it."
-            hide screen fight_tutorial
+            hide screen old_fight_tutorial
 
             call screen fight_defendTutorial
 
@@ -391,7 +350,7 @@ label gb:
         label tomtut1jab:
             scene jab1movie
             $ renpy.pause(0.7)
-            play sound "sounds/bs.mp3"
+            play sound sound.hit
             scene jab1pic
             with hpunch
 
@@ -410,21 +369,21 @@ label gb:
 
             tut "Now it's time to block Tom's attack."
 
-            show screen fight_tutorial(highlight="q", stance="defend")
+            show screen old_fight_tutorial(highlight="q", stance="defend")
             tut "{b}Q{/b} lets you block your head from heavy attacks such as hooks, which come from a slight angle."
-            show screen fight_tutorial(highlight="w", stance="defend")
+            show screen old_fight_tutorial(highlight="w", stance="defend")
             tut "In order to protect yourself from attacks flying straight at your face, such as jabs, press {b}W{/b}."
-            show screen fight_tutorial(highlight="r", stance="defend")
+            show screen old_fight_tutorial(highlight="r", stance="defend")
             tut "Lastly, you can protect your legs, from low kicks for example, by pressing {b}R{/b}."
-            show screen fight_tutorial(highlight="w", stance="defend")
+            show screen old_fight_tutorial(highlight="w", stance="defend")
             tut "As of right now, there's a jab flying at your face, press {b}W{/b} in the upcoming screen in order to block it."
-            hide screen fight_tutorial
+            hide screen old_fight_tutorial
 
             call screen fight_defendTutorial
 
 
         label tuthookblock:
-            play sound "sounds/bs.mp3"
+            play sound sound.hit
             scene tomhookblock
             with hpunch
 
@@ -438,7 +397,7 @@ label gb:
 
 
         label tuthookhit:
-            play sound "sounds/hs.mp3"
+            play sound sound.hit
             scene tomhookhit
             with hpunch
 
@@ -455,17 +414,13 @@ label tomFightStart:
     call screen fight_typeMenu
 
     if fight_type == "normal":
-        $ simtomfight = False
-
         call screen fight_selectDifficulty
 
         call screen fight_keybindOptions
     
-    elif fight_type == "simReal" or fight_type == "simWin":
-        $ simtomfight = True
-        
+    $ simtomfight = (fight_type != "normal")
     $ stance = 1
-    $ tomstance = renpy.random.choice([1, 2, 3, 4])
+    $ tomstance = renpy.random.choice([1, 2, 3])
     $ tomattack = renpy.random.choice([1, 2, 3, 4])
     $ simtom = renpy.random.choice([1, 2, 3, 4, 5, 6])
     $ simyou = renpy.random.choice([1, 2, 3, 4, 5, 6])
@@ -479,12 +434,14 @@ label tomFightStart:
     $ youDamage = 0
     $ tomdmg = 0
 
+    call screen youattack()
+
     label tomkick1:
         if tomdmg >= enemyhealth:
 
             scene youfinishmovie
             $ renpy.pause(1)
-            play sound "sounds/fall.mp3"
+            play sound sound.fall
             $ stance = 0
             $ youDamage = 0
             scene youfinish
@@ -497,22 +454,19 @@ label tomFightStart:
             $ tomdmg += 1
             scene kick2movie
             $ renpy.pause(0.7)
-            play sound "sounds/ks.mp3"
+            play sound sound.hit
             scene kick2pic
             with hpunch
 
             pause 0.5 #Variable here
             jump tomattack1
 
-
-
-
     label tomkick2:
         if youDamage >= youHealth:
 
             scene tomfinishmovie
             $ renpy.pause(1)
-            play sound "sounds/fall.mp3"
+            play sound sound.fall
             $ stance = 0
             $ youDamage = 0
             scene tomfinish
@@ -522,12 +476,11 @@ label tomFightStart:
 
 
             jump tomfinish6
+
         else:
-
-
             scene hook1movie
             $ renpy.pause(0.7)
-            play sound "sounds/bs.mp3"
+            play sound sound.hit
             scene hook1pic
             with hpunch
 
@@ -541,7 +494,7 @@ label tomFightStart:
 
             scene tomfinishmovie
             $ renpy.pause(1)
-            play sound "sounds/fall.mp3"
+            play sound sound.fall
             $ stance = 0
             $ youDamage = 0
             scene tomfinish
@@ -554,7 +507,7 @@ label tomFightStart:
 
             scene jab1movie
             $ renpy.pause(0.7)
-            play sound "sounds/bs.mp3"
+            play sound sound.hit
             scene jab1pic
             with hpunch
 
@@ -570,7 +523,7 @@ label tomFightStart:
 
             scene youfinishmovie
             $ renpy.pause(1)
-            play sound "sounds/fall.mp3"
+            play sound sound.fall
             $ stance = 0
             $ youDamage = 0
             scene youfinish
@@ -584,7 +537,7 @@ label tomFightStart:
 
             scene hook2movie
             $ renpy.pause(0.7)
-            play sound "sounds/hs.mp3"
+            play sound sound.hit
             scene hook2pic
             with hpunch
 
@@ -599,7 +552,7 @@ label tomFightStart:
 
             scene tomfinishmovie
             $ renpy.pause(1)
-            play sound "sounds/fall.mp3"
+            play sound sound.fall
             $ stance = 0
             $ youDamage = 0
             scene tomfinish
@@ -613,7 +566,7 @@ label tomFightStart:
 
             scene jab1movie
             $ renpy.pause(0.7)
-            play sound "sounds/bs.mp3"
+            play sound sound.hit
             scene jab1pic
             with hpunch
 
@@ -626,7 +579,7 @@ label tomFightStart:
 
             scene tomfinishmovie
             $ renpy.pause(1)
-            play sound "sounds/fall.mp3"
+            play sound sound.fall
             $ stance = 0
             $ youDamage = 0
             scene tomfinish
@@ -640,7 +593,7 @@ label tomFightStart:
 
             scene kick1movie
             $ renpy.pause(0.7)
-            play sound "sounds/ks.mp3"
+            play sound sound.hit
             scene kick1pic
             with hpunch
 
@@ -655,7 +608,7 @@ label tomFightStart:
 
             scene youfinishmovie
             $ renpy.pause(1)
-            play sound "sounds/fall.mp3"
+            play sound sound.fall
             $ stance = 0
             $ youDamage = 0
             scene youfinish
@@ -669,7 +622,7 @@ label tomFightStart:
 
             scene jab2movie
             $ renpy.pause(0.7)
-            play sound "sounds/js.mp3"
+            play sound sound.hit
             scene jab2pic
             with hpunch
 
@@ -687,7 +640,7 @@ label tomFightStart:
 
             scene tomfinishmovie
             $ renpy.pause(1)
-            play sound "sounds/fall.mp3"
+            play sound sound.fall
             $ stance = 0
             $ youDamage = 0
             scene tomfinish
@@ -699,7 +652,7 @@ label tomFightStart:
         else:
             scene hook1movie
             $ renpy.pause(0.7)
-            play sound "sounds/bs.mp3"
+            play sound sound.hit
             scene hook1pic
             with hpunch
 
@@ -716,7 +669,7 @@ label tomFightStart:
             scene tomfinishmovie
             $ renpy.pause(1)
 
-            play sound "sounds/fall.mp3"
+            play sound sound.fall
             $ stance = 0
             $ youDamage = 0
             scene tomfinish
@@ -730,7 +683,7 @@ label tomFightStart:
 
             scene kick1movie
             $ renpy.pause(0.7)
-            play sound "sounds/ks.mp3"
+            play sound sound.hit
             scene kick1pic
             with hpunch
 
@@ -826,7 +779,7 @@ label tomFightStart:
     label tomhookhit2:
     label timer4:
 
-        play sound "sounds/hs.mp3"
+        play sound sound.hit
         $ youDamage += 1
         scene tomhookhit
         with hpunch
@@ -863,7 +816,7 @@ label tomFightStart:
 
     label tomhookblocked:
 
-        play sound "sounds/bs.mp3"
+        play sound sound.hit
         scene tomhookblock
         with hpunch
 
@@ -900,7 +853,7 @@ label tomFightStart:
     label tomjabhit2:
     label timer5:
 
-        play sound "sounds/js.mp3"
+        play sound sound.hit
         scene tomjabhit
         with hpunch
 
@@ -936,7 +889,7 @@ label tomFightStart:
 
     label tomjabblocked:
 
-        play sound "sounds/bs.mp3"
+        play sound sound.hit
         scene tomjabblock
         with hpunch
 
@@ -972,7 +925,7 @@ label tomFightStart:
     label tomkickhit:
     label tomkickhit2:
     label timer6:
-        play sound "sounds/ks.mp3"
+        play sound sound.hit
         scene tomkickhit
         with hpunch
 
@@ -1007,7 +960,7 @@ label tomFightStart:
             call screen youattack
 
     label tomkickblocked:
-        play sound "sounds/ks.mp3"
+        play sound sound.hit
         scene tomkickblock
         with hpunch
 
@@ -1052,26 +1005,26 @@ label tomFightStart:
 
     " "
 
-    jump v1_tomWalkAway
+    jump v1_tom_walk_away
 
 label youfinish:
     if reaction == 0.5:
-        $ grant_achievement("the_notorious")
+        grant Achievement("the_notorious", "Win your first fight")
             
     $ wintom = True
 
     menu:
-        "Kick him":
-            $ add_point(KCT.TROUBLEMAKER)
+        "Kick him"(troublemaker=1.0):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
-            play sound "sounds/js.mp3"
+            play sound sound.hit
             scene yf
             with vpunch
 
             u "Fuck you!"
 
-        "Walk away":
-            $ add_point(KCT.BRO)
+        "Walk away" (bro=1.0):
+            $ reputation.add_point(RepComponent.BRO)
 
     $ renpy.end_replay()
 
@@ -1101,7 +1054,7 @@ label v1_tom_walk_away:
         jump history2
 
 label meet_lauren2:
-    play music "music/mlove2.mp3"
+    play music music.ck1.mlove2
 
     if fighttom and not wintom:
         scene s128a #outside of cafe with bloody nose
@@ -1165,27 +1118,20 @@ label meet_lauren2:
 
     la "About yesterday in the park..."
 
-    show screen tutorial([
-        "When people make important decisions on how they feel about you, they consider what kind of a person you are.",
-        "Your Key Character Trait (Loyal, Popular or Confident) has a strong influence on how other characters react to your behavior.",
-        "Some people value a popular leader, some care more about loyalty than status and some are drawn to confidence.",
-        "Your decisions matter and have long time effects, as you can only have one KCT at a time. So think about what kind of person you want to be."
-    ])
-
     menu:
-        "There was something there":
-            $ add_point(KCT.BOYFRIEND)
+        "There was something there" (lauren=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             
-            if lauren.relationship >= Relationship.KISS:
-                    scene s130c
-                    with dissolve
-                    u "I know you stopped kissing me after about a second..."
+            if CharacterService.is_kissed(lauren):
+                scene s130c
+                with dissolve
+                u "I know you stopped kissing me after about a second..."
 
-                    u "But that second was amazing."
+                u "But that second was amazing."
 
-                    u "There was something real there and you know it."
+                u "There was something real there and you know it."
 
-            elif lauren.relationship >= Relationship.MOVE:
+            elif Moods.AWKWARD in lauren.mood:
                 scene s130c
                 with dissolve
 
@@ -1203,13 +1149,13 @@ label meet_lauren2:
 
                 u "And I should have. There was something real there. Between us."
 
-            if lauren.relationship >= Relationship.KISS or kct == "loyal":
-                $ laawk = False
+            if CharacterService.is_kissed(lauren) or reputation() == Reputations.LOYAL:
+                $ CharacterService.remove_mood(lauren, Moods.AWKWARD)
 
-                if lauren.relationship < Relationship.KISS:
-                    call screen kct_popup
+                if not CharacterService.is_kissed(lauren):
+                    call screen reputation_popup
 
-                $ lauren.relationship = Relationship.GIRLFRIEND
+                $ CharacterService.set_relationship(lauren, Relationship.GIRLFRIEND)
 
                 scene s131 ### Lauren grabbing your hand on the table
                 with dissolve
@@ -1219,7 +1165,7 @@ label meet_lauren2:
                 scene s130d # Lauren romancing at you holding your hand
                 with dissolve
 
-                $ grant_achievement("a_new_beginning")
+                grant Achievement("a_new_beginning", "Lauren likes you")
                     
                 la "Maybe you're right."
 
@@ -1308,14 +1254,13 @@ label meet_lauren2:
 
                             u "(I should probably wash the blood off my face in the restroom before I go to class.)"
 
-        "Let's forget about it":
-            $ add_point(KCT.BRO)
-            $ laawk = False
+        "Let's forget about it" (bro=1.0):
+            $ reputation.add_point(RepComponent.BRO)
 
             scene s130a
             with dissolve
 
-            if lauren.relationship >= Relationship.MOVE:
+            if Moods.AWKWARD in lauren.mood:
                 u "That was uhm... nothing."
 
                 u "Let's just forget that ever happened."
@@ -1347,13 +1292,13 @@ label meet_lauren2:
 
             la "Yeah, sounds great."
 
+            $ CharacterService.remove_mood(lauren, Moods.AWKWARD)
+
             if fighttom and not wintom:
                 scene s130j
                 with dissolve
 
                 u "(I should probably wash the blood off my face in the restroom before I go.)"
-
-    hide screen tutorial
     
     scene s133
     with Fade (1,0,1)
@@ -1362,20 +1307,48 @@ label meet_lauren2:
 
 label historye: #for compatibility only
 label history2:
-    play sound "sounds/vibrate.mp3"
+    play sound sound.vibrate
 
-    $ josh.messenger.newMessage(_("Dude, I talked to this Aubrey chick the entire night and guess who's number she wanted..."), force_send=True)
-    $ josh.messenger.newMessage(_("YOURS"), force_send=True)
-    $ josh.messenger.newMessage(_("What a bitch..."), force_send=True)
-    $ josh.messenger.addReply(_("Sorry, man. She doesn't know what she's missing."), v2_reply7)
-    $ josh.messenger.addReply(_("Sooo, did you give it to her?"), v2_reply8)
+    python:
+        v2_reply7 = MessageBuilder(josh)
+        v2_reply7.add_function(reputation.add_point, RepComponent.BRO)
+        v2_reply7.new_message(_("It's fine, you go get her."))
+
+        v2_reply9 = MessageBuilder(josh)
+        v2_reply9.add_function(reputation.add_point, RepComponent.BRO)
+        v2_reply9.new_message(_("Hahaha, I'm just kidding, yo."))
+        v2_reply9.new_message(_("Of course I gave her your number."))
+        v2_reply9.add_reply(_("Damn, you got me."))
+
+        v2_reply10 = MessageBuilder(josh)
+        v2_reply10.add_function(reputation.add_point, RepComponent.TROUBLEMAKER)
+        v2_reply10.new_message(_("Hahaha, I'm just kidding, yo."))
+        v2_reply10.new_message(_("Of course I gave her your number."))
+        v2_reply10.add_reply(_("Damn, you got me."))
+
+
+        v2_reply8 = MessageBuilder(josh)
+        v2_reply8.add_function(reputation.add_point, RepComponent.BOYFRIEND)
+        v2_reply8.new_message(_("Nah, you don't want a bitch like her."))
+        v2_reply8.add_replies(
+            Reply(_("Yeah, I guess you're right."), v2_reply9),
+            Reply(_("Dude, what the fuck?!"), v2_reply10)
+        )
+
+        MessengerService.new_message(josh, _("Dude, I talked to this Aubrey chick the entire night and guess who's number she wanted..."))
+        MessengerService.new_message(josh, _("YOURS"))
+        MessengerService.new_message(josh, _("What a bitch..."))
+        MessengerService.add_replies(josh,
+            Reply(_("Sorry, man. She doesn't know what she's missing."), v2_reply7),
+            Reply(_("Sooo, did you give it to her?"), v2_reply8)
+        )
 
     scene s133
     with dissolve
 
     u "(Time to sit through another boring ass lecture.)"
 
-    play music "music/m16punk.mp3"
+    play music music.ck1.m16punk
     scene s136 ## seeing Imre in lecture room looking apologetic
     with Fade (1,0,1)
 
@@ -1447,7 +1420,7 @@ label history2:
         scene s136f # Imre angry
         with dissolve
 
-        imre "Was it another ape??? Tell me who, I'll fuck them up!"
+        imre "Was it another Ape??? Tell me who, I'll fuck them up!"
 
         if meetlauren:
             scene s136g
@@ -1626,7 +1599,7 @@ label history2:
     scene clocka
     with fade
 
-    play sound "sounds/clock2.mp3"
+    play sound sound.clock2
 
     pause (0.5)
 
@@ -1651,7 +1624,7 @@ label history2:
     scene s140 # You and Imre in hallway
     with Fade (1,0,1)
 
-    play music "music/m11punk.mp3"
+    play music music.ck1.m11punk
 
     imre "I can't believe he's making us come in costume."
 
@@ -1719,7 +1692,7 @@ label history2:
 
     no "Looks like he got beaten up."
 
-    if nora.relationship >= Relationship.MOVE:
+    if Moods.AWKWARD in nora.mood:
         scene s142a # both mouths shut
         with dissolve
 
@@ -1808,9 +1781,9 @@ label history2:
     em "Can we please just hang out?"
 
     menu:
-        "Okay, I guess":
+        "Okay, I guess" (emily=1.0):
             $ forgiveemily = True
-            $ add_point(KCT.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
 
             scene s144c
             with dissolve
@@ -1834,10 +1807,10 @@ label history2:
 
             jump bo_ad
 
-        "No, sorry":
+        "No, sorry" (emily=-1.0):
             $ emilyandben = True
             $ forgiveemily = False
-            $ add_point(KCT.TROUBLEMAKER)
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             scene s144c
             with dissolve
@@ -1864,8 +1837,7 @@ label history2:
             jump bo_bd
 
 label bo_ad:
-
-    play music "sounds/bus.mp3"
+    play ambience ambience.bus
 
     scene carback
 
@@ -1881,8 +1853,8 @@ label bo_ad:
     em "Sooo... did you text your new girlfriend that you're hanging out with your ex?"
 
     menu:
-        "Yeah, of course. (joke)":
-            $ add_point(KCT.TROUBLEMAKER)
+        "Yeah, of course. (joke)" (troublemaker=1.0):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             hide s145
             show s145a
@@ -1920,8 +1892,8 @@ label bo_ad:
 
             em "Maybe a little bit."
 
-        "I'm still single":
-            $ add_point(KCT.BOYFRIEND)
+        "I'm still single" (boyfriend=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
 
             hide s145
             show s145e
@@ -1956,8 +1928,8 @@ label bo_ad:
     em "Are you ever gonna stop bringing that up?"
 
     menu:
-        "It was adorable":
-            $ add_point(KCT.BOYFRIEND)
+        "It was adorable" (boyfriend=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
 
             hide s145c
             show s145d
@@ -1973,8 +1945,8 @@ label bo_ad:
 
             em "It was so thoughtful."
 
-        "It was so funny":
-            $ add_point(KCT.BRO)
+        "It was so funny" (bro=1.0):
+            $ reputation.add_point(RepComponent.BRO)
 
             hide s145c
             show s145d
@@ -2003,8 +1975,8 @@ label bo_ad:
             em "Haha, I'm not sure who told you that."
 
     label bq_bd: #for compatibility only
-    stop music
-    play sound "sounds/busstop.mp3"
+    stop ambience
+    play sound sound.bus_stop
 
     hide s145c
     hide s145f
@@ -2018,7 +1990,7 @@ label bo_ad:
     scene s146far # doctors reception
     with Fade (1,0,1)
 
-    play music "music/m16punk.mp3"
+    play music music.ck1.m16punk
 
     u "Hey there, you accept walk-ins right?"
 
@@ -2098,14 +2070,14 @@ label bo_ad:
     ben "What? I'm 24."
 
     menu:
-        "Sure, knock yourself out":
+        "Sure, knock yourself out" (emily=-1.0):
             $ emilyandben = True
-            $ add_point(KCT.BRO)
+            $ reputation.add_point(RepComponent.BRO)
 
             scene s148b
             with dissolve
 
-            $ grant_achievement("over_it")
+            grant Achievement("over_it", "Let Benjamin make a move")
                 
             u "Sure, knock yourself out, man. We're not an item."
 
@@ -2119,9 +2091,9 @@ label bo_ad:
 
             u "Please don't..."
 
-        "Stay away from her":
+        "Stay away from her" (ben=-1.0):
             $ emilyandben = False
-            $ add_point(KCT.BOYFRIEND)
+            $ reputation.add_point(RepComponent.BOYFRIEND)
 
             scene s148b
             with dissolve
@@ -2140,9 +2112,9 @@ label bo_ad:
     em "All done with the forms?"
 
     menu:
-        "Tell Emily about Benjamin":
-            $ add_point(KCT.BOYFRIEND)
-            $ add_point(KCT.TROUBLEMAKER)
+        "Tell Emily about Benjamin" (boyfriend=1.0, troublemaker=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             scene s149a
             with dissolve
@@ -2200,8 +2172,8 @@ label bo_ad:
 
                 u "As a receptionist."
 
-        "Don't tell Emily":
-            $ add_point(KCT.BRO)
+        "Don't tell Emily" (bro=1.0):
+            $ reputation.add_point(RepComponent.BRO)
 
             scene s149a
             with dissolve
@@ -2329,23 +2301,37 @@ label bo_bd:
         u "(Still... I don't know if I can ever fully forgive her for what she did.)"
 
     # text from aubrey
-    play sound "sounds/vibrate.mp3"
+    play sound sound.vibrate
 
-    $ aubrey.messenger.newMessage(_("Hey,\nJosh gave me your number\n\nI hope your face is feeling better after the shit that Grayson pulled..."), force_send=True)
-    $ aubrey.messenger.newMessage(_("He's not even dating Chloe and you guys didn't even do anything so I don't know what he was thinking.\n\nAnyway, do you wanna like... hang out tomorrow?"), force_send=True)
-    $ aubrey.messenger.addReply(_("Wait they're not dating?"), v2_reply11)
-    $ aubrey.messenger.addReply(_("My day tomorrow is quite full, but how about today?\n\nI need to buy a costume."), v2_reply12)
+    python:
+        v2_reply12 = MessageBuilder(aubrey)
+        v2_reply12.add_function(reputation.add_point, RepComponent.BOYFRIEND)
+        v2_reply12.new_message(_("I've got dance practice tonight \n:("))
+        v2_reply12.add_reply(_("I'm not talking tonight, I can pick you up right now."))
+        v2_reply12.new_message(_("Oh wow, that's spontaneous, I like it haha.\n\nI guess come to the Chicks' house whenever you're ready and then we can go costume shopping."))
+        v2_reply12.add_reply(_("Cool, I'll be 20 mins."))
+
+        v2_reply11 = MessageBuilder(aubrey)
+        v2_reply11.add_function(reputation.add_point, RepComponent.BRO)
+        v2_reply11.new_message(_("Yeah, I mean they had a thing a while ago but she broke it off 'cause he lied about some shit."))
+        v2_reply11.new_message(_("So... tomorrow?"))        
+        v2_reply11.add_reply(_("My day tomorrow is quite full, but how about today?\n\nI need to buy a costume."), v2_reply12)
+
+        MessengerService.new_message(aubrey, _("Hey,\nJosh gave me your number\n\nI hope your face is feeling better after the shit that Grayson pulled..."))
+        MessengerService.new_message(aubrey, _("He's not even dating Chloe and you guys didn't even do anything so I don't know what he was thinking.\n\nAnyway, do you wanna like... hang out tomorrow?"))
+        MessengerService.add_replies(aubrey, 
+            Reply(_("Wait they're not dating?"), v2_reply11),
+            Reply(_("My day tomorrow is quite full, but how about today?\n\nI need to buy a costume."), v2_reply12)
+        )
 
     u "(Oh, I just got a message.)"
 
-    label repeatc:
-        if aubrey.messenger.replies:
-            call screen phone
-        if aubrey.messenger.replies:
+    while MessengerService.has_replies(aubrey):
+        call screen phone
+        if MessengerService.has_replies(aubrey):
             u "(I should check my messages.)"
-            jump repeatc
     
-    play music "music/mlove.mp3"
+    play music music.ck1.mlove
 
     scene s155
     with fade
@@ -2499,20 +2485,31 @@ label bo_bd:
 
     u "Ugh... alright."
 
-    play sound "sounds/vibrate.mp3"
+    play sound sound.vibrate
 
-    $ aubrey.messenger.newMessage(_("Hey, are you nearby?"), force_send=True)
-    $ aubrey.messenger.addReply(_("Yeah, I'm just on my way, I'll be right there."), v2_reply13)
-    $ aubrey.messenger.addReply(_("Sorry, something came up and I can't make it."), v2_reply14)
+    python:
+        v2_reply13 = MessageBuilder(aubrey)
+        v2_reply13.set_variable("costumeaubrey", True)
+        v2_reply13.add_function(reputation.add_point, RepComponent.BOYFRIEND)
+        v2_reply13.new_message(_("Good :)"))
+
+        v2_reply14 = MessageBuilder(aubrey)
+        v2_reply14.set_variable("costumeaubrey", False)
+        v2_reply14.add_function(reputation.add_point, RepComponent.TROUBLEMAKER)
+        v2_reply14.new_message(_("Oh, okay. Guess we'll have to postpone the costume buying."))
+        
+        MessengerService.new_message(aubrey, _("Hey, are you nearby?"))
+        MessengerService.add_replies(aubrey,
+            Reply(_("Yeah, I'm just on my way, I'll be right there."), v2_reply13),
+            Reply(_("Sorry, something came up and I can't make it."), v2_reply14)
+        )
 
     u "(Fuck, I totally forgot about Aubrey. I guess it's time to make a decision.)"
 
-    label repeatg:
-        if aubrey.messenger.replies:
-            call screen phone
-        if aubrey.messenger.replies:
+    while MessengerService.has_replies(aubrey):
+        call screen phone
+        if MessengerService.has_replies(aubrey):
             u "(Aubrey's waiting for me, I need to let her know whether I'm coming or not.)"
-            jump repeatg
 
     if costumeaubrey:
         u "Penelope, I'm really sorry, but I have to go and meet my friend. It was nice seeing you."
@@ -2558,14 +2555,14 @@ label bo_bd:
 label csaub:
     scene s156
     with Fade (1,0,1)
-    play sound "sounds/knock.mp3"
+    play sound sound.knock
     pause 1
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
 
     scene s157
     with dissolve
     pause 0.75
-    play music "music/m7punk.mp3"
+    play music music.ck1.m7punk
 
 
     no "Oh, look who it is."
@@ -2582,7 +2579,7 @@ label csaub:
 
     no "You're welcome."
 
-    play sound "sounds/dooropen.mp3"
+    play sound sound.door_open
 
 # door open sound
     scene s157d # aubrey appears
@@ -2619,9 +2616,9 @@ label csaub:
 
     u "Didn't you say this was a costume shop?"
 
-    play music "music/mindie1.mp3"
+    play music music.ck1.mindie1
 
-    queue music [ "music/mindie2.mp3", "music/mindie3.mp3" ]
+    queue music [music.ck1.mindie2, music.ck1.mindie3]
 
     au "It was! At least the last time I was here."
 
@@ -2717,8 +2714,8 @@ label try1new:
     u "(I wonder what Aubrey is changing into.)"
 
     menu:
-        "Peek":
-            $ add_point(KCT.TROUBLEMAKER)
+        "Peek" (troublemaker=1.0):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             scene s164 # Aubrey changing bad view
             with dissolve
@@ -2726,8 +2723,8 @@ label try1new:
             u "(Holy shit, if I could just stick my head through a bit further, I could get a way better view.)"
 
             menu:
-                "Risk it":
-                    if config_censored:
+                "Risk it" (aubrey=0.0):
+                    if is_censored:
                         call screen censored_popup("v2_nsfwSkipLabel1")
 
                     $ v2_caughtpeeking = renpy.random.choice([True, False])
@@ -2746,8 +2743,8 @@ label try1new:
                 "Stop peeking":
                     pass
 
-        "Don't peek":
-            $ add_point(KCT.BOYFRIEND)
+        "Don't peek" (boyfriend=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
 
 label v2_nsfwSkipLabel1:
     scene s163
@@ -2776,8 +2773,8 @@ label v2_nsfwSkipLabel1:
     au "Haha, what do you think of my outfit?"
 
     menu:
-        "It's kinda hot":
-            $ add_point(KCT.BOYFRIEND)
+        "It's kinda hot" (boyfriend=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
 
             scene s166c
             with dissolve
@@ -2803,8 +2800,8 @@ label v2_nsfwSkipLabel1:
 
                 au "Have you decided which one to buy yet?"
 
-        "It's definitely something":
-            $ add_point(KCT.BRO)
+        "It's definitely something" (bro=1.0):
+            $ reputation.add_point(RepComponent.BRO)
 
             scene s166c
             with dissolve
@@ -2855,9 +2852,11 @@ label try2new:
 
     u "(Aubrey is changing right next to me...)"
 
+    lovense vibrate 2
+
     menu:
-        "Peek":
-            $ add_point(KCT.TROUBLEMAKER)
+        "Peek" (troublemaker=1.0):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             scene s168 # Aubrey changing bad view
             with dissolve
@@ -2865,8 +2864,8 @@ label try2new:
             u "(Wow... if I could just stick my head through a bit further, I could get a way better view.)"
 
             menu:
-                "Risk it":
-                    if config_censored:
+                "Risk it" (aubrey=0.0):
+                    if is_censored:
                         call screen censored_popup("v2_nsfwSkipLabel2")
 
                     $ v2_caughtpeeking = renpy.random.choice([True, False])
@@ -2875,18 +2874,23 @@ label try2new:
                         scene s168a # Aubrey changing good view
                         with dissolve
 
+                        
+
                         u "(Damn, what I wouldn't give to touch her ass right now.)"
 
                         u "(I should stop peeking now, or I risk getting caught.)"
 
+                        lovense stop
                     else:
+                        lovense stop
+
                         jump caughtb
 
                 "Stop peeking":
                     pass
 
-        "Don't peek":
-            $ add_point(KCT.BOYFRIEND)
+        "Don't peek" (boyfriend=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
 
 label v2_nsfwSkipLabel2:
     scene s167
@@ -2912,8 +2916,8 @@ label v2_nsfwSkipLabel2:
     u "Yours is uhhh..."
 
     menu:
-        "looking mighty fine":
-            $ add_point(KCT.BOYFRIEND)
+        "looking mighty fine" (boyfriend=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
 
             u "...looking mighty fine as well."
 
@@ -2939,8 +2943,8 @@ label v2_nsfwSkipLabel2:
             else:
                 au "Are you gonna buy this one?"
 
-        "certainly practical":
-            $ add_point(KCT.BRO)
+        "certainly practical" (bro=1.0):
+            $ reputation.add_point(RepComponent.BRO)
 
             u "... certainly practical."
 
@@ -3006,10 +3010,12 @@ label try3new:
     u "(Yeehaw!)"
 
     u "(I can hear Aubrey sliding her clothes off...)"
+    
+    lovense vibrate 2
 
     menu:
-        "Peek":
-            $ add_point(KCT.TROUBLEMAKER)
+        "Peek" (troublemaker=1.0):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             scene s172 # Aubrey changing bad view
             with dissolve
@@ -3017,8 +3023,8 @@ label try3new:
             u "(Fuck... if I could just stick my head through a bit further, I could get a way better view.)"
 
             menu:
-                "Risk it":
-                    if config_censored:
+                "Risk it" (aubrey=0.0):
+                    if is_censored:
                         call screen censored_popup("v2_nsfwSkipLabel3")
 
                     $ v2_caughtpeeking = renpy.random.choice([True, False])
@@ -3030,14 +3036,19 @@ label try3new:
                         u "(In all fairness, whenever I watch porn, the person getting caught spying gets to fuck the girl right afterwards.)"
 
                         u "(Still... I better stop peeking now, it's too risky.)"
+
+                        lovense stop
+                    
                     else:
+                
+                        lovense stop
                         jump caughtc
 
                 "Stop peeking":
                     pass
 
-        "Don't peek":
-            $ add_point(KCT.BOYFRIEND)
+        "Don't peek" (boyfriend=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
 
 label v2_nsfwSkipLabel3:
     scene s171
@@ -3052,24 +3063,17 @@ label v2_nsfwSkipLabel3:
 
     au "This costume is literally just historic lingerie."
 
-    show screen tutorial([
-        "When people make important decisions on how they feel about you, they consider what kind of a person you are.",
-        "Your Key Character Trait (Loyal, Popular or Confident) has a strong influence on how other characters react to your behavior.",
-        "Some people value a popular leader, some care more about loyalty than status and some are drawn to confidence.",
-        "Your decisions matter and have long time effects, as you can only have one KCT at a time. So think about what kind of person you want to be."
-    ])
-
     au "I'm not showing you this, haha."
+    lovense vibrate 2
 
     menu:
-        "Oh come on":
-            hide screen tutorial
-            $ add_point(KCT.TROUBLEMAKER)
+        "Oh come on" (troublemaker=1.0):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             u "Oh come on, Aubrey. I wanna see."
 
-            if kct == "popular":
-                call screen kct_popup
+            if reputation() == Reputations.POPULAR:
+                call screen reputation_popup
             else:
                 au "Sorry but... I'm gonna get dressed again."
 
@@ -3108,11 +3112,14 @@ label v2_nsfwSkipLabel3:
 
             au "So let's get out of these outfits."
 
+            lovense stop
+
             call screen costumes
 
-        "Fine":
-            hide screen tutorial
-            $ add_point(KCT.BOYFRIEND)
+        "Fine" (boyfriend=1.0):
+            lovense stop
+
+            $ reputation.add_point(RepComponent.BOYFRIEND)
 
             u "Alright, fine."
 
@@ -3152,9 +3159,9 @@ label cspe:
 
     u "I swear Google maps said this was a costume shop."
 
-    play music "music/mindie1.mp3"
+    play music music.ck1.mindie1
 
-    queue music [ "music/mindie2.mp3", "music/mindie3.mp3" ]
+    queue music [music.ck1.mindie2, music.ck1.mindie3]
 
     pe "Maybe we can ask the lady over there, she seems to work here."
 
@@ -3249,9 +3256,10 @@ label try4new:
 
     u "(I wonder what Penelope is changing in to.)"
 
+    lovense vibrate 2
     menu:
-        "Peek":
-            $ add_point(KCT.TROUBLEMAKER)
+        "Peek" (troublemaker=1.0):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             scene s183 # penelope changing bad view
             with dissolve
@@ -3259,8 +3267,8 @@ label try4new:
             u "(Holy shit, if I could just stick my head through a bit further, I could get a way better view.)"
 
             menu:
-                "Risk it":
-                    if config_censored:
+                "Risk it" (penelope=0.0):
+                    if is_censored:
                         call screen censored_popup("v2_nsfwSkipLabel4")
 
                     $ v2_caughtpeeking = renpy.random.choice([True, False])
@@ -3269,18 +3277,23 @@ label try4new:
                         scene s183a # pen changing good view
                         with dissolve
 
+                       
+
                         u "(Oh my god, her ass is so nice.)"
 
                         u "(I should stop peeking now, or I'll get caught.)"
+                        
+                        lovense stop
 
                     else:
+                        lovense stop
                         jump caughtd
 
                 "Stop peeking":
                     pass
 
-        "Don't peek":
-            $ add_point(KCT.BOYFRIEND)
+        "Don't peek" (boyfriend=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
 
 label v2_nsfwSkipLabel4:
     scene s163
@@ -3290,6 +3303,8 @@ label v2_nsfwSkipLabel4:
 
     scene s179far # showing u and pen in costume
     with Fade (1,0,1)
+
+    lovense vibrate 2
 
     pause 0.5
 
@@ -3320,8 +3335,8 @@ label v2_nsfwSkipLabel4:
     pe "So uhm... what do you think of my outfit?"
 
     menu:
-        "You look beautiful":
-            $ add_point(KCT.BOYFRIEND)
+        "You look beautiful" (boyfriend=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
 
             scene s179a
             with dissolve
@@ -3335,14 +3350,17 @@ label v2_nsfwSkipLabel4:
 
             pe "Yeah, it's kinda cool."
 
+            lovense stop
             if v2_outfits < 3:
                 pe "Should we try some other outfits?"
 
             else:
                 pe "Are you ready to buy an outfit?"
 
-        "I guess it's nice":
-            $ add_point(KCT.BRO)
+        "I guess it's nice" (bro=1.0):
+            lovense stop
+
+            $ reputation.add_point(RepComponent.BRO)
 
             scene s179a
             with dissolve
@@ -3394,9 +3412,11 @@ label try5new:
 
     u "(Penelope is changing right next to me...)"
 
+    lovense vibrate 2
+
     menu:
-        "Peek":
-            $ add_point(KCT.TROUBLEMAKER)
+        "Peek" (troublemaker=1.0):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             scene s183 # pen changing bad view
             with dissolve
@@ -3404,8 +3424,8 @@ label try5new:
             u "(Wow... if I could just stick my head through a bit further, I could get a way better view.)"
 
             menu:
-                "Risk it":
-                    if config_censored:
+                "Risk it" (penelope=0.0):
+                    if is_censored:
                         call screen censored_popup("v2_nsfwSkipLabel5")
 
                     $ v2_caughtpeeking = renpy.random.choice([True, False])
@@ -3417,14 +3437,20 @@ label try5new:
                         u "(Damn, what I wouldn't give to touch her ass right now.)"
 
                         u "(I should stop peeking now, or I risk getting caught.)"
+                        lovense stop
+
                     else:
+                        lovense stop
+
                         jump caughte
 
                 "Stop peeking":
+                    lovense stop
+                    
                     pass
 
-        "Don't peek":
-            $ add_point(KCT.BOYFRIEND)
+        "Don't peek" (boyfriend=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
 
 label v2_nsfwSkipLabel5:
     scene s167
@@ -3463,8 +3489,8 @@ label v2_nsfwSkipLabel5:
     pe "You know, our costumes fit quite well together."
 
     menu:
-        "Flirt":
-            $ add_point(KCT.BOYFRIEND)
+        "Flirt" (boyfriend=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
 
             u "Yeah, maybe it's like the costume of two lovers, you know... historically speaking."
 
@@ -3479,8 +3505,8 @@ label v2_nsfwSkipLabel5:
             else:
                 pe "Are you ready to buy an outfit?"
 
-        "Agree":
-            $ add_point(KCT.BRO)
+        "Agree" (bro=1.0):
+            $ reputation.add_point(RepComponent.BRO)
 
             u "Yeah, it would be a cool partner costume."
 
@@ -3532,8 +3558,8 @@ label try6new:
     u "(I can hear Penelope sliding her clothes off...)"
 
     menu:
-        "Peek":
-            $ add_point(KCT.TROUBLEMAKER)
+        "Peek" (troublemaker=1.0):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             scene s180 # pen changing bad view
             with dissolve
@@ -3541,8 +3567,8 @@ label try6new:
             u "(Fuck... if I could just stick my head through a bit further, I could get a way better view.)"
 
             menu:
-                "Risk it":
-                    if config_censored:
+                "Risk it" (penelope=0.0):
+                    if is_censored:
                         call screen censored_popup("v2_nsfwSkipLabel6")
 
                     $ v2_caughtpeeking = renpy.random.choice([True, False])
@@ -3560,8 +3586,8 @@ label try6new:
                 "Stop peeking":
                     pass
 
-        "Don't peek":
-            $ add_point(KCT.BOYFRIEND)
+        "Don't peek" (boyfriend=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
 
 label v2_nsfwSkipLabel6:
     scene s171
@@ -3582,8 +3608,8 @@ label v2_nsfwSkipLabel6:
 
 
     menu:
-        "Oh come on":
-            $ add_point(KCT.TROUBLEMAKER)
+        "Oh come on" (troublemaker=1.0):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             u "Oh come on, Penelope. I wanna see."
 
@@ -3593,8 +3619,8 @@ label v2_nsfwSkipLabel6:
 
             u "Alright, fine."
 
-        "Fine":
-            $ add_point(KCT.BOYFRIEND)
+        "Fine" (boyfriend=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
 
             u "Okay, fine."
 
@@ -3683,8 +3709,8 @@ label v1_caughtContinue:
     au "[name]? Did you just peek on me?"
 
     menu:
-        "Apologize":
-            $ add_point(KCT.BOYFRIEND)
+        "Apologize" (aubrey=-1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             $ v2_caughtpeekingcounter = True
 
             scene s177e
@@ -3701,16 +3727,16 @@ label v1_caughtContinue:
 
             au "How about we just buy a costume and get going?"
 
-        "Deny it":
-            $ add_point(KCT.TROUBLEMAKER)
+        "Deny it" (aubrey=(1.0 if reputation() == Reputations.CONFIDENT else -1.0)):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             scene s177e
             with dissolve
 
             u "What are you talking about? You probably just saw my foot."
 
-            if kct == "confident":
-                call screen kct_popup
+            if reputation() == Reputations.CONFIDENT:
+                call screen reputation_popup
 
                 $ v2_caughtpeekingcounter = True
 
@@ -3792,21 +3818,13 @@ label v1_caughtContinue_pen:
     pe "Did you spy on me??"
 
     scene s186 # closeup pen outside in regular clothes upset
-    with Fade (1,0,1)
-
-    show screen tutorial([
-        "When people make important decisions on how they feel about you, they consider what kind of a person you are.",
-        "Your Key Character Trait (Loyal, Popular or Confident) has a strong influence on how other characters react to your behavior.",
-        "Some people value a popular leader, some care more about loyalty than status and some are drawn to confidence.",
-        "Your decisions matter and have long time effects, as you can only have one KCT at a time. So think about what kind of person you want to be."
-    ])
+    with Fade(1,0,1)
 
     pe "[name]! What were you thinking?!"
 
     menu:
-        "Apologize":
-            hide screen tutorial
-            $ add_point(KCT.BOYFRIEND)
+        "Apologize" (penelope=-1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
 
             scene s186a
             with dissolve
@@ -3829,17 +3847,16 @@ label v1_caughtContinue_pen:
 
             u "(And I still need to buy a costume...)"
 
-        "Deny it":
-            hide screen tutorial
-            $ add_point(KCT.TROUBLEMAKER)
+        "Deny it" (penelope=(1.0 if reputation() == Reputations.CONFIDENT else -1.0)):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
 
             scene s186
             with dissolve
 
             u "What are you talking about? You probably just saw my foot."
 
-            if kct == "confident":
-                call screen kct_popup
+            if reputation() == Reputations.CONFIDENT:
+                call screen reputation_popup
 
                 $ v2_caughtpeekingcounter = True
 
@@ -4069,9 +4086,9 @@ label eve1:
     ev "Alright, here you go."
 
     menu:
-        "Make a move":
-            $ evelyn.relationship = Relationship.MOVE
-            $ add_point(KCT.BRO)
+        "Make a move" (evelyn=0.0):
+            $ v2_made_a_move_on_evelyn = True
+            $ reputation.add_point(RepComponent.BRO)
 
             scene s188d
             with dissolve
@@ -4098,7 +4115,7 @@ label eve1:
             with dissolve
 
             menu:
-                "Be smart":
+                "Be smart" (evelyn=1.0):
                     $ evelynnumber = True
 
                     scene s188h
@@ -4136,7 +4153,7 @@ label eve1:
 
                     u "(I'm getting really good at this flirting thing...)"
 
-                "Be funny":
+                "Be funny" (evelyn=-1.0):
                     $ evelynnumber = False
 
                     scene s188h
@@ -4158,8 +4175,8 @@ label eve1:
 
                     u "(Damn, that didn't go as planned...)"
 
-        "Leave":
-            $ add_point(KCT.BOYFRIEND)
+        "Leave" (boyfriend=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
 
             scene s188d
             with dissolve

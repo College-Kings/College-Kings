@@ -9,13 +9,15 @@ label v13s44:
 
     pause 0.75
 
-    play music "music/v13/Track Scene 44.mp3" fadein 2
+    play music music.ck1.v13.Track_Scene_44 fadein 2
 
     scene v13s44_1a # TPP. Same as v13s44_1a, Lauren caught up to MC, MC slight smile, mouth closed, Lauren slight smile, mouth open.
     with dissolve
     
     if v11_lauren_caught_aubrey:
-        $ lauren.relationship = Relationship.FRIEND
+        $ CharacterService.set_relationship(lauren, Relationship.FRIEND, mc)
+        $ CharacterService.remove_mood(lauren, Moods.MAD)
+        
         la "[name]?"
 
         scene v13s44_3 # FPP. MC looking at Lauren, Lauren looking at MC, neutral expression, mouth closed
@@ -50,7 +52,7 @@ label v13s44:
 
         la "*Sighs* Yes, I'm sure. Now, look..."
 
-    elif lauren.relationship >= Relationship.GIRLFRIEND:
+    elif CharacterService.is_girlfriend(lauren):
         la "Hey babe!"
 
         scene v13s44_2 # TPP. Show Lauren kissing MC.

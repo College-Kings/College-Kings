@@ -15,3 +15,18 @@ screen v13s37_garden1():
 
         if not "nora" in freeroam11:
             hotspot (1560, 209, 360, 453) action Jump("v13s37_nora")
+
+    if config_debug:
+        python:
+            actions = []
+
+            if "nora" in freeroam11 and "chris" in freeroam11:
+                actions.append(Show("confirm", message="Are you sure you want to end the free roam?", yes_action=[Hide("confirm"), Jump("v13s37_end")]))
+
+            if not "chris" in freeroam11:
+                actions.append(Jump("v13s37_chris"))
+
+            if not "nora" in freeroam11:
+                actions.append(Jump("v13s37_nora"))
+
+        timer 0.1 action renpy.random.choice(actions)

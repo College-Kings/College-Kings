@@ -8,7 +8,7 @@ label v9_driving_home_lake:
     scene v9ghl1 # TPP. Show Ryan (As if Ryan sat next to MC in the back of Aubrey's car same as Scene 6), Ryan neutral, mouth open.
     with fade
 
-    play music "music/v9/Track Scene 8_1.mp3" fadein 2
+    play music music.ck1.v9.Track_Scene_8_1 fadein 2
 
     ry "And that's how I won the scary challenge and was the only one who entered that house."
 
@@ -105,7 +105,7 @@ label v9_driving_home_lake:
     scene v9ghl1a
     with dissolve
 
-    play music "music/v9/Track Scene 8_2.mp3" fadein 2
+    play music music.ck1.v9.Track_Scene_8_2 fadein 2
 
     u "He heard a loud noise from under the hood."
 
@@ -254,7 +254,7 @@ label v9_driving_home_lake:
     scene v9ghl2
     with dissolve
 
-    play music "music/v9/Track Scene 8_3.mp3" fadein 2
+    play music music.ck1.v9.Track_Scene_8_3 fadein 2
 
     ri "Whaaaat?! You are joking, right!"
 

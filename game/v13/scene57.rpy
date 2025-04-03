@@ -9,7 +9,7 @@ label v13s57:
 
     u "You wanna call her down here?"
 
-    play music "music/v13/Track Scene 57.mp3" fadein 2
+    play music music.v13_Track_Scene_57 fadein 2
 
     scene v13s57_1a # FPP. Same angle v13s57_1, Nora looking down at phone, Nora mouth open
     with dissolve
@@ -45,7 +45,7 @@ label v13s57:
     scene v13s57a_2b
     with dissolve
 
-    play sound "sounds/rejectcall.mp3"
+    play sound sound.reject_call
 
     u "Is she on the way?"
 
@@ -89,7 +89,7 @@ label v13s57:
 
     no "I'm out of money, so [name] was actually the one who paid for it."
 
-    if ms_rose.relationship >= Relationship.FWB and joinwolves: #sanitizing pathbuilder input
+    if CharacterService.is_fwb(ms_rose) and mc.frat == Frat.WOLVES: #sanitizing pathbuilder input
         scene v13s57_6 # TPP. Show Ms Rose sincerely hugging MC, Rose very grateful, Rose mouth open
         with dissolve
 

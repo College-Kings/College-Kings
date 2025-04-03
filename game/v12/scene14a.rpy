@@ -10,7 +10,7 @@ label v12_riley_cafe:
 
     pause 0.75
 
-    play music "music/v12/Track Scene 14.mp3" fadein 2
+    play music music.ck1.v12.Track_Scene_14 fadein 2
 
     scene v12ric2 # TPP. Show MC and Riley approaching their table, both smiling, mouths closed
     with dissolve
@@ -257,8 +257,8 @@ label v12_riley_cafe:
     with dissolve
 
     menu:
-        "I'd be able to tell":
-            $ add_point(KCT.TROUBLEMAKER)
+        "I'd be able to tell" (troublemaker=1.0):
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
             scene v12ric4a
             with dissolve
 
@@ -319,13 +319,13 @@ label v12_riley_cafe:
     with dissolve
 
     menu:
-        "Oh yeah, good idea":
-            $ add_point(KCT.BOYFRIEND)
+        "Oh yeah, good idea" (boyfriend=1.0):
+            $ reputation.add_point(RepComponent.BOYFRIEND)
             u "Almost forgot about that... Yeah, that's definitely the move."
 
-        "Ugh, do we have to?":
-            $ add_point(KCT.BRO)
-            $ add_point(KCT.TROUBLEMAKER)
+        "Ugh, do we have to?" (bro=1.0, troublemaker=1.0):
+            $ reputation.add_point(RepComponent.BRO)
+            $ reputation.add_point(RepComponent.TROUBLEMAKER)
             u "Oh yayyy, another boring treasure hunt."
 
     scene v12ric4a
