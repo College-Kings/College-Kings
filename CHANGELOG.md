@@ -8,6 +8,12 @@
 
 All notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.5.3] - 2024-??-??
+
+### Fixed
+
+- SyntaxError: invalid syntax (game/v11/scene36.rpy, line 40)
+
 ## [1.5.2] - 2025-03-13
 
 ### Fixed
